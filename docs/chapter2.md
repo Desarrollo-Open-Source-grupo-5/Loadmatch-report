@@ -234,7 +234,7 @@ En esta sección se presentan las fichas de User Persona, construidas a partir d
 **User Persona 1: Carlos Mendoza - Dueño de negocio / Emprendedor**
 
 <p align="center">
-  <img src="../assets/Chapter2/Graphics/user_persona_1.png" alt="User persona Carlos Mendoza" width="600">
+  <img src="../assets/Chapter2/Graphics/Carlos_Mendoza_Persona.png" alt="User persona Carlos Mendoza" width="600">
 </p>
 
 ***Nota.*** Ficha que representa el arquetipo del Segmento 1. Detalla sus objetivos orientados a proteger la integridad de sus productos y su frustración ante la informalidad y descuido de las soluciones de transporte tradicionales.
@@ -243,7 +243,7 @@ En esta sección se presentan las fichas de User Persona, construidas a partir d
 **User Persona 2: Roberto Sánchez - Transportista / Dueño de vehículo de carga**
 
 <p align="center">
-  <img src="../assets/Chapter2/Graphics/user_persona_2.png" alt="User persona Roberto Sanchez" width="600">
+  <img src="../assets/Chapter2/Graphics/Roberto_Sanchez_Persona.png" alt="User persona Roberto Sanchez" width="600">
 </p>
 
 ***Nota.*** Ficha que representa el arquetipo del Segmento 2. Expone su necesidad de conseguir viajes seguros y confiables, y su frustración por la informalidad, la inseguridad y los bajos márgenes en aplicaciones que no lo valoran.
