@@ -100,10 +100,28 @@ A futuro, LoadMatch podrá incorporar tecnologías IoT mediante dispositivos ins
 </td>
 </tr>
 
+<tr>
+<td align="center">
+  <img src="../assets/Chapter1/Team/harold.png" alt="Integrante 6" width="150">
+</td>
+<td>
+  Benigno Montero, Harold Fauskorp<br>
+  <b>Código:</b> U202321086
+</td>
+<td>Ingeniería de Software</td>
+<td>
+  Soy Harold Benigno, estudiante de Ingeniería de Software. Para el presente proyecto estoy aportando con los wireframes, mockups y el modelado de base de datos. Cuento con conocimiento en git, github, C++, HTML, CSS, JS, POO, algoritmos y estructura de datos, modelamiento de bases de datos relacionales, no relacionales, MongoDB y muy buen dominio de PostgreSQL y SQL Server.
+</td>
+</tr>
+
+
 </tbody>
 </table>
 
 <p align="center"> Nota: Información de los integrantes del equipo de desarrollo. </p>
+
+
+
 
 ## 1.2. Solution Profile
 
