@@ -126,7 +126,12 @@ Para adoptar una nueva plataforma digital, exige conductores con antecedentes li
 | **Evidencia fotográfica** | <img src="../assets/Chapter2/Interviews/LoadMatch-Trabajador2.png" alt="Evidencia Entrevista 2" width="300"> |
 
 **Resumen de la entrevista:**
-(Pendiente)
+
+El entrevistado es dueño de su propio negocio de manufactura de diversos productos usando impresoras 3D. Es alguien analítico y atento al detalle, que valora mucho el orden y correcta organización de las cosas. Sus principales herramientas de trabajo, aparte de sus máquinas impresoras, son su smartphone y su laptop.
+
+Nos comenta también que es usuario recurrente de inDrive y Shalom/Olva Courier para realizar el envío de sus productos, dependiendo del volumen y cantidad que sea necesaria; aunque también ha considerado la posibilidad de contratar servicios de terceros independientes mediante Facebook Marketplace. Su mayor frustración viene de sus malas experiencias con ambas soluciones, puesto que problemas como retrasos en la entrega o daños a la mercadería, afecta directamente a su logística y organización en general, lo que genera a veces insatisfacción con sus clientes. 
+
+Para que él considere adoptar una solución como LoadMatch, Ronald nos hace saber que lo que más valoraría de dicha plataforma digital, sería la confiabilidad de que los conductores sean profesionales y confiables a la hora de manejar los envíos, además de la facilidad para poder contactarlos.
 
 
 ---
