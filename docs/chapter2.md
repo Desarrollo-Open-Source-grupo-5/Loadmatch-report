@@ -278,4 +278,80 @@ A continuación, se detalla la matriz unificada, evaluando la frecuencia (Alta, 
 
 ## 2.4. Big Picture Event Storming
 
+En esta sección se documenta el proceso colaborativo de **Big Picture Event Storming**, realizado con el objetivo de entender el dominio general del negocio de **LoadMatch**. Durante esta sesión, nos enfocamos en identificar y plasmar los eventos de dominio más significativos (cambios de estado relevantes en el sistema) y sus relaciones lógicas a lo largo del tiempo. 
+
+Este ejercicio visual de alto nivel nos ha permitido explorar el panorama completo del modelo de negocio, identificar los procesos clave (como el registro de empresas, publicación de cargas, matching con transportistas y ejecución del flete), así como exponer potenciales problemas (Pain Points) y oportunidades de mejora en la experiencia tanto para la Empresa (Shipper) como para el Transportista (Carrier).
+
+A continuación, se presentan las capturas y explicaciones de las etapas desarrolladas en la herramienta Miro/Figma, organizadas en los 10 pasos fundamentales del Event Storming.
+
+### Etapa 1: Unstructured Exploration (Exploración no estructurada)
+En esta primera etapa, el equipo realizó una lluvia de ideas inicial para identificar todos los eventos de dominio posibles sin un orden estricto (representados mediante post-its de color naranja). Se identificaron alrededor de 40 eventos que cubren desde el registro de usuarios hasta la entrega final de la carga, abarcando las 27 pantallas principales de la experiencia web.
+
+<p align="center">
+  <img src="../assets/Chapter2/BigPicture/step1_1y2.jpg" alt="Unstructured Exploration Parte 1">
+</p>
+<p align="center">
+  <img src="../assets/Chapter2/BigPicture/step1_3y4.jpg" alt="Unstructured Exploration Parte 2">
+</p>
+<p align="center">
+  <img src="../assets/Chapter2/BigPicture/step1_5.jpg" alt="Unstructured Exploration Parte 3">
+</p>
+
+### Etapa 2: Chronology (Cronología)
+Una vez identificados los eventos, procedimos a ordenarlos lógicamente en una línea de tiempo horizontal, estableciendo el "Happy Path" del sistema. Esta cronología nos permitió visualizar el flujo secuencial de la aplicación, agrupando los eventos en fases claras: Onboarding, Publicación, Matching y Tracking.
+
+<p align="center">
+  <img src="../assets/Chapter2/BigPicture/step2_1y2.jpg" alt="Chronology Parte 1">
+</p>
+<p align="center">
+  <img src="../assets/Chapter2/BigPicture/step2_3y4.jpg" alt="Chronology Parte 2">
+</p>
+<p align="center">
+  <img src="../assets/Chapter2/BigPicture/step2_5.jpg" alt="Chronology Parte 3">
+</p>
+
+### Etapa 3: Estructuración Avanzada (Pain Points, Pivotal Points, Commands, Policies, y Bounded Contexts)
+En la fase de estructuración profunda (Pasos 3 al 10), enriquecimos el mapa base con múltiples elementos estructurales y de diseño:
+*   **Pain Points (Rojos):** Puntos de fricción, como la demora en la validación de documentos o posibles cancelaciones.
+*   **Pivotal Points:** Momentos críticos de transición en el negocio (ej. "Carga Asignada").
+*   **Commands (Celestes):** Las acciones ejecutadas por los usuarios (ej. "Publicar Solicitud").
+*   **Policies (Lilas):** Reglas de negocio automatizadas (ej. "Validación de MTC requerida").
+*   **Read Models (Verdes):** Las interfaces o datos que el usuario necesita ver para tomar una decisión.
+*   **Aggregates y Bounded Contexts:** Agrupaciones lógicas para definir la arquitectura posterior de los microservicios.
+
+<p align="center">
+  <img src="../assets/Chapter2/BigPicture/step3_1y2.jpg" alt="Advanced Structuring Parte 1">
+</p>
+<p align="center">
+  <img src="../assets/Chapter2/BigPicture/step3_3y4.jpg" alt="Advanced Structuring Parte 2">
+</p>
+<p align="center">
+  <img src="../assets/Chapter2/BigPicture/step3_5.jpg" alt="Advanced Structuring Parte 3">
+</p>
+
+### Vista Panorámica Final (Big Picture)
+El resultado final es un mapa completo y detallado que sirve como pilar arquitectónico para LoadMatch, alineando los requisitos de negocio (Chapter 2) con el diseño de arquitectura y bases de datos que se abordará en etapas posteriores.
+
+<p align="center">
+  <img src="../assets/Chapter2/BigPicture/vista-panoramica.jpg" alt="Big Picture Final View">
+</p>
+
 ## 2.5. Ubiquitous Language
+
+Para asegurar una comunicación clara y libre de ambigüedades entre todos los miembros del equipo, stakeholders y futuros desarrolladores, hemos definido el siguiente glosario de términos del **Ubiquitous Language** (Lenguaje Ubicuo). Este vocabulario está centrado puramente en el dominio del negocio logístico, evitando términos técnicos de ingeniería de software, y será la base para nombrar variables, clases y servicios en el código de **LoadMatch**.
+
+| Término (Inglés) | Equivalente (Español) | Explicación / Definición en el Dominio |
+| :--- | :--- | :--- |
+| **Shipper** | Empresa generadora de carga | Persona jurídica o negocio registrado en la plataforma que tiene la necesidad de enviar mercadería de un punto a otro y publica solicitudes de flete. |
+| **Carrier** | Transportista validado | Chofer o dueño de vehículo de carga que ha pasado satisfactoriamente los filtros de seguridad de LoadMatch y está habilitado para aceptar viajes. |
+| **Load / Freight** | Carga / Mercadería | Los bienes físicos que el Shipper necesita transportar. Se clasifica por peso, volumen y requerimientos especiales (ej. refrigerado, frágil). |
+| **Vehicle** | Vehículo de carga | La unidad de transporte registrada por el Carrier (camión, furgoneta, minivan) que cuenta con sus documentos vigentes (SOAT, Revisión Técnica). |
+| **Dispatch / Trip** | Flete / Viaje | El proceso físico y contractual de mover la carga desde el punto de origen hasta el punto de destino acordados. |
+| **Load Request** | Solicitud de Carga | El formulario o requerimiento publicado por el Shipper detallando origen, destino, tarifa base y especificaciones de la mercadería. |
+| **Match** | Asignación | El momento crítico en el que un Shipper y un Carrier acuerdan formalmente realizar un viaje bajo ciertas condiciones de tarifa y tiempo. |
+| **Offer / Bid** | Oferta / Propuesta | La tarifa propuesta por un Carrier en respuesta a una Load Request publicada por un Shipper, que puede ser aceptada o rechazada. |
+| **Route** | Ruta | El trayecto geográfico planificado desde el almacén o punto de recojo hasta el lugar de entrega final. |
+| **Tracking** | Trazabilidad / Rastreo | La capacidad de monitorear el estado y la ubicación del Dispatch en tiempo real, brindando visibilidad operativa al Shipper. |
+| **Proof of Delivery (POD)** | Prueba de entrega | Evidencia documental (generalmente una foto de la guía de remisión firmada o de la carga en almacén) que confirma que el viaje ha finalizado con éxito. |
+| **Rating** | Calificación | La evaluación en estrellas y comentarios que se otorgan mutuamente el Shipper y el Carrier al finalizar un Dispatch, fundamental para construir la reputación. |
+| **Validation** | Validación Documental | El proceso de revisión de antecedentes, brevete, SOAT y tarjeta de propiedad que realiza LoadMatch para aprobar a un Carrier. |
