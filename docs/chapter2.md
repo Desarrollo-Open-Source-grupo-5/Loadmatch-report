@@ -165,9 +165,9 @@ Para que él considere adoptar una solución como LoadMatch, Ronald nos hace sab
 
 **Resumen de la entrevista:**
 
-El entrevistado es copiloto y administrador operativo del negocio de transporte de carga familiar (camión de 10 toneladas). Es analítico, nativo digital y pragmático, actuando como puente entre la "vieja escuela" de su padre y la modernización del rubro. Usa su smartphone como herramienta principal para todo el día a día (WhatsApp, Waze, Yape/Plin, GPS) y reserva la laptop solo para trámites formales en casa.
+El entrevistado es copiloto y administrador operativo del negocio de transporte de carga familiar. Es analítico, nativo digital y pragmático, actuando como puente entre la "vieja escuela" de su padre y la modernización del rubro. Usa su smartphone como herramienta principal para todo el día a día (WhatsApp, Waze, Yape/Plin, GPS) y reserva la laptop solo para trámites formales en casa.
 
-Su objetivo principal es dejar de depender de intermediarios informales ("coyotes"), conseguir contratos directos con empresas medianas para tener un flujo de caja predecible y renovar su unidad. Su mayor frustración es la desconfianza de las empresas por la mala fama general del sector, los pagos a 60-90 días, los "clientes fantasma" y la competencia desleal del transporte informal.
+Su objetivo principal es dejar de depender de intermediarios informales, conseguir contratos directos con empresas medianas para tener un flujo de caja predecible y renovar su unidad. Su mayor frustración es la desconfianza de las empresas por la mala fama general del sector, los pagos a 60-90 días, los "clientes fantasma" y la competencia desleal del transporte informal.
 
 Para adoptar una nueva plataforma digital, está totalmente dispuesto a pasar por un proceso estricto de validación documental. Exige que la plataforma le otorgue un distintivo visible de "Transportista Verificado" o "Socio Logístico Confiable", ya que considera que esta validación es su mejor argumento de venta para diferenciarse del informal y ganar la confianza de clientes empresariales serios.
 
