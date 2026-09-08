@@ -177,15 +177,19 @@ Para adoptar una nueva plataforma digital, está totalmente dispuesto a pasar po
 
 | Campo | Detalle |
 | :--- | :--- |
-| **Nombres y Apellidos** | (Pendiente) |
-| **Edad** | (Pendiente) |
-| **Distrito** | (Pendiente) |
-| **Enlace al video (Microsoft Stream)** | (Pendiente) |
-| **Timing de inicio y duración** | (Pendiente) |
-| **Evidencia fotográfica** | *(Pendiente - Captura de la entrevista)* |
+| **Nombres y Apellidos** | Tito Sifuentes |
+| **Edad** | 30 años |
+| **Distrito** | Pueblo Libre |
+| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/personal/u202310342_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202310342%5Fupc%5Fedu%5Fpe%2FDocuments%2FDesarrollo%20de%20Open%20Source%20%2D%202026%2D2%2FTransportistas%20y%20due%C3%B1os%20de%20veh%C3%ADculos%20de%20carga%2FEntrevistaTransportistaTitoSifuentes%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E226abae8%2D7b5b%2D40ba%2Db438%2Dc6b82a93b0ee |
+| **Timing de inicio y duración** | Inicio: 1:00 Duración: 5:20 |
+| **Evidencia fotográfica** | <img src="../assets/Chapter2/Interviews/LoadMatch-Transportista1.png" alt="Evidencia Entrevista 3" width="300"> |
 
 **Resumen de la entrevista:**
-(Pendiente)
+El entrevistado opera como transportista de mercadería en una empresa de lubricantes de motor con sede en Pueblo Libre, por la naturaleza de su trabajo tiene que realizar viajes de forma constante hacia los diferentes clientes del negocio y principalmente emplea aplicaciones como Whatsapp y los servicios de inDrive y Uber para contactar con sus clientes y jefes, y por el momento confía en empresas como Entel para su smartphone marca Samsung.
+
+En sus 7 años de carrera como chofer este se mantiene en constante estado de aprendizaje, con la meta básica de seguir creciendo como persona y profesional en un negocio donde se expone a constantes riesgos producto de la situación política del país, y como muchos le preocupa el tema de la informalidad del transporte que se vive actualmente.
+
+El señor Sifuentes expresó su interés en una aplicación como la nuestra, siempre que se atraviese por un diálogo entendible para definir su rol en nuestro servicio. 
 
 ---
 
