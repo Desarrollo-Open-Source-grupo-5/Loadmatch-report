@@ -282,14 +282,14 @@ A continuación, se detalla la matriz unificada, evaluando la frecuencia (Alta, 
 
 ## 2.4. Big Picture Event Storming
 
-En esta sección se documenta el proceso colaborativo de **Big Picture Event Storming**, realizado con el objetivo de entender el dominio general del negocio de **LoadMatch**. Durante esta sesión, nos enfocamos en explorar de manera visual y de alto nivel el panorama del negocio logístico.
+En esta sección se documenta el proceso colaborativo de **Big Picture Event Storming**, realizado con el objetivo de entender el dominio general del negocio de LoadMatch. Durante esta sesión, nos enfocamos en explorar de manera visual y de alto nivel el panorama del negocio logístico.
 
 **Figura 5:**
 *Exploración inicial*
 <p align="center">
   <img src="../assets/Chapter2/BigPicture/unstructuredExploration.jpg" alt="Exploración Inicial">
 </p>
-***Nota.*** En esta fase exploratoria, logramos identificar un aproximado de 39 eventos de dominio clave que suceden en la interacción entre la empresa generadora de carga y el transportista.
+*Nota.* En esta fase exploratoria, logramos identificar un aproximado de 39 eventos de dominio clave que suceden en la interacción entre la empresa generadora de carga y el transportista.
 
 A continuación, se presentan las capturas y explicaciones organizadas en los 4 pasos fundamentales que realizamos para construir nuestro Big Picture Event Storming:
 
@@ -307,7 +307,7 @@ En esta primera etapa, el equipo realizó una lluvia de ideas para identificar t
 <p align="center">
   <img src="../assets/Chapter2/BigPicture/step1_5.jpg" alt="Domain Events Parte 3">
 </p>
-***Nota.*** Eventos clave identificados en el dominio de negocio, sin un orden secuencial estricto.
+*Nota.* Eventos clave identificados en el dominio de negocio, sin un orden secuencial estricto.
 
 ### Paso 2: Ordenamiento Cronológico y Flujo de Trabajo
 Una vez identificados los eventos, procedimos a ordenarlos lógicamente en una línea de tiempo horizontal. Esta cronología nos permitió visualizar el flujo de trabajo natural del sistema.
@@ -323,7 +323,7 @@ Una vez identificados los eventos, procedimos a ordenarlos lógicamente en una l
 <p align="center">
   <img src="../assets/Chapter2/BigPicture/step2_5.jpg" alt="Chronology Parte 3">
 </p>
-***Nota.*** Eventos estructurados en el tiempo para definir el "Happy Path" o ruta esperada del servicio.
+*Nota.* Eventos estructurados en el tiempo para definir el "Happy Path" o ruta esperada del servicio.
 
 ### Paso 3: Identificación de Actores y Sistemas Externos
 En esta fase, enriquecimos el mapa base identificando quién o qué gatilla estos eventos, añadiendo a los usuarios involucrados (Shipper, Carrier, Administrador) y los sistemas externos necesarios.
@@ -339,7 +339,7 @@ En esta fase, enriquecimos el mapa base identificando quién o qué gatilla esto
 <p align="center">
   <img src="../assets/Chapter2/BigPicture/step3_5.jpg" alt="Actores y Sistemas Parte 3">
 </p>
-***Nota.*** Agregado de componentes amarillos (actores) y rosados (sistemas externos) al flujo temporal.
+*Nota.* Agregado de componentes amarillos (actores) y rosados (sistemas externos) al flujo temporal.
 
 ### Paso 4: Big Picture (Vista Panorámica)
 El resultado final es un mapa panorámico completo que sirve como pilar para entender el negocio de LoadMatch a gran escala, alineando los requisitos funcionales con los procesos operativos que se desarrollarán.
@@ -349,11 +349,11 @@ El resultado final es un mapa panorámico completo que sirve como pilar para ent
 <p align="center">
   <img src="../assets/Chapter2/BigPicture/vista-panoramica.jpg" alt="Vista Panorámica">
 </p>
-***Nota.*** Resultado final de la sesión colaborativa, que muestra el end-to-end del modelo de negocio.
+*Nota.* Resultado final de la sesión colaborativa, que muestra el end-to-end del modelo de negocio.
 
 ## 2.5. Ubiquitous Language
 
-Para asegurar una comunicación clara y libre de ambigüedades entre todos los miembros del equipo, stakeholders y futuros desarrolladores, hemos definido el siguiente glosario de términos del **Ubiquitous Language** (Lenguaje Ubicuo). Este vocabulario está centrado puramente en el dominio del negocio logístico, evitando términos técnicos de ingeniería de software, y será la base para nombrar variables, clases y servicios en el código de **LoadMatch**.
+Para asegurar una comunicación clara y libre de ambigüedades entre todos los miembros del equipo, stakeholders y futuros desarrolladores, hemos definido el siguiente glosario de términos del **Ubiquitous Language** (Lenguaje Ubicuo). Este vocabulario está centrado puramente en el dominio del negocio logístico, evitando términos técnicos de ingeniería de software, y será la base para nombrar variables, clases y servicios en el código de LoadMatch.
 
 | Término (Inglés) | Equivalente (Español) | Explicación / Definición en el Dominio |
 | :--- | :--- | :--- |
