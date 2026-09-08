@@ -282,28 +282,38 @@ A continuación, se detalla la matriz unificada, evaluando la frecuencia (Alta, 
 
 ## 2.4. Big Picture Event Storming
 
-En esta sección se documenta el proceso colaborativo de **Big Picture Event Storming**, realizado con el objetivo de entender el dominio general del negocio de **LoadMatch**. Durante esta sesión, nos enfocamos en identificar y plasmar los eventos de dominio más significativos (cambios de estado relevantes en el sistema) y sus relaciones lógicas a lo largo del tiempo. 
+En esta sección se documenta el proceso colaborativo de **Big Picture Event Storming**, realizado con el objetivo de entender el dominio general del negocio de **LoadMatch**. Durante esta sesión, nos enfocamos en explorar de manera visual y de alto nivel el panorama del negocio logístico.
 
-Este ejercicio visual de alto nivel nos ha permitido explorar el panorama completo del modelo de negocio, identificar los procesos clave (como el registro de empresas, publicación de cargas, matching con transportistas y ejecución del flete), así como exponer potenciales problemas (Pain Points) y oportunidades de mejora en la experiencia tanto para la Empresa (Shipper) como para el Transportista (Carrier).
-
-A continuación, se presentan las capturas y explicaciones de las etapas desarrolladas en la herramienta Miro/Figma, organizadas en los 10 pasos fundamentales del Event Storming.
-
-### Etapa 1: Unstructured Exploration (Exploración no estructurada)
-En esta primera etapa, el equipo realizó una lluvia de ideas inicial para identificar todos los eventos de dominio posibles sin un orden estricto (representados mediante post-its de color naranja). Se identificaron alrededor de 40 eventos que cubren desde el registro de usuarios hasta la entrega final de la carga, abarcando las 27 pantallas principales de la experiencia web.
-
+**Figura 5:**
+*Exploración inicial*
 <p align="center">
-  <img src="../assets/Chapter2/BigPicture/step1_1y2.jpg" alt="Unstructured Exploration Parte 1">
+  <img src="../assets/Chapter2/BigPicture/unstructuredExploration.jpg" alt="Exploración Inicial">
+</p>
+***Nota.*** En esta fase exploratoria, logramos identificar un aproximado de 39 eventos de dominio clave que suceden en la interacción entre la empresa generadora de carga y el transportista.
+
+A continuación, se presentan las capturas y explicaciones organizadas en los 4 pasos fundamentales que realizamos para construir nuestro Big Picture Event Storming:
+
+### Paso 1: Generación de Eventos de Dominio (Domain Events)
+En esta primera etapa, el equipo realizó una lluvia de ideas para identificar todos los eventos de dominio posibles (representados mediante post-its de color naranja). Estos eventos indican cambios de estado relevantes dentro del proceso logístico de LoadMatch.
+
+**Figura 6:**
+*Generación de Eventos de Dominio*
+<p align="center">
+  <img src="../assets/Chapter2/BigPicture/step1_1y2.jpg" alt="Domain Events Parte 1">
 </p>
 <p align="center">
-  <img src="../assets/Chapter2/BigPicture/step1_3y4.jpg" alt="Unstructured Exploration Parte 2">
+  <img src="../assets/Chapter2/BigPicture/step1_3y4.jpg" alt="Domain Events Parte 2">
 </p>
 <p align="center">
-  <img src="../assets/Chapter2/BigPicture/step1_5.jpg" alt="Unstructured Exploration Parte 3">
+  <img src="../assets/Chapter2/BigPicture/step1_5.jpg" alt="Domain Events Parte 3">
 </p>
+***Nota.*** Eventos clave identificados en el dominio de negocio, sin un orden secuencial estricto.
 
-### Etapa 2: Chronology (Cronología)
-Una vez identificados los eventos, procedimos a ordenarlos lógicamente en una línea de tiempo horizontal, estableciendo el "Happy Path" del sistema. Esta cronología nos permitió visualizar el flujo secuencial de la aplicación, agrupando los eventos en fases claras: Onboarding, Publicación, Matching y Tracking.
+### Paso 2: Ordenamiento Cronológico y Flujo de Trabajo
+Una vez identificados los eventos, procedimos a ordenarlos lógicamente en una línea de tiempo horizontal. Esta cronología nos permitió visualizar el flujo de trabajo natural del sistema.
 
+**Figura 7:**
+*Ordenamiento Cronológico*
 <p align="center">
   <img src="../assets/Chapter2/BigPicture/step2_1y2.jpg" alt="Chronology Parte 1">
 </p>
@@ -313,32 +323,33 @@ Una vez identificados los eventos, procedimos a ordenarlos lógicamente en una l
 <p align="center">
   <img src="../assets/Chapter2/BigPicture/step2_5.jpg" alt="Chronology Parte 3">
 </p>
+***Nota.*** Eventos estructurados en el tiempo para definir el "Happy Path" o ruta esperada del servicio.
 
-### Etapa 3: Estructuración Avanzada (Pain Points, Pivotal Points, Commands, Policies, y Bounded Contexts)
-En la fase de estructuración profunda (Pasos 3 al 10), enriquecimos el mapa base con múltiples elementos estructurales y de diseño:
-*   **Pain Points (Rojos):** Puntos de fricción, como la demora en la validación de documentos o posibles cancelaciones.
-*   **Pivotal Points:** Momentos críticos de transición en el negocio (ej. "Carga Asignada").
-*   **Commands (Celestes):** Las acciones ejecutadas por los usuarios (ej. "Publicar Solicitud").
-*   **Policies (Lilas):** Reglas de negocio automatizadas (ej. "Validación de MTC requerida").
-*   **Read Models (Verdes):** Las interfaces o datos que el usuario necesita ver para tomar una decisión.
-*   **Aggregates y Bounded Contexts:** Agrupaciones lógicas para definir la arquitectura posterior de los microservicios.
+### Paso 3: Identificación de Actores y Sistemas Externos
+En esta fase, enriquecimos el mapa base identificando quién o qué gatilla estos eventos, añadiendo a los usuarios involucrados (Shipper, Carrier, Administrador) y los sistemas externos necesarios.
 
+**Figura 8:**
+*Identificación de Actores y Sistemas Externos*
 <p align="center">
-  <img src="../assets/Chapter2/BigPicture/step3_1y2.jpg" alt="Advanced Structuring Parte 1">
+  <img src="../assets/Chapter2/BigPicture/step3_1y2.jpg" alt="Actores y Sistemas Parte 1">
 </p>
 <p align="center">
-  <img src="../assets/Chapter2/BigPicture/step3_3y4.jpg" alt="Advanced Structuring Parte 2">
+  <img src="../assets/Chapter2/BigPicture/step3_3y4.jpg" alt="Actores y Sistemas Parte 2">
 </p>
 <p align="center">
-  <img src="../assets/Chapter2/BigPicture/step3_5.jpg" alt="Advanced Structuring Parte 3">
+  <img src="../assets/Chapter2/BigPicture/step3_5.jpg" alt="Actores y Sistemas Parte 3">
 </p>
+***Nota.*** Agregado de componentes amarillos (actores) y rosados (sistemas externos) al flujo temporal.
 
-### Vista Panorámica Final (Big Picture)
-El resultado final es un mapa completo y detallado que sirve como pilar arquitectónico para LoadMatch, alineando los requisitos de negocio (Chapter 2) con el diseño de arquitectura y bases de datos que se abordará en etapas posteriores.
+### Paso 4: Big Picture (Vista Panorámica)
+El resultado final es un mapa panorámico completo que sirve como pilar para entender el negocio de LoadMatch a gran escala, alineando los requisitos funcionales con los procesos operativos que se desarrollarán.
 
+**Figura 9:**
+*Vista Panorámica del Big Picture Event Storming*
 <p align="center">
-  <img src="../assets/Chapter2/BigPicture/vista-panoramica.jpg" alt="Big Picture Final View">
+  <img src="../assets/Chapter2/BigPicture/vista-panoramica.jpg" alt="Vista Panorámica">
 </p>
+***Nota.*** Resultado final de la sesión colaborativa, que muestra el end-to-end del modelo de negocio.
 
 ## 2.5. Ubiquitous Language
 
