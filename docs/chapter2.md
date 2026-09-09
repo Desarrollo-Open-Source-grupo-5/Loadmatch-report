@@ -185,6 +185,7 @@ Para adoptar una nueva plataforma digital, está totalmente dispuesto a pasar po
 | **Evidencia fotográfica** | <img src="../assets/Chapter2/Interviews/LoadMatch-Transportista1.png" alt="Evidencia Entrevista 3" width="300"> |
 
 **Resumen de la entrevista:**
+
 El entrevistado opera como transportista de mercadería en una empresa de lubricantes de motor con sede en Pueblo Libre, por la naturaleza de su trabajo tiene que realizar viajes de forma constante hacia los diferentes clientes del negocio y principalmente emplea aplicaciones como Whatsapp y los servicios de inDrive y Uber para contactar con sus clientes y jefes, y por el momento confía en empresas como Entel para su smartphone marca Samsung.
 
 En sus 7 años de carrera como chofer este se mantiene en constante estado de aprendizaje, con la meta básica de seguir creciendo como persona y profesional en un negocio donde se expone a constantes riesgos producto de la situación política del país, y como muchos le preocupa el tema de la informalidad del transporte que se vive actualmente.
@@ -197,15 +198,20 @@ El señor Sifuentes expresó su interés en una aplicación como la nuestra, sie
 
 | Campo | Detalle |
 | :--- | :--- |
-| **Nombres y Apellidos** | (Pendiente) |
-| **Edad** | (Pendiente) |
-| **Distrito** | (Pendiente) |
-| **Enlace al video (Microsoft Stream)** | (Pendiente) |
-| **Timing de inicio y duración** | (Pendiente) |
+| **Nombres y Apellidos** | Luciano Mateo Espinoza Vargas |
+| **Edad** | 25 años |
+| **Distrito** | Puente Piedra, Lima, Perú |
+| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323551_upc_edu_pe/IQCXMP7YhDGBRIpNEYDMTaPxARBXZBXzhvbS1rtrUGrfBIA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=wCHiu7 |
+| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 6:50 minutos |
 | **Evidencia fotográfica** | *(Pendiente - Captura de la entrevista)* |
 
 **Resumen de la entrevista:**
-(Pendiente)
+
+El entrevistado es un joven de 25 años que gestiona la flota de 3 camiones del negocio familiar. Es analítico, nativo digital y actúa como el agente de cambio frente a la "vieja escuela" de su padre. Utiliza su smartphone como herramienta central de gestión y está harto de la ineficiencia de los canales actuales.
+
+Sus principales pain points son la competencia desleal de la informalidad (que deprime los precios), los pagos a 60-90 días de las empresas que asfixian su capital de trabajo, y la pérdida de dinero por "horas de espera" no remuneradas en los almacenes.
+
+Frente a la propuesta, muestra una receptividad entusiasta (10/10). Ve la validación documental estricta no como un trámite, sino como su principal ventaja competitiva. Está dispuesto a someterse a filtros rigurosos si la plataforma le otorga un "Sello de Verificación" que le permita acceder a una red de clientes empresariales serios, diferenciándose así del transporte informal.
 
 ---
 
