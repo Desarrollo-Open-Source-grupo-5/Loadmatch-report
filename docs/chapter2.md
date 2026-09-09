@@ -203,7 +203,7 @@ El señor Sifuentes expresó su interés en una aplicación como la nuestra, sie
 | **Distrito** | Puente Piedra, Lima, Perú |
 | **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323551_upc_edu_pe/IQCXMP7YhDGBRIpNEYDMTaPxARBXZBXzhvbS1rtrUGrfBIA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=wCHiu7 |
 | **Timing de inicio y duración** | Inicio: 00:00 - Duración: 6:50 minutos |
-| **Evidencia fotográfica** | *(Pendiente - Captura de la entrevista)* |
+| **Evidencia fotográfica** | <img src="../assets/Chapter2/Interviews/Imagensegmento1Luciano-crivas.jpeg" alt="Evidencia Entrevista 2" width="300"> |
 
 **Resumen de la entrevista:**
 
