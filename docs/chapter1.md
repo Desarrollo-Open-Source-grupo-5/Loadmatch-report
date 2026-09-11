@@ -54,7 +54,7 @@ A futuro, LoadMatch podrá incorporar tecnologías IoT mediante dispositivos ins
 </td>
 <td>Ingeniería de Software</td>
 <td>
-  Estudiante de [PENDIENTE].
+  Estudiante de Ingeniería de Software con gran interés en el desarrollo web, diseño de APIs y ciberseguridad. Me caracterizo por mi perseverancia, esfuerzo y dedicación. Busco aportar al equipo soluciones digitales seguras, eficientes y un compromiso constante con la excelencia técnica.
 </td>
 </tr>
 
