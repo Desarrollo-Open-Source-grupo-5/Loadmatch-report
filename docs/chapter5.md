@@ -305,7 +305,7 @@ La sección «Cómo funciona» contiene pestañas para empresas y transportistas
 
 Las tarjetas posteriores explican los beneficios para ambos segmentos y presentan información sobre confianza, perfiles, historial y calificaciones. Las afirmaciones sobre verificación oficial y seguimiento deberán corresponderse con los servicios disponibles cuando estos se implementen.
 
-**Capturas de ambos paneles y beneficios:** 
+**Captura de ambos paneles y beneficios:** 
 <p align="center">
   <img src="../assets/images/landing/CapLanding2.jpeg" width="600">
 </p>
@@ -316,23 +316,27 @@ Se incluyen tres testimonios en un componente con controles y contador. La pági
 
 La sección de precios describe publicación gratuita, comisión por servicio y ausencia de membresía mensual. También está identificada como contenido de muestra. No corresponde a planes de suscripción ni acredita integración de una pasarela de pago.
 
-**Capturas de testimonios** 
+**Captura de testimonios** 
 <p align="center">
   <img src="../assets/images/landing/CapLanding3.jpeg" width="600">
 </p>
 
-**Capturas de precios:** 
+**Captura de precios:** 
 <p align="center">
-  <img src="../assets/images/landing/CapLanding3.3jpeg" width="600">
+  <img src="../assets/images/landing/CapLanding3.3.jpeg" width="600">
 </p>
 
-**4. Preguntas frecuentes y contacto**
+**4. Preguntas frecuentes**
 
 El acordeón incluye cinco preguntas sobre costos, cobertura, validación de transportistas, incidencias y tipos de carga. La pregunta sobre mercancías admitidas no constituye un catálogo de vehículos con capacidades.
 
 El pie de página contiene enlaces `mailto:` y `tel:`, además de información de ubicación y horario. No existe un elemento `<form>` ni lógica para recibir, almacenar o notificar consultas. Tampoco se ha verificado la operatividad de la dirección de correo y teléfono mostrados.
 
-**Capturas del acordeón y pie de página:** [PENDIENTE].
+**Capturas de preguntas:** 
+<p align="center">
+  <img src="../assets/images/landing/CapLanding4.jpeg" width="600">
+</p>
+
 
 **5. Idiomas, adaptación y accesibilidad**
 
@@ -340,7 +344,17 @@ La página contiene diccionarios en inglés y español. La selección inicial pr
 
 Se identifican un enlace para saltar al contenido principal, atributos ARIA, controles de pestañas y reglas adaptables. El README declara verificaciones de contraste y ausencia de desbordamiento en distintas resoluciones, pero no incluye en los archivos revisados los resultados de ejecución necesarios para reproducir esas conclusiones. Por ello, no se presenta esta inspección como certificación de conformidad WCAG.
 
-**Capturas en español e inglés y registro de pruebas:** [PENDIENTE].
+**Capturas en español e inglés y registro de pruebas:** 
+
+<p align="center">
+  <img src="../assets/images/landing/CapLanding5ESP.jpeg" width="600">
+</p>
+
+</br>
+
+<p align="center">
+  <img src="../assets/images/landing/CapLanding5ENG.jpeg" width="600">
+</p>
 
 **6. CTA y espacios de video**
 
@@ -361,7 +375,7 @@ Los dos espacios de video contienen la dirección base de inserción de YouTube 
 | CTA externos | Ocho enlaces preparados; URL base vacía. | Integración futura con la Web Application. |
 | Videos | Dos inserciones sin ID. | URLs definitivas y reproducción. |
 
-**Video de navegación del Sprint Review:** [PENDIENTE: Microsoft Stream y archivo `.mp4`, de 3 a 5 minutos conforme al enunciado].
+**Video de navegación del Sprint Review:** LINKKKKKKKKKKKKK VIDEOOOOOOOOOOOOOOO
 
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
 
@@ -409,7 +423,32 @@ La existencia de estas convenciones no demuestra su aplicación histórica. Para
 | Participación individual | No recuperable de esta copia sin historial Git. | Contribuciones de los seis integrantes. |
 | Coordinación y retrospectiva | No se proporcionó acta de cierre. | Acuerdos, bloqueos y acciones de mejora. |
 
-**Historial de commits por integrante:** [PENDIENTE].
+**Historial de commits por integrante:** 
+
+*Desarrollado por: Jean Fabio Noriega Collado (dumbaskidd)*
+<p align="center">
+  <img src="[ENLACE_IMAGEN_COMMITS_JEAN]" alt="Commits Jean" width="500">
+</p>
+
+*Desarrollado por: Ismael Sebastian Simon Calderon (Mayel-dev)*
+<p align="center">
+  <img src="[ENLACE_IMAGEN_COMMITS_ISMAEL]" alt="Commits Ismael" width="500">
+</p>
+
+*Desarrollado por: Christoper Steven Rivas Castillo (C0DERTOPH)*
+<p align="center">
+  <img src="[ENLACE_IMAGEN_COMMITS_YNGRID]" alt="Commits Chris" width="500">
+</p>
+
+*Desarrollado por: nombre comleto (usuario github)*
+<p align="center">
+  <img src="[ENLACE_IMAGEN_COMMITS_JOSE]" alt="Commits Harold" width="500">
+</p>
+
+*Desarrollado por: nombre comleto (usuario github)*
+<p align="center">
+  <img src="[ENLACE_IMAGEN_COMMITS_SEBASTIAN]" alt="Commits integrante" width="500">
+</p>
 
 **Gráficos de colaboradores y actividad durante el sprint:** [PENDIENTE].
 
