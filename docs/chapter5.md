@@ -45,88 +45,44 @@ El equipo utiliza **GitFlow** como estrategia de ramificación para organizar el
 
 La estructura de ramas definida es la siguiente:
 
-* `main`: contiene las versiones estables del producto que se encuentran preparadas para entrega o despliegue.
-* `develop`: rama principal de integración. Recibe las funcionalidades completadas y revisadas antes de preparar una nueva versión estable.
-* `feature/*`: ramas utilizadas para desarrollar funcionalidades o User Stories específicas. Se crean a partir de `develop` y, una vez completadas, se integran nuevamente mediante Pull Request.
-* `release/*`: ramas utilizadas para preparar una versión candidata a publicación. Permiten realizar ajustes finales antes de integrar la versión en `main`.
-* `hotfix/*`: ramas utilizadas para corregir errores críticos detectados en una versión que ya se encuentra publicada. Se crean a partir de `main` y posteriormente sus cambios se integran tanto en `main` como en `develop`.
+**GitFlow Workflow**
 
-#### Convención para Feature Branches
+| Rama | Propósito | Origen e integración |
+| --- | --- | --- |
+| `main` | Contiene las versiones estables y aprobadas del proyecto. | Recibe integraciones desde `develop` cuando se valida una entrega final. |
+| `develop` | Rama de integración donde se consolidan las funcionalidades de los capítulos. | Recibe las ramas `feature/*` y se integra en `main` al finalizar un ciclo. |
+| `feature/Chapter1` | Implementación de entregables e imágenes del Capítulo I (carpeta `assets/images`). | Se crea como rama independiente y apunta a `develop` mediante Pull Request. |
+| `feature/Chapter2` | Implementación de entregables e imágenes del Capítulo II (carpeta `assets/images`). | Se crea como rama independiente y apunta a `develop` mediante Pull Request. |
+| `feature/Chapter3` | Implementación de entregables e imágenes del Capítulo III (carpeta `assets/images`). | Se crea como rama independiente y apunta a `develop` mediante Pull Request. |
+| `feature/Chapter4` | Implementación de entregables e imágenes del Capítulo IV (carpeta `assets/images`). | Se crea como rama independiente y apunta a `develop` mediante Pull Request. |
+| `feature/Chapter5` | Implementación de entregables e imágenes del Capítulo V (carpeta `assets/images`). | Se crea como rama independiente y apunta a `develop` mediante Pull Request. |
 
-Las ramas de funcionalidad utilizan el prefijo `feature/` seguido del identificador de la User Story o de una descripción breve de la funcionalidad en inglés.
+El GitFlow Workflow es una estrategia de organización de ramas en Git que define cómo se crean, nombran y fusionan las ramas dentro de un proyecto.
 
-Formato:
+Las ramas **feature/** se usan para desarrollar funcionalidades específicas o capítulos, y apuntan a develop para integrarse.
 
-`feature/<user-story>-<short-description>`
+La rama **develop** es la rama de integración, donde se consolidan los cambios antes de pasar a main.
 
-Ejemplos:
+La rama **main** contiene las versiones estables y finales del proyecto.
 
-* `feature/US12-hero`
-* `feature/US13-fleet`
-* `feature/US14-contact`
-* `feature/design-tokens`
+Los Pull Requests deben documentar la historia relacionada, los cambios realizados, validaciones y evidencia visual, asegurando que otro integrante revise antes de integrar.
 
-#### Convención para Release Branches
+**Semantic Versioning 2.0.0**
 
-Las ramas de preparación de versiones utilizan el prefijo `release/` seguido del número de versión que se desea publicar.
+Cada producto mantendrá su propia numeración `MAJOR.MINOR.PATCH`: `MAJOR` para cambios incompatibles en su contrato público, `MINOR` para nuevas funcionalidades compatibles y `PATCH` para correcciones compatibles. Durante el desarrollo inicial se podrán utilizar versiones `0.y.z`. Los tags, por ejemplo `v1.0.0`, identificarán el commit publicado; no se registrará un tag como existente hasta verificarlo. Referencia: [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html).
 
-Formato:
+**Conventional Commits**
 
-`release/<major>.<minor>.<patch>`
+Los mensajes se redactarán en inglés con el formato `type(scope): description`. Se utilizarán `feat` para funcionalidades, `fix` para correcciones, `docs` para documentación, `refactor` para reorganización interna y `chore` para mantenimiento. `style` se reservará para formato del código; un cambio visual que agrega o corrige comportamiento se clasificará según su finalidad. Los cambios incompatibles se identificarán con `!` o con un pie `BREAKING CHANGE:`. Referencia: [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/).
 
-Ejemplos:
+Ejemplos de mensajes propuestos:
 
-* `release/1.0.0`
-* `release/1.1.0`
-
-Una vez validada la versión, la rama de release se integra en `main` y sus cambios se sincronizan posteriormente con `develop`.
-
-#### Convención para Hotfix Branches
-
-Las correcciones urgentes sobre versiones publicadas utilizan el prefijo `hotfix/` seguido del número de versión corregida.
-
-Formato:
-
-`hotfix/<major>.<minor>.<patch>`
-
-Ejemplos:
-
-* `hotfix/1.0.1`
-* `hotfix/1.1.1`
-
-Las ramas `hotfix/*` se crean desde `main` y, después de validar la corrección, se integran nuevamente en `main` y `develop`.
-
-#### Semantic Versioning
-
-Para identificar las versiones publicadas de los productos de LoadMatch se utiliza **Semantic Versioning 2.0.0 (SemVer)** mediante el formato:
-
-`MAJOR.MINOR.PATCH`
-
-Donde:
-
-* **MAJOR:** se incrementa cuando se introducen cambios incompatibles con versiones anteriores.
-* **MINOR:** se incrementa cuando se incorporan nuevas funcionalidades manteniendo compatibilidad con la versión anterior.
-* **PATCH:** se incrementa cuando se realizan correcciones compatibles con la versión existente.
-
-Por ejemplo:
-
-* `v1.0.0`: primera versión estable del producto.
-* `v1.1.0`: incorporación de nuevas funcionalidades compatibles.
-* `v1.1.1`: corrección de errores sobre la versión `v1.1.0`.
-
-#### Conventional Commits
-
-Los commits realizados por el equipo siguen la especificación **Conventional Commits**, utilizando mensajes breves y descriptivos en inglés. Entre los tipos utilizados se encuentran `feat`, `fix`, `style`, `refactor`, `docs` y `chore`.
-
-Ejemplos:
-
-* `feat(pricing): add commission-based pricing section`
-* `fix(contact): validate email input`
-* `style(responsive): improve mobile layout`
-* `docs(chapter5): update sprint evidence`
-* `chore(css): remove unused placeholder`
-
-Las funcionalidades desarrolladas en ramas `feature/*` son integradas en `develop` mediante **Pull Requests revisados por otros miembros del equipo**, conservando los commits individuales como evidencia del trabajo colaborativo.
+```text
+feat(hero): explain benefits for shippers and carriers
+feat(fleet): display supported vehicle capacities
+fix(contact): reject invalid email addresses
+docs(sprint1): add execution evidence
+```
 
 ### 5.1.3. Source Code Style Guide & Conventions
 
