@@ -179,101 +179,226 @@ Mapbox, PayPal, almacenamiento de archivos y correo son integraciones previstas 
 
 ---
 
-## 5.2. Landing Page, Services & Applications Implementation
+5.2. Landing Page, Services & Applications Implementation
+
+La implementación de LoadMatch se desarrolla mediante incrementos que permiten transformar los requisitos y diseños del proyecto en productos de software. El presente registro describe la Landing Page del Sprint 1 a partir de la inspección de sus archivos HTML, CSS, JavaScript y documentación.
+
+Se distingue entre funcionalidades presentes en el código, resultados de ejecución y aceptación de historias. La existencia de una interfaz no acredita la operación de la Web Application ni de sus servicios. Los campos [PENDIENTE] corresponden a evidencias o datos que no se encuentran en la copia proporcionada.
 
 ### 5.2.1. Sprint 1
 
-Durante esta primera iteración, el equipo se enfoca en el desarrollo de la primera versión del Landing Page de LoadMatch. Para su implementación se utiliza una estructura basada en HTML5, CSS3 y Vanilla JavaScript, manteniendo una organización clara del Document Object Model (DOM), estilos responsivos y componentes interactivos orientados a comunicar la propuesta de valor de la plataforma.
+Durante el Sprint 1 se implementó la Landing Page de LoadMatch, producto de CargoLink Labs que propone conectar empresas que necesitan trasladar mercadería con transportistas con capacidad disponible. La página utiliza HTML5, CSS3 y JavaScript vanilla, sin framework de interfaz ni proceso de compilación obligatorio.
+
+La implementación contiene navegación, propuesta de valor, indicadores del contexto logístico, explicación del funcionamiento por segmento, información de confianza, beneficios para empresas y transportistas, testimonios ilustrativos, precios por comisión, preguntas frecuentes, espacios para videos y un pie de página con enlaces de contacto y documentación informativa. También incorpora código para alternar entre español e inglés, adaptar la navegación y controlar pestañas, acordeón y carrusel.
+
+El alcance efectivamente implementado difiere del backlog inicial de US12, US13 y US14. La propuesta de valor de US12 está presente en el código y requiere aceptación funcional documentada. No se identifica un catálogo de tipos de vehículos con capacidades que complete US13 ni un formulario de contacto que satisfaga US14. Los enlaces de correo y teléfono del pie de página no sustituyen este último requisito.
 
 #### 5.2.1.1. Sprint Planning 1
 
 | Sprint # | Sprint 1 |
 | --- | --- |
-| **Sprint Planning Background** |  |
-| **Date** | 2026-09-01 |
-| **Time** | 08:30 PM |
-| **Location** | Microsoft Teams |
-| **Prepared By** | Christoper Rivas |
-| **Attendees (to planning meeting)** | Equipo de Desarrollo LoadMatch |
-| **Sprint 0 Review Summary** | N/A — Es el primer Sprint del proyecto. |
-| **Sprint 0 Retrospective Summary** | N/A — Es el primer Sprint del proyecto. |
-| **Sprint Goal & User Stories** |  |
-| **Sprint 1 Goal** | Desarrollar y desplegar la versión inicial del Landing Page de LoadMatch utilizando HTML5, CSS3 y Vanilla JavaScript, con el propósito de comunicar claramente la propuesta de valor y captar usuarios potenciales de empresas y transportistas. El objetivo se considerará cumplido cuando las User Stories US12, US13 y US14 estén implementadas y el Landing Page se encuentre desplegado y accesible públicamente. |
-| **Sprint 1 Velocity** | 7 |
-| **Sum of Story Points** | 7 |
+| **Sprint Planning Background** | |
+| Date | 01/09/2026, según el borrador inicial; pendiente de corroborar con el acta. |
+| Time | 08:30 p. m., según el borrador inicial. |
+| Location | Microsoft Teams. |
+| Prepared By | Christoper Steven Rivas Castillo, según el borrador inicial. |
+| Attendees (to planning meeting) | [PENDIENTE: asistentes reales]. |
+| Sprint 0 Review Summary | No aplica. No se documenta una revisión anterior. |
+| Sprint 0 Retrospective Summary | No aplica. No se documenta una retrospectiva anterior. |
+| **Sprint Goal & User Stories** | |
+| Sprint 1 Goal | Implementar y publicar, antes del cierre del Sprint 1 para AV1, la Landing Page de LoadMatch para comunicar su propuesta de valor a empresas y transportistas, permitir la consulta de tipos de vehículos y recibir consultas comerciales, verificando los criterios de US12, US13 y US14 en móvil y escritorio. |
+| Fecha de inicio y cierre | [PENDIENTE: incorporar fechas para completar el plazo del objetivo SMART]. |
+| Sprint 1 Velocity | [PENDIENTE: sumar únicamente historias formalmente aceptadas al cierre]. |
+| Sum of Story Points | 7 puntos planificados: US12 = 3, US13 = 2 y US14 = 2. |
 
-#### 5.2.1.2. Leadership-and-Collaboration Matrix (LACX)
+*Nota. Se conserva el objetivo planificado para mostrar la diferencia con el incremento recibido. No se modifica retrospectivamente la planificación para presentar como cumplidas las historias que no aparecen implementadas. Si el equipo acordó un cambio de alcance, deberá adjuntar ese acuerdo y actualizar la trazabilidad del Capítulo III.*
 
-La distribución de responsabilidades del Sprint 1 considera los principales aspectos técnicos involucrados en el desarrollo del Landing Page. En la matriz, `L` representa al responsable principal (Leader) del aspecto y `C` a los integrantes que participan como colaboradores (Collaborators).
+La revisión del código evidencia un avance centrado en la comunicación de la propuesta de valor y la interacción informativa. No permite declarar alcanzado el objetivo completo ni registrar siete puntos de velocidad. Si US12 fuera aceptada y las otras dos historias permanecieran pendientes, la velocidad sería tres puntos; este cálculo es condicional, no un resultado de cierre acreditado.
 
-| Team Member | GitHub Username | HTML5 (Structure & SEO) | CSS3 (Styles & Responsiveness) | Vanilla JS (Interactivity) |
-| --- | --- | --- | --- | --- |
-| Rivas Castillo, Christoper Steven | [usuario real] | L/C | L/C | L/C |
-| Benigno Montero, Harold Fauskorp | Harold-11 | L/C | L/C | L/C |
-| Simon Calderon, Ismael Sebastian | [usuario real] | L/C | L/C | L/C |
+#### 5.2.1.2. Aspect Leaders and Collaborators
+
+La matriz LACX identifica al líder (L) y a los colaboradores (C) de cada aspecto del sprint. Los archivos no permiten atribuir autoría individual, por lo que las asignaciones deben completarse con los acuerdos del equipo y el historial de contribuciones.
+
+| Team Member | GitHub Username | Landing Page | Diseño UI/UX | Validación y despliegue | Documentación |
+| --- | --- | --- | --- | --- | --- |
+| Noriega Collado, Jean Fabio | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
+| Rivas Castillo, Christoper Steven | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
+| Simon Calderon, Ismael Sebastian | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
+| Collantes Artola, Marco Antonio | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
+| Emilia [apellidos pendientes en Capítulo I] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
+| Benigno Montero, Harold Fauskorp | Harold-11, según borrador inicial | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
+
+*Nota. La matriz incluye a los seis integrantes del Capítulo I. La asignación previa de tareas a un integrante no demuestra por sí sola su ejecución ni permite atribuirle todo el contenido de los archivos.*
 
 #### 5.2.1.3. Sprint Backlog 1
 
-El Sprint 1 se enfoca en la implementación inicial del Landing Page de LoadMatch y comprende las User Stories correspondientes a la visualización de la propuesta de valor, la consulta de tipos de vehículos y el formulario de contacto. Las tareas técnicas asociadas fueron organizadas y estimadas en Jira para facilitar el seguimiento del trabajo durante la iteración.
+El backlog inicial comprendía las siguientes tareas. Su estado se actualiza según lo observable en la copia de código, manteniendo las estimaciones originales como datos de planificación.
 
-<p align="center">
-  <img src="../assets/Chapter5/Sprint1/sprint1-board.png" alt="Sprint Board 1 de LoadMatch" width="850"><br>
-  <i>Nota. Sprint Board correspondiente al Sprint 1 del proyecto LoadMatch.</i>
-</p>
-
-**Sprint Board:** https://upc-team-m57tll9j.atlassian.net/jira/software/projects/US/boards/2?sprintStarted=true&filter=&groupBy=none
-
-Este Sprint cubre las siguientes User Stories y tareas:
-
-| User Story Id | User Story Title | Task Id | Task Title | Description | Estimation | Assigned To | Status |
+| User Story Id | User Story Title | Work Item/Task Id | Work Item/Task Title | Description | Estimation | Assigned To | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| **US12** | Visualización de propuesta de valor | T01 | Maquetación Semántica del Hero | Estructuración HTML5 del Hero Section y la barra de navegación, asegurando jerarquía de etiquetas y accesibilidad. | 8h | Harold Benigno Montero | To-do |
-| **US13** | Consulta de tipos de vehículos | T02 | Catálogo CSS Flexbox/Grid | Diseño responsivo del catálogo de vehículos, implementando Media Queries para la adaptación entre dispositivos móviles y de escritorio. | 6h | Harold Benigno Montero | To-do |
-| **US14** | Formulario de contacto | T03 | Validación DOM Vanilla JS | Captura de eventos del formulario (`submit`, `input`) mediante JavaScript nativo para validar campos requeridos y formato de correo. | 6h | Harold Benigno Montero | To-do |
+| US12 | Visualización de propuesta de valor | T01 | Estructura del Hero y navegación | Presentar la conexión entre empresas y transportistas, beneficios y accesos por perfil. | 8 h, según borrador | Harold Benigno Montero, asignación del borrador | Implementación presente; aceptación pendiente |
+| US13 | Consulta de tipos de vehículos | T02 | Catálogo de vehículos | Mostrar tipos y capacidades de carga soportadas. | 6 h, según borrador | Harold Benigno Montero, asignación del borrador | No identificado en la versión recibida |
+| US14 | Formulario de contacto | T03 | Formulario y validación | Recoger consultas mediante formulario; completar almacenamiento y notificación exigidos por la historia. | 6 h, según borrador | Harold Benigno Montero, asignación del borrador | No implementado en la versión recibida |
+
+**Tablero declarado:** [Sprint Board de LoadMatch en Jira](https://upc-team-m57tll9j.atlassian.net/jira/software/projects/US/boards/2?sprintStarted=true&filter=&groupBy=none).
+
+**Captura del tablero y estados al cierre:** [PENDIENTE].
+
+Además de T01, el código contiene trabajo que debe vincularse con las tareas reales del tablero. El siguiente inventario no asigna nuevos identificadores de historia ni estimaciones retrospectivas.
+
+| Trabajo identificado | Archivos principales | Relación con el alcance |
+| --- | --- | --- |
+| Indicadores logísticos y beneficios por segmento | `index.html`, diccionarios de idioma | Contenido de apoyo a US12. |
+| Pestañas «Cómo funciona» para empresas y transportistas | `index.html`, `assets/js/main.js` | Explicación de la propuesta de valor; no ejecuta operaciones de transporte. |
+| Tarjetas de confianza, precios y testimonios ilustrativos | `index.html` | Contenido informativo; no acredita clientes, pagos ni validación documental real. |
+| Preguntas frecuentes con acordeón | `index.html`, `assets/js/main.js` | Orientación del visitante; no sustituye US14. |
+| Internacionalización español/inglés | `assets/js/i18n.js`, `assets/i18n/en.json`, `assets/i18n/es.json` | Funcionalidad transversal por asociar a un ítem real del backlog. |
+| Estilos adaptables y navegación móvil | `assets/css/responsive.css`, `assets/js/main.js` | Soporte de presentación móvil y escritorio. |
+| Configuración de CTA hacia la futura Web Application | `assets/js/config.js`, `assets/js/main.js` | Integración preparada; URL base todavía vacía. |
+| Documentación y configuración del proyecto | `README.md`, `.editorconfig`, `.gitignore`, `.nojekyll`, `LICENSE` | Preparación y mantenimiento del producto. |
+
+*Nota. Las horas de tareas no se suman con los Story Points. La internacionalización y los contenidos adicionales no permiten dar por completadas US13 o US14 sin satisfacer sus criterios.*
 
 #### 5.2.1.4. Development Evidence for Sprint Review
 
-El desarrollo del Sprint 1 se gestiona mediante ramas independientes creadas a partir de `develop`. Cada cambio implementado será registrado mediante commits individuales y posteriormente integrado mediante Pull Requests hacia la rama de integración.
-
-La siguiente tabla registra la evidencia de desarrollo correspondiente a las User Stories incluidas en el Sprint. Los datos pendientes serán completados conforme los cambios sean implementados y publicados en el repositorio.
+La evidencia disponible consiste en los archivos fuente de la Landing Page. La copia recibida no contiene un directorio `.git` en la carpeta `landing` ni en su carpeta contenedora inmediata, por lo que no permite recuperar commits, ramas, revisores o fechas de integración.
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
 | --- | --- | --- | --- | --- | --- |
-| Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page | feature/US12-hero | (pendiente) | (pendiente) | (pendiente) | (pendiente) |
-| Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page | feature/US13-fleet | (pendiente) | (pendiente) | (pendiente) | (pendiente) |
-| Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page | feature/US14-contact | (pendiente) | (pendiente) | (pendiente) | (pendiente) |
+| Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page | [PENDIENTE] | [PENDIENTE] | [PENDIENTE: mensaje literal] | [PENDIENTE] | [PENDIENTE] |
+
+**Repositorio declarado:** [Loadmatch-landing-page](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page).
+
+Se agregarán tantas filas como commits relevantes tenga el incremento. Cada identificador deberá enlazar con el commit real. Los ejemplos de Conventional Commits del README son convenciones, no registros históricos.
+
+**Artefactos de desarrollo comprobados**
+
+| Artefacto | Contenido comprobado |
+| --- | --- |
+| `index.html` | Estructura semántica, metadatos, secciones informativas, controles de interfaz y ocho CTA configurables. |
+| `assets/css/main.css` | Tokens de color, tipografía Inter, espaciado, tamaños y estilos base. |
+| `assets/css/components.css` | Hoja de estilos de componentes referenciada por la página. |
+| `assets/css/responsive.css` | Media queries de 1359, 1023, 767 y 389 px, además de reglas de impresión y reducción de movimiento. |
+| `assets/js/main.js` | Inicialización de CTA, menú móvil, pestañas, acordeón y carrusel. |
+| `assets/js/i18n.js` | Carga de traducciones con `fetch`, actualización de textos y almacenamiento de preferencia de idioma. |
+| `.editorconfig` | UTF-8, finales de línea LF, dos espacios, salto final y eliminación de espacios sobrantes. |
+| `.gitignore` | Exclusión de archivos del sistema, configuración local de editores, registros y `.env`. |
+| `.nojekyll` | Archivo presente como preparación para alojamiento estático en GitHub Pages. |
+| `LICENSE` | Licencia MIT incluida. |
 
 #### 5.2.1.5. Execution Evidence for Sprint Review
 
-Esta sección presentará la evidencia de ejecución correspondiente a las funcionalidades implementadas durante el Sprint 1. Una vez completadas las User Stories planificadas, se incluirán capturas de las principales vistas funcionales del Landing Page de LoadMatch, mostrando su comportamiento en diferentes tamaños de pantalla y las funcionalidades interactivas desarrolladas.
+La inspección permite identificar qué componentes están implementados, pero la evidencia visual de ejecución debe completarse con capturas y un video de la página servida mediante HTTP. En esta revisión se comprobaron referencias locales y estructura del código; no se realizó una prueba interactiva en navegador.
 
-Las evidencias visuales serán incorporadas una vez que la implementación correspondiente al Sprint se encuentre integrada y disponible para revisión.
+**1. Inicio e indicadores del contexto logístico**
 
-**Screenshots de las vistas implementadas:** (pendiente)
+El Hero presenta la propuesta de encontrar transporte sin disponer de flota propia y diferencia los CTA de empresa y transportista. La sección de indicadores muestra cifras de contexto atribuidas al MTC, relacionadas con espera para conseguir un vehículo, tercerización y costo logístico. Estas cifras se presentan como antecedentes del problema, no como resultados alcanzados por LoadMatch.
 
-**Video de navegación y ejecución del producto:** (pendiente)
+**Captura de inicio en escritorio y móvil:** [PENDIENTE].
+
+**2. Funcionamiento y beneficios por segmento**
+
+La sección «Cómo funciona» contiene pestañas para empresas y transportistas, con imágenes y pasos explicativos. El código contempla selección mediante clic y navegación con flechas, Home y End. Las imágenes ilustran la aplicación prevista; no demuestran que las operaciones transaccionales estén implementadas.
+
+Las tarjetas posteriores explican los beneficios para ambos segmentos y presentan información sobre confianza, perfiles, historial y calificaciones. Las afirmaciones sobre verificación oficial y seguimiento deberán corresponderse con los servicios disponibles cuando estos se implementen.
+
+**Capturas de ambos paneles y beneficios:** [PENDIENTE].
+
+**3. Testimonios y modelo de precios**
+
+Se incluyen tres testimonios en un componente con controles y contador. La página los identifica como contenido de muestra, por lo que no constituyen entrevistas de validación ni opiniones de clientes reales.
+
+La sección de precios describe publicación gratuita, comisión por servicio y ausencia de membresía mensual. También está identificada como contenido de muestra. No corresponde a planes de suscripción ni acredita integración de una pasarela de pago.
+
+**Capturas de testimonios y precios:** [PENDIENTE].
+
+**4. Preguntas frecuentes y contacto**
+
+El acordeón incluye cinco preguntas sobre costos, cobertura, validación de transportistas, incidencias y tipos de carga. La pregunta sobre mercancías admitidas no constituye un catálogo de vehículos con capacidades.
+
+El pie de página contiene enlaces `mailto:` y `tel:`, además de información de ubicación y horario. No existe un elemento `<form>` ni lógica para recibir, almacenar o notificar consultas. Tampoco se ha verificado la operatividad de la dirección de correo y teléfono mostrados.
+
+**Capturas del acordeón y pie de página:** [PENDIENTE].
+
+**5. Idiomas, adaptación y accesibilidad**
+
+La página contiene diccionarios en inglés y español. La selección inicial prioriza la preferencia guardada, luego el idioma compatible del navegador y finalmente inglés. La carga de traducciones requiere un servidor HTTP local o alojamiento web.
+
+Se identifican un enlace para saltar al contenido principal, atributos ARIA, controles de pestañas y reglas adaptables. El README declara verificaciones de contraste y ausencia de desbordamiento en distintas resoluciones, pero no incluye en los archivos revisados los resultados de ejecución necesarios para reproducir esas conclusiones. Por ello, no se presenta esta inspección como certificación de conformidad WCAG.
+
+**Capturas en español e inglés y registro de pruebas:** [PENDIENTE].
+
+**6. CTA y espacios de video**
+
+Existen ocho enlaces con `data-app-path`. La variable `APP_BASE_URL` está vacía; por ese motivo, el código los dirige a secciones internas mediante `data-app-fallback`. Las rutas de registro por perfil e inicio de sesión están preparadas, pero no conectadas a una aplicación publicada.
+
+Los dos espacios de video contienen la dirección base de inserción de YouTube sin identificador. Son contenedores preparados para About-the-Product y About-the-Team, no videos publicados.
+
+**Registro de comprobaciones**
+
+| Verificación | Resultado de inspección | Evidencia de ejecución pendiente |
+| --- | --- | --- |
+| Recursos locales de `index.html` | No se encontraron archivos faltantes entre las referencias `assets/` y `docs/` revisadas. | Carga HTTP y consola del navegador. |
+| Propuesta de valor, US12 | Presente en estructura y textos. | Capturas y aceptación del escenario. |
+| Catálogo, US13 | No identificado. | Implementación y prueba. |
+| Formulario, US14 | Cero elementos `<form>`; solo contacto mediante enlaces. | Implementación, recepción, almacenamiento y notificación. |
+| Idiomas | Dos diccionarios y lógica de selección presentes. | Alternancia y persistencia de preferencia. |
+| Interactividad | Código de menú, pestañas, acordeón y carrusel presente. | Interacción con ratón y teclado. |
+| CTA externos | Ocho enlaces preparados; URL base vacía. | Integración futura con la Web Application. |
+| Videos | Dos inserciones sin ID. | URLs definitivas y reproducción. |
+
+**Video de navegación del Sprint Review:** [PENDIENTE: Microsoft Stream y archivo `.mp4`, de 3 a 5 minutos conforme al enunciado].
 
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
 
-Durante el Sprint 1 no se contempla la implementación de Web Services, bases de datos ni APIs RESTful, debido a que esta primera iteración se encuentra enfocada en el desarrollo y despliegue inicial del Landing Page de LoadMatch.
+La versión revisada es un sitio estático y no contiene una API RESTful propia. El uso de `fetch` se limita en el código revisado a cargar los diccionarios de traducción; no representa un Web Service de negocio.
 
-Por este motivo, no se presentan endpoints ni documentación de servicios para este Sprint. La implementación de los Web Services será abordada en iteraciones posteriores del proyecto.
+En consecuencia, no existe documentación OpenAPI/Swagger que pueda atribuirse a esta entrega. Las explicaciones sobre transportistas, seguimiento, incidencias y pagos describen la propuesta de la plataforma y no acreditan servicios operativos.
+
+La implementación posterior de la API deberá incluir las operaciones reales, métodos HTTP, rutas, parámetros, autenticación, solicitudes y respuestas, junto con la URL de Swagger y capturas de ejecución. El contexto Contact deberá resolver la recepción de consultas requerida por US14.
+
+**Repositorio backend declarado:** [Loadmatch-backend-application](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-backend-application).
+
+**Evidencia OpenAPI/Swagger de Sprint 1:** no disponible en el alcance recibido.
 
 #### 5.2.1.7. Software Deployment Evidence for Sprint Review
 
-El Landing Page de LoadMatch será desplegado mediante **GitHub Pages** una vez completada e integrada la implementación correspondiente al Sprint 1.
+El README identifica GitHub Pages como plataforma de alojamiento y describe la publicación desde `main` y la raíz del repositorio. La copia incluye `.nojekyll` y una estructura estática que no requiere compilación.
 
-**Enlace del Repositorio:** https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page
+Estos archivos documentan la preparación de publicación, pero no permiten verificar la configuración remota ni confirmar que la copia local coincide con una versión desplegada. Además, la carpeta entregada se llama `landing`: la publicación desde la raíz solo corresponde si su contenido se encuentra efectivamente en la raíz de la rama publicada.
 
-**URL del Landing Page Desplegado:** (pendiente)
+| Evidencia | Estado |
+| --- | --- |
+| Repositorio declarado | [Loadmatch-landing-page](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page) |
+| Plataforma documentada | GitHub Pages. |
+| Archivos estáticos y `.nojekyll` | Presentes en la copia revisada. |
+| Configuración `Settings > Pages` | [PENDIENTE: captura de la configuración real]. |
+| URL pública | [PENDIENTE: URL obtenida de GitHub Pages y verificación de acceso]. |
+| Commit y tag publicados | [PENDIENTE]. |
+| Ejecución de despliegue | [PENDIENTE: enlace y resultado]. |
+| Fecha de publicación | [PENDIENTE]. |
+| Prueba posterior al despliegue | [PENDIENTE: recursos, navegación, traducciones e interacción]. |
 
-**Evidencia del proceso de despliegue:** (pendiente)
+No se acredita un pipeline propio de integración continua mediante el README. Para documentar publicación automática se requiere evidencia de la configuración y de una ejecución satisfactoria. La disponibilidad del sitio estático tampoco implica el despliegue de la Web Application o el backend.
 
 #### 5.2.1.8. Team Collaboration Insights during Sprint
 
-La exclusión de frameworks pesados en esta fase exigió una coordinación rigurosa a nivel de archivos estáticos. El equipo implementó una estrategia colaborativa basada en la segmentación clara de la hoja de estilos y la modularización de los scripts.
+La organización de archivos separa contenido, estilos base, componentes, adaptación, configuración de enlaces y traducciones. Esta separación facilita distribuir el trabajo y revisar cambios por responsabilidad. El README define GitFlow, Conventional Commits y Semantic Versioning como prácticas del proyecto.
 
-* **Integración CSS Controlada:** Para evitar la sobreescritura de reglas visuales en un entorno sin preprocesadores avanzados, el equipo aplicó la metodología BEM. Los desarrolladores trabajaron en ramas locales y sometieron sus maquetas visuales a revisiones cruzadas (Pull Requests) para verificar la consistencia estética y el uso obligatorio del archivo de variables (`:root`) antes de fusionar el código.
-* **Manejo del DOM en Equipo:** Las revisiones de código en JavaScript se centraron en garantizar que la manipulación del DOM no interfiriera con componentes desarrollados por otros miembros, utilizando selectores específicos e instanciando los Event Listeners de forma modular una vez que el documento estuviera completamente cargado (`DOMContentLoaded`). La fluidez de la comunicación a través de Microsoft Teams permitió resolver las discrepancias de diseño de manera inmediata.
+La existencia de estas convenciones no demuestra su aplicación histórica. Para describir la colaboración ejecutada se requiere incorporar los commits, Pull Requests y acuerdos reales del sprint.
 
-**GitHub Collaboration Insights:** (pendiente)
+| Aspecto | Evidencia disponible | Evidencia pendiente |
+| --- | --- | --- |
+| Organización técnica | Separación de HTML, CSS, JavaScript y diccionarios. | Autoría y tareas asociadas. |
+| Uniformidad de formato | `.editorconfig` con reglas comunes. | Revisiones y aplicación efectiva de las convenciones. |
+| Flujo de colaboración | GitFlow y convenciones documentados en README. | Ramas, Pull Requests, comentarios e integraciones reales. |
+| Participación individual | No recuperable de esta copia sin historial Git. | Contribuciones de los seis integrantes. |
+| Coordinación y retrospectiva | No se proporcionó acta de cierre. | Acuerdos, bloqueos y acciones de mejora. |
+
+**Historial de commits por integrante:** [PENDIENTE].
+
+**Gráficos de colaboradores y actividad durante el sprint:** [PENDIENTE].
+
+**Pull Requests revisados y observaciones resueltas:** [PENDIENTE].
+
+Como propuesta para la retrospectiva, se plantea revisar la diferencia entre las historias planificadas y el producto construido, acordar cómo completar US13 y US14 y registrar explícitamente las tareas de internacionalización y contenido adicional. También corresponde preparar la integración de CTA y sustituir los espacios de video por publicaciones reales en sus hitos respectivos. Estas acciones son propuestas de seguimiento y no acuerdos ya celebrados por el equipo.
