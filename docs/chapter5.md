@@ -86,60 +86,96 @@ docs(sprint1): add execution evidence
 
 ### 5.1.3. Source Code Style Guide & Conventions
 
-Con el propósito de mantener consistencia, legibilidad y facilidad de mantenimiento en el código fuente de LoadMatch, el equipo adopta convenciones comunes para la escritura de HTML, CSS y JavaScript.
+El equipo establece las convenciones de codificación que se aplicarán durante el desarrollo de **LoadMatch** para mantener un código legible, consistente y fácil de mantener. Estas directrices comprenden **HTML, CSS y JavaScript vanilla** para la Landing Page, **TypeScript con Angular** para la Web Application y **Java con Spring Boot** para los Web Services, en correspondencia con el stack tecnológico del curso y la arquitectura definida en el Capítulo IV.
 
-Como regla general, **todos los nombres utilizados en el código se escriben en inglés**, incluyendo nombres de clases CSS, identificadores, variables, funciones, archivos y componentes. Esta convención permite mantener una nomenclatura uniforme entre los diferentes productos de software y facilita la colaboración entre los integrantes del equipo.
+Como regla transversal, los identificadores y comentarios del código se redactarán en **inglés**, manteniendo correspondencia con el *Ubiquitous Language* del Capítulo II. Los textos visibles para los usuarios respetarán el idioma y el tono de comunicación definidos para el producto.
 
-Ejemplos:
+Las convenciones se documentarán en los repositorios correspondientes. Se utilizará **.editorconfig** para establecer reglas comunes de indentación y codificación, **Prettier** para el formato de los archivos compatibles y **ESLint** para el análisis estático de JavaScript y TypeScript. Las configuraciones deberán mantenerse bajo control de versiones para que puedan ser utilizadas por todos los integrantes.
 
-- `contact-form`
-- `fleet-card`
-- `submitButton`
-- `loadVehicles()`
-- `pricing-section`
+---
 
-**Convenciones de Estructura y Estilos (HTML5 / CSS3):**
+#### Convenciones por lenguaje
 
-* **HTML Semántico:** Se prioriza el uso de etiquetas semánticas como `<header>`, `<nav>`, `<main>`, `<section>`, `<article>` y `<footer>`, evitando el sobreuso de elementos `<div>` cuando existe una alternativa semántica adecuada.
-* **Nombres descriptivos en inglés:** Los nombres de clases e identificadores deben describir claramente la responsabilidad del elemento y utilizar terminología en inglés.
-* **Metodología BEM (Block, Element, Modifier):** Se utiliza para mantener una estructura predecible en los selectores CSS y reducir colisiones entre estilos. Por ejemplo: `.contact-form`, `.contact-form__input` y `.contact-form__button--active`.
-* **Variables CSS (Custom Properties):** Los tokens visuales de LoadMatch, como colores, tipografías y espaciados, se centralizan mediante variables definidas en la pseudoclase `:root`.
-* **Indentación y formato:** El código debe conservar una indentación consistente y una estructura legible, evitando reglas o declaraciones innecesariamente complejas.
-* **Preferencia por clases:** Para la aplicación de estilos reutilizables se prioriza el uso de clases sobre identificadores (`id`).
+| Lenguaje | Convenciones del proyecto |
+| --- | --- |
+| **HTML5** | Utilizar elementos semánticos como `header`, `nav`, `main`, `section` y `footer`. Mantener jerarquía coherente de encabezados, asociar etiquetas con controles de formulario e incluir textos alternativos apropiados para imágenes. Declarar idioma con `lang`. Identificadores descriptivos en `kebab-case`. |
+| **CSS3** | Aplicar metodología **BEM** para nombrar clases (ej. `contact-form__input`, `contact-form__button--disabled`). Centralizar colores, tipografías y espaciados mediante variables CSS. Usar **Flexbox/Grid** y media queries para adaptación. Evitar estilos duplicados y selectores excesivamente específicos. |
+| **JavaScript vanilla** | Usar `const` por defecto y `let` cuando exista reasignación. Variables y funciones en `camelCase`. Comparación estricta (`===`). Eventos con `addEventListener`. Separar lógica de HTML y manejar estados de carga, éxito y error en operaciones asíncronas. |
+| **TypeScript con Angular** | Definir tipos para datos del dominio y contratos de API. Evitar `any` sin justificación. Clases e interfaces en `PascalCase`; propiedades y métodos en `camelCase`. Organizar interfaz en componentes y concentrar acceso a servicios externos en servicios inyectables. Gestionar eventos mediante mecanismos de Angular. |
+| **Java con Spring Boot** | Clases e interfaces en `PascalCase`, métodos y atributos en `camelCase`, constantes en `UPPER_SNAKE_CASE`, paquetes en minúsculas. Usar inyección de dependencias por constructores. Separar responsabilidades entre dominio, aplicación, infraestructura e interfaces. Evitar reglas de negocio en controladores REST. |
 
-Para estas convenciones, el equipo toma como referencia **HTML Style Guide and Coding Conventions** y **Google HTML/CSS Style Guide**.
+---
 
-**Convenciones de Lógica (Vanilla JavaScript):**
+#### Indentación y formato
+- **HTML, CSS, JavaScript, TypeScript** → 2 espacios.  
+- **Java** → 4 espacios.  
+- Usar espacios en lugar de tabulaciones.  
+- Guardar archivos en **UTF-8**.  
+- Eliminar espacios al final de las líneas y mantener una nueva línea al final de cada archivo.  
+- Configuraciones versionadas para asegurar formato uniforme.  
 
-* **Nomenclatura en inglés:** Las variables, constantes y funciones deben utilizar nombres descriptivos en inglés.
-* **Declaración de variables:** Se utiliza `const` por defecto y `let` cuando sea necesario reasignar valores, evitando el uso de `var`.
-* **Manipulación de eventos:** Los eventos se registran mediante `addEventListener`, manteniendo separada la lógica JavaScript de la estructura HTML.
-* **Alcance de variables:** Se evita crear variables globales innecesarias, manteniendo la lógica encapsulada en funciones o módulos.
-* **Funciones descriptivas:** Los nombres de funciones deben representar claramente la acción que realizan, por ejemplo `validateContactForm()` o `toggleFaqItem()`.
+Los comentarios deberán explicar decisiones, restricciones o comportamientos no evidentes. Se evitarán comentarios redundantes que repitan la instrucción.
 
-**Convenciones de Commits (Conventional Commits):**
+---
 
-Los mensajes de commit siguen la especificación Conventional Commits y se redactan en inglés. Entre los tipos utilizados se encuentran:
+#### Consistencia con el diseño
 
-* `feat:` Nueva funcionalidad o componente. Ejemplo: `feat(pricing): add commission-based pricing section`.
-* `fix:` Corrección de un error existente.
-* `style:` Cambios de formato o estilos que no modifican la lógica de negocio.
-* `chore:` Tareas de mantenimiento o configuración del proyecto.
-* `refactor:` Reestructuración del código sin alterar su comportamiento observable.
+| Elemento | Convención |
+| --- | --- |
+| Tipografía principal | **Inter**, con pesos y jerarquías del diseño. |
+| Tipografía complementaria | **Liberation Serif**, limitada a títulos y elementos de identidad. |
+| Color principal | Primary Orange: `#FE6B00`. |
+| Color de interacción | Orange Pressed: `#A04100`. |
+| Color estructural oscuro | Dark Navy: `#0B1C30`. |
+| Fondo claro | Background Light: `#F8FAFC`. |
 
-**Referencias adoptadas:**
+- Botones con fondo **Primary Orange** → texto oscuro (contraste).  
+- Mensajes de error → texto descriptivo + indicador visual (no solo color).  
+- Tokens visuales centralizados para reutilización.  
+- En Angular, configuración de **Angular Material** deberá conservar identidad visual de LoadMatch.  
+- Adaptación a dispositivos → preservar legibilidad, navegación y accesibilidad.  
+- Controles interactivos → etiquetas comprensibles y estado de foco visible para navegación con teclado.  
 
-- HTML Style Guide and Coding Conventions: https://www.w3schools.com/html/html5_syntax.asp
-- Google HTML/CSS Style Guide: https://google.github.io/styleguide/htmlcssguide.html
-- Conventional Commits: https://www.conventionalcommits.org/
+---
 
-### 5.1.4. Software Deployment Configuration
+#### Organización de la aplicación y los servicios
+La organización del código mantendrá correspondencia con los contextos definidos en el Capítulo IV:  
+**IAM, Profiles, Fleet, Document Validation, Freight Publishing, Matching, Trip Execution, Payment, Rating y Contact.**
 
-La canalización de despliegue del Landing Page de LoadMatch aprovecha la naturaleza estática de los artefactos (archivos HTML, CSS y JS) utilizando plataformas de alojamiento sin servidor (Serverless Hosting) altamente eficientes.
+- En **Angular**: archivos agrupados por funcionalidad/contexto. Componentes → presentación e interacción. Servicios → acceso a API y lógica compartida.  
+- En **Spring Boot**: separación clara de responsabilidades:  
+  - **Dominio** → entidades, objetos de valor, reglas de negocio.  
+  - **Aplicación** → coordinación de casos de uso.  
+  - **Infraestructura** → persistencia e integración con servicios externos.  
+  - **Interfaces** → controladores REST y contratos de entrada/salida.  
 
-1. **Plataforma de Despliegue:** GitHub Pages.
-2. **Pipeline de Publicación:** Al integrar código en la rama `main` de GitHub, la plataforma detecta los archivos estáticos y distribuye los artefactos a través de su Red de Entrega de Contenido (CDN) global.
-3. **Optimización:** Previo al despliegue en la rama principal, se asegura la minificación de los archivos `.css` y `.js`, y la compresión de los assets visuales (imágenes en formato WebP o SVG) para garantizar tiempos de carga ultrarrápidos (Time to Interactive).
+La validación en formularios del navegador facilita la interacción, pero no sustituye las validaciones del backend. Los servicios deberán verificar datos y reglas de negocio antes de modificar el estado de la aplicación.  
+
+Los contratos de entrada/salida de la API se mantendrán separados de las entidades persistentes. Los nombres en español del diseño deberán mapearse a identificadores en inglés en la implementación. Esta correspondencia se documentará y actualizará en el Capítulo IV para conservar trazabilidad.
+
+#### Guías de referencia
+
+El equipo utilizará las siguientes fuentes como apoyo para definir y mantener sus convenciones. Las decisiones específicas adoptadas para LoadMatch quedarán documentadas en cada repositorio.
+
+- **HTML y CSS:** [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html).
+- **JavaScript:** [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html).
+- **TypeScript:** [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html).
+- **Angular:** [Angular Coding Style Guide](https://angular.dev/style-guide).
+- **Java:** [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html), como referencia complementaria; para la indentación prevalece la regla de cuatro espacios del proyecto.
+- **Configuración de formato:** [EditorConfig](https://editorconfig.org/) y [Prettier](https://prettier.io/docs/).
+- **Análisis estático de JavaScript y TypeScript:** [ESLint](https://eslint.org/docs/latest/) y [typescript-eslint](https://typescript-eslint.io/).
+
+**Landing Page**
+
+Se propone GitHub Pages como alojamiento de la Landing Page. La configuración prevista consiste en seleccionar `Settings > Pages > Deploy from a branch`, con `main` y la carpeta raíz como fuente de publicación, siempre que allí se encuentre `index.html`. Si la estructura cambia, deberá ajustarse la fuente. GitHub Pages requiere esta configuración; integrar cambios en `main` no basta cuando aún no se ha seleccionado una fuente. Referencia: [Configuración de la fuente de publicación de GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+
+Antes de publicar se revisarán rutas de recursos, navegación, comportamiento móvil, formulario y ausencia de errores de consola. Después de publicar se abrirá la URL asignada y se registrarán commit, fecha y ejecución del despliegue. La compresión de imágenes o minificación solo se declarará realizada cuando exista evidencia del proceso.
+
+**Web Application, API y persistencia**
+
+El alojamiento de los productos posteriores está **[PENDIENTE DE DEFINICIÓN]**. La configuración deberá contemplar construcción de Angular, resolución de sus rutas, URL de la API, ejecución de Java 17, conexión a PostgreSQL/PostGIS y aplicación controlada de cambios del esquema. La API deberá configurar los orígenes autorizados de la Landing Page y Web Application cuando exista acceso desde el navegador.
+
+Mapbox, PayPal, almacenamiento de archivos y correo son integraciones previstas en el Capítulo IV. Sus credenciales, entornos y disponibilidad deben verificarse antes de documentar una integración operativa. La consulta automática al MTC también permanece condicionada al acceso real a una fuente adecuada, conforme a las restricciones del Capítulo I.
 
 ---
 
