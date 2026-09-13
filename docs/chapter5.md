@@ -179,7 +179,7 @@ Mapbox, PayPal, almacenamiento de archivos y correo son integraciones previstas 
 
 ---
 
-5.2. Landing Page, Services & Applications Implementation
+## 5.2. Landing Page, Services & Applications Implementation
 
 La implementación de LoadMatch se desarrolla mediante incrementos que permiten transformar los requisitos y diseños del proyecto en productos de software. El presente registro describe la Landing Page del Sprint 1 a partir de la inspección de sus archivos HTML, CSS, JavaScript y documentación.
 
