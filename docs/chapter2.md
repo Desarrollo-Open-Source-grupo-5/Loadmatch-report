@@ -293,7 +293,7 @@ El recorrido que experimenta nuestro empresario modelo comienza de forma bastant
 
 <p align="center"><img src="../assets/Chapter2/Graphics/JourneyMapEmpresarios.png" width="600"></p>
 
-Para ver en mejor calidad, <a href="">ingrese aquí</a>.
+Para ver en mejor calidad, <a href="https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report/blob/feature/Chapter2/assets/Chapter2/Graphics/JourneyMapEmpresarios.png">ingrese aquí</a>.
 
 Segmento 2 - Transportistas:
 
@@ -301,9 +301,11 @@ En el caso de nuestro transportista modelo, podemos apreciar que sus necesidades
 
 <p align="center"><img src="../assets/Chapter2/Graphics/JourneyMapTransportista.png" width="600"></p>
 
-Para ver en mejor calidad, <a href="">ingrese aquí</a>.
+Para ver en mejor calidad, <a href="https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report/blob/feature/Chapter2/assets/Chapter2/Graphics/JourneyMapTransportista.png">ingrese aquí</a>.
 
 ### 2.3.4. Empathy Mapping
+
+
 
 ## 2.4. Big Picture Event Storming
 
