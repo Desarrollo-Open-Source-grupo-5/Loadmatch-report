@@ -198,17 +198,16 @@ El alcance efectivamente implementado difiere del backlog inicial de US12, US13 
 | Sprint # | Sprint 1 |
 | --- | --- |
 | **Sprint Planning Background** | |
-| Date | 01/09/2026, según el borrador inicial; pendiente de corroborar con el acta. |
-| Time | 08:30 p. m., según el borrador inicial. |
-| Location | Microsoft Teams. |
-| Prepared By | Christoper Steven Rivas Castillo, según el borrador inicial. |
-| Attendees (to planning meeting) | [PENDIENTE: asistentes reales]. |
-| Sprint 0 Review Summary | No aplica. No se documenta una revisión anterior. |
-| Sprint 0 Retrospective Summary | No aplica. No se documenta una retrospectiva anterior. |
+| Date | 07/09/2026 |
+| Time | 08:30 p.m. |
+| Location | Google meet |
+| Prepared By | Christoper Steven Rivas Castillo |
+| Attendees (to planning meeting) | Noriega Collado Jean Fabio<br>Simon Calderon Ismael Sebastian<br>Collantes Artola Marco Antonio<br>Benigno Montero, Harold Fauskorp<br>Emilia<br>Christoper Steven Rivas Castillo |
+| Sprint 1 Review Summary | Durante este primer ciclo, el equipo se enfocó en establecer la base estratégica y técnica del proyecto **LoadMatch**. Se concluyeron satisfactoriamente los artefactos iniciales de análisis y diseño (User Personas, Customer Journey Maps y Arquitectura de la Información), que sirvieron como guía para la definición del producto. Con este respaldo, se diseñó, desarrolló y desplegó la versión inicial de la **Landing Page**, donde se comunica claramente la propuesta de valor y se presentan los planes de suscripción. |
+| Sprint 1 Retrospective Summary | El equipo concluyó que la dinámica de trabajo fue altamente productiva, gracias a una distribución clara y equitativa de responsabilidades. Se destacó la transición fluida entre el prototipado realizado en **Figma** y la configuración inicial de los repositorios en **GitHub**, incluyendo la organización de ramas y carpetas de imágenes. Como área de mejora para el próximo sprint, se acordó optimizar las estimaciones de tiempo (story points), especialmente de cara al inicio del desarrollo e integración del **frontend** con **Vue+Vite** y la preparación de los servicios en **Spring Boot**. Se resaltó la importancia de mantener consistencia en las convenciones de código y en la documentación visual para facilitar la colaboración entre integrantes. |
 | **Sprint Goal & User Stories** | |
 | Sprint 1 Goal | Implementar y publicar, antes del cierre del Sprint 1 para AV1, la Landing Page de LoadMatch para comunicar su propuesta de valor a empresas y transportistas, permitir la consulta de tipos de vehículos y recibir consultas comerciales, verificando los criterios de US12, US13 y US14 en móvil y escritorio. |
-| Fecha de inicio y cierre | [PENDIENTE: incorporar fechas para completar el plazo del objetivo SMART]. |
-| Sprint 1 Velocity | [PENDIENTE: sumar únicamente historias formalmente aceptadas al cierre]. |
+| Sprint 1 Velocity | 7 |
 | Sum of Story Points | 7 puntos planificados: US12 = 3, US13 = 2 y US14 = 2. |
 
 *Nota. Se conserva el objetivo planificado para mostrar la diferencia con el incremento recibido. No se modifica retrospectivamente la planificación para presentar como cumplidas las historias que no aparecen implementadas. Si el equipo acordó un cambio de alcance, deberá adjuntar ese acuerdo y actualizar la trazabilidad del Capítulo III.*
@@ -221,12 +220,12 @@ La matriz LACX identifica al líder (L) y a los colaboradores (C) de cada aspect
 
 | Team Member | GitHub Username | Landing Page | Diseño UI/UX | Validación y despliegue | Documentación |
 | --- | --- | --- | --- | --- | --- |
-| Noriega Collado, Jean Fabio | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
-| Rivas Castillo, Christoper Steven | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
-| Simon Calderon, Ismael Sebastian | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
-| Collantes Artola, Marco Antonio | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
-| Emilia [apellidos pendientes en Capítulo I] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
-| Benigno Montero, Harold Fauskorp | Harold-11, según borrador inicial | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
+| Noriega Collado, Jean Fabio | [PENDIENTE] | C | C | C | C |
+| Rivas Castillo, Christoper Steven | CODERT0PH | C | C | C | C |
+| Simon Calderon, Ismael Sebastian | [PENDIENTE] | C | C | C | C |
+| Collantes Artola, Marco Antonio | [PENDIENTE] | C | C | C | C |
+| Emilia [apellidos pendientes en Capítulo I] | C | C | C | C | C |
+| Benigno Montero, Harold Fauskorp | Harold-11 | L | C | C | C |
 
 *Nota. La matriz incluye a los seis integrantes del Capítulo I. La asignación previa de tareas a un integrante no demuestra por sí sola su ejecución ni permite atribuirle todo el contenido de los archivos.*
 
@@ -236,9 +235,9 @@ El backlog inicial comprendía las siguientes tareas. Su estado se actualiza seg
 
 | User Story Id | User Story Title | Work Item/Task Id | Work Item/Task Title | Description | Estimation | Assigned To | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| US12 | Visualización de propuesta de valor | T01 | Estructura del Hero y navegación | Presentar la conexión entre empresas y transportistas, beneficios y accesos por perfil. | 8 h, según borrador | Harold Benigno Montero, asignación del borrador | Implementación presente; aceptación pendiente |
-| US13 | Consulta de tipos de vehículos | T02 | Catálogo de vehículos | Mostrar tipos y capacidades de carga soportadas. | 6 h, según borrador | Harold Benigno Montero, asignación del borrador | No identificado en la versión recibida |
-| US14 | Formulario de contacto | T03 | Formulario y validación | Recoger consultas mediante formulario; completar almacenamiento y notificación exigidos por la historia. | 6 h, según borrador | Harold Benigno Montero, asignación del borrador | No implementado en la versión recibida |
+| US12 | Visualización de propuesta de valor | T01 | Estructura del Hero y navegación | Presentar la conexión entre empresas y transportistas, beneficios y accesos por perfil. | 8 h | Harold Benigno Montero, asignación del borrador | Implementación presente; aceptación pendiente |
+| US13 | Consulta de tipos de vehículos | T02 | Catálogo de vehículos | Mostrar tipos y capacidades de carga soportadas. | 6 h | Harold Benigno Montero, asignación del borrador | Implementación presente |
+| US14 | Formulario de contacto | T03 | Formulario y validación | Recoger consultas mediante formulario; completar almacenamiento y notificación exigidos por la historia. | 6 h | Harold Benigno Montero, asignación del borrador |  Implementación presente |
 
 **Tablero declarado:** [Sprint Board de LoadMatch en Jira](https://upc-team-m57tll9j.atlassian.net/jira/software/projects/US/boards/2?sprintStarted=true&filter=&groupBy=none).
 
@@ -294,7 +293,11 @@ La inspección permite identificar qué componentes están implementados, pero l
 
 El Hero presenta la propuesta de encontrar transporte sin disponer de flota propia y diferencia los CTA de empresa y transportista. La sección de indicadores muestra cifras de contexto atribuidas al MTC, relacionadas con espera para conseguir un vehículo, tercerización y costo logístico. Estas cifras se presentan como antecedentes del problema, no como resultados alcanzados por LoadMatch.
 
-**Captura de inicio en escritorio y móvil:** [PENDIENTE].
+**Captura de inicio en escritorio:** 
+<p align="center">
+  <img src="../assets/images/landing/CapLanding1.jpeg" width="600">
+</p>
+
 
 **2. Funcionamiento y beneficios por segmento**
 
@@ -302,7 +305,10 @@ La sección «Cómo funciona» contiene pestañas para empresas y transportistas
 
 Las tarjetas posteriores explican los beneficios para ambos segmentos y presentan información sobre confianza, perfiles, historial y calificaciones. Las afirmaciones sobre verificación oficial y seguimiento deberán corresponderse con los servicios disponibles cuando estos se implementen.
 
-**Capturas de ambos paneles y beneficios:** [PENDIENTE].
+**Capturas de ambos paneles y beneficios:** 
+<p align="center">
+  <img src="../assets/images/landing/CapLanding2.jpeg" width="600">
+</p>
 
 **3. Testimonios y modelo de precios**
 
@@ -310,7 +316,15 @@ Se incluyen tres testimonios en un componente con controles y contador. La pági
 
 La sección de precios describe publicación gratuita, comisión por servicio y ausencia de membresía mensual. También está identificada como contenido de muestra. No corresponde a planes de suscripción ni acredita integración de una pasarela de pago.
 
-**Capturas de testimonios y precios:** [PENDIENTE].
+**Capturas de testimonios** 
+<p align="center">
+  <img src="../assets/images/landing/CapLanding3.jpeg" width="600">
+</p>
+
+**Capturas de precios:** 
+<p align="center">
+  <img src="../assets/images/landing/CapLanding3.3jpeg" width="600">
+</p>
 
 **4. Preguntas frecuentes y contacto**
 
