@@ -285,6 +285,24 @@ Por otro lado, se observan asimetrías clave: el monitoreo del estado del transp
 
 ### 2.3.3. User Journey Mapping
 
+A continuación procederemos a mostrar los recorridos y experiencia personal de nuestros posibles  en su día a día, esto según lo recopilado en nuestras entrevistas y los perfiles que hemos definido en los user persona mostrados previamente, mediante los cuales definiremos algunas de las oportunidades que se cubrirán con nuestra aplicación en desarrollo.
+
+Segmento 1 - Empresarios:
+
+El recorrido que experimenta nuestro empresario modelo comienza de forma bastante optimista debido a que partimos de un usuario en una situación favorable para su empresa, pero que puede verse afectada por tener que contratar transportistas por medio de canales convencionales donde no se tiene completa información de la situación del chofer, su vehículo, o su destino que pueden representarle un problema cuando llegue el momento de recibir su pago por los bienes que entrega.
+
+<p align="center"><img src="../assets/Chapter2/Graphics/JourneyMapEmpresarios.png" width="600"></p>
+
+Para ver en mejor calidad, <a href="">ingrese aquí</a>.
+
+Segmento 2 - Transportistas:
+
+En el caso de nuestro transportista modelo, podemos apreciar que sus necesidades por el momento son relativamente básicas, mas para poder alcanzar sus objetivos a largo plazo este depende principalmente de aplicaciones donde no recibe detalles sobre las distancias que debe recorrer o de la mercadería que debe de transportar, que en un clima social tan impredecible como el actual no garantiza que pueda conseguir clientes tan pronto como desea o que se ajusten a su agenda.
+
+<p align="center"><img src="../assets/Chapter2/Graphics/JourneyMapTransportista.png" width="600"></p>
+
+Para ver en mejor calidad, <a href="">ingrese aquí</a>.
+
 ### 2.3.4. Empathy Mapping
 
 ## 2.4. Big Picture Event Storming
