@@ -869,10 +869,7 @@ El equipo desarrolló una sesión de Design-Level Event Storming con una duraci�
   <i>Nota. Bounded contexts identificados al cierre del Design-Level Event Storming.</i>
 </div>
 
-<div align="center">
-  <img src="../assets/images/event-storming/es-bc-detalle.png" alt="Detalle de bounded contexts" width="800"><br>
-  <i>Nota. Vista en detalle de los bounded contexts, donde se aprecian los agregados, comandos, eventos, políticas y modelos de lectura de cada uno.</i>
-</div>
+
 
 Tres decisiones de modelado merecen ser explicadas:
 
