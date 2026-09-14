@@ -285,43 +285,39 @@ Por otro lado, se observan asimetrías clave: el monitoreo del estado del transp
 
 ### 2.3.3. User Journey Mapping
 
-A continuación procederemos a mostrar los recorridos y experiencia personal de nuestros posibles  en su día a día, esto según lo recopilado en nuestras entrevistas y los perfiles que hemos definido en los user persona mostrados previamente, mediante los cuales definiremos algunas de las oportunidades que se cubrirán con nuestra aplicación en desarrollo.
+A partir de los hallazgos obtenidos durante las entrevistas y de los User Personas definidos previamente, se elaboraron los User Journey Maps correspondientes a los dos segmentos objetivo de **LoadMatch**. Estos artefactos permiten representar las principales etapas que atraviesan los usuarios en su contexto actual, considerando sus objetivos, los canales que utilizan, las acciones que realizan, los problemas que enfrentan y las oportunidades de mejora identificadas.
 
-Segmento 1 - Empresarios:
+#### Segmento 1: Dueños de negocio y emprendedores
 
-El recorrido que experimenta nuestro empresario modelo comienza de forma bastante optimista debido a que partimos de un usuario en una situación favorable para su empresa, pero que puede verse afectada por tener que contratar transportistas por medio de canales convencionales donde no se tiene completa información de la situación del chofer, su vehículo, o su destino que pueden representarle un problema cuando llegue el momento de recibir su pago por los bienes que entrega.
+El primer Journey Map representa el recorrido de **Carlos Mendoza**, arquetipo del dueño de negocio que necesita trasladar mercadería de forma segura y confiable.
 
-<p align="center"><img src="../assets/Chapter2/Graphics/JourneyMapEmpresarios.png" width="600"></p>
+Su recorrido comienza cuando surge una necesidad de transporte y continúa con la búsqueda de opciones, la evaluación de transportistas, la coordinación del servicio, el seguimiento de la carga y finalmente la confirmación de la entrega. A lo largo de este proceso se identifican problemas relacionados con la informalidad del mercado, la falta de información sobre los transportistas, la dificultad para comparar alternativas y la limitada visibilidad sobre el estado del envío.
 
-Para ver en mejor calidad, <a href="https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report/blob/feature/Chapter2/assets/Chapter2/Graphics/JourneyMapEmpresarios.png">ingrese aquí</a>.
+Estas dificultades generan oportunidades para **LoadMatch**, como la incorporación de perfiles de transportistas verificados, comparación transparente de ofertas, coordinación centralizada, seguimiento en tiempo real e historial de servicios y calificaciones.
 
-Segmento 2 - Transportistas:
+<p align="center">
+  <img src="../assets/Chapter2/Graphics/Carlos_Mendoza_User_Journey_Map.png"
+       alt="User Journey Map de Carlos Mendoza"
+       width="1000">
+</p>
 
-En el caso de nuestro transportista modelo, podemos apreciar que sus necesidades por el momento son relativamente básicas, mas para poder alcanzar sus objetivos a largo plazo este depende principalmente de aplicaciones donde no recibe detalles sobre las distancias que debe recorrer o de la mercadería que debe de transportar, que en un clima social tan impredecible como el actual no garantiza que pueda conseguir clientes tan pronto como desea o que se ajusten a su agenda.
+***Nota.*** User Journey Map correspondiente al Segmento 1: Dueños de negocio y emprendedores.
 
-<p align="center"><img src="../assets/Chapter2/Graphics/JourneyMapTransportista.png" width="600"></p>
+#### Segmento 2: Transportistas y dueños de vehículos de carga
 
-Para ver en mejor calidad, <a href="https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report/blob/feature/Chapter2/assets/Chapter2/Graphics/JourneyMapTransportista.png">ingrese aquí</a>.
+El segundo Journey Map representa el recorrido de **Roberto Sánchez**, arquetipo del transportista independiente que busca oportunidades de trabajo constantes y clientes confiables.
 
-### 2.3.4. Empathy Mapping
+Su recorrido comprende la búsqueda de oportunidades de carga, la evaluación del flete, la negociación de la tarifa y las condiciones del servicio, la coordinación del recojo, la ejecución del transporte y finalmente el cobro y cierre del servicio. Entre los principales problemas identificados se encuentran la informalidad del sector, la información incompleta sobre las cargas, las tarifas poco competitivas, los tiempos de espera, los riesgos durante el transporte y la incertidumbre respecto al pago.
 
-Partiendo de lo documentado en los items anteriores, procederemos ahora a evaluar los empathy maps de nuestros posibles usuarios. Una vez más procederemos empleando la información recopilada en las entrevistas a los segmentos elegidos, y de esa forma poder perfilar la mejor o más precisa personalidad que deben tener nuestros usuarios a futuro.
+A partir de estos hallazgos se identifican oportunidades para **LoadMatch**, como un marketplace de fletes disponibles, solicitudes y clientes verificados, condiciones de servicio transparentes, coordinación centralizada, información detallada de las cargas y mecanismos que permitan construir una reputación verificable dentro de la plataforma.
 
-Segmento 1 - Empresarios:
+<p align="center">
+  <img src="../assets/Chapter2/Graphics/Roberto_Sanchez_User_Journey_Map.png"
+       alt="User Journey Map de Roberto Sánchez"
+       width="1000">
+</p>
 
-Ciertamente en el caso de nuestro primer segmento objetivo podemos ver que una de las principales motivaciones para contratar un servicio como el nuestro esta en garantizar el seguro transporte de sus mercaderías, de forma que su negocio pueda crecer de mejor forma sin tener que preocuparse por las dificultades del mundo moderno, esto mientras mantiene un esencial nivel de profesionalismo al respecto.
-
-<p align="center"><img src="../assets/Chapter2/Graphics/EmpathyMapCarlosMendoza.png" width="600"></p>
-
-Para ver en mejor calidad, <a href="https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report/blob/feature/Chapter2/assets/Chapter2/Graphics/EmpathyMapCarlosMendoza.png">ingrese aquí</a>.
-
-Segmento 2 - Transportistas:
-
-En el caso de nuestro segundo segmento, la principal preocupación que atravesarían sería la de conseguir y asegurar un estatus en un negocio que en años recientes ha atravesado por más de un percance, mientras busca una clientela que los respete y contrate con regularidad para cualquier necesidad independientemente si opera por cuenta propia o no.
-
-<p align="center"><img src="../assets/Chapter2/Graphics/EmpathyMapRobertoSanchez.png" width="600"></p>
-
-Para ver en mejor calidad, <a href="https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report/blob/feature/Chapter2/assets/Chapter2/Graphics/EmpathyMapRobertoSanchez.png">ingrese aquí</a>.
+***Nota.*** User Journey Map correspondiente al Segmento 2: Transportistas y dueños de vehículos de carga.
 
 ## 2.4. Big Picture Event Storming
 
