@@ -354,9 +354,282 @@ De esta manera, LoadMatch combina una navegación principal sencilla con accione
 
 ## 4.3. Landing Page UI Design
 
+Esta sección presenta la propuesta de interfaz para el sitio web estático de LoadMatch. El diseño traduce las decisiones tomadas en la sección 4.2 de Arquitectura de Información: el Organization System define el orden de las secciones según el recorrido del visitante, el Labeling System aporta las etiquetas de navegación y de los llamados a la acción, y el Navigation System determina que el visitante pueda alcanzar cualquier sección desde la cabecera fija y volver a un llamado a la acción desde cualquier punto del recorrido.
+
+El trabajo se organizó en dos etapas. Primero el wireframe, que fija estructura, jerarquía y flujo sin comprometer decisiones visuales. Después el mock-up, que aplica sobre esa misma estructura el Design System definido en la sección 4.1. Ambas etapas se elaboraron para las dos experiencias que exige el alcance del proyecto: Desktop Web Browser a 1440 px y Mobile Web Browser a 390 px.
+
+La landing page se compone de nueve bloques, presentados aquí en el mismo orden en que los recorre el visitante:
+
+| # | Bloque | Propósito |
+| :-: | :--- | :--- |
+| 01 | Cabecera y sección principal | Presentar la propuesta de valor y ofrecer el llamado a la acción de cada segmento |
+| 02 | Franja de indicadores del mercado | Sustentar la problemática con datos verificables |
+| 03 | Cómo funciona | Explicar el proceso de tres pasos, diferenciado por segmento |
+| 04 | Confianza y bloques por segmento | Responder a la principal objeción del cliente y separar los beneficios por perfil |
+| 05 | Lo que dicen nuestros usuarios | Aportar prueba social |
+| 06 | Precios transparentes | Despejar la incertidumbre sobre el costo |
+| 07 | Preguntas frecuentes | Resolver las dudas restantes sin abandonar la página |
+| 08 | Videos explicativos | Presentar el producto y al equipo en formato audiovisual |
+| 09 | Cierre y pie de página | Última oportunidad de conversión y acceso a información legal |
+
 ### 4.3.1. Landing Page Wireframe
 
+El wireframe se elaboró en baja fidelidad, en escala de grises y sin fotografías, de manera deliberada. El objetivo de esta etapa es validar la estructura, la jerarquía de la información y el flujo de navegación sin que el color o la imagen influyan en la evaluación. Las decisiones cromáticas se posponen a la etapa de mock-up.
+
+#### Wireframe para Desktop Web Browser
+
+**Bloque 01 — Cabecera y sección principal**
+
+La composición sigue el patrón Z de lectura. La marca ocupa la esquina superior izquierda, que es el punto donde inicia el barrido visual. La navegación recorre horizontalmente hacia la derecha y termina en el llamado a la acción principal, ubicado en la esquina superior derecha. El titular arranca el segundo trazo diagonal y la mirada desciende hacia la izquierda hasta encontrar los dos botones, con la imagen de apoyo cerrando el recorrido a la derecha.
+
+Los dos llamados a la acción del bloque principal responden a los dos segmentos objetivo. El botón primario corresponde al segmento de empresas y el secundario al de transportistas, con una diferencia de peso visual que refleja la prioridad del modelo de negocio sin ocultar la segunda opción.
+
+<img src="../assets/images/landing-page/wireframes-desktop/wireframe-desktop-01-header-hero.png" alt="Wireframe de escritorio: cabecera con marca a la izquierda, navegación de cinco enlaces, selector de idioma y dos llamados a la acción; debajo, titular, párrafo de apoyo, dos botones y una imagen a la derecha" width="700">
+
+**Bloque 02 — Franja de indicadores del mercado**
+
+Tres indicadores dispuestos en columnas de igual ancho, separados por líneas verticales. La repetición de la estructura —etiqueta, cifra, descripción, fuente— activa el principio de similitud de la Gestalt: el visitante reconoce que los tres elementos pertenecen a la misma categoría y puede compararlos sin esfuerzo. Cada cifra incluye su fuente, lo que sostiene la credibilidad del dato.
+
+<img src="../assets/images/landing-page/wireframes-desktop/wireframe-desktop-02-metrics.png" alt="Wireframe de escritorio: tres indicadores en columnas separadas por líneas verticales, cada uno con etiqueta, cifra destacada, descripción y fuente" width="700">
+
+**Bloque 03 — Cómo funciona**
+
+El control de pestañas resuelve un problema de arquitectura de información: los dos segmentos recorren procesos distintos, y presentarlos simultáneamente duplicaría el contenido y aumentaría la carga cognitiva. Al segmentar mediante pestañas se aplica la ley de Hick, reduciendo el número de opciones visibles en un mismo momento.
+
+Los tres pasos van numerados y ordenados de izquierda a derecha, siguiendo la dirección de lectura. La numeración explícita comunica secuencia, no simple agrupación.
+
+<img src="../assets/images/landing-page/wireframes-desktop/wireframe-desktop-03-how-it-works.png" alt="Wireframe de escritorio: dos pestañas para elegir perfil y tres pasos numerados en columnas, cada uno con una captura de la aplicación, un título y una descripción" width="700">
+
+**Bloque 04 — Confianza y bloques por segmento**
+
+Las cuatro tarjetas de verificación responden directamente a la principal objeción detectada en las entrevistas: la desconfianza sobre quién transporta la mercadería. Se ubican inmediatamente después de la explicación del proceso, que es el momento en el que esa objeción aparece.
+
+Debajo, los dos bloques por segmento ocupan mitades simétricas del ancho disponible. La simetría comunica que ninguno de los dos perfiles es secundario, y cada bloque cierra con su propio llamado a la acción, de modo que el visitante puede convertir sin regresar a la cabecera.
+
+<img src="../assets/images/landing-page/wireframes-desktop/wireframe-desktop-04-trust-audience.png" alt="Wireframe de escritorio: cuatro tarjetas de verificación en fila, y debajo dos bloques lado a lado con listas de beneficios y un botón cada uno" width="700">
+
+**Bloque 05 — Lo que dicen nuestros usuarios**
+
+Tres testimonios en columnas de igual ancho. Cada uno identifica a la persona con sus iniciales, su nombre y su cargo, porque un testimonio anónimo no aporta prueba social. La etiqueta superior advierte que se trata de contenido ilustrativo; esta decisión se sostiene en el compromiso de honestidad sobre las capacidades del producto que se detalla en la sección de ética profesional.
+
+<img src="../assets/images/landing-page/wireframes-desktop/wireframe-desktop-05-testimonials.png" alt="Wireframe de escritorio: tres testimonios en columnas, cada uno con la cita, las iniciales del autor, su nombre y su cargo, bajo una etiqueta de contenido de ejemplo" width="700">
+
+**Bloque 06 — Precios transparentes**
+
+La tarjeta central concentra el modelo de negocio real —la comisión sobre el servicio confirmado— y se destaca mediante un borde más grueso y una etiqueta de texto. El énfasis no depende del color, de modo que la jerarquía se mantiene para una persona que no distingue tonos. Las tarjetas laterales despejan las dos dudas más frecuentes sobre el costo: si publicar tiene precio y si existe una mensualidad.
+
+<img src="../assets/images/landing-page/wireframes-desktop/wireframe-desktop-06-pricing.png" alt="Wireframe de escritorio: tres tarjetas de precios, con la del centro destacada mediante un borde más grueso y una etiqueta" width="700">
+
+**Bloque 07 — Preguntas frecuentes**
+
+El acordeón permite revisar los cinco títulos de un vistazo y desplegar solo la respuesta que interesa, lo que evita una pared de texto. La primera pregunta se muestra desplegada para comunicar de entrada que las filas son interactivas. El estado abierto o cerrado se indica con los signos menos y más, es decir mediante forma y no únicamente por color.
+
+<img src="../assets/images/landing-page/wireframes-desktop/wireframe-desktop-07-faq.png" alt="Wireframe de escritorio: acordeón con cinco preguntas, la primera desplegada mostrando su respuesta, cada fila con un signo menos o más a la derecha" width="700">
+
+**Bloque 08 — Videos explicativos**
+
+Dos reproductores en proporción 16:9 alojan el video sobre el producto y el video sobre el equipo. Cada uno lleva un pie de foto que anticipa el contenido, de modo que el visitante decide si invertir el tiempo antes de reproducir. El botón de reproducción centrado es el indicador convencional de contenido audiovisual y no requiere aprendizaje.
+
+<img src="../assets/images/landing-page/wireframes-desktop/wireframe-desktop-08-videos.png" alt="Wireframe de escritorio: dos marcos de video en proporción 16:9 dispuestos lado a lado, cada uno con un botón de reproducción centrado y un pie de foto descriptivo" width="700">
+
+**Bloque 09 — Cierre y pie de página**
+
+La banda de cierre repite los dos llamados a la acción, porque el visitante que llegó hasta el final de la página no debería tener que desplazarse de vuelta a la cabecera para convertir. El pie de página organiza los enlaces en cuatro grupos temáticos —Producto, Empresa, Legal y Contacto— aplicando el principio de proximidad de la Gestalt. La columna Legal aloja el enlace a los términos y condiciones, requisito del alcance del proyecto.
+
+<img src="../assets/images/landing-page/wireframes-desktop/wireframe-desktop-09-final-cta-footer.png" alt="Wireframe de escritorio: banda de cierre con un titular a la izquierda y dos botones a la derecha, y debajo un pie de página de cuatro columnas" width="700">
+
+#### Wireframe para Mobile Web Browser
+
+**Bloque 01 — Cabecera y sección principal**
+
+En móvil el patrón de lectura cambia de Z a F, porque el ancho ya no permite un recorrido diagonal. Los elementos se apilan verticalmente en orden de importancia. La navegación se contrae en un botón de menú, liberando el ancho para la propuesta de valor. Los dos botones ocupan el ancho completo y quedan uno debajo del otro: al aumentar el área del objetivo se reduce el tiempo de adquisición según la ley de Fitts, lo que en una pantalla táctil se traduce en menos errores de pulsación.
+
+<img src="../assets/images/landing-page/wireframes-mobile/wireframe-mobile-01-header-hero.png" alt="Wireframe móvil: cabecera con la marca y un botón de menú, titular a tres líneas, párrafo de apoyo, imagen y dos botones de ancho completo apilados" width="300">
+
+**Bloque 02 — Franja de indicadores del mercado**
+
+Los tres indicadores pasan de columnas a una sola pila. La línea divisoria cambia de vertical a horizontal para conservar la separación entre unidades de información sin ocupar ancho.
+
+<img src="../assets/images/landing-page/wireframes-mobile/wireframe-mobile-02-metrics.png" alt="Wireframe móvil: los tres indicadores apilados verticalmente, separados por líneas horizontales" width="300">
+
+**Bloque 03 — Cómo funciona**
+
+Las pestañas se conservan, porque la necesidad de segmentar por perfil no depende del dispositivo. Los tres pasos se apilan y cada uno queda contenido en su propia tarjeta, lo que mantiene visible la frontera entre un paso y el siguiente cuando ya no existe la separación por columnas.
+
+<img src="../assets/images/landing-page/wireframes-mobile/wireframe-mobile-03-how-it-works.png" alt="Wireframe móvil: las dos pestañas conservadas en la parte superior y los tres pasos apilados, cada uno en su propia tarjeta" width="300">
+
+**Bloque 04 — Confianza y bloques por segmento**
+
+Las cuatro tarjetas de verificación y los dos bloques por segmento pasan a una sola columna. El orden se conserva, de modo que el recorrido de la información es equivalente al de escritorio y el visitante que cambia de dispositivo encuentra el mismo relato.
+
+<img src="../assets/images/landing-page/wireframes-mobile/wireframe-mobile-04-trust-audience.png" alt="Wireframe móvil: las cuatro tarjetas de verificación apiladas, seguidas de los dos bloques por segmento, uno debajo del otro" width="300">
+
+**Bloque 05 — Lo que dicen nuestros usuarios**
+
+Los testimonios se convierten en un carrusel de desplazamiento horizontal. La tarjeta siguiente asoma parcialmente por el borde derecho: ese recorte es intencional y comunica que existe más contenido, resolviendo el criterio de visibilidad del estado del sistema. Los tres puntos indicadores y el contador «1 de 3» refuerzan la misma información de forma explícita, de modo que el estado no se comunica únicamente mediante una señal visual sutil.
+
+<img src="../assets/images/landing-page/wireframes-mobile/wireframe-mobile-05-testimonials.png" alt="Wireframe móvil: un testimonio visible a ancho casi completo, con el borde del siguiente asomando por la derecha, y debajo tres puntos indicadores con el contador uno de tres" width="300">
+
+**Bloque 06 — Precios transparentes**
+
+Las tres tarjetas se apilan conservando el énfasis de la tarjeta central, que mantiene su borde destacado y su etiqueta.
+
+<img src="../assets/images/landing-page/wireframes-mobile/wireframe-mobile-06-pricing.png" alt="Wireframe móvil: las tres tarjetas de precios apiladas, conservando el borde destacado en la tarjeta de comisión" width="300">
+
+**Bloque 07 — Preguntas frecuentes**
+
+El acordeón es el patrón que mejor se adapta al ancho reducido, porque comprime cinco respuestas extensas en cinco títulos de una o dos líneas.
+
+<img src="../assets/images/landing-page/wireframes-mobile/wireframe-mobile-07-faq.png" alt="Wireframe móvil: acordeón de preguntas frecuentes ocupando el ancho completo de la pantalla" width="300">
+
+**Bloque 08 — Videos explicativos**
+
+Los dos reproductores pasan a una sola columna conservando la proporción 16:9, de modo que el video se muestra sin franjas negras ni recortes.
+
+<img src="../assets/images/landing-page/wireframes-mobile/wireframe-mobile-08-videos.png" alt="Wireframe móvil: los dos marcos de video apilados verticalmente, cada uno con su botón de reproducción y su pie de foto" width="300">
+
+**Bloque 09 — Cierre y pie de página**
+
+La banda de cierre apila titular y botones, y estos ocupan el ancho completo. Los cuatro grupos del pie de página pasan a una sola columna conservando sus encabezados, que actúan como separadores temáticos.
+
+<img src="../assets/images/landing-page/wireframes-mobile/wireframe-mobile-09-final-cta-footer.png" alt="Wireframe móvil: banda de cierre con el titular y los dos botones apilados a ancho completo, y pie de página con los cuatro grupos de enlaces en una sola columna" width="300">
+
+#### Aplicación de principios de diseño, diseño inclusivo y arquitectura de información
+
+**Patrones de lectura.** En escritorio la cabecera y la sección principal siguen el patrón Z, que corresponde a pantallas con poca densidad de texto donde la mirada recorre en diagonal. A partir del segundo bloque, y en toda la experiencia móvil, la lectura se rige por el patrón F: los títulos de sección y los inicios de línea concentran la atención, por lo que la información determinante se ubica al comienzo de cada bloque.
+
+**Principios de la Gestalt.** La proximidad agrupa los enlaces del pie de página en cuatro conjuntos temáticos. La similitud hace que los tres indicadores, las cuatro tarjetas de verificación y los tres testimonios se lean como conjuntos homogéneos. El cerramiento delimita cada tarjeta mediante su borde, sin necesidad de separadores adicionales.
+
+**Ley de Fitts.** Los llamados a la acción principales tienen mayor superficie que los secundarios, y en móvil ocupan el ancho completo del contenedor. Todos los elementos interactivos mantienen un área táctil mínima de 44 × 44 píxeles.
+
+**Ley de Hick.** La navegación se limita a cinco enlaces. El contenido diferenciado por segmento se distribuye en dos pestañas en lugar de exponerse de forma simultánea. El acordeón muestra una sola respuesta a la vez.
+
+**Diseño inclusivo.** Ningún estado se comunica exclusivamente mediante el color: la pestaña activa se marca además con un subrayado, el acordeón con los signos menos y más, la tarjeta de precio destacada con un borde y una etiqueta de texto, y el carrusel con un contador numérico. La jerarquía de encabezados es continua y sin saltos de nivel. La estructura prevé un enlace para omitir la navegación e ir directamente al contenido principal, dirigido a quienes navegan mediante teclado.
+
+**Arquitectura de información.** El orden de los nueve bloques reproduce el recorrido de decisión del visitante: qué es el servicio, por qué existe el problema, cómo funciona, por qué confiar, quién lo respalda, cuánto cuesta, qué dudas quedan, cómo verlo en detalle y dónde convertir. Los enlaces de navegación se corresponden uno a uno con las secciones definidas en el Organization System de la sección 4.2.1, y las etiquetas provienen del Labeling System de la sección 4.2.2.
+
 ### 4.3.2. Landing Page Mock-up
+
+El mock-up aplica sobre la estructura ya validada el Design System definido en la sección 4.1: la paleta de color, la tipografía Inter, la escala de espaciado y el radio de esquina establecidos para todos los productos digitales de LoadMatch. La estructura, la jerarquía y el flujo no cambian respecto del wireframe; lo que se incorpora es la capa visual.
+
+#### Mock-up para Desktop Web Browser
+
+**Bloque 01 — Cabecera y sección principal**
+
+El titular lleva una barra vertical naranja a su izquierda, que ancla visualmente el inicio del recorrido de lectura. El botón primario emplea el color de marca y el secundario un contorno neutro, de modo que la jerarquía entre ambos es inmediata. La fotografía muestra una operación de carga real en un entorno reconocible de Lima, lo que refuerza la cercanía con el contexto del usuario.
+
+<img src="../assets/images/landing-page/mockups-desktop/mockup-desktop-01-header-hero.png" alt="Mock-up de escritorio: cabecera con el logotipo naranja, navegación, selector de idioma y botón naranja de llamado a la acción; titular en azul marino con una barra naranja al costado, y fotografía de un operario cargando cajas en un camión" width="700">
+
+**Bloque 02 — Franja de indicadores del mercado**
+
+La franja usa el fondo alternativo de la paleta para diferenciarse de las secciones contiguas sin introducir un color nuevo. Las cifras se destacan por tamaño y peso tipográfico; las fuentes se mantienen en el gris de texto secundario, presente pero sin competir.
+
+<img src="../assets/images/landing-page/mockups-desktop/mockup-desktop-02-metrics.png" alt="Mock-up de escritorio: tres indicadores sobre fondo gris muy claro, con las cifras en azul marino y las fuentes en gris" width="700">
+
+**Bloque 03 — Cómo funciona**
+
+La pestaña activa se marca con un subrayado naranja y un peso tipográfico mayor. Los números de paso se presentan en círculos con el color de marca. Las capturas de la aplicación aparecen dentro de un marco que simula una ventana de navegador, lo que comunica que el contenido corresponde a la aplicación web y no a la propia landing page.
+
+<img src="../assets/images/landing-page/mockups-desktop/mockup-desktop-03-how-it-works.png" alt="Mock-up de escritorio: pestaña activa subrayada en naranja, y tres pasos con círculos numerados naranjas sobre capturas de la aplicación" width="700">
+
+**Bloque 04 — Confianza y bloques por segmento**
+
+Los iconos de las tarjetas de verificación se presentan sobre un fondo naranja tenue, lo que los integra a la paleta sin recurrir a un color de acento adicional. En los bloques por segmento, el de empresas cierra con el botón primario y el de transportistas con el secundario, reflejando la misma jerarquía de la cabecera.
+
+<img src="../assets/images/landing-page/mockups-desktop/mockup-desktop-04-trust-audience.png" alt="Mock-up de escritorio: cuatro tarjetas con iconos naranjas sobre fondo claro, y dos bloques por segmento con listas marcadas con palomas naranjas y un botón cada uno" width="700">
+
+**Bloque 05 — Lo que dicen nuestros usuarios**
+
+Las iniciales sustituyen a la fotografía de perfil. La decisión es deliberada: al tratarse de contenido ilustrativo, emplear rostros de personas reales o generados induciría a error sobre la existencia de esos clientes.
+
+<img src="../assets/images/landing-page/mockups-desktop/mockup-desktop-05-testimonials.png" alt="Mock-up de escritorio: tres testimonios en tarjetas con borde claro, con las iniciales de cada persona en un círculo y su nombre en azul marino" width="700">
+
+**Bloque 06 — Precios transparentes**
+
+La tarjeta central se destaca mediante un borde más grueso en azul marino y una etiqueta oscura. El énfasis se construye con forma y contraste, no con color, de modo que la jerarquía se conserva íntegra para quien no distingue tonos.
+
+<img src="../assets/images/landing-page/mockups-desktop/mockup-desktop-06-pricing.png" alt="Mock-up de escritorio: tres tarjetas de precios, la central con borde azul marino más grueso y una etiqueta oscura con la palabra Destacado" width="700">
+
+**Bloque 07 — Preguntas frecuentes**
+
+Las preguntas emplean el color de encabezado y las respuestas el de texto secundario. La diferencia de peso y tono establece la relación jerárquica entre pregunta y respuesta sin recurrir a recuadros ni fondos adicionales.
+
+<img src="../assets/images/landing-page/mockups-desktop/mockup-desktop-07-faq.png" alt="Mock-up de escritorio: acordeón con las preguntas en azul marino, separadas por líneas horizontales, con la primera respuesta desplegada en gris" width="700">
+
+**Bloque 08 — Videos explicativos**
+
+El botón de reproducción emplea un círculo naranja con el triángulo en azul marino. Esta combinación alcanza una relación de contraste de 5.98:1, superando el mínimo de 3:1 que el criterio 1.4.11 de la WCAG 2.1 exige para componentes de interfaz. Se descartó el triángulo blanco, que sobre el mismo naranja alcanza solo 2.87:1.
+
+<img src="../assets/images/landing-page/mockups-desktop/mockup-desktop-08-videos.png" alt="Mock-up de escritorio: dos marcos de video con fondo gris muy claro, cada uno con un botón circular naranja y un triángulo de reproducción en azul marino" width="700">
+
+**Bloque 09 — Cierre y pie de página**
+
+El pie de página invierte la relación de color: fondo azul marino con texto blanco. El cambio delimita el final del documento y aumenta el contraste de los enlaces legales, que son los que un visitante busca de forma deliberada.
+
+<img src="../assets/images/landing-page/mockups-desktop/mockup-desktop-09-final-cta-footer.png" alt="Mock-up de escritorio: banda de cierre sobre fondo claro con dos botones, y pie de página sobre fondo azul marino con cuatro columnas de enlaces en blanco" width="700">
+
+#### Mock-up para Mobile Web Browser
+
+**Bloque 01 — Cabecera y sección principal**
+
+**Bloque 02 — Franja de indicadores del mercado**
+
+Los tres indicadores se apilan conservando el fondo alternativo de la paleta. La línea divisoria pasa de vertical a horizontal, de modo que la separación entre unidades de información se mantiene sin consumir ancho.
+
+<img src="../assets/images/landing-page/mockups-mobile/mockup-mobile-02-metrics.png" alt="Mock-up móvil: los tres indicadores apilados sobre fondo gris muy claro" width="300">
+
+<img src="../assets/images/landing-page/mockups-mobile/mockup-mobile-01-header-hero.png" alt="Mock-up móvil: logotipo naranja y botón de menú, titular en azul marino con barra naranja, fotografía del camión y dos botones de ancho completo" width="300">
+
+**Bloque 03 — Cómo funciona**
+
+**Bloque 04 — Confianza y bloques por segmento**
+
+Las tarjetas de verificación conservan su icono sobre fondo naranja tenue al pasar a una sola columna. Los botones de cada bloque por segmento ocupan el ancho completo, con lo que el área táctil supera con holgura el mínimo de 44 × 44 píxeles.
+
+<img src="../assets/images/landing-page/mockups-mobile/mockup-mobile-04-trust-audience.png" alt="Mock-up móvil: cuatro tarjetas de verificación apiladas con iconos naranjas, y los dos bloques por segmento con sus listas y botones de ancho completo" width="300">
+
+<img src="../assets/images/landing-page/mockups-mobile/mockup-mobile-03-how-it-works.png" alt="Mock-up móvil: pestañas con la activa subrayada en naranja y los tres pasos apilados en tarjetas, cada una con su círculo numerado" width="300">
+
+**Bloque 05 — Lo que dicen nuestros usuarios**
+
+El punto activo del carrusel se marca en naranja y los inactivos en gris, pero el estado no depende de esa señal: el contador «1 de 3» lo expresa en texto.
+
+<img src="../assets/images/landing-page/mockups-mobile/mockup-mobile-05-testimonials.png" alt="Mock-up móvil: un testimonio visible con el siguiente asomando por la derecha, y debajo tres puntos con el primero en naranja y el contador uno de tres" width="300">
+
+**Bloque 06 — Precios transparentes**
+
+**Bloque 07 — Preguntas frecuentes**
+
+El acordeón conserva el contraste entre pregunta y respuesta, y los signos menos y más se mantienen alineados al borde derecho, dentro del alcance del pulgar.
+
+<img src="../assets/images/landing-page/mockups-mobile/mockup-mobile-07-faq.png" alt="Mock-up móvil: acordeón de preguntas frecuentes a ancho completo, con la primera respuesta desplegada" width="300">
+
+<img src="../assets/images/landing-page/mockups-mobile/mockup-mobile-06-pricing.png" alt="Mock-up móvil: las tres tarjetas de precios apiladas, con la central conservando su borde destacado y su etiqueta" width="300">
+
+**Bloque 08 — Videos explicativos**
+
+**Bloque 09 — Cierre y pie de página**
+
+La banda de cierre apila titular y botones a ancho completo. El pie de página conserva el fondo azul marino y reordena los cuatro grupos de enlaces en una sola columna, manteniendo sus encabezados como separadores temáticos.
+
+<img src="../assets/images/landing-page/mockups-mobile/mockup-mobile-09-final-cta-footer.png" alt="Mock-up móvil: banda de cierre con los dos botones apilados, y pie de página azul marino con los cuatro grupos de enlaces en una columna" width="300">
+
+<img src="../assets/images/landing-page/mockups-mobile/mockup-mobile-08-videos.png" alt="Mock-up móvil: los dos marcos de video apilados, cada uno con su botón circular naranja y su pie de foto" width="300">
+
+#### Aplicación del Design System
+
+**Color.** El mock-up emplea exclusivamente los roles de color definidos en la sección 4.1.1.2. El naranja `#FE6B00` se reserva para el acento de marca y los llamados a la acción principales; el azul marino `#0B1C30` para encabezados, pie de página y texto sobre naranja; los grises de la escala Slate para cuerpo de texto, bordes y fondos alternativos. No se introduce ningún color fuera de esos roles.
+
+**Contraste.** Todos los pares de texto y fondo cumplen el nivel AA de la WCAG 2.1: el texto de cuerpo alcanza 7.58:1 y los encabezados 17.85:1 sobre blanco. El caso crítico es el botón primario, donde el texto va en azul marino sobre el naranja de marca, alcanzando 5.98:1. La combinación de blanco sobre ese mismo naranja alcanza únicamente 2.87:1 y queda descartada en todo el sistema.
+
+**Tipografía.** Se emplea la familia Inter en toda la landing page, con la escala definida en la sección 4.1.1.1. La variación de peso —400 para cuerpo, 600 para subtítulos y elementos interactivos, 700 para titulares— construye la jerarquía sin necesidad de introducir una segunda familia tipográfica.
+
+**Espaciado y forma.** El espaciado sigue la escala de múltiplos de 4 px definida en la sección 4.1.1.3. El radio de esquina de 8 px se aplica de manera uniforme a botones, tarjetas y marcos de video, lo que produce una lectura visual coherente entre componentes.
+
+**Iconografía.** Los iconos mantienen un trazo lineal uniforme, según lo establecido en la sección 4.1.1.4, y siempre acompañan a una etiqueta de texto. Ninguno actúa como portador único de significado.
+
+**Consistencia con la aplicación web.** Los mismos roles de color, la misma familia tipográfica y el mismo radio de esquina se aplican en la aplicación web, de modo que el visitante que pasa de la landing page a la aplicación percibe continuidad visual. Esta correspondencia responde al requisito de consistencia de experiencia entre ambos productos.
+
 
 ## 4.4. Web Applications UX/UI Design
 
