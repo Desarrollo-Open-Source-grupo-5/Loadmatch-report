@@ -305,13 +305,23 @@ Para ver en mejor calidad, <a href="https://github.com/Desarrollo-Open-Source-gr
 
 ### 2.3.4. Empathy Mapping
 
+Partiendo de lo documentado en los items anteriores, procederemos ahora a evaluar los empathy maps de nuestros posibles usuarios. Una vez más procederemos empleando la información recopilada en las entrevistas a los segmentos elegidos, y de esa forma poder perfilar la mejor o más precisa personalidad que deben tener nuestros usuarios a futuro.
+
 Segmento 1 - Empresarios:
+
+Ciertamente en el caso de nuestro primer segmento objetivo podemos ver que una de las principales motivaciones para contratar un servicio como el nuestro esta en garantizar el seguro transporte de sus mercaderías, de forma que su negocio pueda crecer de mejor forma sin tener que preocuparse por las dificultades del mundo moderno, esto mientras mantiene un esencial nivel de profesionalismo al respecto.
 
 <p align="center"><img src="../assets/Chapter2/Graphics/EmpathyMapCarlosMendoza.png" width="600"></p>
 
+Para ver en mejor calidad, <a href="https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report/blob/feature/Chapter2/assets/Chapter2/Graphics/EmpathyMapCarlosMendoza.png">ingrese aquí</a>.
+
 Segmento 2 - Transportistas:
 
+En el caso de nuestro segundo segmento, la principal preocupación que atravesarían sería la de conseguir y asegurar un estatus en un negocio que en años recientes ha atravesado por más de un percance, mientras busca una clientela que los respete y contrate con regularidad para cualquier necesidad independientemente si opera por cuenta propia o no.
+
 <p align="center"><img src="../assets/Chapter2/Graphics/EmpathyMapRobertoSanchez.png" width="600"></p>
+
+Para ver en mejor calidad, <a href="https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report/blob/feature/Chapter2/assets/Chapter2/Graphics/EmpathyMapRobertoSanchez.png">ingrese aquí</a>.
 
 ## 2.4. Big Picture Event Storming
 
