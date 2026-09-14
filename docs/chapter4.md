@@ -392,9 +392,32 @@ Mis Cargas Activas:
 
 <img src="../assets/images/mockups/MockUp7.png" width="450">
 
+Cancelación de cargas:
+
+<img src="../assets/images/mockups/MockUp8.png" width="450">
+<img src="../assets/images/mockups/MockUp8A.png" width="450">
+
+Seguimiento de Carga:
+
+<img src="../assets/images/mockups/MockUp9.png" width="450">
+
+Pago por servicio:
+
+<img src="../assets/images/mockups/MockUp10.png" width="450">
+<img src="../assets/images/mockups/MockUp11.png" width="450">
+
+Confirmaciones de pago:
+
+<img src="../assets/images/mockups/MockUp12.png" width="450">
+<img src="../assets/images/mockups/MockUp12A.png" width="450">
+
 Dashboard de transportistas:
 
 <img src="../assets/images/mockups/MockUp5.png" width="450">
+
+Filtros de Búsqueda:
+
+<img src="../assets/images/mockups/MockUp13.png" width="450">
 
 ### 4.4.4. Web Applications User Flow Diagrams
 
