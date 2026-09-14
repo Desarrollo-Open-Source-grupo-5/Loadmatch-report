@@ -366,6 +366,28 @@ De esta manera, LoadMatch combina una navegación principal sencilla con accione
 
 ### 4.4.3. Web Applications Mock-ups
 
+Registro de empresarios:
+
+<img src="../assets/images/mockups/MockUp1.png" width="450">
+
+Registro de transportistas:
+
+<img src="../assets/images/mockups/MockUp2.png" width="450">
+
+Login para usuarios registrados:
+
+<img src="../assets/images/mockups/MockUp3.png" width="450">
+
+<img src="../assets/images/mockups/MockUp3A.png" width="450">
+
+Dashboard de empresarios:
+
+<img src="../assets/images/mockups/MockUp4.png" width="450">
+
+Dashboard de transportistas:
+
+<img src="../assets/images/mockups/MockUp5.png" width="450">
+
 ### 4.4.4. Web Applications User Flow Diagrams
 
 Ingreso y registro en la aplicación:
@@ -392,13 +414,14 @@ Búsqueda de fletes:
 
 <img src="../assets/images/Graphics/UserFlow6.png">
 
+
 ## 4.5. Web Applications Prototyping
 
 A continuación veremos el funcionamiento preliminar de la aplicación por medio de un prototipo creado en la plataforma Figma, en donde se buscó reflejar el funcionamiento preliminar de los user flow diagrams mencionados anteriormente así como otras funciones básicas de la aplicación web:
 
 <img src="../assets/images/Graphics/Prototyping.png">
 
-<a href="https://www.figma.com/proto/b2Bc4VRPXUGY61iyefa5I6/LoadMatch---Open-Source?node-id=120-997&p=f&t=QaRc5OxVLBUH4lHu-0&scaling=scale-down&content-scaling=fixed&page-id=120%3A2&starting-point-node-id=120%3A3">Prototipo en Figma de LoadMatch</a>
+<a href="https://www.figma.com/proto/b2Bc4VRPXUGY61iyefa5I6/LoadMatch---Open-Source?node-id=120-3&p=f&t=lAU4l4ZzCTUcVxt6-0&scaling=scale-down&content-scaling=fixed&page-id=120%3A2&starting-point-node-id=120%3A3">Prototipo en Figma de LoadMatch</a>
 
 ## 4.6. Domain-Driven Software Architecture
 
