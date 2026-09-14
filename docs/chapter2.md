@@ -305,7 +305,13 @@ Para ver en mejor calidad, <a href="https://github.com/Desarrollo-Open-Source-gr
 
 ### 2.3.4. Empathy Mapping
 
+Segmento 1 - Empresarios:
 
+<p align="center"><img src="../assets/Chapter2/Graphics/EmpathyMapCarlosMendoza.png" width="600"></p>
+
+Segmento 2 - Transportistas:
+
+<p align="center"><img src="../assets/Chapter2/Graphics/EmpathyMapRobertoSanchez.png" width="600"></p>
 
 ## 2.4. Big Picture Event Storming
 
