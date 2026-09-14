@@ -319,6 +319,42 @@ A partir de estos hallazgos se identifican oportunidades para **LoadMatch**, com
 
 ***Nota.*** User Journey Map correspondiente al Segmento 2: Transportistas y dueños de vehículos de carga.
 
+### 2.3.4. Empathy Mapping
+
+A partir de la información obtenida durante las entrevistas y de los User Personas definidos previamente, se elaboraron los Empathy Maps correspondientes a los dos segmentos objetivo de **LoadMatch**. Estos artefactos permiten profundizar en la perspectiva de cada usuario, identificando lo que piensa y siente, lo que observa, lo que escucha, lo que expresa y realiza, así como sus principales frustraciones y expectativas.
+
+#### Segmento 1: Dueños de negocio y emprendedores
+
+El primer Empathy Map corresponde a **Carlos Mendoza**, representante del segmento de dueños de negocio y emprendedores.
+
+Carlos busca contar con un servicio de transporte confiable que le permita proteger su mercadería y mantener una buena relación con sus clientes. Entre sus principales preocupaciones se encuentran la informalidad del sector, la falta de garantías y la dificultad para encontrar transportistas profesionales de manera rápida.
+
+Asimismo, valora especialmente la posibilidad de realizar seguimiento a sus envíos, acceder a transportistas verificados y reducir el riesgo de pérdidas ocasionadas por retrasos, daños o servicios poco confiables.
+
+<p align="center">
+  <img src="../assets/Chapter2/Graphics/EmpathyMapCarlosMendoza.png"
+       alt="Empathy Map de Carlos Mendoza"
+       width="800">
+</p>
+
+***Nota.*** Empathy Map correspondiente al Segmento 1: Dueños de negocio y emprendedores.
+
+#### Segmento 2: Transportistas y dueños de vehículos de carga
+
+El segundo Empathy Map corresponde a **Roberto Sánchez**, representante del segmento de transportistas y dueños de vehículos de carga.
+
+Roberto busca obtener ingresos constantes mediante servicios de transporte rentables y clientes confiables. Su principal preocupación se relaciona con la informalidad del mercado, la dificultad para encontrar oportunidades de trabajo estables, la desconfianza entre transportistas y empresas y el riesgo de recibir pagos tardíos o insuficientes.
+
+Entre sus principales expectativas se encuentran acceder a una red de clientes empresariales confiables, organizar mejor sus horarios, reducir el tiempo invertido buscando fletes y construir una reputación verificable que le permita obtener más oportunidades de trabajo.
+
+<p align="center">
+  <img src="../assets/Chapter2/Graphics/EmpathyMapRobertoSanchez.png"
+       alt="Empathy Map de Roberto Sánchez"
+       width="800">
+</p>
+
+***Nota.*** Empathy Map correspondiente al Segmento 2: Transportistas y dueños de vehículos de carga.
+
 ## 2.4. Big Picture Event Storming
 
 En esta sección se documenta el proceso colaborativo de **Big Picture Event Storming**, realizado con el objetivo de entender el dominio general del negocio de LoadMatch. Durante esta sesión, nos enfocamos en explorar de manera visual y de alto nivel el panorama del negocio logístico.
