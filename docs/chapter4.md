@@ -419,6 +419,37 @@ Filtros de Búsqueda:
 
 <img src="../assets/images/mockups/MockUp13.png" width="450">
 
+Detalles de Flete:
+
+<img src="../assets/images/mockups/MockUp14.png" width="450">
+
+Estado de cuenta (licencias):
+
+<img src="../assets/images/mockups/MockUp15.png" width="450">
+<img src="../assets/images/mockups/MockUp18.png" width="450">
+
+Perfil de Transportistas:
+
+<img src="../assets/images/mockups/MockUp16.png" width="450">
+<img src="../assets/images/mockups/MockUp19.png" width="450">
+
+Carga de documentos (licencia):
+
+<img src="../assets/images/mockups/MockUp17.png" width="450">
+
+Mis Viajes:
+
+<img src="../assets/images/mockups/MockUp20.png" width="450">
+
+Seguimiento de Viajes y Llegada a destino:
+
+<img src="../assets/images/mockups/MockUp21.png" width="450">
+<img src="../assets/images/mockups/MockUp22.png" width="450">
+
+Historial de Viajes:
+
+<img src="../assets/images/mockups/MockUp23.png" width="450">
+
 ### 4.4.4. Web Applications User Flow Diagrams
 
 Ingreso y registro en la aplicación:
