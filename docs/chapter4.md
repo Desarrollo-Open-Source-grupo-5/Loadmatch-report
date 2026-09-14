@@ -377,12 +377,20 @@ Registro de transportistas:
 Login para usuarios registrados:
 
 <img src="../assets/images/mockups/MockUp3.png" width="450">
-
 <img src="../assets/images/mockups/MockUp3A.png" width="450">
 
 Dashboard de empresarios:
 
 <img src="../assets/images/mockups/MockUp4.png" width="450">
+
+Publicar Nueva Carga:
+
+<img src="../assets/images/mockups/MockUp6.png" width="450">
+<img src="../assets/images/mockups/MockUp6A.png" width="450">
+
+Mis Cargas Activas:
+
+<img src="../assets/images/mockups/MockUp7.png" width="450">
 
 Dashboard de transportistas:
 
