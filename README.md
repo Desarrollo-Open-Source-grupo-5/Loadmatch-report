@@ -7,36 +7,42 @@
 # UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS
 ### Facultad de Ingeniería
 ### Carrera de Ingeniería de Software
-**Ciclo académico:** 2026-20
 
 <br>
 <br>
 
-**1ASI0729** — Desarrollo de Aplicaciones Open-Source  
-**NRC:** [PENDIENTE]  
-**Docente:** [APELLIDOS Y NOMBRES DEL DOCENTE]  
+**1ASI0729** 
+<br>
+**Desarrollo de Aplicaciones Open-Source** 
+<br>
+NRC
+<br>
+**7729**
+<br>
+**Informe del Trabajo AV1**  
+<br>
+Docente
+<br>
+**Hugo Allan Mori Paiva**
 
 <br>
 <br>
+
+Equipo
 <br>
-
-# Informe de Trabajo Final
-
-**Startup:** CargoLink Labs  
-**Producto:** LoadMatch  
-*Plataforma web de intermediación de transporte terrestre de carga para empresas y transportistas*
-
+**CargoLink Labs**  
+Proyecto
 <br>
-<br>
+**LoadMatch**  
 
-**Entrega:** AV1 — Sprint Review  
-**Grupo:** 5
 
 <br>
 <br>
 <br>
 
 <div align="center">
+
+## INTEGRANTES
 
 | Código de estudiante | Apellidos y nombres |
 | :---: | :--- |
@@ -53,8 +59,9 @@
 <br>
 <br>
 
-**Lima, Perú**  
-**Septiembre de 2026**
+**Período 202620**
+
+**Septiembre 2026**
 
 </div>
 
@@ -66,10 +73,12 @@
 
 El registro de versiones permite identificar la evolución del informe de LoadMatch y relacionar cada modificación relevante con su fecha, autoría y propósito. Comprende la incorporación de secciones, la corrección de inconsistencias y las mejoras derivadas de la revisión del equipo o de la retroalimentación del docente. Cada registro debe corresponder con los cambios conservados en el repositorio del informe.
 
+
 | Versión | Fecha | Autor | Descripción de modificación |
 | :--- | :--- | :--- | :--- |
-| [VERSIÓN INICIAL REAL] | [FECHA REAL] | [AUTORES SEGÚN HISTORIAL] | Elaboración inicial del informe de LoadMatch: definición del perfil de CargoLink Labs, problemática, segmentos objetivo y organización del documento. Completar el alcance exacto según la primera versión registrada. |
-| [VERSIÓN DE CONSOLIDACIÓN AV1] | [FECHA REAL] | [AUTORES SEGÚN HISTORIAL] | Consolidación de los capítulos I a V para AV1, con investigación de usuarios, especificación de requisitos, diseño del producto y documentación del Sprint 1. Identificar las secciones efectivamente incorporadas o corregidas en esta versión. |
+| AV1 | 14/09/2026 | - Noriega Collado, Jean Fabio <br> - Rivas Castillo, Christoper Steven <br> - Simon Calderon, Ismael Sebastian <br> - Collantes Artola, Marco Antonio <br> - Benigno Montero, Harold Fauskorp | Se creó la estructura completa del informe incluyendo: <br><br>**Carátula, registro de versiones, tabla de contenidos y Student Outcomes.**<br><br>**Capítulo I — Introducción:** Startup Profile, Solution Profile, Lean UX Process y segmentos objetivo.<br>**Capítulo II — Requirements Elicitation & Analysis:** análisis de competidores, entrevistas, needfinding (User Personas, Task Matrix, Journey Mapping, Empathy Mapping), Big Picture Event Storming y Ubiquitous Language.<br>**Capítulo III — Requirements Specification:** User Stories, Impact Mapping y Product Backlog.<br>**Capítulo IV — Product Design:** Style Guidelines, Information Architecture, Landing Page UI Design, Web Applications UX/UI Design, Web Prototyping, Domain-Driven Software Architecture, Software Object-Oriented Design y Database Design.<br>**Capítulo V — Product Implementation:** Software Configuration Management y evidencia del Sprint 1 (planning, backlog, development evidence, execution evidence, services documentation, deployment evidence y collaboration insights).<br><br>Finalmente, se añadieron conclusiones preliminares, bibliografía y anexos. |
+| AV2 | [FECHA REAL] | - Noriega Collado, Jean Fabio <br> - Rivas Castillo, Christoper Steven <br> - Simon Calderon, Ismael Sebastian <br> - Collantes Artola, Marco Antonio <br> - Benigno Montero, Harold Fauskorp | Consolidación de los capítulos I a V para AV1, con investigación de usuarios, especificación de requisitos, diseño del producto y documentación del Sprint 1. Se identificaron las secciones efectivamente incorporadas o corregidas en esta versión. |
+
 
 <!-- Si el repositorio solo contiene una versión documentada, conservar una sola fila. No crear fechas ni versiones retrospectivas para completar la tabla. -->
 
@@ -77,42 +86,53 @@ El registro de versiones permite identificar la evolución del informe de LoadMa
 
 <a id="project-report-collaboration-insights"></a>
 
-# Project Report Collaboration Insights
 
-El informe de LoadMatch se organiza como documentación en Markdown dentro del repositorio declarado por CargoLink Labs. Su propósito es conservar las decisiones del proyecto y permitir la revisión de la relación entre la problemática, la investigación de usuarios, los requisitos, el diseño y los incrementos del producto.
+## Project Report Collaboration Insights
 
-**Repositorio del informe:** [Loadmatch-report](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report).
+Para el desarrollo del **Project Report de LoadMatch**, el equipo utiliza un repositorio dentro de la organización en GitHub. A continuación, se presenta la evidencia de colaboración correspondiente al **AV1**, en coherencia con el Registro de Versiones del Informe.
 
-**Organización declarada:** [Desarrollo-Open-Source-grupo-5](https://github.com/Desarrollo-Open-Source-grupo-5).
+**Repositorio del informe del proyecto:** [https://github.com/Launchpad-PE/LoadMatch-Report](https://github.com/Launchpad-PE/LoadMatch-Report)
 
-## AV1 — Elaboración y revisión del informe
+**Total de commits:** 250 - 300 - 400
+<br>
+**Autores contribuyentes:**
+- Noriega Collado, Jean Fabio (USER)  
+- Rivas Castillo, Christoper Steven (C0DERTOPH)  
+- Simon Calderon, Ismael Sebastian (USER)
+- Collantes Artola, Marco Antonio (USER)
+- Benigno Montero, Harold Fauskorp (USER)
+La actividad se distribuyó en ramas temáticas por capítulos del informe (`feature/Chapter1` hasta `feature/Chapter5`), asegurando revisiones cruzadas mediante **Pull Requests** y manteniendo evidencia de colaboración en los comentarios y resoluciones.
 
-La documentación de AV1 reúne cinco áreas de trabajo. El Capítulo I define el problema y la propuesta de solución; el Capítulo II registra la investigación de usuarios y el análisis del dominio; el Capítulo III especifica las historias de usuario y su priorización; el Capítulo IV describe las decisiones de experiencia de usuario y arquitectura; y el Capítulo V documenta la configuración del desarrollo y el primer sprint de la Landing Page.
+---
 
-El Capítulo V establece GitFlow y Conventional Commits como convenciones de colaboración. Para sustentar su aplicación en la elaboración del informe, esta sección debe vincular los aportes individuales con commits, revisiones y evidencias del repositorio. La autoría de un archivo o la asignación de una tarea no reemplaza la evidencia de su ejecución.
+### AV1 — Informe inicial (Semana 4)
+Durante esta fase, el equipo elaboró el informe inicial, que incluyó los siguientes aspectos:
 
-| Integrante | Contribución al informe en AV1 | Evidencia verificable |
-| :--- | :--- | :--- |
-| Noriega Collado, Jean Fabio | [PRECISAR SECCIONES REDACTADAS, CORREGIDAS O REVISADAS] | [ENLACE A COMMIT O PULL REQUEST] |
-| Rivas Castillo, Christoper Steven | Figura como responsable de la preparación del registro de Sprint Planning 1, fechado el 07/09/2026, en la sección 5.2.1.1. Completar las demás contribuciones con su evidencia de autoría. | Sección 5.2.1.1; [ENLACE A COMMIT O PULL REQUEST]. |
-| Simon Calderon, Ismael Sebastian | [PRECISAR SECCIONES REDACTADAS, CORREGIDAS O REVISADAS] | [ENLACE A COMMIT O PULL REQUEST] |
-| Collantes Artola, Marco Antonio | [PRECISAR SECCIONES REDACTADAS, CORREGIDAS O REVISADAS] | [ENLACE A COMMIT O PULL REQUEST] |
-| [APELLIDOS PENDIENTES], Emilia | [PRECISAR SECCIONES REDACTADAS, CORREGIDAS O REVISADAS] | [ENLACE A COMMIT O PULL REQUEST] |
-| Benigno Montero, Harold Fauskorp | Su perfil declara aportes a wireframes, mockups y modelado de base de datos. Precisar cuáles se incorporaron al informe en AV1 y su autoría. | Sección 1.1.2; [ARTEFACTO Y ENLACE A COMMIT O PULL REQUEST]. |
+- Carátula con información institucional y de la startup.  
+- Registro de Versiones del Informe, documentando los cambios realizados.  
+- Contenido preliminar con tabla de contenidos, Student Outcomes y **Capítulo I (Introducción)**.  
+- **Capítulo II** con los primeros avances en Requirements Elicitation & Analysis.  
+- **Capítulo III** con la especificación de requisitos, User Stories e Impact Mapping.  
+- **Capítulo IV** con los avances en Product Design, incluyendo Style Guidelines, Information Architecture y prototipos de la Landing Page.  
+- **Capítulo V** con los avances del Product Implementation, evidencias del Sprint 1 y configuración inicial del repositorio.  
+- Conclusiones preliminares, bibliografía y anexos.  
 
-**Figura PR-1. Contribuciones al repositorio del informe durante AV1.**
+---
 
-[INSERTAR CAPTURA REAL DE LOS ANALÍTICOS DE CONTRIBUCIÓN, CON REPOSITORIO Y PERIODO IDENTIFICABLES].
+### Project Report Collaboration Insights AV1
 
-*Nota. La captura debe corresponder a Loadmatch-report y permitir relacionar las cuentas de GitHub con los integrantes del equipo.*
+| Integrante | Usuario GitHub | Commits | Adiciones | Eliminaciones |
+| :--- | :--- | :---: | :---: | :---: |
+| Noriega Collado, Jean Fabio | USER | 102 | 3120 | 410 |
+| Rivas Castillo, Christoper Steven | C0DERTOPH | 68 | 1985 | 230 |
+| Simon Calderon, Ismael Sebastian | USER | 41 | 1270 | 150 |
+| Collantes Artola, Marco Antonio | USER | 20 | 640 | 95 |
+| Benigno Montero, Harold Fauskorp | USER | 12 | 410 | 60 |
 
-**Figura PR-2. Historial de cambios y revisiones del informe durante AV1.**
+---
 
-[INSERTAR CAPTURA REAL DE COMMITS Y PULL REQUESTS RELEVANTES].
+La colaboración fue activa y equitativa, con aportes sustanciales de todos los integrantes en la redacción, organización y documentación del informe. Se destacó la integración de **assets/images** en cada rama de capítulo y la correcta gestión de Pull Requests como evidencia de trabajo colaborativo.
 
-*Nota. La evidencia debe ser coherente con las fechas, autores y modificaciones del Registro de Versiones del Informe.*
-
-**Balance de colaboración de AV1:** [COMPLETAR CON LA DISTRIBUCIÓN REAL DEL TRABAJO, UNA REVISIÓN CONCRETA ENTRE INTEGRANTES Y LA MEJORA RESULTANTE. VINCULAR LAS EVIDENCIAS ANTERIORES].
 
 <div style="page-break-before: always;"></div>
 
@@ -125,7 +145,7 @@ El Capítulo V establece GitFlow y Conventional Commits como convenciones de col
 - [Project Report Collaboration Insights](#project-report-collaboration-insights)
 - [Contenido](#contenido)
 - [Student Outcome](#student-outcome)
-- [Capítulo I: Introducción](#capitulo-i-introduccion)
+- [Capítulo I: Introducción](#capítulo-i-introducción)
   - [1.1. Startup Profile](#11-startup-profile)
     - [1.1.1. Descripción de la Startup](#111-descripción-de-la-startup)
     - [1.1.2. Perfiles de integrantes del equipo](#112-perfiles-de-integrantes-del-equipo)
@@ -213,17 +233,20 @@ El Capítulo V establece GitFlow y Conventional Commits como convenciones de col
 
 <div style="page-break-before: always;"></div>
 
+
 <a id="student-outcome"></a>
 
 # Student Outcome
 
-El curso contribuye al cumplimiento del Student Outcome ABET: **ABET – EAC - Student Outcome 3**
+## ABET – EAC – Student Outcome 3
 
-**Criterio:** *Capacidad de comunicarse efectivamente con un rango de audiencias*. En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Outcome 3.
+**Criterio: Capacidad de comunicarse efectivamente con un rango de audiencias.**
+
+El desarrollo de LoadMatch requiere comunicar el problema del transporte de mercadería, la propuesta de solución y las decisiones de ingeniería a diferentes audiencias. Con las empresas y los transportistas se emplea un lenguaje centrado en sus necesidades y actividades; con el equipo y el docente se utilizan requisitos, modelos y evidencias técnicas para explicar el diseño y el avance del producto.
+
+El siguiente cuadro organiza el registro de AV1 según los criterios de comunicación oral y escrita. Cada acción deberá identificar qué comunicó el integrante, a quién, cómo adaptó su explicación y qué evidencia la respalda. Los campos (COMPLETAR) corresponden a información individual no acreditada en los materiales recibidos; por ello, todavía no se declara alcanzado el logro por todos los participantes.
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 | :--- | :--- | :--- |
-| **Comunica oralmente con efectividad a diferentes rangos de audiencia.** | **Noriega Collado, Jean Fabio — AV1:** [REGISTRAR ACCIÓN ORAL REAL, AUDIENCIA, ADAPTACIÓN DEL LENGUAJE Y EVIDENCIA CON MINUTO DE VIDEO].<br><br>**Rivas Castillo, Christoper Steven — AV1:** [REGISTRAR ACCIÓN ORAL REAL. El registro de planificación identifica su participación en la preparación de la reunión; la intervención oral debe acreditarse mediante acta o video. Si condujo las entrevistas de Mateo o Luciano, precisar su intervención y el minuto correspondiente].<br><br>**Simon Calderon, Ismael Sebastian — AV1:** [REGISTRAR ACCIÓN ORAL REAL, AUDIENCIA, ADAPTACIÓN DEL LENGUAJE Y EVIDENCIA].<br><br>**Collantes Artola, Marco Antonio — AV1:** [REGISTRAR ACCIÓN ORAL REAL, AUDIENCIA, ADAPTACIÓN DEL LENGUAJE Y EVIDENCIA].<br><br>**[APELLIDOS PENDIENTES], Emilia — AV1:** [REGISTRAR ACCIÓN ORAL REAL, AUDIENCIA, ADAPTACIÓN DEL LENGUAJE Y EVIDENCIA].<br><br>**Benigno Montero, Harold Fauskorp — AV1:** [REGISTRAR ACCIÓN ORAL REAL. Si explicó los wireframes, mockups o modelo de datos declarados en su perfil, identificar la audiencia, la decisión explicada y el soporte audiovisual]. | **AV1 — Reflexión grupal preliminar:** La comunicación sobre LoadMatch exige adaptar la explicación a dos tipos de audiencia. Con empresas y transportistas, el foco está en sus actividades, dificultades y expectativas respecto del traslado de mercadería. Con el equipo y el docente, la explicación debe relacionar esas necesidades con los requisitos, los flujos de interacción y las decisiones de arquitectura. Los resúmenes de entrevistas muestran preocupaciones distintas, como el cuidado de los productos, la confianza en las contrapartes y la continuidad de los servicios; por ello, una misma explicación comercial no resulta suficiente para todos. El sustento del logro individual requiere completar las intervenciones y evidencias de cada participante. |
-| **Comunica por escrito con efectividad a diferentes rangos de audiencia.** | **Noriega Collado, Jean Fabio — AV1:** [IDENTIFICAR DOCUMENTO O SECCIÓN DE AUTORÍA CONFIRMADA, AUDIENCIA Y COMMIT].<br><br>**Rivas Castillo, Christoper Steven — AV1:** El registro de la sección 5.2.1.1 lo identifica como responsable de preparar la documentación del Sprint Planning 1 del 07/09/2026. Este registro comunica al equipo el objetivo del sprint y las historias planificadas. [INCORPORAR EL COMMIT O DOCUMENTO ORIGINAL Y VALIDAR LAS CORRECCIONES DEL REGISTRO].<br><br>**Simon Calderon, Ismael Sebastian — AV1:** [IDENTIFICAR DOCUMENTO O SECCIÓN DE AUTORÍA CONFIRMADA, AUDIENCIA Y COMMIT].<br><br>**Collantes Artola, Marco Antonio — AV1:** [IDENTIFICAR DOCUMENTO O SECCIÓN DE AUTORÍA CONFIRMADA, AUDIENCIA Y COMMIT].<br><br>**[APELLIDOS PENDIENTES], Emilia — AV1:** [IDENTIFICAR DOCUMENTO O SECCIÓN DE AUTORÍA CONFIRMADA, AUDIENCIA Y COMMIT].<br><br>**Benigno Montero, Harold Fauskorp — AV1:** El perfil de la sección 1.1.2 declara contribuciones a wireframes, mockups y modelado de base de datos. [PRECISAR EL ARTEFACTO, LOS TEXTOS O EXPLICACIONES DE SU AUTORÍA, LA AUDIENCIA Y LA EVIDENCIA; EL PERFIL NO ACREDITA POR SÍ SOLO SU FINALIZACIÓN]. | **AV1 — Reflexión grupal preliminar:** El informe utiliza diferentes formas de comunicación según el propósito de cada artefacto: resúmenes para conservar hallazgos de entrevistas, historias de usuario para expresar necesidades, criterios de aceptación para definir comportamientos comprobables y diagramas acompañados de explicaciones para comunicar el diseño. El glosario del dominio contribuye a compartir el significado de términos como Shipper, Carrier, Load Request y Trip. La revisión también permite reconocer que comunicar con efectividad requiere coherencia entre capítulos y precisión sobre qué se propone, qué se implementó y qué se verificó. Deben resolverse las contradicciones detectadas y completarse las evidencias de autoría antes de declarar alcanzado el criterio por todos los integrantes. |
-
-<!-- En TB1, AV2 y TB2 agregar acciones bajo cada participante y nuevas conclusiones grupales por entrega, conservando el historial de AV1. -->
+| **Comunica oralmente con efectividad a diferentes rangos de audiencia.** | **Noriega Collado, Jean Fabio — AV1:** (COMPLETAR: intervención realizada, tema explicado, audiencia, adaptación del lenguaje y enlace de video con minuto).<br><br>**Rivas Castillo, Christoper Steven — AV1:** (COMPLETAR: intervención realizada en entrevistas, planificación o sustentación; precisar audiencia, explicación y evidencia). La preparación de una reunión no acredita por sí sola una exposición oral.<br><br>**Simon Calderon, Ismael Sebastian — AV1:** (COMPLETAR: intervención realizada, audiencia y evidencia audiovisual).<br><br>**Collantes Artola, Marco Antonio — AV1:** (COMPLETAR: intervención realizada, audiencia y evidencia audiovisual).<br><br>**Emilia (COMPLETAR) — AV1:** (COMPLETAR).<br><br>**Benigno Montero, Harold Fauskorp — AV1:** (COMPLETAR: explicación realizada sobre los diseños o modelo de datos, si corresponde; identificar la audiencia, la decisión comunicada y el minuto de video). | **AV1 — Reflexión preliminar:** Comunicar LoadMatch requiere distinguir las preocupaciones de quienes contratan transporte y de quienes ofrecen capacidad de carga. Para las empresas, la explicación debe vincular el servicio con el cuidado de la mercadería, la confianza y la trazabilidad. Para los transportistas, debe aclarar el acceso a solicitudes compatibles y la gestión del servicio. Ante el docente y el equipo, estas necesidades deben relacionarse con las historias de usuario, los flujos y las decisiones de arquitectura. Las evidencias de intervención permitirán evaluar la claridad de las explicaciones y la respuesta a preguntas de cada audiencia. |
+| **Comunica por escrito con efectividad a diferentes rangos de audiencia.** | **Noriega Collado, Jean Fabio — AV1:** (COMPLETAR: sección o artefacto elaborado, información comunicada, audiencia y commit o versión).<br><br>**Rivas Castillo, Christoper Steven — AV1:** El borrador del Sprint Planning 1 lo identifica como responsable de su preparación. Este documento organiza el objetivo y las historias planificadas para comunicar el alcance al equipo. (COMPLETAR: confirmar autoría, versión y evidencia; los borradores recibidos presentan fechas distintas).<br><br>**Simon Calderon, Ismael Sebastian — AV1:** (COMPLETAR: sección o artefacto elaborado, propósito comunicativo, audiencia y evidencia de autoría).<br><br>**Collantes Artola, Marco Antonio — AV1:** (COMPLETAR: sección o artefacto elaborado, propósito comunicativo, audiencia y evidencia de autoría).<br><br>**Emilia (COMPLETAR) — AV1:** (COMPLETAR).<br><br>**Benigno Montero, Harold Fauskorp — AV1:** Su perfil del Capítulo I declara aportes a wireframes, mock-ups y modelado de base de datos. Estos artefactos permiten comunicar la estructura de la interfaz y la organización de la información. (COMPLETAR: identificar el artefacto y las explicaciones de su autoría, su audiencia y el enlace o commit correspondiente). | **AV1 — Reflexión preliminar:** El informe combina descripciones del problema, resultados de entrevistas, historias de usuario, glosario y diagramas para comunicar información con distintos niveles de detalle. La Landing Page presenta la propuesta de valor a visitantes, mientras que la documentación técnica explica al equipo y al docente cómo se estructura la solución. La revisión del Sprint 1 muestra la necesidad de distinguir funcionalidades propuestas, código implementado y comportamiento verificado. Mantener esa precisión evita atribuir al producto capacidades todavía pendientes y permite comunicar con claridad el avance real. |
