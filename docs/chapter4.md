@@ -914,6 +914,134 @@ Una vez aprobada la documentación requerida, el sistema informa al transportist
 
 ### 4.4.2. Web Applications Wireflow Diagrams
 
+Los wireflow diagrams de la Web Application de **LoadMatch** representan la relación entre los wireframes definidos previamente y las acciones que permiten al usuario desplazarse entre los diferentes estados de la plataforma.
+
+Para facilitar su lectura, los recorridos fueron organizados de acuerdo con las principales actividades realizadas por los dos segmentos de usuarios de LoadMatch. Cada wireflow muestra las pantallas involucradas y las acciones que generan una transición entre ellas, incluyendo estados alternativos como errores de autenticación, cancelaciones o fallos durante el procesamiento de pagos.
+
+
+#### Wireflow 1 — Autenticación y registro
+
+Este wireflow representa los principales recorridos relacionados con el acceso y creación de cuentas dentro de LoadMatch. Debido a que existen dos perfiles de usuario —empresa y transportista—, el flujo se divide en tres diagramas complementarios que muestran la autenticación y los procesos de registro correspondientes.
+
+##### Autenticación y acceso según el tipo de usuario
+
+El flujo comienza en la pantalla de inicio de sesión. Si las credenciales ingresadas son incorrectas, el sistema muestra un estado de error y permite al usuario intentar nuevamente. Cuando la autenticación es exitosa, el usuario es dirigido al dashboard correspondiente según su perfil, ya sea empresa o transportista.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireflows/credenciales_incorrectas.png"
+       alt="Wireflow de autenticación fallida y credenciales incorrectas"
+       width="1000">
+</p>
+
+***Figura.*** Flujo correspondiente al estado de autenticación fallida.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireflows/inicio_sesion.png"
+       alt="Wireflow de inicio de sesión y acceso según el tipo de usuario"
+       width="1000">
+</p>
+
+***Figura.*** Flujo de inicio de sesión y acceso al dashboard correspondiente según el perfil del usuario.
+
+
+##### Registro de empresa y transportista
+
+El proceso de registro se inicia desde las opciones disponibles en la pantalla de acceso. Para las empresas, una vez completado correctamente el formulario de registro, el sistema confirma la creación de la cuenta y habilita el acceso a las funcionalidades correspondientes. En el caso de los transportistas, después del registro inicial se continúa con la configuración y validación del perfil.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireflows/registro_exitoso.png"
+       alt="Wireflow de registro de empresa y transportista"
+       width="1000">
+</p>
+
+***Figura.*** Flujo de creación de cuentas para empresas y transportistas.
+
+
+#### Wireflow 2 — Publicación y gestión de cargas de la empresa
+
+El segundo wireflow representa el proceso operativo principal del usuario empresarial dentro de LoadMatch. El recorrido comienza desde el dashboard y comprende la publicación de una nueva solicitud de transporte, la gestión de las cargas registradas, el seguimiento de los servicios en ejecución y finalmente el proceso de liquidación y pago.
+
+##### Publicación de una nueva carga
+
+Desde el dashboard, el usuario empresarial puede acceder al formulario para publicar una nueva carga. Después de ingresar la información requerida y confirmar la operación, el sistema muestra un estado de publicación exitosa. Desde esta confirmación, el usuario puede dirigirse a la sección **Mis Cargas** para consultar y gestionar la solicitud recién creada.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireflows/publicar_ver_cargas.png"
+       alt="Wireflow de publicación y visualización de cargas"
+       width="1000">
+</p>
+
+***Figura.*** Flujo desde el dashboard empresarial hasta la publicación y posterior visualización de una carga.
+
+
+##### Gestión y seguimiento de cargas
+
+Desde la sección **Mis Cargas**, el usuario dispone de diferentes acciones según el estado de cada solicitud. Una carga todavía disponible puede ser cancelada mediante una ventana de confirmación, mientras que una carga en tránsito permite acceder a la vista de seguimiento para consultar la ubicación del vehículo y el avance del servicio.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireflows/cancelar_seguir_carga.png"
+       alt="Wireflow para cancelar o realizar seguimiento de una carga"
+       width="1000">
+</p>
+
+***Figura.*** Bifurcación del flujo de gestión de cargas entre cancelación y seguimiento del servicio.
+
+
+##### Finalización y pago del servicio
+
+Cuando el servicio de transporte ha sido completado, el usuario empresarial puede continuar hacia el proceso de liquidación. Desde la pantalla de seguimiento se accede al método de pago correspondiente. El sistema contempla tanto el procesamiento exitoso como el rechazo de una transacción, permitiendo en este último caso realizar un nuevo intento.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireflows/seguimiento_pago.png"
+       alt="Wireflow del seguimiento, liquidación y pago del servicio"
+       width="1000">
+</p>
+
+***Figura.*** Flujo desde el seguimiento de la carga hasta los estados de pago exitoso o rechazado.
+
+#### Wireflow 3 — Operación del transportista
+
+El tercer wireflow representa el recorrido principal del transportista dentro de LoadMatch, desde la búsqueda de oportunidades de carga hasta la finalización del servicio. Este flujo incluye la selección de fletes disponibles, la validación documental requerida para operar dentro de la plataforma, la aceptación del servicio y el seguimiento del viaje hasta su cierre.
+
+##### Búsqueda y selección de fletes
+
+El flujo comienza en la pantalla principal del transportista, donde se muestran los fletes disponibles. El usuario puede acceder a filtros avanzados para restringir los resultados según criterios como distancia, tipo de vehículo, peso de la carga o tarifa mínima. Después de aplicar los filtros, puede consultar el detalle de una oportunidad específica antes de decidir si desea aceptarla.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireflows/buscar_seleccionar_flete.png"
+       alt="Wireflow de búsqueda, filtrado y selección de un flete"
+       width="1000">
+</p>
+
+***Figura.*** Flujo de búsqueda, aplicación de filtros y consulta del detalle de un flete disponible.
+
+
+##### Validación y aceptación del viaje
+
+Antes de aceptar determinados servicios, LoadMatch verifica que la cuenta del transportista cuente con la documentación requerida. Si la cuenta todavía se encuentra en revisión, el sistema dirige al usuario hacia su perfil para completar la carga y validación de documentos. Una vez aprobada la documentación, el transportista puede continuar con la aceptación del viaje y acceder a la sección de viajes asignados.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireflows/validar_aceptar_viaje.png"
+       alt="Wireflow de validación documental y aceptación de un viaje"
+       width="1000">
+</p>
+
+***Figura.*** Flujo de validación del perfil del transportista y posterior aceptación del servicio.
+
+
+##### Ejecución y finalización del viaje
+
+Una vez aceptado el servicio, el transportista puede consultar sus viajes activos y acceder al mapa de seguimiento correspondiente. Durante el recorrido, la plataforma permite visualizar el progreso del viaje y, al llegar al destino, reportar la llegada. Para finalizar el servicio, el conductor debe adjuntar la evidencia correspondiente a la entrega. Una vez completado este proceso, el viaje pasa a formar parte del historial de servicios realizados.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireflows/ejecutar_finalizar_viaje.png"
+       alt="Wireflow de ejecución, seguimiento y finalización de un viaje"
+       width="1000">
+</p>
+
+***Figura.*** Flujo desde la gestión de un viaje activo hasta su finalización y registro en el historial.
+
+
 ### 4.4.3. Web Applications Mock-ups
 
 Registro de empresarios:
