@@ -240,6 +240,7 @@ Para el desarrollo del **Project Report de LoadMatch**, el equipo utiliza un rep
 - Simon Calderon, Ismael Sebastian (USER)
 - Collantes Artola, Marco Antonio (USER)
 - Benigno Montero, Harold Fauskorp (USER)
+
 La actividad se distribuyó en ramas temáticas por capítulos del informe (`feature/Chapter1` hasta `feature/Chapter5`), asegurando revisiones cruzadas mediante **Pull Requests** y manteniendo evidencia de colaboración en los comentarios y resoluciones.
 
 ---
