@@ -223,8 +223,8 @@ La matriz LACX identifica al líder (L) y a los colaboradores (C) de cada aspect
 | Noriega Collado, Jean Fabio | [PENDIENTE] | C | C | C | C |
 | Rivas Castillo, Christoper Steven | CODERT0PH | C | C | C | C |
 | Simon Calderon, Ismael Sebastian | [PENDIENTE] | C | C | C | C |
-| Collantes Artola, Marco Antonio | [PENDIENTE] | C | C | C | C |
-| Emilia [apellidos pendientes en Capítulo I] | C | C | C | C | C |
+| Collantes Artola, Marco Antonio | Markollantes2307 | C | C | C | C |
+| Emilia Durán | C | C | C | C | C |
 | Benigno Montero, Harold Fauskorp | Harold-11 | L | C | C | C |
 
 *Nota. La matriz incluye a los seis integrantes del Capítulo I. La asignación previa de tareas a un integrante no demuestra por sí sola su ejecución ni permite atribuirle todo el contenido de los archivos.*
@@ -425,9 +425,12 @@ La existencia de estas convenciones no demuestra su aplicación histórica. Para
 
 **Historial de commits por integrante:** 
 
+En el primer sprint de trabajo, la atención fue centrada en el desarrollo del landing page de nuestra aplicación:
+<img src="../assets/images/Insights/CollabInsights.png" alt="Insights totales registrados en landing page">
+
 *Desarrollado por: Jean Fabio Noriega Collado (dumbaskidd)*
 <p align="center">
-  <img src="[ENLACE_IMAGEN_COMMITS_JEAN]" alt="Commits Jean" width="500">
+  <img src="../assets/images/Insights/Commits1.png" alt="Commits Jean" width="500">
 </p>
 
 *Desarrollado por: Ismael Sebastian Simon Calderon (Mayel-dev)*
@@ -437,20 +440,25 @@ La existencia de estas convenciones no demuestra su aplicación histórica. Para
 
 *Desarrollado por: Christoper Steven Rivas Castillo (C0DERTOPH)*
 <p align="center">
-  <img src="[ENLACE_IMAGEN_COMMITS_YNGRID]" alt="Commits Chris" width="500">
+  <img src="../assets/images/Insights/Commits3.png" alt="Commits Chris" width="500">
 </p>
 
-*Desarrollado por: nombre comleto (usuario github)*
+*Desarrollado por: nombre comleto (Harold-11)*
 <p align="center">
-  <img src="[ENLACE_IMAGEN_COMMITS_JOSE]" alt="Commits Harold" width="500">
+  <img src="../assets/images/Insights/Commits2.png" alt="Commits Harold" width="500">
 </p>
 
-*Desarrollado por: nombre comleto (usuario github)*
+*Desarrollado por: Marco Antonio Collantes Artola (Markollantes2307)*
 <p align="center">
-  <img src="[ENLACE_IMAGEN_COMMITS_SEBASTIAN]" alt="Commits integrante" width="500">
+  <img src="[ENLACE_IMAGEN_COMMITS_SEBASTIAN]" alt="Commits Marco" width="500">
 </p>
 
 **Gráficos de colaboradores y actividad durante el sprint:** [PENDIENTE].
+
+<p align="center">
+  <img src="../assets/images/Insights/NetworkGraph.png" alt="Commits Marco" width="500">
+  <img src="../assets/images/Insights/NetworkGraph1.png" alt="Commits Marco" width="500">
+</p>
 
 **Pull Requests revisados y observaciones resueltas:** [PENDIENTE].
 
