@@ -4,7 +4,7 @@
 
 LoadMatch es una plataforma digital orientada a facilitar la conexión entre empresas que requieren servicios de transporte de carga y transportistas con capacidad disponible. Debido a que la solución involucra procesos de coordinación, contratación, seguimiento y validación de servicios, la interfaz debe transmitir confianza, claridad y eficiencia durante toda la experiencia de uso.
 
-Las Style Guidelines de LoadMatch establecen los principales lineamientos visuales y de comunicación que deberán mantenerse de forma consistente en la Landing Page y en la Web Application. Estos lineamientos comprenden aspectos como tipografía, colores, iconografía, espaciado, componentes de interfaz y tono de comunicación.
+Las Style Guidelines de LoadMatch establecen los principales lineamientos visuales y de comunicación que deberán mantenerse de forma consistente en la Landing Page y en la Web Application. Estos lineamientos comprenden aspectos como branding, tipografía, colores, iconografía, espaciado, componentes de interfaz y tono de comunicación.
 
 El objetivo de esta guía es mantener una identidad visual coherente en todos los puntos de interacción con el usuario y facilitar que el equipo de diseño y desarrollo trabaje bajo un mismo criterio. De esta manera, se busca que la plataforma resulte fácil de comprender, visualmente consistente y adecuada para usuarios que necesitan consultar información, crear solicitudes de transporte o gestionar servicios de manera rápida y ordenada.
 
@@ -13,19 +13,20 @@ El objetivo de esta guía es mantener una identidad visual coherente en todos lo
 
 La identidad visual de LoadMatch está orientada a transmitir confianza, profesionalismo y eficiencia, características importantes dentro de una plataforma que facilita la coordinación de servicios de transporte de carga entre diferentes participantes.
 
-El diseño busca mantener una apariencia moderna, limpia y funcional, evitando elementos visuales innecesarios que puedan dificultar la comprensión de la información. Se priorizará una jerarquía visual clara, una distribución ordenada de los elementos y una adecuada legibilidad, especialmente en secciones donde el usuario necesite consultar información relacionada con solicitudes, transportistas, vehículos o estados de servicio.
+El diseño busca mantener una apariencia moderna, limpia y funcional, evitando elementos visuales innecesarios que puedan dificultar la comprensión de la información. Se prioriza una jerarquía visual clara, una distribución ordenada de los elementos y una adecuada legibilidad, especialmente en secciones donde el usuario necesita consultar información relacionada con solicitudes, transportistas, vehículos o estados de servicio.
 
-Asimismo, la interfaz deberá mantener consistencia entre sus diferentes secciones, utilizando patrones visuales y componentes reconocibles que permitan al usuario identificar fácilmente acciones, estados e información relevante. Esto permitirá reducir la carga cognitiva durante la navegación y facilitar el aprendizaje progresivo del funcionamiento de la plataforma.
+Asimismo, la interfaz mantiene consistencia entre sus diferentes secciones mediante patrones visuales y componentes reconocibles que permiten al usuario identificar fácilmente acciones, estados e información relevante. Esto contribuye a reducir la carga cognitiva durante la navegación y facilita el aprendizaje progresivo del funcionamiento de la plataforma.
 
-En cuanto al tono de comunicación, LoadMatch se posiciona como una plataforma:
+#### Branding
 
-- **Profesional**, debido a que facilita operaciones relacionadas con transporte y actividades empresariales.
-- **Confiable**, especialmente al presentar información sobre transportistas, vehículos, documentación y servicios.
-- **Clara**, utilizando textos y mensajes fáciles de comprender y evitando términos innecesariamente complejos.
-- **Directa**, priorizando instrucciones y acciones concretas durante la interacción con la plataforma.
-- **Cercana**, manteniendo una comunicación accesible tanto para empresas como para transportistas independientes.
+La identidad de marca de **LoadMatch** busca representar visualmente el encuentro entre dos actores principales del ecosistema logístico: las empresas que necesitan movilizar mercadería y los transportistas que cuentan con capacidad disponible. El propio nombre combina los conceptos de **Load**, asociado a la carga, y **Match**, relacionado con la conexión entre una necesidad de transporte y una unidad compatible.
 
-Estos principios servirán como base para definir posteriormente la tipografía, paleta de colores, iconografía, espaciado y componentes visuales utilizados en LoadMatch.
+La marca utiliza como principales elementos visuales el **Primary Orange (#FE6B00)** y el **Dark Navy (#0B1C30)**. El naranja funciona como color de énfasis y representa movimiento, actividad y acción, mientras que el azul marino aporta contraste y refuerza una percepción de confianza, estabilidad y profesionalismo. Los fondos claros y la escala Slate complementan estos colores sin competir con los elementos principales de la marca.
+
+La identidad visual evita un enfoque excesivamente informal o decorativo. Debido a que LoadMatch interviene en operaciones donde se gestionan mercadería, vehículos, documentación, pagos y seguimiento de servicios, se prioriza una imagen tecnológica y profesional que permita transmitir confianza tanto a empresas como a transportistas.
+
+La marca se aplica de manera consistente en la Landing Page y la Web Application, manteniendo la misma paleta, tipografía, iconografía, radios de esquina y jerarquía visual. De esta forma, el usuario percibe continuidad al pasar desde el sitio público hacia las funcionalidades operativas de la plataforma.
+
 
 #### 4.1.1.1. Typography
 
@@ -47,17 +48,18 @@ La jerarquía tipográfica de LoadMatch se organiza de la siguiente manera:
 El interlineado se adapta aproximadamente entre 1.3 y 1.5 veces el tamaño de la fuente, favoreciendo la lectura tanto en bloques de contenido como en interfaces con alta densidad de información. Para etiquetas y elementos pequeños se aplica un ligero espaciado entre caracteres con el fin de mejorar su diferenciación visual.
 
 <p align="center">
-  <img src="../assets/images/style-guidelines/Tipografia.png" alt="Tipografía" width="800"><br>
-  <i>Nota. Sistema tipográfico utilizado en la identidad visual de LoadMatch</i>
+  <img src="../assets/images/style-guidelines/Tipografia.png" alt="Sistema tipográfico de LoadMatch" width="800"><br>
+  <i>Nota. Sistema tipográfico utilizado en la identidad visual de LoadMatch.</i>
 </p>
+
 
 #### 4.1.1.2. Colors
 
 La paleta de colores de LoadMatch ha sido definida con el propósito de transmitir una identidad visual moderna, confiable y vinculada al entorno logístico. El sistema combina colores de marca con tonos neutros y colores semánticos que permiten diferenciar acciones, estados e información dentro de la plataforma.
 
-El **naranja (#FE6B00)** constituye el color principal de LoadMatch y se utiliza especialmente en acciones importantes, botones principales, elementos seleccionados, indicadores y puntos de énfasis dentro de la interfaz. Su uso permite dirigir rápidamente la atención del usuario hacia las acciones prioritarias.
+El **Primary Orange (#FE6B00)** constituye el color principal de LoadMatch y se utiliza especialmente en acciones importantes, botones principales, elementos seleccionados, indicadores y puntos de énfasis dentro de la interfaz. Su uso permite dirigir rápidamente la atención del usuario hacia las acciones prioritarias.
 
-Como variación para estados de interacción se utiliza el tono **Orange Pressed (#A04100)**, principalmente en estados activos o presionados de componentes interactivos, y como color de texto cuando se requiere aplicar el énfasis de marca sobre fondos claros.
+Como variación para estados de interacción se utiliza el tono **Orange Pressed (#A04100)**, principalmente en estados activos o presionados de componentes interactivos, y como color de texto cuando se requiere aplicar énfasis de marca sobre fondos claros.
 
 Los tonos **Dark Navy (#0B1C30)** y **Sidebar Dark (#131B2E)** son empleados en elementos estructurales y de navegación, especialmente en fondos oscuros, barras laterales, encabezados y determinadas áreas de alto contraste. Estos colores permiten equilibrar visualmente el naranja principal y contribuyen a transmitir una imagen profesional y confiable.
 
@@ -107,6 +109,7 @@ El uso consistente de esta paleta facilita la identificación de acciones y esta
   <i>Nota. Sistema de color utilizado en la identidad visual de LoadMatch.</i>
 </p>
 
+
 #### 4.1.1.3. Spacing
 
 El sistema de espaciado de LoadMatch se basa en una cuadrícula de **4 píxeles**, permitiendo mantener consistencia visual entre los diferentes componentes de la interfaz. A partir de esta unidad base se utilizan principalmente valores de **4, 8, 12, 16, 24 y 32 píxeles**, dependiendo del nivel de separación requerido.
@@ -114,6 +117,7 @@ El sistema de espaciado de LoadMatch se basa en una cuadrícula de **4 píxeles*
 Los espacios de **4 px** se emplean principalmente entre elementos muy próximos, como iconos y textos; **8 px** para agrupaciones compactas y componentes pequeños; **12 px** para separaciones internas frecuentes; **16 px** para el contenido de tarjetas y formularios; **24 px** para secciones con mayor separación visual; y **32 px** para dividir bloques principales dentro de una página.
 
 Este sistema permite organizar la información de manera clara y predecible, evitando la saturación visual y facilitando la lectura de elementos operativos como solicitudes de carga, formularios, estados y rutas. Asimismo, contribuye a mantener una experiencia consistente en las distintas vistas de la plataforma.
+
 
 #### 4.1.1.4. Iconography
 
@@ -130,9 +134,19 @@ El uso de iconos junto con etiquetas textuales permite disminuir la carga cognit
   <i>Nota. Sistema de iconografía utilizado en la interfaz de LoadMatch.</i>
 </p>
 
+
 #### 4.1.1.5. Tone of Communication and Applied Language
 
 El tono de comunicación de LoadMatch es **claro, directo, profesional y orientado a la acción**. Debido a que la plataforma se utiliza para gestionar operaciones relacionadas con transporte y logística, la información debe presentarse de manera sencilla y comprensible, evitando términos innecesariamente complejos o mensajes ambiguos.
+
+Para mantener este criterio de forma consistente, el tono se define mediante las siguientes dimensiones:
+
+| Dimensión | Orientación de LoadMatch | Aplicación |
+| :--- | :--- | :--- |
+| **Divertido / Serio** | Predominantemente **serio** | La plataforma interviene en operaciones comerciales, traslado de mercadería, documentación y pagos; por ello se evita un lenguaje excesivamente informal o humorístico. |
+| **Formal / Casual** | **Semi-formal y profesional** | Se utiliza lenguaje profesional, pero comprensible y cercano para usuarios con diferentes niveles de experiencia digital. |
+| **Respetuoso / Irreverente** | **Respetuoso** | Las instrucciones, advertencias y mensajes de error mantienen un tratamiento neutral y no culpabilizan al usuario. |
+| **Entusiasta / Sereno** | Predominantemente **sereno y orientado a la acción** | Se priorizan mensajes concretos que expliquen el estado de una operación y la siguiente acción disponible, evitando alarmismo o entusiasmo excesivo. |
 
 Los textos de la interfaz priorizan instrucciones breves y acciones fácilmente identificables, especialmente en procesos como la publicación de una carga, búsqueda de oportunidades, seguimiento de servicios, actualización de documentación y gestión del perfil.
 
@@ -150,21 +164,30 @@ Los mensajes relacionados con estados, advertencias o validaciones mantienen el 
 
 Este estilo de comunicación busca generar confianza y facilitar la interacción de usuarios con diferentes niveles de experiencia digital, manteniendo al mismo tiempo una identidad profesional acorde con el contexto logístico de LoadMatch.
 
+
 ### 4.1.2. Web Style Guidelines
 
-El diseño visual de la aplicación web de LoadMatch sigue una línea moderna, clara y funcional, orientada a facilitar la gestión de operaciones logísticas y la consulta rápida de información relevante. La interfaz prioriza la legibilidad, la jerarquía visual y la consistencia entre los diferentes módulos de la plataforma.
+El diseño visual de la experiencia web de LoadMatch sigue una línea moderna, clara y funcional, orientada a facilitar tanto la comprensión de la propuesta de valor en la Landing Page como la ejecución de operaciones logísticas dentro de la Web Application. La interfaz prioriza la legibilidad, la jerarquía visual, la consistencia entre componentes y la adaptación responsive.
 
-La estructura visual se apoya en el uso de **Inter** como tipografía principal de interfaz, combinada de manera puntual con **Liberation Serif** en determinados encabezados destacados. La paleta de colores utiliza el **Primary Orange (#FE6B00)** como color de énfasis para acciones principales, estados activos y elementos seleccionados, mientras que los tonos **Dark Navy (#0B1C30)**, **Sidebar Dark (#131B2E)** y la escala **Slate** se emplean en navegación, textos, bordes y elementos secundarios.
+La estructura visual se apoya en el uso de **Inter** como tipografía principal de interfaz, combinada de manera puntual con **Liberation Serif** en determinados encabezados destacados. La paleta utiliza el **Primary Orange (#FE6B00)** como color de énfasis para acciones principales, estados activos y elementos seleccionados, mientras que los tonos **Dark Navy (#0B1C30)**, **Sidebar Dark (#131B2E)** y la escala **Slate** se emplean en navegación, textos, bordes y elementos secundarios.
 
-Los componentes interactivos mantienen patrones visuales consistentes. Los botones principales utilizan fondo naranja y texto blanco, mientras que las acciones secundarias emplean fondos claros, bordes suaves y tonos neutros. Los formularios utilizan campos con bordes redondeados, etiquetas claras y estados visuales diferenciados para foco, validación y error.
+Los componentes interactivos mantienen patrones visuales consistentes. Los botones principales utilizan **Primary Orange (#FE6B00) con texto Dark Navy (#0B1C30)**, combinación que mantiene el contraste definido por las reglas de accesibilidad de la paleta. Las acciones secundarias emplean fondos claros, bordes neutros y texto oscuro. Los estados presionados pueden utilizar **Orange Pressed (#A04100)** con texto blanco.
 
-La navegación principal de la aplicación se organiza mediante una barra lateral oscura, donde el estado activo se resalta con el color naranja de la marca. El encabezado superior mantiene un fondo claro e integra elementos como búsqueda, información del usuario y accesos rápidos, facilitando la orientación dentro de la plataforma.
+Los formularios utilizan campos con bordes redondeados, etiquetas claramente visibles y estados diferenciados para interacción, validación y error. El foco de teclado emplea un indicador visual de alto contraste que no depende únicamente del color de marca.
+
+La navegación principal de la Web Application se organiza mediante una barra lateral oscura, donde el estado activo se distingue utilizando contraste, color y tratamiento visual del componente. El encabezado superior mantiene un fondo claro e integra elementos como búsqueda, información del usuario y accesos rápidos, facilitando la orientación dentro de la plataforma.
 
 Las tarjetas, tablas, formularios, modales y paneles de seguimiento utilizan fondos claros, bordes sutiles, radios de esquina consistentes y una jerarquía de espaciado basada en múltiplos de 4 píxeles. Esto permite separar visualmente la información sin sobrecargar la interfaz.
 
-La aplicación también emplea colores semánticos y badges para representar estados como **verificado, completado, en tránsito, pendiente o cancelado**, permitiendo que el usuario identifique rápidamente el estado de una operación.
+Los estados operativos se representan mediante badges, texto e iconografía. Estados como **Verificado**, **Completado**, **En tránsito**, **Pendiente** o **Cancelado** utilizan colores semánticos acompañados de etiquetas textuales, evitando que el significado dependa exclusivamente del color.
 
-Finalmente, el diseño web de LoadMatch considera principios de diseño responsive, buscando mantener la claridad, funcionalidad y consistencia de la interfaz en distintos tamaños de pantalla. Todos los elementos visuales se plantean con un propósito funcional, priorizando una experiencia sencilla, profesional y orientada a la ejecución rápida de tareas.
+En la Landing Page, la jerarquía visual prioriza la propuesta de valor y los llamados a la acción dirigidos a los dos segmentos principales. La navegación se adapta al tamaño de pantalla y los componentes que se organizan horizontalmente en escritorio pasan a estructuras apiladas en dispositivos móviles.
+
+En la Web Application, los layouts mantienen la prioridad sobre tareas operativas como publicar una carga, buscar fletes, revisar viajes, consultar rutas y gestionar documentación. Los componentes conservan patrones de interacción consistentes para que acciones equivalentes tengan una presentación y comportamiento predecibles.
+
+El diseño responsive considera la reorganización de columnas, tarjetas, controles y navegación según el espacio disponible. En pantallas pequeñas se priorizan estructuras verticales, botones con áreas táctiles amplias y contenido esencial, manteniendo la misma jerarquía y significado de la versión de escritorio.
+
+De esta manera, los estándares visuales y de interacción definidos para LoadMatch permiten mantener una experiencia coherente entre la Landing Page y la Web Application, reforzando la identidad de marca y facilitando el uso de la plataforma en diferentes tamaños de pantalla.
 
 ## 4.2. Information Architecture.
 
@@ -918,10 +941,14 @@ Los wireflow diagrams de la Web Application de **LoadMatch** representan la rela
 
 Para facilitar su lectura, los recorridos fueron organizados de acuerdo con las principales actividades realizadas por los dos segmentos de usuarios de LoadMatch. Cada wireflow muestra las pantallas involucradas y las acciones que generan una transición entre ellas, incluyendo estados alternativos como errores de autenticación, cancelaciones o fallos durante el procesamiento de pagos.
 
+Los User Goals seleccionados corresponden a tareas principales identificadas para las User Personas de empresas y transportistas. De esta manera, los diagramas permiten visualizar cómo cada usuario puede avanzar desde el inicio de una tarea hasta alcanzar el resultado esperado dentro de la plataforma.
+
 
 #### Wireflow 1 — Autenticación y registro
 
 Este wireflow representa los principales recorridos relacionados con el acceso y creación de cuentas dentro de LoadMatch. Debido a que existen dos perfiles de usuario —empresa y transportista—, el flujo se divide en tres diagramas complementarios que muestran la autenticación y los procesos de registro correspondientes.
+
+**User Goal:** Acceder a LoadMatch mediante una cuenta existente o crear una nueva cuenta de empresa o transportista para utilizar las funcionalidades correspondientes a su perfil.
 
 ##### Autenticación y acceso según el tipo de usuario
 
@@ -943,7 +970,6 @@ El flujo comienza en la pantalla de inicio de sesión. Si las credenciales ingre
 
 ***Figura.*** Flujo de inicio de sesión y acceso al dashboard correspondiente según el perfil del usuario.
 
-
 ##### Registro de empresa y transportista
 
 El proceso de registro se inicia desde las opciones disponibles en la pantalla de acceso. Para las empresas, una vez completado correctamente el formulario de registro, el sistema confirma la creación de la cuenta y habilita el acceso a las funcionalidades correspondientes. En el caso de los transportistas, después del registro inicial se continúa con la configuración y validación del perfil.
@@ -961,6 +987,8 @@ El proceso de registro se inicia desde las opciones disponibles en la pantalla d
 
 El segundo wireflow representa el proceso operativo principal del usuario empresarial dentro de LoadMatch. El recorrido comienza desde el dashboard y comprende la publicación de una nueva solicitud de transporte, la gestión de las cargas registradas, el seguimiento de los servicios en ejecución y finalmente el proceso de liquidación y pago.
 
+**User Goal:** Publicar y gestionar una solicitud de transporte de carga desde su creación hasta la finalización y pago del servicio.
+
 ##### Publicación de una nueva carga
 
 Desde el dashboard, el usuario empresarial puede acceder al formulario para publicar una nueva carga. Después de ingresar la información requerida y confirmar la operación, el sistema muestra un estado de publicación exitosa. Desde esta confirmación, el usuario puede dirigirse a la sección **Mis Cargas** para consultar y gestionar la solicitud recién creada.
@@ -972,7 +1000,6 @@ Desde el dashboard, el usuario empresarial puede acceder al formulario para publ
 </p>
 
 ***Figura.*** Flujo desde el dashboard empresarial hasta la publicación y posterior visualización de una carga.
-
 
 ##### Gestión y seguimiento de cargas
 
@@ -986,7 +1013,6 @@ Desde la sección **Mis Cargas**, el usuario dispone de diferentes acciones seg�
 
 ***Figura.*** Bifurcación del flujo de gestión de cargas entre cancelación y seguimiento del servicio.
 
-
 ##### Finalización y pago del servicio
 
 Cuando el servicio de transporte ha sido completado, el usuario empresarial puede continuar hacia el proceso de liquidación. Desde la pantalla de seguimiento se accede al método de pago correspondiente. El sistema contempla tanto el procesamiento exitoso como el rechazo de una transacción, permitiendo en este último caso realizar un nuevo intento.
@@ -999,9 +1025,12 @@ Cuando el servicio de transporte ha sido completado, el usuario empresarial pued
 
 ***Figura.*** Flujo desde el seguimiento de la carga hasta los estados de pago exitoso o rechazado.
 
+
 #### Wireflow 3 — Operación del transportista
 
 El tercer wireflow representa el recorrido principal del transportista dentro de LoadMatch, desde la búsqueda de oportunidades de carga hasta la finalización del servicio. Este flujo incluye la selección de fletes disponibles, la validación documental requerida para operar dentro de la plataforma, la aceptación del servicio y el seguimiento del viaje hasta su cierre.
+
+**User Goal:** Encontrar un flete compatible, aceptarlo y completar correctamente el servicio de transporte hasta registrar su finalización.
 
 ##### Búsqueda y selección de fletes
 
@@ -1015,7 +1044,6 @@ El flujo comienza en la pantalla principal del transportista, donde se muestran 
 
 ***Figura.*** Flujo de búsqueda, aplicación de filtros y consulta del detalle de un flete disponible.
 
-
 ##### Validación y aceptación del viaje
 
 Antes de aceptar determinados servicios, LoadMatch verifica que la cuenta del transportista cuente con la documentación requerida. Si la cuenta todavía se encuentra en revisión, el sistema dirige al usuario hacia su perfil para completar la carga y validación de documentos. Una vez aprobada la documentación, el transportista puede continuar con la aceptación del viaje y acceder a la sección de viajes asignados.
@@ -1027,7 +1055,6 @@ Antes de aceptar determinados servicios, LoadMatch verifica que la cuenta del tr
 </p>
 
 ***Figura.*** Flujo de validación del perfil del transportista y posterior aceptación del servicio.
-
 
 ##### Ejecución y finalización del viaje
 
@@ -1044,115 +1071,258 @@ Una vez aceptado el servicio, el transportista puede consultar sus viajes activo
 
 ### 4.4.3. Web Applications Mock-ups
 
-Registro de empresarios:
+Los mock-ups de la Web Application de LoadMatch representan la propuesta visual de alta fidelidad de las principales funcionalidades definidas previamente mediante los wireframes y wireflows. En esta etapa se aplican los elementos del Design System establecidos en la sección 4.1, incluyendo tipografía, paleta de colores, jerarquía visual, espaciado, iconografía y componentes.
+
+Asimismo, las pantallas mantienen la estructura definida en la Arquitectura de Información de la sección 4.2, diferenciando claramente las funcionalidades correspondientes a empresas y transportistas.
+
+
+#### Autenticación y registro
+
+Las pantallas de autenticación y registro mantienen una estructura visual consistente para ambos perfiles. Los formularios presentan únicamente la información necesaria para cada proceso y utilizan estados diferenciados para validaciones, errores y confirmaciones.
+
+**Registro de empresarios**
 
 <img src="../assets/images/mockups/MockUp1.png" width="450">
 
-Registro de transportistas:
+**Registro de transportistas**
 
 <img src="../assets/images/mockups/MockUp2.png" width="450">
 
-Login para usuarios registrados:
+**Inicio de sesión**
 
 <img src="../assets/images/mockups/MockUp3.png" width="450">
 <img src="../assets/images/mockups/MockUp3A.png" width="450">
 
-Dashboard de empresarios:
+
+#### Experiencia para empresas
+
+La interfaz empresarial prioriza la publicación, gestión, seguimiento y liquidación de servicios de transporte. Las acciones principales se presentan de forma visible, mientras que las acciones secundarias aparecen de manera contextual según el estado de cada carga.
+
+**Dashboard empresarial**
 
 <img src="../assets/images/mockups/MockUp4.png" width="450">
 
-Publicar Nueva Carga:
+**Publicar nueva carga**
 
 <img src="../assets/images/mockups/MockUp6.png" width="450">
 <img src="../assets/images/mockups/MockUp6A.png" width="450">
 
-Mis Cargas Activas:
+**Mis Cargas**
 
 <img src="../assets/images/mockups/MockUp7.png" width="450">
 
-Cancelación de cargas:
+**Cancelación de cargas**
 
 <img src="../assets/images/mockups/MockUp8.png" width="450">
 <img src="../assets/images/mockups/MockUp8A.png" width="450">
 
-Seguimiento de Carga:
+**Seguimiento de carga**
 
 <img src="../assets/images/mockups/MockUp9.png" width="450">
 
-Pago por servicio:
+**Pago por servicio**
 
 <img src="../assets/images/mockups/MockUp10.png" width="450">
 <img src="../assets/images/mockups/MockUp11.png" width="450">
 
-Confirmaciones de pago:
+**Confirmaciones de pago**
 
 <img src="../assets/images/mockups/MockUp12.png" width="450">
 <img src="../assets/images/mockups/MockUp12A.png" width="450">
 
-Dashboard de transportistas:
+
+#### Experiencia para transportistas
+
+La experiencia del transportista está orientada a la búsqueda y aceptación de oportunidades de carga, validación documental y gestión de viajes. La navegación mantiene correspondencia con las secciones Buscar Fletes, Mis Viajes, Historial y Mi Perfil.
+
+**Dashboard y búsqueda de fletes**
 
 <img src="../assets/images/mockups/MockUp5.png" width="450">
 
-Filtros de Búsqueda:
+**Filtros de búsqueda**
 
 <img src="../assets/images/mockups/MockUp13.png" width="450">
 
-Detalles de Flete:
+**Detalle del flete**
 
 <img src="../assets/images/mockups/MockUp14.png" width="450">
 
-Estado de cuenta (licencias):
+**Estado de cuenta y validación documental**
 
 <img src="../assets/images/mockups/MockUp15.png" width="450">
 <img src="../assets/images/mockups/MockUp18.png" width="450">
 
-Perfil de Transportistas:
+**Perfil del transportista**
 
 <img src="../assets/images/mockups/MockUp16.png" width="450">
 <img src="../assets/images/mockups/MockUp19.png" width="450">
 
-Carga de documentos (licencia):
+**Carga de documentos**
 
 <img src="../assets/images/mockups/MockUp17.png" width="450">
 
-Mis Viajes:
+**Mis Viajes**
 
 <img src="../assets/images/mockups/MockUp20.png" width="450">
 
-Seguimiento de Viajes y Llegada a destino:
+**Seguimiento y llegada a destino**
 
 <img src="../assets/images/mockups/MockUp21.png" width="450">
 <img src="../assets/images/mockups/MockUp22.png" width="450">
 
-Historial de Viajes:
+**Historial de viajes**
 
 <img src="../assets/images/mockups/MockUp23.png" width="450">
 
+
+#### Aplicación del Design System y principios de diseño
+
+Los mock-ups aplican los lineamientos visuales definidos previamente para LoadMatch. La familia tipográfica **Inter** mantiene consistencia en títulos, formularios y contenido operativo, mientras que el **Primary Orange** se utiliza para acciones prioritarias y el **Dark Navy** para elementos estructurales y de navegación.
+
+La jerarquía visual diferencia títulos, información operativa y acciones mediante tamaño, peso tipográfico, contraste y espaciado. Los componentes reutilizables —botones, campos, tarjetas, badges y modales— mantienen patrones consistentes a lo largo de la aplicación.
+
+Los estados importantes no se comunican únicamente mediante color. Se utilizan también texto, iconografía y etiquetas para representar situaciones como aprobación, error, validación pendiente, cancelación o pago rechazado.
+
+En relación con la Arquitectura de Información, las funcionalidades de empresa se concentran en Dashboard, Mis Cargas, Historial y Configuración, mientras que las del transportista se organizan en Buscar Fletes, Mis Viajes, Historial y Mi Perfil. Esta estructura mantiene consistencia con los wireframes y wireflows definidos en las secciones anteriores.
+
 ### 4.4.4. Web Applications User Flow Diagrams
 
-Ingreso y registro en la aplicación:
+Los User Flow Diagrams de LoadMatch representan las principales rutas que siguen los usuarios para alcanzar objetivos específicos dentro de la Web Application. A diferencia de los wireflows, estos diagramas se concentran en la lógica de decisión y en las posibles rutas que puede seguir el usuario, incluyendo tanto el recorrido esperado o **happy path** como estados alternativos o **unhappy paths**.
 
-<img src="../assets/images/Graphics/UserFlow1.png">
+Los flujos mantienen correspondencia con las funcionalidades y recorridos definidos previamente en los wireframes y wireflows de la aplicación.
 
-Ingreso de usuarios registrados:
 
-<img src="../assets/images/Graphics/UserFlow2.png">
+#### User Flow 1 — Ingreso y registro en la aplicación
 
-Configuración de perfil (registro de SOAT y licencia):
+**User Goal:** Crear una cuenta en LoadMatch como empresa o transportista para comenzar a utilizar la plataforma.
 
-<img src="../assets/images/Graphics/UserFlow4.png">
+**Happy Path:** El usuario selecciona el tipo de cuenta que desea crear, completa correctamente la información requerida y confirma el registro. El sistema crea la cuenta y permite continuar hacia las funcionalidades correspondientes a su perfil.
 
-Registro de nuevas cargas para transportar:
+**Unhappy Paths y condiciones:**
+- Si existen campos obligatorios incompletos, el sistema solicita completar la información.
+- Si alguno de los datos ingresados no cumple con las validaciones establecidas, el registro no continúa hasta que sea corregido.
+- En el caso del transportista, la creación de la cuenta no implica necesariamente su habilitación inmediata, ya que debe completar posteriormente el proceso de validación documental.
 
-<img src="../assets/images/Graphics/UserFlow3.png">
+<p align="center">
+  <img src="../assets/images/Graphics/UserFlow1.png"
+       alt="User Flow de ingreso y registro en LoadMatch"
+       width="850">
+</p>
 
-Seguimiento de cargas:
+***Figura.*** User Flow correspondiente al proceso de creación de cuentas de empresas y transportistas.
 
-<img src="../assets/images/Graphics/UserFlow5.png">
+Este flujo permite diferenciar desde el inicio las necesidades de los dos segmentos principales de LoadMatch y dirigir a cada usuario hacia el proceso de registro correspondiente.
 
-Búsqueda de fletes:
 
-<img src="../assets/images/Graphics/UserFlow6.png">
+#### User Flow 2 — Ingreso de usuarios registrados
+
+**User Goal:** Iniciar sesión en LoadMatch y acceder a las funcionalidades correspondientes al perfil del usuario.
+
+**Happy Path:** El usuario ingresa sus credenciales correctamente, el sistema valida la información y lo dirige al dashboard correspondiente según se trate de una empresa o un transportista.
+
+**Unhappy Paths y condiciones:**
+- Si las credenciales son incorrectas, el sistema deniega el acceso y muestra un mensaje de error.
+- El usuario puede corregir la información e intentar iniciar sesión nuevamente.
+- El destino posterior a la autenticación depende del tipo de cuenta registrada.
+
+<p align="center">
+  <img src="../assets/images/Graphics/UserFlow2.png"
+       alt="User Flow de inicio de sesión para usuarios registrados"
+       width="850">
+</p>
+
+***Figura.*** User Flow correspondiente al proceso de autenticación y acceso según el tipo de usuario.
+
+Este recorrido mantiene consistencia con el Wireflow de autenticación, donde una autenticación exitosa conduce al dashboard de empresa o transportista y un intento inválido genera un estado de error.
+
+
+#### User Flow 3 — Configuración y validación del perfil del transportista
+
+**User Goal:** Completar la documentación requerida para habilitar la cuenta del transportista y poder aceptar servicios.
+
+**Happy Path:** El transportista accede a su perfil, registra o carga la información correspondiente a su SOAT y licencia de conducir, y el sistema valida correctamente la documentación. Una vez aprobados los requisitos, la cuenta queda habilitada.
+
+**Unhappy Paths y condiciones:**
+- Si falta documentación obligatoria, la cuenta permanece pendiente de validación.
+- Si un documento es rechazado o presenta información inválida, el transportista debe corregirlo o volver a cargarlo.
+- Un transportista cuya cuenta no esté habilitada no puede aceptar un viaje.
+
+<p align="center">
+  <img src="../assets/images/Graphics/UserFlow4.png"
+       alt="User Flow de configuración y validación del perfil del transportista"
+       width="850">
+</p>
+
+***Figura.*** User Flow correspondiente al registro y validación de documentación del transportista.
+
+Este flujo constituye una condición previa para determinadas operaciones del transportista y responde al mecanismo de confianza definido para LoadMatch.
+
+
+#### User Flow 4 — Registro de nuevas cargas para transportar
+
+**User Goal:** Publicar una solicitud de transporte para encontrar un transportista disponible.
+
+**Happy Path:** La empresa accede a la opción de publicación, completa los datos de origen, destino, características de la carga y condiciones requeridas, confirma la información y el sistema publica la solicitud.
+
+**Unhappy Paths y condiciones:**
+- Si falta información obligatoria, la solicitud no puede publicarse.
+- Si alguno de los datos ingresados no cumple con las validaciones establecidas, el usuario debe corregirlo antes de continuar.
+- Una solicitud publicada permanece disponible hasta ser asignada o cancelada.
+
+<p align="center">
+  <img src="../assets/images/Graphics/UserFlow3.png"
+       alt="User Flow de publicación de una nueva carga"
+       width="850">
+</p>
+
+***Figura.*** User Flow correspondiente al registro de una nueva solicitud de transporte.
+
+Este recorrido representa una de las principales tareas de las empresas dentro de LoadMatch y constituye el punto de inicio del proceso de matching con transportistas.
+
+
+#### User Flow 5 — Seguimiento de cargas
+
+**User Goal:** Consultar el estado y progreso de una carga durante la ejecución del servicio.
+
+**Happy Path:** La empresa selecciona una carga con un viaje activo, accede a la opción de seguimiento y consulta la información disponible sobre el estado del servicio, la ruta y el progreso del transportista.
+
+**Unhappy Paths y condiciones:**
+- El seguimiento solamente está disponible cuando existe un viaje asignado y en ejecución.
+- Si la solicitud todavía se encuentra buscando transportista, no existe información de seguimiento disponible.
+- Cuando el servicio finaliza, el flujo continúa hacia las acciones posteriores correspondientes, como la liquidación y el pago.
+
+<p align="center">
+  <img src="../assets/images/Graphics/UserFlow5.png"
+       alt="User Flow de seguimiento de una carga"
+       width="850">
+</p>
+
+***Figura.*** User Flow correspondiente al seguimiento de una carga durante la ejecución del servicio.
+
+El flujo permite mantener informada a la empresa durante el transporte y mantiene consistencia con las vistas de seguimiento definidas previamente en los wireframes y wireflows.
+
+
+#### User Flow 6 — Búsqueda y selección de fletes
+
+**User Goal:** Encontrar una solicitud de carga compatible con las características y preferencias del transportista.
+
+**Happy Path:** El transportista accede a Buscar Fletes, revisa las oportunidades disponibles, aplica los filtros que considere necesarios y consulta el detalle de una solicitud antes de decidir aceptarla.
+
+**Unhappy Paths y condiciones:**
+- Si los filtros aplicados no producen resultados, el sistema informa que no existen fletes compatibles.
+- El usuario puede modificar o eliminar filtros para ampliar la búsqueda.
+- La aceptación de un flete está condicionada a que el perfil del transportista se encuentre habilitado.
+- Si la cuenta se encuentra pendiente de validación, el usuario debe completar previamente el proceso documental.
+
+<p align="center">
+  <img src="../assets/images/Graphics/UserFlow6.png"
+       alt="User Flow de búsqueda y selección de fletes"
+       width="850">
+</p>
+
+***Figura.*** User Flow correspondiente a la búsqueda, filtrado y selección de oportunidades de carga.
+
+Este recorrido representa el punto de entrada del transportista hacia la operación principal de LoadMatch y se conecta posteriormente con los procesos de aceptación, ejecución y finalización del viaje.
 
 
 ## 4.5. Web Applications Prototyping
