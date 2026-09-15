@@ -570,51 +570,61 @@ El pie de página invierte la relación de color: fondo azul marino con texto bl
 
 #### Mock-up para Mobile Web Browser
 
+La versión móvil de la Landing Page conserva la misma estructura, jerarquía visual e identidad definida para la versión de escritorio, adaptando la disposición de los componentes a un viewport reducido. Los elementos que en desktop se organizan horizontalmente pasan a disponerse en una sola columna, priorizando la legibilidad, el área táctil y la navegación vertical.
+
 **Bloque 01 — Cabecera y sección principal**
 
-**Bloque 02 — Franja de indicadores del mercado**
-
-Los tres indicadores se apilan conservando el fondo alternativo de la paleta. La línea divisoria pasa de vertical a horizontal, de modo que la separación entre unidades de información se mantiene sin consumir ancho.
-
-<img src="../assets/images/landing-page/mockups-mobile/mockup-mobile-02-metrics.png" alt="Mock-up móvil: los tres indicadores apilados sobre fondo gris muy claro" width="300">
+La cabecera reduce su navegación principal a un botón de menú, manteniendo visible el logotipo de LoadMatch. En la sección principal, el titular, la descripción, la imagen y los llamados a la acción se reorganizan verticalmente. Los botones ocupan el ancho disponible para facilitar su interacción desde dispositivos táctiles.
 
 <img src="../assets/images/landing-page/mockups-mobile/mockup-mobile-01-header-hero.png" alt="Mock-up móvil: logotipo naranja y botón de menú, titular en azul marino con barra naranja, fotografía del camión y dos botones de ancho completo" width="300">
 
+**Bloque 02 — Franja de indicadores del mercado**
+
+Los tres indicadores se apilan conservando el fondo alternativo de la paleta. La línea divisoria cambia de vertical a horizontal, de modo que la separación entre unidades de información se mantiene sin consumir ancho adicional.
+
+<img src="../assets/images/landing-page/mockups-mobile/mockup-mobile-02-metrics.png" alt="Mock-up móvil: los tres indicadores apilados sobre fondo gris muy claro" width="300">
+
 **Bloque 03 — Cómo funciona**
 
-**Bloque 04 — Confianza y bloques por segmento**
-
-Las tarjetas de verificación conservan su icono sobre fondo naranja tenue al pasar a una sola columna. Los botones de cada bloque por segmento ocupan el ancho completo, con lo que el área táctil supera con holgura el mínimo de 44 × 44 píxeles.
-
-<img src="../assets/images/landing-page/mockups-mobile/mockup-mobile-04-trust-audience.png" alt="Mock-up móvil: cuatro tarjetas de verificación apiladas con iconos naranjas, y los dos bloques por segmento con sus listas y botones de ancho completo" width="300">
+Las pestañas para empresas y transportistas se conservan en la parte superior, ya que la segmentación por perfil sigue siendo necesaria en dispositivos móviles. Los tres pasos del proceso se disponen en una sola columna, manteniendo la numeración, las capturas de la aplicación y la jerarquía visual definida en la versión de escritorio.
 
 <img src="../assets/images/landing-page/mockups-mobile/mockup-mobile-03-how-it-works.png" alt="Mock-up móvil: pestañas con la activa subrayada en naranja y los tres pasos apilados en tarjetas, cada una con su círculo numerado" width="300">
 
+**Bloque 04 — Confianza y bloques por segmento**
+
+Las tarjetas de verificación conservan su iconografía y estructura, pero pasan a organizarse verticalmente. Los bloques dirigidos a empresas y transportistas también se presentan en una sola columna, utilizando botones de ancho completo para facilitar la interacción.
+
+<img src="../assets/images/landing-page/mockups-mobile/mockup-mobile-04-trust-audience.png" alt="Mock-up móvil: cuatro tarjetas de verificación apiladas con iconos naranjas, y los dos bloques por segmento con sus listas y botones de ancho completo" width="300">
+
 **Bloque 05 — Lo que dicen nuestros usuarios**
 
-El punto activo del carrusel se marca en naranja y los inactivos en gris, pero el estado no depende de esa señal: el contador «1 de 3» lo expresa en texto.
+El carrusel de testimonios mantiene una tarjeta principal visible, permitiendo reconocer que existen más testimonios disponibles. El punto activo se diferencia visualmente y el contador numérico complementa esta señal para evitar depender únicamente del color.
 
 <img src="../assets/images/landing-page/mockups-mobile/mockup-mobile-05-testimonials.png" alt="Mock-up móvil: un testimonio visible con el siguiente asomando por la derecha, y debajo tres puntos con el primero en naranja y el contador uno de tres" width="300">
 
 **Bloque 06 — Precios transparentes**
 
-**Bloque 07 — Preguntas frecuentes**
-
-El acordeón conserva el contraste entre pregunta y respuesta, y los signos menos y más se mantienen alineados al borde derecho, dentro del alcance del pulgar.
-
-<img src="../assets/images/landing-page/mockups-mobile/mockup-mobile-07-faq.png" alt="Mock-up móvil: acordeón de preguntas frecuentes a ancho completo, con la primera respuesta desplegada" width="300">
+Las tarjetas de precios dejan de mostrarse lado a lado y se apilan verticalmente. La opción destacada conserva su borde, etiqueta y jerarquía visual, permitiendo comparar los planes mediante desplazamiento vertical sin reducir el tamaño del contenido.
 
 <img src="../assets/images/landing-page/mockups-mobile/mockup-mobile-06-pricing.png" alt="Mock-up móvil: las tres tarjetas de precios apiladas, con la central conservando su borde destacado y su etiqueta" width="300">
 
+**Bloque 07 — Preguntas frecuentes**
+
+El acordeón ocupa el ancho disponible de la pantalla. Las preguntas y respuestas mantienen una separación clara, mientras que los controles de expansión permanecen alineados al borde derecho y dentro de un área fácilmente accesible mediante interacción táctil.
+
+<img src="../assets/images/landing-page/mockups-mobile/mockup-mobile-07-faq.png" alt="Mock-up móvil: acordeón de preguntas frecuentes a ancho completo, con la primera respuesta desplegada" width="300">
+
 **Bloque 08 — Videos explicativos**
+
+Los videos, que en escritorio pueden disponerse en columnas, pasan a mostrarse uno debajo del otro. Cada video mantiene su proporción 16:9 y su texto descriptivo, permitiendo visualizar el contenido sin reducir excesivamente el área disponible.
+
+<img src="../assets/images/landing-page/mockups-mobile/mockup-mobile-08-videos.png" alt="Mock-up móvil: los dos marcos de video apilados, cada uno con su botón circular naranja y su pie de foto" width="300">
 
 **Bloque 09 — Cierre y pie de página**
 
-La banda de cierre apila titular y botones a ancho completo. El pie de página conserva el fondo azul marino y reordena los cuatro grupos de enlaces en una sola columna, manteniendo sus encabezados como separadores temáticos.
+La banda final de llamada a la acción reorganiza su contenido verticalmente y presenta los botones a ancho completo. El pie de página conserva el fondo azul marino y distribuye sus grupos de enlaces en una sola columna, manteniendo los encabezados como separadores visuales.
 
 <img src="../assets/images/landing-page/mockups-mobile/mockup-mobile-09-final-cta-footer.png" alt="Mock-up móvil: banda de cierre con los dos botones apilados, y pie de página azul marino con los cuatro grupos de enlaces en una columna" width="300">
-
-<img src="../assets/images/landing-page/mockups-mobile/mockup-mobile-08-videos.png" alt="Mock-up móvil: los dos marcos de video apilados, cada uno con su botón circular naranja y su pie de foto" width="300">
 
 #### Aplicación del Design System
 
