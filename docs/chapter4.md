@@ -645,6 +645,273 @@ La banda final de llamada a la acción reorganiza su contenido verticalmente y p
 
 ### 4.4.1. Web Applications Wireframes
 
+Los wireframes de la Web Application de **LoadMatch** fueron elaborados con el propósito de definir la estructura, jerarquía de información, navegación y principales estados de interacción antes de aplicar la identidad visual definitiva del producto.
+
+La aplicación considera dos perfiles principales: el **dador de carga o empresa**, encargado de publicar y gestionar solicitudes de transporte, y el **transportista**, quien puede buscar fletes, administrar sus viajes y gestionar la documentación necesaria para operar dentro de la plataforma.
+
+Además de las pantallas principales, se diseñaron estados alternativos, mensajes de error, confirmaciones y ventanas modales que permiten representar el comportamiento esperado de la aplicación ante diferentes acciones del usuario.
+
+#### Autenticación y registro
+
+El acceso a LoadMatch parte de una interfaz de autenticación común para ambos perfiles. El wireframe contempla el ingreso mediante correo electrónico y contraseña, así como enlaces hacia los procesos de registro correspondientes.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireframes/login_form_filled.png"
+       alt="Wireframe del formulario de inicio de sesión de LoadMatch"
+       width="850">
+</p>
+
+***Figura.*** Wireframe del formulario de inicio de sesión.
+
+También se diseñó el estado de autenticación fallida, mediante el cual el sistema informa al usuario cuando las credenciales proporcionadas no son válidas y permite intentar nuevamente el acceso.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireframes/login_failed.png"
+       alt="Wireframe del estado de autenticación fallida"
+       width="850">
+</p>
+
+***Figura.*** Estado de error durante el inicio de sesión.
+
+Para el registro del segmento empresarial, la interfaz solicita información como RUC, razón social, correo electrónico corporativo y contraseña, permitiendo identificar y validar a las empresas que utilizarán la plataforma como dadores de carga.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireframes/crear_cuenta_empresa.png"
+       alt="Wireframe del registro de una empresa en LoadMatch"
+       width="850">
+</p>
+
+***Figura.*** Wireframe del proceso de registro de empresa.
+
+Una vez completado correctamente el registro empresarial, se presenta una pantalla de confirmación que informa sobre la creación de la cuenta y ofrece accesos hacia el panel principal o hacia la publicación de la primera carga.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireframes/registro_exitoso.png"
+       alt="Wireframe de confirmación de registro exitoso de empresa"
+       width="850">
+</p>
+
+***Figura.*** Confirmación de registro exitoso.
+
+Para los transportistas se definió un flujo de registro independiente, orientado a recopilar información personal y datos del vehículo necesarios para posteriormente validar su capacidad para prestar servicios mediante LoadMatch.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireframes/crear_cuenta_transportista.png"
+       alt="Wireframe del registro de un transportista en LoadMatch"
+       width="850">
+</p>
+
+***Figura.*** Wireframe del proceso de registro de transportista.
+
+
+#### Web Application para empresas y dadores de carga
+
+Una vez autenticado, el usuario empresarial accede a un dashboard que resume el estado de sus operaciones. La interfaz presenta cargas activas, unidades en tránsito, servicios completados y accesos directos hacia las principales funciones de gestión.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireframes/dashboard_empresa.png"
+       alt="Wireframe del dashboard del usuario empresarial"
+       width="900">
+</p>
+
+***Figura.*** Dashboard principal del usuario empresarial.
+
+Desde este panel, el usuario puede iniciar la publicación de una nueva carga. La interfaz recopila información sobre origen, destino, tipo de vehículo, tipo de mercadería, fecha, horario, peso y otras condiciones necesarias para definir el servicio.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireframes/publicar_carga.png"
+       alt="Wireframe para la publicación de una nueva carga"
+       width="900">
+</p>
+
+***Figura.*** Formulario para publicar una nueva carga.
+
+Después de registrar correctamente la solicitud, el sistema muestra una confirmación con los datos principales del servicio y permite continuar hacia la gestión de las cargas publicadas.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireframes/solicitud_publicada.png"
+       alt="Wireframe de confirmación de solicitud de carga publicada"
+       width="850">
+</p>
+
+***Figura.*** Confirmación de publicación de una solicitud de carga.
+
+La sección **Mis Cargas** permite visualizar las solicitudes registradas, sus rutas, estados actuales y acciones disponibles. Desde esta pantalla el usuario puede realizar seguimiento, gestionar o cancelar determinadas solicitudes.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireframes/cargas_activas.png"
+       alt="Wireframe de la sección de cargas activas"
+       width="900">
+</p>
+
+***Figura.*** Gestión de cargas activas de la empresa.
+
+Para evitar acciones accidentales, la cancelación de una solicitud requiere una confirmación explícita mediante una ventana modal.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireframes/cancelar_solicitud.png"
+       alt="Wireframe del modal de cancelación de solicitud"
+       width="900">
+</p>
+
+***Figura.*** Confirmación para cancelar una solicitud de carga.
+
+Cuando un servicio se encuentra en ejecución, el usuario empresarial puede acceder al seguimiento de la carga. La pantalla presenta información sobre la ruta, ubicación del vehículo, conductor asignado, distancia restante y hora estimada de llegada.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireframes/seguimiento_carga.png"
+       alt="Wireframe del seguimiento de una carga en tránsito"
+       width="900">
+</p>
+
+***Figura.*** Seguimiento de una carga durante el transporte.
+
+Una vez completada la entrega, el proceso continúa con la liquidación del servicio. El usuario puede ingresar la información correspondiente al método de pago antes de confirmar la transacción.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireframes/pagar_viaje.png"
+       alt="Wireframe del proceso de pago de un viaje"
+       width="900">
+</p>
+
+***Figura.*** Modal para el procesamiento del pago del servicio.
+
+En caso de que la operación se complete correctamente, el sistema presenta una confirmación y permite al usuario calificar al transportista y registrar un comentario sobre el servicio recibido.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireframes/pago_exitoso.png"
+       alt="Wireframe del estado de pago procesado exitosamente"
+       width="900">
+</p>
+
+***Figura.*** Estado de pago exitoso y calificación del servicio.
+
+También se contempla el escenario en el que la transacción sea rechazada. En este caso, la plataforma informa el motivo general del error y ofrece la posibilidad de reintentar el pago.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireframes/pago_fallido.png"
+       alt="Wireframe del estado de pago rechazado"
+       width="900">
+</p>
+
+***Figura.*** Estado alternativo correspondiente a una transacción rechazada.
+
+
+#### Web Application para transportistas
+
+El transportista dispone de una interfaz orientada a la búsqueda y gestión de oportunidades de carga. La pantalla principal permite visualizar fletes disponibles y consultar información relacionada con ubicación, ruta, tipo de mercancía y tarifa ofrecida.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireframes/dashboard_transportista.png"
+       alt="Wireframe de búsqueda de fletes para transportistas"
+       width="900">
+</p>
+
+***Figura.*** Pantalla principal de búsqueda de fletes disponibles.
+
+Para facilitar la identificación de oportunidades compatibles, el usuario puede aplicar filtros relacionados con distancia máxima, tipo de vehículo, peso mínimo y tarifa esperada.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireframes/filtro_busqueda_solicitud.png"
+       alt="Wireframe del modal de filtros para búsqueda de fletes"
+       width="900">
+</p>
+
+***Figura.*** Filtros avanzados para la búsqueda de fletes.
+
+Al seleccionar una oportunidad, el transportista puede acceder al detalle del servicio y consultar el origen, destino, características de la carga, información del dador y tarifa ofrecida antes de aceptar el viaje.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireframes/aceptar_viaje.png"
+       alt="Wireframe del detalle de un flete disponible"
+       width="900">
+</p>
+
+***Figura.*** Detalle de un flete y opción para aceptar el viaje.
+
+Los viajes aceptados se administran desde la sección **Mis Viajes**, donde se muestran los servicios en progreso y completados, junto con las acciones disponibles para continuar su seguimiento.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireframes/viajes_transportista.png"
+       alt="Wireframe de la sección Mis Viajes del transportista"
+       width="900">
+</p>
+
+***Figura.*** Gestión de viajes del transportista.
+
+Durante la ejecución del servicio, el transportista dispone de una vista de monitoreo con información de la ruta, ubicación actual y progreso del viaje.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireframes/monitoreo_viaje.png"
+       alt="Wireframe del monitoreo de un viaje en ejecución"
+       width="900">
+</p>
+
+***Figura.*** Monitoreo del viaje durante su ejecución.
+
+Cuando el conductor llega al destino, la plataforma solicita confirmar la llegada y adjuntar la documentación correspondiente que permita acreditar la entrega de la mercadería.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireframes/confirmar_viaje_finalizado.png"
+       alt="Wireframe del proceso de confirmación de llegada a destino"
+       width="900">
+</p>
+
+***Figura.*** Confirmación de llegada y finalización del viaje.
+
+Los servicios completados pueden consultarse posteriormente desde el historial del transportista, donde se visualizan las rutas realizadas, clientes, montos y estados correspondientes.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireframes/historial_viajes.png"
+       alt="Wireframe del historial de servicios del transportista"
+       width="900">
+</p>
+
+***Figura.*** Historial de servicios completados.
+
+
+#### Perfil y validación del transportista
+
+LoadMatch considera un proceso de validación previo a la aceptación de determinados servicios. Cuando la cuenta todavía se encuentra en revisión, la plataforma bloquea la aceptación del viaje e informa al transportista sobre la necesidad de completar la verificación de sus documentos.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireframes/cuenta_revision.png"
+       alt="Wireframe del estado de cuenta de transportista en revisión"
+       width="900">
+</p>
+
+***Figura.*** Estado de cuenta en proceso de revisión.
+
+La sección de perfil permite consultar los datos personales del transportista y administrar documentación relacionada con su habilitación, como el SOAT y la licencia de conducir.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireframes/perfil_transportista.png"
+       alt="Wireframe del perfil y documentación del transportista"
+       width="900">
+</p>
+
+***Figura.*** Gestión del perfil y documentación del transportista.
+
+El proceso de carga documental contempla también escenarios de validación fallida, informando al usuario cuando un documento no cumple con los requisitos establecidos y permitiendo realizar una nueva carga.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireframes/subir_licencia.png"
+       alt="Wireframe del proceso de carga y validación de licencia"
+       width="900">
+</p>
+
+***Figura.*** Validación de la licencia de conducir y estado de documento rechazado.
+
+Una vez aprobada la documentación requerida, el sistema informa al transportista que su cuenta se encuentra habilitada para continuar con la aceptación de servicios disponibles dentro de la plataforma.
+
+<p align="center">
+  <img src="../assets/images/web-applications-wireframes/cuenta_verificada.png"
+       alt="Wireframe del estado de cuenta de transportista verificada"
+       width="900">
+</p>
+
+***Figura.*** Confirmación de cuenta verificada.
+
 ### 4.4.2. Web Applications Wireflow Diagrams
 
 ### 4.4.3. Web Applications Mock-ups
