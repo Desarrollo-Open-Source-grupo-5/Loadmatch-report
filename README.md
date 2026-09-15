@@ -182,7 +182,17 @@ El registro de versiones permite identificar la evolución del informe de LoadMa
       - dumbaskidd
     </td>
     <td>
-      Diseño UI: Wireframes y Mockups de la aplicación web.
+      Diseño UI: Wireframes, Mockups, Wireflows y User Flows de la aplicación web.
+    </td>
+  </tr>
+  <tr>
+    <td align="center">V0.4.2</td>
+    <td align="center">13/09/2026</td>
+    <td>
+      - Benigno, Harold
+    </td>
+    <td>
+      Diseño de Arquitectura de Software (Modelo C4), Diagrama de Clases y Diseño de Base de Datos.
     </td>
   </tr>
   <tr>
