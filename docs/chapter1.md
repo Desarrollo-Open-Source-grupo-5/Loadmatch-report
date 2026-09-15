@@ -40,7 +40,7 @@ A futuro, LoadMatch podrá incorporar tecnologías IoT mediante dispositivos ins
 </td>
 <td>Ingeniería de Software</td>
 <td>
-  Estudiante de [PENDIENTE].
+  Estudio ingenieria de software. Me gusta liderar equipos de trabajo y mantener ambientes ordenados en la medida de lo posible. En este trabajo, elabore gran parte del capitulo 2, capitulo 3, y realizacion completa de los Wireframes, Mockups y event y design-level event storming (DDD applications).
 </td>
 </tr>
 
