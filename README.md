@@ -50,7 +50,6 @@ Proyecto
 | U202323551 | Rivas Castillo, Christoper Steven |
 | U201823468 | Simon Calderon, Ismael Sebastian |
 | U201410183 | Collantes Artola, Marco Antonio |
-| [CÓDIGO] | [APELLIDOS], Emilia [NOMBRES] |
 | U202321086 | Benigno Montero, Harold Fauskorp |
 
 </div>
@@ -74,10 +73,140 @@ Proyecto
 El registro de versiones permite identificar la evolución del informe de LoadMatch y relacionar cada modificación relevante con su fecha, autoría y propósito. Comprende la incorporación de secciones, la corrección de inconsistencias y las mejoras derivadas de la revisión del equipo o de la retroalimentación del docente. Cada registro debe corresponder con los cambios conservados en el repositorio del informe.
 
 
-| Versión | Fecha | Autor | Descripción de modificación |
-| :--- | :--- | :--- | :--- |
-| AV1 | 14/09/2026 | - Noriega Collado, Jean Fabio <br> - Rivas Castillo, Christoper Steven <br> - Simon Calderon, Ismael Sebastian <br> - Collantes Artola, Marco Antonio <br> - Benigno Montero, Harold Fauskorp | Se creó la estructura completa del informe incluyendo: <br><br>**Carátula, registro de versiones, tabla de contenidos y Student Outcomes.**<br><br>**Capítulo I — Introducción:** Startup Profile, Solution Profile, Lean UX Process y segmentos objetivo.<br>**Capítulo II — Requirements Elicitation & Analysis:** análisis de competidores, entrevistas, needfinding (User Personas, Task Matrix, Journey Mapping, Empathy Mapping), Big Picture Event Storming y Ubiquitous Language.<br>**Capítulo III — Requirements Specification:** User Stories, Impact Mapping y Product Backlog.<br>**Capítulo IV — Product Design:** Style Guidelines, Information Architecture, Landing Page UI Design, Web Applications UX/UI Design, Web Prototyping, Domain-Driven Software Architecture, Software Object-Oriented Design y Database Design.<br>**Capítulo V — Product Implementation:** Software Configuration Management y evidencia del Sprint 1 (planning, backlog, development evidence, execution evidence, services documentation, deployment evidence y collaboration insights).<br><br>Finalmente, se añadieron conclusiones preliminares, bibliografía y anexos. |
-| AV2 | [FECHA REAL] | - Noriega Collado, Jean Fabio <br> - Rivas Castillo, Christoper Steven <br> - Simon Calderon, Ismael Sebastian <br> - Collantes Artola, Marco Antonio <br> - Benigno Montero, Harold Fauskorp | Consolidación de los capítulos I a V para AV1, con investigación de usuarios, especificación de requisitos, diseño del producto y documentación del Sprint 1. Se identificaron las secciones efectivamente incorporadas o corregidas en esta versión. |
+<table border="1" cellspacing="0" cellpadding="5">
+<thead>
+  <tr>
+    <th>Versión</th>
+    <th>Fecha</th>
+    <th>Autor/es</th>
+    <th>Descripción</th>
+  </tr>
+</thead>
+
+<tbody>
+  <tr>
+    <td align="center">V0.1.0</td>
+    <td align="center">05/09/2026</td>
+    <td>
+      - Simon, Ismael<br>
+      - Collantes Artola, Marco
+    </td>
+    <td>
+      Creación del perfil de la startup, lienzo Lean UX y estructuración del Capítulo 1.
+    </td>
+  </tr>
+  <tr>
+    <td align="center">V0.2.0</td>
+    <td align="center">07/09/2026</td>
+    <td>
+      - dumbaskidd
+    </td>
+    <td>
+      Estructuración y redacción de entrevistas, y User Personas (Capítulo 2).
+    </td>
+  </tr>
+  <tr>
+    <td align="center">V0.2.1</td>
+    <td align="center">08/09/2026</td>
+    <td>
+      - dumbaskidd
+    </td>
+    <td>
+      Elaboración de procesos de Event Storming - Pasos del 1 al 3.
+    </td>
+  </tr>
+  <tr>
+    <td align="center">V0.2.2</td>
+    <td align="center">08/09/2026</td>
+    <td>
+      - dumbaskidd
+    </td>
+    <td>
+      Elaboración de procesos de Event Storming - Pasos del 4 al 6.
+    </td>
+  </tr>
+  <tr>
+    <td align="center">V0.2.3</td>
+    <td align="center">08/09/2026</td>
+    <td>
+      - dumbaskidd
+    </td>
+    <td>
+      Elaboración de procesos de Event Storming - Pasos del 7 al 9.
+    </td>
+  </tr>
+  <tr>
+    <td align="center">V0.2.4</td>
+    <td align="center">09/09/2026</td>
+    <td>
+      - Benigno, Harold
+    </td>
+    <td>
+      Elaboración de proceso de Event Storming - Paso 10 y revisión.
+    </td>
+  </tr>
+  <tr>
+    <td align="center">V0.3.0</td>
+    <td align="center">10/09/2026</td>
+    <td>
+      - dumbaskidd
+    </td>
+    <td>
+      Especificación de Requisitos, Historias de Usuario priorizadas e Impact Mapping (Capítulo 3).
+    </td>
+  </tr>
+  <tr>
+    <td align="center">V0.3.1</td>
+    <td align="center">11/09/2026</td>
+    <td>
+      - Benigno, Harold
+    </td>
+    <td>
+      Inclusión de Historias de Usuario para validación automática y pasarela de pagos.
+    </td>
+  </tr>
+  <tr>
+    <td align="center">V0.4.0</td>
+    <td align="center">12/09/2026</td>
+    <td>
+      - Simon, Ismael
+    </td>
+    <td>
+      Diseño de Style Guidelines y Arquitectura de la Información (Capítulo 4).
+    </td>
+  </tr>
+  <tr>
+    <td align="center">V0.4.1</td>
+    <td align="center">13/09/2026</td>
+    <td>
+      - dumbaskidd
+    </td>
+    <td>
+      Diseño UI: Wireframes y Mockups de la aplicación web.
+    </td>
+  </tr>
+  <tr>
+    <td align="center">V0.5.0</td>
+    <td align="center">14/09/2026</td>
+    <td>
+      - Rivas, Christoper
+    </td>
+    <td>
+      Definición del Entorno de Desarrollo y Configuración (Capítulo 5).
+    </td>
+  </tr>
+  <tr>
+    <td align="center">V1.0.0</td>
+    <td align="center">15/09/2026</td>
+    <td>
+      - Todos los integrantes
+    </td>
+    <td>
+      Consolidación final del primer avance, revisión de rúbrica y formato general del informe.
+    </td>
+  </tr>
+</tbody>
+</table>
 
 
 <!-- Si el repositorio solo contiene una versión documentada, conservar una sola fila. No crear fechas ni versiones retrospectivas para completar la tabla. -->
