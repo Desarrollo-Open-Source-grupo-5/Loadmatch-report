@@ -221,24 +221,45 @@ Frente a la propuesta, muestra una receptividad entusiasta (10/10). Ve la valida
 
 #### Segmento 1: Dueños de negocios y emprendedores
 
-**Entrevista 1 (Pilar Collado):** La entrevistada evidencia una alta aversión al riesgo en lo que respecta a la presentación y cuidado de sus productos (repostería), al punto de depender actualmente de un chofer de confianza contratado por tiempo en lugar de usar aplicativos de transporte estándar. Su testimonio demuestra que la falta de garantías en el manejo de la carga es su mayor frustración y pérdida de valor. Para mitigar este riesgo, valora positivamente que la plataforma exija filtros rigurosos a los conductores (antecedentes penales, validación vehicular) e indumentaria adecuada (cajas herméticas).
+**Entrevista 1 (Pilar Jeannette Collado Urbina):** La entrevistada evidencia una alta aversión al riesgo en lo que respecta a la presentación y cuidado de sus productos (repostería), al punto de depender actualmente de un chofer de confianza contratado por tiempo en lugar de usar aplicativos de transporte estándar. Su testimonio demuestra que la falta de garantías en el manejo de la carga es su mayor frustración y pérdida de valor. Para mitigar este riesgo, valora positivamente que la plataforma exija filtros rigurosos a los conductores (antecedentes penales, validación vehicular) e indumentaria adecuada (cajas herméticas).
 
-**Características más comunes del Segmento 1 (n=1):**
+**Entrevista 2 (Ronald Cortez Joseli):** El entrevistado dirige un negocio de manufactura con impresoras 3D y utiliza servicios de paquetería estándar y fletes por aplicativos, pero se encuentra muy insatisfecho debido a los daños a sus productos y los retrasos en las entregas, lo que afecta directamente su reputación ante sus clientes. Para él, es crucial la profesionalidad y cuidado de los conductores, y para adoptar una plataforma nueva, requeriría la máxima facilidad para contactarlos y total confiabilidad en el transporte.
+
+**Entrevista 3 (Diego Chuquillanqui Estrada):** Diego, propietario de una óptica, confía solo en transportistas conocidos debido a malas experiencias y desconfianza. Sin embargo, sufre por la lentitud e ineficiencia que a veces esto conlleva. Él destaca que la transparencia, el seguimiento y la verificación formal del transportista (antecedentes, licencia y documentación) serían factores determinantes para empezar a confiar en una plataforma de intermediación logística.
+
+**Características más comunes del Segmento 1 (n=3):**
 
 | Característica | % de entrevistados | Entrevistas | Evidencia |
 | :--- | :--- | :--- | :--- |
-| Perciben alta preocupación por el cuidado y presentación de la mercadería | 100% | #1 | Pilar señala como mayor frustración el maltrato de sus productos. |
-| Prefieren métodos de transporte propios o conocidos frente a apps estándar | 100% | #1 | Actualmente usa un chofer particular contratado por tiempo. |
-| Exigen validaciones rigurosas (antecedentes, titularidad) para confiar la carga | 100% | #1 | Exige conductores con antecedentes limpios y vehículo a nombre del conductor. |
-| Demandan equipamiento especializado en los vehículos | 100% | #1 | Solicita cajas herméticas o aislantes para alimentos. |
+| Preocupación por el cuidado y la integridad de la mercadería | 100% | #1, #2, #3 | Los tres entrevistados reportan que el maltrato a su carga es su principal dolor. |
+| Desconfianza general hacia servicios informales o desconocidos | 100% | #1, #2, #3 | Pilar y Diego usan proveedores conocidos; Ronald evita a independientes del marketplace. |
+| Exigencia de validaciones rigurosas y antecedentes del conductor | 100% | #1, #2, #3 | Todos señalan la validación documental y antecedentes como factor clave de adopción. |
+| Perjudicados por retrasos en entregas afectando al cliente final | 66% | #2, #3 | Ronald y Diego coinciden en que la impuntualidad merma la relación con sus propios clientes. |
+| Necesidad de comunicación directa y transparencia/seguimiento | 66% | #2, #3 | Ronald y Diego solicitan facilidad de contacto y trazabilidad durante el traslado. |
 
 **Conclusión del Segmento 1:**
-La entrevista preliminar sugiere que para los emprendedores (especialmente del rubro alimentario o productos delicados), la seguridad de la mercadería está por encima de la inmediatez. La exigencia de antecedentes, vehículos validados y equipamiento adecuado confirma que la propuesta de valor de **LoadMatch** de brindar transporte seguro y verificado responde a una necesidad real. La principal limitación es el tamaño de muestra (n=1), por lo que se recomienda incorporar las Entrevistas #2 y #3 para validar estos porcentajes.
+El análisis confirma que para los emprendedores formales y dueños de pequeños negocios, la seguridad, formalidad y el cuidado de sus productos priman por sobre la simple rapidez o el bajo costo. La totalidad de los encuestados está dispuesto a utilizar herramientas digitales, siempre y cuando estas garanticen un filtro estricto de transportistas (validación de documentos, antecedentes y propiedad). Esto valida fuertemente la hipótesis de negocio de LoadMatch: el mercado empresarial necesita intermediación logística basada en la confianza y la transparencia para dejar de depender únicamente de "choferes conocidos".
 
 #### Segmento 2: Transportistas y conductores
 
-**Resumen y características:**
-(Pendiente - A la espera de entrevistas #4, #5 y #6)
+**Entrevista 4 (Mateo Ignacio Vargas Huamán):** Como joven administrador de flota familiar, Mateo utiliza intensamente su smartphone para organizar su operación. Su mayor problema es la informalidad que abarata los costos, la inseguridad frente a "clientes fantasma" y los retrasos en los pagos de las empresas (60-90 días). Ve en el registro y validación rigurosa una gran oportunidad: un distintivo de "verificado" le serviría como carta de presentación comercial para conseguir empresas medianas confiables.
+
+**Entrevista 5 (Tito Sifuentes):** Conductor de reparto para una empresa de lubricantes, Tito es un trabajador formal que se expone a los riesgos del transporte diario y la informalidad. Maneja aplicativos básicos para conectarse y valora una plataforma estructurada y formal que dignifique el trabajo y le brinde mayor seguridad operativa. 
+
+**Entrevista 6 (Luciano Mateo Espinoza Vargas):** Luciano gestiona una pequeña flota de 3 camiones y resiente los largos plazos de pago y los tiempos muertos de espera en almacenes. Para él, las apps actuales no valoran su formalidad. Está completamente dispuesto a entregar documentación completa si, a cambio, obtiene un sello de garantía que le dé acceso prioritario a empresas formales y seguras que paguen a tiempo.
+
+**Características más comunes del Segmento 2 (n=3):**
+
+| Característica | % de entrevistados | Entrevistas | Evidencia |
+| :--- | :--- | :--- | :--- |
+| Preocupación y rechazo frente a la informalidad del sector logístico | 100% | #4, #5, #6 | Todos perciben la informalidad como competencia desleal o riesgo de seguridad. |
+| Uso intensivo de smartphone y aplicaciones móviles para el trabajo | 100% | #4, #5, #6 | Mateo, Tito y Luciano se apoyan en sus móviles como centro de operaciones diarias. |
+| Buscan clientes corporativos seguros para flujo constante | 66% | #4, #6 | Mateo y Luciano explícitamente buscan empresas formales/medianas. |
+| Disposición total a validaciones documentales estrictas | 66% | #4, #6 | Mateo y Luciano ven la validación como ventaja competitiva, no como traba. |
+| Frustración por pagos aplazados y horas muertas no remuneradas | 66% | #4, #6 | Mateo y Luciano critican las condiciones financieras que asfixian su capital. |
+
+**Conclusión del Segmento 2:**
+El análisis revela que los transportistas serios (quienes tienen sus documentos en regla y operan unidades formales) se ven muy perjudicados por la informalidad y las malas condiciones de las empresas que pagan a plazos larguísimos. Contradiciendo la creencia de que un registro largo aleja a los usuarios, este segmento (66%) ve las validaciones documentales rigurosas como un "Sello de Verificación" deseable, ya que les permite diferenciarse y acceder a empresas formales que valoren la seguridad. LoadMatch, por tanto, ofrece un ecosistema mutuo: brinda a los transportistas los clientes formales que buscan, a cambio de que pasen los filtros que exigen dichos clientes empresariales.
 
 ---
 
