@@ -121,7 +121,7 @@ Para adoptar una nueva plataforma digital, exige conductores con antecedentes li
 | **Nombres y Apellidos** | Ronald Cortez Joseli |
 | **Edad** | 26 |
 | **Distrito** | San Martin de Porres, Lima, Perú |
-| **Enlace al video (Microsoft Stream)** | (https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310342_upc_edu_pe/IQBAzfO4REFpQLwTj6NXeMnpAfz8bK1FQLdoZK5pQOoizkU?e=kh12X0) |
+| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310342_upc_edu_pe/IQBAzfO4REFpQLwTj6NXeMnpAfz8bK1FQLdoZK5pQOoizkU?e=kh12X0 |
 | **Timing de inicio y duración** | Inicio: 00:02 - Duración: 6:37 minutos |
 | **Evidencia fotográfica** | <img src="../assets/Chapter2/Interviews/LoadMatch-Trabajador2.png" alt="Evidencia Entrevista 2" width="300"> |
 
@@ -140,15 +140,17 @@ Para que él considere adoptar una solución como LoadMatch, Ronald nos hace sab
 
 | Campo | Detalle |
 | :--- | :--- |
-| **Nombres y Apellidos** | (Pendiente) |
-| **Edad** | (Pendiente) |
-| **Distrito** | (Pendiente) |
-| **Enlace al video (Microsoft Stream)** | (Pendiente) |
-| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 0:00 minutos |
-| **Evidencia fotográfica** | *(Pendiente - Captura de la entrevista)* |
+| **Nombres y Apellidos** | Diego Chuquillanqui Estrada |
+| **Edad** | 26 |
+| **Distrito** | San Martin de Porres, Lima, Perú |
+| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310342_upc_edu_pe/IQCdZoCTl1KTRoEP4Fh7fersAaq2Bhu8Wkqvswvk8HqreEI?e=jSlInn |
+| **Timing de inicio y duración** | Inicio: 00:01 - Duración: 05:59 minutos |
+| **Evidencia fotográfica** | <img src="../assets/Chapter2/Interviews/entrevista3.png" alt="Evidencia Entrevista 3" width="300"> |
 
 **Resumen de la entrevista:**
-(Pendiente)
+El entrevistado es propietario de una óptica y se considera una persona trabajadora, responsable y atenta a la organización de su negocio. Actualmente suele trabajar con proveedores y servicios de transporte que ya conoce, ya que no confía demasiado en terceros desconocidos. Aunque se encuentra relativamente satisfecho con ellos, considera que los tiempos de entrega podrían mejorar, pues los retrasos terminan afectando la atención y generando molestias en sus clientes.
+
+Para que considere utilizar una solución como LoadMatch, la seguridad sería un factor clave. Valoraría poder revisar información del transportista, como antecedentes, récord de licencia, documentación vigente y otros indicadores que permitan comprobar que se trata de una persona confiable. También consideraría importante contar con una comunicación directa y mayor transparencia durante el traslado.
 
 ---
 
