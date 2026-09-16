@@ -203,8 +203,8 @@ El alcance efectivamente implementado difiere del backlog inicial de US12, US13 
 | Location | Google meet |
 | Prepared By | Christoper Steven Rivas Castillo |
 | Attendees (to planning meeting) | Noriega Collado Jean Fabio<br>Simon Calderon Ismael Sebastian<br>Collantes Artola Marco Antonio<br>Benigno Montero, Harold Fauskorp<br>Emilia<br>Christoper Steven Rivas Castillo |
-| Sprint 1 Review Summary | Durante este primer ciclo, el equipo se enfocó en establecer la base estratégica y técnica del proyecto **LoadMatch**. Se concluyeron satisfactoriamente los artefactos iniciales de análisis y diseño (User Personas, Customer Journey Maps y Arquitectura de la Información), que sirvieron como guía para la definición del producto. Con este respaldo, se diseñó, desarrolló y desplegó la versión inicial de la **Landing Page**, donde se comunica claramente la propuesta de valor y se presentan los planes de suscripción. |
-| Sprint 1 Retrospective Summary | El equipo concluyó que la dinámica de trabajo fue altamente productiva, gracias a una distribución clara y equitativa de responsabilidades. Se destacó la transición fluida entre el prototipado realizado en **Figma** y la configuración inicial de los repositorios en **GitHub**, incluyendo la organización de ramas y carpetas de imágenes. Como área de mejora para el próximo sprint, se acordó optimizar las estimaciones de tiempo (story points), especialmente de cara al inicio del desarrollo e integración del **frontend** con **Vue+Vite** y la preparación de los servicios en **Spring Boot**. Se resaltó la importancia de mantener consistencia en las convenciones de código y en la documentación visual para facilitar la colaboración entre integrantes. |
+| Sprint 1 Review Summary | Durante este primer ciclo, el equipo se enfocó en establecer la base estratégica y técnica del proyecto **LoadMatch**. Se concluyeron satisfactoriamente los artefactos iniciales de análisis y diseño (User Personas, Customer Journey Maps y Arquitectura de la Información), que sirvieron como guía para la definición del producto. Con este respaldo, se diseñó y desarrolló la versión inicial de la **Landing Page**, donde se comunica claramente la propuesta de valor y se presentan los modelos de precios. |
+| Sprint 1 Retrospective Summary | El equipo concluyó que la dinámica de trabajo fue altamente productiva, gracias a una distribución clara y equitativa de responsabilidades. Se destacó la transición fluida entre el prototipado realizado en **Figma** y la configuración inicial de los repositorios en **GitHub**, incluyendo la organización de ramas y carpetas de imágenes. Como área de mejora para el próximo sprint, se acordó optimizar las estimaciones de tiempo (story points), especialmente de cara al inicio del desarrollo e integración del **frontend** con **Angular** y la preparación de los servicios en **Spring Boot**. Se resaltó la importancia de mantener consistencia en las convenciones de código y en la documentación visual para facilitar la colaboración entre integrantes. |
 | **Sprint Goal & User Stories** | |
 | Sprint 1 Goal | Implementar y publicar, antes del cierre del Sprint 1 para AV1, la Landing Page de LoadMatch para comunicar su propuesta de valor a empresas y transportistas, permitir la consulta de tipos de vehículos y recibir consultas comerciales, verificando los criterios de US12, US13 y US14 en móvil y escritorio. |
 | Sprint 1 Velocity | 7 |
@@ -235,13 +235,21 @@ El backlog inicial comprendía las siguientes tareas. Su estado se actualiza seg
 
 | User Story Id | User Story Title | Work Item/Task Id | Work Item/Task Title | Description | Estimation | Assigned To | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| US12 | Visualización de propuesta de valor | T01 | Estructura del Hero y navegación | Presentar la conexión entre empresas y transportistas, beneficios y accesos por perfil. | 8 h | Harold Benigno Montero, asignación del borrador | Implementación presente; aceptación pendiente |
-| US13 | Consulta de tipos de vehículos | T02 | Catálogo de vehículos | Mostrar tipos y capacidades de carga soportadas. | 6 h | Harold Benigno Montero, asignación del borrador | Implementación presente |
-| US14 | Formulario de contacto | T03 | Formulario y validación | Recoger consultas mediante formulario; completar almacenamiento y notificación exigidos por la historia. | 6 h | Harold Benigno Montero, asignación del borrador |  Implementación presente |
+| US12 | Visualización de propuesta de valor | T01 | Implementación del Hero y propuesta de valor | Presentar la conexión entre empresas y transportistas, beneficios y accesos por perfil. | 8 h | Harold Benigno Montero | Done |
+| US13 | Consulta de tipos de vehículos | T02 | Implementación del catálogo de vehículos | Implementar una sección responsive que muestre los tipos de vehículos soportados y sus capacidades de carga mediante HTML5 y CSS Grid/Flexbox. | 6 h | Harold Benigno Montero | Done |
+| US14 | Formulario de contacto | T03 | Implementación del formulario de contacto | Implementar el formulario de contacto, validación de campos y manejo del envío de consultas comerciales. | 6 h | Harold Benigno Montero |  Done |
 
 **Tablero declarado:** [Sprint Board de LoadMatch en Jira](https://upc-team-m57tll9j.atlassian.net/jira/software/projects/US/boards/2?sprintStarted=true&filter=&groupBy=none).
 
-**Captura del tablero y estados al cierre:** [PENDIENTE].
+**Captura del tablero y estados al cierre:**
+
+<p align="center">
+  <img src="../assets/images/sprint1/estados_sprint_cierre.png"
+       alt="Estados finales de las User Stories del Sprint 1 en Jira"
+       width="900">
+</p>
+
+***Figura.*** Estado final del Sprint 1 en Jira, con las User Stories US12, US13 y US14 finalizadas y un total de 7 Story Points completados.
 
 Además de T01, el código contiene trabajo que debe vincularse con las tareas reales del tablero. El siguiente inventario no asigna nuevos identificadores de historia ni estimaciones retrospectivas.
 
