@@ -40,7 +40,7 @@ A futuro, LoadMatch podrá incorporar tecnologías IoT mediante dispositivos ins
 </td>
 <td>Ingeniería de Software</td>
 <td>
-  Estudiante de [PENDIENTE].
+  Estudio ingenieria de software. Me gusta liderar equipos de trabajo y mantener ambientes ordenados en la medida de lo posible. Entre mis habilidades, podria decir que soy suficiente y eficiente, de manera que cubro los aspectos necesarios para la realizacion de proyectos largos y complejos. Siguiendo los principios por los cuales estudio la carrera.
 </td>
 </tr>
 
@@ -68,7 +68,7 @@ A futuro, LoadMatch podrá incorporar tecnologías IoT mediante dispositivos ins
 </td>
 <td>Ingeniería de Software</td>
 <td>
-  Estudiante de [PENDIENTE].
+  Estudiante de Ingeniería de Software con gran interés en la Inteligencia Artificial generativa combinada con robótica/domótica. Soy una persona analítica y sistemática que se compromete en colaborar en equipo. Mis hobbies son aprender nuevas cosas relacionadas a tecnología, idiomas y habilidades como tocar guitarra, ensamblar computadoras y reparar distintas cosas.
 </td>
 </tr>
 
@@ -86,19 +86,6 @@ A futuro, LoadMatch podrá incorporar tecnologías IoT mediante dispositivos ins
 </td>
 </tr>
 
-<tr>
-<td align="center">
-  <img src="../assets/Chapter1/Team/emilia.jpeg" alt="Integrante 5" width="150">
-</td>
-<td>
-  APELLIDOS, Emilia<br>
-  <b>Código:</b> [CÓDIGO]
-</td>
-<td>Ingeniería de Software</td>
-<td>
-  Estudiante de [PENDIENTE].
-</td>
-</tr>
 
 <tr>
 <td align="center">
