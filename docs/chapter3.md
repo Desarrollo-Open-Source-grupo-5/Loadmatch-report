@@ -94,7 +94,7 @@ Para la estimación del esfuerzo se ha utilizado la secuencia de Fibonacci (1, 2
 | 6 | US07 | Aceptación de viaje | Como transportista, deseo aceptar una solicitud de carga, para asegurar mi participación en el servicio y obtener los datos de recojo. | 5 |
 | 7 | US08 | Actualización de estado del viaje | Como transportista, deseo actualizar el estado del servicio (En camino, Recogido, Entregado), para mantener informada a la empresa contratante. | 3 |
 | 8 | US09 | Seguimiento de carga | Como dueño de negocio, deseo visualizar el estado actualizado de mi viaje, para saber si la mercadería llegará a tiempo. | 3 |
-| 9 | US16 | Endpoint de creación de viaje | Como Developer, deseo implementar un endpoint POST de solicitudes de carga, para recibir y almacenar los fletes en la BD. | 3 |
+| 9 | US16 | Endpoint de creación de solicitud de carga | Como Developer, deseo implementar un endpoint POST de solicitudes de carga, para recibir y almacenar los fletes en la BD. | 3 |
 | 10 | US17 | Endpoint de matching geoespacial | Como Developer, deseo implementar un endpoint GET de viajes cercanos, para alimentar el catálogo del transportista. | 5 |
 | 11 | US01 | Registro de Empresa | Como dueño de negocio, deseo registrar mi empresa en la plataforma, para poder publicar solicitudes de transporte. | 3 |
 | 12 | US02 | Registro de Transportista | Como transportista independiente, deseo registrar mi perfil y vehículo, para acceder a nuevas oportunidades de fletes. | 3 |
