@@ -167,9 +167,9 @@ El equipo utilizará las siguientes fuentes como apoyo para definir y mantener s
 
 **Landing Page**
 
-Se propone GitHub Pages como alojamiento de la Landing Page. La configuración prevista consiste en seleccionar `Settings > Pages > Deploy from a branch`, con `main` y la carpeta raíz como fuente de publicación, siempre que allí se encuentre `index.html`. Si la estructura cambia, deberá ajustarse la fuente. GitHub Pages requiere esta configuración; integrar cambios en `main` no basta cuando aún no se ha seleccionado una fuente. Referencia: [Configuración de la fuente de publicación de GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+La Landing Page se publica en GitHub Pages desde la rama `main` y la carpeta raíz (`Settings > Pages > Deploy from a branch`, rama `main`, carpeta `/ (root)`), donde se encuentra `index.html`. El archivo `.nojekyll` evita el procesamiento con Jekyll y la opción *Enforce HTTPS* permanece activa. No se usa dominio personalizado. Referencia: [Configuración de la fuente de publicación de GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
-Antes de publicar se revisarán rutas de recursos, navegación, comportamiento móvil, formulario y ausencia de errores de consola. Después de publicar se abrirá la URL asignada y se registrarán commit, fecha y ejecución del despliegue. La compresión de imágenes o minificación solo se declarará realizada cuando exista evidencia del proceso.
+Cada versión se integra primero en `develop`, pasa por una rama `release/x.y.z` que actualiza `CHANGELOG.md`, se fusiona en `main` mediante Pull Request y se etiqueta con Semantic Versioning (`vX.Y.Z`). Antes de publicar se revisan rutas de recursos, navegación, comportamiento móvil, formulario y ausencia de errores de consola; después se abre la URL pública para confirmar el despliegue.
 
 **Web Application, API y persistencia**
 
@@ -181,17 +181,13 @@ Mapbox, PayPal, almacenamiento de archivos y correo son integraciones previstas 
 
 ## 5.2. Landing Page, Services & Applications Implementation
 
-La implementación de LoadMatch se desarrolla mediante incrementos que permiten transformar los requisitos y diseños del proyecto en productos de software. El presente registro describe la Landing Page del Sprint 1 a partir de la inspección de sus archivos HTML, CSS, JavaScript y documentación.
-
-Se distingue entre funcionalidades presentes en el código, resultados de ejecución y aceptación de historias. La existencia de una interfaz no acredita la operación de la Web Application ni de sus servicios. Los campos [PENDIENTE] corresponden a evidencias o datos que no se encuentran en la copia proporcionada.
+La implementación de LoadMatch se desarrolla mediante incrementos que transforman los requisitos y diseños del proyecto en productos de software. En esta entrega se presenta el Sprint 1, cuyo incremento es la Landing Page publicada en GitHub Pages.
 
 ### 5.2.1. Sprint 1
 
-Durante el Sprint 1 se implementó la Landing Page de LoadMatch, producto de CargoLink Labs que propone conectar empresas que necesitan trasladar mercadería con transportistas con capacidad disponible. La página utiliza HTML5, CSS3 y JavaScript vanilla, sin framework de interfaz ni proceso de compilación obligatorio.
+Durante el Sprint 1 se implementó y desplegó la Landing Page de LoadMatch, producto de CargoLink Labs que conecta empresas que necesitan trasladar mercadería con transportistas con capacidad disponible. La página utiliza HTML5, CSS3 y JavaScript vanilla, sin framework de interfaz ni proceso de compilación.
 
-La implementación contiene navegación, propuesta de valor, indicadores del contexto logístico, explicación del funcionamiento por segmento, información de confianza, beneficios para empresas y transportistas, testimonios ilustrativos, precios por comisión, preguntas frecuentes, espacios para videos y un pie de página con enlaces de contacto y documentación informativa. También incorpora código para alternar entre español e inglés, adaptar la navegación y controlar pestañas, acordeón y carrusel.
-
-El alcance efectivamente implementado difiere del backlog inicial de US12, US13 y US14. La propuesta de valor de US12 está presente en el código y requiere aceptación funcional documentada. No se identifica un catálogo de tipos de vehículos con capacidades que complete US13 ni un formulario de contacto que satisfaga US14. Los enlaces de correo y teléfono del pie de página no sustituyen este último requisito.
+El incremento contiene navegación adaptable, propuesta de valor, indicadores del contexto logístico, explicación del funcionamiento por segmento, catálogo de tipos de vehículos, tarjetas de confianza, beneficios para empresas y transportistas, testimonios, precios por comisión, preguntas frecuentes, formulario de contacto, sección de videos, cierre con llamada a la acción, pie de página y página legal. También incorpora cambio de idioma entre inglés y español, y enlaces preparados hacia la Web Application.
 
 #### 5.2.1.1. Sprint Planning 1
 
@@ -203,43 +199,46 @@ El alcance efectivamente implementado difiere del backlog inicial de US12, US13 
 | Location | Google meet |
 | Prepared By | Christoper Steven Rivas Castillo |
 | Attendees (to planning meeting) | Noriega Collado Jean Fabio<br>Simon Calderon Ismael Sebastian<br>Collantes Artola Marco Antonio<br>Benigno Montero, Harold Fauskorp<br>Emilia<br>Christoper Steven Rivas Castillo |
-| Sprint 1 Review Summary | Durante este primer ciclo, el equipo se enfocó en establecer la base estratégica y técnica del proyecto **LoadMatch**. Se concluyeron satisfactoriamente los artefactos iniciales de análisis y diseño (User Personas, Customer Journey Maps y Arquitectura de la Información), que sirvieron como guía para la definición del producto. Con este respaldo, se diseñó y desarrolló la versión inicial de la **Landing Page**, donde se comunica claramente la propuesta de valor y se presentan los modelos de precios. |
-| Sprint 1 Retrospective Summary | El equipo concluyó que la dinámica de trabajo fue altamente productiva, gracias a una distribución clara y equitativa de responsabilidades. Se destacó la transición fluida entre el prototipado realizado en **Figma** y la configuración inicial de los repositorios en **GitHub**, incluyendo la organización de ramas y carpetas de imágenes. Como área de mejora para el próximo sprint, se acordó optimizar las estimaciones de tiempo (story points), especialmente de cara al inicio del desarrollo e integración del **frontend** con **Angular** y la preparación de los servicios en **Spring Boot**. Se resaltó la importancia de mantener consistencia en las convenciones de código y en la documentación visual para facilitar la colaboración entre integrantes. |
+| Sprint 1 Review Summary | Se publicó la versión 1.0.0 de la Landing Page en GitHub Pages. Se completaron 10 de las 11 User Stories del sprint (25 de 27 Story Points): propuesta de valor, catálogo de vehículos, formulario de contacto, cambio de idioma, precios, preguntas frecuentes, navegación adaptable, acceso a la aplicación por segmento, testimonios e información legal. US28 (videos) queda en curso porque los videos About-the-Product y About-the-Team se publican en AV2; la página muestra un aviso de disponibilidad próxima en su lugar. |
+| Sprint 1 Retrospective Summary | El equipo destacó la división del Landing Page en ramas por sección, que permitió trabajar en paralelo y dejar evidencia por integrante. Como aspectos por mejorar se identificaron: registrar en Jira desde el inicio todas las historias del Landing Page (ocho se agregaron durante el sprint), integrar las ramas a `develop` de forma continua para evitar conflictos acumulados, revisar el orden de los archivos CSS antes de fusionar, y contrastar el backlog con los wireframes antes de retirar una sección. Para el Sprint 2 se acordó mantener GitFlow con Pull Requests y *Create a merge commit*, y estimar con más holgura la integración entre ramas. |
 | **Sprint Goal & User Stories** | |
-| Sprint 1 Goal | Implementar y publicar, antes del cierre del Sprint 1 para AV1, la Landing Page de LoadMatch para comunicar su propuesta de valor a empresas y transportistas, permitir la consulta de tipos de vehículos y recibir consultas comerciales, verificando los criterios de US12, US13 y US14 en móvil y escritorio. |
-| Sprint 1 Velocity | 7 |
-| Sum of Story Points | 7 puntos planificados: US12 = 3, US13 = 2 y US14 = 2. |
+| Sprint 1 Goal | Nuestro foco está en publicar el Landing Page de LoadMatch para comunicar el modelo de negocio y captar leads tempranos de empresas y transportistas. Se logra cuando el sitio está desplegado y accesible públicamente. |
+| Sprint 1 Velocity | 25 |
+| Sum of Story Points | 27 puntos comprometidos: US12 = 3, US13 = 2, US14 = 2, US21 = 3, US22 = 2, US23 = 2, US24 = 3, US25 = 2, US26 = 2, US27 = 2 y US28 = 2. Completados: 25. |
 
-*Nota. Se conserva el objetivo planificado para mostrar la diferencia con el incremento recibido. No se modifica retrospectivamente la planificación para presentar como cumplidas las historias que no aparecen implementadas. Si el equipo acordó un cambio de alcance, deberá adjuntar ese acuerdo y actualizar la trazabilidad del Capítulo III.*
-
-La revisión del código evidencia un avance centrado en la comunicación de la propuesta de valor y la interacción informativa. No permite declarar alcanzado el objetivo completo ni registrar siete puntos de velocidad. Si US12 fuera aceptada y las otras dos historias permanecieran pendientes, la velocidad sería tres puntos; este cálculo es condicional, no un resultado de cierre acreditado.
+*Nota. El sprint se planificó del 12/09 al 15/09 con US12, US13 y US14 (7 puntos). Durante su ejecución se registraron en Jira las historias US21 a US28, que cubren secciones del Landing Page ya incluidas en el diseño del Capítulo IV, y la fecha de cierre se extendió al 16/09 para completar la integración y el despliegue. US28 se trasladó al Product Backlog al cerrar el sprint.*
 
 #### 5.2.1.2. Aspect Leaders and Collaborators
 
-La matriz LACX identifica al líder (L) y a los colaboradores (C) de cada aspecto del sprint. Los archivos no permiten atribuir autoría individual, por lo que las asignaciones deben completarse con los acuerdos del equipo y el historial de contribuciones.
+La matriz LACX identifica al líder (L) y a los colaboradores (C) de cada aspecto del sprint, según las ramas y Pull Requests del repositorio.
 
-| Team Member | GitHub Username | Landing Page | Diseño UI/UX | Validación y despliegue | Documentación |
+| Team Member | GitHub Username | Estructura, estilos e integración | Secciones del Landing Page | Idiomas y contenido comercial | Documentación y despliegue |
 | --- | --- | --- | --- | --- | --- |
-| Noriega Collado, Jean Fabio | [PENDIENTE] | C | C | C | C |
-| Rivas Castillo, Christoper Steven | CODERT0PH | C | C | C | C |
-| Simon Calderon, Ismael Sebastian | [PENDIENTE] | C | C | C | C |
-| Collantes Artola, Marco Antonio | Markollantes2307 | C | C | C | C |
-| Emilia Durán | C | C | C | C | C |
-| Benigno Montero, Harold Fauskorp | Harold-11 | L | C | C | C |
+| Benigno Montero, Harold Fauskorp | Harold-11 | L | C | C | L |
+| Noriega Collado, Jean Fabio | dumbaskidd | C | L | - | C |
+| Simon Calderon, Ismael Sebastian | Mayel-dev | C | C | - | C |
+| Rivas Castillo, Christoper Steven | CODERT0PH | - | C | - | C |
+| Collantes Artola, Marco Antonio | Markollantes2307 | - | C | L | - |
 
-*Nota. La matriz incluye a los seis integrantes del Capítulo I. La asignación previa de tareas a un integrante no demuestra por sí sola su ejecución ni permite atribuirle todo el contenido de los archivos.*
+*Nota. Emilia participó en la planificación y se retiró del curso durante el sprint, por lo que no figura en la matriz.*
 
 #### 5.2.1.3. Sprint Backlog 1
-
-El backlog inicial comprendía las siguientes tareas. Su estado se actualiza según lo observable en la copia de código, manteniendo las estimaciones originales como datos de planificación.
 
 | User Story Id | User Story Title | Work Item/Task Id | Work Item/Task Title | Description | Estimation | Assigned To | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | US12 | Visualización de propuesta de valor | T01 | Implementación del Hero y propuesta de valor | Presentar la conexión entre empresas y transportistas, beneficios y accesos por perfil. | 8 h | Harold Benigno Montero | Done |
-| US13 | Consulta de tipos de vehículos | T02 | Implementación del catálogo de vehículos | Implementar una sección responsive que muestre los tipos de vehículos soportados y sus capacidades de carga mediante HTML5 y CSS Grid/Flexbox. | 6 h | Harold Benigno Montero | Done |
-| US14 | Formulario de contacto | T03 | Implementación del formulario de contacto | Implementar el formulario de contacto, validación de campos y manejo del envío de consultas comerciales. | 6 h | Harold Benigno Montero |  Done |
+| US13 | Consulta de tipos de vehículos | T02 | Implementación del catálogo de vehículos | Sección responsive con tipos de vehículos y capacidades de carga mediante HTML5 y CSS Grid. | 6 h | Harold Benigno Montero | Done |
+| US14 | Formulario de contacto | T03 | Implementación del formulario de contacto | Formulario con validación de campos obligatorios y formato de correo, mensajes de error y confirmación. | 6 h | Harold Benigno Montero | Done |
+| US21 | Cambio de idioma del Landing Page | T04 | Implementación de diccionarios EN/ES y cargador de idioma | Diccionarios `en.json` y `es.json` y cargador `i18n.js` con preferencia guardada. | 6 h | Marco Collantes Artola | Done |
+| US22 | Consulta de planes y precios | T05 | Implementación de la sección de precios por comisión | Tres tarjetas con plan destacado, adaptadas a una columna en tablet. | 4 h | Marco Collantes Artola | Done |
+| US23 | Consulta de preguntas frecuentes | T06 | Implementación del acordeón de preguntas frecuentes | Acordeón accesible con `aria-expanded` y paneles ocultos. | 4 h | Marco Collantes Artola | Done |
+| US24 | Navegación adaptable del Landing Page | T07 | Implementación de cabecera, menú móvil y adaptación responsive | Cabecera fija, panel de navegación bajo 1360 px, hero y métricas apilados. | 8 h | Jean Fabio Noriega Collado | Done |
+| US25 | Acceso a la aplicación por segmento | T08 | Conexión de los botones con la aplicación web | `config.js` con `APP_BASE_URL` y respaldo a secciones internas. | 4 h | Ismael Sebastian Simon Calderon | Done |
+| US26 | Visualización de testimonios de usuarios | T09 | Implementación de testimonios y carrusel | Tarjetas con aviso de contenido de ejemplo y carrusel con indicadores y contador. | 4 h | Christoper Steven Rivas Castillo | Done |
+| US27 | Consulta de información legal y de contacto | T10 | Implementación del pie de página y páginas legales | Pie de página con navegación y contacto, y página de términos, privacidad, cookies y accesibilidad. | 6 h | Christoper Steven Rivas Castillo | Done |
+| US28 | Visualización de videos del producto y del equipo | T11 | Implementación de la sección de videos | Dos marcos 16:9 con pie de foto; los videos se publican en AV2. | 3 h | Ismael Sebastian Simon Calderon | In Progress |
 
-**Tablero declarado:** [Sprint Board de LoadMatch en Jira](https://upc-team-m57tll9j.atlassian.net/jira/software/projects/US/boards/2?sprintStarted=true&filter=&groupBy=none).
+**Tablero:** [Sprint Board de LoadMatch en Jira](https://upc-team-m57tll9j.atlassian.net/jira/software/projects/US/boards/2).
 
 **Captura del tablero y estados al cierre:**
 
@@ -249,110 +248,107 @@ El backlog inicial comprendía las siguientes tareas. Su estado se actualiza seg
        width="900">
 </p>
 
-***Figura.*** Estado final del Sprint 1 en Jira, con las User Stories US12, US13 y US14 finalizadas y un total de 7 Story Points completados.
+***Figura.*** Estado final del Sprint 1 en Jira: 10 User Stories finalizadas y US28 en curso. [PENDIENTE: reemplazar la captura por la del cierre con las 11 historias.]
 
-Además de T01, el código contiene trabajo que debe vincularse con las tareas reales del tablero. El siguiente inventario no asigna nuevos identificadores de historia ni estimaciones retrospectivas.
-
-| Trabajo identificado | Archivos principales | Relación con el alcance |
-| --- | --- | --- |
-| Indicadores logísticos y beneficios por segmento | `index.html`, diccionarios de idioma | Contenido de apoyo a US12. |
-| Pestañas «Cómo funciona» para empresas y transportistas | `index.html`, `assets/js/main.js` | Explicación de la propuesta de valor; no ejecuta operaciones de transporte. |
-| Tarjetas de confianza, precios y testimonios ilustrativos | `index.html` | Contenido informativo; no acredita clientes, pagos ni validación documental real. |
-| Preguntas frecuentes con acordeón | `index.html`, `assets/js/main.js` | Orientación del visitante; no sustituye US14. |
-| Internacionalización español/inglés | `assets/js/i18n.js`, `assets/i18n/en.json`, `assets/i18n/es.json` | Funcionalidad transversal por asociar a un ítem real del backlog. |
-| Estilos adaptables y navegación móvil | `assets/css/responsive.css`, `assets/js/main.js` | Soporte de presentación móvil y escritorio. |
-| Configuración de CTA hacia la futura Web Application | `assets/js/config.js`, `assets/js/main.js` | Integración preparada; URL base todavía vacía. |
-| Documentación y configuración del proyecto | `README.md`, `.editorconfig`, `.gitignore`, `.nojekyll`, `LICENSE` | Preparación y mantenimiento del producto. |
-
-*Nota. Las horas de tareas no se suman con los Story Points. La internacionalización y los contenidos adicionales no permiten dar por completadas US13 o US14 sin satisfacer sus criterios.*
+*Nota. Las horas de las tareas no se suman con los Story Points.*
 
 #### 5.2.1.4. Development Evidence for Sprint Review
 
-La evidencia disponible consiste en los archivos fuente de la Landing Page. La copia recibida no contiene un directorio `.git` en la carpeta `landing` ni en su carpeta contenedora inmediata, por lo que no permite recuperar commits, ramas, revisores o fechas de integración.
+El incremento se desarrolló con GitFlow: una rama por sección, integración a `develop` mediante Pull Request con *Create a merge commit* y publicación desde `main` con la etiqueta `v1.0.0`. La tabla resume un commit representativo por rama; el historial completo está disponible en el repositorio.
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
 | --- | --- | --- | --- | --- | --- |
-| Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page | [PENDIENTE] | [PENDIENTE] | [PENDIENTE: mensaje literal] | [PENDIENTE] | [PENDIENTE] |
+| Loadmatch-landing-page | feature/project-setup | 8d13c00 | feat(seo): add HTML5 skeleton with SEO and Open Graph meta tags | Esqueleto HTML5 con metadatos | 12/09/2026 |
+| Loadmatch-landing-page | feature/design-tokens | 7a8d52c | feat(tokens): add colour, spacing, type and radius design tokens | Tokens del sistema de diseño | 12/09/2026 |
+| Loadmatch-landing-page | feature/header-navigation | fee3b18 | feat(nav): add mobile menu toggle with Escape key and focus return | Menú móvil accesible | 12/09/2026 |
+| Loadmatch-landing-page | feature/hero-section | 7c94c08 | feat(hero): add hero section with headline, lead and segment CTAs | Propuesta de valor | 12/09/2026 |
+| Loadmatch-landing-page | feature/metrics-band | cce648c | feat(metrics): add market indicators band with MTC sources | Indicadores del mercado | 12/09/2026 |
+| Loadmatch-landing-page | feature/pricing-plans | b4fa8e7 | feat(pricing): add commission-based pricing section | Precios por comisión | 12/09/2026 |
+| Loadmatch-landing-page | feature/faq-accordion | 3187e34 | feat(faq): add accordion behaviour with aria-expanded and hidden panels | Acordeón accesible | 12/09/2026 |
+| Loadmatch-landing-page | feature/final-cta | f5af922 | feat(cta): add closing call-to-action band | Banda de cierre | 12/09/2026 |
+| Loadmatch-landing-page | feature/i18n-locales | 12f8fb5 | feat(i18n): add English and Latin American Spanish dictionaries | Diccionarios EN/ES | 12/09/2026 |
+| Loadmatch-landing-page | feature/how-it-works-tabs | 442300c | feat(tabs): add accessible audience tabs with arrow-key navigation | Pestañas por segmento | 14/09/2026 |
+| Loadmatch-landing-page | feature/trust-cards | 4a8eb42 | feat(trust): add trust and verification cards | Tarjetas de confianza | 14/09/2026 |
+| Loadmatch-landing-page | feature/youtube-videos | fe734a9 | feat(videos): add LoadMatch product and team video section | Sección de videos | 14/09/2026 |
+| Loadmatch-landing-page | feature/cta-app-links | 2eb0ae6 | feat(cta): connect landing page actions to web application | Enlaces a la Web Application | 14/09/2026 |
+| Loadmatch-landing-page | feature/audience-sections | b2efd78 | feat(audience): add segment blocks for companies and carriers | Bloques por segmento | 16/09/2026 |
+| Loadmatch-landing-page | feature/testimonials-carousel | fb2285f | feat(carousel): add scroll-snap carousel with dot controls on mobile | Carrusel de testimonios | 16/09/2026 |
+| Loadmatch-landing-page | feature/site-footer | 32e60ea | feat(footer): add site footer with navigation and legal links | Pie de página | 16/09/2026 |
+| Loadmatch-landing-page | feature/legal-pages | 9fa1278 | feat(legal): add terms of service, privacy and cookie policy page | Página legal | 16/09/2026 |
+| Loadmatch-landing-page | bugfix/css-structure | 46f4315 | fix(css): restore main, components and responsive stylesheets to their intended content | Corrección de hojas de estilo | 16/09/2026 |
+| Loadmatch-landing-page | bugfix/duplicate-header | 6fee99d | fix(html): remove duplicated header and order sections as in the approved design | Corrección de estructura | 16/09/2026 |
+| Loadmatch-landing-page | feature/app-screenshots | ecc9159 | feat(img): add application screenshots for the how-it-works steps | Capturas de la aplicación | 16/09/2026 |
+| Loadmatch-landing-page | feature/vehicle-types | 920a718 | feat(vehicles): add vehicle types catalogue with cargo capacities | Catálogo de vehículos (US13) | 16/09/2026 |
+| Loadmatch-landing-page | feature/contact-form | 81d31b6 | feat(contact): add validated contact form | Formulario de contacto (US14) | 16/09/2026 |
+| Loadmatch-landing-page | feature/video-placeholders | ad5be56 | feat(videos): show coming-soon placeholders until the videos are published | Avisos de video | 16/09/2026 |
+| Loadmatch-landing-page | release/1.0.0 | b2f1b2e | chore(release): prepare v1.0.0 | CHANGELOG de la versión | 16/09/2026 |
 
-**Repositorio declarado:** [Loadmatch-landing-page](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page).
+**Repositorio:** [Loadmatch-landing-page](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page) · **Pull Requests:** #2 al #25 · **Etiqueta:** [`v1.0.0`](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page/releases/tag/v1.0.0)
 
-Se agregarán tantas filas como commits relevantes tenga el incremento. Cada identificador deberá enlazar con el commit real. Los ejemplos de Conventional Commits del README son convenciones, no registros históricos.
+**Artefactos de desarrollo**
 
-**Artefactos de desarrollo comprobados**
-
-| Artefacto | Contenido comprobado |
+| Artefacto | Contenido |
 | --- | --- |
-| `index.html` | Estructura semántica, metadatos, secciones informativas, controles de interfaz y ocho CTA configurables. |
-| `assets/css/main.css` | Tokens de color, tipografía Inter, espaciado, tamaños y estilos base. |
-| `assets/css/components.css` | Hoja de estilos de componentes referenciada por la página. |
-| `assets/css/responsive.css` | Media queries de 1359, 1023, 767 y 389 px, además de reglas de impresión y reducción de movimiento. |
-| `assets/js/main.js` | Inicialización de CTA, menú móvil, pestañas, acordeón y carrusel. |
-| `assets/js/i18n.js` | Carga de traducciones con `fetch`, actualización de textos y almacenamiento de preferencia de idioma. |
-| `.editorconfig` | UTF-8, finales de línea LF, dos espacios, salto final y eliminación de espacios sobrantes. |
-| `.gitignore` | Exclusión de archivos del sistema, configuración local de editores, registros y `.env`. |
-| `.nojekyll` | Archivo presente como preparación para alojamiento estático en GitHub Pages. |
-| `LICENSE` | Licencia MIT incluida. |
+| `index.html` | Estructura semántica, metadatos, secciones del Landing Page, formulario de contacto y enlaces configurables hacia la Web Application. |
+| `assets/css/main.css` | Tokens de color, tipografía Inter, espaciado y estilos base. |
+| `assets/css/components.css` | Estilos de cada componente, incluidos catálogo, formulario y avisos de video. |
+| `assets/css/responsive.css` | Media queries de 1359, 1023, 767 y 389 px, impresión y reducción de movimiento. |
+| `assets/js/main.js` | Enlaces a la aplicación, menú móvil, pestañas, acordeón, carrusel y validación del formulario. |
+| `assets/js/i18n.js` | Carga de diccionarios, aplicación de textos y preferencia de idioma. |
+| `assets/i18n/en.json`, `es.json` | Textos en inglés (en_US) y español latinoamericano (es_419). |
+| `docs/terms-and-conditions.html` | Términos, privacidad, cookies y accesibilidad. |
+| `CHANGELOG.md` | Registro de cambios de la versión 1.0.0. |
+| `.editorconfig`, `.gitignore`, `.nojekyll`, `LICENSE` | Convenciones de formato, exclusiones, publicación estática y licencia MIT. |
 
 #### 5.2.1.5. Execution Evidence for Sprint Review
 
-La inspección permite identificar qué componentes están implementados, pero la evidencia visual de ejecución debe completarse con capturas y un video de la página servida mediante HTTP. En esta revisión se comprobaron referencias locales y estructura del código; no se realizó una prueba interactiva en navegador.
+La Landing Page se verificó en navegador a 1440, 1024, 768 y 390 px de ancho: sin recursos faltantes, sin errores de consola y sin desplazamiento horizontal. Se comprobaron también las traducciones completas en ambos idiomas y los enlaces a la página legal.
 
 **1. Inicio e indicadores del contexto logístico**
 
-El Hero presenta la propuesta de encontrar transporte sin disponer de flota propia y diferencia los CTA de empresa y transportista. La sección de indicadores muestra cifras de contexto atribuidas al MTC, relacionadas con espera para conseguir un vehículo, tercerización y costo logístico. Estas cifras se presentan como antecedentes del problema, no como resultados alcanzados por LoadMatch.
+El Hero presenta la propuesta de encontrar transporte sin disponer de flota propia y diferencia las llamadas a la acción de empresa y transportista. La sección de indicadores muestra cifras de contexto atribuidas al MTC, presentadas como antecedentes del problema.
 
-**Captura de inicio en escritorio:** 
 <p align="center">
   <img src="../assets/images/landing/CapLanding1.jpeg" width="600">
 </p>
 
+**2. Funcionamiento, catálogo de vehículos y beneficios por segmento**
 
-**2. Funcionamiento y beneficios por segmento**
+La sección «Cómo funciona» contiene pestañas para empresas y transportistas, navegables con clic y con las flechas, Home y End del teclado. Desde el primer paso, el botón «Ver tipos de vehículos» lleva al catálogo (US13), que muestra furgoneta de carga (hasta 1 t), camión ligero (hasta 3 t) y camión mediano (hasta 5 t), con un aviso de que son datos de ejemplo. Las tarjetas posteriores presentan confianza y beneficios por segmento.
 
-La sección «Cómo funciona» contiene pestañas para empresas y transportistas, con imágenes y pasos explicativos. El código contempla selección mediante clic y navegación con flechas, Home y End. Las imágenes ilustran la aplicación prevista; no demuestran que las operaciones transaccionales estén implementadas.
-
-Las tarjetas posteriores explican los beneficios para ambos segmentos y presentan información sobre confianza, perfiles, historial y calificaciones. Las afirmaciones sobre verificación oficial y seguimiento deberán corresponderse con los servicios disponibles cuando estos se implementen.
-
-**Captura de ambos paneles y beneficios:** 
 <p align="center">
   <img src="../assets/images/landing/CapLanding2.jpeg" width="600">
 </p>
 
+[PENDIENTE: captura del catálogo de vehículos.]
+
 **3. Testimonios y modelo de precios**
 
-Se incluyen tres testimonios en un componente con controles y contador. La página los identifica como contenido de muestra, por lo que no constituyen entrevistas de validación ni opiniones de clientes reales.
+Se incluyen tres testimonios identificados como contenido de ejemplo, con carrusel en móvil. La sección de precios describe la publicación gratuita, la comisión por servicio y la ausencia de membresía mensual.
 
-La sección de precios describe publicación gratuita, comisión por servicio y ausencia de membresía mensual. También está identificada como contenido de muestra. No corresponde a planes de suscripción ni acredita integración de una pasarela de pago.
-
-**Captura de testimonios** 
 <p align="center">
   <img src="../assets/images/landing/CapLanding3.jpeg" width="600">
 </p>
 
-**Captura de precios:** 
 <p align="center">
   <img src="../assets/images/landing/CapLanding3.3.jpeg" width="600">
 </p>
 
-**4. Preguntas frecuentes**
+**4. Preguntas frecuentes y formulario de contacto**
 
-El acordeón incluye cinco preguntas sobre costos, cobertura, validación de transportistas, incidencias y tipos de carga. La pregunta sobre mercancías admitidas no constituye un catálogo de vehículos con capacidades.
+El acordeón incluye cinco preguntas sobre costos, cobertura, validación de transportistas, incidencias y tipos de carga.
 
-El pie de página contiene enlaces `mailto:` y `tel:`, además de información de ubicación y horario. No existe un elemento `<form>` ni lógica para recibir, almacenar o notificar consultas. Tampoco se ha verificado la operatividad de la dirección de correo y teléfono mostrados.
+El formulario de contacto (US14) solicita nombre, correo, tipo de usuario y mensaje. Al enviarlo con campos vacíos o con un correo inválido, impide el envío y muestra el error debajo de cada campo; con datos válidos, muestra un mensaje de confirmación y limpia el formulario. Es un formulario de demostración: valida en el navegador y todavía no almacena los mensajes, lo que corresponde al contexto Contact del backend.
 
-**Capturas de preguntas:** 
 <p align="center">
   <img src="../assets/images/landing/CapLanding4.jpeg" width="600">
 </p>
 
+[PENDIENTE: capturas del formulario con errores de validación y con el mensaje de confirmación.]
 
 **5. Idiomas, adaptación y accesibilidad**
 
-La página contiene diccionarios en inglés y español. La selección inicial prioriza la preferencia guardada, luego el idioma compatible del navegador y finalmente inglés. La carga de traducciones requiere un servidor HTTP local o alojamiento web.
-
-Se identifican un enlace para saltar al contenido principal, atributos ARIA, controles de pestañas y reglas adaptables. El README declara verificaciones de contraste y ausencia de desbordamiento en distintas resoluciones, pero no incluye en los archivos revisados los resultados de ejecución necesarios para reproducir esas conclusiones. Por ello, no se presenta esta inspección como certificación de conformidad WCAG.
-
-**Capturas en español e inglés y registro de pruebas:** 
+La selección inicial de idioma prioriza la preferencia guardada, luego el idioma del navegador y finalmente inglés. La página incluye un enlace para saltar al contenido principal, atributos ARIA, foco visible y contraste AA en los pares de color usados.
 
 <p align="center">
   <img src="../assets/images/landing/CapLanding5ESP.jpeg" width="600">
@@ -364,76 +360,68 @@ Se identifican un enlace para saltar al contenido principal, atributos ARIA, con
   <img src="../assets/images/landing/CapLanding5ENG.jpeg" width="600">
 </p>
 
-**6. CTA y espacios de video**
+**6. Llamadas a la acción y videos**
 
-Existen ocho enlaces con `data-app-path`. La variable `APP_BASE_URL` está vacía; por ese motivo, el código los dirige a secciones internas mediante `data-app-fallback`. Las rutas de registro por perfil e inicio de sesión están preparadas, pero no conectadas a una aplicación publicada.
-
-Los dos espacios de video contienen la dirección base de inserción de YouTube sin identificador. Son contenedores preparados para About-the-Product y About-the-Team, no videos publicados.
+Los botones de registro e inicio de sesión usan `data-app-path`. Mientras `APP_BASE_URL` esté vacía, llevan a la sección correspondiente de la página mediante `data-app-fallback`, sin enlaces rotos. Los dos espacios de video muestran «Video disponible próximamente» hasta la publicación de About-the-Product y About-the-Team en AV2.
 
 **Registro de comprobaciones**
 
-| Verificación | Resultado de inspección | Evidencia de ejecución pendiente |
-| --- | --- | --- |
-| Recursos locales de `index.html` | No se encontraron archivos faltantes entre las referencias `assets/` y `docs/` revisadas. | Carga HTTP y consola del navegador. |
-| Propuesta de valor, US12 | Presente en estructura y textos. | Capturas y aceptación del escenario. |
-| Catálogo, US13 | No identificado. | Implementación y prueba. |
-| Formulario, US14 | Cero elementos `<form>`; solo contacto mediante enlaces. | Implementación, recepción, almacenamiento y notificación. |
-| Idiomas | Dos diccionarios y lógica de selección presentes. | Alternancia y persistencia de preferencia. |
-| Interactividad | Código de menú, pestañas, acordeón y carrusel presente. | Interacción con ratón y teclado. |
-| CTA externos | Ocho enlaces preparados; URL base vacía. | Integración futura con la Web Application. |
-| Videos | Dos inserciones sin ID. | URLs definitivas y reproducción. |
+| Verificación | Resultado |
+| --- | --- |
+| Recursos locales | Sin archivos faltantes ni errores de consola. |
+| Propuesta de valor, US12 | Cumple. |
+| Catálogo, US13 | Cumple: tipos de vehículos con capacidades. |
+| Formulario, US14 | Cumple: validación, mensajes de error y confirmación. |
+| Idiomas, US21 | Cumple: textos completos en EN y ES, preferencia guardada. |
+| Precios y FAQ, US22 y US23 | Cumple. |
+| Navegación adaptable, US24 | Cumple a 1440, 1024, 768 y 390 px. |
+| Acceso a la aplicación, US25 | Cumple el escenario sin aplicación desplegada. |
+| Testimonios e información legal, US26 y US27 | Cumple. |
+| Videos, US28 | Pendiente: avisos de disponibilidad próxima. |
 
-**Video de navegación del Sprint Review:** LINKKKKKKKKKKKKK VIDEOOOOOOOOOOOOOOO
+**Video de navegación del Sprint Review:** [PENDIENTE: enlace de Microsoft Stream.]
 
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
 
-La versión revisada es un sitio estático y no contiene una API RESTful propia. El uso de `fetch` se limita en el código revisado a cargar los diccionarios de traducción; no representa un Web Service de negocio.
+El incremento del Sprint 1 es un sitio estático y no contiene una API RESTful propia. El uso de `fetch` se limita a cargar los diccionarios de traducción, por lo que no existe documentación OpenAPI/Swagger para esta entrega.
 
-En consecuencia, no existe documentación OpenAPI/Swagger que pueda atribuirse a esta entrega. Las explicaciones sobre transportistas, seguimiento, incidencias y pagos describen la propuesta de la plataforma y no acreditan servicios operativos.
+La recepción real de las consultas del formulario de contacto corresponderá al contexto Contact del backend en un sprint posterior.
 
-La implementación posterior de la API deberá incluir las operaciones reales, métodos HTTP, rutas, parámetros, autenticación, solicitudes y respuestas, junto con la URL de Swagger y capturas de ejecución. El contexto Contact deberá resolver la recepción de consultas requerida por US14.
-
-**Repositorio backend declarado:** [Loadmatch-backend-application](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-backend-application).
-
-**Evidencia OpenAPI/Swagger de Sprint 1:** no disponible en el alcance recibido.
+**Repositorio backend:** [Loadmatch-backend-application](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-backend-application).
 
 #### 5.2.1.7. Software Deployment Evidence for Sprint Review
 
-El README identifica GitHub Pages como plataforma de alojamiento y describe la publicación desde `main` y la raíz del repositorio. La copia incluye `.nojekyll` y una estructura estática que no requiere compilación.
+La versión 1.0.0 se publicó en GitHub Pages desde la rama `main`.
 
-Estos archivos documentan la preparación de publicación, pero no permiten verificar la configuración remota ni confirmar que la copia local coincide con una versión desplegada. Además, la carpeta entregada se llama `landing`: la publicación desde la raíz solo corresponde si su contenido se encuentra efectivamente en la raíz de la rama publicada.
-
-| Evidencia | Estado |
+| Evidencia | Detalle |
 | --- | --- |
-| Repositorio declarado | [Loadmatch-landing-page](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page) |
-| Plataforma documentada | GitHub Pages. |
-| Archivos estáticos y `.nojekyll` | Presentes en la copia revisada. |
-| Configuración `Settings > Pages` | [PENDIENTE: captura de la configuración real]. |
-| URL pública | [PENDIENTE: URL obtenida de GitHub Pages y verificación de acceso]. |
-| Commit y tag publicados | [PENDIENTE]. |
-| Ejecución de despliegue | [PENDIENTE: enlace y resultado]. |
-| Fecha de publicación | [PENDIENTE]. |
-| Prueba posterior al despliegue | [PENDIENTE: recursos, navegación, traducciones e interacción]. |
+| Repositorio | [Loadmatch-landing-page](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page) |
+| Plataforma | GitHub Pages, rama `main`, carpeta `/ (root)`, HTTPS obligatorio. |
+| URL pública | [desarrollo-open-source-grupo-5.github.io/Loadmatch-landing-page](https://desarrollo-open-source-grupo-5.github.io/Loadmatch-landing-page/) |
+| Pull Request de publicación | #25, `release/1.0.0` → `main` |
+| Commit publicado | `077d002` |
+| Etiqueta | `v1.0.0` |
+| Fecha de publicación | 16/09/2026 |
+| Prueba posterior | Carga de la URL pública, navegación, cambio de idioma y página legal. |
 
-No se acredita un pipeline propio de integración continua mediante el README. Para documentar publicación automática se requiere evidencia de la configuración y de una ejecución satisfactoria. La disponibilidad del sitio estático tampoco implica el despliegue de la Web Application o el backend.
+[PENDIENTE: captura de `Settings > Pages` y de la página abierta en su URL pública.]
 
 #### 5.2.1.8. Team Collaboration Insights during Sprint
 
-La organización de archivos separa contenido, estilos base, componentes, adaptación, configuración de enlaces y traducciones. Esta separación facilita distribuir el trabajo y revisar cambios por responsabilidad. El README define GitFlow, Conventional Commits y Semantic Versioning como prácticas del proyecto.
+El Landing Page se dividió en ramas por sección, lo que permitió trabajar en paralelo y registrar el aporte de cada integrante. Las ramas se integraron a `develop` mediante Pull Requests con *Create a merge commit*, que conserva los commits individuales, y la versión se publicó mediante una rama `release/1.0.0`.
 
-La existencia de estas convenciones no demuestra su aplicación histórica. Para describir la colaboración ejecutada se requiere incorporar los commits, Pull Requests y acuerdos reales del sprint.
+| Integrante | GitHub | Ramas principales | Commits (sin merges) |
+| --- | --- | --- | --- |
+| Benigno Montero, Harold Fauskorp | Harold-11 | project-setup, design-tokens, bugfix/css-structure, bugfix/duplicate-header, app-screenshots, vehicle-types, contact-form, video-placeholders, release/1.0.0 | 18 |
+| Rivas Castillo, Christoper Steven | CODERT0PH | audience-sections, testimonials-carousel, site-footer, legal-pages | 13 |
+| Collantes Artola, Marco Antonio | Markollantes2307 | pricing-plans, faq-accordion, final-cta, i18n-locales | 12 |
+| Noriega Collado, Jean Fabio | dumbaskidd | header-navigation, hero-section, metrics-band, readme-docs | 9 |
+| Simon Calderon, Ismael Sebastian | Mayel-dev | how-it-works-tabs, trust-cards, youtube-videos, cta-app-links | 9 |
 
-| Aspecto | Evidencia disponible | Evidencia pendiente |
-| --- | --- | --- |
-| Organización técnica | Separación de HTML, CSS, JavaScript y diccionarios. | Autoría y tareas asociadas. |
-| Uniformidad de formato | `.editorconfig` con reglas comunes. | Revisiones y aplicación efectiva de las convenciones. |
-| Flujo de colaboración | GitFlow y convenciones documentados en README. | Ramas, Pull Requests, comentarios e integraciones reales. |
-| Participación individual | No recuperable de esta copia sin historial Git. | Contribuciones de los seis integrantes. |
-| Coordinación y retrospectiva | No se proporcionó acta de cierre. | Acuerdos, bloqueos y acciones de mejora. |
+*Nota. Conteo de commits en `main` al 16/09/2026, sin incluir commits de merge.*
 
-**Historial de commits por integrante:** 
+**Historial de commits por integrante:**
 
-En el primer sprint de trabajo, la atención fue centrada en el desarrollo del landing page de nuestra aplicación:
 <img src="../assets/images/Insights/CollabInsights.png" alt="Insights totales registrados en landing page">
 
 *Desarrollado por: Jean Fabio Noriega Collado (dumbaskidd)*
@@ -446,12 +434,12 @@ En el primer sprint de trabajo, la atención fue centrada en el desarrollo del l
   <img src="../assets/images/Insights/Commits5.png" alt="Commits Ismael" width="500">
 </p>
 
-*Desarrollado por: Christoper Steven Rivas Castillo (C0DERTOPH)*
+*Desarrollado por: Christoper Steven Rivas Castillo (CODERT0PH)*
 <p align="center">
-  <img src="../assets/images/Insights/Commits3.png" alt="Commits Chris" width="500">
+  <img src="../assets/images/Insights/Commits3.png" alt="Commits Christoper" width="500">
 </p>
 
-*Desarrollado por: Harold (Harold-11)*
+*Desarrollado por: Harold Fauskorp Benigno Montero (Harold-11)*
 <p align="center">
   <img src="../assets/images/Insights/Commits2.png" alt="Commits Harold" width="500">
 </p>
@@ -461,13 +449,11 @@ En el primer sprint de trabajo, la atención fue centrada en el desarrollo del l
   <img src="../assets/images/Insights/Commits4.png" alt="Commits Marco" width="500">
 </p>
 
-**Gráficos de colaboradores y actividad durante el sprint:** [PENDIENTE].
+**Gráficos de colaboradores y actividad durante el sprint:**
 
 <p align="center">
-  <img src="../assets/images/Insights/NetworkGraph.png" alt="Commits Marco" width="500">
-  <img src="../assets/images/Insights/NetworkGraph1.png" alt="Commits Marco" width="500">
+  <img src="../assets/images/Insights/NetworkGraph.png" alt="Network graph del repositorio" width="500">
+  <img src="../assets/images/Insights/NetworkGraph1.png" alt="Network graph del repositorio" width="500">
 </p>
 
-**Pull Requests revisados y observaciones resueltas:** [PENDIENTE].
-
-Como propuesta para la retrospectiva, se plantea revisar la diferencia entre las historias planificadas y el producto construido, acordar cómo completar US13 y US14 y registrar explícitamente las tareas de internacionalización y contenido adicional. También corresponde preparar la integración de CTA y sustituir los espacios de video por publicaciones reales en sus hitos respectivos. Estas acciones son propuestas de seguimiento y no acuerdos ya celebrados por el equipo.
+**Pull Requests:** #2 al #25 en [Loadmatch-landing-page](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page/pulls?q=is%3Apr+is%3Aclosed), integrados con *Create a merge commit*.
