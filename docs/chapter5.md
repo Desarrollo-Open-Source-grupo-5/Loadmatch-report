@@ -240,15 +240,33 @@ La matriz LACX identifica al líder (L) y a los colaboradores (C) de cada aspect
 
 **Tablero:** [Sprint Board de LoadMatch en Jira](https://upc-team-m57tll9j.atlassian.net/jira/software/projects/US/boards/2).
 
-**Captura del tablero y estados al cierre:**
+**Evidencia del cierre del Sprint 1 en Jira:**
 
 <p align="center">
-  <img src="../assets/images/sprint1/estados_sprint_cierre.png"
-       alt="Estados finales de las User Stories del Sprint 1 en Jira"
+  <img src="../assets/images/sprint1/SprintReport.png"
+       alt="Actividades completadas e incompletas del Sprint 1 en Jira"
        width="900">
 </p>
 
-***Figura.*** Estado final del Sprint 1 en Jira: 10 User Stories finalizadas y US28 en curso. [PENDIENTE: reemplazar la captura por la del cierre con las 11 historias.]
+***Figura.*** Informe del Sprint 1 en Jira: 10 User Stories finalizadas (25 Story Points) y US28 en curso (2 Story Points), que pasa al siguiente sprint.
+
+<p align="center">
+  <img src="../assets/images/sprint1/SprintBurndown.png"
+       alt="Diagrama de trabajo pendiente del Sprint 1"
+       width="900">
+</p>
+
+***Figura.*** Diagrama de trabajo pendiente (*sprint burndown*) del Sprint 1, del 12/09/2026 al 16/09/2026, con la meta del sprint.
+
+<p align="center">
+  <img src="../assets/images/sprint1/SprintScopeChange.png"
+       alt="Registro de cambios del alcance del Sprint 1"
+       width="900">
+</p>
+
+***Figura.*** Registro de cambios del alcance del Sprint 1.
+
+El sprint se inició con US12, US13 y US14 (7 Story Points). Durante la revisión del sprint, el equipo registró en Jira las historias US21 a US28, que correspondían a secciones ya planificadas y en desarrollo en el repositorio. Estas se incorporaron formalmente el 16/09/2026 y aumentaron el compromiso en 18 Story Points, hasta 27. Por esa razón, el diagrama de trabajo pendiente muestra un salto al final del periodo.
 
 *Nota. Las horas de las tareas no se suman con los Story Points.*
 
