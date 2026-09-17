@@ -68,155 +68,42 @@ Proyecto
 
 <a id="registro-de-versiones"></a>
 
-# Registro de Versiones del Informe
-
-El registro de versiones permite identificar la evolución del informe de LoadMatch y relacionar cada modificación relevante con su fecha, autoría y propósito. Comprende la incorporación de secciones, la corrección de inconsistencias y las mejoras derivadas de la revisión del equipo o de la retroalimentación del docente. Cada registro debe corresponder con los cambios conservados en el repositorio del informe.
-
+# Registro de versiones del informe
 
 <table border="1" cellspacing="0" cellpadding="5">
 <thead>
-  <tr>
-    <th>Versión</th>
-    <th>Fecha</th>
-    <th>Autor/es</th>
-    <th>Descripción</th>
-  </tr>
+<tr>
+<th>Versión</th>
+<th>Fecha</th>
+<th>Autor/es</th>
+<th>Descripción</th>
+</tr>
 </thead>
-
 <tbody>
-  <tr>
-    <td align="center">V0.1.0</td>
-    <td align="center">05/09/2026</td>
-    <td>
-      - Simon, Ismael<br>
-      - Collantes Artola, Marco
-    </td>
-    <td>
-      Creación del perfil de la startup, lienzo Lean UX y estructuración del Capítulo 1.
-    </td>
-  </tr>
-  <tr>
-    <td align="center">V0.2.0</td>
-    <td align="center">07/09/2026</td>
-    <td>
-      - dumbaskidd
-    </td>
-    <td>
-      Estructuración y redacción de entrevistas, y User Personas (Capítulo 2).
-    </td>
-  </tr>
-  <tr>
-    <td align="center">V0.2.1</td>
-    <td align="center">08/09/2026</td>
-    <td>
-      - dumbaskidd
-    </td>
-    <td>
-      Elaboración de procesos de Event Storming - Pasos del 1 al 3.
-    </td>
-  </tr>
-  <tr>
-    <td align="center">V0.2.2</td>
-    <td align="center">08/09/2026</td>
-    <td>
-      - dumbaskidd
-    </td>
-    <td>
-      Elaboración de procesos de Event Storming - Pasos del 4 al 6.
-    </td>
-  </tr>
-  <tr>
-    <td align="center">V0.2.3</td>
-    <td align="center">08/09/2026</td>
-    <td>
-      - dumbaskidd
-    </td>
-    <td>
-      Elaboración de procesos de Event Storming - Pasos del 7 al 9.
-    </td>
-  </tr>
-  <tr>
-    <td align="center">V0.2.4</td>
-    <td align="center">09/09/2026</td>
-    <td>
-      - Benigno, Harold
-    </td>
-    <td>
-      Elaboración de proceso de Event Storming - Paso 10 y revisión.
-    </td>
-  </tr>
-  <tr>
-    <td align="center">V0.3.0</td>
-    <td align="center">10/09/2026</td>
-    <td>
-      - dumbaskidd
-    </td>
-    <td>
-      Especificación de Requisitos, Historias de Usuario priorizadas e Impact Mapping (Capítulo 3).
-    </td>
-  </tr>
-  <tr>
-    <td align="center">V0.3.1</td>
-    <td align="center">11/09/2026</td>
-    <td>
-      - Benigno, Harold
-    </td>
-    <td>
-      Inclusión de Historias de Usuario para validación automática y pasarela de pagos.
-    </td>
-  </tr>
-  <tr>
-    <td align="center">V0.4.0</td>
-    <td align="center">12/09/2026</td>
-    <td>
-      - Simon, Ismael
-    </td>
-    <td>
-      Diseño de Style Guidelines y Arquitectura de la Información (Capítulo 4).
-    </td>
-  </tr>
-  <tr>
-    <td align="center">V0.4.1</td>
-    <td align="center">13/09/2026</td>
-    <td>
-      - dumbaskidd
-    </td>
-    <td>
-      Diseño UI: Wireframes, Mockups, Wireflows y User Flows de la aplicación web.
-    </td>
-  </tr>
-  <tr>
-    <td align="center">V0.4.2</td>
-    <td align="center">13/09/2026</td>
-    <td>
-      - Benigno, Harold
-    </td>
-    <td>
-      Diseño de Arquitectura de Software (Modelo C4), Diagrama de Clases y Diseño de Base de Datos.
-    </td>
-  </tr>
-  <tr>
-    <td align="center">V0.5.0</td>
-    <td align="center">14/09/2026</td>
-    <td>
-      - Rivas, Christoper
-    </td>
-    <td>
-      Definición del Entorno de Desarrollo y Configuración (Capítulo 5).
-    </td>
-  </tr>
-  <tr>
-    <td align="center">V1.0.0</td>
-    <td align="center">15/09/2026</td>
-    <td>
-      - Todos los integrantes
-    </td>
-    <td>
-      Consolidación final del primer avance, revisión de rúbrica y formato general del informe.
-    </td>
-  </tr>
+<tr>
+<td align="center">1.0<br>(AV1)</td>
+<td align="center">17/09/2026</td>
+<td>
+Noriega Collado, Jean Fabio<br>
+Rivas Castillo, Christoper Steven<br>
+Simon Calderon, Ismael Sebastian<br>
+Collantes Artola, Marco Antonio<br>
+Benigno Montero, Harold Fauskorp
+</td>
+<td>
+Primera versión del Project Report correspondiente a AV1.<br>
+Desarrollo de los Capítulos I, II, III y IV.<br>
+Desarrollo del Capítulo V hasta la sección 5.2.1.8 correspondiente al Sprint 1.<br>
+Elaboración de artefactos de Requirements Elicitation, Needfinding, Requirements Specification y Product Design.<br>
+Configuración de repositorios, GitFlow, Conventional Commits y Semantic Versioning.<br>
+Implementación y despliegue de la primera versión de la Landing Page de LoadMatch en GitHub Pages.<br>
+Incorporación de evidencias de colaboración y Student Outcome de AV1.
+</td>
+</tr>
 </tbody>
 </table>
+
+<div style="page-break-after: always;"></div>
 
 
 <!-- Si el repositorio solo contiene una versión documentada, conservar una sola fila. No crear fechas ni versiones retrospectivas para completar la tabla. -->
@@ -235,11 +122,11 @@ Para el desarrollo del **Project Report de LoadMatch**, el equipo utiliza un rep
 **Total de commits:** 250 - 300 - 400
 <br>
 **Autores contribuyentes:**
-- Noriega Collado, Jean Fabio (USER)  
+- Noriega Collado, Jean Fabio (dumbaskidd)  
 - Rivas Castillo, Christoper Steven (C0DERTOPH)  
-- Simon Calderon, Ismael Sebastian (USER)
-- Collantes Artola, Marco Antonio (USER)
-- Benigno Montero, Harold Fauskorp (USER)
+- Simon Calderon, Ismael Sebastian (Mayel-dev)
+- Collantes Artola, Marco Antonio (Markollantes2307)
+- Benigno Montero, Harold Fauskorp (Harold-11)
 
 La actividad se distribuyó en ramas temáticas por capítulos del informe (`feature/Chapter1` hasta `feature/Chapter5`), asegurando revisiones cruzadas mediante **Pull Requests** y manteniendo evidencia de colaboración en los comentarios y resoluciones.
 
@@ -384,9 +271,9 @@ La colaboración fue activa y equitativa, con aportes sustanciales de todos los 
 
 El desarrollo de LoadMatch requiere comunicar el problema del transporte de mercadería, la propuesta de solución y las decisiones de ingeniería a diferentes audiencias. Con las empresas y los transportistas se emplea un lenguaje centrado en sus necesidades y actividades; con el equipo y el docente se utilizan requisitos, modelos y evidencias técnicas para explicar el diseño y el avance del producto.
 
-El siguiente cuadro organiza el registro de AV1 según los criterios de comunicación oral y escrita. Cada acción deberá identificar qué comunicó el integrante, a quién, cómo adaptó su explicación y qué evidencia la respalda. Los campos (COMPLETAR) corresponden a información individual no acreditada en los materiales recibidos; por ello, todavía no se declara alcanzado el logro por todos los participantes.
+El siguiente cuadro organiza el registro de AV1 según los criterios de comunicación oral y escrita. Cada acción deberá identificar qué comunicó el integrante, a quién y cómo adaptó su explicación de acuerdo con el contexto del proyecto.
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 | :--- | :--- | :--- |
-| **Comunica oralmente con efectividad a diferentes rangos de audiencia.** | **Noriega Collado, Jean Fabio — AV1:** (COMPLETAR: intervención realizada, tema explicado, audiencia, adaptación del lenguaje y enlace de video con minuto).<br><br>**Rivas Castillo, Christoper Steven — AV1:** (COMPLETAR: intervención realizada en entrevistas, planificación o sustentación; precisar audiencia, explicación y evidencia). La preparación de una reunión no acredita por sí sola una exposición oral.<br><br>**Simon Calderon, Ismael Sebastian — AV1:** (COMPLETAR: intervención realizada, audiencia y evidencia audiovisual).<br><br>**Collantes Artola, Marco Antonio — AV1:** Era importante tener que realizar las encuestas y coordinaciones necesarias para este proyecto en el menor tiempo posible, una cosa que ha tenido nuestro líder de equipo presente desde el inicio, pero también he buscado mantener la calma cuando se trata de entablar conversaciones tanto dentro como fuera del grupo, tal como se muestra a la hora de realizar entrevistas pues de esa forma se puede conocer mejor a los posibles clientes y a los compañeros que harán posible un proyecto como este.<br><br>**Emilia (COMPLETAR) — AV1:** (COMPLETAR).<br><br>**Benigno Montero, Harold Fauskorp — AV1:** (COMPLETAR: explicación realizada sobre los diseños o modelo de datos, si corresponde; identificar la audiencia, la decisión comunicada y el minuto de video). | **AV1 — Reflexión preliminar:** Comunicar LoadMatch requiere distinguir las preocupaciones de quienes contratan transporte y de quienes ofrecen capacidad de carga. Para las empresas, la explicación debe vincular el servicio con el cuidado de la mercadería, la confianza y la trazabilidad. Para los transportistas, debe aclarar el acceso a solicitudes compatibles y la gestión del servicio. Ante el docente y el equipo, estas necesidades deben relacionarse con las historias de usuario, los flujos y las decisiones de arquitectura. Las evidencias de intervención permitirán evaluar la claridad de las explicaciones y la respuesta a preguntas de cada audiencia. |
-| **Comunica por escrito con efectividad a diferentes rangos de audiencia.** | **Noriega Collado, Jean Fabio — AV1:** (COMPLETAR: sección o artefacto elaborado, información comunicada, audiencia y commit o versión).<br><br>**Rivas Castillo, Christoper Steven — AV1:** El borrador del Sprint Planning 1 lo identifica como responsable de su preparación. Este documento organiza el objetivo y las historias planificadas para comunicar el alcance al equipo. (COMPLETAR: confirmar autoría, versión y evidencia; los borradores recibidos presentan fechas distintas).<br><br>**Simon Calderon, Ismael Sebastian — AV1:** (COMPLETAR: sección o artefacto elaborado, propósito comunicativo, audiencia y evidencia de autoría).<br><br>**Collantes Artola, Marco Antonio — AV1:** En el aspecto escrito del proyecto, me centré principalmente en items donde se pudiese evidenciar mejor el perfil de personalidad que se busca en los clientes potenciales (tales como los empathy maps y las primeras versiones de los journey maps), y también busqué referenciar la experiencia promedio de nuestros usuarios en los gráficos preliminares de nuestra app (veasé los user flow diagrams y el prototipado preliminar de nuestra app).<br><br>**Emilia Durán — AV1:** (COMPLETAR).<br><br>**Benigno Montero, Harold Fauskorp — AV1:** Su perfil del Capítulo I declara aportes a wireframes, mock-ups y modelado de base de datos. Estos artefactos permiten comunicar la estructura de la interfaz y la organización de la información. (COMPLETAR: identificar el artefacto y las explicaciones de su autoría, su audiencia y el enlace o commit correspondiente). | **AV1 — Reflexión preliminar:** El informe combina descripciones del problema, resultados de entrevistas, historias de usuario, glosario y diagramas para comunicar información con distintos niveles de detalle. La Landing Page presenta la propuesta de valor a visitantes, mientras que la documentación técnica explica al equipo y al docente cómo se estructura la solución. La revisión del Sprint 1 muestra la necesidad de distinguir funcionalidades propuestas, código implementado y comportamiento verificado. Mantener esa precisión evita atribuir al producto capacidades todavía pendientes y permite comunicar con claridad el avance real. |
+| **Comunica oralmente con efectividad a diferentes rangos de audiencia.** | **Noriega Collado, Jean Fabio — AV1:** Durante las entrevistas realizadas a potenciales usuarios de LoadMatch, participó en la comunicación con dueños de negocios y transportistas para conocer cómo gestionan actualmente sus necesidades de transporte, qué dificultades encuentran y qué condiciones les generan mayor confianza. Para ello se utilizó la guía de preguntas preparada para cada segmento, manteniendo un lenguaje comprensible y orientado a obtener información útil para el análisis del proyecto.<br><br>**Rivas Castillo, Christoper Steven — AV1:** Participó en entrevistas realizadas a transportistas, donde se abordaron temas relacionados con la búsqueda de oportunidades de trabajo, los riesgos asociados al transporte de carga y la disposición a utilizar una plataforma con procesos de validación. Estas conversaciones permitieron recoger información directa del segmento y posteriormente incorporarla al análisis de necesidades del proyecto.<br><br>**Simon Calderon, Ismael Sebastian — AV1:** Durante las coordinaciones del Sprint 1, participé en la revisión e integración de las secciones del Landing Page que tenía asignadas, principalmente Cómo funciona, tarjetas de confianza, videos y enlaces CTA hacia la Web Application. Esto requirió comunicar al equipo el avance de estas secciones y coordinar su integración con el trabajo realizado por los demás integrantes.<br><br>**Collantes Artola, Marco Antonio — AV1:** Era importante tener que realizar las encuestas y coordinaciones necesarias para este proyecto en el menor tiempo posible, una cosa que ha tenido nuestro líder de equipo presente desde el inicio, pero también he buscado mantener la calma cuando se trata de entablar conversaciones tanto dentro como fuera del grupo, tal como se muestra a la hora de realizar entrevistas pues de esa forma se puede conocer mejor a los posibles clientes y a los compañeros que harán posible un proyecto como este.<br><br>**Benigno Montero, Harold Fauskorp — AV1:** Durante las coordinaciones del equipo, participó en la revisión de decisiones relacionadas con el diseño visual, la arquitectura y la organización de los datos de LoadMatch. La elaboración de wireframes, mock-ups, modelos C4, diagramas de clases y diseños de base de datos permitió apoyar estas explicaciones con artefactos visuales, facilitando que los integrantes pudieran revisar la estructura propuesta y coordinar posteriormente su implementación en el producto. | **AV1 — Reflexión preliminar:** Comunicar LoadMatch requiere distinguir las preocupaciones de quienes contratan transporte y de quienes ofrecen capacidad de carga. Para las empresas, la explicación debe vincular el servicio con el cuidado de la mercadería, la confianza y la trazabilidad. Para los transportistas, debe aclarar el acceso a solicitudes compatibles y la gestión del servicio. Ante el docente y el equipo, estas necesidades deben relacionarse con las historias de usuario, los flujos y las decisiones de arquitectura. Las evidencias de intervención permitirán evaluar la claridad de las explicaciones y la respuesta a preguntas de cada audiencia. |
+| **Comunica por escrito con efectividad a diferentes rangos de audiencia.** | **Noriega Collado, Jean Fabio — AV1:** En el aspecto escrito del proyecto, participó principalmente en la elaboración y mejora del Capítulo II, incluyendo el diseño y registro de entrevistas, User Personas, User Task Matrix, Big Picture Event Storming y Ubiquitous Language. También realizó aportes posteriores en la especificación de requisitos y en artefactos de diseño, permitiendo comunicar de manera estructurada las necesidades identificadas y su relación con la solución propuesta.<br><br>**Rivas Castillo, Christoper Steven — AV1:** Participó en el registro y actualización de las entrevistas del Capítulo II, incorporando información de los entrevistados, evidencias y resúmenes de los resultados obtenidos. Asimismo, trabajó en la configuración del entorno de desarrollo documentada en el Capítulo V y en secciones del Landing Page dirigidas a los segmentos de usuarios, contribuyendo a comunicar tanto el proceso de desarrollo como la propuesta del producto.<br><br>**Simon Calderon, Ismael Sebastian — AV1:** En la documentación del proyecto, trabajé en el registro y actualización de entrevistas y evidencias del Capítulo II, así como en diferentes apartados del Capítulo IV relacionados con Style Guidelines, arquitectura de información, wireframes, wireflows y documentación de los flujos de la aplicación. También participé en la implementación del Landing Page mediante las secciones Cómo funciona, tarjetas de confianza, videos y enlaces CTA, buscando mantener coherencia entre el diseño documentado y el producto implementado.<br><br>**Collantes Artola, Marco Antonio — AV1:** En el aspecto escrito del proyecto, me centré principalmente en items donde se pudiese evidenciar mejor el perfil de personalidad que se busca en los clientes potenciales (tales como los empathy maps y las primeras versiones de los journey maps), y también busqué referenciar la experiencia promedio de nuestros usuarios en los gráficos preliminares de nuestra app (veasé los user flow diagrams y el prototipado preliminar de nuestra app).<br><br>**Benigno Montero, Harold Fauskorp — AV1:** Su perfil del Capítulo I declara aportes a wireframes, mock-ups y modelado de base de datos. Estos artefactos permiten comunicar la estructura de la interfaz y la organización de la información. Durante el desarrollo del Capítulo IV también participó en la elaboración de la arquitectura DDD, diagramas C4, diagramas de clases por bounded context y diseño de base de datos, además de wireframes y mock-ups desktop y mobile del Landing Page. Posteriormente desarrolló los diseños del catálogo de vehículos y formulario de contacto, e implementó ambas funcionalidades en el Landing Page, manteniendo coherencia entre la documentación del diseño y el producto desarrollado. | **AV1 — Reflexión preliminar:** El informe combina descripciones del problema, resultados de entrevistas, historias de usuario, glosario y diagramas para comunicar información con distintos niveles de detalle. La Landing Page presenta la propuesta de valor a visitantes, mientras que la documentación técnica explica al equipo y al docente cómo se estructura la solución. La revisión del Sprint 1 muestra la necesidad de distinguir funcionalidades propuestas, código implementado y comportamiento verificado. Mantener esa precisión evita atribuir al producto capacidades todavía pendientes y permite comunicar con claridad el avance real. |
