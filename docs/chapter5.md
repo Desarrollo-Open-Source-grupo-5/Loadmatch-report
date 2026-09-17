@@ -443,7 +443,7 @@ En el primer sprint de trabajo, la atención fue centrada en el desarrollo del l
 
 *Desarrollado por: Ismael Sebastian Simon Calderon (Mayel-dev)*
 <p align="center">
-  <img src="[ENLACE_IMAGEN_COMMITS_ISMAEL]" alt="Commits Ismael" width="500">
+  <img src="../assets/images/Insights/Commits5.png" alt="Commits Ismael" width="500">
 </p>
 
 *Desarrollado por: Christoper Steven Rivas Castillo (C0DERTOPH)*
@@ -451,14 +451,14 @@ En el primer sprint de trabajo, la atención fue centrada en el desarrollo del l
   <img src="../assets/images/Insights/Commits3.png" alt="Commits Chris" width="500">
 </p>
 
-*Desarrollado por: nombre comleto (Harold-11)*
+*Desarrollado por: Harold (Harold-11)*
 <p align="center">
   <img src="../assets/images/Insights/Commits2.png" alt="Commits Harold" width="500">
 </p>
 
 *Desarrollado por: Marco Antonio Collantes Artola (Markollantes2307)*
 <p align="center">
-  <img src="[ENLACE_IMAGEN_COMMITS_SEBASTIAN]" alt="Commits Marco" width="500">
+  <img src="../assets/images/Insights/Commits4.png" alt="Commits Marco" width="500">
 </p>
 
 **Gráficos de colaboradores y actividad durante el sprint:** [PENDIENTE].
