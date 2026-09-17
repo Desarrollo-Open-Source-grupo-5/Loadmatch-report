@@ -338,7 +338,11 @@ La sección «Cómo funciona» contiene pestañas para empresas y transportistas
   <img src="../assets/images/landing/CapLanding2.jpeg" width="600">
 </p>
 
-[PENDIENTE: captura del catálogo de vehículos.]
+<p align="center">
+  <img src="../assets/images/landing/CapCatalogoVehiculos.png" alt="Catálogo de tipos de vehículos" width="600">
+</p>
+
+***Figura.*** Catálogo de tipos de vehículos (US13) con capacidades de carga y aviso de datos de ejemplo.
 
 **3. Testimonios y modelo de precios**
 
@@ -362,7 +366,17 @@ El formulario de contacto (US14) solicita nombre, correo, tipo de usuario y mens
   <img src="../assets/images/landing/CapLanding4.jpeg" width="600">
 </p>
 
-[PENDIENTE: capturas del formulario con errores de validación y con el mensaje de confirmación.]
+<p align="center">
+  <img src="../assets/images/landing/CapFormularioErrores.png" alt="Formulario de contacto con errores de validación" width="600">
+</p>
+
+***Figura.*** Formulario de contacto (US14) enviado con campos vacíos y un correo inválido: cada campo muestra su mensaje de error.
+
+<p align="center">
+  <img src="../assets/images/landing/CapFormularioConfirmacion.png" alt="Formulario de contacto con mensaje de confirmación" width="600">
+</p>
+
+***Figura.*** Formulario de contacto (US14) tras un envío válido: mensaje de confirmación y campos limpios.
 
 **5. Idiomas, adaptación y accesibilidad**
 
