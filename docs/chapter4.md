@@ -206,9 +206,11 @@ La estructura principal de la Landing Page considera:
 
 - Inicio.
 - Cómo funciona.
+- Tipos de vehículos.
 - Para empresas.
 - Para transportistas.
 - Preguntas frecuentes.
+- Contáctanos.
 - Iniciar sesión.
 - Registrarse.
 
@@ -347,6 +349,8 @@ La Landing Page utiliza una navegación horizontal en escritorio y un menú adap
 
 También se utilizan llamadas a la acción como **Necesito transportar carga** y **Soy transportista**, que permiten dirigir rápidamente al visitante hacia el flujo correspondiente.
 
+Además, la navegación contextual conecta secciones que no figuran en la cabecera: el botón **Ver tipos de vehículos**, ubicado en el primer paso de **Cómo funciona**, lleva al catálogo de vehículos, y el enlace **Contacto** del pie de página lleva al formulario **Contáctanos**.
+
 #### Navigation System para empresas
 
 La Web Application de empresas utiliza una barra lateral persistente.
@@ -381,17 +385,19 @@ Esta sección presenta la propuesta de interfaz para el sitio web estático de L
 
 El trabajo se organizó en dos etapas. Primero el wireframe, que fija estructura, jerarquía y flujo sin comprometer decisiones visuales. Después el mock-up, que aplica sobre esa misma estructura el Design System definido en la sección 4.1. Ambas etapas se elaboraron para las dos experiencias que exige el alcance del proyecto: Desktop Web Browser a 1440 px y Mobile Web Browser a 390 px.
 
-La landing page se compone de nueve bloques, presentados aquí en el mismo orden en que los recorre el visitante:
+La landing page se compone de once bloques, presentados aquí en el mismo orden en que los recorre el visitante:
 
 | # | Bloque | Propósito |
 | :-: | :--- | :--- |
 | 01 | Cabecera y sección principal | Presentar la propuesta de valor y ofrecer el llamado a la acción de cada segmento |
 | 02 | Franja de indicadores del mercado | Sustentar la problemática con datos verificables |
 | 03 | Cómo funciona | Explicar el proceso de tres pasos, diferenciado por segmento |
+| 03b | Tipos de vehículos | Mostrar las capacidades de carga disponibles para elegir una opción de envío |
 | 04 | Confianza y bloques por segmento | Responder a la principal objeción del cliente y separar los beneficios por perfil |
 | 05 | Lo que dicen nuestros usuarios | Aportar prueba social |
 | 06 | Precios transparentes | Despejar la incertidumbre sobre el costo |
 | 07 | Preguntas frecuentes | Resolver las dudas restantes sin abandonar la página |
+| 07b | Contáctanos | Canalizar las dudas no resueltas mediante un formulario con validación |
 | 08 | Videos explicativos | Presentar el producto y al equipo en formato audiovisual |
 | 09 | Cierre y pie de página | Última oportunidad de conversión y acceso a información legal |
 
@@ -423,6 +429,12 @@ Los tres pasos van numerados y ordenados de izquierda a derecha, siguiendo la di
 
 <img src="../assets/images/landing-page/wireframes-desktop/wireframe-desktop-03-how-it-works.png" alt="Wireframe de escritorio: dos pestañas para elegir perfil y tres pasos numerados en columnas, cada uno con una captura de la aplicación, un título y una descripción" width="700">
 
+**Bloque 03b — Tipos de vehículos**
+
+Tres tarjetas de igual tamaño presentan los tipos de vehículo en orden creciente de capacidad. Cada tarjeta repite la misma estructura —imagen, nombre, capacidad y uso recomendado—, de modo que el principio de similitud permite compararlas de un vistazo. La capacidad se destaca con mayor peso tipográfico porque es el dato que decide la elección. Una nota al pie aclara que se trata de datos de ejemplo.
+
+<img src="../assets/images/landing-page/wireframes-desktop/wireframe-desktop-03b-vehicles.png" alt="Wireframe de escritorio: título centrado y tres tarjetas en fila, cada una con un marcador de imagen, el nombre del vehículo, su capacidad y una descripción, con una nota de datos de ejemplo debajo" width="700">
+
 **Bloque 04 — Confianza y bloques por segmento**
 
 Las cuatro tarjetas de verificación responden directamente a la principal objeción detectada en las entrevistas: la desconfianza sobre quién transporta la mercadería. Se ubican inmediatamente después de la explicación del proceso, que es el momento en el que esa objeción aparece.
@@ -448,6 +460,12 @@ La tarjeta central concentra el modelo de negocio real —la comisión sobre el 
 El acordeón permite revisar los cinco títulos de un vistazo y desplegar solo la respuesta que interesa, lo que evita una pared de texto. La primera pregunta se muestra desplegada para comunicar de entrada que las filas son interactivas. El estado abierto o cerrado se indica con los signos menos y más, es decir mediante forma y no únicamente por color.
 
 <img src="../assets/images/landing-page/wireframes-desktop/wireframe-desktop-07-faq.png" alt="Wireframe de escritorio: acordeón con cinco preguntas, la primera desplegada mostrando su respuesta, cada fila con un signo menos o más a la derecha" width="700">
+
+**Bloque 07b — Contáctanos**
+
+El formulario se presenta en una sola columna, con la etiqueta sobre cada campo, lo que acorta el recorrido visual y evita que el usuario tenga que recordar qué pide cada campo. Los marcadores de posición muestran un ejemplo del dato esperado, lo que ayuda a prevenir errores. El wireframe muestra además los estados de error, con el mensaje debajo del campo afectado, y el mensaje de confirmación que aparece tras un envío válido.
+
+<img src="../assets/images/landing-page/wireframes-desktop/wireframe-desktop-07b-contact.png" alt="Wireframe de escritorio: formulario de una columna con nombre, correo con mensaje de error, selector de perfil y mensaje, un botón de envío y un recuadro de confirmación" width="700">
 
 **Bloque 08 — Videos explicativos**
 
@@ -481,6 +499,12 @@ Las pestañas se conservan, porque la necesidad de segmentar por perfil no depen
 
 <img src="../assets/images/landing-page/wireframes-mobile/wireframe-mobile-03-how-it-works.png" alt="Wireframe móvil: las dos pestañas conservadas en la parte superior y los tres pasos apilados, cada uno en su propia tarjeta" width="300">
 
+**Bloque 03b — Tipos de vehículos**
+
+Las tres tarjetas se apilan a ancho completo y conservan la misma estructura interna, por lo que la comparación entre vehículos se mantiene al desplazarse verticalmente.
+
+<img src="../assets/images/landing-page/wireframes-mobile/wireframe-mobile-03b-vehicles.png" alt="Wireframe móvil: las tres tarjetas de vehículos apiladas a ancho completo, cada una con su marcador de imagen, nombre, capacidad y descripción" width="300">
+
 **Bloque 04 — Confianza y bloques por segmento**
 
 Las cuatro tarjetas de verificación y los dos bloques por segmento pasan a una sola columna. El orden se conserva, de modo que el recorrido de la información es equivalente al de escritorio y el visitante que cambia de dispositivo encuentra el mismo relato.
@@ -504,6 +528,12 @@ Las tres tarjetas se apilan conservando el énfasis de la tarjeta central, que m
 El acordeón es el patrón que mejor se adapta al ancho reducido, porque comprime cinco respuestas extensas en cinco títulos de una o dos líneas.
 
 <img src="../assets/images/landing-page/wireframes-mobile/wireframe-mobile-07-faq.png" alt="Wireframe móvil: acordeón de preguntas frecuentes ocupando el ancho completo de la pantalla" width="300">
+
+**Bloque 07b — Contáctanos**
+
+Los campos y el botón de envío ocupan el ancho completo, lo que amplía el área táctil. Los mensajes de error se ubican inmediatamente debajo de cada campo para que sigan visibles junto al dato que deben corregir.
+
+<img src="../assets/images/landing-page/wireframes-mobile/wireframe-mobile-07b-contact.png" alt="Wireframe móvil: formulario a ancho completo con mensajes de error bajo los campos, botón de envío de ancho completo y recuadro de confirmación" width="300">
 
 **Bloque 08 — Videos explicativos**
 
@@ -529,7 +559,7 @@ La banda de cierre apila titular y botones, y estos ocupan el ancho completo. Lo
 
 **Diseño inclusivo.** Ningún estado se comunica exclusivamente mediante el color: la pestaña activa se marca además con un subrayado, el acordeón con los signos menos y más, la tarjeta de precio destacada con un borde y una etiqueta de texto, y el carrusel con un contador numérico. La jerarquía de encabezados es continua y sin saltos de nivel. La estructura prevé un enlace para omitir la navegación e ir directamente al contenido principal, dirigido a quienes navegan mediante teclado.
 
-**Arquitectura de información.** El orden de los nueve bloques reproduce el recorrido de decisión del visitante: qué es el servicio, por qué existe el problema, cómo funciona, por qué confiar, quién lo respalda, cuánto cuesta, qué dudas quedan, cómo verlo en detalle y dónde convertir. Los enlaces de navegación se corresponden uno a uno con las secciones definidas en el Organization System de la sección 4.2.1, y las etiquetas provienen del Labeling System de la sección 4.2.2.
+**Arquitectura de información.** El orden de los once bloques reproduce el recorrido de decisión del visitante: qué es el servicio, por qué existe el problema, cómo funciona, con qué vehículos cuenta, por qué confiar, quién lo respalda, cuánto cuesta, qué dudas quedan, cómo consultarlas, cómo verlo en detalle y dónde convertir. Los enlaces de navegación se corresponden uno a uno con las secciones definidas en el Organization System de la sección 4.2.1, y las etiquetas provienen del Labeling System de la sección 4.2.2.
 
 ### 4.3.2. Landing Page Mock-up
 
@@ -555,6 +585,12 @@ La pestaña activa se marca con un subrayado naranja y un peso tipográfico mayo
 
 <img src="../assets/images/landing-page/mockups-desktop/mockup-desktop-03-how-it-works.png" alt="Mock-up de escritorio: pestaña activa subrayada en naranja, y tres pasos con círculos numerados naranjas sobre capturas de la aplicación" width="700">
 
+**Bloque 03b — Tipos de vehículos**
+
+Las tarjetas usan fondo blanco sobre el fondo alternativo de la paleta, con borde sutil y el radio de esquina de 8 px. Las fotografías muestran vehículos sobre fondo blanco para que la forma y el tamaño de cada uno se comparen sin distracciones. El nombre y la capacidad van en azul marino y la descripción en el gris de texto secundario.
+
+<img src="../assets/images/landing-page/mockups-desktop/mockup-desktop-03b-vehicles.png" alt="Mock-up de escritorio: tres tarjetas blancas con fotografías de una furgoneta, un camión ligero y un camión mediano, con el nombre y la capacidad en azul marino" width="700">
+
 **Bloque 04 — Confianza y bloques por segmento**
 
 Los iconos de las tarjetas de verificación se presentan sobre un fondo naranja tenue, lo que los integra a la paleta sin recurrir a un color de acento adicional. En los bloques por segmento, el de empresas cierra con el botón primario y el de transportistas con el secundario, reflejando la misma jerarquía de la cabecera.
@@ -578,6 +614,12 @@ La tarjeta central se destaca mediante un borde más grueso en azul marino y una
 Las preguntas emplean el color de encabezado y las respuestas el de texto secundario. La diferencia de peso y tono establece la relación jerárquica entre pregunta y respuesta sin recurrir a recuadros ni fondos adicionales.
 
 <img src="../assets/images/landing-page/mockups-desktop/mockup-desktop-07-faq.png" alt="Mock-up de escritorio: acordeón con las preguntas en azul marino, separadas por líneas horizontales, con la primera respuesta desplegada en gris" width="700">
+
+**Bloque 07b — Contáctanos**
+
+El botón de envío emplea el naranja de marca con texto azul marino, igual que el resto de llamados a la acción principales. El mensaje de confirmación combina texto verde, borde y un enunciado explícito, de modo que el estado no depende solo del color. En los errores, el campo toma un borde rojo y el mensaje explica cómo corregir el dato.
+
+<img src="../assets/images/landing-page/mockups-desktop/mockup-desktop-07b-contact.png" alt="Mock-up de escritorio: formulario con campos de borde claro, botón naranja Enviar consulta y mensaje verde de confirmación" width="700">
 
 **Bloque 08 — Videos explicativos**
 
@@ -613,6 +655,12 @@ Las pestañas para empresas y transportistas se conservan en la parte superior, 
 
 <img src="../assets/images/landing-page/mockups-mobile/mockup-mobile-03-how-it-works.png" alt="Mock-up móvil: pestañas con la activa subrayada en naranja y los tres pasos apilados en tarjetas, cada una con su círculo numerado" width="300">
 
+**Bloque 03b — Tipos de vehículos**
+
+Las tarjetas apiladas conservan las fotografías a ancho completo, que en móvil funcionan como principal señal para distinguir cada vehículo.
+
+<img src="../assets/images/landing-page/mockups-mobile/mockup-mobile-03b-vehicles.png" alt="Mock-up móvil: las tres tarjetas de vehículos apiladas, cada una con su fotografía, nombre, capacidad y descripción" width="300">
+
 **Bloque 04 — Confianza y bloques por segmento**
 
 Las tarjetas de verificación conservan su iconografía y estructura, pero pasan a organizarse verticalmente. Los bloques dirigidos a empresas y transportistas también se presentan en una sola columna, utilizando botones de ancho completo para facilitar la interacción.
@@ -636,6 +684,12 @@ Las tarjetas de precios dejan de mostrarse lado a lado y se apilan verticalmente
 El acordeón ocupa el ancho disponible de la pantalla. Las preguntas y respuestas mantienen una separación clara, mientras que los controles de expansión permanecen alineados al borde derecho y dentro de un área fácilmente accesible mediante interacción táctil.
 
 <img src="../assets/images/landing-page/mockups-mobile/mockup-mobile-07-faq.png" alt="Mock-up móvil: acordeón de preguntas frecuentes a ancho completo, con la primera respuesta desplegada" width="300">
+
+**Bloque 07b — Contáctanos**
+
+El formulario ocupa el ancho completo y el botón naranja se extiende de borde a borde, lo que supera el área táctil mínima de 44 × 44 píxeles. El mensaje de confirmación aparece debajo del botón, en el punto donde el usuario ya tiene la mirada tras enviar.
+
+<img src="../assets/images/landing-page/mockups-mobile/mockup-mobile-07b-contact.png" alt="Mock-up móvil: formulario a ancho completo con botón naranja y mensaje verde de confirmación debajo" width="300">
 
 **Bloque 08 — Videos explicativos**
 
