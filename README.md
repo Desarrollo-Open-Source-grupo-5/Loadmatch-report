@@ -150,11 +150,11 @@ Durante esta fase, el equipo elaboró el informe inicial, que incluyó los sigui
 
 | Integrante | Usuario GitHub | Commits | Adiciones | Eliminaciones |
 | :--- | :--- | :---: | :---: | :---: |
-| Noriega Collado, Jean Fabio | USER | 102 | 3120 | 410 |
+| Noriega Collado, Jean Fabio | dumbaskidd | 102 | 3120 | 410 |
 | Rivas Castillo, Christoper Steven | C0DERTOPH | 68 | 1985 | 230 |
-| Simon Calderon, Ismael Sebastian | USER | 41 | 1270 | 150 |
+| Simon Calderon, Ismael Sebastian | Mayel-dev | 41 | 1270 | 150 |
 | Collantes Artola, Marco Antonio | Markollantes2307 | 20 | 640 | 95 |
-| Benigno Montero, Harold Fauskorp | USER | 12 | 410 | 60 |
+| Benigno Montero, Harold Fauskorp | Harold-11 | 12 | 410 | 60 |
 
 ---
 
