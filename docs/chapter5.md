@@ -436,7 +436,17 @@ La versión 1.0.0 se publicó en GitHub Pages desde la rama `main`.
 | Fecha de publicación | 16/09/2026 |
 | Prueba posterior | Carga de la URL pública, navegación, cambio de idioma y página legal. |
 
-[PENDIENTE: captura de `Settings > Pages` y de la página abierta en su URL pública.]
+<p align="center">
+  <img src="../assets/images/landing/CapGitHubPages.png" alt="Configuración de GitHub Pages del repositorio" width="900">
+</p>
+
+***Figura.*** Configuración de GitHub Pages en `Settings > Pages`: sitio publicado desde la rama `main`, carpeta `/ (root)`, con HTTPS obligatorio.
+
+<p align="center">
+  <img src="../assets/images/landing/CapURLPublica.png" alt="Landing Page abierta en su URL pública" width="900">
+</p>
+
+***Figura.*** Landing Page de LoadMatch abierta en su URL pública de GitHub Pages.
 
 #### 5.2.1.8. Team Collaboration Insights during Sprint
 
