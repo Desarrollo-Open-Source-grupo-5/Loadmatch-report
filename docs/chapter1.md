@@ -40,7 +40,7 @@ A futuro, LoadMatch podrá incorporar tecnologías IoT mediante dispositivos ins
 </td>
 <td>Ingeniería de Software</td>
 <td>
-  Estudio ingenieria de software. Me gusta liderar equipos de trabajo y mantener ambientes ordenados en la medida de lo posible. Entre mis habilidades, podria decir que soy suficiente y eficiente, de manera que cubro los aspectos necesarios para la realizacion de proyectos largos y complejos. Siguiendo los principios por los cuales estudio la carrera.
+  Estudio ingeniería de software. Me gusta liderar equipos de trabajo y mantener ambientes ordenados en la medida de lo posible. Entre mis habilidades, podría decir que soy suficiente y eficiente, de manera que cubro los aspectos necesarios para la realización de proyectos largos y complejos. Siguiendo los principios por los cuales estudio la carrera.
 </td>
 </tr>
 
@@ -89,7 +89,7 @@ A futuro, LoadMatch podrá incorporar tecnologías IoT mediante dispositivos ins
 
 <tr>
 <td align="center">
-  <img src="../assets/Chapter1/Team/harold.png" alt="Integrante 6" width="150">
+  <img src="../assets/Chapter1/Team/harold.png" alt="Integrante 5" width="150">
 </td>
 <td>
   Benigno Montero, Harold Fauskorp<br>
@@ -97,7 +97,7 @@ A futuro, LoadMatch podrá incorporar tecnologías IoT mediante dispositivos ins
 </td>
 <td>Ingeniería de Software</td>
 <td>
-  Soy Harold Benigno, estudiante de Ingeniería de Software. Para el presente proyecto estoy aportando con los wireframes, mockups y el modelado de base de datos. Cuento con conocimiento en git, github, C++, HTML, CSS, JS, POO, algoritmos y estructura de datos, modelamiento de bases de datos relacionales, no relacionales, MongoDB y muy buen dominio de PostgreSQL y SQL Server.
+  Soy Harold Benigno, estudiante de Ingeniería de Software. Para el presente proyecto estoy aportando con los wireframes, mockups y el modelado de base de datos. Cuento con conocimiento en Git, Github, C++, HTML, CSS, JS, POO, algoritmos y estructura de datos, modelamiento de bases de datos relacionales, no relacionales, MongoDB y muy buen dominio de PostgreSQL y SQL Server.
 </td>
 </tr>
 
