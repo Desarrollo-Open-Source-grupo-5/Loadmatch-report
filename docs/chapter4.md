@@ -1385,7 +1385,7 @@ A continuación veremos el funcionamiento preliminar de la aplicación por medio
 
 <img src="../assets/images/Graphics/Prototyping.png">
 
-<a href="https://www.figma.com/proto/b2Bc4VRPXUGY61iyefa5I6/LoadMatch---Open-Source?node-id=120-3&p=f&t=lAU4l4ZzCTUcVxt6-0&scaling=scale-down&content-scaling=fixed&page-id=120%3A2&starting-point-node-id=120%3A3">Prototipo en Figma de LoadMatch</a>
+Para poder apreciar mejor el trabajo realizado en este prototipo, esta invitado a probarlo por su cuenta mediante el siguiente <a href="https://www.figma.com/proto/b2Bc4VRPXUGY61iyefa5I6/LoadMatch---Open-Source?node-id=120-3&p=f&t=lAU4l4ZzCTUcVxt6-0&scaling=scale-down&content-scaling=fixed&page-id=120%3A2&starting-point-node-id=120%3A3">enlace a Figma</a>, o puede ver una presentación en directo del prototipo actual en funcionamiento haciendo <a href="https://upcedupe-my.sharepoint.com/personal/u202310342_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202310342%5Fupc%5Fedu%5Fpe%2FDocuments%2FDesarrollo%20de%20Open%20Source%20%2D%202026%2D2%2FPrototipo%5FLoadMatch%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Ea560a59d%2D3e61%2D41f8%2Dbb60%2D1f2b1f0a5bbc">click aquí</a>
 
 ## 4.6. Domain-Driven Software Architecture
 
