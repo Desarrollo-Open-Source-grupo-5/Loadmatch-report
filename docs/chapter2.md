@@ -163,7 +163,7 @@ Para que considere utilizar una solución como LoadMatch, la seguridad sería un
 | **Distrito** | San Juan de Lurigancho, Lima, Perú |
 | **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323551_upc_edu_pe/IQB202QxElaeSbRKuQOrZ3XgARvfvQPkIKKUwLtaRsqauuE?e=FRdDfF&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
 | **Timing de inicio y duración** | Inicio: 00:00 - Duración: 6:41 minutos |
-| **Evidencia fotográfica** | <img src="../assets/Chapter2/Interviews/Imagensegmento1-crivas.jpeg" alt="Evidencia Entrevista 2" width="300"> |
+| **Evidencia fotográfica** | <img src="../assets/Chapter2/Interviews/Imagensegmento1-crivas.jpeg" alt="Evidencia Entrevista 4" width="300"> |
 
 **Resumen de la entrevista:**
 
@@ -171,7 +171,7 @@ El entrevistado es copiloto y administrador operativo del negocio de transporte 
 
 Su objetivo principal es dejar de depender de intermediarios informales, conseguir contratos directos con empresas medianas para tener un flujo de caja predecible y renovar su unidad. Su mayor frustración es la desconfianza de las empresas por la mala fama general del sector, los pagos a 60-90 días, los "clientes fantasma" y la competencia desleal del transporte informal.
 
-Para adoptar una nueva plataforma digital, está totalmente dispuesto a pasar por un proceso estricto de validación documental. Exige que la plataforma le otorgue un distintivo visible de "Transportista Verificado" o "Socio Logístico Confiable", ya que considera que esta validación es su mejor argumento de venta para diferenciarse del informal y ganar la confianza de clientes empresariales serios.
+Para adoptar una nueva plataforma digital, está totalmente dispuesto a pasar por un proceso estricto de validación documental. Exige que la plataforma le otorgue un distintivo visible de "Transportista Verificado" o "Socio Logístico Confiable", ya que considera que esta validación es su mejor argumento de venta para diferenciarse del informal y ganar la confianza de clientes empresariales.
 
 ---
 
@@ -184,11 +184,11 @@ Para adoptar una nueva plataforma digital, está totalmente dispuesto a pasar po
 | **Distrito** | Pueblo Libre |
 | **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/personal/u202310342_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202310342%5Fupc%5Fedu%5Fpe%2FDocuments%2FDesarrollo%20de%20Open%20Source%20%2D%202026%2D2%2FTransportistas%20y%20due%C3%B1os%20de%20veh%C3%ADculos%20de%20carga%2FEntrevistaTransportistaTitoSifuentes%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E226abae8%2D7b5b%2D40ba%2Db438%2Dc6b82a93b0ee |
 | **Timing de inicio y duración** | Inicio: 1:00 Duración: 5:20 |
-| **Evidencia fotográfica** | <img src="../assets/Chapter2/Interviews/LoadMatch-Transportista1.png" alt="Evidencia Entrevista 3" width="300"> |
+| **Evidencia fotográfica** | <img src="../assets/Chapter2/Interviews/LoadMatch-Transportista1.png" alt="Evidencia Entrevista 5" width="300"> |
 
 **Resumen de la entrevista:**
 
-El entrevistado opera como transportista de mercadería en una empresa de lubricantes de motor con sede en Pueblo Libre, por la naturaleza de su trabajo tiene que realizar viajes de forma constante hacia los diferentes clientes del negocio y principalmente emplea aplicaciones como Whatsapp y los servicios de inDrive y Uber para contactar con sus clientes y jefes, y por el momento confía en empresas como Entel para su smartphone marca Samsung.
+El entrevistado opera como transportista de mercadería en una empresa de lubricantes de motor con sede en Pueblo Libre, por la naturaleza de su trabajo tiene que realizar viajes de forma constante hacia los diferentes clientes del negocio y principalmente emplea aplicaciones como WhatsApp y los servicios de inDrive y Uber para contactar con sus clientes y jefes, y por el momento confía en empresas como Entel para su smartphone marca Samsung.
 
 En sus 7 años de carrera como chofer este se mantiene en constante estado de aprendizaje, con la meta básica de seguir creciendo como persona y profesional en un negocio donde se expone a constantes riesgos producto de la situación política del país, y como muchos le preocupa el tema de la informalidad del transporte que se vive actualmente.
 
@@ -205,7 +205,7 @@ El señor Sifuentes expresó su interés en una aplicación como la nuestra, sie
 | **Distrito** | Puente Piedra, Lima, Perú |
 | **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323551_upc_edu_pe/IQCXMP7YhDGBRIpNEYDMTaPxARBXZBXzhvbS1rtrUGrfBIA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=wCHiu7 |
 | **Timing de inicio y duración** | Inicio: 00:00 - Duración: 6:50 minutos |
-| **Evidencia fotográfica** | <img src="../assets/Chapter2/Interviews/Imagensegmento1Luciano-crivas.jpeg" alt="Evidencia Entrevista 2" width="300"> |
+| **Evidencia fotográfica** | <img src="../assets/Chapter2/Interviews/Imagensegmento1Luciano-crivas.jpeg" alt="Evidencia Entrevista 6" width="300"> |
 
 **Resumen de la entrevista:**
 
@@ -213,7 +213,7 @@ El entrevistado es un joven de 25 años que gestiona la flota de 3 camiones del 
 
 Sus principales pain points son la competencia desleal de la informalidad (que deprime los precios), los pagos a 60-90 días de las empresas que asfixian su capital de trabajo, y la pérdida de dinero por "horas de espera" no remuneradas en los almacenes.
 
-Frente a la propuesta, muestra una receptividad entusiasta (10/10). Ve la validación documental estricta no como un trámite, sino como su principal ventaja competitiva. Está dispuesto a someterse a filtros rigurosos si la plataforma le otorga un "Sello de Verificación" que le permita acceder a una red de clientes empresariales serios, diferenciándose así del transporte informal.
+Frente a la propuesta, muestra una receptividad entusiasta (10/10). Ve la validación documental estricta no como un trámite, sino como su principal ventaja competitiva. Está dispuesto a someterse a filtros rigurosos si la plataforma le otorga un "Sello de Verificación" que le permita acceder a una red de clientes empresariales, diferenciándose así del transporte informal.
 
 ---
 
@@ -223,7 +223,7 @@ Frente a la propuesta, muestra una receptividad entusiasta (10/10). Ve la valida
 
 **Entrevista 1 (Pilar Jeannette Collado Urbina):** La entrevistada evidencia una alta aversión al riesgo en lo que respecta a la presentación y cuidado de sus productos (repostería), al punto de depender actualmente de un chofer de confianza contratado por tiempo en lugar de usar aplicativos de transporte estándar. Su testimonio demuestra que la falta de garantías en el manejo de la carga es su mayor frustración y pérdida de valor. Para mitigar este riesgo, valora positivamente que la plataforma exija filtros rigurosos a los conductores (antecedentes penales, validación vehicular) e indumentaria adecuada (cajas herméticas).
 
-**Entrevista 2 (Ronald Cortez Joseli):** El entrevistado dirige un negocio de manufactura con impresoras 3D y utiliza servicios de paquetería estándar y fletes por aplicativos, pero se encuentra muy insatisfecho debido a los daños a sus productos y los retrasos en las entregas, lo que afecta directamente su reputación ante sus clientes. Para él, es crucial la profesionalidad y cuidado de los conductores, y para adoptar una plataforma nueva, requeriría la máxima facilidad para contactarlos y total confiabilidad en el transporte.
+**Entrevista 2 (Ronald Cortez Joseli):** El entrevistado dirige un negocio de manufactura con impresoras 3D y utiliza servicios de paquetería estándar y fletes por aplicativos, pero se encuentra muy insatisfecho debido a los daños a sus productos y los retrasos en las entregas, lo que afectan directamente su reputación ante sus clientes. Para él, es crucial la profesionalidad y cuidado de los conductores, y para adoptar una plataforma nueva, requeriría la máxima facilidad para contactarlos y total confiabilidad en el transporte.
 
 **Entrevista 3 (Diego Chuquillanqui Estrada):** Diego, propietario de una óptica, confía solo en transportistas conocidos debido a malas experiencias y desconfianza. Sin embargo, sufre por la lentitud e ineficiencia que a veces esto conlleva. Él destaca que la transparencia, el seguimiento y la verificación formal del transportista (antecedentes, licencia y documentación) serían factores determinantes para empezar a confiar en una plataforma de intermediación logística.
 
@@ -259,7 +259,7 @@ El análisis confirma que para los emprendedores formales y dueños de pequeños
 | Frustración por pagos aplazados y horas muertas no remuneradas | 66% | #4, #6 | Mateo y Luciano critican las condiciones financieras que asfixian su capital. |
 
 **Conclusión del Segmento 2:**
-El análisis revela que los transportistas serios (quienes tienen sus documentos en regla y operan unidades formales) se ven muy perjudicados por la informalidad y las malas condiciones de las empresas que pagan a plazos larguísimos. Contradiciendo la creencia de que un registro largo aleja a los usuarios, este segmento (66%) ve las validaciones documentales rigurosas como un "Sello de Verificación" deseable, ya que les permite diferenciarse y acceder a empresas formales que valoren la seguridad. LoadMatch, por tanto, ofrece un ecosistema mutuo: brinda a los transportistas los clientes formales que buscan, a cambio de que pasen los filtros que exigen dichos clientes empresariales.
+El análisis revela que los transportistas formales (quienes tienen sus documentos en regla y operan unidades formales) se ven muy perjudicados por la informalidad y las malas condiciones de las empresas que pagan a plazos muy largos. Contradiciendo la creencia de que un registro largo aleja a los usuarios, este segmento (66%) ve las validaciones documentales rigurosas como un "Sello de Verificación" deseable, ya que les permite diferenciarse y acceder a empresas formales que valoren la seguridad. LoadMatch, por tanto, ofrece un ecosistema mutuo: brinda a los transportistas los clientes formales que buscan, a cambio de que pasen los filtros que exigen dichos clientes empresariales.
 
 ---
 
@@ -276,7 +276,6 @@ En esta sección se presentan las fichas de User Persona, construidas a partir d
 </p>
 
 ***Nota.*** Ficha que representa el arquetipo del Segmento 1. Detalla sus objetivos orientados a proteger la integridad de sus productos y su frustración ante la informalidad y descuido de las soluciones de transporte tradicionales.
-*(Pendiente - Ficha UXPressia)*
 
 **User Persona 2: Roberto Sánchez - Transportista / Dueño de vehículo de carga**
 
