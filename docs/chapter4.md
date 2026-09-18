@@ -189,14 +189,14 @@ El diseño responsive considera la reorganización de columnas, tarjetas, contro
 
 De esta manera, los estándares visuales y de interacción definidos para LoadMatch permiten mantener una experiencia coherente entre la Landing Page y la Web Application, reforzando la identidad de marca y facilitando el uso de la plataforma en diferentes tamaños de pantalla.
 
-## 4.2. Information Architecture.
+## 4.2. Information Architecture
 
 La arquitectura de información de LoadMatch se ha definido con el propósito de organizar el contenido y las funcionalidades de manera clara, consistente y fácil de recorrer. Debido a que la solución atiende a dos segmentos principales —empresas que requieren transportar carga y transportistas que buscan oportunidades de servicio—, la estructura se adapta a las necesidades y tareas de cada tipo de usuario.
 
 Para ello, se emplean sistemas de organización jerárquicos y secuenciales, etiquetas breves y comprensibles, mecanismos de búsqueda y filtrado, y patrones de navegación que permiten localizar información y completar las principales tareas dentro de la Landing Page y la Web Application.
 
 
-### 4.2.1. Organization Systems.
+### 4.2.1. Organization Systems
 
 LoadMatch utiliza principalmente una organización **jerárquica**, debido a que las funcionalidades se agrupan desde categorías generales hacia opciones más específicas. Esta estructura se aplica tanto en la Landing Page como en la Web Application.
 
@@ -251,7 +251,7 @@ La organización matricial no constituye la estructura principal de LoadMatch, a
 </p>
 
 
-### 4.2.2. Labeling Systems.
+### 4.2.2. Labeling Systems
 
 El sistema de etiquetado de LoadMatch utiliza términos breves, descriptivos y orientados a la acción. Se busca reducir la ambigüedad y utilizar el menor número de palabras posible para que el usuario pueda comprender rápidamente la función de cada sección o elemento.
 
@@ -274,7 +274,7 @@ Esta diferenciación facilita que el usuario pueda reconocer rápidamente si un 
 </p>
 
 
-### 4.2.3. SEO Tags and Meta Tags.
+### 4.2.3. SEO Tags and Meta Tags
 
 Los SEO Tags y Meta Tags de LoadMatch se definen con el objetivo de describir correctamente el contenido de las principales páginas de la Landing Page y la Web Application.
 
@@ -292,7 +292,7 @@ Adicionalmente, las páginas utilizan `lang="es"` y el Meta Tag `viewport` para 
 En el caso de las vistas autenticadas, estos metadatos también permiten identificar claramente cada página dentro del navegador, aunque su objetivo principal no sea el posicionamiento público en motores de búsqueda.
 
 
-### 4.2.4. Searching Systems.
+### 4.2.4. Searching Systems
 
 LoadMatch incorpora mecanismos de búsqueda y filtrado para evitar que el usuario tenga que recorrer manualmente grandes cantidades de información. Los criterios disponibles dependen del tipo de usuario y de la tarea realizada.
 
@@ -328,7 +328,7 @@ Los resultados se presentan mediante tarjetas que muestran información como **o
 La interfaz también incorpora una representación geográfica que permite visualizar las oportunidades disponibles en relación con la ubicación del transportista.
 
 
-### 4.2.5. Navigation Systems.
+### 4.2.5. Navigation Systems
 
 El sistema de navegación de LoadMatch se ha diseñado para que los usuarios puedan recorrer el contenido de manera predecible y acceder rápidamente a las funciones relacionadas con sus objetivos.
 
