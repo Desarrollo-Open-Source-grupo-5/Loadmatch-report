@@ -1,0 +1,11 @@
+# Conclusiones y Recomendaciones
+
+# Conclusiones
+
+## AV1
+
+A partir del análisis del perfil de CargoLink Labs y de la problemática relacionada con el transporte terrestre de mercadería, se concluye que existe una necesidad concreta de facilitar la conexión entre emprendimientos y MIPYME que requieren trasladar productos y transportistas que cuentan con capacidad disponible. La fragmentación de la búsqueda de proveedores, la dificultad para evaluar su confiabilidad y la limitada trazabilidad del servicio representan puntos de fricción relevantes para los usuarios analizados. En este contexto, LoadMatch plantea una propuesta orientada a centralizar la publicación de solicitudes, la búsqueda de transporte compatible, la validación de transportistas y el seguimiento de los servicios dentro de un mismo entorno digital.
+
+El proceso de investigación y validación desarrollado durante el AV1 permitió identificar necesidades recurrentes en ambos segmentos objetivo. En el caso de los negocios, destacaron principalmente la confianza, la validación del transportista y la puntualidad como factores relevantes al momento de contratar un servicio de carga. Por parte de los transportistas, se identificaron preocupaciones relacionadas con la informalidad del sector, la necesidad de diferenciarse mediante documentación validada y el interés por acceder a clientes formales y oportunidades de trabajo más estables. Estos hallazgos permitieron orientar las User Stories y el Product Backlog hacia funcionalidades relacionadas directamente con las necesidades observadas durante las entrevistas.
+
+Finalmente, se concluye que los artefactos de diseño elaborados durante el AV1 permitieron establecer una base coherente para la evolución de LoadMatch. Las Style Guidelines, la arquitectura de información, los wireframes, mock-ups, flujos de usuario y modelos de arquitectura permiten mantener consistencia entre las necesidades identificadas y la solución propuesta. Asimismo, la implementación y despliegue de la primera versión de la Landing Page permitió materializar la propuesta de valor de LoadMatch, presentar sus principales beneficios a empresas y transportistas y consolidar un primer incremento funcional sobre el cual continuar el desarrollo de la Web Application y los servicios backend en los siguientes sprints.
