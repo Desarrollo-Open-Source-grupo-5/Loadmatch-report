@@ -413,7 +413,7 @@ Los botones de registro e inicio de sesión usan `data-app-path`. Mientras `APP_
 | Testimonios e información legal, US26 y US27 | Cumple. |
 | Videos, US28 | Pendiente: avisos de disponibilidad próxima. |
 
-**Video de navegación del Sprint Review:** [PENDIENTE: enlace de Microsoft Stream.]
+**Video de navegación del Sprint Review:** [Video Sprint 1 Review](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310342_upc_edu_pe/IQDWUFuRbr2mTbmyHe5Unle2ARQ_Ohp6v-p65qkdM2X-FTM?e=1wbyk6)
 
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
 
