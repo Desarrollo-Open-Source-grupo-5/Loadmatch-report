@@ -80,8 +80,6 @@ Se han definido los siguientes Epics:
 | US54 | Consulta de liquidaciones y pagos recibidos | Como transportista, deseo visualizar un reporte de mis ganancias acumuladas y el estado de transferencia a mi cuenta bancaria, para llevar un control claro de mis ingresos semanales. | **Scenario 1: Visualización de liquidaciones**<br>_Given_ que el transportista accede a su billetera virtual<br>_When_ consulta el saldo de la semana<br>_Then_ el sistema le muestra el monto total generado, la comisión descontada por la plataforma y la fecha programada para el depósito bancario. | EP08 |
 
 
-
-
 ## 3.2. Impact Mapping
 
 El Impact Mapping de LoadMatch fue elaborado colaborativamente mediante **UXPressia** con el propósito de relacionar los objetivos de negocio del producto con los actores involucrados, los cambios de comportamiento esperados y las funcionalidades necesarias para alcanzarlos.
@@ -111,52 +109,52 @@ A continuación se presenta la vista panorámica del Impact Mapping desarrollado
 
 ## 3.3. Product Backlog
 
-A continuaci├│n se presenta el Product Backlog del proyecto LoadMatch, priorizado estrictamente en funci├│n del valor entregado al negocio. Siguiendo las directrices del marco de trabajo ├ígil, las User Stories relacionadas al sitio web est├ítico (Landing Page) y la funcionalidad core del producto se han considerado en la prioridad m├ís alta, desplazando a posiciones posteriores las tareas de soporte t├⌐cnico como el registro y la autenticaci├│n.
+A continuación se presenta el Product Backlog del proyecto LoadMatch, priorizado estrictamente en función del valor entregado al negocio. Siguiendo las directrices del marco de trabajo ágil, las User Stories relacionadas al sitio web estático (Landing Page) y la funcionalidad core del producto se han considerado en la prioridad más alta, desplazando a posiciones posteriores las tareas de soporte técnico como el registro y la autenticación.
 
-Para la estimaci├│n del esfuerzo se ha utilizado la secuencia de Fibonacci (1, 2, 3, 5, 8). La gesti├│n del Product Backlog se lleva a cabo mediante la herramienta **Jira Software**.
+Para la estimación del esfuerzo se ha utilizado la secuencia de Fibonacci (1, 2, 3, 5, 8). La gestión del Product Backlog se lleva a cabo mediante la herramienta **Jira Software**.
 
 <p align="center">
   <img src="../assets/Chapter3/ProductBacklogUpdated.png" alt="Product Backlog" width="800">
   <br><em>Figura 2: Captura del Product Backlog priorizado por valor de negocio</em>
 </p>
 
-| # Orden | User Story Id | T├¡tulo | Descripci├│n | Story Points (1 / 2 / 3 / 5 / 8) |
+| # Orden | User Story Id | Título | Descripción | Story Points (1 / 2 / 3 / 5 / 8) |
 |---|---|---|---|---|
-| 1 | US12 | Visualizaci├│n de propuesta de valor | Como visitante, deseo entender claramente c├│mo la plataforma conecta empresas y transportistas, para decidir si me registro. | 3 |
-| 2 | US13 | Consulta de tipos de veh├¡culos | Como visitante (empresa), deseo ver qu├⌐ tipos de veh├¡culos de carga est├ín soportados, para saber si mi mercader├¡a encaja. | 2 |
-| 3 | US14 | Formulario de contacto | Como visitante, deseo enviar mis dudas mediante un formulario de contacto, para recibir asesor├¡a antes de usar la plataforma. | 2 |
-| 4 | US21 | Cambio de idioma del Landing Page | Como visitante, deseo cambiar el idioma del Landing Page entre ingl├⌐s y espa├▒ol, para entender la propuesta en el idioma que prefiero. | 3 |
-| 5 | US22 | Consulta de planes y precios | Como visitante (empresa o transportista), deseo conocer c├│mo cobra LoadMatch, para evaluar si el servicio me conviene antes de registrarme. | 2 |
+| 1 | US12 | Visualización de propuesta de valor | Como visitante, deseo entender claramente cómo la plataforma conecta empresas y transportistas, para decidir si me registro. | 3 |
+| 2 | US13 | Consulta de tipos de vehículos | Como visitante (empresa), deseo ver qué tipos de vehículos de carga están soportados, para saber si mi mercadería encaja. | 2 |
+| 3 | US14 | Formulario de contacto | Como visitante, deseo enviar mis dudas mediante un formulario de contacto, para recibir asesoría antes de usar la plataforma. | 2 |
+| 4 | US21 | Cambio de idioma del Landing Page | Como visitante, deseo cambiar el idioma del Landing Page entre inglés y español, para entender la propuesta en el idioma que prefiero. | 3 |
+| 5 | US22 | Consulta de planes y precios | Como visitante (empresa o transportista), deseo conocer cómo cobra LoadMatch, para evaluar si el servicio me conviene antes de registrarme. | 2 |
 | 6 | US23 | Consulta de preguntas frecuentes | Como visitante, deseo consultar las preguntas frecuentes, para resolver mis dudas sin tener que contactar al equipo. | 2 |
-| 7 | US24 | Navegaci├│n adaptable del Landing Page | Como visitante que usa computadora, tablet o celular, deseo navegar el Landing Page con comodidad en mi dispositivo, para encontrar r├ípidamente la informaci├│n que busco. | 3 |
-| 8 | US25 | Acceso a la aplicaci├│n por segmento | Como visitante (empresa o transportista), deseo que los botones del Landing Page me lleven a la vista que me corresponde en la aplicaci├│n web, para registrarme o iniciar sesi├│n sin buscar d├│nde hacerlo. | 2 |
-| 9 | US26 | Visualizaci├│n de testimonios de usuarios | Como visitante, deseo leer opiniones de otras empresas y transportistas, para confiar en la plataforma antes de registrarme. | 2 |
-| 10 | US27 | Consulta de informaci├│n legal y de contacto | Como visitante, deseo consultar los t├⌐rminos, la pol├¡tica de privacidad y los datos de contacto, para saber c├│mo se tratan mis datos y a qui├⌐n acudir. | 2 |
-| 11 | US28 | Visualizaci├│n de videos del producto y del equipo | Como visitante, deseo ver un video del producto y otro del equipo, para entender r├ípidamente c├│mo funciona LoadMatch y qui├⌐n lo desarrolla. | 2 |
-| 12 | US04 | Creaci├│n de solicitud de carga | Como due├▒o de negocio, deseo publicar una nueva solicitud indicando origen, destino y tipo de carga, para encontrar un transportista disponible. | 5 |
-| 13 | US06 | B├║squeda de fletes disponibles | Como transportista, deseo visualizar una lista de solicitudes de carga cercanas, para seleccionar viajes compatibles con mi cami├│n. | 5 |
-| 14 | US07 | Aceptaci├│n de viaje | Como transportista, deseo aceptar una solicitud de carga, para asegurar mi participaci├│n en el servicio y obtener los datos de recojo. | 5 |
-| 15 | US08 | Actualizaci├│n de estado del viaje | Como transportista, deseo actualizar el estado del servicio (En camino, Recogido, Entregado), para mantener informada a la empresa contratante. | 3 |
-| 16 | US09 | Seguimiento de carga | Como due├▒o de negocio, deseo visualizar el estado actualizado de mi viaje, para saber si la mercader├¡a llegar├í a tiempo. | 3 |
-| 17 | US16 | Endpoint de creaci├│n de solicitud de carga | Como Developer, deseo implementar un endpoint POST de solicitudes de carga, para recibir y almacenar los fletes en la BD. | 3 |
-| 18 | US17 | Endpoint de matching geoespacial | Como Developer, deseo implementar un endpoint GET de viajes cercanos, para alimentar el cat├ílogo del transportista. | 5 |
-| 19 | US01 | Registro de Empresa | Como due├▒o de negocio, deseo registrar mi empresa en la plataforma, para poder publicar solicitudes de transporte. | 3 |
-| 20 | US02 | Registro de Transportista | Como transportista independiente, deseo registrar mi perfil y veh├¡culo, para acceder a nuevas oportunidades de fletes. | 3 |
-| 21 | US03 | Inicio de sesi├│n | Como usuario, deseo iniciar sesi├│n con mis credenciales, para acceder a mi panel de gesti├│n. | 2 |
-| 22 | US15 | Autenticaci├│n basada en JWT | Como Developer, deseo implementar autenticaci├│n JWT en la API, para proteger los datos de empresas y transportistas. | 3 |
-| 23 | US18 | Regla de validaci├│n de documentos | Como Developer, deseo configurar un proceso as├¡ncrono que impida a transportistas no validados aceptar viajes, para garantizar la seguridad. | 5 |
-| 24 | US10 | Calificaci├│n del transportista | Como due├▒o de negocio, deseo calificar el servicio del transportista, para construir confianza en la comunidad de la plataforma. | 2 |
-| 25 | US11 | Historial de servicios | Como transportista, deseo revisar mi historial de viajes completados, para llevar un control de mis ingresos y m├⌐tricas. | 2 |
-| 26 | US05 | Cancelaci├│n de solicitud | Como due├▒o de negocio, deseo cancelar una solicitud de transporte no asignada, para evitar cobros si mis planes log├¡sticos cambian. | 2 |
-| 27 | US19 | Validaci├│n autom├ítica de transportista | Como Developer, quiero validar autom├íticamente la placa del veh├¡culo contra el padr├│n del MTC y verificar formato/vigencia de los documentos, para habilitar o rechazar al transportista sin intervenci├│n manual. | 5 |
-| 28 | US20 | Pago al transportista por servicio completado | Como due├▒o de negocio, quiero pagar al transportista con tarjeta una vez que el servicio ha sido entregado, para completar la transacci├│n del viaje contratado. | 5 |
+| 7 | US24 | Navegación adaptable del Landing Page | Como visitante que usa computadora, tablet o celular, deseo navegar el Landing Page con comodidad en mi dispositivo, para encontrar rápidamente la información que busco. | 3 |
+| 8 | US25 | Acceso a la aplicación por segmento | Como visitante (empresa o transportista), deseo que los botones del Landing Page me lleven a la vista que me corresponde en la aplicación web, para registrarme o iniciar sesión sin buscar dónde hacerlo. | 2 |
+| 9 | US26 | Visualización de testimonios de usuarios | Como visitante, deseo leer opiniones de otras empresas y transportistas, para confiar en la plataforma antes de registrarme. | 2 |
+| 10 | US27 | Consulta de información legal y de contacto | Como visitante, deseo consultar los términos, la política de privacidad y los datos de contacto, para saber cómo se tratan mis datos y a quién acudir. | 2 |
+| 11 | US28 | Visualización de videos del producto y del equipo | Como visitante, deseo ver un video del producto y otro del equipo, para entender rápidamente cómo funciona LoadMatch y quién lo desarrolla. | 2 |
+| 12 | US04 | Creación de solicitud de carga | Como dueño de negocio, deseo publicar una nueva solicitud indicando origen, destino y tipo de carga, para encontrar un transportista disponible. | 5 |
+| 13 | US06 | Búsqueda de fletes disponibles | Como transportista, deseo visualizar una lista de solicitudes de carga cercanas, para seleccionar viajes compatibles con mi camión. | 5 |
+| 14 | US07 | Aceptación de viaje | Como transportista, deseo aceptar una solicitud de carga, para asegurar mi participación en el servicio y obtener los datos de recojo. | 5 |
+| 15 | US08 | Actualización de estado del viaje | Como transportista, deseo actualizar el estado del servicio (En camino, Recogido, Entregado), para mantener informada a la empresa contratante. | 3 |
+| 16 | US09 | Seguimiento de carga | Como dueño de negocio, deseo visualizar el estado actualizado de mi viaje, para saber si la mercadería llegará a tiempo. | 3 |
+| 17 | US16 | Endpoint de creación de solicitud de carga | Como Developer, deseo implementar un endpoint POST de solicitudes de carga, para recibir y almacenar los fletes en la BD. | 3 |
+| 18 | US17 | Endpoint de matching geoespacial | Como Developer, deseo implementar un endpoint GET de viajes cercanos, para alimentar el catálogo del transportista. | 5 |
+| 19 | US01 | Registro de Empresa | Como dueño de negocio, deseo registrar mi empresa en la plataforma, para poder publicar solicitudes de transporte. | 3 |
+| 20 | US02 | Registro de Transportista | Como transportista independiente, deseo registrar mi perfil y vehículo, para acceder a nuevas oportunidades de fletes. | 3 |
+| 21 | US03 | Inicio de sesión | Como usuario, deseo iniciar sesión con mis credenciales, para acceder a mi panel de gestión. | 2 |
+| 22 | US15 | Autenticación basada en JWT | Como Developer, deseo implementar autenticación JWT en la API, para proteger los datos de empresas y transportistas. | 3 |
+| 23 | US18 | Regla de validación de documentos | Como Developer, deseo configurar un proceso asíncrono que impida a transportistas no validados aceptar viajes, para garantizar la seguridad. | 5 |
+| 24 | US10 | Calificación del transportista | Como dueño de negocio, deseo calificar el servicio del transportista, para construir confianza en la comunidad de la plataforma. | 2 |
+| 25 | US11 | Historial de servicios | Como transportista, deseo revisar mi historial de viajes completados, para llevar un control de mis ingresos y métricas. | 2 |
+| 26 | US05 | Cancelación de solicitud | Como dueño de negocio, deseo cancelar una solicitud de transporte no asignada, para evitar cobros si mis planes logísticos cambian. | 2 |
+| 27 | US19 | Validación automática de transportista | Como Developer, quiero validar automáticamente la placa del vehículo contra el padrón del MTC y verificar formato/vigencia de los documentos, para habilitar o rechazar al transportista sin intervención manual. | 5 |
+| 28 | US20 | Pago al transportista por servicio completado | Como dueño de negocio, quiero pagar al transportista con tarjeta una vez que el servicio ha sido entregado, para completar la transacción del viaje contratado. | 5 |
 
 ### Acceso al Product Backlog en Jira
 
-El Product Backlog del proyecto se gestiona mediante Jira Software, donde se registran y organizan las User Stories definidas para LoadMatch, junto con su prioridad y estimaci├│n correspondiente.
+El Product Backlog del proyecto se gestiona mediante Jira Software, donde se registran y organizan las User Stories definidas para LoadMatch, junto con su prioridad y estimación correspondiente.
 
 El tablero puede consultarse mediante el siguiente enlace:
 
 [Product Backlog de LoadMatch en Jira](https://upc-team-m57tll9j.atlassian.net/jira/software/projects/US/boards/2?sprintStarted=true&filter=&groupBy=none)
 
-> **Nota:** El acceso al tablero requiere autenticaci├│n en Atlassian y los permisos correspondientes del proyecto.
+> **Nota:** El acceso al tablero requiere autenticación en Atlassian y los permisos correspondientes del proyecto.
