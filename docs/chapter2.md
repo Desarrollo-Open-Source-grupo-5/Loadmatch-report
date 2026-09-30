@@ -163,7 +163,7 @@ Para que considere utilizar una solución como LoadMatch, la seguridad sería un
 | **Distrito** | Los Olivos, Lima, Perú |
 | **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323551_upc_edu_pe/IQDws6MfBH1bRqYTab-dHVruAQRdvtNY4gznRGfRxTyv6aQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8Tvb4S |
 | **Timing de inicio y duración** | Inicio: 00:00 - Duración: 6:22 minutos |
-| **Evidencia fotográfica** | <img src="../assets/Chapter2/Interviews/Imagensegmento2-carmen.jpeg" alt="Evidencia Entrevista 4" width="300"> |
+| **Evidencia fotográfica** | <img src="../assets/Chapter2/Interviews/Loadmathc-Transportista.png" alt="Evidencia Entrevista 4" width="300"> |
 
 **Resumen de la entrevista:**
 
