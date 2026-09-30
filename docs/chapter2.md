@@ -173,6 +173,7 @@ Su objetivo principal a corto plazo es liquidar el crédito de su vehículo actu
 
 Para adoptar una nueva plataforma o red, está totalmente dispuesta a pasar por un proceso estricto de validación documental (antecedentes policiales, SOAT, revisión técnica). Considera que entregar esta documentación vale la pena si el sistema le garantiza operar en un entorno seguro, filtrando y conectándola únicamente con empresas formales que cumplan con los pagos de manera completa y puntual.
 
+
 ---
 
 #### Entrevista 5: Segmento 2 (Transportista/Conductor)
