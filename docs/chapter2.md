@@ -154,24 +154,7 @@ Para que considere utilizar una solución como LoadMatch, la seguridad sería un
 
 ---
 
-#### Entrevista 4: Segmento 2 (Transportista/Conductor)
 
-| Campo | Detalle |
-| :--- | :--- |
-| **Nombres y Apellidos** | Carmen Rosa Rojas |
-| **Edad** | 41 años |
-| **Distrito** | Los Olivos, Lima, Perú |
-| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323551_upc_edu_pe/IQDws6MfBH1bRqYTab-dHVruAQRdvtNY4gznRGfRxTyv6aQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8Tvb4S |
-| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 6:22 minutos |
-| **Evidencia fotográfica** | <img src="../assets/Chapter2/Interviews/Imagensegmento2-carmen.jpeg" alt="Evidencia Entrevista 4" width="300"> |
-
-**Resumen de la entrevista:**
-
-La entrevistada es transportista y administradora de su propio camión de carga, con 12 años de experiencia en el rubro tras iniciarse ayudando a su padre. Se describe como una persona práctica, trabajadora y bastante desconfiada, una actitud preventiva que ha adoptado debido a la inseguridad en las calles. Utiliza su smartphone como herramienta principal para el día a día (GPS, WhatsApp para ubicaciones y coordinación de cargas) y reserva la computadora exclusivamente en casa para trámites formales como facturación electrónica y gestión en la SUNAT.
-
-Su objetivo principal a corto plazo es liquidar el crédito de su vehículo actual, con la meta de adquirir a futuro una segunda unidad para contratar a un chofer de confianza y dedicarse de lleno a la gestión comercial. Sus mayores frustraciones son los pagos injustos que no contemplan los costos operativos (desgaste, peajes), la competencia desleal de la alta informalidad en el sector, y sobre todo, la inseguridad ciudadana (sufrió un asalto y robo de carga hace tres años). También padece la incertidumbre de los pagos atrasados o estafas al contactar clientes por grupos de Facebook o WhatsApp.
-
-Para adoptar una nueva plataforma o red, está totalmente dispuesta a pasar por un proceso estricto de validación documental (antecedentes policiales, SOAT, revisión técnica). Considera que entregar esta documentación vale la pena si el sistema le garantiza operar en un entorno seguro, filtrando y conectándola únicamente con empresas formales que cumplan con los pagos de manera completa y puntual.
 
 ---
 
