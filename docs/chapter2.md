@@ -121,7 +121,7 @@ Para adoptar una nueva plataforma digital, exige conductores con antecedentes li
 | **Nombres y Apellidos** | Ronald Cortez Joseli |
 | **Edad** | 26 |
 | **Distrito** | San Martin de Porres, Lima, Perú |
-| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310342_upc_edu_pe/IQBAzfO4REFpQLwTj6NXeMnpAfz8bK1FQLdoZK5pQOoizkU?e=kh12X0 |
+| **Enlace al video (Microsoft Stream)** | https://shorturl.at/1purl |
 | **Timing de inicio y duración** | Inicio: 00:02 - Duración: 6:37 minutos |
 | **Evidencia fotográfica** | <img src="../assets/Chapter2/Interviews/LoadMatch-Trabajador2.png" alt="Evidencia Entrevista 2" width="300"> |
 
