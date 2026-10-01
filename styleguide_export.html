@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoadMatch Ultimate UI Kit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0b1120;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(37,99,235,0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(255,107,0,0.15) 0px, transparent 50%),
+                radial-gradient(#1e293b 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 20px 20px;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 80px 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 300px);
+            grid-auto-rows: 150px;
+            gap: 24px;
+            max-width: 1300px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+        }
+
+        /* Grid Spans */
+        .span-4x1 { grid-column: span 4; grid-row: span 1; }
+        .span-2x2 { grid-column: span 2; grid-row: span 2; }
+        .span-1x2 { grid-column: span 1; grid-row: span 2; }
+
+        /* Titles */
+        .section-title {
+            font-size: 13px;
+            color: #64748B;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        /* Colors */
+        .color-card { padding: 0; }
+        .color-main {
+            height: 220px;
+            padding: 24px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .color-swatches {
+            display: flex;
+            height: 100%;
+            flex: 1;
+        }
+        .swatch { flex: 1; height: 100%; }
+
+        /* Buttons */
+        .btn {
+            border-radius: 8px;
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-primary { background: #FF6B00; color: #fff; box-shadow: 0 4px 10px rgba(255,107,0,0.3); }
+        .btn-secondary { background: #0F172A; color: #fff; }
+        .btn-ghost { background: #E5EEFF; color: #2563EB; }
+        .btn-outline { background: transparent; border: 1.5px solid #CBD5E1; color: #0F172A; }
+
+        /* Status Pills */
+        .pill {
+            padding: 8px 16px;
+            border-radius: 99px;
+            font-weight: 600;
+            font-size: 13px;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            width: fit-content;
+        }
+        
+        svg { width: 18px; height: 18px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="bento-grid">
+        
+        <!-- ROW 1: HERO (4x1) -->
+        <div class="card span-4x1" style="background: linear-gradient(135deg, #0F172A, #1e293b); color: white; justify-content: center; align-items: center; text-align: center; padding: 0; overflow: hidden; border: none;">
+            <div style="position: absolute; width: 300px; height: 300px; background: rgba(255,107,0,0.2); filter: blur(80px); top: -100px; right: -50px; border-radius: 50%;"></div>
+            <h1 style="font-size: 42px; font-weight: 800; margin: 0; display: flex; align-items: center; gap: 16px; letter-spacing: -1px; z-index: 1;">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                LoadMatch UI Kit
+            </h1>
+            <p style="color: #94A3B8; font-size: 16px; margin: 10px 0 0 0; z-index: 1;">Premium Enterprise Logistics & Freight Dispatching Design System</p>
+        </div>
+
+        <!-- ROW 2 & 3: COLOR + TYPO -->
+        <div class="card span-1x2 color-card">
+            <div class="color-main" style="background: #0F172A;">
+                <div style="font-weight: 700; font-size: 20px; letter-spacing: -0.5px;">Navy Slate</div>
+                <div>
+                    <div style="font-size: 12px; opacity: 0.7; text-transform: uppercase;">Primary</div>
+                    <div style="font-size: 16px; font-family: monospace;">#0F172A</div>
+                </div>
+            </div>
+            <div class="color-swatches" id="swatches-primary"></div>
+        </div>
+
+        <div class="card span-1x2 color-card">
+            <div class="color-main" style="background: #FF6B00; color: #fff;">
+                <div style="font-weight: 700; font-size: 20px; letter-spacing: -0.5px;">Freight Amber</div>
+                <div>
+                    <div style="font-size: 12px; opacity: 0.8; text-transform: uppercase;">Secondary / CTA</div>
+                    <div style="font-size: 16px; font-family: monospace;">#FF6B00</div>
+                </div>
+            </div>
+            <div class="color-swatches" id="swatches-secondary"></div>
+        </div>
+
+        <div class="card span-2x2">
+            <div class="section-title">System Typography</div>
+            <div style="display: flex; align-items: flex-end; gap: 40px; margin-top: 10px;">
+                <div style="font-size: 140px; font-weight: 700; line-height: 0.8; letter-spacing: -6px; color: #0F172A;">Aa</div>
+                <div style="padding-bottom: 10px;">
+                    <div style="font-size: 48px; font-weight: 700; color: #0F172A; letter-spacing: -2px;">Inter</div>
+                    <div style="font-size: 15px; color: #64748B; margin-top: 12px; line-height: 1.5; max-width: 250px;">The primary typeface, optimized for data density and tabular figures.</div>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-top: auto; padding-top: 24px; border-top: 1px solid #E2E8F0;">
+                <div><div style="font-weight:400; font-size: 24px; color:#0F172A;">Regular</div><div style="font-size:13px; color:#64748B; margin-top:4px;">400 Weight</div></div>
+                <div><div style="font-weight:500; font-size: 24px; color:#0F172A;">Medium</div><div style="font-size:13px; color:#64748B; margin-top:4px;">500 Weight</div></div>
+                <div><div style="font-weight:600; font-size: 24px; color:#0F172A;">SemiBold</div><div style="font-size:13px; color:#64748B; margin-top:4px;">600 Weight</div></div>
+                <div><div style="font-weight:700; font-size: 24px; color:#0F172A;">Bold</div><div style="font-size:13px; color:#64748B; margin-top:4px;">700 Weight</div></div>
+            </div>
+        </div>
+
+        <!-- ROW 4 & 5: COMPLEX WIDGETS -->
+        <div class="card span-2x2" style="background: #F8FAFC;">
+            <div class="section-title">Logistics Route Component</div>
+            
+            <div style="background: #fff; padding: 24px; border-radius: 16px; border: 1px solid #E2E8F0; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                    <div>
+                        <h3 style="margin:0; color:#0F172A; font-size: 18px;">Ruta Activa <span style="font-family:monospace; color:#64748B;">#TRK-882</span></h3>
+                    </div>
+                    <div class="pill" style="background:#EFF6FF; color:#1D4ED8;">
+                        <div style="width:8px; height:8px; background:#2563EB; border-radius:50%;"></div> En Tránsito
+                    </div>
+                </div>
+
+                <!-- Timeline -->
+                <div style="display: flex; flex-direction: column; gap: 24px; position: relative; margin-bottom: 24px;">
+                    <div style="position: absolute; left: 11px; top: 20px; bottom: 20px; width: 2px; background: #E2E8F0;"></div>
+                    
+                    <div style="display: flex; gap: 20px; align-items: flex-start; z-index: 1;">
+                        <div style="width: 24px; height: 24px; border-radius: 50%; background: #0F172A; border: 4px solid #fff; box-shadow: 0 0 0 1px #CBD5E1;"></div>
+                        <div><div style="font-weight: 600; font-size: 15px; color:#0F172A;">Centro de Distribución Sur</div><div style="color: #64748B; font-size: 13px; margin-top:2px;">Origen • 08:30 AM</div></div>
+                    </div>
+                    <div style="display: flex; gap: 20px; align-items: flex-start; z-index: 1;">
+                        <div style="width: 24px; height: 24px; border-radius: 50%; background: #FF6B00; border: 4px solid #fff; box-shadow: 0 0 0 1px #CBD5E1; margin-top: 10px;"></div>
+                        <div style="margin-top: 10px;"><div style="font-weight: 600; font-size: 15px; color:#0F172A;">Almacén Principal Lima</div><div style="color: #FF6B00; font-size: 13px; font-weight:500; margin-top:2px;">Destino • ETA 14:00 PM</div></div>
+                    </div>
+                </div>
+
+                <div style="padding-top: 20px; border-top: 1px solid #E2E8F0; display: flex; align-items: center; justify-content: space-between;">
+                    <div style="display: flex; gap: 12px; align-items: center;">
+                        <div style="width: 44px; height: 44px; border-radius: 50%; background: #E2E8F0; display:flex; justify-content:center; align-items:center;">
+                            <svg style="color:#94A3B8; width:24px; height:24px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        </div>
+                        <div>
+                            <div style="font-weight: 600; font-size: 15px; color:#0F172A; display:flex; align-items:center; gap:6px;">
+                                Juan Pérez 
+                                <svg style="color:#2563EB; width: 14px; height: 14px;" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            </div>
+                            <div style="color: #64748B; font-size: 13px;">Transportes del Norte S.A.C.</div>
+                        </div>
+                    </div>
+                    <div style="width: 40px; height: 40px; border-radius: 8px; border: 1px solid #E2E8F0; display:flex; justify-content:center; align-items:center; cursor:pointer;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card span-2x2">
+            <div class="section-title">Form Elements & Inputs</div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;">
+                <div>
+                    <label style="font-size: 13px; font-weight: 600; color: #0F172A; display: block; margin-bottom: 8px;">RUC de la Empresa <span style="color:#FF6B00">*</span></label>
+                    <input type="text" value="20123456789" style="width: 100%; padding: 12px 16px; border: 1px solid #E2E8F0; border-radius: 8px; font-size: 14px; font-family: Inter; color: #0F172A; box-sizing: border-box;">
+                </div>
+                <div>
+                    <label style="font-size: 13px; font-weight: 600; color: #0F172A; display: block; margin-bottom: 8px;">Placa del Vehículo</label>
+                    <input type="text" value="ABC-123" style="width: 100%; padding: 12px 16px; border: 1.5px solid #2563EB; border-radius: 8px; font-size: 14px; font-family: Inter; color: #0F172A; box-shadow: 0 0 0 3px rgba(37,99,235,0.12); box-sizing: border-box; outline: none;">
+                </div>
+            </div>
+
+            <!-- Toggles and Checkboxes -->
+            <div style="display: flex; gap: 40px; margin-bottom: 30px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 24px; background: #FF6B00; border-radius: 12px; position: relative; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);">
+                        <div style="width: 18px; height: 18px; background: #fff; border-radius: 50%; position: absolute; right: 3px; top: 3px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);"></div>
+                    </div>
+                    <span style="font-size: 14px; font-weight: 600; color: #0F172A;">GPS Activo</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 24px; background: #E2E8F0; border-radius: 12px; position: relative; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);">
+                        <div style="width: 18px; height: 18px; background: #fff; border-radius: 50%; position: absolute; left: 3px; top: 3px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"></div>
+                    </div>
+                    <span style="font-size: 14px; font-weight: 500; color: #64748B;">Alertas Push</span>
+                </div>
+            </div>
+            
+            <!-- Range Slider / Progress -->
+            <div style="margin-top: auto;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 13px; font-weight: 600;">
+                    <span style="color: #0F172A;">Capacidad de Carga Usada</span>
+                    <span style="color:#2563EB;">75%</span>
+                </div>
+                <div style="width: 100%; height: 8px; background: #E2E8F0; border-radius: 4px; overflow: hidden;">
+                    <div style="width: 75%; height: 100%; background: linear-gradient(90deg, #2563EB, #FF6B00); border-radius: 4px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROW 6 & 7: BUTTONS, PILLS, COLORS -->
+        <div class="card span-1x2 color-card">
+            <div class="color-main" style="background: #2563EB; color: #fff;">
+                <div style="font-weight: 700; font-size: 20px; letter-spacing: -0.5px;">Technical Blue</div>
+                <div>
+                    <div style="font-size: 12px; opacity: 0.8; text-transform: uppercase;">Tertiary / Links</div>
+                    <div style="font-size: 16px; font-family: monospace;">#2563EB</div>
+                </div>
+            </div>
+            <div class="color-swatches" id="swatches-tertiary"></div>
+        </div>
+
+        <div class="card span-1x2">
+            <div class="section-title">Action Buttons</div>
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+                <div class="btn btn-primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Asignar Carga
+                </div>
+                <div class="btn btn-secondary">Confirmar Ruta</div>
+                <div class="btn btn-ghost">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg> Editar Perfil
+                </div>
+                <div class="btn btn-outline">Cancelar Viaje</div>
+                
+                <div style="display:flex; justify-content:center; gap: 16px; margin-top: 10px;">
+                    <div style="width: 50px; height: 50px; border-radius: 50%; background: #FF6B00; color: #fff; display:flex; justify-content:center; align-items:center; box-shadow: 0 4px 15px rgba(255,107,0,0.4); cursor:pointer;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 24px; height: 24px;"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card span-1x2">
+            <div class="section-title">Semantic Palette</div>
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div style="display: flex; gap: 16px; align-items: center;">
+                    <div style="width: 56px; height: 56px; border-radius: 14px; background: #059669; box-shadow: inset 0 2px 4px rgba(255,255,255,0.2);"></div>
+                    <div><div style="font-weight: 700; font-size:15px; color:#0F172A;">Success</div><div style="font-size:13px; color:#64748B; margin-top:2px; font-family:monospace;">#059669</div></div>
+                </div>
+                <div style="display: flex; gap: 16px; align-items: center;">
+                    <div style="width: 56px; height: 56px; border-radius: 14px; background: #D97706; box-shadow: inset 0 2px 4px rgba(255,255,255,0.2);"></div>
+                    <div><div style="font-weight: 700; font-size:15px; color:#0F172A;">Warning</div><div style="font-size:13px; color:#64748B; margin-top:2px; font-family:monospace;">#D97706</div></div>
+                </div>
+                <div style="display: flex; gap: 16px; align-items: center;">
+                    <div style="width: 56px; height: 56px; border-radius: 14px; background: #DC2626; box-shadow: inset 0 2px 4px rgba(255,255,255,0.2);"></div>
+                    <div><div style="font-weight: 700; font-size:15px; color:#0F172A;">Destructive</div><div style="font-size:13px; color:#64748B; margin-top:2px; font-family:monospace;">#DC2626</div></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card span-1x2">
+            <div class="section-title">Status Badges</div>
+            <div style="display: flex; flex-direction: column; gap: 20px; align-items: flex-start;">
+                <div class="pill" style="background:#EFF6FF; color:#1D4ED8; border: 1px solid #BFDBFE;">
+                    <div style="width:8px; height:8px; background:#2563EB; border-radius:50%;"></div> En Tránsito
+                </div>
+                <div class="pill" style="background:#ECFDF5; color:#047857; border: 1px solid #A7F3D0;">
+                    <div style="width:8px; height:8px; background:#059669; border-radius:50%;"></div> Completado
+                </div>
+                <div class="pill" style="background:#FFF7ED; color:#C2410C; border: 1px solid #FED7AA;">
+                    <div style="width:8px; height:8px; background:#FF6B00; border-radius:50%;"></div> Oferta Recibida
+                </div>
+                <div class="pill" style="background:#FEF2F2; color:#B91C1C; border: 1px solid #FECACA;">
+                    <div style="width:8px; height:8px; background:#DC2626; border-radius:50%;"></div> Alerta Crítica
+                </div>
+                <div class="pill" style="background:#F1F5F9; color:#475569; border: 1px solid #CBD5E1;">
+                    <div style="width:8px; height:8px; background:#64748B; border-radius:50%;"></div> Borrador
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function generateSwatches(containerId, hexColor) {
+            const container = document.getElementById(containerId);
+            for(let i=0; i<10; i++) {
+                const opacity = 1 - (i * 0.08);
+                const swatch = document.createElement('div');
+                swatch.className = 'swatch';
+                swatch.style.backgroundColor = hexColor;
+                swatch.style.opacity = opacity;
+                container.appendChild(swatch);
+            }
+        }
+        generateSwatches('swatches-primary', '#0F172A');
+        generateSwatches('swatches-secondary', '#FF6B00');
+        generateSwatches('swatches-tertiary', '#2563EB');
+    </script>
+</body>
+</html>

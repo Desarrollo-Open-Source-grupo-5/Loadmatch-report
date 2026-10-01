@@ -132,4 +132,4 @@ https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page/pulls?q
 El video del Sprint Review presenta la navegación y funcionamiento del incremento desarrollado durante el Sprint 1.
 
 **Video de navegación del Sprint 1:**  
-[PENDIENTE: agregar enlace de Microsoft Stream]
+https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310342_upc_edu_pe/IQDWUFuRbr2mTbmyHe5Unle2ARQ_Ohp6v-p65qkdM2X-FTM?e=1wbyk6
