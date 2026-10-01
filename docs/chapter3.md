@@ -136,9 +136,21 @@ A continuación se presenta el Product Backlog del proyecto LoadMatch, conformad
 
 Para la estimación del esfuerzo se ha utilizado la secuencia de Fibonacci (1, 2, 3, 5, 8). La gestión del Product Backlog se lleva a cabo mediante la herramienta **Jira Software**.
 
+Las siguientes capturas muestran el Product Backlog registrado en Jira Software con el mismo orden de la tabla. Se presentan en tres partes para que cada User Story, su épica y sus story points sean legibles.
+
 <p align="center">
-  <img src="../assets/Chapter3/ProductBacklogUpdated.png" alt="Product Backlog" width="800">
-  <br><em>Figura 2: Captura del Product Backlog priorizado por valor de negocio</em>
+  <img src="../assets/Chapter3/ProductBacklog-1.png" alt="Product Backlog de LoadMatch en Jira, parte 1 de 3: US28 a US08" width="900">
+  <br><em>Figura 2. Product Backlog de LoadMatch en Jira (parte 1 de 3): posiciones 11 a 30, desde US28, pendiente del Sprint 1, hasta la actualización de estado del viaje.</em>
+</p>
+
+<p align="center">
+  <img src="../assets/Chapter3/ProductBacklog-2.png" alt="Product Backlog de LoadMatch en Jira, parte 2 de 3: US09 a US54" width="900">
+  <br><em>Figura 3. Product Backlog de LoadMatch en Jira (parte 2 de 3): posiciones 31 a 50, desde el seguimiento de carga hasta la consulta de liquidaciones.</em>
+</p>
+
+<p align="center">
+  <img src="../assets/Chapter3/ProductBacklog-3.png" alt="Product Backlog de LoadMatch en Jira, parte 3 de 3: US15 a US50" width="900">
+  <br><em>Figura 4. Product Backlog de LoadMatch en Jira (parte 3 de 3): posiciones 51 a 56, historias técnicas del backend y despliegue de la Web Application.</em>
 </p>
 
 | # Orden | User Story Id | Título | Descripción | Story Points (1 / 2 / 3 / 5 / 8) |
