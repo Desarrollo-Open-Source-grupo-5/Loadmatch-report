@@ -161,7 +161,7 @@ Para que considere utilizar una solución como LoadMatch, la seguridad sería un
 | **Nombres y Apellidos** | Carmen Rosa Rojas |
 | **Edad** | 41 años |
 | **Distrito** | Los Olivos, Lima, Perú |
-| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323551_upc_edu_pe/IQDws6MfBH1bRqYTab-dHVruAQRdvtNY4gznRGfRxTyv6aQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8Tvb4S |
+| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323551_upc_edu_pe/IQDws6MfBH1bRqYTab-dHVruAU666AyoUz-YM2iI_pKQfb0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=w2ExaE |
 | **Timing de inicio y duración** | Inicio: 00:00 - Duración: 6:22 minutos |
 | **Evidencia fotográfica** | <img src="../assets/Chapter2/Interviews/Loadmathc-Transportista.png" alt="Evidencia Entrevista 4" width="300"> |
 
@@ -205,7 +205,7 @@ El señor Sifuentes expresó su interés en una aplicación como la nuestra, sie
 | **Distrito** | Ate Vitarte, Lima, Perú |
 | **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323551_upc_edu_pe/IQBOLkTZ-v24R5LzorknIiK-Ab79EzX5Oq-S2gDvYycx5KQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=4Wq3cj |
 | **Timing de inicio y duración** | Inicio: 00:00 - Duración: 5:15 minutos |
-| **Evidencia fotográfica** | <img src="../assets/Chapter2/Interviews/Imagensegmento2-carlos.jpeg" alt="Evidencia Entrevista Carlos" width="300"> |
+| **Evidencia fotográfica** | <img src="../assets/Chapter2/Interviews/Captura de pantalla 2026-10-01 123706.png" alt="Evidencia Entrevista Carlos" width="300"> |
 
 **Resumen de la entrevista:**
 
