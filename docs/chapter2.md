@@ -200,20 +200,20 @@ El señor Sifuentes expresó su interés en una aplicación como la nuestra, sie
 
 | Campo | Detalle |
 | :--- | :--- |
-| **Nombres y Apellidos** | Luciano Mateo Espinoza Vargas |
-| **Edad** | 25 años |
-| **Distrito** | Puente Piedra, Lima, Perú |
-| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323551_upc_edu_pe/IQCXMP7YhDGBRIpNEYDMTaPxARBXZBXzhvbS1rtrUGrfBIA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=wCHiu7 |
-| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 6:50 minutos |
-| **Evidencia fotográfica** | <img src="../assets/Chapter2/Interviews/Imagensegmento1Luciano-crivas.jpeg" alt="Evidencia Entrevista 6" width="300"> |
+| **Nombres y Apellidos** | Carlos Mendoza |
+| **Edad** | 37 años |
+| **Distrito** | Ate Vitarte, Lima, Perú |
+| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323551_upc_edu_pe/IQBOLkTZ-v24R5LzorknIiK-Ab79EzX5Oq-S2gDvYycx5KQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=4Wq3cj |
+| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 5:15 minutos |
+| **Evidencia fotográfica** | <img src="../assets/Chapter2/Interviews/Imagensegmento2-carlos.jpeg" alt="Evidencia Entrevista Carlos" width="300"> |
 
 **Resumen de la entrevista:**
 
-El entrevistado es un joven de 25 años que gestiona la flota de 3 camiones del negocio familiar. Es analítico, nativo digital y actúa como el agente de cambio frente a la "vieja escuela" de su padre. Utiliza su smartphone como herramienta central de gestión y está harto de la ineficiencia de los canales actuales.
+El entrevistado es un transportista independiente y dueño de su propio camión de carga, con 10 años de experiencia en el rubro tras iniciar como estibador y copiloto. Se describe como un perfil práctico, directo y muy desconfiado, una actitud que considera vital para sobrevivir a la inseguridad y a los malos clientes. Utiliza su smartphone como herramienta principal y exclusiva durante el día a día (Waze, WhatsApp, ubicación en tiempo real), apoyándose ocasionalmente en su esposa y una laptop en casa para temas puntuales de facturación y SUNAT.
 
-Sus principales pain points son la competencia desleal de la informalidad (que deprime los precios), los pagos a 60-90 días de las empresas que asfixian su capital de trabajo, y la pérdida de dinero por "horas de espera" no remuneradas en los almacenes.
+Su objetivo principal a corto plazo es cancelar el préstamo de su vehículo actual, con miras a adquirir un furgón más grande o una segunda unidad para dedicarse de lleno a la gestión comercial y administración de contratos. Su mayor frustración es la competencia desleal de transportistas informales que tiran los precios al piso, los clientes que retrasan pagos a 30 o 60 días, y la constante amenaza de la delincuencia al transitar o cargar en zonas peligrosas.
 
-Frente a la propuesta, muestra una receptividad entusiasta (10/10). Ve la validación documental estricta no como un trámite, sino como su principal ventaja competitiva. Está dispuesto a someterse a filtros rigurosos si la plataforma le otorga un "Sello de Verificación" que le permita acceder a una red de clientes empresariales, diferenciándose así del transporte informal.
+Para adoptar una nueva plataforma digital, está completamente dispuesto a someterse a un proceso estricto de validación documental (antecedentes policiales, SOAT, revisión técnica, brevete). Considera que entregar esta documentación es un requisito necesario y justo si el sistema le garantiza un distintivo de confianza y, sobre todo, lo conecta únicamente con empresas serias que aseguren depósitos puntuales y operaciones seguras.
 
 ---
 
