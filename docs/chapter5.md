@@ -241,7 +241,7 @@ La matriz LACX identifica al líder (L) y a los colaboradores (C) de cada aspect
 | US27 | Consulta de información legal y de contacto | T10 | Implementación del pie de página y páginas legales | Pie de página con navegación y contacto, y página de términos, privacidad, cookies y accesibilidad. | 6 h | Christoper Steven Rivas Castillo | Done |
 | US28 | Visualización de videos del producto y del equipo | T11 | Implementación de la sección de videos | Dos marcos 16:9 con pie de foto; los videos se publican en AV2. | 3 h | Ismael Sebastian Simon Calderon | In Progress |
 
-**Tablero:** [Sprint Board de LoadMatch en Jira](https://upc-team-m57tll9j.atlassian.net/jira/software/projects/US/boards/2).
+**Tablero:** https://upc-team-m57tll9j.atlassian.net/jira/software/projects/US/boards/2.
 
 **Evidencia del cierre del Sprint 1 en Jira:**
 
@@ -430,7 +430,7 @@ La versión 1.0.0 se publicó en GitHub Pages desde la rama `main`.
 
 | Evidencia | Detalle |
 | --- | --- |
-| Repositorio | [Loadmatch-landing-page](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page) |
+| Repositorio | https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page |
 | Plataforma | GitHub Pages, rama `main`, carpeta `/ (root)`, HTTPS obligatorio. |
 | URL pública | https://desarrollo-open-source-grupo-5.github.io/Loadmatch-landing-page/ |
 | Pull Request de publicación | #25, `release/1.0.0` → `main` |
