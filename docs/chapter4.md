@@ -241,7 +241,7 @@ Para transportistas, las principales categorías son:
 
 Dentro de estas secciones se encuentran funcionalidades más específicas como aplicar filtros de búsqueda, consultar viajes en progreso, visualizar el seguimiento de una ruta o gestionar documentación.
 
-También se utiliza una organización **cronológica** para separar operaciones actuales de anteriores, como ocurre en Historial y en la clasificación de viajes en progreso y completados.
+También se utiliza una organización **cronológica** para separar operaciones actuales de anteriores, como ocurre en Historial y en la clasificación de viajes en próximos, en curso y completados (US41).
 
 La organización matricial no constituye la estructura principal de LoadMatch, aunque se utiliza de manera puntual en sistemas de búsqueda donde el usuario puede combinar diferentes criterios, como ruta, distancia, tipo de vehículo, peso y tarifa.
 
@@ -262,9 +262,37 @@ Las etiquetas se mantienen consistentes según el contexto de uso:
 | **Landing Page** | Cómo funciona, Para empresas, Para transportistas, Preguntas frecuentes, Iniciar sesión, Registrarse |
 | **Empresa** | Dashboard, Mis Cargas, Historial, Configuración, Publicar Nueva Carga, Ver Seguimiento |
 | **Transportista** | Buscar Fletes, Mis Viajes, Historial, Mi Perfil, Ver Detalles, Ir al Mapa |
-| **Estados** | En Tránsito, Buscando Unidad, Completado, En Camino, Aprobado, Pendiente |
+| **Estados** | Buscando Unidad, En Tránsito, En Camino, Por Liquidar, Completado, Aprobado, Rechazado, Pendiente |
 
 Las etiquetas correspondientes a acciones utilizan principalmente verbos, como **Publicar**, **Buscar**, **Gestionar**, **Ver** o **Cancelar**, mientras que las etiquetas de estado describen directamente la condición actual de una carga, viaje o documento.
+
+#### Correspondencia entre etiquetas de estado y estados del dominio
+
+Las etiquetas de estado de la interfaz priorizan un lenguaje cercano al usuario, por lo que no siempre coinciden literalmente con el nombre del estado usado en las User Stories ni con el valor que se almacena en el sistema. Por ejemplo, para la empresa es más claro leer **Buscando Unidad** que *Publicada*, y para el transportista **Por Liquidar** comunica que el servicio terminó y que el pago está pendiente. La siguiente tabla fija esa correspondencia, de modo que cada etiqueta visible se traza hasta un estado definido en las User Stories y en el modelo de dominio de la sección 4.7.
+
+| ENTIDAD | ETIQUETA EN LA INTERFAZ | ESTADO EN LAS USER STORIES | VALOR EN EL CÓDIGO |
+| :--- | :--- | :--- | :--- |
+| Solicitud de carga | Borrador | — | `DRAFT` |
+| Solicitud de carga | Buscando Unidad | Publicada (US37) | `PUBLISHED` |
+| Solicitud de carga | Asignada | Asignada (US37) | `ASSIGNED` |
+| Solicitud de carga | En Tránsito | En tránsito (US37) | `IN_TRANSIT` |
+| Solicitud de carga | Entregada | Entregada (US37) | `DELIVERED` |
+| Solicitud de carga | Cancelada | Cancelada (US05, US37) | `CANCELLED` |
+| Viaje | Asignado | Próximo (US41) | `ASSIGNED` |
+| Viaje | En Camino | En curso (US41, US52, US55) | `EN_ROUTE_TO_PICKUP`, `AT_PICKUP_POINT`, `CARGO_PICKED_UP`, `IN_TRANSIT` |
+| Viaje | En Destino | En curso, con la llegada reportada (US08) | `IN_TRANSIT` |
+| Viaje | Con retraso | Con retraso (US52) | `DELAYED` |
+| Viaje | Entregado | Entregado (US08, US56) | `DELIVERED` |
+| Viaje | Observado | Observado (US56) | `DISPUTED` |
+| Viaje | Por Liquidar | Completado, con el pago habilitado (US20, US56) | `COMPLETED` y pago `ENABLED` |
+| Viaje | Completado | Completado (US11, US41) | `COMPLETED` |
+| Viaje | Cancelado | Cancelado (US55) | `CANCELLED` |
+| Documento | Pendiente de Subir | — (el documento aún no se ha cargado) | sin registro |
+| Documento | Pendiente | Pendiente (US35) | `PENDING` |
+| Documento | En revisión | En revisión (US34, US35) | `IN_REVIEW` |
+| Documento | Aprobado | Aprobado (US35) | `APPROVED` |
+| Documento | Rechazado / No Aprobado | Rechazado (US35) | `REJECTED` |
+| Documento | Vencido | Vencido (US35) | `EXPIRED` |
 
 Esta diferenciación facilita que el usuario pueda reconocer rápidamente si un elemento representa una sección, una acción o un estado.
 
@@ -305,7 +333,7 @@ Las empresas disponen de una barra de búsqueda orientada a localizar operacione
 | **Código de carga** | Permite localizar directamente una solicitud mediante su identificador. |
 | **Ruta** | Permite encontrar cargas relacionadas con un origen o destino determinado. |
 | **Transportista** | Permite localizar operaciones asociadas a un transportista. |
-| **Estado** | Facilita la identificación de cargas en tránsito, buscando unidad o completadas. |
+| **Estado** | Filtra las cargas por estado: Buscando Unidad (Publicada), Asignada, En Tránsito, Entregada o Cancelada (US37). |
 
 Los resultados se presentan principalmente mediante tablas y tarjetas donde se muestran datos como **ID de carga, ruta, estado y acciones disponibles**.
 
@@ -355,27 +383,29 @@ Además, la navegación contextual conecta secciones que no figuran en la cabece
 
 La Web Application de empresas utiliza una barra lateral persistente.
 
-| NOMBRE | DESCRIPCIÓN |
-| :--- | :--- |
-| **Dashboard** | Presenta un resumen de cargas y operaciones activas. |
-| **Mis Cargas** | Permite consultar y gestionar las solicitudes registradas. |
-| **Historial** | Permite revisar operaciones realizadas anteriormente. |
-| **Configuración** | Permite administrar opciones relacionadas con la cuenta. |
+| NOMBRE | DESCRIPCIÓN | USER STORIES |
+| :--- | :--- | :--- |
+| **Dashboard** | Presenta un resumen de cargas publicadas, en tránsito y completadas, y las últimas operaciones. | US36 |
+| **Mis Cargas** | Permite consultar, filtrar por estado, editar y cancelar las solicitudes registradas, seguir el viaje y confirmar la recepción de la mercadería. | US04, US05, US09, US37, US38, US42, US56 |
+| **Historial** | Permite revisar los servicios completados, calificar al transportista, consultar los pagos realizados y descargar sus comprobantes. | US10, US20, US53 |
+| **Configuración** | Permite actualizar el perfil de la empresa y cerrar la sesión. | US31, US29 |
 
-Acciones como **Publicar Nueva Carga**, **Ver Seguimiento**, **Gestionar** o **Cancelar Carga** se presentan de manera contextual dentro de las secciones correspondientes.
+Acciones como **Publicar Nueva Carga**, **Ver Seguimiento**, **Editar**, **Cancelar Carga**, **Confirmar Recepción** o **Calificar Transportista** se presentan de manera contextual dentro de las secciones correspondientes.
 
 #### Navigation System para transportistas
 
 Para los transportistas también se utiliza una barra lateral persistente adaptada a sus principales tareas.
 
-| NOMBRE | DESCRIPCIÓN |
-| :--- | :--- |
-| **Buscar Fletes** | Permite localizar oportunidades de carga disponibles. |
-| **Mis Viajes** | Permite consultar viajes en progreso y completados. |
-| **Historial** | Permite revisar servicios realizados anteriormente. |
-| **Mi Perfil** | Permite gestionar datos personales y documentación. |
+| NOMBRE | DESCRIPCIÓN | USER STORIES |
+| :--- | :--- | :--- |
+| **Buscar Fletes** | Permite localizar oportunidades de carga, aplicar filtros, consultar el detalle de un flete y aceptarlo. | US06, US39, US40, US07 |
+| **Mis Viajes** | Permite consultar los viajes próximos, en curso y completados, actualizar su estado, reportar incidentes y cancelar un viaje aceptado. | US41, US08, US52, US55 |
+| **Historial** | Permite revisar los servicios completados, calificar a la empresa y consultar las liquidaciones recibidas. | US11, US51, US54 |
+| **Mi Perfil** | Permite gestionar datos personales, vehículos y documentación, y consultar su estado de validación. | US32, US33, US34, US35, US29 |
 
-Dentro de **Mis Viajes**, el usuario puede recorrer secuencialmente el proceso de un servicio mediante acciones como **Ir al Mapa**, **Reportar Llegada a Destino** y **Finalizar Viaje**.
+Dentro de **Mis Viajes**, el usuario recorre secuencialmente el proceso de un servicio mediante acciones como **Ir al Mapa**, **Reportar Incidente**, **Reportar Llegada a Destino** y **Marcar como Entregado**. El viaje pasa a **Completado** cuando la empresa confirma la recepción de la mercadería, o automáticamente si no responde en 24 horas (US56).
+
+En ambos perfiles, la cabecera incluye el icono de **Notificaciones**, que muestra el contador de avisos no leídos y la lista de notificaciones sobre la carga aceptada, recogida o entregada (US43).
 
 De esta manera, LoadMatch combina una navegación principal sencilla con acciones contextuales y flujos secuenciales, evitando sobrecargar los menús con opciones que únicamente son necesarias en momentos específicos.
 
