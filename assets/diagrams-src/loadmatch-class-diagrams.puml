@@ -1,0 +1,1766 @@
+' =============================================================================
+'  LoadMatch Platform — Class Diagrams per Bounded Context (UML)
+'  Section 4.7.1 of the report - Course 1ASI0729 - Group 5
+'
+'  SINGLE FILE: 10 @startuml blocks, one per bounded context, plus an
+'  11th block for the cross-cutting Notification component (US43).
+'  PlantUML generates one image per block. No remote includes.
+'
+'  -------------------------------------------------------------------------
+'  CONVENTIONS APPLIED
+'  -------------------------------------------------------------------------
+'  Visibility (required by the assignment, section 4.7.1):
+'     +  public        -  private        #  protected     ~  package-private
+'
+'  Stereotypes:
+'     <<Aggregate Root>>          root of the aggregate; single entry point
+'     <<Entity>>                  internal entity; only created through its root
+'     <<Value Object (Record)>>   no identity of its own; immutable
+'     <<Enumeration>>             closed set of domain states
+'     <<Repository (Interface)>>  persistence contract; one per Aggregate Root
+'     <<Port (Interface)>>        contract towards an external system (ACL)
+'     <<Domain Event (Record)>>   business fact published by the aggregate
+'     <<Domain Service>>          logic that does not belong to a single aggregate
+'     <<Read Model>>              read-only projection
+'     <<Shared Kernel>>           Value Object shared across bounded contexts
+'
+'  Relationships:
+'     *-->   composition    the whole controls the lifecycle of the part
+'     o-->   aggregation    weak or optional association
+'     ..>    dependency     reference between aggregates BY IDENTITY, or use of a port
+'
+'  Modeling rules:
+'   1. An aggregate NEVER references another aggregate by object, only by its typed Id.
+'   2. Identifiers are Value Objects over UUID (prevents mixing up
+'      a VehicleId with a CarrierId at compile time).
+'   3. Internal entities declare a package-private constructor (~).
+'   4. Aggregates expose business methods, never setters.
+'   5. One repository per Aggregate Root; internal entities do not get their own.
+' =============================================================================
+
+
+' =============================================================================
+'  BOUNDED CONTEXT 1 — IAM
+' =============================================================================
+@startuml class-01-iam
+skinparam classAttributeIconSize 0
+title Class Diagram — Bounded Context: IAM
+caption Credentials, authentication and account lifecycle
+
+package "com.loadmatch.iam.domain.model.valueobjects" {
+    class "UserId" <<Value Object (Record)>> {
+        +value : UUID
+        --
+        +UserId()
+        +UserId(value: UUID)
+        +{static} of(value: String) : UserId
+    }
+    class "Email" <<Value Object (Record)>> {
+        +value : String
+        --
+        +Email(value: String)
+        -validateFormat(value: String) : void
+        +domain() : String
+    }
+    class "PasswordHash" <<Value Object (Record)>> {
+        +value : String
+        --
+        +PasswordHash(value: String)
+    }
+    enum "UserRole" <<Enumeration>> {
+        SHIPPER
+        CARRIER
+    }
+}
+
+package "com.loadmatch.iam.domain.model.entities" {
+    entity "PasswordResetToken" <<Entity>> {
+        -id : UUID
+        -tokenHash : String
+        -expiresAt : LocalDateTime
+        -used : boolean
+        -createdAt : LocalDateTime
+        --
+        ~PasswordResetToken(tokenHash: String, validityMinutes: int)
+        +isValid() : boolean
+        +markAsUsed() : void
+    }
+}
+
+package "com.loadmatch.iam.domain.model.aggregates" {
+    entity "User" <<Aggregate Root>> {
+        -id : UserId
+        -email : Email
+        -passwordHash : PasswordHash
+        -role : UserRole
+        -verified : boolean
+        -active : boolean
+        -createdAt : LocalDateTime
+        -lastAccessAt : LocalDateTime
+        -passwordResetTokens : List<PasswordResetToken>
+        --
+        +User(email: Email, passwordHash: PasswordHash, role: UserRole)
+        +verifyAccount() : void
+        +recordAccess() : void
+        +changePassword(newPassword: PasswordHash) : void
+        +deactivate() : void
+        +requestPasswordReset() : PasswordResetToken
+        +resetPassword(token: String, newPassword: PasswordHash) : void
+        +isEnabled() : boolean
+        +getId() : UserId
+        +getEmail() : Email
+        +getRole() : UserRole
+        -ensureNotDeactivated() : void
+    }
+}
+
+package "com.loadmatch.iam.domain.model.events" {
+    class "UserRegistered" <<Domain Event (Record)>> {
+        +userId : UserId
+        +email : Email
+        +role : UserRole
+        +occurredAt : LocalDateTime
+    }
+    class "AccountVerified" <<Domain Event (Record)>> {
+        +userId : UserId
+        +occurredAt : LocalDateTime
+    }
+    class "PasswordResetRequested" <<Domain Event (Record)>> {
+        +userId : UserId
+        +email : Email
+        +expiresAt : LocalDateTime
+        +occurredAt : LocalDateTime
+    }
+}
+
+package "com.loadmatch.iam.domain.repositories" {
+    interface "UserRepository" <<Repository (Interface)>> {
+        +findById(id: UserId) : Optional<User>
+        +findByEmail(email: Email) : Optional<User>
+        +existsByEmail(email: Email) : boolean
+        +save(user: User) : User
+    }
+}
+
+package "com.loadmatch.iam.domain.services" {
+    interface "PasswordHasher" <<Port (Interface)>> {
+        +hash(plain: String) : PasswordHash
+        +matches(plain: String, hash: PasswordHash) : boolean
+    }
+}
+
+User *--> "1" UserId : identified by >
+User *--> "1" Email : authenticates with >
+User *--> "1" PasswordHash : secures its access with >
+User *--> "1" UserRole : operates under the >
+
+User ..> "0..*" UserRegistered : publishes >
+User ..> "0..*" AccountVerified : publishes >
+User *--> "0..*" PasswordResetToken : recovers its access with >
+User ..> "0..*" PasswordResetRequested : publishes >
+UserRepository ..> "0..*" User : persists and retrieves >
+User ..> "1" PasswordHasher : delegates hashing to >
+
+legend right
+  |= Symbol |= Meaning |
+  | + | public |
+  | - | private |
+  | # | protected |
+  | ~ | package-private |
+  | *--> | composition |
+  | o--> | aggregation |
+  | ..> | dependency / reference by Id |
+endlegend
+@enduml
+
+
+' =============================================================================
+'  BOUNDED CONTEXT 2 — PROFILES
+' =============================================================================
+@startuml class-02-profiles
+skinparam classAttributeIconSize 0
+title Class Diagram — Bounded Context: Profiles
+caption Shipper and Carrier profiles, RUC, contact details, reputation and suspension for cancellations
+
+package "com.loadmatch.profiles.domain.model.valueobjects" {
+    class "ShipperId" <<Value Object (Record)>> {
+        +value : UUID
+        --
+        +ShipperId()
+        +ShipperId(value: UUID)
+    }
+    class "CarrierId" <<Value Object (Record)>> {
+        +value : UUID
+        --
+        +CarrierId()
+        +CarrierId(value: UUID)
+    }
+    class "Ruc" <<Value Object (Record)>> {
+        +value : String
+        --
+        +Ruc(value: String)
+        +isValid() : boolean
+        -computeCheckDigit() : int
+    }
+    class "Dni" <<Value Object (Record)>> {
+        +value : String
+        --
+        +Dni(value: String)
+        +isValid() : boolean
+    }
+    class "DriverLicense" <<Value Object (Record)>> {
+        +number : String
+        +category : String
+        +expirationDate : LocalDate
+        --
+        +isValid() : boolean
+    }
+    class "PhoneNumber" <<Value Object (Record)>> {
+        +value : String
+    }
+    class "Address" <<Value Object (Record)>> {
+        +street : String
+        +district : String
+        +province : String
+        +department : String
+    }
+    class "Reputation" <<Value Object (Record)>> {
+        +average : double
+        +totalRatings : int
+        --
+        +{static} initial() : Reputation
+        +addScore(score: int) : Reputation
+    }
+    enum "EnablementStatus" <<Enumeration>> {
+        PENDING
+        ENABLED
+        SUSPENDED
+    }
+}
+
+package "com.loadmatch.profiles.domain.model.aggregates" {
+    entity "Shipper" <<Aggregate Root>> {
+        -id : ShipperId
+        -userId : UserId
+        -ruc : Ruc
+        -businessName : String
+        -contactName : String
+        -phoneNumber : PhoneNumber
+        -fiscalAddress : Address
+        -reputation : Reputation
+        -registeredAt : LocalDateTime
+        --
+        +Shipper(userId: UserId, ruc: Ruc, businessName: String)
+        +updateContactInfo(name: String, phoneNumber: PhoneNumber) : void
+        +updateFiscalAddress(address: Address) : void
+        +registerNewRating(score: int) : void
+        +getId() : ShipperId
+        +getRuc() : Ruc
+    }
+
+    entity "Carrier" <<Aggregate Root>> {
+        -id : CarrierId
+        -userId : UserId
+        -firstNames : String
+        -lastNames : String
+        -dni : Dni
+        -license : DriverLicense
+        -phoneNumber : PhoneNumber
+        -enablementStatus : EnablementStatus
+        -reputation : Reputation
+        -suspendedUntil : LocalDateTime
+        -suspensionReason : String
+        -registeredAt : LocalDateTime
+        --
+        +Carrier(userId: UserId, dni: Dni, license: DriverLicense, firstNames: String, lastNames: String)
+        +enable() : void
+        +suspend(reason: String) : void
+        +suspendTemporarily(until: LocalDateTime, reason: String) : void
+        +liftSuspension() : void
+        +registerNewRating(score: int) : void
+        +updateContactInfo(phoneNumber: PhoneNumber) : void
+        +canAcceptTrips() : boolean
+        +fullName() : String
+        -ensureLicenseValid() : void
+    }
+}
+
+package "com.loadmatch.profiles.domain.model.events" {
+    class "ShipperRegistered" <<Domain Event (Record)>> {
+        +shipperId : ShipperId
+        +ruc : Ruc
+        +occurredAt : LocalDateTime
+    }
+    class "CarrierEnabled" <<Domain Event (Record)>> {
+        +carrierId : CarrierId
+        +occurredAt : LocalDateTime
+    }
+    class "CarrierSuspended" <<Domain Event (Record)>> {
+        +carrierId : CarrierId
+        +suspendedUntil : LocalDateTime
+        +reason : String
+        +occurredAt : LocalDateTime
+    }
+}
+
+package "com.loadmatch.profiles.domain.services" {
+    class "CancellationPolicy" <<Domain Service>> {
+        -LATE_CANCELLATION_LIMIT : int = 3
+        -WINDOW_DAYS : int = 30
+        -SUSPENSION_DAYS : int = 7
+        --
+        +evaluate(carrier: Carrier) : void
+    }
+    interface "CancellationQueryPort" <<Port (Interface)>> {
+        +countLateCancellations(id: CarrierId, since: LocalDateTime) : int
+    }
+}
+
+package "com.loadmatch.profiles.domain.repositories" {
+    interface "ShipperRepository" <<Repository (Interface)>> {
+        +findById(id: ShipperId) : Optional<Shipper>
+        +findByUserId(id: UserId) : Optional<Shipper>
+        +existsByRuc(ruc: Ruc) : boolean
+        +save(shipper: Shipper) : Shipper
+    }
+    interface "CarrierRepository" <<Repository (Interface)>> {
+        +findById(id: CarrierId) : Optional<Carrier>
+        +findByUserId(id: UserId) : Optional<Carrier>
+        +existsByDni(dni: Dni) : boolean
+        +save(carrier: Carrier) : Carrier
+    }
+}
+
+class "UserId" <<Shared Kernel>> {
+    +value : UUID
+}
+
+Shipper *--> "1" ShipperId : identified by >
+Shipper *--> "1" Ruc : is registered with >
+Shipper *--> "1" PhoneNumber : is contacted via >
+Shipper o--> "1" Address : is domiciled at >
+Shipper *--> "1" Reputation : accumulates its >
+Shipper ..> "1" UserId : references by Id >
+
+Carrier *--> "1" CarrierId : identified by >
+Carrier *--> "1" Dni : is identified with >
+Carrier *--> "1" DriverLicense : drives with >
+Carrier *--> "1" PhoneNumber : is contacted via >
+Carrier *--> "1" EnablementStatus : is in >
+Carrier *--> "1" Reputation : accumulates its >
+Carrier ..> "1" UserId : references by Id >
+
+Shipper ..> "0..*" ShipperRegistered : publishes >
+Carrier ..> "0..*" CarrierEnabled : publishes >
+Carrier ..> "0..*" CarrierSuspended : publishes >
+CancellationPolicy ..> "0..*" Carrier : suspends for 7 days after 3 late cancellations >
+CancellationPolicy ..> "1" CancellationQueryPort : counts cancellations via >
+ShipperRepository ..> "0..*" Shipper : persists and retrieves >
+CarrierRepository ..> "0..*" Carrier : persists and retrieves >
+
+legend right
+  |= Symbol |= Meaning |
+  | + | public |
+  | - | private |
+  | ~ | package-private |
+  | *--> | composition |
+  | o--> | aggregation |
+  | ..> | reference by Id |
+endlegend
+@enduml
+
+
+' =============================================================================
+'  BOUNDED CONTEXT 3 — FLEET
+' =============================================================================
+@startuml class-03-fleet
+skinparam classAttributeIconSize 0
+title Class Diagram — Bounded Context: Fleet
+caption Vehicles, license plates, vehicle types and load capacities
+
+package "com.loadmatch.fleet.domain.model.valueobjects" {
+    class "VehicleId" <<Value Object (Record)>> {
+        +value : UUID
+        --
+        +VehicleId()
+        +VehicleId(value: UUID)
+    }
+    class "VehicleTypeId" <<Value Object (Record)>> {
+        +value : UUID
+        --
+        +VehicleTypeId()
+        +VehicleTypeId(value: UUID)
+    }
+    class "LicensePlate" <<Value Object (Record)>> {
+        +value : String
+        --
+        +LicensePlate(value: String)
+        +isValid() : boolean
+        -normalize(value: String) : String
+    }
+    class "Dimensions" <<Shared Kernel>> {
+        +lengthM : double
+        +widthM : double
+        +heightM : double
+        --
+        +volumeM3() : double
+        +fitsIn(other: Dimensions) : boolean
+    }
+    class "MtcLookupResult" <<Value Object (Record)>> {
+        +plateValid : boolean
+        +soatValid : boolean
+        +lookedUpAt : LocalDateTime
+        --
+        +isApproved() : boolean
+    }
+    enum "MtcValidationStatus" <<Enumeration>> {
+        PENDING
+        VALIDATED
+        REJECTED
+    }
+}
+
+package "com.loadmatch.fleet.domain.model.aggregates" {
+    entity "VehicleType" <<Aggregate Root>> {
+        -id : VehicleTypeId
+        -name : String
+        -description : String
+        -maxWeightKg : double
+        -maxDimensions : Dimensions
+        -active : boolean
+        --
+        +VehicleType(name: String, maxWeightKg: double, maxDimensions: Dimensions)
+        +activate() : void
+        +deactivate() : void
+        +acceptsLoad(weightKg: double, dimensions: Dimensions) : boolean
+        +getId() : VehicleTypeId
+    }
+
+    entity "Vehicle" <<Aggregate Root>> {
+        -id : VehicleId
+        -carrierId : CarrierId
+        -vehicleTypeId : VehicleTypeId
+        -licensePlate : LicensePlate
+        -brand : String
+        -model : String
+        -manufactureYear : int
+        -axleCount : int
+        -payloadKg : double
+        -grossWeightKg : double
+        -dimensions : Dimensions
+        -mtcValidationStatus : MtcValidationStatus
+        -mtcValidatedAt : LocalDateTime
+        -active : boolean
+        -registeredAt : LocalDateTime
+        --
+        +Vehicle(carrierId: CarrierId, vehicleTypeId: VehicleTypeId, licensePlate: LicensePlate, brand: String, model: String, manufactureYear: int)
+        +recordMtcResult(result: MtcLookupResult) : void
+        +updateTechnicalData(payloadKg: double, grossWeightKg: double, dimensions: Dimensions) : void
+        +deactivate() : void
+        +reactivate() : void
+        +isEnabled() : boolean
+        +canTransport(weightKg: double, dimensions: Dimensions) : boolean
+        +getId() : VehicleId
+        -validateManufactureYear(year: int) : void
+    }
+}
+
+package "com.loadmatch.fleet.domain.model.events" {
+    class "VehicleRegistered" <<Domain Event (Record)>> {
+        +vehicleId : VehicleId
+        +carrierId : CarrierId
+        +licensePlate : LicensePlate
+        +occurredAt : LocalDateTime
+    }
+    class "LicensePlateValidated" <<Domain Event (Record)>> {
+        +vehicleId : VehicleId
+        +occurredAt : LocalDateTime
+    }
+    class "LicensePlateRejected" <<Domain Event (Record)>> {
+        +vehicleId : VehicleId
+        +reason : String
+        +occurredAt : LocalDateTime
+    }
+    class "VehicleDeactivated" <<Domain Event (Record)>> {
+        +vehicleId : VehicleId
+        +carrierId : CarrierId
+        +occurredAt : LocalDateTime
+    }
+}
+
+package "com.loadmatch.fleet.domain.repositories" {
+    interface "VehicleRepository" <<Repository (Interface)>> {
+        +findById(id: VehicleId) : Optional<Vehicle>
+        +findByCarrierId(id: CarrierId) : List<Vehicle>
+        +existsByLicensePlate(licensePlate: LicensePlate) : boolean
+        +save(vehicle: Vehicle) : Vehicle
+    }
+    interface "VehicleTypeRepository" <<Repository (Interface)>> {
+        +findById(id: VehicleTypeId) : Optional<VehicleType>
+        +findAllActive() : List<VehicleType>
+        +save(type: VehicleType) : VehicleType
+    }
+}
+
+package "com.loadmatch.fleet.domain.services" {
+    interface "MtcRegistryService" <<Port (Interface)>> {
+        +lookupLicensePlate(licensePlate: LicensePlate) : MtcLookupResult
+    }
+}
+
+class "CarrierId" <<Shared Kernel>> {
+    +value : UUID
+}
+
+VehicleType *--> "1" VehicleTypeId : identified by >
+VehicleType *--> "1" Dimensions : is limited by >
+
+Vehicle *--> "1" VehicleId : identified by >
+Vehicle *--> "1" LicensePlate : is identified on public roads by >
+Vehicle *--> "1" Dimensions : measures >
+Vehicle *--> "1" MtcValidationStatus : is in >
+Vehicle ..> "1" CarrierId : references by Id >
+Vehicle ..> "1" VehicleTypeId : is classified by Id as >
+
+Vehicle ..> "1" MtcRegistryService : validates its plate via >
+MtcRegistryService ..> "1" MtcLookupResult : returns >
+
+Vehicle ..> "0..*" VehicleRegistered : publishes >
+Vehicle ..> "0..*" LicensePlateValidated : publishes >
+Vehicle ..> "0..*" LicensePlateRejected : publishes >
+Vehicle ..> "0..*" VehicleDeactivated : publishes >
+VehicleRepository ..> "0..*" Vehicle : persists and retrieves >
+VehicleTypeRepository ..> "0..*" VehicleType : persists and retrieves >
+
+legend right
+  |= Symbol |= Meaning |
+  | + | public |
+  | - | private |
+  | *--> | composition |
+  | ..> | reference by Id / use of port |
+endlegend
+@enduml
+
+
+' =============================================================================
+'  BOUNDED CONTEXT 4 — DOCUMENT VALIDATION
+' =============================================================================
+@startuml class-04-document-validation
+skinparam classAttributeIconSize 0
+title Class Diagram — Bounded Context: Document Validation
+caption Upload and automatic validation of driver licenses, SOAT and vehicle registration cards
+
+package "com.loadmatch.documents.domain.model.valueobjects" {
+    class "DocumentId" <<Value Object (Record)>> {
+        +value : UUID
+        --
+        +DocumentId()
+        +DocumentId(value: UUID)
+    }
+    class "DocumentTypeId" <<Value Object (Record)>> {
+        +value : UUID
+        --
+        +DocumentTypeId()
+        +DocumentTypeId(value: UUID)
+    }
+    class "FileUrl" <<Value Object (Record)>> {
+        +value : String
+        --
+        +FileUrl(value: String)
+        -validateScheme(value: String) : void
+    }
+    class "RejectionReason" <<Value Object (Record)>> {
+        +code : String
+        +description : String
+    }
+    enum "ValidationStatus" <<Enumeration>> {
+        PENDING
+        IN_REVIEW
+        APPROVED
+        REJECTED
+        EXPIRED
+    }
+}
+
+package "com.loadmatch.documents.domain.model.aggregates" {
+    entity "DocumentType" <<Aggregate Root>> {
+        -id : DocumentTypeId
+        -name : String
+        -description : String
+        -requiresExpiration : boolean
+        -mandatory : boolean
+        --
+        +DocumentType(name: String, requiresExpiration: boolean, mandatory: boolean)
+        +isMandatory() : boolean
+        +getId() : DocumentTypeId
+    }
+
+    entity "Document" <<Aggregate Root>> {
+        -id : DocumentId
+        -carrierId : CarrierId
+        -documentTypeId : DocumentTypeId
+        -fileUrl : FileUrl
+        -validationStatus : ValidationStatus
+        -rejectionReason : RejectionReason
+        -issueDate : LocalDate
+        -expirationDate : LocalDate
+        -uploadedAt : LocalDateTime
+        -validatedAt : LocalDateTime
+        --
+        +Document(carrierId: CarrierId, documentTypeId: DocumentTypeId, fileUrl: FileUrl, expirationDate: LocalDate)
+        +startReview() : void
+        +approve() : void
+        +reject(reason: RejectionReason) : void
+        +markAsExpired() : void
+        +isExpired() : boolean
+        +isValid() : boolean
+        +expiresWithinDays(days: int) : boolean
+        +getId() : DocumentId
+        -ensurePending() : void
+    }
+}
+
+package "com.loadmatch.documents.domain.model.events" {
+    class "DocumentUploaded" <<Domain Event (Record)>> {
+        +documentId : DocumentId
+        +carrierId : CarrierId
+        +occurredAt : LocalDateTime
+    }
+    class "DocumentationApproved" <<Domain Event (Record)>> {
+        +carrierId : CarrierId
+        +occurredAt : LocalDateTime
+    }
+    class "ValidationRejected" <<Domain Event (Record)>> {
+        +documentId : DocumentId
+        +carrierId : CarrierId
+        +reason : RejectionReason
+        +occurredAt : LocalDateTime
+    }
+    class "DocumentExpired" <<Domain Event (Record)>> {
+        +documentId : DocumentId
+        +carrierId : CarrierId
+        +occurredAt : LocalDateTime
+    }
+}
+
+package "com.loadmatch.documents.domain.repositories" {
+    interface "DocumentRepository" <<Repository (Interface)>> {
+        +findById(id: DocumentId) : Optional<Document>
+        +findByCarrierId(id: CarrierId) : List<Document>
+        +findExpired(date: LocalDate) : List<Document>
+        +findExpiringBy(until: LocalDate) : List<Document>
+        +save(document: Document) : Document
+    }
+    interface "DocumentTypeRepository" <<Repository (Interface)>> {
+        +findById(id: DocumentTypeId) : Optional<DocumentType>
+        +findAllMandatory() : List<DocumentType>
+    }
+}
+
+package "com.loadmatch.documents.domain.services" {
+    interface "FileStorageService" <<Port (Interface)>> {
+        +upload(content: byte[], name: String) : FileUrl
+        +generateSignedUrl(url: FileUrl, minutes: int) : String
+    }
+    interface "MtcRegistryService" <<Port (Interface)>> {
+        +validateLicense(number: String) : boolean
+    }
+    class "DocumentValidationService" <<Domain Service>> {
+        +validateAutomatically(document: Document) : ValidationStatus
+        +isDocumentationComplete(carrierId: CarrierId) : boolean
+    }
+}
+
+class "CarrierId" <<Shared Kernel>> {
+    +value : UUID
+}
+
+DocumentType *--> "1" DocumentTypeId : identified by >
+
+Document *--> "1" DocumentId : identified by >
+Document *--> "1" FileUrl : is stored at >
+Document *--> "1" ValidationStatus : is in >
+Document o--> "0..1" RejectionReason : justifies its rejection with >
+Document ..> "1" CarrierId : references by Id >
+Document ..> "1" DocumentTypeId : is classified by Id as >
+
+DocumentValidationService ..> "0..*" Document : validates >
+DocumentValidationService ..> "1" MtcRegistryService : queries via >
+Document ..> "1" FileStorageService : uploads its file via >
+
+Document ..> "0..*" DocumentUploaded : publishes >
+Document ..> "0..*" ValidationRejected : publishes >
+Document ..> "0..*" DocumentExpired : publishes >
+DocumentValidationService ..> "0..*" DocumentationApproved : publishes >
+DocumentRepository ..> "0..*" Document : persists and retrieves >
+DocumentTypeRepository ..> "0..*" DocumentType : persists and retrieves >
+
+legend right
+  |= Symbol |= Meaning |
+  | + | public |
+  | - | private |
+  | *--> | composition |
+  | o--> | aggregation |
+  | ..> | reference by Id / use of port |
+endlegend
+@enduml
+
+
+' =============================================================================
+'  BOUNDED CONTEXT 5 — FREIGHT PUBLISHING  (Core Domain)
+' =============================================================================
+@startuml class-05-freight-publishing
+skinparam classAttributeIconSize 0
+title Class Diagram — Bounded Context: Freight Publishing (Core)
+caption Publishing, editing and cancelling load requests
+
+package "com.loadmatch.freight.domain.model.valueobjects" {
+    class "LoadRequestId" <<Value Object (Record)>> {
+        +value : UUID
+        --
+        +LoadRequestId()
+        +LoadRequestId(value: UUID)
+    }
+    class "Coordinates" <<Shared Kernel>> {
+        +latitude : double
+        +longitude : double
+        --
+        +distanceTo(other: Coordinates) : double
+    }
+    class "Location" <<Value Object (Record)>> {
+        +address : String
+        +district : String
+        +coordinates : Coordinates
+    }
+    class "Route" <<Value Object (Record)>> {
+        +origin : Location
+        +destination : Location
+        +distanceKm : double
+        --
+        +isValid() : boolean
+    }
+    class "Dimensions" <<Shared Kernel>> {
+        +lengthM : double
+        +widthM : double
+        +heightM : double
+        --
+        +volumeM3() : double
+    }
+    class "Money" <<Shared Kernel>> {
+        +amount : BigDecimal
+        +currency : Currency
+        --
+        +{static} ofSoles(amount: BigDecimal) : Money
+        +add(other: Money) : Money
+        +multiply(factor: double) : Money
+        +isGreaterThan(other: Money) : boolean
+    }
+    enum "LoadRequestStatus" <<Enumeration>> {
+        DRAFT
+        PUBLISHED
+        ASSIGNED
+        IN_TRANSIT
+        DELIVERED
+        CANCELLED
+    }
+}
+
+package "com.loadmatch.freight.domain.model.aggregates" {
+    entity "LoadRequest" <<Aggregate Root>> {
+        -id : LoadRequestId
+        -shipperId : ShipperId
+        -vehicleTypeId : VehicleTypeId
+        -route : Route
+        -weightKg : double
+        -dimensions : Dimensions
+        -cargoType : String
+        -offeredRate : Money
+        -status : LoadRequestStatus
+        -pickupAt : LocalDateTime
+        -createdAt : LocalDateTime
+        -publishedAt : LocalDateTime
+        -urgent : boolean
+        -republishedAt : LocalDateTime
+        -cancellationReason : String
+        --
+        +LoadRequest(shipperId: ShipperId, vehicleTypeId: VehicleTypeId, route: Route, weightKg: double, dimensions: Dimensions, offeredRate: Money, pickupAt: LocalDateTime)
+        +publish() : void
+        +markAsAssigned() : void
+        +markInTransit() : void
+        +markAsDelivered() : void
+        +edit(pickupAt: LocalDateTime, weightKg: double, rate: Money) : void
+        +republishAsUrgent() : void
+        +cancel(reason: String) : void
+        +isAvailable() : boolean
+        +isEditable() : boolean
+        +getId() : LoadRequestId
+        -validateWeightAndDimensions() : void
+        -validatePickupDateInFuture() : void
+    }
+}
+
+package "com.loadmatch.freight.domain.model.events" {
+    class "LoadRequestPublished" <<Domain Event (Record)>> {
+        +loadRequestId : LoadRequestId
+        +shipperId : ShipperId
+        +route : Route
+        +occurredAt : LocalDateTime
+    }
+    class "LoadRequestCancelled" <<Domain Event (Record)>> {
+        +loadRequestId : LoadRequestId
+        +reason : String
+        +occurredAt : LocalDateTime
+    }
+    class "LoadWithdrawnFromMarket" <<Domain Event (Record)>> {
+        +loadRequestId : LoadRequestId
+        +occurredAt : LocalDateTime
+    }
+    class "LoadRequestRepublishedAsUrgent" <<Domain Event (Record)>> {
+        +loadRequestId : LoadRequestId
+        +vehicleTypeId : VehicleTypeId
+        +occurredAt : LocalDateTime
+    }
+}
+
+package "com.loadmatch.freight.domain.repositories" {
+    interface "LoadRequestRepository" <<Repository (Interface)>> {
+        +findById(id: LoadRequestId) : Optional<LoadRequest>
+        +findByShipperId(id: ShipperId) : List<LoadRequest>
+        +findByShipperIdAndStatus(id: ShipperId, status: LoadRequestStatus) : List<LoadRequest>
+        +findPublished() : List<LoadRequest>
+        +save(loadRequest: LoadRequest) : LoadRequest
+    }
+}
+
+package "com.loadmatch.freight.domain.services" {
+    interface "GeospatialService" <<Port (Interface)>> {
+        +geocode(address: String) : Coordinates
+        +calculateRouteDistance(origin: Coordinates, destination: Coordinates) : double
+    }
+}
+
+class "ShipperId" <<Shared Kernel>> {
+    +value : UUID
+}
+class "VehicleTypeId" <<Shared Kernel>> {
+    +value : UUID
+}
+
+LoadRequest *--> "1" LoadRequestId : identified by >
+LoadRequest *--> "1" Route : travels along >
+LoadRequest *--> "1" Dimensions : occupies >
+LoadRequest *--> "1" Money : offers as rate >
+LoadRequest *--> "1" LoadRequestStatus : is in >
+LoadRequest ..> "1" ShipperId : references by Id >
+LoadRequest ..> "1" VehicleTypeId : requires by Id >
+
+Route *--> "2" Location : spans between >
+Location *--> "1" Coordinates : is located at >
+
+LoadRequest ..> "1" GeospatialService : calculates its route via >
+LoadRequest ..> "0..*" LoadRequestPublished : publishes >
+LoadRequest ..> "0..*" LoadRequestCancelled : publishes >
+LoadRequest ..> "0..*" LoadWithdrawnFromMarket : publishes >
+LoadRequest ..> "0..*" LoadRequestRepublishedAsUrgent : publishes >
+LoadRequestRepository ..> "0..*" LoadRequest : persists and retrieves >
+
+legend right
+  |= Symbol |= Meaning |
+  | + | public |
+  | - | private |
+  | *--> | composition |
+  | ..> | reference by Id / use of port |
+endlegend
+@enduml
+
+
+' =============================================================================
+'  BOUNDED CONTEXT 6 — MATCHING  (Core Domain, no aggregate)
+' =============================================================================
+@startuml class-06-matching
+skinparam classAttributeIconSize 0
+title Class Diagram — Bounded Context: Matching (Core)
+caption Query and assignment context: no aggregate of its own
+
+note as N1
+  This bounded context **has no Aggregate Root**.
+  Its responsibility is coordination and querying:
+  it operates on LoadRequest and Carrier
+  referencing them by identity only.
+  It is implemented through a Domain Service,
+  a Specification and read models.
+end note
+
+package "com.loadmatch.matching.domain.model.valueobjects" {
+    class "SearchCriteria" <<Value Object (Record)>> {
+        +origin : Coordinates
+        +radiusKm : double
+        +minWeightKg : double
+        +vehicleTypeId : VehicleTypeId
+        +minRate : Money
+        +sortBy : SortCriteria
+        --
+        +{static} defaultFor(origin: Coordinates) : SearchCriteria
+    }
+    class "Coordinates" <<Shared Kernel>> {
+        +latitude : double
+        +longitude : double
+        --
+        +distanceTo(other: Coordinates) : double
+    }
+    class "Money" <<Shared Kernel>> {
+        +amount : BigDecimal
+        +currency : Currency
+    }
+    enum "SortCriteria" <<Enumeration>> {
+        MOST_RECENT
+        HIGHEST_RATE
+        SHORTEST_DISTANCE
+    }
+}
+
+package "com.loadmatch.matching.domain.services" {
+    class "MatchingService" <<Domain Service>> {
+        -eligibilityPolicy : CarrierEligibilityPolicy
+        --
+        +findNearbyLoads(criteria: SearchCriteria) : List<AvailableLoad>
+        +getDetail(loadRequestId: LoadRequestId) : LoadDetail
+        +acceptTrip(loadRequestId: LoadRequestId, carrierId: CarrierId) : TripId
+        -checkAvailability(loadRequestId: LoadRequestId) : void
+        -sort(loads: List<AvailableLoad>, criteria: SortCriteria) : List<AvailableLoad>
+    }
+
+    class "CarrierEligibilityPolicy" <<Domain Service>> {
+        +canAccept(carrierId: CarrierId) : boolean
+        -hasApprovedDocumentation(id: CarrierId) : boolean
+        -hasEnabledVehicle(id: CarrierId) : boolean
+        -isNotSuspended(id: CarrierId) : boolean
+    }
+
+    interface "LoadRequestQueryPort" <<Port (Interface)>> {
+        +findPublishedWithinRadius(origin: Coordinates, radiusKm: double) : List<AvailableLoad>
+        +findById(id: LoadRequestId) : Optional<LoadDetail>
+    }
+    interface "CarrierQueryPort" <<Port (Interface)>> {
+        +isEnabled(id: CarrierId) : boolean
+        +activeVehicle(id: CarrierId) : Optional<VehicleId>
+        +suspendedUntil(id: CarrierId) : Optional<LocalDateTime>
+    }
+}
+
+package "com.loadmatch.matching.domain.model.readmodels" {
+    class "AvailableLoad" <<Read Model>> {
+        +loadRequestId : LoadRequestId
+        +origin : String
+        +destination : String
+        +distanceKm : double
+        +weightKg : double
+        +offeredRate : Money
+        +pickupAt : LocalDateTime
+        +distanceToCarrierKm : double
+        +urgent : boolean
+    }
+    class "LoadDetail" <<Read Model>> {
+        +loadRequestId : LoadRequestId
+        +shipperBusinessName : String
+        +shipperReputation : double
+        +cargoType : String
+        +dimensions : String
+        +offeredRate : Money
+        +originCoordinates : Coordinates
+        +destinationCoordinates : Coordinates
+    }
+}
+
+package "com.loadmatch.matching.domain.model.events" {
+    class "TripAcceptedByCarrier" <<Domain Event (Record)>> {
+        +loadRequestId : LoadRequestId
+        +carrierId : CarrierId
+        +occurredAt : LocalDateTime
+    }
+    class "AcceptanceAttemptBlocked" <<Domain Event (Record)>> {
+        +loadRequestId : LoadRequestId
+        +carrierId : CarrierId
+        +reason : String
+        +occurredAt : LocalDateTime
+    }
+}
+
+package "com.loadmatch.matching.domain.exceptions" {
+    class "CarrierNotEligibleException" <<Exception>> {
+        +CarrierNotEligibleException(id: CarrierId)
+        +getMessage() : String
+    }
+}
+
+class "LoadRequestId" <<Shared Kernel>> {
+    +value : UUID
+}
+class "CarrierId" <<Shared Kernel>> {
+    +value : UUID
+}
+
+MatchingService *--> "1" CarrierEligibilityPolicy : verifies with >
+MatchingService ..> "1" LoadRequestQueryPort : queries load requests via >
+MatchingService ..> "1" SearchCriteria : filters by >
+MatchingService ..> "0..*" AvailableLoad : returns >
+MatchingService ..> "0..1" LoadDetail : returns >
+MatchingService ..> "0..*" TripAcceptedByCarrier : publishes >
+MatchingService ..> "0..*" AcceptanceAttemptBlocked : publishes >
+MatchingService ..> "0..1" CarrierNotEligibleException : throws >
+
+CarrierEligibilityPolicy ..> "1" CarrierQueryPort : queries via >
+CarrierEligibilityPolicy ..> "1" CarrierId : evaluates by Id >
+
+SearchCriteria *--> "1" Coordinates : centers the search on >
+SearchCriteria *--> "1" Money : requires at least >
+SearchCriteria *--> "1" SortCriteria : sorts by >
+AvailableLoad ..> "1" LoadRequestId : projects by Id >
+
+N1 .. MatchingService
+
+legend right
+  |= Symbol |= Meaning |
+  | + | public |
+  | - | private |
+  | *--> | composition |
+  | ..> | reference by Id / use of port |
+endlegend
+@enduml
+
+
+' =============================================================================
+'  BOUNDED CONTEXT 7 — TRIP EXECUTION  (Core Domain)
+' =============================================================================
+@startuml class-07-trip-execution
+skinparam classAttributeIconSize 0
+title Class Diagram — Bounded Context: Trip Execution (Core)
+caption Trip lifecycle, delivery confirmation, cancellation, incidents and traceability
+
+package "com.loadmatch.trip.domain.model.valueobjects" {
+    class "TripId" <<Value Object (Record)>> {
+        +value : UUID
+        --
+        +TripId()
+        +TripId(value: UUID)
+    }
+    class "Coordinates" <<Shared Kernel>> {
+        +latitude : double
+        +longitude : double
+        --
+        +distanceTo(other: Coordinates) : double
+    }
+    enum "IncidentType" <<Enumeration>> {
+        ROAD_BLOCKAGE
+        MECHANICAL_FAILURE
+        ACCIDENT
+    }
+    class "GpsLocation" <<Value Object (Record)>> {
+        +coordinates : Coordinates
+        +recordedAt : LocalDateTime
+        --
+        +isRecent(minutes: int) : boolean
+    }
+    enum "TripStatus" <<Enumeration>> {
+        ASSIGNED
+        EN_ROUTE_TO_PICKUP
+        AT_PICKUP_POINT
+        CARGO_PICKED_UP
+        IN_TRANSIT
+        DELAYED
+        DELIVERED
+        DISPUTED
+        COMPLETED
+        CANCELLED
+        --
+        +canTransitionTo(target: TripStatus) : boolean
+        +isFinal() : boolean
+    }
+}
+
+package "com.loadmatch.trip.domain.model.entities" {
+    entity "TripStatusHistory" <<Entity>> {
+        -id : UUID
+        -previousStatus : TripStatus
+        -newStatus : TripStatus
+        -description : String
+        -registeredAt : LocalDateTime
+        --
+        ~TripStatusHistory(previous: TripStatus, next: TripStatus, description: String)
+        +getNewStatus() : TripStatus
+        +getRegisteredAt() : LocalDateTime
+    }
+    entity "Incident" <<Entity>> {
+        -id : UUID
+        -type : IncidentType
+        -description : String
+        -evidenceUrl : String
+        -reportedAt : LocalDateTime
+        --
+        ~Incident(type: IncidentType, description: String, evidenceUrl: String)
+        +getType() : IncidentType
+    }
+}
+
+package "com.loadmatch.trip.domain.model.aggregates" {
+    entity "Trip" <<Aggregate Root>> {
+        -id : TripId
+        -loadRequestId : LoadRequestId
+        -shipperId : ShipperId
+        -carrierId : CarrierId
+        -vehicleId : VehicleId
+        -status : TripStatus
+        -currentLocation : GpsLocation
+        -history : List<TripStatusHistory>
+        -incidents : List<Incident>
+        -assignedAt : LocalDateTime
+        -pickupAt : LocalDateTime
+        -deliveredAt : LocalDateTime
+        -deliveryDisputeReason : String
+        -confirmedAt : LocalDateTime
+        -completedAt : LocalDateTime
+        -cancellationReason : String
+        -lateCancellation : boolean
+        -cancelledAt : LocalDateTime
+        --
+        +Trip(loadRequestId: LoadRequestId, shipperId: ShipperId, carrierId: CarrierId, vehicleId: VehicleId)
+        +startPickup() : void
+        +reportArrivalAtPickup() : void
+        +registerCargoPickup() : void
+        +updateLocation(coordinates: Coordinates) : void
+        +reportArrivalAtDestination() : void
+        +registerDelivery() : void
+        +confirmReceipt() : void
+        +disputeDelivery(reason: String) : void
+        +completeWithoutResponse() : void
+        +reportIncident(type: IncidentType, description: String, evidenceUrl: String) : void
+        +cancelByCarrier(reason: String, pickupAt: LocalDateTime) : void
+        +isLateCancellation(pickupAt: LocalDateTime) : boolean
+        +getHistory() : List<TripStatusHistory>
+        +isInProgress() : boolean
+        +getId() : TripId
+        #transitionTo(newStatus: TripStatus, description: String) : void
+        -validateTransition(newStatus: TripStatus) : void
+    }
+}
+
+package "com.loadmatch.trip.domain.model.events" {
+    class "TripCreated" <<Domain Event (Record)>> {
+        +tripId : TripId
+        +loadRequestId : LoadRequestId
+        +carrierId : CarrierId
+        +occurredAt : LocalDateTime
+    }
+    class "CargoPickedUp" <<Domain Event (Record)>> {
+        +tripId : TripId
+        +occurredAt : LocalDateTime
+    }
+    class "CargoDeliveredAtDestination" <<Domain Event (Record)>> {
+        +tripId : TripId
+        +occurredAt : LocalDateTime
+    }
+    class "TripCompleted" <<Domain Event (Record)>> {
+        +tripId : TripId
+        +shipperId : ShipperId
+        +carrierId : CarrierId
+        +occurredAt : LocalDateTime
+    }
+    class "DeliveryDisputed" <<Domain Event (Record)>> {
+        +tripId : TripId
+        +reason : String
+        +occurredAt : LocalDateTime
+    }
+    class "IncidentReported" <<Domain Event (Record)>> {
+        +tripId : TripId
+        +shipperId : ShipperId
+        +type : IncidentType
+        +occurredAt : LocalDateTime
+    }
+    class "TripCancelledByCarrier" <<Domain Event (Record)>> {
+        +tripId : TripId
+        +loadRequestId : LoadRequestId
+        +carrierId : CarrierId
+        +reason : String
+        +lateCancellation : boolean
+        +occurredAt : LocalDateTime
+    }
+}
+
+package "com.loadmatch.trip.domain.services" {
+    interface "EvidenceStorageService" <<Port (Interface)>> {
+        +upload(content: byte[], name: String) : String
+    }
+}
+
+package "com.loadmatch.trip.domain.repositories" {
+    interface "TripRepository" <<Repository (Interface)>> {
+        +findById(id: TripId) : Optional<Trip>
+        +findByCarrierId(id: CarrierId) : List<Trip>
+        +findByShipperId(id: ShipperId) : List<Trip>
+        +findInProgress() : List<Trip>
+        +findDeliveredUnconfirmed(before: LocalDateTime) : List<Trip>
+        +save(trip: Trip) : Trip
+    }
+}
+
+class "LoadRequestId" <<Shared Kernel>> {
+    +value : UUID
+}
+class "CarrierId" <<Shared Kernel>> {
+    +value : UUID
+}
+class "ShipperId" <<Shared Kernel>> {
+    +value : UUID
+}
+class "VehicleId" <<Shared Kernel>> {
+    +value : UUID
+}
+
+Trip *--> "1" TripId : identified by >
+Trip *--> "1" TripStatus : is in >
+Trip *--> "0..1" GpsLocation : is located at >
+Trip *--> "1..*" TripStatusHistory : records its traceability in >
+Trip ..> "1" LoadRequestId : originates from Id >
+Trip ..> "1" ShipperId : references by Id >
+Trip ..> "1" CarrierId : references by Id >
+Trip ..> "1" VehicleId : references by Id >
+
+Trip *--> "0..*" Incident : justifies delays with >
+Incident *--> "1" IncidentType : is classified as >
+TripStatusHistory *--> "2" TripStatus : documents the transition between >
+GpsLocation *--> "1" Coordinates : is expressed in >
+
+Trip ..> "0..*" TripCreated : publishes >
+Trip ..> "0..*" CargoPickedUp : publishes >
+Trip ..> "0..*" CargoDeliveredAtDestination : publishes >
+Trip ..> "0..*" TripCompleted : publishes >
+Trip ..> "0..*" DeliveryDisputed : publishes >
+Trip ..> "0..*" IncidentReported : publishes >
+Trip ..> "0..*" TripCancelledByCarrier : publishes >
+Trip ..> "1" EvidenceStorageService : uploads evidence via >
+TripRepository ..> "0..*" Trip : persists and retrieves >
+
+legend right
+  |= Symbol |= Meaning |
+  | + | public |
+  | - | private |
+  | # | protected |
+  | ~ | package-private |
+  | *--> | composition |
+  | ..> | reference by Id |
+endlegend
+@enduml
+
+
+' =============================================================================
+'  BOUNDED CONTEXT 8 — PAYMENT
+' =============================================================================
+@startuml class-08-payment
+skinparam classAttributeIconSize 0
+title Class Diagram — Bounded Context: Payment
+caption Charge to the shipper, platform fee, PDF receipt and payout to the carrier
+
+package "com.loadmatch.payment.domain.model.valueobjects" {
+    class "PaymentId" <<Value Object (Record)>> {
+        +value : UUID
+        --
+        +PaymentId()
+        +PaymentId(value: UUID)
+    }
+    class "Money" <<Shared Kernel>> {
+        +amount : BigDecimal
+        +currency : Currency
+        --
+        +{static} zero() : Money
+        +{static} ofSoles(amount: BigDecimal) : Money
+        +add(other: Money) : Money
+        +subtract(other: Money) : Money
+        +multiply(factor: double) : Money
+    }
+    class "PaymentToken" <<Value Object (Record)>> {
+        +value : String
+    }
+    class "GatewayReference" <<Value Object (Record)>> {
+        +value : String
+        +processedAt : LocalDateTime
+    }
+    class "PaymentResult" <<Value Object (Record)>> {
+        +successful : boolean
+        +reference : GatewayReference
+        +errorCode : String
+    }
+    enum "PaymentStatus" <<Enumeration>> {
+        ENABLED
+        PROCESSING
+        COMPLETED
+        REJECTED
+    }
+    enum "PayoutStatus" <<Enumeration>> {
+        PENDING
+        SCHEDULED
+        TRANSFERRED
+    }
+    enum "PaymentMethod" <<Enumeration>> {
+        CARD
+        PAYPAL
+    }
+}
+
+package "com.loadmatch.payment.domain.model.entities" {
+    entity "Receipt" <<Entity>> {
+        -id : UUID
+        -series : String
+        -number : int
+        -subtotal : Money
+        -taxes : Money
+        -total : Money
+        -pdfUrl : String
+        -issuedAt : LocalDateTime
+        --
+        ~Receipt(series: String, number: int, subtotal: Money, taxes: Money)
+        +getPdfUrl() : String
+    }
+}
+
+package "com.loadmatch.payment.domain.model.aggregates" {
+    entity "Payment" <<Aggregate Root>> {
+        -id : PaymentId
+        -tripId : TripId
+        -shipperId : ShipperId
+        -carrierId : CarrierId
+        -totalAmount : Money
+        -platformFee : Money
+        -payoutAmount : Money
+        -method : PaymentMethod
+        -status : PaymentStatus
+        -gatewayReference : GatewayReference
+        -attempts : int
+        -enabledAt : LocalDateTime
+        -processedAt : LocalDateTime
+        -payoutStatus : PayoutStatus
+        -scheduledDepositDate : LocalDate
+        -transferredAt : LocalDateTime
+        -receipt : Receipt
+        --
+        +Payment(tripId: TripId, shipperId: ShipperId, carrierId: CarrierId, totalAmount: Money)
+        +process(method: PaymentMethod, token: PaymentToken) : void
+        +confirm(reference: GatewayReference) : void
+        +reject(errorCode: String) : void
+        +retry() : void
+        +calculatePayout() : Money
+        +schedulePayout(date: LocalDate) : void
+        +confirmTransfer() : void
+        +issueReceipt(series: String, number: int) : Receipt
+        +isCompleted() : boolean
+        +getId() : PaymentId
+        -calculateFee() : Money
+        -ensureRetriesAvailable() : void
+    }
+}
+
+package "com.loadmatch.payment.domain.model.events" {
+    class "PaymentEnabled" <<Domain Event (Record)>> {
+        +paymentId : PaymentId
+        +tripId : TripId
+        +totalAmount : Money
+        +occurredAt : LocalDateTime
+    }
+    class "PaymentSucceeded" <<Domain Event (Record)>> {
+        +paymentId : PaymentId
+        +carrierId : CarrierId
+        +payoutAmount : Money
+        +occurredAt : LocalDateTime
+    }
+    class "PaymentRejected" <<Domain Event (Record)>> {
+        +paymentId : PaymentId
+        +errorCode : String
+        +occurredAt : LocalDateTime
+    }
+    class "ReceiptIssued" <<Domain Event (Record)>> {
+        +paymentId : PaymentId
+        +shipperId : ShipperId
+        +pdfUrl : String
+        +occurredAt : LocalDateTime
+    }
+    class "PayoutTransferred" <<Domain Event (Record)>> {
+        +paymentId : PaymentId
+        +carrierId : CarrierId
+        +payoutAmount : Money
+        +occurredAt : LocalDateTime
+    }
+}
+
+package "com.loadmatch.payment.domain.repositories" {
+    interface "PaymentRepository" <<Repository (Interface)>> {
+        +findById(id: PaymentId) : Optional<Payment>
+        +findByTripId(id: TripId) : Optional<Payment>
+        +findByShipperId(id: ShipperId) : List<Payment>
+        +findByCarrierId(id: CarrierId) : List<Payment>
+        +save(payment: Payment) : Payment
+    }
+}
+
+package "com.loadmatch.payment.domain.services" {
+    interface "PaymentGatewayService" <<Port (Interface)>> {
+        +executeCharge(token: PaymentToken, amount: Money) : PaymentResult
+        +payOutToCarrier(carrierId: CarrierId, amount: Money) : PaymentResult
+    }
+    interface "ReceiptPdfGenerator" <<Port (Interface)>> {
+        +generate(receipt: Receipt) : String
+    }
+}
+
+class "TripId" <<Shared Kernel>> {
+    +value : UUID
+}
+class "ShipperId" <<Shared Kernel>> {
+    +value : UUID
+}
+class "CarrierId" <<Shared Kernel>> {
+    +value : UUID
+}
+
+Payment *--> "1" PaymentId : identified by >
+Payment *--> "3" Money : is quantified in >
+Payment *--> "1" PaymentStatus : is in >
+Payment *--> "1" PaymentMethod : is charged via >
+Payment o--> "0..1" GatewayReference : is verified with >
+Payment *--> "1" PayoutStatus : pays out according to >
+Payment *--> "0..1" Receipt : supports the expense with >
+Payment ..> "1" TripId : settles trip Id >
+Payment ..> "1" ShipperId : charges Id >
+Payment ..> "1" CarrierId : pays out to Id >
+
+Payment ..> "1" PaymentGatewayService : executes the charge via >
+PaymentGatewayService ..> "1" PaymentToken : receives >
+PaymentGatewayService ..> "1" PaymentResult : returns >
+PaymentResult *--> "0..1" GatewayReference : contains >
+
+Payment ..> "0..*" PaymentEnabled : publishes >
+Payment ..> "0..*" PaymentSucceeded : publishes >
+Payment ..> "0..*" PaymentRejected : publishes >
+Payment ..> "0..*" ReceiptIssued : publishes >
+Payment ..> "0..*" PayoutTransferred : publishes >
+Payment ..> "1" ReceiptPdfGenerator : generates the PDF via >
+PaymentRepository ..> "0..*" Payment : persists and retrieves >
+
+legend right
+  |= Symbol |= Meaning |
+  | + | public |
+  | - | private |
+  | *--> | composition |
+  | o--> | aggregation |
+  | ..> | reference by Id / use of port |
+endlegend
+@enduml
+
+
+' =============================================================================
+'  BOUNDED CONTEXT 9 — RATING
+' =============================================================================
+@startuml class-09-rating
+skinparam classAttributeIconSize 0
+title Class Diagram — Bounded Context: Rating
+caption Mutual post-trip rating and reputation calculation for shippers and carriers
+
+package "com.loadmatch.rating.domain.model.valueobjects" {
+    class "RatingId" <<Value Object (Record)>> {
+        +value : UUID
+        --
+        +RatingId()
+        +RatingId(value: UUID)
+    }
+    class "Score" <<Value Object (Record)>> {
+        +value : int
+        --
+        +Score(value: int)
+        +{static} of(value: int) : Score
+        -validateRange(value: int) : void
+        +isPositive() : boolean
+    }
+    class "Comment" <<Value Object (Record)>> {
+        +text : String
+        --
+        +Comment(text: String)
+        -validateLength(text: String) : void
+    }
+    enum "RaterType" <<Enumeration>> {
+        SHIPPER
+        CARRIER
+    }
+}
+
+package "com.loadmatch.rating.domain.model.aggregates" {
+    entity "Rating" <<Aggregate Root>> {
+        -id : RatingId
+        -tripId : TripId
+        -raterId : UUID
+        -rateeId : UUID
+        -raterType : RaterType
+        -score : Score
+        -comment : Comment
+        -createdAt : LocalDateTime
+        --
+        +Rating(tripId: TripId, raterId: UUID, rateeId: UUID, raterType: RaterType, score: Score, comment: Comment)
+        +editComment(comment: Comment) : void
+        +isFromShipper() : boolean
+        +getId() : RatingId
+        +getScore() : Score
+        -ensureRaterDiffersFromRatee() : void
+    }
+}
+
+package "com.loadmatch.rating.domain.model.events" {
+    class "RatingRegistered" <<Domain Event (Record)>> {
+        +ratingId : RatingId
+        +tripId : TripId
+        +rateeId : UUID
+        +raterType : RaterType
+        +score : Score
+        +occurredAt : LocalDateTime
+    }
+}
+
+package "com.loadmatch.rating.domain.repositories" {
+    interface "RatingRepository" <<Repository (Interface)>> {
+        +findById(id: RatingId) : Optional<Rating>
+        +findByTripId(id: TripId) : List<Rating>
+        +findByRateeId(id: UUID) : List<Rating>
+        +existsByTripIdAndRaterId(tripId: TripId, raterId: UUID) : boolean
+        +save(rating: Rating) : Rating
+    }
+}
+
+package "com.loadmatch.rating.domain.services" {
+    interface "TripQueryPort" <<Port (Interface)>> {
+        +isCompleted(id: TripId) : boolean
+        +participants(id: TripId) : List<UUID>
+    }
+    class "RatingService" <<Domain Service>> {
+        +register(tripId: TripId, raterId: UUID, score: Score, comment: Comment) : Rating
+        -ensureTripCompleted(tripId: TripId) : void
+        -ensureNotAlreadyRated(tripId: TripId, raterId: UUID) : void
+    }
+}
+
+class "TripId" <<Shared Kernel>> {
+    +value : UUID
+}
+
+Rating *--> "1" RatingId : identified by >
+Rating *--> "1" Score : scores with >
+Rating *--> "1" Comment : justifies with >
+Rating *--> "1" RaterType : is issued by a >
+Rating ..> "1" TripId : rates trip Id >
+
+RatingService ..> "0..*" Rating : creates and validates >
+RatingService ..> "1" TripQueryPort : verifies the trip via >
+RatingService ..> "1" RatingRepository : checks for duplicates in >
+
+Rating ..> "0..*" RatingRegistered : publishes >
+RatingRepository ..> "0..*" Rating : persists and retrieves >
+
+legend right
+  |= Symbol |= Meaning |
+  | + | public |
+  | - | private |
+  | *--> | composition |
+  | ..> | reference by Id / use of port |
+endlegend
+@enduml
+
+
+' =============================================================================
+'  BOUNDED CONTEXT 10 — CONTACT
+' =============================================================================
+@startuml class-10-contact
+skinparam classAttributeIconSize 0
+title Class Diagram — Bounded Context: Contact
+caption Contact forms and leads coming from the Landing Page
+
+package "com.loadmatch.contact.domain.model.valueobjects" {
+    class "ContactMessageId" <<Value Object (Record)>> {
+        +value : UUID
+        --
+        +ContactMessageId()
+        +ContactMessageId(value: UUID)
+    }
+    class "Email" <<Shared Kernel>> {
+        +value : String
+        --
+        +Email(value: String)
+        -validateFormat(value: String) : void
+    }
+    class "FullName" <<Value Object (Record)>> {
+        +firstNames : String
+        +lastNames : String
+        --
+        +full() : String
+    }
+    class "PhoneNumber" <<Value Object (Record)>> {
+        +value : String
+    }
+    class "MessageBody" <<Value Object (Record)>> {
+        +text : String
+        --
+        +MessageBody(text: String)
+        -validateLength(text: String) : void
+    }
+    enum "LeadType" <<Enumeration>> {
+        SHIPPER
+        CARRIER
+        OTHER
+    }
+}
+
+package "com.loadmatch.contact.domain.model.aggregates" {
+    entity "ContactMessage" <<Aggregate Root>> {
+        -id : ContactMessageId
+        -name : FullName
+        -email : Email
+        -phoneNumber : PhoneNumber
+        -leadType : LeadType
+        -message : MessageBody
+        -attended : boolean
+        -sentAt : LocalDateTime
+        -attendedAt : LocalDateTime
+        --
+        +ContactMessage(name: FullName, email: Email, message: MessageBody, leadType: LeadType)
+        +markAsAttended() : void
+        +isPending() : boolean
+        +getId() : ContactMessageId
+    }
+}
+
+package "com.loadmatch.contact.domain.model.events" {
+    class "ContactMessageReceived" <<Domain Event (Record)>> {
+        +messageId : ContactMessageId
+        +email : Email
+        +leadType : LeadType
+        +occurredAt : LocalDateTime
+    }
+}
+
+package "com.loadmatch.contact.domain.repositories" {
+    interface "ContactMessageRepository" <<Repository (Interface)>> {
+        +findById(id: ContactMessageId) : Optional<ContactMessage>
+        +findPending() : List<ContactMessage>
+        +save(message: ContactMessage) : ContactMessage
+    }
+}
+
+ContactMessage *--> "1" ContactMessageId : identified by >
+ContactMessage *--> "1" FullName : is sent by >
+ContactMessage *--> "1" Email : replies to >
+ContactMessage o--> "0..1" PhoneNumber : is contacted via >
+ContactMessage *--> "1" MessageBody : contains >
+ContactMessage *--> "1" LeadType : comes from a >
+
+ContactMessage ..> "0..*" ContactMessageReceived : publishes >
+ContactMessageRepository ..> "0..*" ContactMessage : persists and retrieves >
+
+legend right
+  |= Symbol |= Meaning |
+  | + | public |
+  | - | private |
+  | *--> | composition |
+  | o--> | aggregation |
+  | ..> | dependency |
+endlegend
+@enduml
+
+
+' =============================================================================
+'  CROSS-CUTTING COMPONENT — NOTIFICATION  (not a bounded context)
+'  Subscriber to domain events. Persists in-app notifications
+'  (US43) and sends the transactional email.
+' =============================================================================
+@startuml class-11-notification
+skinparam classAttributeIconSize 0
+title Class Diagram — Cross-cutting Component: Notification
+caption In-app notifications (US43) built from domain events
+
+note as N1
+  **Notification is not a bounded context.**
+  It is the cross-cutting Backend component that
+  subscribes to the events of the other contexts
+  and turns them into alerts for the user.
+end note
+
+package "com.loadmatch.notification.domain.model.valueobjects" {
+    class "NotificationId" <<Value Object (Record)>> {
+        +value : UUID
+        --
+        +NotificationId()
+        +NotificationId(value: UUID)
+    }
+    enum "NotificationType" <<Enumeration>> {
+        LOAD_ACCEPTED
+        CARGO_PICKED_UP
+        CARGO_DELIVERED
+        DELIVERY_DISPUTED
+        INCIDENT_REPORTED
+        TRIP_CANCELLED
+        PAYMENT_RECEIVED
+        DOCUMENT_VALIDATED
+    }
+}
+
+package "com.loadmatch.notification.domain.model.aggregates" {
+    entity "Notification" <<Aggregate Root>> {
+        -id : NotificationId
+        -userId : UserId
+        -type : NotificationType
+        -title : String
+        -message : String
+        -urgent : boolean
+        -read : boolean
+        -createdAt : LocalDateTime
+        -readAt : LocalDateTime
+        --
+        +Notification(userId: UserId, type: NotificationType, title: String, message: String, urgent: boolean)
+        +markAsRead() : void
+        +isPending() : boolean
+        +getId() : NotificationId
+    }
+}
+
+package "com.loadmatch.notification.domain.repositories" {
+    interface "NotificationRepository" <<Repository (Interface)>> {
+        +findByUserId(id: UserId) : List<Notification>
+        +countUnread(id: UserId) : long
+        +save(notification: Notification) : Notification
+    }
+}
+
+package "com.loadmatch.notification.domain.services" {
+    class "NotificationService" <<Domain Service>> {
+        +onEventReceived(event: Object) : void
+        +markAllAsRead(id: UserId) : void
+        -translate(event: Object) : Notification
+    }
+    interface "EmailServicePort" <<Port (Interface)>> {
+        +send(recipient: String, subject: String, body: String) : void
+    }
+}
+
+class "UserId" <<Shared Kernel>> {
+    +value : UUID
+}
+
+Notification *--> "1" NotificationId : identified by >
+Notification *--> "1" NotificationType : is classified as >
+Notification ..> "1" UserId : is addressed by Id to >
+NotificationService ..> "0..*" Notification : creates and marks as read >
+NotificationService ..> "1" EmailServicePort : sends the email via >
+NotificationRepository ..> "0..*" Notification : persists and retrieves >
+N1 .. NotificationService
+
+legend right
+  |= Symbol |= Meaning |
+  | + | public |
+  | - | private |
+  | *--> | composition |
+  | ..> | reference by Id / use of port |
+endlegend
+@enduml
