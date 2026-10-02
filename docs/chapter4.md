@@ -241,7 +241,7 @@ Para transportistas, las principales categorías son:
 
 Dentro de estas secciones se encuentran funcionalidades más específicas como aplicar filtros de búsqueda, consultar viajes en progreso, visualizar el seguimiento de una ruta o gestionar documentación.
 
-También se utiliza una organización **cronológica** para separar operaciones actuales de anteriores, como ocurre en Historial y en la clasificación de viajes en progreso y completados.
+También se utiliza una organización **cronológica** para separar operaciones actuales de anteriores, como ocurre en Historial y en la clasificación de viajes en próximos, en curso y completados (US41).
 
 La organización matricial no constituye la estructura principal de LoadMatch, aunque se utiliza de manera puntual en sistemas de búsqueda donde el usuario puede combinar diferentes criterios, como ruta, distancia, tipo de vehículo, peso y tarifa.
 
@@ -262,9 +262,37 @@ Las etiquetas se mantienen consistentes según el contexto de uso:
 | **Landing Page** | Cómo funciona, Para empresas, Para transportistas, Preguntas frecuentes, Iniciar sesión, Registrarse |
 | **Empresa** | Dashboard, Mis Cargas, Historial, Configuración, Publicar Nueva Carga, Ver Seguimiento |
 | **Transportista** | Buscar Fletes, Mis Viajes, Historial, Mi Perfil, Ver Detalles, Ir al Mapa |
-| **Estados** | En Tránsito, Buscando Unidad, Completado, En Camino, Aprobado, Pendiente |
+| **Estados** | Buscando Unidad, En Tránsito, En Camino, Por Liquidar, Completado, Aprobado, Rechazado, Pendiente |
 
 Las etiquetas correspondientes a acciones utilizan principalmente verbos, como **Publicar**, **Buscar**, **Gestionar**, **Ver** o **Cancelar**, mientras que las etiquetas de estado describen directamente la condición actual de una carga, viaje o documento.
+
+#### Correspondencia entre etiquetas de estado y estados del dominio
+
+Las etiquetas de estado de la interfaz priorizan un lenguaje cercano al usuario, por lo que no siempre coinciden literalmente con el nombre del estado usado en las User Stories ni con el valor que se almacena en el sistema. Por ejemplo, para la empresa es más claro leer **Buscando Unidad** que *Publicada*, y para el transportista **Por Liquidar** comunica que el servicio terminó y que el pago está pendiente. La siguiente tabla fija esa correspondencia, de modo que cada etiqueta visible se traza hasta un estado definido en las User Stories y en el modelo de dominio de la sección 4.7.
+
+| ENTIDAD | ETIQUETA EN LA INTERFAZ | ESTADO EN LAS USER STORIES | VALOR EN EL CÓDIGO |
+| :--- | :--- | :--- | :--- |
+| Solicitud de carga | Borrador | — | `DRAFT` |
+| Solicitud de carga | Buscando Unidad | Publicada (US37) | `PUBLISHED` |
+| Solicitud de carga | Asignada | Asignada (US37) | `ASSIGNED` |
+| Solicitud de carga | En Tránsito | En tránsito (US37) | `IN_TRANSIT` |
+| Solicitud de carga | Entregada | Entregada (US37) | `DELIVERED` |
+| Solicitud de carga | Cancelada | Cancelada (US05, US37) | `CANCELLED` |
+| Viaje | Asignado | Próximo (US41) | `ASSIGNED` |
+| Viaje | En Camino | En curso (US41, US52, US55) | `EN_ROUTE_TO_PICKUP`, `AT_PICKUP_POINT`, `CARGO_PICKED_UP`, `IN_TRANSIT` |
+| Viaje | En Destino | En curso, con la llegada reportada (US08) | `IN_TRANSIT` |
+| Viaje | Con retraso | Con retraso (US52) | `DELAYED` |
+| Viaje | Entregado | Entregado (US08, US56) | `DELIVERED` |
+| Viaje | Observado | Observado (US56) | `DISPUTED` |
+| Viaje | Por Liquidar | Completado, con el pago habilitado (US20, US56) | `COMPLETED` y pago `ENABLED` |
+| Viaje | Completado | Completado (US11, US41) | `COMPLETED` |
+| Viaje | Cancelado | Cancelado (US55) | `CANCELLED` |
+| Documento | Pendiente de Subir | — (el documento aún no se ha cargado) | sin registro |
+| Documento | Pendiente | Pendiente (US35) | `PENDING` |
+| Documento | En revisión | En revisión (US34, US35) | `IN_REVIEW` |
+| Documento | Aprobado | Aprobado (US35) | `APPROVED` |
+| Documento | Rechazado / No Aprobado | Rechazado (US35) | `REJECTED` |
+| Documento | Vencido | Vencido (US35) | `EXPIRED` |
 
 Esta diferenciación facilita que el usuario pueda reconocer rápidamente si un elemento representa una sección, una acción o un estado.
 
@@ -305,7 +333,7 @@ Las empresas disponen de una barra de búsqueda orientada a localizar operacione
 | **Código de carga** | Permite localizar directamente una solicitud mediante su identificador. |
 | **Ruta** | Permite encontrar cargas relacionadas con un origen o destino determinado. |
 | **Transportista** | Permite localizar operaciones asociadas a un transportista. |
-| **Estado** | Facilita la identificación de cargas en tránsito, buscando unidad o completadas. |
+| **Estado** | Filtra las cargas por estado: Buscando Unidad (Publicada), Asignada, En Tránsito, Entregada o Cancelada (US37). |
 
 Los resultados se presentan principalmente mediante tablas y tarjetas donde se muestran datos como **ID de carga, ruta, estado y acciones disponibles**.
 
@@ -355,27 +383,29 @@ Además, la navegación contextual conecta secciones que no figuran en la cabece
 
 La Web Application de empresas utiliza una barra lateral persistente.
 
-| NOMBRE | DESCRIPCIÓN |
-| :--- | :--- |
-| **Dashboard** | Presenta un resumen de cargas y operaciones activas. |
-| **Mis Cargas** | Permite consultar y gestionar las solicitudes registradas. |
-| **Historial** | Permite revisar operaciones realizadas anteriormente. |
-| **Configuración** | Permite administrar opciones relacionadas con la cuenta. |
+| NOMBRE | DESCRIPCIÓN | USER STORIES |
+| :--- | :--- | :--- |
+| **Dashboard** | Presenta un resumen de cargas publicadas, en tránsito y completadas, y las últimas operaciones. | US36 |
+| **Mis Cargas** | Permite consultar, filtrar por estado, editar y cancelar las solicitudes registradas, seguir el viaje y confirmar la recepción de la mercadería. | US04, US05, US09, US37, US38, US42, US56 |
+| **Historial** | Permite revisar los servicios completados, calificar al transportista, consultar los pagos realizados y descargar sus comprobantes. | US10, US20, US53 |
+| **Configuración** | Permite actualizar el perfil de la empresa y cerrar la sesión. | US31, US29 |
 
-Acciones como **Publicar Nueva Carga**, **Ver Seguimiento**, **Gestionar** o **Cancelar Carga** se presentan de manera contextual dentro de las secciones correspondientes.
+Acciones como **Publicar Nueva Carga**, **Ver Seguimiento**, **Editar**, **Cancelar Carga**, **Confirmar Recepción** o **Calificar Transportista** se presentan de manera contextual dentro de las secciones correspondientes.
 
 #### Navigation System para transportistas
 
 Para los transportistas también se utiliza una barra lateral persistente adaptada a sus principales tareas.
 
-| NOMBRE | DESCRIPCIÓN |
-| :--- | :--- |
-| **Buscar Fletes** | Permite localizar oportunidades de carga disponibles. |
-| **Mis Viajes** | Permite consultar viajes en progreso y completados. |
-| **Historial** | Permite revisar servicios realizados anteriormente. |
-| **Mi Perfil** | Permite gestionar datos personales y documentación. |
+| NOMBRE | DESCRIPCIÓN | USER STORIES |
+| :--- | :--- | :--- |
+| **Buscar Fletes** | Permite localizar oportunidades de carga, aplicar filtros, consultar el detalle de un flete y aceptarlo. | US06, US39, US40, US07 |
+| **Mis Viajes** | Permite consultar los viajes próximos, en curso y completados, actualizar su estado, reportar incidentes y cancelar un viaje aceptado. | US41, US08, US52, US55 |
+| **Historial** | Permite revisar los servicios completados, calificar a la empresa y consultar las liquidaciones recibidas. | US11, US51, US54 |
+| **Mi Perfil** | Permite gestionar datos personales, vehículos y documentación, y consultar su estado de validación. | US32, US33, US34, US35, US29 |
 
-Dentro de **Mis Viajes**, el usuario puede recorrer secuencialmente el proceso de un servicio mediante acciones como **Ir al Mapa**, **Reportar Llegada a Destino** y **Finalizar Viaje**.
+Dentro de **Mis Viajes**, el usuario recorre secuencialmente el proceso de un servicio mediante acciones como **Ir al Mapa**, **Reportar Incidente**, **Reportar Llegada a Destino** y **Marcar como Entregado**. El viaje pasa a **Completado** cuando la empresa confirma la recepción de la mercadería, o automáticamente si no responde en 24 horas (US56).
+
+En ambos perfiles, la cabecera incluye el icono de **Notificaciones**, que muestra el contador de avisos no leídos y la lista de notificaciones sobre la carga aceptada, recogida o entregada (US43).
 
 De esta manera, LoadMatch combina una navegación principal sencilla con acciones contextuales y flujos secuenciales, evitando sobrecargar los menús con opciones que únicamente son necesarias en momentos específicos.
 
@@ -1432,10 +1462,10 @@ El equipo desarrolló una sesión de Design-Level Event Storming con una duraci�
 
 | # | Etapa del flujo | Pain point | Estado |
 | :--- | :--- | :--- | :--- |
-| 1 | Matching | ¿Qué pasa si el transportista asignado no se presenta o abandona el viaje a mitad de camino? ¿Puede la empresa reasignarlo? | Fuera del alcance del MVP |
+| 1 | Matching | ¿Qué pasa si el transportista asignado no se presenta o abandona el viaje a mitad de camino? ¿Puede la empresa reasignarlo? | Resuelto: cancelación con penalidad y republicación urgente (US55) |
 | 2 | Matching | ¿Debe la empresa poder elegir entre varios transportistas interesados, o queda asignada automáticamente al primero que acepta? | Resuelto: asignación automática |
-| 3 | Trip Execution | ¿Cómo se reporta una incidencia durante el traslado —demora, avería, mercadería dañada— y quién la resuelve? | Fuera del alcance del MVP |
-| 4 | Payment | Si el pago se habilita al finalizar el servicio, ¿qué garantiza a la empresa que el transportista cumplirá, y al transportista que cobrará? | Fuera del alcance del MVP |
+| 3 | Trip Execution | ¿Cómo se reporta una incidencia durante el traslado —demora, avería, mercadería dañada— y quién la resuelve? | Resuelto: reporte de incidentes con evidencia (US52) |
+| 4 | Payment | Si el pago se habilita al finalizar el servicio, ¿qué garantiza a la empresa que el transportista cumplirá, y al transportista que cobrará? | Resuelto: confirmación de entrega por la empresa antes del pago (US56) |
 
 **Step 4 — Pivotal Points.** Se delimitaron los momentos que cambian de manera irreversible el estado del negocio y que, por lo tanto, anticipan fronteras entre contextos: el registro validado del usuario, la publicación de la solicitud de carga, la aceptación del viaje, la entrega de la mercadería y la confirmación del pago.
 
@@ -1483,16 +1513,16 @@ El equipo desarrolló una sesión de Design-Level Event Storming con una duraci�
 
 | BOUNDED CONTEXT | SUBDOMINIO | AGREGADOS | RESPONSABILIDAD |
 | :--- | :--- | :--- | :--- |
-| **IAM** | Genérico | Usuario | Credenciales, autenticación y ciclo de vida de la cuenta |
-| **Profiles** | Soporte | Empresa, Transportista | Perfiles de negocio, RUC, datos de contacto y reputación |
-| **Fleet** | Soporte | Vehiculo, TipoVehiculo | Registro de vehículos, placas y capacidades de carga |
-| **Document Validation** | Soporte | Documento, TipoDocumento | Carga y validación automática de licencias, SOAT y tarjetas |
-| **Freight Publishing** | Core | SolicitudDeCarga | Publicación, edición y cancelación de solicitudes de carga |
+| **IAM** | Genérico | User | Credenciales, autenticación y ciclo de vida de la cuenta |
+| **Profiles** | Soporte | Shipper, Carrier | Perfiles de negocio, RUC, datos de contacto y reputación |
+| **Fleet** | Soporte | Vehicle, VehicleType | Registro de vehículos, placas y capacidades de carga |
+| **Document Validation** | Soporte | Document, DocumentType | Carga y validación automática de licencias, SOAT y tarjetas |
+| **Freight Publishing** | Core | LoadRequest | Publicación, edición y cancelación de solicitudes de carga |
 | **Matching** | Core | *(sin agregado)* | Búsqueda por proximidad, filtrado y asignación de viajes |
-| **Trip Execution** | Core | Viaje | Ciclo de vida del viaje, estados y trazabilidad |
-| **Payment** | Soporte | Pago | Cobro a la empresa y liquidación al transportista |
-| **Rating** | Soporte | Clasificacion | Calificación post-viaje y cálculo de reputación |
-| **Contact** | Genérico | MensajeContacto | Formularios de contacto y leads de la Landing Page |
+| **Trip Execution** | Core | Trip | Ciclo de vida del viaje, confirmación de entrega, cancelación, incidentes y trazabilidad |
+| **Payment** | Soporte | Payment | Cobro a la empresa, comprobante y liquidación al transportista |
+| **Rating** | Soporte | Rating | Calificación mutua post-viaje y cálculo de reputación |
+| **Contact** | Genérico | ContactMessage | Formularios de contacto y leads de la Landing Page |
 
 <div align="center">
   <img src="../assets/images/event-storming/es-step10-bounded-contexts.png" alt="Step 10 Bounded Contexts" width="800"><br>
@@ -1509,7 +1539,9 @@ En segundo lugar, **Solicitud de Carga y Viaje son agregados separados en contex
 
 En tercer lugar, **Matching no posee agregado propio**. Es un contexto de consulta y asignación: no crea ni modifica entidades que le pertenezcan, sino que orquesta sobre Solicitud de Carga y Transportista. Se implementa mediante un Domain Service y modelos de lectura. Un bounded context puede existir legítimamente sin agregados cuando su responsabilidad es de coordinación y consulta.
 
-Finalmente, la sesión dejó identificados cuatro pain points que **quedan fuera del alcance del MVP** y se documentan como oportunidades de mejora: la reasignación de un viaje cuando el transportista abandona el servicio, el reporte de incidencias durante el traslado, la elección entre múltiples transportistas por parte de la empresa, y un esquema de garantía o retención de pago. Dejarlos registrados permite que el equipo priorice conscientemente y que estas necesidades puedan incorporarse en iteraciones posteriores.
+Finalmente, la sesión dejó identificados cuatro pain points. El de la elección entre varios transportistas se resolvió durante la sesión con la asignación automática al primero que acepta. Los otros tres se registraron inicialmente como fuera del alcance del MVP, pero la revisión posterior del Product Backlog los convirtió en historias de usuario: la cancelación de un viaje aceptado por el transportista (US55), el reporte de incidentes durante el traslado (US52) y la confirmación de la entrega por la empresa antes de habilitar el pago (US56).
+
+Estas tres historias **no crean bounded contexts nuevos**: se resuelven dentro de los diez ya identificados. Trip Execution incorpora los estados `DELAYED`, `DISPUTED` y `CANCELLED` y la entidad interna `Incident`; Freight Publishing permite republicar como urgente una solicitud cancelada; y Profiles registra la suspensión temporal del transportista por cancelaciones reiteradas. El tablero de Miro se conserva como registro fiel de la sesión, y estos ajustes se reflejan en los diagramas C4, de clases y de base de datos de las secciones siguientes.
 
 
 ### 4.6.2. Software Architecture Context Diagram
@@ -1527,7 +1559,7 @@ La validación documental se apoya en el **Padrón del MTC**, que permite verifi
 
 El Diagrama de Contenedores expone la topología técnica de LoadMatch y cómo se distribuyen las responsabilidades entre sus unidades desplegables. LoadMatch se compone de cuatro contenedores.
 
-La **Landing Page** es un sitio estático construido con HTML5, CSS3 y JavaScript que funciona como punto de entrada público y mecanismo de captación de leads. La **Single Page Application**, desarrollada en Angular 18 con TypeScript, concentra toda la operación transaccional: dashboards, catálogos y tableros de seguimiento para empresas y transportistas. El **Backend REST API**, implementado en Java 17 con Spring Boot 3, expone la API versionada y concentra las reglas de negocio, los bounded contexts del dominio y la orquestación de las integraciones externas. La persistencia se resuelve mediante una base de datos **PostgreSQL 16 con la extensión PostGIS**, necesaria para ejecutar las consultas de proximidad que sustentan el matching.
+La **Landing Page** es un sitio estático construido con HTML5, CSS3 y JavaScript que funciona como punto de entrada público y mecanismo de captación de leads. La **Single Page Application**, desarrollada en Angular 22 con TypeScript, concentra toda la operación transaccional: dashboards, catálogos y tableros de seguimiento para empresas y transportistas. El **Backend REST API**, implementado en Java 17 con Spring Boot 3, expone la API versionada y concentra las reglas de negocio, los bounded contexts del dominio y la orquestación de las integraciones externas. La persistencia se resuelve mediante una base de datos **PostgreSQL 16 con la extensión PostGIS**, necesaria para ejecutar las consultas de proximidad que sustentan el matching.
 
 La comunicación entre la SPA y el Backend se realiza mediante JSON sobre HTTPS con autenticación por JWT, mientras que la Landing Page se limita a enviar formularios de contacto al mismo API. Todas las integraciones con sistemas externos se resuelven desde el Backend, de modo que ningún contenedor de presentación depende directamente de un tercero.
 
@@ -1543,7 +1575,7 @@ De acuerdo con el Modelo C4, se elabora un Diagrama de Componentes por cada cont
 
 #### Backend REST API
 
-El Backend se descompone en trece componentes. Diez de ellos corresponden **uno a uno con los bounded contexts identificados en el Event Storming**, lo que permite rastrear cada componente hasta un agrupamiento del tablero de Miro. Los tres restantes son transversales: el componente de **Security & JWT**, que autentica cada petición y resuelve el rol para la autorización por endpoint; el **Domain Event Publisher**, que desacopla los bounded contexts publicando y enrutando eventos de dominio in-process; y el componente de **Notification**, que se suscribe a esos eventos y los traduce en notificaciones transaccionales.
+El Backend se descompone en trece componentes. Diez de ellos corresponden **uno a uno con los bounded contexts identificados en el Event Storming**, lo que permite rastrear cada componente hasta un agrupamiento del tablero de Miro. Los tres restantes son transversales: el componente de **Security & JWT**, que autentica cada petición y resuelve el rol para la autorización por endpoint; el **Domain Event Publisher**, que desacopla los bounded contexts publicando y enrutando eventos de dominio in-process; y el componente de **Notification**, que se suscribe a esos eventos, guarda la notificación que el usuario ve dentro de la aplicación (US43) y envía el correo transaccional.
 
 Los repositorios y las capas anticorrupción no se representan como componentes independientes, sino que residen dentro del paquete de infraestructura de cada bounded context. Por esa razón, cada flecha que va de un componente de dominio hacia un sistema externo representa su propia capa anticorrupción: es la traducción entre el modelo del tercero y el lenguaje ubicuo del contexto.
 
@@ -1565,7 +1597,7 @@ El núcleo de la aplicación está compuesto por tres elementos: el **App Shell 
 
 #### Landing Page
 
-La Landing Page se compone de seis elementos de propósito acotado: las secciones de contenido en HTML5 semántico, la navegación y el layout responsivo, los llamados a la acción que derivan al visitante hacia el registro en la SPA, el formulario de captación de leads que envía los datos al Backend, el módulo de SEO y Meta Tags descrito en la sección 4.2.3, y el selector de idioma que alterna el contenido entre español e inglés.
+La Landing Page se compone de seis elementos de propósito acotado: las secciones de contenido en HTML5 semántico —propuesta de valor, tipos de vehículo, precios, testimonios, videos del producto y del equipo, y preguntas frecuentes—, la navegación y el layout responsivo, los llamados a la acción que derivan al visitante hacia el registro en la SPA, el formulario de captación de leads que envía los datos al Backend, el módulo de SEO y Meta Tags descrito en la sección 4.2.3, y el selector de idioma que alterna el contenido entre español e inglés.
 
 <div align="center">
   <img src="../assets/images/c4/c4-l3c-components-landing.png" alt="Diagrama de Componentes de la Landing Page" width="900"><br>
@@ -1577,14 +1609,14 @@ La Landing Page se compone de seis elementos de propósito acotado: las seccione
 
 En esta sección se presenta el detalle de implementación de cada bounded context mediante diagramas de clases UML. Siguiendo los principios de Domain-Driven Design, cada diagrama identifica su Aggregate Root, las entidades internas que viven bajo esa raíz, los Value Objects que encapsulan conceptos sin identidad propia, las enumeraciones que representan los estados del dominio y las interfaces de repositorio que definen el contrato de persistencia.
 
-Los diagramas aplican de manera consistente las siguientes convenciones. Las referencias entre agregados se realizan **exclusivamente por identidad**, nunca mediante navegación de objetos: un Vehículo conoce el `TransportistaId` al que pertenece, pero no mantiene una referencia al objeto Transportista. Los identificadores son Value Objects tipados sobre UUID, lo que evita confundir un `VehiculoId` con un `TransportistaId` en tiempo de compilación. Cada agregado expone métodos de negocio expresivos en lugar de setters, de modo que las invariantes se protegen dentro del propio agregado. Finalmente, las entidades internas declaran constructores con visibilidad de paquete, garantizando que solo puedan crearse a través de su raíz.
+Los diagramas aplican de manera consistente las siguientes convenciones. Las referencias entre agregados se realizan **exclusivamente por identidad**, nunca mediante navegación de objetos: un Vehículo conoce el `CarrierId` al que pertenece, pero no mantiene una referencia al objeto Transportista. Los identificadores son Value Objects tipados sobre UUID, lo que evita confundir un `VehicleId` con un `CarrierId` en tiempo de compilación. Cada agregado expone métodos de negocio expresivos en lugar de setters, de modo que las invariantes se protegen dentro del propio agregado. Finalmente, las entidades internas declaran constructores con visibilidad de paquete, garantizando que solo puedan crearse a través de su raíz. Todos los identificadores —clases, atributos, métodos, enumeraciones, tablas y columnas— se nombran en inglés, conforme a la convención de nomenclatura del proyecto, y reutilizan los términos del Ubiquitous Language de la sección 2.5: `Shipper`, `Carrier`, `Vehicle`, `LoadRequest`, `Trip` y `Route`.
 
 
 ### 4.7.1. Class Diagrams
 
 #### Bounded Context: IAM
 
-El contexto de identidad protege un único agregado, `Usuario`, que encapsula las credenciales y el ciclo de vida de la cuenta. El hash de la contraseña se modela como Value Object y el algoritmo de cifrado se delega en el puerto `PasswordHasher`, de modo que el dominio no conoce la implementación criptográfica.
+El contexto de identidad protege un único agregado, `User`, que encapsula las credenciales y el ciclo de vida de la cuenta. El hash de la contraseña se modela como Value Object y el algoritmo de cifrado se delega en el puerto `PasswordHasher`, de modo que el dominio no conoce la implementación criptográfica. La recuperación de contraseña (US30) se modela con la entidad interna `PasswordResetToken`, que vence a los 30 minutos y solo puede usarse una vez.
 
 <div align="center">
   <img src="../assets/images/class-diagrams/class-01-iam.png" alt="Diagrama de Clases del bounded context IAM" width="800"><br>
@@ -1593,7 +1625,7 @@ El contexto de identidad protege un único agregado, `Usuario`, que encapsula la
 
 #### Bounded Context: Profiles
 
-Este contexto administra dos agregados independientes, `Empresa` y `Transportista`, ambos vinculados a IAM únicamente por el `UsuarioId`. El Value Object `Ruc` incorpora la validación del dígito verificador mediante el algoritmo de módulo 11, y `Reputacion` encapsula el promedio de calificaciones junto con el total de evaluaciones recibidas.
+Este contexto administra dos agregados independientes, `Shipper` y `Carrier`, ambos vinculados a IAM únicamente por el `UserId`. El Value Object `Ruc` incorpora la validación del dígito verificador mediante el algoritmo de módulo 11, y `Reputation` encapsula el promedio de calificaciones junto con el total de evaluaciones recibidas. Ambos agregados la contienen, porque la calificación es mutua (US10 y US51). El transportista registra además `suspendedUntil`: el Domain Service `CancellationPolicy` lo suspende durante 7 días cuando acumula 3 cancelaciones tardías en 30 días (US55).
 
 <div align="center">
   <img src="../assets/images/class-diagrams/class-02-profiles.png" alt="Diagrama de Clases del bounded context Profiles" width="800"><br>
@@ -1602,7 +1634,7 @@ Este contexto administra dos agregados independientes, `Empresa` y `Transportist
 
 #### Bounded Context: Fleet
 
-El agregado `Vehiculo` mantiene los datos técnicos de la unidad y su estado de validación ante el MTC, mientras que `TipoVehiculo` actúa como catálogo que define las capacidades máximas admitidas. La consulta al padrón se realiza a través del puerto `PadronMtcService`, que devuelve un `ResultadoConsultaMtc` traducido al lenguaje del dominio.
+El agregado `Vehicle` mantiene los datos técnicos de la unidad y su estado de validación ante el MTC, mientras que `VehicleType` actúa como catálogo que define las capacidades máximas admitidas. La consulta al padrón se realiza a través del puerto `MtcRegistryService`, que devuelve un `MtcLookupResult` traducido al lenguaje del dominio. Un vehículo puede desactivarse (US33), lo que lo retira de la búsqueda de fletes sin borrar su historial.
 
 <div align="center">
   <img src="../assets/images/class-diagrams/class-03-fleet.png" alt="Diagrama de Clases del bounded context Fleet" width="800"><br>
@@ -1611,7 +1643,7 @@ El agregado `Vehiculo` mantiene los datos técnicos de la unidad y su estado de 
 
 #### Bounded Context: Document Validation
 
-El agregado `Documento` controla el ciclo de aprobación de licencias, SOAT y tarjetas de propiedad. La validación es automática: el Domain Service `ServicioValidacionDocumental` consulta el padrón del MTC y determina el estado resultante. El archivo físico se almacena mediante el puerto `AlmacenamientoArchivosService`, que devuelve la URL firmada.
+El agregado `Document` controla el ciclo de aprobación de licencias, SOAT y tarjetas de propiedad. La validación es automática: el Domain Service `DocumentValidationService` consulta el padrón del MTC y determina el estado resultante. El archivo físico se almacena mediante el puerto `FileStorageService`, que devuelve la URL firmada. La enumeración `ValidationStatus` recorre los cinco estados que consulta el transportista en US35: pendiente, en revisión, aprobado, rechazado y vencido.
 
 <div align="center">
   <img src="../assets/images/class-diagrams/class-04-document-validation.png" alt="Diagrama de Clases del bounded context Document Validation" width="800"><br>
@@ -1620,7 +1652,7 @@ El agregado `Documento` controla el ciclo de aprobación de licencias, SOAT y ta
 
 #### Bounded Context: Freight Publishing
 
-El agregado `SolicitudDeCarga` protege las invariantes de la publicación: valida el peso y las dimensiones, exige una fecha de recojo futura y controla las transiciones entre borrador, publicada, asignada y cancelada. El Value Object `Ruta` compone origen, destino y distancia calculada, apoyándose en el puerto `ServicioGeoespacial`.
+El agregado `LoadRequest` protege las invariantes de la publicación: valida el peso y las dimensiones, exige una fecha de recojo futura y controla las transiciones entre borrador, publicada, asignada, en tránsito, entregada y cancelada, que son los estados por los que filtra la empresa en US37. Solo una solicitud publicada puede editarse (US38), y cuando el transportista cancela tarde se republica como urgente (US55). El Value Object `Route` compone origen, destino y distancia calculada, apoyándose en el puerto `GeospatialService`.
 
 <div align="center">
   <img src="../assets/images/class-diagrams/class-05-freight-publishing.png" alt="Diagrama de Clases del bounded context Freight Publishing" width="800"><br>
@@ -1629,7 +1661,7 @@ El agregado `SolicitudDeCarga` protege las invariantes de la publicación: valid
 
 #### Bounded Context: Matching
 
-Este contexto no posee Aggregate Root. Su responsabilidad es de coordinación y consulta, por lo que se implementa mediante el Domain Service `ServicioDeMatching`, la especificación `PoliticaHabilitacionTransportista` y los modelos de lectura `FleteDisponible` y `DetalleDeFlete`. Accede a los demás contextos exclusivamente a través de puertos de consulta, respetando la regla de referenciar por identidad.
+Este contexto no posee Aggregate Root. Su responsabilidad es de coordinación y consulta, por lo que se implementa mediante el Domain Service `MatchingService`, la especificación `CarrierEligibilityPolicy` y los modelos de lectura `AvailableLoad` y `LoadDetail`. La política verifica también que el transportista no esté suspendido, y el detalle del flete incluye la reputación de la empresa (US40). Accede a los demás contextos exclusivamente a través de puertos de consulta, respetando la regla de referenciar por identidad.
 
 <div align="center">
   <img src="../assets/images/class-diagrams/class-06-matching.png" alt="Diagrama de Clases del bounded context Matching" width="800"><br>
@@ -1638,7 +1670,7 @@ Este contexto no posee Aggregate Root. Su responsabilidad es de coordinación y 
 
 #### Bounded Context: Trip Execution
 
-El agregado `Viaje` implementa una máquina de estados con siete posiciones, desde la asignación hasta la finalización. Cada transición se valida en el método privado `validarTransicion` y queda registrada como una entidad `HistorialEstadoViaje`, cuyo constructor es de visibilidad de paquete para garantizar que la trazabilidad solo pueda generarse desde la propia raíz del agregado.
+El agregado `Trip` implementa una máquina de estados con diez posiciones, desde la asignación hasta la finalización o la cancelación. Incluye `DELAYED` para los incidentes (US52), `DISPUTED` para la entrega que la empresa no acepta como conforme (US56) y `CANCELLED` para la cancelación del transportista, que se marca como tardía si ocurre a menos de 24 horas del recojo (US55). Cada incidente queda registrado en la entidad interna `Incident`, con su tipo y la foto de evidencia. Cada transición se valida en el método privado `validateTransition` y queda registrada como una entidad `TripStatusHistory`, cuyo constructor es de visibilidad de paquete para garantizar que la trazabilidad solo pueda generarse desde la propia raíz del agregado.
 
 <div align="center">
   <img src="../assets/images/class-diagrams/class-07-trip-execution.png" alt="Diagrama de Clases del bounded context Trip Execution" width="800"><br>
@@ -1647,7 +1679,7 @@ El agregado `Viaje` implementa una máquina de estados con siete posiciones, des
 
 #### Bounded Context: Payment
 
-El agregado `Pago` distingue tres montos: el total cobrado a la empresa, la comisión de la plataforma y el importe liquidado al transportista. El `TokenPago` circula únicamente entre el agregado y el puerto `PasarelaDePagoService`, de modo que ningún dato de tarjeta se persiste ni se expone en el modelo de dominio.
+El agregado `Payment` distingue tres montos: el total cobrado a la empresa, la comisión de la plataforma y el importe liquidado al transportista. El `PaymentToken` circula únicamente entre el agregado y el puerto `PaymentGatewayService`, de modo que ningún dato de tarjeta se persiste ni se expone en el modelo de dominio. La entidad interna `Receipt` guarda el PDF con el desglose de tarifas e impuestos que descarga la empresa (US53), y `PayoutStatus` registra la fecha programada del depósito que consulta el transportista (US54).
 
 <div align="center">
   <img src="../assets/images/class-diagrams/class-08-payment.png" alt="Diagrama de Clases del bounded context Payment" width="800"><br>
@@ -1656,7 +1688,7 @@ El agregado `Pago` distingue tres montos: el total cobrado a la empresa, la comi
 
 #### Bounded Context: Rating
 
-El agregado `Clasificacion` registra quién califica y a quién, mediante los campos `evaluadorId`, `evaluadoId` y `tipoEvaluador`, lo que permite la calificación mutua entre empresa y transportista. El Value Object `Puntaje` valida el rango permitido en su propio constructor, y el Domain Service verifica que el viaje esté completado y que no exista una calificación previa del mismo evaluador.
+El agregado `Rating` registra quién califica y a quién, mediante los campos `raterId`, `rateeId` y `raterType`, lo que permite la calificación mutua entre empresa y transportista. El Value Object `Score` valida el rango permitido en su propio constructor, y el Domain Service verifica que el viaje esté completado y que no exista una calificación previa del mismo evaluador. El evento `RatingRegistered` incluye el tipo de evaluador, para que Profiles actualice la reputación de la empresa o la del transportista según corresponda.
 
 <div align="center">
   <img src="../assets/images/class-diagrams/class-09-rating.png" alt="Diagrama de Clases del bounded context Rating" width="800"><br>
@@ -1665,16 +1697,25 @@ El agregado `Clasificacion` registra quién califica y a quién, mediante los ca
 
 #### Bounded Context: Contact
 
-El agregado `MensajeContacto` recibe los formularios provenientes de la Landing Page. Es el contexto más simple del modelo: registra el lead, clasifica al interesado según el segmento y controla si el mensaje ya fue atendido por el equipo comercial.
+El agregado `ContactMessage` recibe los formularios provenientes de la Landing Page. Es el contexto más simple del modelo: registra el lead, clasifica al interesado según el segmento y controla si el mensaje ya fue atendido por el equipo comercial.
 
 <div align="center">
   <img src="../assets/images/class-diagrams/class-10-contact.png" alt="Diagrama de Clases del bounded context Contact" width="800"><br>
   <i>Nota. Diagrama de Clases del bounded context Contact, elaborado en PlantUML.</i>
 </div>
 
+#### Componente transversal: Notification
+
+Notification no es un bounded context: es el componente del Backend que se suscribe a los eventos de los demás contextos y los convierte en avisos para el usuario. El agregado `Notification` registra a quién va dirigida, su tipo, si es urgente y si ya fue leída, lo que permite mostrar el contador de notificaciones no leídas de US43. El envío del correo se delega en el puerto `EmailServicePort`.
+
+<div align="center">
+  <img src="../assets/images/class-diagrams/class-11-notification.png" alt="Diagrama de Clases del componente Notification" width="800"><br>
+  <i>Nota. Diagrama de Clases del componente transversal Notification, elaborado en PlantUML.</i>
+</div>
+
 ## 4.8. Database Design
 
-El diseño de la base de datos traduce el modelo de dominio a un esquema relacional sobre PostgreSQL 16, manteniendo la separación por bounded contexts establecida en las secciones anteriores. La correspondencia no es únicamente conceptual: **cada bounded context recibe su propio schema de PostgreSQL** —`iam`, `profiles`, `fleet`, `documents`, `freight`, `trip`, `payment`, `rating` y `contact`—, de modo que la frontera lógica del Domain-Driven Design queda materializada físicamente en la base de datos y cada contexto resulta dueño exclusivo de sus tablas. El bounded context Matching no recibe schema, en coherencia con no poseer agregados propios.
+El diseño de la base de datos traduce el modelo de dominio a un esquema relacional sobre PostgreSQL 16, manteniendo la separación por bounded contexts establecida en las secciones anteriores. La correspondencia no es únicamente conceptual: **cada bounded context recibe su propio schema de PostgreSQL** —`iam`, `profiles`, `fleet`, `documents`, `freight`, `trip`, `payment`, `rating` y `contact`—, de modo que la frontera lógica del Domain-Driven Design queda materializada físicamente en la base de datos y cada contexto resulta dueño exclusivo de sus tablas. El bounded context Matching no recibe schema, en coherencia con no poseer agregados propios. El componente transversal Notification recibe un schema adicional, `notification`.
 
 El mapeo del modelo de clases al esquema relacional sigue reglas consistentes:
 
@@ -1689,9 +1730,9 @@ El mapeo del modelo de clases al esquema relacional sigue reglas consistentes:
 
 Las llaves primarias son de tipo **`UUID`**, en correspondencia con los Value Objects de identidad definidos en los diagramas de clases. Esta decisión responde a dos motivos. Permite generar el identificador antes de persistir el agregado, lo que simplifica la publicación de eventos de dominio dentro de la misma transacción. Y evita exponer en las URL el volumen de operaciones de la plataforma, ya que un identificador secuencial revelaría cuántas cargas o usuarios existen en el sistema.
 
-Los Value Objects se almacenan como columnas embebidas con un prefijo que identifica al objeto de origen. Así, el Value Object `Ruta` de una solicitud de carga se persiste como `origen_direccion`, `origen_distrito`, `origen_lat`, `origen_lng` y sus equivalentes de destino; el Value Object `Dinero` se descompone en `tarifa_monto` y `tarifa_moneda`. De esta manera se conserva la trazabilidad hacia el modelo de clases sin generar tablas adicionales para objetos que carecen de identidad propia.
+Los Value Objects se almacenan como columnas embebidas con un prefijo que identifica al objeto de origen. Así, el Value Object `Route` de una solicitud de carga se persiste como `origin_address`, `origin_district`, `origin_lat`, `origin_lng` y sus equivalentes de destino; el Value Object `Money` se descompone en `rate_amount` y `rate_currency`. De esta manera se conserva la trazabilidad hacia el modelo de clases sin generar tablas adicionales para objetos que carecen de identidad propia.
 
-Las restricciones no se limitan a las llaves. El esquema incorpora **restricciones `CHECK` que protegen invariantes de negocio directamente en la base de datos**: el puntaje de una calificación debe situarse entre 1 y 5, el evaluador no puede coincidir con el evaluado, la suma de la comisión de plataforma y el monto de liquidación no puede superar el monto total cobrado, y el peso bruto de un vehículo no puede ser inferior a su carga útil. De este modo, una falla en la capa de aplicación no puede producir datos inconsistentes.
+Las restricciones no se limitan a las llaves. El esquema incorpora **restricciones `CHECK` que protegen invariantes de negocio directamente en la base de datos**: el puntaje de una calificación debe situarse entre 1 y 5, el evaluador no puede coincidir con el evaluado, la suma de la comisión de plataforma y el monto de liquidación no puede superar el monto total cobrado, el peso bruto de un vehículo no puede ser inferior a su carga útil, y un viaje cancelado debe registrar su motivo. De este modo, una falla en la capa de aplicación no puede producir datos inconsistentes.
 
 El esquema completo se encuentra versionado en el repositorio del proyecto como `loadmatch-schema.sql` y fue ejecutado y verificado sobre una instancia de PostgreSQL 16, incluyendo pruebas que confirman que las restricciones rechazan efectivamente los datos inválidos.
 
@@ -1699,9 +1740,9 @@ El esquema completo se encuentra versionado en el repositorio del proyecto como 
 
 A continuación se presenta el Diagrama Entidad-Relación de cada bounded context, especificando tablas, columnas, tipos de datos, llaves primarias y restricciones de llave foránea, unicidad y validación.
 
-El bounded context **Matching no cuenta con tablas propias**, dado que su responsabilidad es de consulta y asignación: opera mediante consultas de proximidad con PostGIS sobre las tablas de Freight Publishing y Profiles. Por esa razón se presentan nueve diagramas y no diez.
+El bounded context **Matching no cuenta con tablas propias**, dado que su responsabilidad es de consulta y asignación: opera mediante consultas de proximidad con PostGIS sobre las tablas de Freight Publishing y Profiles. Por esa razón se presentan nueve diagramas de bounded contexts, a los que se suma el del componente transversal Notification.
 
-Antes del detalle por contexto, la siguiente vista general presenta las trece tablas del modelo agrupadas por schema. Permite apreciar cómo la separación en bounded contexts se materializa en la base de datos y cómo las referencias entre contextos se resuelven siempre por llave foránea sobre el identificador, nunca por navegación de objetos.
+Antes del detalle por contexto, la siguiente vista general presenta las diecisiete tablas del modelo agrupadas por schema. Permite apreciar cómo la separación en bounded contexts se materializa en la base de datos y cómo las referencias entre contextos se resuelven siempre por llave foránea sobre el identificador, nunca por navegación de objetos.
 
 <div align="center">
   <img src="../assets/images/database/db-00-vista-general.png" alt="Vista general del modelo relacional de LoadMatch" width="850"><br>
@@ -1710,7 +1751,7 @@ Antes del detalle por contexto, la siguiente vista general presenta las trece ta
 
 #### Bounded Context: IAM
 
-El schema `iam` contiene una única tabla. La columna `rol` permite resolver la autorización del token JWT sin necesidad de consultar el schema `profiles`, evitando dos consultas adicionales en cada inicio de sesión. La relación con los perfiles es de uno a cero-o-uno: un usuario puede existir sin haber completado aún su perfil de empresa o de transportista.
+El schema `iam` contiene la tabla `users` y la entidad interna `password_reset_tokens`, que guarda solo el hash del enlace de recuperación de contraseña y se elimina en cascada con el usuario (US30). La columna `role` permite resolver la autorización del token JWT sin necesidad de consultar el schema `profiles`, evitando dos consultas adicionales en cada inicio de sesión. La relación con los perfiles es de uno a cero-o-uno: un usuario puede existir sin haber completado aún su perfil de empresa o de transportista.
 
 <div align="center">
   <img src="../assets/images/database/db-01-iam.png" alt="Diagrama Entidad-Relación del bounded context IAM" width="800"><br>
@@ -1719,7 +1760,7 @@ El schema `iam` contiene una única tabla. La columna `rol` permite resolver la 
 
 #### Bounded Context: Profiles
 
-Las tablas `empresas` y `transportistas` se vinculan a `iam.usuarios` mediante una llave foránea con restricción de unicidad, lo que garantiza la correspondencia uno a uno entre cuenta y perfil. Los Value Objects `Direccion`, `LicenciaConducir` y `Reputacion` aparecen como grupos de columnas embebidas. La columna `reputacion_total_evaluaciones` permite recalcular el promedio de forma incremental, sin recorrer la tabla de calificaciones en cada nueva evaluación.
+Las tablas `shippers` y `carriers` se vinculan a `iam.users` mediante una llave foránea con restricción de unicidad, lo que garantiza la correspondencia uno a uno entre cuenta y perfil. Los Value Objects `Address`, `DriverLicense` y `Reputation` aparecen como grupos de columnas embebidas. La columna `reputation_total_ratings` permite recalcular el promedio de forma incremental, sin recorrer la tabla de calificaciones en cada nueva evaluación; ambas tablas la incluyen porque la calificación es mutua. La columna `suspended_until` de `carriers` registra la suspensión de 7 días por cancelaciones tardías (US55).
 
 <div align="center">
   <img src="../assets/images/database/db-02-profiles.png" alt="Diagrama Entidad-Relación del bounded context Profiles" width="800"><br>
@@ -1728,7 +1769,7 @@ Las tablas `empresas` y `transportistas` se vinculan a `iam.usuarios` mediante u
 
 #### Bounded Context: Fleet
 
-El catálogo `tipos_vehiculo` define las capacidades máximas admitidas y se carga como datos semilla en la migración inicial. La tabla `vehiculos` registra las dimensiones completas de la unidad —largo, ancho y alto—, necesarias para el filtro de compatibilidad descrito en la sección 4.2.4. El estado de validación ante el MTC se modela como enumeración de tres valores y no como booleano, de modo que sea posible distinguir una unidad pendiente de validación de una efectivamente rechazada.
+El catálogo `vehicle_types` define las capacidades máximas admitidas y se carga como datos semilla en la migración inicial. La tabla `vehicles` registra las dimensiones completas de la unidad —largo, ancho y alto—, necesarias para el filtro de compatibilidad descrito en la sección 4.2.4. El estado de validación ante el MTC se modela como enumeración de tres valores y no como booleano, de modo que sea posible distinguir una unidad pendiente de validación de una efectivamente rechazada. La columna `active` permite retirar un vehículo de la búsqueda de fletes sin eliminarlo (US33).
 
 <div align="center">
   <img src="../assets/images/database/db-03-fleet.png" alt="Diagrama Entidad-Relación del bounded context Fleet" width="800"><br>
@@ -1737,7 +1778,7 @@ El catálogo `tipos_vehiculo` define las capacidades máximas admitidas y se car
 
 #### Bounded Context: Document Validation
 
-La tabla `documentos` incorpora un **índice único parcial** que permite un solo documento aprobado por tipo y transportista, pero deja abierta la posibilidad de volver a presentarlo tras un rechazo o un vencimiento. Una restricción `CHECK` exige que todo documento rechazado registre su motivo, dando soporte al evento de notificación identificado en el Event Storming.
+La tabla `documents` incorpora un **índice único parcial** que permite un solo documento aprobado por tipo y transportista, pero deja abierta la posibilidad de volver a presentarlo tras un rechazo o un vencimiento. Una restricción `CHECK` exige que todo documento rechazado registre su motivo, dando soporte al evento de notificación identificado en el Event Storming. El estado de validación admite los cinco valores de US35: pendiente, en revisión, aprobado, rechazado y vencido.
 
 <div align="center">
   <img src="../assets/images/database/db-04-document-validation.png" alt="Diagrama Entidad-Relación del bounded context Document Validation" width="800"><br>
@@ -1746,7 +1787,7 @@ La tabla `documentos` incorpora un **índice único parcial** que permite un sol
 
 #### Bounded Context: Freight Publishing
 
-La tabla `solicitudes_carga` concentra los Value Objects `Ruta`, `Dimensiones` y `Dinero` como columnas embebidas. Las columnas `tarifa_monto` y `tipo_mercaderia` sustentan respectivamente el filtro de tarifa mínima y el dato mostrado en las tarjetas de resultado, ambos descritos en la sección 4.2.4. Un índice espacial GIST sobre la geografía del punto de origen, provisto por la extensión PostGIS y restringido a las solicitudes publicadas, soporta la búsqueda por proximidad que ejecuta el contexto Matching mediante `ST_DWithin`.
+La tabla `load_requests` concentra los Value Objects `Route`, `Dimensions` y `Money` como columnas embebidas. Las columnas `rate_amount` y `cargo_type` sustentan respectivamente el filtro de tarifa mínima y el dato mostrado en las tarjetas de resultado, ambos descritos en la sección 4.2.4. Un índice espacial GIST sobre la geografía del punto de origen, provisto por la extensión PostGIS y restringido a las solicitudes publicadas, soporta la búsqueda por proximidad que ejecuta el contexto Matching mediante `ST_DWithin`. Las columnas `urgent` y `republished_at` identifican las cargas republicadas tras una cancelación tardía (US55).
 
 <div align="center">
   <img src="../assets/images/database/db-05-freight-publishing.png" alt="Diagrama Entidad-Relación del bounded context Freight Publishing" width="800"><br>
@@ -1755,7 +1796,7 @@ La tabla `solicitudes_carga` concentra los Value Objects `Ruta`, `Dimensiones` y
 
 #### Bounded Context: Trip Execution
 
-La tabla `viajes` mantiene una restricción de unicidad sobre `solicitud_carga_id`, garantizando que una solicitud genere a lo sumo un viaje. La entidad interna `historial_estado_viaje` registra cada transición con su estado anterior y su estado nuevo, y se elimina en cascada junto con el viaje, lo que refleja que su ciclo de vida depende por completo de la raíz del agregado.
+La tabla `trips` mantiene un **índice único parcial** sobre `load_request_id`, restringido a los viajes no cancelados: una solicitud tiene a lo sumo un viaje vigente, pero si el transportista cancela, la carga se republica y otro viaje puede tomarla (US55). Las restricciones `CHECK` exigen motivo y fecha a todo viaje cancelado y una observación a toda entrega observada (US56). La entidad interna `incidents` guarda el tipo y la URL de la foto de evidencia (US52). La entidad interna `trip_status_history` registra cada transición con su estado anterior y su estado nuevo, y se elimina en cascada junto con el viaje, lo que refleja que su ciclo de vida depende por completo de la raíz del agregado.
 
 <div align="center">
   <img src="../assets/images/database/db-06-trip-execution.png" alt="Diagrama Entidad-Relación del bounded context Trip Execution" width="800"><br>
@@ -1764,7 +1805,7 @@ La tabla `viajes` mantiene una restricción de unicidad sobre `solicitud_carga_i
 
 #### Bounded Context: Payment
 
-La tabla `pagos` distingue tres montos: el total cobrado a la empresa, la comisión retenida por la plataforma y el importe liquidado al transportista. Una restricción `CHECK` impide que la suma de la comisión y la liquidación supere el monto total, y otra exige que todo pago marcado como completado registre su referencia de pasarela y su fecha de procesamiento. Ningún dato de tarjeta se persiste: hacia la pasarela solo circulan tokens.
+La tabla `payments` distingue tres montos: el total cobrado a la empresa, la comisión retenida por la plataforma y el importe liquidado al transportista. Una restricción `CHECK` impide que la suma de la comisión y la liquidación supere el monto total, y otra exige que todo pago marcado como completado registre su referencia de pasarela y su fecha de procesamiento. Ningún dato de tarjeta se persiste: hacia la pasarela solo circulan tokens. Las columnas `payout_status` y `scheduled_deposit_date` sustentan la billetera del transportista (US54), y la entidad interna `receipts` guarda el PDF con el desglose de tarifas e impuestos (US53); al no emitirse ante SUNAT, se numera con serie y número propios.
 
 <div align="center">
   <img src="../assets/images/database/db-07-payment.png" alt="Diagrama Entidad-Relación del bounded context Payment" width="800"><br>
@@ -1773,7 +1814,7 @@ La tabla `pagos` distingue tres montos: el total cobrado a la empresa, la comisi
 
 #### Bounded Context: Rating
 
-La tabla `clasificaciones` incorpora las columnas `evaluador_id`, `evaluado_id` y `tipo_evaluador`, que permiten la calificación mutua entre empresa y transportista e identifican sin ambigüedad quién califica a quién. Una restricción de unicidad sobre la combinación de viaje y evaluador impide que un mismo participante califique dos veces el mismo servicio, y una restricción `CHECK` impide la autocalificación.
+La tabla `ratings` incorpora las columnas `rater_id`, `ratee_id` y `rater_type`, que permiten la calificación mutua entre empresa y transportista e identifican sin ambigüedad quién califica a quién. Una restricción de unicidad sobre la combinación de viaje y evaluador impide que un mismo participante califique dos veces el mismo servicio, y una restricción `CHECK` impide la autocalificación.
 
 <div align="center">
   <img src="../assets/images/database/db-08-rating.png" alt="Diagrama Entidad-Relación del bounded context Rating" width="800"><br>
@@ -1782,9 +1823,18 @@ La tabla `clasificaciones` incorpora las columnas `evaluador_id`, `evaluado_id` 
 
 #### Bounded Context: Contact
 
-La tabla `mensajes_contacto` no mantiene relaciones con el resto del modelo, dado que el lead llega desde la Landing Page antes de que exista una cuenta en la plataforma. Un índice parcial sobre la fecha de envío, restringido a los mensajes no atendidos, permite listar eficientemente la bandeja pendiente del equipo comercial.
+La tabla `contact_messages` no mantiene relaciones con el resto del modelo, dado que el lead llega desde la Landing Page antes de que exista una cuenta en la plataforma. Un índice parcial sobre la fecha de envío, restringido a los mensajes no atendidos, permite listar eficientemente la bandeja pendiente del equipo comercial.
 
 <div align="center">
   <img src="../assets/images/database/db-09-contact.png" alt="Diagrama Entidad-Relación del bounded context Contact" width="800"><br>
   <i>Nota. Diagrama Entidad-Relación del bounded context Contact, elaborado en PlantUML.</i>
+</div>
+
+#### Componente transversal: Notification
+
+La tabla `notifications` vive en su propio schema, `notification`, y referencia a `iam.users`. Un índice parcial sobre `user_id`, restringido a las notificaciones no leídas, sostiene el contador de US43, y una restricción `CHECK` exige la fecha de lectura cuando la notificación se marca como leída.
+
+<div align="center">
+  <img src="../assets/images/database/db-10-notification.png" alt="Diagrama Entidad-Relación del componente Notification" width="800"><br>
+  <i>Nota. Diagrama Entidad-Relación del componente transversal Notification, elaborado en PlantUML.</i>
 </div>

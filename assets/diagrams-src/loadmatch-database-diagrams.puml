@@ -1,0 +1,1141 @@
+' =============================================================================
+'  LoadMatch Platform - Database Diagrams per Bounded Context
+'  Section 4.8.1 of the report - Course 1ASI0729 - Group 5
+'
+'  SINGLE FILE: 9 @startuml blocks, one per bounded context with persistence,
+'  plus block 10 for the transversal component Notification (US43).
+'  Derived from the loadmatch-schema.sql schema, validated on PostgreSQL 16.
+'
+'  Matching does not appear: it is a query context without tables of its own.
+'
+'  -------------------------------------------------------------------------
+'  CONVENTIONS
+'  -------------------------------------------------------------------------
+'     *            NOT NULL column
+'     <<PK>>       Primary Key            <<FK>>   Foreign Key
+'     <<UQ>>       UNIQUE constraint      <<CHK>>  CHECK constraint
+'     <<VO>>       embedded column of a Value Object from the class model
+'
+'     ||--o{       one to zero-or-many
+'     ||--||       one to one
+'     ||--o|       one to zero-or-one
+'
+'  Tables in grey belong to ANOTHER bounded context and are shown only
+'  with their primary key, because the reference is by identity.
+' =============================================================================
+
+' =============================================================================
+'  1 - IAM
+' =============================================================================
+@startuml db-01-iam
+hide circle
+skinparam class {
+    BackgroundColor #FDF6E3
+    BorderColor #657B83
+    BackgroundColor<<external>> #E8E8E8
+    BorderColor<<external>> #AAAAAA
+}
+title Database Diagram - Bounded Context: IAM
+caption schema iam - credentials, password recovery and account lifecycle
+
+entity "users" as users {
+    * id : UUID <<PK>>
+    --
+    * email : VARCHAR(255) <<UQ>> <<CHK>>
+    * password_hash : VARCHAR(255)
+    * role : VARCHAR(20) <<CHK>>
+    * verified : BOOLEAN
+    * active : BOOLEAN
+    * created_at : TIMESTAMPTZ
+    last_access_at : TIMESTAMPTZ
+}
+
+entity "shippers" as shippers <<external>> {
+    * id : UUID <<PK>>
+    * user_id : UUID <<FK>> <<UQ>>
+}
+
+entity "carriers" as carriers <<external>> {
+    * id : UUID <<PK>>
+    * user_id : UUID <<FK>> <<UQ>>
+}
+
+entity "password_reset_tokens" as password_reset_tokens {
+    * id : UUID <<PK>>
+    --
+    * user_id : UUID <<FK>>
+    * token_hash : VARCHAR(255) <<UQ>>
+    * expires_at : TIMESTAMPTZ <<CHK>>
+    * used : BOOLEAN
+    * created_at : TIMESTAMPTZ
+}
+
+users ||--o| shippers : "has profile"
+users ||--o| carriers : "has profile"
+users ||--o{ password_reset_tokens : "recovers access with\nON DELETE CASCADE"
+
+note bottom of password_reset_tokens
+  Internal entity PasswordResetToken of the User aggregate.
+  Valid for 30 minutes (US30); only the hash is stored.
+end note
+
+note bottom of users
+  **role** allows resolving JWT authorization
+  without querying the profiles schema.
+  **CHECK**: role IN ('SHIPPER','CARRIER')
+end note
+
+legend right
+  |= Symbol |= Meaning |
+  | * | NOT NULL |
+  | <<PK>> | Primary Key |
+  | <<FK>> | Foreign Key |
+  | <<UQ>> | UNIQUE |
+  | <<CHK>> | CHECK |
+  | grey | table from another bounded context |
+endlegend
+@enduml
+
+
+' =============================================================================
+'  2 - PROFILES
+' =============================================================================
+@startuml db-02-profiles
+hide circle
+skinparam class {
+    BackgroundColor #FDF6E3
+    BorderColor #657B83
+    BackgroundColor<<external>> #E8E8E8
+    BorderColor<<external>> #AAAAAA
+}
+title Database Diagram - Bounded Context: Profiles
+caption schema profiles - Shipper and Carrier profiles
+
+entity "users" as users <<external>> {
+    * id : UUID <<PK>>
+}
+
+entity "shippers" as shippers {
+    * id : UUID <<PK>>
+    --
+    * user_id : UUID <<FK>> <<UQ>>
+    * ruc : CHAR(11) <<UQ>> <<CHK>>
+    * business_name : VARCHAR(200)
+    contact_name : VARCHAR(150)
+    * phone_number : VARCHAR(20)
+    .. Value Object Address ..
+    * address_street : VARCHAR(200) <<VO>>
+    * address_district : VARCHAR(100) <<VO>>
+    address_province : VARCHAR(100) <<VO>>
+    address_department : VARCHAR(100) <<VO>>
+    .. Value Object Reputation ..
+    * reputation_average : NUMERIC(3,2) <<CHK>> <<VO>>
+    * reputation_total_ratings : INTEGER <<CHK>> <<VO>>
+    ..
+    * registered_at : TIMESTAMPTZ
+}
+
+entity "carriers" as carriers {
+    * id : UUID <<PK>>
+    --
+    * user_id : UUID <<FK>> <<UQ>>
+    * first_names : VARCHAR(100)
+    * last_names : VARCHAR(100)
+    * dni : CHAR(8) <<UQ>> <<CHK>>
+    .. Value Object DriverLicense ..
+    * license_number : VARCHAR(20) <<UQ>> <<VO>>
+    * license_category : VARCHAR(10) <<VO>>
+    * license_expiration : DATE <<VO>>
+    ..
+    * phone_number : VARCHAR(20)
+    * enablement_status : VARCHAR(20) <<CHK>>
+    .. Value Object Reputation ..
+    * reputation_average : NUMERIC(3,2) <<CHK>> <<VO>>
+    * reputation_total_ratings : INTEGER <<CHK>> <<VO>>
+    ..
+    suspended_until : TIMESTAMPTZ <<CHK>>
+    suspension_reason : VARCHAR(300)
+    * registered_at : TIMESTAMPTZ
+}
+
+users ||--o| shippers : "identifies"
+users ||--o| carriers : "identifies"
+
+note bottom of carriers
+  **reputation_total_ratings** allows recalculating
+  the average incrementally, without scanning
+  the rating.ratings table on every rating.
+  Shipper and Carrier embed the same Reputation
+  because the rating is mutual (US10, US51).
+  --
+  **suspended_until**: 7-day suspension after
+  3 late cancellations within 30 days (US55).
+end note
+
+legend right
+  |= Symbol |= Meaning |
+  | * | NOT NULL |
+  | <<PK>> | Primary Key |
+  | <<FK>> | Foreign Key |
+  | <<UQ>> | UNIQUE |
+  | <<CHK>> | CHECK |
+  | <<VO>> | embedded Value Object |
+endlegend
+@enduml
+
+
+' =============================================================================
+'  3 - FLEET
+' =============================================================================
+@startuml db-03-fleet
+hide circle
+skinparam class {
+    BackgroundColor #FDF6E3
+    BorderColor #657B83
+    BackgroundColor<<external>> #E8E8E8
+    BorderColor<<external>> #AAAAAA
+}
+title Database Diagram - Bounded Context: Fleet
+caption schema fleet - vehicles, license plates and vehicle types
+
+entity "carriers" as carriers <<external>> {
+    * id : UUID <<PK>>
+}
+
+entity "vehicle_types" as vehicle_types {
+    * id : UUID <<PK>>
+    --
+    * name : VARCHAR(80) <<UQ>>
+    description : VARCHAR(300)
+    * max_weight_kg : NUMERIC(10,2) <<CHK>>
+    .. Value Object Dimensions ..
+    * dim_max_length_m : NUMERIC(6,2) <<VO>>
+    * dim_max_width_m : NUMERIC(6,2) <<VO>>
+    * dim_max_height_m : NUMERIC(6,2) <<VO>>
+    ..
+    * active : BOOLEAN
+}
+
+entity "vehicles" as vehicles {
+    * id : UUID <<PK>>
+    --
+    * carrier_id : UUID <<FK>>
+    * vehicle_type_id : UUID <<FK>>
+    * license_plate : VARCHAR(10) <<UQ>>
+    brand : VARCHAR(60)
+    model : VARCHAR(60)
+    manufacture_year : SMALLINT <<CHK>>
+    axle_count : SMALLINT
+    * payload_kg : NUMERIC(10,2) <<CHK>>
+    * gross_weight_kg : NUMERIC(10,2) <<CHK>>
+    .. Value Object Dimensions ..
+    dim_length_m : NUMERIC(6,2) <<VO>>
+    dim_width_m : NUMERIC(6,2) <<VO>>
+    dim_height_m : NUMERIC(6,2) <<VO>>
+    ..
+    * mtc_validation_status : VARCHAR(20) <<CHK>>
+    mtc_validated_at : TIMESTAMPTZ
+    * active : BOOLEAN
+    * registered_at : TIMESTAMPTZ
+}
+
+carriers ||--o{ vehicles : "registers"
+vehicle_types ||--o{ vehicles : "classifies"
+
+note bottom of vehicles
+  **dim_height_m** enables the "Match my
+  vehicle" filter described in section 4.2.4.
+  **mtc_validation_status** distinguishes PENDING from
+  REJECTED, which a boolean cannot do.
+  **active** = FALSE removes the vehicle from the
+  load search (US33).
+end note
+
+legend right
+  |= Symbol |= Meaning |
+  | * | NOT NULL |
+  | <<PK>> | Primary Key |
+  | <<FK>> | Foreign Key |
+  | <<UQ>> | UNIQUE |
+  | <<CHK>> | CHECK |
+  | <<VO>> | embedded Value Object |
+endlegend
+@enduml
+
+
+' =============================================================================
+'  4 - DOCUMENT VALIDATION
+' =============================================================================
+@startuml db-04-document-validation
+hide circle
+skinparam class {
+    BackgroundColor #FDF6E3
+    BorderColor #657B83
+    BackgroundColor<<external>> #E8E8E8
+    BorderColor<<external>> #AAAAAA
+}
+title Database Diagram - Bounded Context: Document Validation
+caption schema documents - licenses, SOAT and vehicle registration cards
+
+entity "carriers" as carriers <<external>> {
+    * id : UUID <<PK>>
+}
+
+entity "document_types" as document_types {
+    * id : UUID <<PK>>
+    --
+    * name : VARCHAR(80) <<UQ>>
+    description : VARCHAR(300)
+    * requires_expiration : BOOLEAN
+    * mandatory : BOOLEAN
+}
+
+entity "documents" as documents {
+    * id : UUID <<PK>>
+    --
+    * carrier_id : UUID <<FK>>
+    * document_type_id : UUID <<FK>>
+    * file_url : VARCHAR(500)
+    * validation_status : VARCHAR(20) <<CHK>>
+    .. Value Object RejectionReason ..
+    rejection_reason_code : VARCHAR(50) <<VO>>
+    rejection_reason_description : VARCHAR(300) <<VO>>
+    ..
+    issue_date : DATE
+    expiration_date : DATE <<CHK>>
+    * uploaded_at : TIMESTAMPTZ
+    validated_at : TIMESTAMPTZ
+}
+
+carriers ||--o{ documents : "submits"
+document_types ||--o{ documents : "classifies"
+
+note bottom of documents
+  **Partial unique index**: a carrier can only
+  have ONE APPROVED document per type, but can
+  retry after a rejection or an expiration.
+  UNIQUE (carrier_id, document_type_id)
+  WHERE validation_status = 'APPROVED'
+  --
+  **CHECK**: if status = 'REJECTED', the reason is mandatory.
+  **CHECK validation_status**: PENDING, IN_REVIEW,
+  APPROVED, REJECTED, EXPIRED (US35)
+end note
+
+legend right
+  |= Symbol |= Meaning |
+  | * | NOT NULL |
+  | <<PK>> | Primary Key |
+  | <<FK>> | Foreign Key |
+  | <<UQ>> | UNIQUE |
+  | <<CHK>> | CHECK |
+  | <<VO>> | embedded Value Object |
+endlegend
+@enduml
+
+
+' =============================================================================
+'  5 - FREIGHT PUBLISHING
+' =============================================================================
+@startuml db-05-freight-publishing
+hide circle
+skinparam class {
+    BackgroundColor #FDF6E3
+    BorderColor #657B83
+    BackgroundColor<<external>> #E8E8E8
+    BorderColor<<external>> #AAAAAA
+}
+title Database Diagram - Bounded Context: Freight Publishing
+caption schema freight - load requests published on the marketplace
+
+entity "shippers" as shippers <<external>> {
+    * id : UUID <<PK>>
+}
+
+entity "vehicle_types" as vehicle_types <<external>> {
+    * id : UUID <<PK>>
+}
+
+entity "load_requests" as load_requests {
+    * id : UUID <<PK>>
+    --
+    * shipper_id : UUID <<FK>>
+    * vehicle_type_id : UUID <<FK>>
+    .. Value Object Route > Location origin ..
+    * origin_address : VARCHAR(200) <<VO>>
+    * origin_district : VARCHAR(100) <<VO>>
+    * origin_lat : NUMERIC(9,6) <<CHK>> <<VO>>
+    * origin_lng : NUMERIC(9,6) <<CHK>> <<VO>>
+    .. Value Object Route > Location destination ..
+    * destination_address : VARCHAR(200) <<VO>>
+    * destination_district : VARCHAR(100) <<VO>>
+    * destination_lat : NUMERIC(9,6) <<CHK>> <<VO>>
+    * destination_lng : NUMERIC(9,6) <<CHK>> <<VO>>
+    ..
+    distance_km : NUMERIC(8,2)
+    * weight_kg : NUMERIC(10,2) <<CHK>>
+    .. Value Object Dimensions ..
+    * dim_length_m : NUMERIC(6,2) <<VO>>
+    * dim_width_m : NUMERIC(6,2) <<VO>>
+    * dim_height_m : NUMERIC(6,2) <<VO>>
+    ..
+    * cargo_type : VARCHAR(120)
+    .. Value Object Money ..
+    * rate_amount : NUMERIC(10,2) <<CHK>> <<VO>>
+    * rate_currency : CHAR(3) <<VO>>
+    ..
+    * status : VARCHAR(20) <<CHK>>
+    * pickup_at : TIMESTAMPTZ
+    * created_at : TIMESTAMPTZ
+    published_at : TIMESTAMPTZ
+    * urgent : BOOLEAN <<CHK>>
+    republished_at : TIMESTAMPTZ
+    cancellation_reason : VARCHAR(300) <<CHK>>
+}
+
+shippers ||--o{ load_requests : "publishes"
+vehicle_types ||--o{ load_requests : "requires"
+
+note bottom of load_requests
+  **rate_amount** supports the "Minimum rate" filter
+  and **cargo_type** the data shown on the
+  result cards, both from section 4.2.4.
+  --
+  **Partial index** on (origin_lat, origin_lng)
+  WHERE status = 'PUBLISHED', for the geographic
+  prefilter of the Matching context.
+  --
+  **CHECK status**: DRAFT, PUBLISHED, ASSIGNED,
+  IN_TRANSIT, DELIVERED, CANCELLED (US37)
+  **urgent**: load request republished after a
+  late cancellation by the carrier (US55).
+end note
+
+legend right
+  |= Symbol |= Meaning |
+  | * | NOT NULL |
+  | <<PK>> | Primary Key |
+  | <<FK>> | Foreign Key |
+  | <<CHK>> | CHECK |
+  | <<VO>> | embedded Value Object |
+endlegend
+@enduml
+
+
+' =============================================================================
+'  6 - TRIP EXECUTION
+' =============================================================================
+@startuml db-06-trip-execution
+hide circle
+skinparam class {
+    BackgroundColor #FDF6E3
+    BorderColor #657B83
+    BackgroundColor<<external>> #E8E8E8
+    BorderColor<<external>> #AAAAAA
+}
+title Database Diagram - Bounded Context: Trip Execution
+caption schema trip - trip execution, incidents and status traceability
+
+entity "load_requests" as load_requests <<external>> {
+    * id : UUID <<PK>>
+}
+entity "shippers" as shippers <<external>> {
+    * id : UUID <<PK>>
+}
+entity "carriers" as carriers <<external>> {
+    * id : UUID <<PK>>
+}
+entity "vehicles" as vehicles <<external>> {
+    * id : UUID <<PK>>
+}
+
+entity "trips" as trips {
+    * id : UUID <<PK>>
+    --
+    * load_request_id : UUID <<FK>>
+    * shipper_id : UUID <<FK>>
+    * carrier_id : UUID <<FK>>
+    * vehicle_id : UUID <<FK>>
+    * status : VARCHAR(30) <<CHK>>
+    .. Value Object GpsLocation ..
+    location_lat : NUMERIC(9,6) <<VO>>
+    location_lng : NUMERIC(9,6) <<VO>>
+    location_recorded_at : TIMESTAMPTZ <<VO>>
+    ..
+    * assigned_at : TIMESTAMPTZ
+    pickup_at : TIMESTAMPTZ
+    delivered_at : TIMESTAMPTZ
+    delivery_dispute_reason : VARCHAR(500) <<CHK>>
+    confirmed_at : TIMESTAMPTZ
+    completed_at : TIMESTAMPTZ
+    cancellation_reason : VARCHAR(300) <<CHK>>
+    * late_cancellation : BOOLEAN
+    cancelled_at : TIMESTAMPTZ
+}
+
+entity "trip_status_history" as trip_status_history {
+    * id : UUID <<PK>>
+    --
+    * trip_id : UUID <<FK>>
+    previous_status : VARCHAR(30)
+    * new_status : VARCHAR(30)
+    description : VARCHAR(300)
+    * registered_at : TIMESTAMPTZ
+}
+
+load_requests ||--o{ trips : "originates"
+shippers ||--o{ trips : "hires"
+carriers ||--o{ trips : "executes"
+vehicles ||--o{ trips : "is used in"
+entity "incidents" as incidents {
+    * id : UUID <<PK>>
+    --
+    * trip_id : UUID <<FK>>
+    * type : VARCHAR(30) <<CHK>>
+    description : VARCHAR(500)
+    * evidence_url : VARCHAR(500)
+    * reported_at : TIMESTAMPTZ
+}
+
+trips ||--|{ trip_status_history : "records\nON DELETE CASCADE"
+trips ||--o{ incidents : "justifies delays with\nON DELETE CASCADE"
+
+note bottom of trip_status_history
+  trip_status_history and incidents are internal entities
+  of the Trip aggregate. **ON DELETE CASCADE** because their
+  lifecycle depends entirely on the aggregate root.
+end note
+
+note right of trips
+  **Partial unique index (load_request_id)**
+  WHERE status <> 'CANCELLED': a load request has at
+  most one active trip; if the carrier cancels,
+  the load is republished and another trip takes it (US55).
+  --
+  **CHECK status**: ASSIGNED, EN_ROUTE_TO_PICKUP,
+  AT_PICKUP_POINT, CARGO_PICKED_UP, IN_TRANSIT,
+  DELAYED, DELIVERED, DISPUTED, COMPLETED, CANCELLED
+  --
+  **CHECK**: CANCELLED requires reason and date;
+  DISPUTED requires delivery_dispute_reason (US56).
+end note
+
+legend right
+  |= Symbol |= Meaning |
+  | * | NOT NULL |
+  | <<PK>> | Primary Key |
+  | <<FK>> | Foreign Key |
+  | <<UQ>> | UNIQUE |
+  | <<CHK>> | CHECK |
+endlegend
+@enduml
+
+
+' =============================================================================
+'  7 - PAYMENT
+' =============================================================================
+@startuml db-07-payment
+hide circle
+skinparam class {
+    BackgroundColor #FDF6E3
+    BorderColor #657B83
+    BackgroundColor<<external>> #E8E8E8
+    BorderColor<<external>> #AAAAAA
+}
+title Database Diagram - Bounded Context: Payment
+caption schema payment - charge, platform fee, receipt and payout
+
+entity "trips" as trips <<external>> {
+    * id : UUID <<PK>>
+}
+entity "shippers" as shippers <<external>> {
+    * id : UUID <<PK>>
+}
+entity "carriers" as carriers <<external>> {
+    * id : UUID <<PK>>
+}
+
+entity "payments" as payments {
+    * id : UUID <<PK>>
+    --
+    * trip_id : UUID <<FK>> <<UQ>>
+    * shipper_id : UUID <<FK>>
+    * carrier_id : UUID <<FK>>
+    .. Value Object Money ..
+    * total_amount : NUMERIC(10,2) <<CHK>> <<VO>>
+    * platform_fee : NUMERIC(10,2) <<CHK>> <<VO>>
+    * payout_amount : NUMERIC(10,2) <<CHK>> <<VO>>
+    * currency : CHAR(3) <<VO>>
+    ..
+    method : VARCHAR(20) <<CHK>>
+    * status : VARCHAR(20) <<CHK>>
+    gateway_reference : VARCHAR(120)
+    * attempts : SMALLINT <<CHK>>
+    * enabled_at : TIMESTAMPTZ
+    processed_at : TIMESTAMPTZ
+    * payout_status : VARCHAR(20) <<CHK>>
+    scheduled_deposit_date : DATE
+    transferred_at : TIMESTAMPTZ
+}
+
+entity "receipts" as receipts {
+    * id : UUID <<PK>>
+    --
+    * payment_id : UUID <<FK>> <<UQ>>
+    * series : VARCHAR(4) <<UQ>>
+    * number : INTEGER <<UQ>>
+    .. Value Object Money ..
+    * subtotal : NUMERIC(10,2) <<CHK>> <<VO>>
+    * taxes : NUMERIC(10,2) <<CHK>> <<VO>>
+    * total : NUMERIC(10,2) <<CHK>> <<VO>>
+    ..
+    * pdf_url : VARCHAR(500)
+    * issued_at : TIMESTAMPTZ
+}
+
+trips ||--o| payments : "settles"
+shippers ||--o{ payments : "pays"
+carriers ||--o{ payments : "receives"
+payments ||--o| receipts : "is backed by\nON DELETE CASCADE"
+
+note right of receipts
+  Internal entity of the Payment aggregate.
+  PDF with the breakdown of fees and
+  taxes (US53). UNIQUE (series, number).
+  **CHECK**: total = subtotal + taxes
+end note
+
+note bottom of payments
+  **Split CHECK**: platform_fee +
+  payout_amount <= total_amount.
+  The database prevents the split sum from
+  exceeding what was charged to the shipper.
+  --
+  **Completeness CHECK**: a COMPLETED payment
+  requires gateway_reference and processed_at.
+  --
+  No card data is persisted: only tokens
+  flow to the gateway.
+  --
+  **payout_status**: PENDING, SCHEDULED,
+  TRANSFERRED, with the scheduled deposit date
+  that the carrier sees (US54).
+end note
+
+legend right
+  |= Symbol |= Meaning |
+  | * | NOT NULL |
+  | <<PK>> | Primary Key |
+  | <<FK>> | Foreign Key |
+  | <<UQ>> | UNIQUE |
+  | <<CHK>> | CHECK |
+  | <<VO>> | embedded Value Object |
+endlegend
+@enduml
+
+
+' =============================================================================
+'  8 - RATING
+' =============================================================================
+@startuml db-08-rating
+hide circle
+skinparam class {
+    BackgroundColor #FDF6E3
+    BorderColor #657B83
+    BackgroundColor<<external>> #E8E8E8
+    BorderColor<<external>> #AAAAAA
+}
+title Database Diagram - Bounded Context: Rating
+caption schema rating - mutual post-trip rating
+
+entity "trips" as trips <<external>> {
+    * id : UUID <<PK>>
+}
+
+entity "ratings" as ratings {
+    * id : UUID <<PK>>
+    --
+    * trip_id : UUID <<FK>>
+    * rater_id : UUID <<CHK>>
+    * ratee_id : UUID <<CHK>>
+    * rater_type : VARCHAR(20) <<CHK>>
+    * score : SMALLINT <<CHK>>
+    comment : VARCHAR(500)
+    * created_at : TIMESTAMPTZ
+}
+
+trips ||--o{ ratings : "is rated in"
+
+note bottom of ratings
+  **rater_id** and **ratee_id** enable the
+  mutual rating: it is known whether the shipper rates
+  the carrier or the other way around. Without these
+  fields the previous model could not distinguish it.
+  --
+  **UNIQUE (trip_id, rater_id)**: each
+  participant rates only once per trip.
+  **CHECK**: rater_id <> ratee_id
+  **CHECK**: score BETWEEN 1 AND 5
+end note
+
+legend right
+  |= Symbol |= Meaning |
+  | * | NOT NULL |
+  | <<PK>> | Primary Key |
+  | <<FK>> | Foreign Key |
+  | <<CHK>> | CHECK |
+endlegend
+@enduml
+
+
+' =============================================================================
+'  9 - CONTACT
+' =============================================================================
+@startuml db-09-contact
+hide circle
+skinparam class {
+    BackgroundColor #FDF6E3
+    BorderColor #657B83
+}
+title Database Diagram - Bounded Context: Contact
+caption schema contact - leads coming from the Landing Page
+
+entity "contact_messages" as contact_messages {
+    * id : UUID <<PK>>
+    --
+    * first_names : VARCHAR(100)
+    last_names : VARCHAR(100)
+    * email : VARCHAR(255) <<CHK>>
+    phone_number : VARCHAR(20)
+    * lead_type : VARCHAR(20) <<CHK>>
+    * message : VARCHAR(1000)
+    * attended : BOOLEAN
+    * sent_at : TIMESTAMPTZ
+    attended_at : TIMESTAMPTZ
+}
+
+note bottom of contact_messages
+  Context without relationships: the lead arrives from the
+  Landing Page before an account exists, so it does
+  not reference iam.users.
+  --
+  **Partial index** on sent_at WHERE attended = FALSE,
+  to efficiently list the pending messages.
+  --
+  **CHECK**: lead_type IN ('SHIPPER','CARRIER','OTHER')
+end note
+
+legend right
+  |= Symbol |= Meaning |
+  | * | NOT NULL |
+  | <<PK>> | Primary Key |
+  | <<CHK>> | CHECK |
+endlegend
+@enduml
+
+
+' =============================================================================
+'  10 - NOTIFICATION  (transversal component, not a bounded context)
+' =============================================================================
+@startuml db-10-notification
+hide circle
+skinparam class {
+    BackgroundColor #FDF6E3
+    BorderColor #657B83
+    BackgroundColor<<external>> #E8E8E8
+    BorderColor<<external>> #AAAAAA
+}
+title Database Diagram - Transversal component: Notification
+caption schema notification - in-app notifications (US43)
+
+entity "users" as users <<external>> {
+    * id : UUID <<PK>>
+}
+
+entity "notifications" as notifications {
+    * id : UUID <<PK>>
+    --
+    * user_id : UUID <<FK>>
+    * type : VARCHAR(30) <<CHK>>
+    * title : VARCHAR(120)
+    * message : VARCHAR(500)
+    * urgent : BOOLEAN
+    * is_read : BOOLEAN <<CHK>>
+    * created_at : TIMESTAMPTZ
+    read_at : TIMESTAMPTZ
+}
+
+users ||--o{ notifications : "receives"
+
+note bottom of notifications
+  **Partial index** on user_id WHERE is_read = FALSE,
+  for the unread counter (US43).
+  --
+  **CHECK**: is_read = TRUE requires read_at.
+  **CHECK type**: LOAD_ACCEPTED, CARGO_PICKED_UP,
+  CARGO_DELIVERED, DELIVERY_DISPUTED,
+  INCIDENT_REPORTED, TRIP_CANCELLED,
+  PAYMENT_RECEIVED, DOCUMENT_VALIDATED
+end note
+
+legend right
+  |= Symbol |= Meaning |
+  | * | NOT NULL |
+  | <<PK>> | Primary Key |
+  | <<FK>> | Foreign Key |
+  | <<CHK>> | CHECK |
+  | grey | table from another context |
+endlegend
+@enduml
+
+
+' =============================================================================
+'  0 - COMPLETE OVERVIEW
+'  Reading aid, not required by the assignment. Shows the 17 tables
+'  with ALL their columns, grouped by schema. The definitions are derived
+'  automatically from the 9 per-bounded-context diagrams, so they
+'  cannot get out of sync.
+' =============================================================================
+@startuml db-00-vista-general
+hide circle
+skinparam packageStyle rectangle
+skinparam nodesep 30
+skinparam ranksep 40
+skinparam class {
+    BackgroundColor #FDF6E3
+    BorderColor #657B83
+}
+title Database Diagram - Complete overview of the relational model
+caption 17 tables with all their columns, grouped by schema - one schema per bounded context and one for the Notification component
+
+package "iam" {
+    entity "users" as users {
+    * id : UUID <<PK>>
+    --
+    * email : VARCHAR(255) <<UQ>> <<CHK>>
+    * password_hash : VARCHAR(255)
+    * role : VARCHAR(20) <<CHK>>
+    * verified : BOOLEAN
+    * active : BOOLEAN
+    * created_at : TIMESTAMPTZ
+    last_access_at : TIMESTAMPTZ
+    }
+    entity "password_reset_tokens" as password_reset_tokens {
+    * id : UUID <<PK>>
+    --
+    * user_id : UUID <<FK>>
+    * token_hash : VARCHAR(255) <<UQ>>
+    * expires_at : TIMESTAMPTZ <<CHK>>
+    * used : BOOLEAN
+    * created_at : TIMESTAMPTZ
+    }
+}
+
+package "profiles" {
+    entity "shippers" as shippers {
+    * id : UUID <<PK>>
+    --
+    * user_id : UUID <<FK>> <<UQ>>
+    * ruc : CHAR(11) <<UQ>> <<CHK>>
+    * business_name : VARCHAR(200)
+    contact_name : VARCHAR(150)
+    * phone_number : VARCHAR(20)
+    .. Value Object Address ..
+    * address_street : VARCHAR(200) <<VO>>
+    * address_district : VARCHAR(100) <<VO>>
+    address_province : VARCHAR(100) <<VO>>
+    address_department : VARCHAR(100) <<VO>>
+    .. Value Object Reputation ..
+    * reputation_average : NUMERIC(3,2) <<CHK>> <<VO>>
+    * reputation_total_ratings : INTEGER <<CHK>> <<VO>>
+    ..
+    * registered_at : TIMESTAMPTZ
+    }
+    entity "carriers" as carriers {
+    * id : UUID <<PK>>
+    --
+    * user_id : UUID <<FK>> <<UQ>>
+    * first_names : VARCHAR(100)
+    * last_names : VARCHAR(100)
+    * dni : CHAR(8) <<UQ>> <<CHK>>
+    .. Value Object DriverLicense ..
+    * license_number : VARCHAR(20) <<UQ>> <<VO>>
+    * license_category : VARCHAR(10) <<VO>>
+    * license_expiration : DATE <<VO>>
+    ..
+    * phone_number : VARCHAR(20)
+    * enablement_status : VARCHAR(20) <<CHK>>
+    .. Value Object Reputation ..
+    * reputation_average : NUMERIC(3,2) <<CHK>> <<VO>>
+    * reputation_total_ratings : INTEGER <<CHK>> <<VO>>
+    ..
+    suspended_until : TIMESTAMPTZ <<CHK>>
+    suspension_reason : VARCHAR(300)
+    * registered_at : TIMESTAMPTZ
+    }
+}
+
+package "fleet" {
+    entity "vehicle_types" as vehicle_types {
+    * id : UUID <<PK>>
+    --
+    * name : VARCHAR(80) <<UQ>>
+    description : VARCHAR(300)
+    * max_weight_kg : NUMERIC(10,2) <<CHK>>
+    .. Value Object Dimensions ..
+    * dim_max_length_m : NUMERIC(6,2) <<VO>>
+    * dim_max_width_m : NUMERIC(6,2) <<VO>>
+    * dim_max_height_m : NUMERIC(6,2) <<VO>>
+    ..
+    * active : BOOLEAN
+    }
+    entity "vehicles" as vehicles {
+    * id : UUID <<PK>>
+    --
+    * carrier_id : UUID <<FK>>
+    * vehicle_type_id : UUID <<FK>>
+    * license_plate : VARCHAR(10) <<UQ>>
+    brand : VARCHAR(60)
+    model : VARCHAR(60)
+    manufacture_year : SMALLINT <<CHK>>
+    axle_count : SMALLINT
+    * payload_kg : NUMERIC(10,2) <<CHK>>
+    * gross_weight_kg : NUMERIC(10,2) <<CHK>>
+    .. Value Object Dimensions ..
+    dim_length_m : NUMERIC(6,2) <<VO>>
+    dim_width_m : NUMERIC(6,2) <<VO>>
+    dim_height_m : NUMERIC(6,2) <<VO>>
+    ..
+    * mtc_validation_status : VARCHAR(20) <<CHK>>
+    mtc_validated_at : TIMESTAMPTZ
+    * active : BOOLEAN
+    * registered_at : TIMESTAMPTZ
+    }
+}
+
+package "documents" {
+    entity "document_types" as document_types {
+    * id : UUID <<PK>>
+    --
+    * name : VARCHAR(80) <<UQ>>
+    description : VARCHAR(300)
+    * requires_expiration : BOOLEAN
+    * mandatory : BOOLEAN
+    }
+    entity "documents" as documents {
+    * id : UUID <<PK>>
+    --
+    * carrier_id : UUID <<FK>>
+    * document_type_id : UUID <<FK>>
+    * file_url : VARCHAR(500)
+    * validation_status : VARCHAR(20) <<CHK>>
+    .. Value Object RejectionReason ..
+    rejection_reason_code : VARCHAR(50) <<VO>>
+    rejection_reason_description : VARCHAR(300) <<VO>>
+    ..
+    issue_date : DATE
+    expiration_date : DATE <<CHK>>
+    * uploaded_at : TIMESTAMPTZ
+    validated_at : TIMESTAMPTZ
+    }
+}
+
+package "freight" {
+    entity "load_requests" as load_requests {
+    * id : UUID <<PK>>
+    --
+    * shipper_id : UUID <<FK>>
+    * vehicle_type_id : UUID <<FK>>
+    .. Value Object Route > Location origin ..
+    * origin_address : VARCHAR(200) <<VO>>
+    * origin_district : VARCHAR(100) <<VO>>
+    * origin_lat : NUMERIC(9,6) <<CHK>> <<VO>>
+    * origin_lng : NUMERIC(9,6) <<CHK>> <<VO>>
+    .. Value Object Route > Location destination ..
+    * destination_address : VARCHAR(200) <<VO>>
+    * destination_district : VARCHAR(100) <<VO>>
+    * destination_lat : NUMERIC(9,6) <<CHK>> <<VO>>
+    * destination_lng : NUMERIC(9,6) <<CHK>> <<VO>>
+    ..
+    distance_km : NUMERIC(8,2)
+    * weight_kg : NUMERIC(10,2) <<CHK>>
+    .. Value Object Dimensions ..
+    * dim_length_m : NUMERIC(6,2) <<VO>>
+    * dim_width_m : NUMERIC(6,2) <<VO>>
+    * dim_height_m : NUMERIC(6,2) <<VO>>
+    ..
+    * cargo_type : VARCHAR(120)
+    .. Value Object Money ..
+    * rate_amount : NUMERIC(10,2) <<CHK>> <<VO>>
+    * rate_currency : CHAR(3) <<VO>>
+    ..
+    * status : VARCHAR(20) <<CHK>>
+    * pickup_at : TIMESTAMPTZ
+    * created_at : TIMESTAMPTZ
+    published_at : TIMESTAMPTZ
+    * urgent : BOOLEAN <<CHK>>
+    republished_at : TIMESTAMPTZ
+    cancellation_reason : VARCHAR(300) <<CHK>>
+    }
+}
+
+package "trip" {
+    entity "trips" as trips {
+    * id : UUID <<PK>>
+    --
+    * load_request_id : UUID <<FK>>
+    * shipper_id : UUID <<FK>>
+    * carrier_id : UUID <<FK>>
+    * vehicle_id : UUID <<FK>>
+    * status : VARCHAR(30) <<CHK>>
+    .. Value Object GpsLocation ..
+    location_lat : NUMERIC(9,6) <<VO>>
+    location_lng : NUMERIC(9,6) <<VO>>
+    location_recorded_at : TIMESTAMPTZ <<VO>>
+    ..
+    * assigned_at : TIMESTAMPTZ
+    pickup_at : TIMESTAMPTZ
+    delivered_at : TIMESTAMPTZ
+    delivery_dispute_reason : VARCHAR(500) <<CHK>>
+    confirmed_at : TIMESTAMPTZ
+    completed_at : TIMESTAMPTZ
+    cancellation_reason : VARCHAR(300) <<CHK>>
+    * late_cancellation : BOOLEAN
+    cancelled_at : TIMESTAMPTZ
+    }
+    entity "trip_status_history" as trip_status_history {
+    * id : UUID <<PK>>
+    --
+    * trip_id : UUID <<FK>>
+    previous_status : VARCHAR(30)
+    * new_status : VARCHAR(30)
+    description : VARCHAR(300)
+    * registered_at : TIMESTAMPTZ
+    }
+    entity "incidents" as incidents {
+    * id : UUID <<PK>>
+    --
+    * trip_id : UUID <<FK>>
+    * type : VARCHAR(30) <<CHK>>
+    description : VARCHAR(500)
+    * evidence_url : VARCHAR(500)
+    * reported_at : TIMESTAMPTZ
+    }
+}
+
+package "payment" {
+    entity "payments" as payments {
+    * id : UUID <<PK>>
+    --
+    * trip_id : UUID <<FK>> <<UQ>>
+    * shipper_id : UUID <<FK>>
+    * carrier_id : UUID <<FK>>
+    .. Value Object Money ..
+    * total_amount : NUMERIC(10,2) <<CHK>> <<VO>>
+    * platform_fee : NUMERIC(10,2) <<CHK>> <<VO>>
+    * payout_amount : NUMERIC(10,2) <<CHK>> <<VO>>
+    * currency : CHAR(3) <<VO>>
+    ..
+    method : VARCHAR(20) <<CHK>>
+    * status : VARCHAR(20) <<CHK>>
+    gateway_reference : VARCHAR(120)
+    * attempts : SMALLINT <<CHK>>
+    * enabled_at : TIMESTAMPTZ
+    processed_at : TIMESTAMPTZ
+    * payout_status : VARCHAR(20) <<CHK>>
+    scheduled_deposit_date : DATE
+    transferred_at : TIMESTAMPTZ
+    }
+    entity "receipts" as receipts {
+    * id : UUID <<PK>>
+    --
+    * payment_id : UUID <<FK>> <<UQ>>
+    * series : VARCHAR(4) <<UQ>>
+    * number : INTEGER <<UQ>>
+    .. Value Object Money ..
+    * subtotal : NUMERIC(10,2) <<CHK>> <<VO>>
+    * taxes : NUMERIC(10,2) <<CHK>> <<VO>>
+    * total : NUMERIC(10,2) <<CHK>> <<VO>>
+    ..
+    * pdf_url : VARCHAR(500)
+    * issued_at : TIMESTAMPTZ
+    }
+}
+
+package "rating" {
+    entity "ratings" as ratings {
+    * id : UUID <<PK>>
+    --
+    * trip_id : UUID <<FK>>
+    * rater_id : UUID <<CHK>>
+    * ratee_id : UUID <<CHK>>
+    * rater_type : VARCHAR(20) <<CHK>>
+    * score : SMALLINT <<CHK>>
+    comment : VARCHAR(500)
+    * created_at : TIMESTAMPTZ
+    }
+}
+
+package "contact" {
+    entity "contact_messages" as contact_messages {
+    * id : UUID <<PK>>
+    --
+    * first_names : VARCHAR(100)
+    last_names : VARCHAR(100)
+    * email : VARCHAR(255) <<CHK>>
+    phone_number : VARCHAR(20)
+    * lead_type : VARCHAR(20) <<CHK>>
+    * message : VARCHAR(1000)
+    * attended : BOOLEAN
+    * sent_at : TIMESTAMPTZ
+    attended_at : TIMESTAMPTZ
+    }
+}
+
+package "notification" {
+    entity "notifications" as notifications {
+        * id : UUID <<PK>>
+        --
+        * user_id : UUID <<FK>>
+        * type : VARCHAR(30) <<CHK>>
+        * title : VARCHAR(120)
+        * message : VARCHAR(500)
+        * urgent : BOOLEAN
+        * is_read : BOOLEAN <<CHK>>
+        * created_at : TIMESTAMPTZ
+        read_at : TIMESTAMPTZ
+    }
+}
+
+users ||--o| shippers : "identifies"
+users ||--o| carriers : "identifies"
+carriers ||--o{ vehicles : "registers"
+vehicle_types ||--o{ vehicles : "classifies"
+carriers ||--o{ documents : "submits"
+document_types ||--o{ documents : "classifies"
+shippers ||--o{ load_requests : "publishes"
+vehicle_types ||--o{ load_requests : "requires"
+load_requests ||--o{ trips : "originates"
+shippers ||--o{ trips : "hires"
+carriers ||--o{ trips : "executes"
+vehicles ||--o{ trips : "is used in"
+trips ||--|{ trip_status_history : "records"
+trips ||--o{ incidents : "justifies delays with"
+users ||--o{ password_reset_tokens : "recovers access with"
+users ||--o{ notifications : "receives"
+payments ||--o| receipts : "is backed by"
+trips ||--o| payments : "settles"
+shippers ||--o{ payments : "pays"
+carriers ||--o{ payments : "receives"
+trips ||--o{ ratings : "is rated in"
+
+legend right
+  |= Symbol |= Meaning |
+  | * | NOT NULL |
+  | <<PK>> | Primary Key |
+  | <<FK>> | Foreign Key |
+  | <<UQ>> | UNIQUE |
+  | <<CHK>> | CHECK |
+  | <<VO>> | embedded Value Object |
+endlegend
+@enduml
