@@ -149,12 +149,9 @@ Para la estimación del esfuerzo se ha utilizado la secuencia de Fibonacci (1, 2
 | 27 | US19 | Validación automática de transportista | Como Developer, quiero validar automáticamente la placa del vehículo contra el padrón del MTC y verificar formato/vigencia de los documentos, para habilitar o rechazar al transportista sin intervención manual. | 5 |
 | 28 | US20 | Pago al transportista por servicio completado | Como dueño de negocio, quiero pagar al transportista con tarjeta una vez que el servicio ha sido entregado, para completar la transacción del viaje contratado. | 5 |
 
-### Acceso al Product Backlog en Jira
+Actualizaciones recientes en Jira:
 
-El Product Backlog del proyecto se gestiona mediante Jira Software, donde se registran y organizan las User Stories definidas para LoadMatch, junto con su prioridad y estimación correspondiente.
-
-El tablero puede consultarse mediante el siguiente enlace:
-
-[Product Backlog de LoadMatch en Jira](https://upc-team-m57tll9j.atlassian.net/jira/software/projects/US/boards/2?sprintStarted=true&filter=&groupBy=none)
-
-> **Nota:** El acceso al tablero requiere autenticación en Atlassian y los permisos correspondientes del proyecto.
+<p align="center">
+  <img src="../assets/Chapter3/BacklogTP1.png">
+  <br><em>Product Backlog en Jira (01/10/2026)</em></br>
+</P>
