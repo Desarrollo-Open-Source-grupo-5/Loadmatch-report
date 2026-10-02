@@ -214,12 +214,9 @@ Las siguientes capturas muestran el Product Backlog registrado en Jira Software 
 
 **Total:** 56 User Stories · 167 Story Points.
 
-### Acceso al Product Backlog en Jira
+Actualizaciones recientes en Jira:
 
-El Product Backlog del proyecto se gestiona mediante Jira Software, donde se registran y organizan las User Stories definidas para LoadMatch, junto con su prioridad y estimación correspondiente.
-
-El tablero puede consultarse mediante el siguiente enlace:
-
-[Product Backlog de LoadMatch en Jira](https://upc-team-m57tll9j.atlassian.net/jira/software/projects/US/boards/2?sprintStarted=true&filter=&groupBy=none)
-
-> **Nota:** El acceso al tablero requiere autenticación en Atlassian y los permisos correspondientes del proyecto.
+<p align="center">
+  <img src="../assets/Chapter3/BacklogTP1.png">
+  <br><em>Product Backlog en Jira (01/10/2026)</em></br>
+</P>
