@@ -69,11 +69,11 @@ Los Pull Requests deben documentar la historia relacionada, los cambios realizad
 
 **Semantic Versioning 2.0.0**
 
-Cada producto mantendrá su propia numeración `MAJOR.MINOR.PATCH`: `MAJOR` para cambios incompatibles en su contrato público, `MINOR` para nuevas funcionalidades compatibles y `PATCH` para correcciones compatibles. Durante el desarrollo inicial se podrán utilizar versiones `0.y.z`. Los tags, por ejemplo `v1.0.0`, identificarán el commit publicado; no se registrará un tag como existente hasta verificarlo. Referencia: [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html).
+Cada producto mantendrá su propia numeración `MAJOR.MINOR.PATCH`: `MAJOR` para cambios incompatibles en su contrato público, `MINOR` para nuevas funcionalidades compatibles y `PATCH` para correcciones compatibles. Durante el desarrollo inicial se podrán utilizar versiones `0.y.z`. Los tags, por ejemplo `v1.0.0`, identificarán el commit publicado; no se registrará un tag como existente hasta verificarlo. Referencia: Semantic Versioning 2.0.0.
 
 **Conventional Commits**
 
-Los mensajes se redactarán en inglés con el formato `type(scope): description`. Se utilizarán `feat` para funcionalidades, `fix` para correcciones, `docs` para documentación, `refactor` para reorganización interna y `chore` para mantenimiento. `style` se reservará para formato del código; un cambio visual que agrega o corrige comportamiento se clasificará según su finalidad. Los cambios incompatibles se identificarán con `!` o con un pie `BREAKING CHANGE:`. Referencia: [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/).
+Los mensajes se redactarán en inglés con el formato `type(scope): description`. Se utilizarán `feat` para funcionalidades, `fix` para correcciones, `docs` para documentación, `refactor` para reorganización interna y `chore` para mantenimiento. `style` se reservará para formato del código; un cambio visual que agrega o corrige comportamiento se clasificará según su finalidad. Los cambios incompatibles se identificarán con `!` o con un pie `BREAKING CHANGE:`. Referencia: Conventional Commits 1.0.0.
 
 Ejemplos de mensajes propuestos:
 
@@ -157,19 +157,20 @@ Los contratos de entrada/salida de la API se mantendrán separados de las entida
 
 El equipo utilizará las siguientes fuentes como apoyo para definir y mantener sus convenciones. Las decisiones específicas adoptadas para LoadMatch quedarán documentadas en cada repositorio.
 
-- **HTML y CSS:** [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html).
-- **JavaScript:** [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html).
-- **TypeScript:** [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html).
-- **Angular:** [Angular Coding Style Guide](https://angular.dev/style-guide).
-- **Java:** [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html), como referencia complementaria; para la indentación prevalece la regla de cuatro espacios del proyecto.
-- **Configuración de formato:** [EditorConfig](https://editorconfig.org/) y [Prettier](https://prettier.io/docs/).
-- **Análisis estático de JavaScript y TypeScript:** [ESLint](https://eslint.org/docs/latest/) y [typescript-eslint](https://typescript-eslint.io/).
+- **HTML y CSS:** https://google.github.io/styleguide/htmlcssguide.html.
+- **JavaScript:** https://google.github.io/styleguide/jsguide.html.
+- **TypeScript:** https://www.typescriptlang.org/docs/handbook/intro.html.
+- **Angular:** https://angular.dev/style-guide.
+- **Java:** https://google.github.io/styleguide/javaguide.html, como referencia complementaria; para la indentación prevalece la regla de cuatro espacios del proyecto.
+- **Configuración de formato: EditorConfig** https://editorconfig.org/ **y Prettier**https://prettier.io/docs/.
+- **Análisis estático de JavaScript y TypeScript: ESLint** https://eslint.org/docs/latest/ y https://typescript-eslint.io/.
 
 ### 5.1.4. Software Deployment Configuration
 
 **Landing Page**
 
-La Landing Page se publica en GitHub Pages desde la rama `main` y la carpeta raíz (`Settings > Pages > Deploy from a branch`, rama `main`, carpeta `/ (root)`), donde se encuentra `index.html`. El archivo `.nojekyll` evita el procesamiento con Jekyll y la opción *Enforce HTTPS* permanece activa. No se usa dominio personalizado. Referencia: [Configuración de la fuente de publicación de GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+La Landing Page se publica en GitHub Pages desde la rama `main` y la carpeta raíz (`Settings > Pages > Deploy from a branch`, rama `main`, carpeta `/ (root)`), donde se encuentra `index.html`. El archivo `.nojekyll` evita el procesamiento con Jekyll y la opción *Enforce HTTPS* permanece activa. No se usa dominio personalizado. 
+Referencia: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site.
 
 Cada versión se integra primero en `develop`, pasa por una rama `release/x.y.z` que actualiza `CHANGELOG.md`, se fusiona en `main` mediante Pull Request y se etiqueta con Semantic Versioning (`vX.Y.Z`). Antes de publicar se revisan rutas de recursos, navegación, comportamiento móvil, formulario y ausencia de errores de consola; después se abre la URL pública para confirmar el despliegue.
 
@@ -240,7 +241,7 @@ La matriz LACX identifica al líder (L) y a los colaboradores (C) de cada aspect
 | US27 | Consulta de información legal y de contacto | T10 | Implementación del pie de página y páginas legales | Pie de página con navegación y contacto, y página de términos, privacidad, cookies y accesibilidad. | 6 h | Christoper Steven Rivas Castillo | Done |
 | US28 | Visualización de videos del producto y del equipo | T11 | Implementación de la sección de videos | Dos marcos 16:9 con pie de foto; los videos se publican en AV2. | 3 h | Ismael Sebastian Simon Calderon | In Progress |
 
-**Tablero:** [Sprint Board de LoadMatch en Jira](https://upc-team-m57tll9j.atlassian.net/jira/software/projects/US/boards/2).
+**Tablero:** https://upc-team-m57tll9j.atlassian.net/jira/software/projects/US/boards/2.
 
 **Evidencia del cierre del Sprint 1 en Jira:**
 
@@ -303,7 +304,7 @@ El incremento se desarrolló con GitFlow: una rama por sección, integración a 
 | Loadmatch-landing-page | feature/video-placeholders | ad5be56 | feat(videos): show coming-soon placeholders until the videos are published | Avisos de video | 16/09/2026 |
 | Loadmatch-landing-page | release/1.0.0 | b2f1b2e | chore(release): prepare v1.0.0 | CHANGELOG de la versión | 16/09/2026 |
 
-**Repositorio:** [Loadmatch-landing-page](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page) · **Pull Requests:** #2 al #25 · **Etiqueta:** [`v1.0.0`](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page/releases/tag/v1.0.0)
+**Repositorio:** https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page · **Pull Requests:** #2 al #25 · **Etiqueta:** v1.0.0 https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page/releases/tag/v1.0.0
 
 **Artefactos de desarrollo**
 
@@ -413,7 +414,7 @@ Los botones de registro e inicio de sesión usan `data-app-path`. Mientras `APP_
 | Testimonios e información legal, US26 y US27 | Cumple. |
 | Videos, US28 | Pendiente: avisos de disponibilidad próxima. |
 
-**Video de navegación del Sprint Review:** [PENDIENTE: enlace de Microsoft Stream.]
+**Video de navegación del Sprint Review:** https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310342_upc_edu_pe/IQDWUFuRbr2mTbmyHe5Unle2ARQ_Ohp6v-p65qkdM2X-FTM?e=1wbyk6
 
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
 
@@ -421,7 +422,7 @@ El incremento del Sprint 1 es un sitio estático y no contiene una API RESTful p
 
 La recepción real de las consultas del formulario de contacto corresponderá al contexto Contact del backend en un sprint posterior.
 
-**Repositorio backend:** [Loadmatch-backend-application](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-backend-application).
+**Repositorio backend:** https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-backend-application.
 
 #### 5.2.1.7. Software Deployment Evidence for Sprint Review
 
@@ -429,9 +430,9 @@ La versión 1.0.0 se publicó en GitHub Pages desde la rama `main`.
 
 | Evidencia | Detalle |
 | --- | --- |
-| Repositorio | [Loadmatch-landing-page](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page) |
+| Repositorio | https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page |
 | Plataforma | GitHub Pages, rama `main`, carpeta `/ (root)`, HTTPS obligatorio. |
-| URL pública | [desarrollo-open-source-grupo-5.github.io/Loadmatch-landing-page](https://desarrollo-open-source-grupo-5.github.io/Loadmatch-landing-page/) |
+| URL pública | https://desarrollo-open-source-grupo-5.github.io/Loadmatch-landing-page/ |
 | Pull Request de publicación | #25, `release/1.0.0` → `main` |
 | Commit publicado | `077d002` |
 | Etiqueta | `v1.0.0` |
@@ -500,4 +501,61 @@ El Landing Page se dividió en ramas por sección, lo que permitió trabajar en 
   <img src="../assets/images/Insights/NetworkGraph1.png" alt="Network graph del repositorio" width="500">
 </p>
 
-**Pull Requests:** #2 al #25 en [Loadmatch-landing-page](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page/pulls?q=is%3Apr+is%3Aclosed), integrados con *Create a merge commit*.
+**Pull Requests:** #2 al #25 en https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page/pulls?q=is%3Apr+is%3Aclosed, integrados con *Create a merge commit*.
+
+### 5.2.2. Sprint 2
+
+El segundo sprint de trabajo del equipo de CargoLinks se centró principalmente en el desarrollo de una primera versión de la aplicación propuesta en los capítulos anteriores, usando las tecnologías vistas durante las clases del curso, así como modificar los items pendientes de la entrega anterior para conseguir un mejor resultado.
+
+#### 5.2.2.1. Sprint Planning 2
+
+| Sprint # | Sprint 2 |
+| --- | --- |
+| **Sprint Planning Background** | |
+| Date | 23/09/2026 |
+| Time | 08:30 p.m. |
+| Location | Google meet |
+| Prepared By | Christoper Steven Rivas Castillo |
+| Attendees (to planning meeting) | Noriega Collado, Jean Fabio<br>Simon Calderon, Ismael Sebastian<br>Collantes Artola, Marco Antonio<br>Benigno Montero, Harold Fauskorp<br>Rivas Castillo, Christoper Steven  |
+| Sprint 2 Review Summary |  |
+| Sprint 2 Retrospective Summary |  |
+| **Sprint Goal & User Stories** | |
+| Sprint 2 Goal |  |
+| Sprint 2 Velocity |  |
+| Sum of Story Points |  puntos comprometidos: US = , US = , US = , US = , US = , US = , US = , US = , US = , US =  y US = . Completados: . |
+
+#### 5.2.2.2. Aspect Leaders and Collaborators
+
+
+
+#### 5.2.2.3. Sprint Backlog 2
+
+
+
+#### 5.2.2.4. Development Evidence for Sprint Review
+
+El incremento se desarrolló con GitFlow: una rama por sección, integración a `develop` mediante Pull Request con *Create a merge commit* y publicación desde `main` con la etiqueta `v1.0.0`. La tabla resume un commit representativo por rama; el historial completo está disponible en el repositorio.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
+| --- | --- | --- | --- | --- | --- |
+| Loadmatch-frontend-application | develop |  |  |  | /10/2026 |
+|  | feature/trips-and-documents-setup |  |  |  | /10/2026 |
+|  | feature/shipper-dashboard |  |  |  | /10/2026 |
+|  | feature/service-history |  |  |  | /10/2026 |
+|  | feature/search-available-loads |  |  |  | /10/2026 |
+|  | feature/publish-load-request |  |  |  | /10/2026 |
+|  | feature/project-setup-and-shared |  |  |  | /10/2026 |
+|  | feature/my-load-request |  |  |  | /10/2026 |
+|  | feature/load-tracking |  |  |  | /10/2026 |
+|  | feature/load-request-detail |  |  |  | /10/2026 |
+|  | feature/document-validation-status |  |  |  | /10/2026 |
+|  | feature/design-system-theme |  |  |  | /10/2026 |
+|  | feature/carrier-trips |  |  |  | /10/2026 |
+|  | feature/cancel-and-edit-load-request |  |  |  | /10/2026 |
+|  | feature/available-load-detail |  |  |  | /10/2026 |
+|  | feature/advanced-load-filters |  |  |  | /10/2026 |
+
+#### 5.2.2.5.
+
+
+

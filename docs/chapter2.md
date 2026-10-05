@@ -2,81 +2,151 @@
 
 ## 2.1. Competidores
 
+Para comprender el posicionamiento de **LoadMatch** dentro del mercado de transporte y logística, se analizaron soluciones que compiten directa o indirectamente con la propuesta de valor de la plataforma. El análisis considera servicios de transporte de carga, marketplaces logísticos y operadores de logística empresarial que presentan funcionalidades o modelos de negocio comparables.
+
+La selección considera a **inDrive Flete**, **CargaYa** y **Sharf** como referencias relevantes para el mercado peruano. Estas soluciones representan diferentes enfoques dentro del sector: intermediación digital de transporte, marketplaces especializados en carga y operadores logísticos integrales.
+
 ### Competidor 1: inDrive Flete
 
-* **Descripción:** Aplicación móvil que conecta directamente a personas y pequeñas empresas con conductores que ofrecen servicios de transporte de carga. Los usuarios pueden solicitar vehículos de diferentes tamaños según sus necesidades.
-* **Ventaja competitiva:** Permite negociar las tarifas directamente con los conductores antes del viaje. Esto ayuda a que los negocios encuentren precios más económicos frente a las opciones tradicionales.
-* **Público objetivo:** Emprendedores, comerciantes y público general que buscan un transporte de carga rápido y económico para situaciones puntuales.
-* **Estrategia de marketing:** Publicidad en redes sociales enfocada en el ahorro y en la libertad de proponer el precio del servicio, atrayendo tanto a clientes como a conductores independientes.
-* **Funciones principales:** Solicitud de transporte, negociación de tarifas mediante ofertas, seguimiento del vehículo en el mapa y comunicación con el conductor.
-* **Modelo de costos:** El cliente paga el servicio directamente al conductor. La aplicación retiene un porcentaje del pago total por cada viaje realizado.
-* **Distribución:** Disponible para descarga gratuita en las tiendas de aplicaciones móviles.
+* **Descripción:** inDrive es una plataforma global de movilidad y servicios urbanos que incluye una vertical dedicada al transporte de carga denominada **inDrive.Freight**. Dentro de este servicio, los transportistas pueden acceder a solicitudes de carga y seleccionar aquellas que se ajusten al tipo de vehículo que operan (inDrive, s. f.-a).
 
-### Competidor 2: Lalamove
+* **Ventaja competitiva:** Su modelo permite que usuarios y conductores participen directamente en la determinación de la tarifa del servicio, diferenciándose de modelos donde el precio es establecido únicamente mediante algoritmos. La plataforma también aprovecha la amplia presencia internacional y ecosistema tecnológico de inDrive.
 
-* **Descripción:** Plataforma logística que permite realizar entregas rápidas y transporte de carga dentro de la ciudad, ofreciendo desde motocicletas hasta camiones pequeños para negocios.
-* **Ventaja competitiva:** Destaca por la rapidez de su servicio, la posibilidad de hacer múltiples entregas en una misma ruta y su sistema automatizado para negocios que venden por internet.
-* **Público objetivo:** Pequeñas y medianas empresas, tiendas de comercio electrónico y restaurantes que necesitan enviar productos constantemente sin comprar vehículos propios.
-* **Estrategia de marketing:** Presencia fuerte en canales digitales, alianzas comerciales y beneficios especiales para empresas que usan el servicio con frecuencia.
-* **Funciones principales:** Cálculo automático de tarifas, rastreo del viaje en tiempo real, opciones adicionales para carga y descarga, y recarga de saldo empresarial.
-* **Modelo de costos:** La tarifa varía de forma automática dependiendo del tamaño del vehículo, la distancia y la demanda del momento.
-* **Distribución:** Cuenta con una aplicación móvil y un sitio web especialmente diseñado para la administración de las empresas.
+* **Público objetivo:** Usuarios, emprendedores y negocios que requieren trasladar mercancías y buscan contratar directamente servicios de transporte disponibles mediante una plataforma digital.
 
-### Competidor 3: Scharff
+* **Estrategia de marketing:** inDrive posiciona su propuesta alrededor de la libertad de elección y la negociación directa de precios. Además, durante 2025 lanzó en Perú funcionalidades específicas de entrega orientadas a negocios y pequeñas empresas (inDrive, 2025).
 
-* **Descripción:** Empresa logística tradicional peruana que cuenta con plataformas digitales para facilitar el recojo y entrega de mercadería a nivel corporativo y comercial.
-* **Ventaja competitiva:** Ofrece alta formalidad, facturación detallada, protección para la carga y un servicio logístico completo que va más allá del transporte.
-* **Público objetivo:** Empresas formales que buscan un proveedor confiable y seguro para mover su mercadería de manera continua, valorando el respaldo legal.
-* **Estrategia de marketing:** Relación directa con otras empresas, eventos informativos sobre logística y atención ejecutiva personalizada para mantener a sus clientes.
-* **Funciones principales:** Programación de recojos regulares, envíos rápidos a nivel nacional y herramientas digitales para que las empresas hagan el seguimiento de sus despachos.
-* **Modelo de costos:** Se basa en tarifas estandarizadas para negocios, las cuales suelen ser más elevadas debido a la garantía, los seguros y la formalidad del servicio.
-* **Distribución:** Plataforma web corporativa para que las empresas gestionen sus envíos y aplicaciones de soporte.
+* **Funciones principales:** Consulta de solicitudes de carga, selección de órdenes disponibles, filtrado según tipo de vehículo, descripción de la carga, negociación de tarifas, calificaciones de usuarios y servicios asociados de seguimiento y entrega.
+
+* **Modelo de costos:** El precio del transporte puede ser acordado entre las partes. La documentación oficial de inDrive.Freight indica además que se aplica una tarifa de servicio al transportista cuando una orden alcanza el estado de aceptación (inDrive, s. f.-a).
+
+* **Seguridad:** inDrive ha implementado procesos automáticos de verificación de identidad para conductores mediante tecnología de Truora, contrastando documentos e identidad con registros oficiales en Latinoamérica (inDrive, 2025).
+
+* **Distribución:** Aplicación móvil y ecosistema digital de inDrive.
+
+**Evidencia oficial de servicios:** La documentación oficial de inDrive incluye servicios orientados al transporte y entrega de mercancías. Asimismo, en julio de 2025 la compañía anunció oficialmente en Perú el lanzamiento de un servicio de entregas dirigido a negocios, evidenciando su participación activa dentro del mercado logístico peruano.
+
+<p align="center">
+  <img src="../assets/Chapter2/Graphics/Competitors/indrive-services.png"
+       alt="Evidencia del servicio de entregas para negocios de inDrive en Perú"
+       width="800"><br>
+  <i>Nota. inDrive anuncia oficialmente su servicio de entregas para negocios en Perú. Tomado de inDrive (2025).</i>
+</p>
+
+
+### Competidor 2: CargaYa
+
+* **Descripción:** CargaYa es una plataforma peruana especializada en conectar empresas generadoras de carga con transportistas disponibles. Su propuesta se encuentra directamente orientada al mercado de transporte de carga y a las principales rutas logísticas del Perú (CargaYa, s. f.).
+
+* **Ventaja competitiva:** Su especialización en transporte de carga peruano y su modelo de marketplace permiten que las empresas publiquen cargas y reciban propuestas de transportistas disponibles. La plataforma incorpora validación de identidad mediante RENIEC y SUNAT, negociación directa y reputación basada en servicios realizados.
+
+* **Público objetivo:** Empresas que necesitan transportar mercancía y transportistas independientes o propietarios de vehículos de carga que buscan oportunidades de viaje.
+
+* **Estrategia de marketing:** CargaYa comunica su propuesta alrededor de tres factores principales: encontrar carga disponible, reducir viajes de retorno vacíos y facilitar la conexión directa entre empresas y transportistas.
+
+* **Funciones principales:** Publicación de cargas, búsqueda de cargas por ruta, recepción de ofertas, negociación mediante chat, visualización de cargas en mapa y lista, transportistas verificados, sistema de calificaciones, carga consolidada y noticias sobre el estado de las vías.
+
+* **Modelo de costos:** De acuerdo con la información publicada actualmente por CargaYa, los transportistas tienen **0 % de comisión**, mientras que para empresas se promociona una comisión del **3 % en la primera carga y 5 % posteriormente** (CargaYa, s. f.).
+
+* **Seguridad:** La plataforma declara validar DNI y RUC mediante RENIEC y SUNAT y utiliza un sistema de reputación construido a partir de viajes completados.
+
+* **Distribución:** Plataforma digital accesible desde dispositivos móviles y computadoras mediante `cargaya.pe`.
+
+**Evidencia oficial de servicios:** El sitio oficial de CargaYa evidencia directamente su funcionamiento como marketplace logístico en Perú. La plataforma permite a las empresas publicar cargas y recibir ofertas de transportistas, mientras que los transportistas pueden localizar cargas disponibles por ruta. Asimismo, comunica la verificación de transportistas mediante RENIEC y SUNAT, negociación directa y mecanismos de trazabilidad.
+
+<p align="center">
+  <img src="../assets/Chapter2/Graphics/Competitors/cargaya-services.png"
+       alt="Servicios para empresas y transportistas ofrecidos por CargaYa"
+       width="800"><br>
+  <i>Nota. CargaYa conecta empresas generadoras de carga con transportistas verificados y ofrece herramientas para publicación, búsqueda y negociación de cargas. Tomado de CargaYa (s. f.).</i>
+</p>
+
+
+### Competidor 3: Sharf
+
+* **Descripción:** **Sharf, anteriormente denominada Scharff**, es una empresa logística peruana con más de cuatro décadas de trayectoria que ofrece servicios para personas, emprendedores y empresas. La compañía confirmó oficialmente el cambio de marca manteniendo sus operaciones y servicios (Sharf, s. f.-a).
+
+* **Ventaja competitiva:** Su principal diferenciación se encuentra en su infraestructura logística, experiencia operativa y capacidad para integrar diferentes etapas de la cadena logística dentro de una misma organización.
+
+* **Público objetivo:** Emprendedores, medianas y grandes empresas que requieren servicios logísticos formales, transporte de carga, almacenamiento, distribución o servicios especializados.
+
+* **Estrategia de marketing:** Sharf se posiciona como operador logístico integral, enfatizando cobertura nacional, experiencia, infraestructura, tecnología y soluciones personalizadas para empresas.
+
+* **Funciones principales:** Carga nacional e internacional, almacenamiento, distribución, última milla, logística inversa, planificación de rutas, seguimiento en tiempo real, evidencia de entrega e integración de sistemas mediante APIs (Sharf, s. f.-b).
+
+* **Modelo de costos:** Para las soluciones empresariales, Sharf trabaja mediante servicios adaptados a las necesidades de cada operación y contacto comercial para su cotización. Para determinados servicios dirigidos a personas y emprendedores también publica tarifas específicas.
+
+* **Distribución:** Red logística física y digital con operaciones a nivel nacional, centros logísticos, puntos de atención y plataformas de seguimiento.
+
+**Evidencia oficial de servicios:** La plataforma oficial de Sharf muestra servicios de envíos nacionales para Perú y soluciones logísticas orientadas a medianas y grandes empresas. Asimismo, la compañía comunica una trayectoria de más de 40 años en el sector y una operación logística de alcance nacional.
+
+<p align="center">
+  <img src="../assets/Chapter2/Graphics/Competitors/sharf-services.png"
+       alt="Servicios de envíos y soluciones logísticas ofrecidos por Sharf"
+       width="800"><br>
+  <i>Nota. Sharf ofrece envíos nacionales y soluciones logísticas para emprendedores, medianas y grandes empresas en Perú. Tomado de Sharf (s. f.).</i>
+</p>
+
+
 ### 2.1.1. Análisis competitivo
 
 **¿Por qué realizar este análisis?**
 
-Analizar a la competencia permite identificar sus estrategias, fortalezas y debilidades, lo que ayuda a **CargoLink Labs** a desarrollar mejores tácticas para el negocio. El objetivo es diferenciarse y competir de manera más efectiva en el mercado logístico peruano, detectando oportunidades de innovación y anticipando posibles amenazas del entorno para asegurar que la propuesta de **LoadMatch** entregue un valor único.
+El análisis competitivo permite identificar cómo distintas empresas abordan actualmente el transporte, la intermediación y la gestión logística. Para **CargoLink Labs**, este análisis permite reconocer funcionalidades ya existentes en el mercado, evitar basar la propuesta únicamente en características que los competidores ya ofrecen y encontrar oportunidades reales de diferenciación para **LoadMatch**.
 
-| Categoría | Atributo | LoadMatch | inDrive Flete | Lalamove | Scharff |
+A partir de la investigación realizada, se observa que funcionalidades como seguimiento, negociación, publicación de cargas y validación de usuarios ya se encuentran presentes en algunas soluciones. En consecuencia, la propuesta de LoadMatch debe diferenciarse mediante la integración coherente de estas capacidades dentro de una experiencia orientada específicamente a empresas y transportistas de carga formal.
+
+| Categoría | Atributo | LoadMatch | inDrive Flete | CargaYa | Sharf |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| | **Nombre** | **LoadMatch** | **inDrive Flete** | **Lalamove** | **Scharff** |
-| | **Logotipo** | <p align="center"><img src="../assets/Chapter2/Graphics/loadmatch_logo.png" alt="LoadMatch" width="300"></p> | <p align="center"><img src="../assets/Chapter2/Graphics/IndriveLOGO.png" alt="inDrive" width="300"></p> | <p align="center"><img src="../assets/Chapter2/Graphics/LalamoveLOGO.png" alt="Lalamove" width="300"></p> | <p align="center"><img src="../assets/Chapter2/Graphics/scharffLOGO.png" alt="Scharff" width="300"></p> |
-| **Perfil** | **Overview** | Plataforma web de transporte de carga diseñada para negocios y emprendedores. Conecta a empresas que necesitan mover mercadería con transportistas validados, garantizando seguridad y seguimiento del servicio. | Aplicación global que conecta a conductores independientes con usuarios para el traslado libre de carga urbana. | Plataforma de entregas inmediatas para particulares y negocios, utilizando diversos tipos de vehículos. | Solución logística de una empresa tradicional que ofrece recojo, entrega y servicios corporativos completos. |
-| | **Ventaja competitiva** | Exige documentos validados para choferes y vehículos, enfocándose netamente en brindar seguridad y trazabilidad al sector empresarial. | Precios económicos fijados mediante negociación directa con el conductor antes de iniciar el viaje. | Entregas inmediatas y posibilidad de hacer múltiples paradas en una sola ruta para distribuir mercadería. | Alta formalidad, facturación detallada, seguros para la carga y gran experiencia corporativa. |
-| **Plan de marketing** | **Mercado objetivo** | Pequeñas y medianas empresas con necesidades de transporte recurrentes que valoran la seguridad. | Público general y pequeños comerciantes que buscan fletes ocasionales y baratos. | Tiendas de comercio electrónico y negocios que requieren despachos ágiles de última milla. | Empresas formales de tamaño mediano y grande que necesitan un aliado logístico estable a largo plazo. |
-| | **Estrategias de marketing** | Acercamiento directo a asociaciones de emprendedores y campañas enfocadas en la confianza y seguridad del servicio. | Publicidad masiva en redes sociales promoviendo el ahorro al tener la libertad de "poner tu propio precio". | Fuerte presencia digital, cupones de descuento iniciales y beneficios económicos por uso frecuente de las empresas. | Ventas consultivas corporativas, eventos informativos sobre logística empresarial y trato personalizado. |
-| **Plan de producto** | **Productos y servicios** | Búsqueda y asignación de transportistas validados, seguimiento del viaje, sistema de calificaciones y gestión de reclamos. | Fletes con vehículos desde minivans hasta camiones y chat directo con el conductor asignado. | Envíos rápidos, opciones para ayuda en carga y descarga, y recargas de saldo para corporaciones. | Transporte nacional, almacenamiento, envíos rápidos y herramientas digitales para seguir los despachos. |
-| | **Precios y costos** | Se cobra una comisión sobre el precio del servicio finalizado, con opción a membresías para empresas de alta demanda. | Tarifas negociadas libremente entre el usuario y el conductor. La aplicación cobra una comisión al transportista. | Tarifas variables calculadas automáticamente por la plataforma según la distancia y el tamaño del vehículo. | Precios fijos para negocios bajo contrato corporativo, los cuales incluyen seguros y garantías. |
-| | **Canales de distribución** | Plataforma web diseñada para ser accesible desde computadoras de almacén y dispositivos móviles. | Aplicación móvil dominante disponible para Android y iOS. | Aplicación móvil y portal web empresarial especializado. | Plataforma web corporativa y aplicaciones móviles de soporte. |
-| **Análisis SWOT** | **Fortalezas** | Gran enfoque en la seguridad documental y diseño centrado en los requerimientos específicos de los negocios. | Enorme cantidad de conductores disponibles y reconocimiento masivo de la marca por el público. | Aplicación muy fácil de usar, disponibilidad las 24 horas y cálculo automático de rutas y tiempos. | Fuerte respaldo financiero, cumplimiento tributario e infraestructura logística real (almacenes físicos). |
-| | **Oportunidades** | El alto grado de informalidad actual genera una fuerte necesidad por alternativas digitales seguras para mover mercadería de valor. | Expansión de pequeños negocios informales que necesitan transportar productos con bajo presupuesto. | Crecimiento de las ventas por internet y la creciente exigencia de los clientes por recibir entregas en el mismo día. | Empresas medianas en crecimiento que buscan formalizar toda su cadena de distribución. |
-| | **Debilidades** | El desafío inicial de convencer a suficientes conductores para que pasen por el riguroso proceso de validación documental. | Pocos filtros de seguridad en el registro, lo que genera alta desconfianza de las empresas para encomendar mercadería costosa. | Precios altos en momentos de alta demanda y frecuente rotación de conductores independientes. | Procesos largos para afiliar nuevos clientes corporativos y poca agilidad para viajes de emergencia fuera de contrato. |
-| | **Amenazas** | El ingreso de plataformas internacionales similares al mercado peruano que decidan enfocarse también en negocios formales. | Aumento de regulaciones estatales para aplicaciones de transporte y reclamos públicos por incidentes de seguridad. | Guerra de precios si entran aplicaciones con más capital de inversión que decidan subsidiar los envíos. | Startups logísticas más ágiles y económicas que modernicen el transporte y les quiten clientes tradicionales. |
+| | **Nombre** | **LoadMatch** | **inDrive Flete** | **CargaYa** | **Sharf** |
+| | **Logotipo** | <p align="center"><img src="../assets/Chapter2/Graphics/loadmatch_logo.png" alt="LoadMatch" width="180"></p> | <p align="center"><img src="../assets/Chapter2/Graphics/IndriveLOGO.png" alt="inDrive Flete" width="180"></p> | <p align="center"><img src="../assets/Chapter2/Graphics/CargaYaLOGO.png" alt="CargaYa" width="180"></p> | <p align="center"><img src="../assets/Chapter2/Graphics/scharffLOGO.png" alt="Sharf" width="180"></p> |
+| **Perfil** | **Overview** | Marketplace digital orientado a conectar empresas que requieren transportar carga con transportistas y vehículos validados. | Vertical de carga perteneciente al ecosistema global de movilidad de inDrive. | Marketplace peruano especializado en conectar empresas generadoras de carga y transportistas. | Operador logístico peruano integral, anteriormente denominado Scharff. |
+| | **Ventaja competitiva** | Integración de matching, validación documental, seguimiento y gestión operativa para transporte empresarial. | Amplio ecosistema tecnológico y negociación directa de tarifas entre participantes. | Especialización directa en transporte de carga peruano, validación RENIEC/SUNAT y negociación directa. | Infraestructura logística, cobertura, experiencia y capacidad de gestionar diferentes etapas de la cadena logística. |
+| **Plan de marketing** | **Mercado objetivo** | MIPYME y empresas con necesidades de transporte, junto con transportistas independientes y pequeñas flotas formales. | Usuarios, emprendedores y negocios que requieren servicios de transporte disponibles mediante una aplicación. | Empresas generadoras de carga y transportistas que operan rutas nacionales del Perú. | Emprendedores, medianas y grandes empresas con necesidades logísticas y de distribución. |
+| | **Estrategia de marketing** | Confianza, formalización, transparencia operativa y conexión directa entre oferta y demanda de carga. | Libertad de elección y negociación directa del precio. | Disponibilidad de cargas, reducción de retornos vacíos, negociación directa y comunidad logística peruana. | Cobertura nacional, infraestructura, tecnología y soluciones logísticas integrales. |
+| **Plan de producto** | **Productos y servicios** | Publicación de solicitudes de carga, matching, validación de transportistas y vehículos, seguimiento, historial y calificaciones. | Solicitudes de carga, selección de órdenes, negociación, diferentes vehículos y reputación mediante calificaciones. | Publicación y búsqueda de cargas, ofertas, chat, verificación, reputación, carga consolidada y noticias de la vía. | Carga nacional e internacional, almacenamiento, distribución, última milla, tracking y servicios logísticos integrales. |
+| | **Precios y costos** | Publicar solicitudes es gratuito. El modelo contempla una comisión asociada al servicio confirmado/completado, sin planes de membresía en el alcance actual. | Tarifa negociada entre las partes y tarifa de servicio asociada a la orden aceptada. | Transportistas: 0 % de comisión. Empresas: promoción de 3 % en primera carga y 5 % posteriormente, según información publicada actualmente. | Tarifas o cotizaciones según el tipo y alcance de la operación logística contratada. |
+| | **Canales de distribución** | Landing Page y Web Application responsive. | Aplicación móvil y ecosistema digital inDrive. | Plataforma web accesible desde dispositivos móviles y computadoras. | Red física de distribución y plataformas digitales de seguimiento y gestión. |
+| **Análisis SWOT** | **Fortalezas** | Especialización en necesidades de empresas y transportistas de carga formal, con énfasis en validación y trazabilidad. | Escala internacional, reconocimiento de marca y modelo flexible de negociación. | Enfoque específico en transporte de carga peruano y propuesta muy cercana a las necesidades de empresas y transportistas locales. | Experiencia, infraestructura física, cobertura nacional y amplitud de servicios logísticos. |
+| | **Oportunidades** | Digitalización de MIPYME, formalización del transporte y necesidad de conectar capacidad disponible con demanda empresarial. | Expansión de servicios empresariales y de carga dentro de su ecosistema actual. | Crecimiento del marketplace y de su red de empresas y transportistas dentro del Perú. | Crecimiento del comercio electrónico, tercerización logística y automatización de operaciones empresariales. |
+| | **Debilidades / limitaciones relativas al segmento analizado** | Necesidad inicial de construir una masa crítica suficiente de empresas y transportistas. | Su ecosistema atiende múltiples verticales y no se encuentra dedicado exclusivamente al flujo B2B de carga empresarial que plantea LoadMatch. | Su similitud funcional con LoadMatch obliga a diferenciar la propuesta mediante experiencia, matching, gestión empresarial y profundidad de validación. | Su modelo corresponde a un operador logístico integral y no a un marketplace abierto de matching directo entre empresas y transportistas independientes. |
+| | **Amenazas para LoadMatch** | — | Puede ampliar sus verticales de carga y servicios empresariales aprovechando su escala y reconocimiento. | Es actualmente uno de los competidores más cercanos a la propuesta de LoadMatch debido a su enfoque local y funcionalidades similares. | Su infraestructura y reputación pueden atraer a empresas que prefieren tercerizar integralmente su logística. |
+| **Evidencia** | **Servicios comprobados** | Propuesta definida por CargoLink Labs. | Servicio de entregas para negocios oficialmente anunciado en Perú. | Marketplace activo para publicación de cargas y transportistas verificados. | Envíos nacionales y soluciones logísticas 360° para empresas. |
 
-**Nota:** Análisis competitivo de LoadMatch en comparación con las principales soluciones del mercado logístico local.
+**Nota.** Elaboración propia a partir de información oficial publicada por inDrive, CargaYa y Sharf. Las capturas presentadas en la sección 2.1 evidencian la oferta real de servicios de cada competidor.
 
 
 ### 2.1.2. Estrategias y tácticas frente a competidores
 
-**LoadMatch** plantea estrategias de diferenciación frente a cada competidor identificado. Estas estrategias se formulan para afrontar sus fortalezas y aprovechar sus debilidades, considerando además el contexto de oportunidades y amenazas actuales en el sector de transporte logístico.
+**LoadMatch** plantea su estrategia competitiva a partir de las capacidades observadas en las soluciones analizadas. Debido a que varias funcionalidades inicialmente consideradas diferenciadoras —como seguimiento, reputación, negociación o verificación— ya existen en otros productos, la diferenciación debe provenir de cómo estas capacidades se integran en una experiencia especializada para el transporte empresarial de carga.
 
 #### Frente a inDrive Flete
 
-- **Aprovechando su debilidad (baja confianza):** inDrive tiene pocos filtros de seguridad, lo que genera desconfianza al momento de encomendar carga de alto valor. Nuestra táctica principal es exigir y validar documentos formales (SOAT, revisión técnica, antecedentes) para garantizar seguridad total, posicionándonos como la opción confiable para las empresas.
-- **Afrontando su fortaleza (gran cantidad de conductores):** para competir contra su masiva base de usuarios, nos enfocaremos estratégicamente en atraer primero a asociaciones de transportistas y ofrecerles clientes seguros y recurrentes (empresas), en lugar de viajes esporádicos.
-- **Contexto de oportunidades y amenazas:** aprovecharemos la oportunidad que brinda la alta informalidad del mercado para destacar como una solución formal. De esta manera, nos anticipamos a la amenaza de posibles regulaciones estatales sobre aplicaciones de transporte, manteniendo un riguroso cumplimiento normativo desde el inicio.
+* **Diferenciación por especialización:** Mientras inDrive forma parte de un ecosistema amplio de movilidad y servicios, LoadMatch busca especializar su experiencia alrededor del transporte empresarial de carga, utilizando información sobre vehículos, documentación, rutas y requerimientos operativos específicos.
 
-#### Frente a Lalamove
+* **Aprovechamiento de la negociación flexible:** La negociación directa demuestra que los usuarios valoran tener participación en la definición de condiciones económicas. LoadMatch puede mantener transparencia en las condiciones del servicio sin depender únicamente de una tarifa automática.
 
-- **Aprovechando su debilidad (asignación automática y precios dinámicos):** Lalamove impone precios que suben con la demanda y asigna conductores al azar. Nosotros permitiremos que la empresa elija a su transportista ideal basándose en su historial de calificaciones, fomentando relaciones de confianza.
-- **Afrontando su fortaleza (rapidez y tecnología madura):** frente a su eficiente sistema de entregas inmediatas, nuestra estrategia no es competir en envíos pequeños de última milla, sino especializarnos exclusivamente en cargas más pesadas y movimientos entre proveedores, donde el cuidado de la mercadería vale más que la simple inmediatez.
-- **Contexto de oportunidades y amenazas:** el constante crecimiento de las ventas por internet es una gran oportunidad que capitalizaremos ofreciendo transporte seguro para el abastecimiento de estas tiendas. Al competir por confianza empresarial y no por volumen masivo, nos protegemos de la amenaza de guerras de precios impulsadas por aplicaciones con mayor capital.
+* **Confianza como proceso integral:** Debido a que inDrive también cuenta con mecanismos de verificación, LoadMatch no debe plantear la seguridad únicamente como “verificar identidad”. Su propuesta debe combinar identidad, documentación del vehículo, estado de acreditaciones, historial del servicio y reputación dentro del contexto logístico.
 
-#### Frente a Scharff
 
-- **Aprovechando su debilidad (rigidez corporativa):** los operadores tradicionales exigen contratos largos y procesos de afiliación lentos. Nuestra táctica es ofrecer una plataforma ágil donde cualquier negocio pueda registrarse y solicitar un camión formal en cuestión de minutos, eliminando la burocracia.
-- **Afrontando su fortaleza (infraestructura física y formalidad):** en lugar de intentar construir almacenes propios, nuestro modelo cien por ciento digital y sin flota nos permite operar con mucha mayor agilidad y menores costos, brindando al mismo tiempo la emisión de facturas y el respaldo formal que la empresa necesita.
-- **Contexto de oportunidades y amenazas:** dirigiremos nuestros esfuerzos hacia las pequeñas y medianas empresas que buscan formalizar su cadena de distribución pero no tienen el presupuesto para un gran operador logístico. Este enfoque directo en los emprendedores mitiga la amenaza de que otros operadores tradicionales intenten digitalizarse en el futuro.
+#### Frente a CargaYa
+
+* **Competencia directa:** CargaYa constituye actualmente la referencia más cercana a LoadMatch, ya que atiende los mismos dos grandes actores: empresas generadoras de carga y transportistas.
+
+* **Diferenciación mediante profundidad operativa:** Debido a que CargaYa ya ofrece publicación de cargas, negociación, verificación y reputación, LoadMatch deberá diferenciarse mediante una experiencia de gestión empresarial más profunda, incluyendo compatibilidad entre requerimientos de carga y capacidad del vehículo, gestión documental, seguimiento operacional e historial consolidado del servicio.
+
+* **Matching orientado a compatibilidad:** La propuesta de LoadMatch puede concentrarse en reducir el esfuerzo requerido para encontrar un transportista compatible con las características particulares de una carga, en lugar de limitar la experiencia a publicar una solicitud y esperar propuestas.
+
+* **Confianza bilateral:** LoadMatch busca que tanto la empresa como el transportista puedan evaluar a su contraparte utilizando información verificable e historial de operaciones, respondiendo a la desconfianza detectada en ambos segmentos durante las entrevistas.
+
+
+#### Frente a Sharf
+
+* **Marketplace frente a operador logístico:** Sharf ofrece una solución logística integral respaldada por infraestructura propia y una extensa red de operación. LoadMatch no busca replicar esa infraestructura, sino facilitar que empresas y transportistas independientes puedan encontrarse y coordinar directamente dentro de un entorno digital.
+
+* **Accesibilidad para MIPYME y pequeños transportistas:** LoadMatch puede concentrarse en organizaciones que necesitan flexibilidad para contratar transporte según demanda, así como transportistas independientes y pequeñas flotas que desean acceder a nuevas oportunidades.
+
+* **Uso eficiente de un modelo digital:** En lugar de competir directamente con la infraestructura de un operador logístico consolidado, LoadMatch busca utilizar tecnología de intermediación, matching y seguimiento para reducir la fricción existente entre oferta y demanda de transporte.
 
 ## 2.2. Entrevistas
 
@@ -121,7 +191,7 @@ Para adoptar una nueva plataforma digital, exige conductores con antecedentes li
 | **Nombres y Apellidos** | Ronald Cortez Joseli |
 | **Edad** | 26 |
 | **Distrito** | San Martin de Porres, Lima, Perú |
-| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310342_upc_edu_pe/IQBAzfO4REFpQLwTj6NXeMnpAfz8bK1FQLdoZK5pQOoizkU?e=kh12X0 |
+| **Enlace al video (Microsoft Stream)** | https://shorturl.at/1purl |
 | **Timing de inicio y duración** | Inicio: 00:02 - Duración: 6:37 minutos |
 | **Evidencia fotográfica** | <img src="../assets/Chapter2/Interviews/LoadMatch-Trabajador2.png" alt="Evidencia Entrevista 2" width="300"> |
 
@@ -158,20 +228,21 @@ Para que considere utilizar una solución como LoadMatch, la seguridad sería un
 
 | Campo | Detalle |
 | :--- | :--- |
-| **Nombres y Apellidos** | Mateo Ignacio Vargas Huamán |
-| **Edad** | 26 años |
-| **Distrito** | San Juan de Lurigancho, Lima, Perú |
-| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323551_upc_edu_pe/IQB202QxElaeSbRKuQOrZ3XgARvfvQPkIKKUwLtaRsqauuE?e=FRdDfF&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
-| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 6:41 minutos |
-| **Evidencia fotográfica** | <img src="../assets/Chapter2/Interviews/Imagensegmento1-crivas.jpeg" alt="Evidencia Entrevista 4" width="300"> |
+| **Nombres y Apellidos** | Carmen Rosa Rojas |
+| **Edad** | 41 años |
+| **Distrito** | Los Olivos, Lima, Perú |
+| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323551_upc_edu_pe/IQDws6MfBH1bRqYTab-dHVruAU666AyoUz-YM2iI_pKQfb0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=w2ExaE |
+| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 6:22 minutos |
+| **Evidencia fotográfica** | <img src="../assets/Chapter2/Interviews/Loadmathc-Transportista.png" alt="Evidencia Entrevista 4" width="300"> |
 
 **Resumen de la entrevista:**
 
-El entrevistado es copiloto y administrador operativo del negocio de transporte de carga familiar. Es analítico, nativo digital y pragmático, actuando como puente entre la "vieja escuela" de su padre y la modernización del rubro. Usa su smartphone como herramienta principal para todo el día a día (WhatsApp, Waze, Yape/Plin, GPS) y reserva la laptop solo para trámites formales en casa.
+La entrevistada es transportista y administradora de su propio camión de carga, con 12 años de experiencia en el rubro tras iniciarse ayudando a su padre. Se describe como una persona práctica, trabajadora y bastante desconfiada, una actitud preventiva que ha adoptado debido a la inseguridad en las calles. Utiliza su smartphone como herramienta principal para el día a día (GPS, WhatsApp para ubicaciones y coordinación de cargas) y reserva la computadora exclusivamente en casa para trámites formales como facturación electrónica y gestión en la SUNAT.
 
-Su objetivo principal es dejar de depender de intermediarios informales, conseguir contratos directos con empresas medianas para tener un flujo de caja predecible y renovar su unidad. Su mayor frustración es la desconfianza de las empresas por la mala fama general del sector, los pagos a 60-90 días, los "clientes fantasma" y la competencia desleal del transporte informal.
+Su objetivo principal a corto plazo es liquidar el crédito de su vehículo actual, con la meta de adquirir a futuro una segunda unidad para contratar a un chofer de confianza y dedicarse de lleno a la gestión comercial. Sus mayores frustraciones son los pagos injustos que no contemplan los costos operativos (desgaste, peajes), la competencia desleal de la alta informalidad en el sector, y sobre todo, la inseguridad ciudadana (sufrió un asalto y robo de carga hace tres años). También padece la incertidumbre de los pagos atrasados o estafas al contactar clientes por grupos de Facebook o WhatsApp.
 
-Para adoptar una nueva plataforma digital, está totalmente dispuesto a pasar por un proceso estricto de validación documental. Exige que la plataforma le otorgue un distintivo visible de "Transportista Verificado" o "Socio Logístico Confiable", ya que considera que esta validación es su mejor argumento de venta para diferenciarse del informal y ganar la confianza de clientes empresariales.
+Para adoptar una nueva plataforma o red, está totalmente dispuesta a pasar por un proceso estricto de validación documental (antecedentes policiales, SOAT, revisión técnica). Considera que entregar esta documentación vale la pena si el sistema le garantiza operar en un entorno seguro, filtrando y conectándola únicamente con empresas formales que cumplan con los pagos de manera completa y puntual.
+
 
 ---
 
@@ -200,20 +271,20 @@ El señor Sifuentes expresó su interés en una aplicación como la nuestra, sie
 
 | Campo | Detalle |
 | :--- | :--- |
-| **Nombres y Apellidos** | Luciano Mateo Espinoza Vargas |
-| **Edad** | 25 años |
-| **Distrito** | Puente Piedra, Lima, Perú |
-| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323551_upc_edu_pe/IQCXMP7YhDGBRIpNEYDMTaPxARBXZBXzhvbS1rtrUGrfBIA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=wCHiu7 |
-| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 6:50 minutos |
-| **Evidencia fotográfica** | <img src="../assets/Chapter2/Interviews/Imagensegmento1Luciano-crivas.jpeg" alt="Evidencia Entrevista 6" width="300"> |
+| **Nombres y Apellidos** | Carlos Mendoza |
+| **Edad** | 37 años |
+| **Distrito** | Ate Vitarte, Lima, Perú |
+| **Enlace al video (Microsoft Stream)** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323551_upc_edu_pe/IQBOLkTZ-v24R5LzorknIiK-Ab79EzX5Oq-S2gDvYycx5KQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=4Wq3cj |
+| **Timing de inicio y duración** | Inicio: 00:00 - Duración: 5:15 minutos |
+| **Evidencia fotográfica** | <img src="../assets/Chapter2/Interviews/Captura de pantalla 2026-10-01 123706.png" alt="Evidencia Entrevista Carlos" width="300"> |
 
 **Resumen de la entrevista:**
 
-El entrevistado es un joven de 25 años que gestiona la flota de 3 camiones del negocio familiar. Es analítico, nativo digital y actúa como el agente de cambio frente a la "vieja escuela" de su padre. Utiliza su smartphone como herramienta central de gestión y está harto de la ineficiencia de los canales actuales.
+El entrevistado es un transportista independiente y dueño de su propio camión de carga, con 10 años de experiencia en el rubro tras iniciar como estibador y copiloto. Se describe como un perfil práctico, directo y muy desconfiado, una actitud que considera vital para sobrevivir a la inseguridad y a los malos clientes. Utiliza su smartphone como herramienta principal y exclusiva durante el día a día (Waze, WhatsApp, ubicación en tiempo real), apoyándose ocasionalmente en su esposa y una laptop en casa para temas puntuales de facturación y SUNAT.
 
-Sus principales pain points son la competencia desleal de la informalidad (que deprime los precios), los pagos a 60-90 días de las empresas que asfixian su capital de trabajo, y la pérdida de dinero por "horas de espera" no remuneradas en los almacenes.
+Su objetivo principal a corto plazo es cancelar el préstamo de su vehículo actual, con miras a adquirir un furgón más grande o una segunda unidad para dedicarse de lleno a la gestión comercial y administración de contratos. Su mayor frustración es la competencia desleal de transportistas informales que tiran los precios al piso, los clientes que retrasan pagos a 30 o 60 días, y la constante amenaza de la delincuencia al transitar o cargar en zonas peligrosas.
 
-Frente a la propuesta, muestra una receptividad entusiasta (10/10). Ve la validación documental estricta no como un trámite, sino como su principal ventaja competitiva. Está dispuesto a someterse a filtros rigurosos si la plataforma le otorga un "Sello de Verificación" que le permita acceder a una red de clientes empresariales, diferenciándose así del transporte informal.
+Para adoptar una nueva plataforma digital, está completamente dispuesto a someterse a un proceso estricto de validación documental (antecedentes policiales, SOAT, revisión técnica, brevete). Considera que entregar esta documentación es un requisito necesario y justo si el sistema le garantiza un distintivo de confianza y, sobre todo, lo conecta únicamente con empresas serias que aseguren depósitos puntuales y operaciones seguras.
 
 ---
 
