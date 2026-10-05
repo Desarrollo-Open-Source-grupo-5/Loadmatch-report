@@ -557,5 +557,19 @@ El incremento se desarrolló con GitFlow: una rama por sección, integración a 
 
 #### 5.2.2.5.
 
+#### 5.2.2.8. Team Collaboration Insights during Sprint
 
+De forma similar al landing page de la empresa, el frontend de nuestra aplicación en el repositorio se dividió en ramas por sección, lo que permitió trabajar en paralelo y registrar el aporte de cada integrante. Las ramas denominadas como `feature/` se integraron a `develop` mediante Pull Requests, siempre priorizando que no existan errores o conflictos a lo hora de combinarlos entre sí.
+
+| Integrante | GitHub | Ramas principales | Commits (sin merges) |
+| --- | --- | --- | --- |
+| Benigno Montero, Harold Fauskorp | Harold-11 |  |  |
+| Rivas Castillo, Christoper Steven | CODERT0PH |  |  |
+| Collantes Artola, Marco Antonio | Markollantes2307 | shipper-dashboard, advanced-load-filters, service-history | 8 |
+| Noriega Collado, Jean Fabio | dumbaskidd |  |  |
+| Simon Calderon, Ismael Sebastian | Mayel-dev |  |  |
+
+*Nota. Conteo de commits en `main` al 16/09/2026, sin incluir commits de merge.*
+
+**Historial de commits por integrante:**
 
