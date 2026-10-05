@@ -503,11 +503,11 @@ El Landing Page se dividió en ramas por sección, lo que permitió trabajar en 
 
 **Pull Requests:** #2 al #25 en https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page/pulls?q=is%3Apr+is%3Aclosed, integrados con *Create a merge commit*.
 
-### 5.2.1. Sprint 2
+### 5.2.2. Sprint 2
 
 El segundo sprint de trabajo del equipo de CargoLinks se centró principalmente en el desarrollo de una primera versión de la aplicación propuesta en los capítulos anteriores, usando las tecnologías vistas durante las clases del curso, así como modificar los items pendientes de la entrega anterior para conseguir un mejor resultado.
 
-#### 5.2.1.1. Sprint Planning 2
+#### 5.2.2.1. Sprint Planning 2
 
 | Sprint # | Sprint 2 |
 | --- | --- |
@@ -523,3 +523,39 @@ El segundo sprint de trabajo del equipo de CargoLinks se centró principalmente 
 | Sprint 2 Goal |  |
 | Sprint 2 Velocity |  |
 | Sum of Story Points |  puntos comprometidos: US = , US = , US = , US = , US = , US = , US = , US = , US = , US =  y US = . Completados: . |
+
+#### 5.2.2.2. Aspect Leaders and Collaborators
+
+
+
+#### 5.2.2.3. Sprint Backlog 2
+
+
+
+#### 5.2.2.4. Development Evidence for Sprint Review
+
+El incremento se desarrolló con GitFlow: una rama por sección, integración a `develop` mediante Pull Request con *Create a merge commit* y publicación desde `main` con la etiqueta `v1.0.0`. La tabla resume un commit representativo por rama; el historial completo está disponible en el repositorio.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
+| --- | --- | --- | --- | --- | --- |
+| Loadmatch-frontend-application | develop |  |  |  | /10/2026 |
+|  | feature/trips-and-documents-setup |  |  |  | /10/2026 |
+|  | feature/shipper-dashboard |  |  |  | /10/2026 |
+|  | feature/service-history |  |  |  | /10/2026 |
+|  | feature/search-available-loads |  |  |  | /10/2026 |
+|  | feature/publish-load-request |  |  |  | /10/2026 |
+|  | feature/project-setup-and-shared |  |  |  | /10/2026 |
+|  | feature/my-load-request |  |  |  | /10/2026 |
+|  | feature/load-tracking |  |  |  | /10/2026 |
+|  | feature/load-request-detail |  |  |  | /10/2026 |
+|  | feature/document-validation-status |  |  |  | /10/2026 |
+|  | feature/design-system-theme |  |  |  | /10/2026 |
+|  | feature/carrier-trips |  |  |  | /10/2026 |
+|  | feature/cancel-and-edit-load-request |  |  |  | /10/2026 |
+|  | feature/available-load-detail |  |  |  | /10/2026 |
+|  | feature/advanced-load-filters |  |  |  | /10/2026 |
+
+#### 5.2.2.5.
+
+
+
