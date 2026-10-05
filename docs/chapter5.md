@@ -502,3 +502,24 @@ El Landing Page se dividió en ramas por sección, lo que permitió trabajar en 
 </p>
 
 **Pull Requests:** #2 al #25 en https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page/pulls?q=is%3Apr+is%3Aclosed, integrados con *Create a merge commit*.
+
+### 5.2.1. Sprint 2
+
+El segundo sprint de trabajo del equipo de CargoLinks se centró principalmente en el desarrollo de una primera versión de la aplicación propuesta en los capítulos anteriores, usando las tecnologías vistas durante las clases del curso, así como modificar los items pendientes de la entrega anterior para conseguir un mejor resultado.
+
+#### 5.2.1.1. Sprint Planning 2
+
+| Sprint # | Sprint 2 |
+| --- | --- |
+| **Sprint Planning Background** | |
+| Date | 23/09/2026 |
+| Time | 08:30 p.m. |
+| Location | Google meet |
+| Prepared By | Christoper Steven Rivas Castillo |
+| Attendees (to planning meeting) | Noriega Collado, Jean Fabio<br>Simon Calderon, Ismael Sebastian<br>Collantes Artola, Marco Antonio<br>Benigno Montero, Harold Fauskorp<br>Rivas Castillo, Christoper Steven  |
+| Sprint 2 Review Summary |  |
+| Sprint 2 Retrospective Summary |  |
+| **Sprint Goal & User Stories** | |
+| Sprint 2 Goal |  |
+| Sprint 2 Velocity |  |
+| Sum of Story Points |  puntos comprometidos: US = , US = , US = , US = , US = , US = , US = , US = , US = , US =  y US = . Completados: . |
