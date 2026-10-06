@@ -119,7 +119,10 @@ Desarrollo del Capítulo V con la documentación y evidencias correspondientes a
 Implementación de la primera versión funcional de la Web Application de LoadMatch con Angular, organizada por bounded contexts y conectada a una API simulada mediante json-server.<br>
 Implementación de funcionalidades para publicación, consulta, edición y cancelación de solicitudes de carga; búsqueda y filtrado de fletes; consulta de detalles; dashboard de empresa; viajes del transportista; seguimiento de carga; historial de servicios y consulta del estado de validación documental.<br>
 Incorporación de internacionalización en inglés y español, aplicación del Design System y evidencias de desarrollo colaborativo mediante GitFlow, Pull Requests y Conventional Commits.<br>
-Actualización del Student Outcome correspondiente a TB1.
+Actualización del Student Outcome correspondiente a TB1.<br>
+Registro de 18 historias, 49 Story Points y 18 subtareas finalizadas del Sprint 2, con evidencias de Jira.<br>
+Configuración y despliegue de Vercel y API simulada en Render; capturas desktop y mobile, Contributors de ambos productos y anexos.<br>
+Video de demostración del Sprint 2 incorporado (4:38); video de exposición TB1 por incorporar.
 </td>
 </tr>
 </tbody>
@@ -139,8 +142,10 @@ Actualización del Student Outcome correspondiente a TB1.
 
 Para el desarrollo del **Project Report de LoadMatch**, el equipo utiliza el repositorio de documentación dentro de la organización del proyecto en GitHub. Esta sección presenta la evidencia acumulativa de colaboración correspondiente a **AV1 y TB1**, en coherencia con el Registro de Versiones del Informe.
 
-**Repositorio del informe del proyecto:** https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report
+**Repositorio del informe del proyecto:** [Loadmatch-report](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report)
 
+**Total de commits:** pendiente de verificar mediante las analíticas del repositorio; se elimina el valor provisional para no presentarlo como conteo confirmado.
+<br>
 **Autores contribuyentes:**
 
 - Noriega Collado, Jean Fabio (dumbaskidd)
@@ -217,6 +222,22 @@ El siguiente conteo considera los **commits individuales registrados en `develop
 La evidencia muestra participación de los cinco integrantes en la evolución del informe durante TB1. Los cambios realizados abarcan Requirements Elicitation & Analysis, Requirements Specification, Product Design y Product Implementation, permitiendo que la documentación evolucione junto con la implementación de la Web Application realizada durante el Sprint 2.
 
 El historial de GitHub, las ramas de trabajo y los Pull Requests permiten mantener trazabilidad entre los responsables, los artefactos modificados y su integración en la versión consolidada del Project Report.
+
+### TB1 — Actualización del informe y Sprint 2
+
+Esta revisión incorpora la documentación de la primera Web Application, la actualización de los accesos de la landing y la configuración del mock en producción. Se conserva la evidencia de AV1 y se añade el apartado 5.2.2, con el registro de alcance, responsables, commits, rutas implementadas y despliegues de Sprint 2. Las tres capturas de Jira aportadas por el equipo documentan 18 historias finalizadas y el cambio de compromiso de 22 a 49 puntos.
+
+La colaboración en el **informe** debe acreditarse de forma independiente de los aportes al código del frontend. Antes de entregar, cada integrante debe revisar y completar el texto de sus actividades y las evidencias que le corresponden. No se atribuyen commits de documentación de TB1 a un integrante mientras esos cambios no estén registrados y verificados en el repositorio del informe.
+
+| Evidencia de colaboración documental TB1 | Estado |
+| --- | --- |
+| Repositorio del informe y periodo | Loadmatch-report; entrega TB1, octubre de 2026. |
+| Actualización de capítulos y secciones | Sprint 2, configuración, Student Outcome, conclusiones y anexos preparados para revisión del equipo. |
+| Contribuciones por integrante al informe | Pendiente de completar con autoría real de commits y revisiones de TB1. |
+| Capturas de GitHub Contributors y commits | Pendiente de incorporar; no reutilizar las de AV1 como evidencia de TB1. |
+| Pull Requests de documentación | [Historial de PR del informe](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report/pulls?q=is%3Apr+is%3Aclosed); registrar los PR de esta actualización después de su integración. |
+
+Las evidencias de implementación de los cinco integrantes están en 5.2.2.8. Los conteos históricos de AV1 se conservan como antecedentes de esa entrega y deben contrastarse con sus capturas originales.
 
 
 <div style="page-break-before: always;"></div>

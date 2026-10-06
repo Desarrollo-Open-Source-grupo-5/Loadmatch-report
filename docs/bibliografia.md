@@ -1,5 +1,15 @@
 # Bibliografía
 
+Referencias de configuración utilizadas para documentar TB1 y Sprint 2:
+
+CargoLink Labs. (2026). *Sprint 2 - Web Application: historias, subtareas y cierre del sprint* [Tablero de Jira]. Atlassian. Consultado el 6 de octubre de 2026. https://upc-team-m57tll9j.atlassian.net/jira/software/projects/US/boards/2
+
+CargoLink Labs. (2026). *LoadMatch Frontend Application: configuración de Vercel y entorno de producción* [Código fuente]. GitHub. https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application
+
+CargoLink Labs. (2026). *LoadMatch Landing Page: enlaces de acceso a la Web Application* [Código fuente]. GitHub. https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page
+
+Universidad Peruana de Ciencias Aplicadas. (2026). *Desarrollo de Aplicaciones Open-Source (1ASI0729): Final project statement, versión 1.0* [Enunciado del proyecto].
+
 <hr>
 
 Angular. (s. f.). *Style guide*. https://angular.dev/style-guide
