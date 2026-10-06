@@ -19,7 +19,7 @@ NRC
 <br>
 **7729**
 <br>
-**Informe del Trabajo AV1**  
+**Informe del Trabajo TB1**  
 <br>
 Docente
 <br>
@@ -60,7 +60,7 @@ Proyecto
 
 **Período 202620**
 
-**Septiembre 2026**
+**Octubre 2026**
 
 </div>
 
@@ -100,6 +100,12 @@ Implementación y despliegue de la primera versión de la Landing Page de LoadMa
 Incorporación de evidencias de colaboración y Student Outcome de AV1.
 </td>
 </tr>
+<tr>
+<td align="center">1.1<br>(TB1 — preparación)</td>
+<td align="center">05/10/2026</td>
+<td>Equipo CargoLink Labs; responsables de revisión y aprobación por confirmar.</td>
+<td>Incorporación de Sprint 2 y sus ocho apartados; 18 historias y 49 Story Points documentados con capturas de Jira.<br>Registro de commits e integraciones del frontend y de la redirección de la landing.<br>Actualización de configuración de Vercel y API simulada en Render, índice, Student Outcome, conclusiones, bibliografía y anexos.<br>Datos de planificación confirmados por el equipo; capturas del backlog restante, landing local, inicio de la aplicación desplegada y raíz de la API incorporadas.<br>Consulta directa de Atlassian el 06/10/2026: sprint cerrado, 18 subtareas finalizadas, IDs y responsables registrados y estimaciones horarias no registradas; historias estimadas en Story Points.<br>Capturas de Contributors de landing y frontend, y enlace, duración (4:38) y captura del video de navegación incorporados.<br>Configuración y despliegue de Render incorporados: Settings, build, arranque de JSON Server y estado Live.<br>Exposición TB1 pendiente de incorporación. La ejecución se documenta con el video y las capturas disponibles; Vercel y Contributors de ambos productos ya están incluidos. Esta fila registra preparación documental; no acredita una release ya publicada.</td>
+</tr>
 </tbody>
 </table>
 
@@ -117,9 +123,9 @@ Incorporación de evidencias de colaboración y Student Outcome de AV1.
 
 Para el desarrollo del **Project Report de LoadMatch**, el equipo utiliza un repositorio dentro de la organización en GitHub. A continuación, se presenta la evidencia de colaboración correspondiente al **AV1**, en coherencia con el Registro de Versiones del Informe.
 
-**Repositorio del informe del proyecto:** [https://github.com/Launchpad-PE/LoadMatch-Report](https://github.com/Launchpad-PE/LoadMatch-Report)
+**Repositorio del informe del proyecto:** [Loadmatch-report](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report)
 
-**Total de commits:** 250 - 300 - 400
+**Total de commits:** pendiente de verificar mediante las analíticas del repositorio; se elimina el valor provisional para no presentarlo como conteo confirmado.
 <br>
 **Autores contribuyentes:**
 - Noriega Collado, Jean Fabio (dumbaskidd)  
@@ -159,6 +165,22 @@ Durante esta fase, el equipo elaboró el informe inicial, que incluyó los sigui
 ---
 
 La colaboración fue activa y equitativa, con aportes sustanciales de todos los integrantes en la redacción, organización y documentación del informe. Se destacó la integración de **assets/images** en cada rama de capítulo y la correcta gestión de Pull Requests como evidencia de trabajo colaborativo.
+
+### TB1 — Actualización del informe y Sprint 2
+
+Esta revisión incorpora la documentación de la primera Web Application, la actualización de los accesos de la landing y la configuración del mock en producción. Se conserva la evidencia de AV1 y se añade el apartado 5.2.2, con el registro de alcance, responsables, commits, rutas implementadas y despliegues de Sprint 2. Las tres capturas de Jira aportadas por el equipo documentan 18 historias finalizadas y el cambio de compromiso de 22 a 49 puntos.
+
+La colaboración en el **informe** debe acreditarse de forma independiente de los aportes al código del frontend. Antes de entregar, cada integrante debe revisar y completar el texto de sus actividades y las evidencias que le corresponden. No se atribuyen commits de documentación de TB1 a un integrante mientras esos cambios no estén registrados y verificados en el repositorio del informe.
+
+| Evidencia de colaboración documental TB1 | Estado |
+| --- | --- |
+| Repositorio del informe y periodo | Loadmatch-report; entrega TB1, octubre de 2026. |
+| Actualización de capítulos y secciones | Sprint 2, configuración, Student Outcome, conclusiones y anexos preparados para revisión del equipo. |
+| Contribuciones por integrante al informe | Pendiente de completar con autoría real de commits y revisiones de TB1. |
+| Capturas de GitHub Contributors y commits | Pendiente de incorporar; no reutilizar las de AV1 como evidencia de TB1. |
+| Pull Requests de documentación | [Historial de PR del informe](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report/pulls?q=is%3Apr+is%3Aclosed); registrar los PR de esta actualización después de su integración. |
+
+Las evidencias de implementación de los cinco integrantes están en 5.2.2.8. Los conteos históricos de AV1 se conservan como antecedentes de esa entrega y deben contrastarse con sus capturas originales.
 
 
 <div style="page-break-before: always;"></div>
@@ -254,6 +276,15 @@ La colaboración fue activa y equitativa, con aportes sustanciales de todos los 
       - [5.2.1.6. Services Documentation Evidence for Sprint Review](#5216-services-documentation-evidence-for-sprint-review)
       - [5.2.1.7. Software Deployment Evidence for Sprint Review](#5217-software-deployment-evidence-for-sprint-review)
       - [5.2.1.8. Team Collaboration Insights during Sprint](#5218-team-collaboration-insights-during-sprint)
+    - [5.2.2. Sprint 2](docs/chapter5.md#522-sprint-2)
+      - [5.2.2.1. Sprint Planning 2](docs/chapter5.md#5221-sprint-planning-2)
+      - [5.2.2.2. Aspect Leaders and Collaborators](docs/chapter5.md#5222-aspect-leaders-and-collaborators)
+      - [5.2.2.3. Sprint Backlog 2](docs/chapter5.md#5223-sprint-backlog-2)
+      - [5.2.2.4. Development Evidence for Sprint Review](docs/chapter5.md#5224-development-evidence-for-sprint-review)
+      - [5.2.2.5. Execution Evidence for Sprint Review](docs/chapter5.md#5225-execution-evidence-for-sprint-review)
+      - [5.2.2.6. Services Documentation Evidence for Sprint Review](docs/chapter5.md#5226-services-documentation-evidence-for-sprint-review)
+      - [5.2.2.7. Software Deployment Evidence for Sprint Review](docs/chapter5.md#5227-software-deployment-evidence-for-sprint-review)
+      - [5.2.2.8. Team Collaboration Insights during Sprint](docs/chapter5.md#5228-team-collaboration-insights-during-sprint)
 - [Conclusiones](#conclusiones)
 - [Bibliografía](#bibliografía)
 - [Anexos](#anexos)
@@ -268,6 +299,26 @@ La colaboración fue activa y equitativa, con aportes sustanciales de todos los 
 ## ABET – EAC – Student Outcome 3
 
 **Criterio: Capacidad de comunicarse efectivamente con un rango de audiencias.**
+
+### TB1 — Comunicación durante Sprint 2
+
+El incremento permite comunicar a empresas y transportistas el flujo principal de LoadMatch mediante una aplicación navegable. El cuadro relaciona las funcionalidades con situaciones de comunicación; cada integrante debe confirmar la intervención oral y escrita que realizó y añadir su evidencia. La existencia de un commit demuestra trabajo técnico, pero no prueba por sí sola una exposición oral.
+
+| Integrante | Comunicación oral: intervención a confirmar | Comunicación escrita vinculada con trabajo identificable |
+| --- | --- | --- |
+| Benigno Montero, Harold Fauskorp | Explicar al equipo y docente la base Angular, el mock y la búsqueda de fletes; al transportista, cómo consultar oportunidades compatibles. | Estructura, navegación, modelos y textos de búsqueda identificables en `a742387`, `a3d17b7`, `7fd8b57` y `09f3c27`; completar referencia a su aporte documental TB1. |
+| Noriega Collado, Jean Fabio | Explicar a empresas la publicación y consulta de solicitudes, y al equipo las validaciones y estados documentales. | Formulario, listado y textos bilingües, con commits `5b5078a`, `7319010`, `2c77a56` y `3aa26f7`; confirmar redacción/revisión del informe. |
+| Simon Calderon, Ismael Sebastian | Presentar el detalle y seguimiento a empresas, y explicar al equipo la integración y despliegue. | Vistas y traducciones de detalle y seguimiento (`ae2aee1`, `d366330`, `af8fa0f`), configuración de Vercel (`e9a5352`); añadir evidencia de explicación documental. |
+| Rivas Castillo, Christoper Steven | Explicar edición y cancelación a empresas y organización de viajes a transportistas, incluyendo restricciones. | Diálogos, formularios y textos de viajes/edición/cancelación (`230e6a1`, `cb95d33`, `3598ccb`, `daffa79`); confirmar aportes escritos al informe. |
+| Collantes Artola, Marco Antonio | Explicar dashboard e historial a cada segmento y justificar al equipo los criterios de filtrado. | Dashboard, filtros, historial y textos en/es (`57021dd`, `0902bc0`, `ab366db`, `7e4c776`); vincular con su documentación de TB1. |
+
+**Conclusión grupal TB1 — Comunicación oral:** la demostración debe adaptar el lenguaje a cada audiencia: tareas y resultados para usuarios, y arquitectura, contratos y límites del mock para equipo y docente. La confirmación de las intervenciones y el video de exposición permitirán acreditar las acciones orales realizadas.
+
+**Conclusión grupal TB1 — Comunicación escrita:** textos de interfaz, commits y documentación deben distinguir las historias funcionales de las claves Jira y las funciones implementadas de las integraciones futuras. El registro de 22 puntos iniciales, 27 añadidos y 49 finales permite explicar el alcance sin ocultar sus cambios. Los accesos comunes a `/home` y el uso de JSON Server deben expresarse con precisión para no atribuir autenticación o backend productivo al incremento.
+
+**Evidencia oral y revisión individual:** Link: pendiente de incorporación del video de exposición TB1 y de confirmación por cada integrante.
+
+### AV1 — Registro conservado
 
 El desarrollo de LoadMatch requiere comunicar el problema del transporte de mercadería, la propuesta de solución y las decisiones de ingeniería a diferentes audiencias. Con las empresas y los transportistas se emplea un lenguaje centrado en sus necesidades y actividades; con el equipo y el docente se utilizan requisitos, modelos y evidencias técnicas para explicar el diseño y el avance del producto.
 
