@@ -847,3 +847,30 @@ Los valores se transcriben de las tarjetas de Contributors aportadas por el equi
 La colaboración de los productos se documenta con las capturas de Contributors, los commits representativos y los enlaces a sus integraciones. Las imágenes históricas de Sprint 1 se conservan en su sección.
 
 Como oportunidad de mejora, el burndown y el registro de alcance muestran incorporación tardía de historias y cierres concentrados. El siguiente sprint debe registrar tareas y estimaciones antes de comprometerlas, mantener actualizado el avance de subtareas y reunir evidencias de ejecución y despliegue junto con la implementación.
+
+**Historial de commits por integrante:**
+
+*Desarrollado por: Jean Fabio Noriega Collado (dumbaskidd)*
+<p align="center">
+  <img src="../assets/images/Insights/Commits7.png" alt="Commits Jean" width="500">
+</p>
+
+*Desarrollado por: Ismael Sebastian Simon Calderon (Mayel-dev)*
+<p align="center">
+  <img src="../assets/images/Insights/Commits8.png" alt="Commits Ismael" width="500">
+</p>
+
+*Desarrollado por: Christoper Steven Rivas Castillo (CODERT0PH)*
+<p align="center">
+  <img src="../assets/images/Insights/Commits9.png" alt="Commits Christoper" width="500">
+</p>
+
+*Desarrollado por: Harold Fauskorp Benigno Montero (Harold-11)*
+<p align="center">
+  <img src="../assets/images/Insights/Commits6.png" alt="Commits Harold" width="500">
+</p>
+
+*Desarrollado por: Marco Antonio Collantes Artola (Markollantes2307)*
+<p align="center">
+  <img src="../assets/images/Insights/Commits10.png" alt="Commits Marco" width="500">
+</p>
