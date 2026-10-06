@@ -144,7 +144,7 @@ Para el desarrollo del **Project Report de LoadMatch**, el equipo utiliza el rep
 
 **Repositorio del informe del proyecto:** [Loadmatch-report](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report)
 
-**Total de commits:** pendiente de verificar mediante las analíticas del repositorio; se elimina el valor provisional para no presentarlo como conteo confirmado.
+**Commits visibles en Contributors del informe:** 290, suma de las tarjetas de los cinco integrantes en la captura aportada. Es un conteo acumulado del intervalo mostrado, no exclusivo de TB1 ni equivalente al total del historial Git con merges.
 <br>
 **Autores contribuyentes:**
 
@@ -216,7 +216,7 @@ El siguiente conteo considera los **commits individuales registrados en `develop
 | Simon Calderon, Ismael Sebastian | Mayel-dev | 6 | Actualización de entrevistas, análisis competitivo, incorporación de CargaYa y evidencias de competidores, además de ajustes de Requirements Specification. |
 | Collantes Artola, Marco Antonio | Markollantes2307 | 3 | Incorporación y actualización de la estructura y contenido correspondiente al Sprint 2 en el Capítulo V. |
 
-**Commits individuales registrados para TB1:** 34.  
+**Commits individuales registrados para TB1:** 34.
 **Commits del historial de TB1 incluyendo integraciones y merges:** 42.
 
 La evidencia muestra participación de los cinco integrantes en la evolución del informe durante TB1. Los cambios realizados abarcan Requirements Elicitation & Analysis, Requirements Specification, Product Design y Product Implementation, permitiendo que la documentación evolucione junto con la implementación de la Web Application realizada durante el Sprint 2.
@@ -227,15 +227,22 @@ El historial de GitHub, las ramas de trabajo y los Pull Requests permiten manten
 
 Esta revisión incorpora la documentación de la primera Web Application, la actualización de los accesos de la landing y la configuración del mock en producción. Se conserva la evidencia de AV1 y se añade el apartado 5.2.2, con el registro de alcance, responsables, commits, rutas implementadas y despliegues de Sprint 2. Las tres capturas de Jira aportadas por el equipo documentan 18 historias finalizadas y el cambio de compromiso de 22 a 49 puntos.
 
-La colaboración en el **informe** debe acreditarse de forma independiente de los aportes al código del frontend. Antes de entregar, cada integrante debe revisar y completar el texto de sus actividades y las evidencias que le corresponden. No se atribuyen commits de documentación de TB1 a un integrante mientras esos cambios no estén registrados y verificados en el repositorio del informe.
+La colaboración documental se acredita con el registro de aportes por integrante anterior y la siguiente captura del repositorio del informe, independiente de las capturas de los productos.
 
-| Evidencia de colaboración documental TB1 | Estado |
-| --- | --- |
-| Repositorio del informe y periodo | Loadmatch-report; entrega TB1, octubre de 2026. |
-| Actualización de capítulos y secciones | Sprint 2, configuración, Student Outcome, conclusiones y anexos preparados para revisión del equipo. |
-| Contribuciones por integrante al informe | Pendiente de completar con autoría real de commits y revisiones de TB1. |
-| Capturas de GitHub Contributors y commits | Pendiente de incorporar; no reutilizar las de AV1 como evidencia de TB1. |
-| Pull Requests de documentación | [Historial de PR del informe](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report/pulls?q=is%3Apr+is%3Aclosed); registrar los PR de esta actualización después de su integración. |
+![Contributors del informe con URL del repositorio visible](assets/images/sprint2/ReportContributorsWithUrl.png)
+
+*Figura. GitHub Contributors de `Loadmatch-report`. La captura incluye actividad anterior al Sprint 2; sus cifras acumuladas no sustituyen el conteo específico de TB1 indicado anteriormente.*
+
+| Usuario GitHub | Commits visibles en Contributors del informe |
+| --- | ---: |
+| Mayel-dev | 82 |
+| dumbaskidd | 70 |
+| CODERT0PH | 68 |
+| Harold-11 | 43 |
+| Markollantes2307 | 27 |
+| **Suma de las tarjetas** | **290** |
+
+**Trazabilidad:** [Contributors del informe](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report/graphs/contributors), [historial de commits](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report/commits/main/) y [Pull Requests de documentación](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report/pulls?q=is%3Apr+is%3Aclosed). La captura también se incorpora en el Anexo L.3.
 
 Las evidencias de implementación de los cinco integrantes están en 5.2.2.8. Los conteos históricos de AV1 se conservan como antecedentes de esa entrega y deben contrastarse con sus capturas originales.
 

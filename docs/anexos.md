@@ -268,7 +268,7 @@ Las capturas `RemainingBacklog1.png` y `RemainingBacklog2.png`, también integra
 
 *Figura. Estado Live, despliegue exitoso del commit `aafd95e` y duración de 49,3 segundos. La configuración final se describe en 5.2.2.7.*
 
-## Anexo L. GitHub Contributors de los productos
+## Anexo L. GitHub Contributors de los productos y del informe
 
 ### L.1. Landing Page
 
@@ -283,3 +283,11 @@ Las capturas `RemainingBacklog1.png` y `RemainingBacklog2.png`, también integra
 *Figura. Contributors de la Web Application; la URL visible identifica el repositorio `Loadmatch-frontend-application`.*
 
 Ambas capturas se incorporan también en 5.2.2.8. Sus gráficos incluyen semanas anteriores al Sprint 2; los conteos corresponden al intervalo visible y no se presentan como commits exclusivos del sprint ni como aportes al repositorio del informe.
+
+### L.3. Project Report
+
+![GitHub Contributors del informe con URL visible](../assets/images/sprint2/ReportContributorsWithUrl.png)
+
+*Figura. Contributors de `Loadmatch-report`, con la URL del repositorio visible. Las tarjetas muestran Mayel-dev: 82, dumbaskidd: 70, CODERT0PH: 68, Harold-11: 43 y Markollantes2307: 27 commits; su suma es 290. Son cifras acumuladas del intervalo mostrado, que incluye actividad anterior al Sprint 2, no commits exclusivos de TB1 ni un conteo del historial completo con merges.*
+
+La evidencia de colaboración documental y el registro de aportes por integrante se presentan en el README, en Project Report Collaboration Insights TB1.

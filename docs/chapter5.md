@@ -846,6 +846,8 @@ Los valores se transcriben de las tarjetas de Contributors aportadas por el equi
 
 La colaboración de los productos se documenta con las capturas de Contributors, los commits representativos y los enlaces a sus integraciones. Las imágenes históricas de Sprint 1 se conservan en su sección.
 
+La captura de Contributors del repositorio del **informe** se incorpora por separado en el README y en el Anexo L.3. Muestra aportes de los cinco integrantes y 290 commits acumulados en las tarjetas visibles; estas cifras no se presentan como commits exclusivos del Sprint 2.
+
 Como oportunidad de mejora, el burndown y el registro de alcance muestran incorporación tardía de historias y cierres concentrados. El siguiente sprint debe registrar tareas y estimaciones antes de comprometerlas, mantener actualizado el avance de subtareas y reunir evidencias de ejecución y despliegue junto con la implementación.
 
 **Historial de commits por integrante:**
