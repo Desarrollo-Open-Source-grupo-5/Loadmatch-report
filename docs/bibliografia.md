@@ -20,6 +20,8 @@ Brandolini, A. (s. f.). *Introducing EventStorming: An act of deliberate collect
 
 Brown, S. (s. f.). *The C4 model for visualising software architecture*. https://c4model.com/
 
+CargaYa. (s. f.). *Plataforma de carga en Perú — Encuentra cargas disponibles y transportistas verificados*. https://www.cargaya.pe/
+
 Conventional Commits. (s. f.). *Conventional Commits 1.0.0*. https://www.conventionalcommits.org/en/v1.0.0/
 
 EditorConfig. (s. f.). *EditorConfig*. https://editorconfig.org/
@@ -60,7 +62,9 @@ Preston-Werner, T. (s. f.). *Semantic Versioning 2.0.0*. https://semver.org/spec
 
 Schebrova, A. (2024, 20 de febrero). *How to build a customer empathy map: Example + template*. UXPressia. https://uxpressia.com/blog/empathy-map-free-template
 
-Sharf. (s. f.). *Servicios logísticos para empresas*. https://holasharf.com/servicios-logisticos-para-empresas/
+Sharf. (s. f.-a). *Scharff ahora es Sharf*. https://holasharf.com/scharff-ahora-es-sharf/
+
+Sharf. (s. f.-b). *Servicios logísticos para empresas*. https://holasharf.com/servicios-logisticos-para-empresas/
 
 Structurizr. (s. f.). *Structurizr documentation*. https://docs.structurizr.com/
 
