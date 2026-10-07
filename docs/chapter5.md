@@ -164,7 +164,7 @@ El equipo utilizará las siguientes fuentes como apoyo para definir y mantener s
 - **TypeScript:** https://www.typescriptlang.org/docs/handbook/intro.html.
 - **Angular:** https://angular.dev/style-guide.
 - **Java:** https://google.github.io/styleguide/javaguide.html, como referencia complementaria; para la indentación prevalece la regla de cuatro espacios del proyecto.
-- **Configuración de formato: EditorConfig** https://editorconfig.org/ **y Prettier**https://prettier.io/docs/.
+- **Configuración de formato:** EditorConfig https://editorconfig.org/ y Prettier https://prettier.io/docs/.
 - **Análisis estático de JavaScript y TypeScript: ESLint** https://eslint.org/docs/latest/ y https://typescript-eslint.io/.
 
 ### 5.1.4. Software Deployment Configuration
@@ -679,7 +679,7 @@ Las evidencias siguientes corresponden a commits públicos del frontend y la lan
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
 
-El incremento incorpora las vistas de empresa y transportista que se describen a continuación. Las rutas proceden del código frontend; esta relación orienta el recorrido del video y las capturas que deben añadirse. Una ruta implementada no acredita por sí sola que todos sus criterios de aceptación hayan sido ejecutados satisfactoriamente.
+El incremento incorpora las vistas de empresa y transportista que se describen a continuación. Las rutas proceden del código frontend; esta relación orienta el recorrido del video y las capturas que se presentan a continuación. Una ruta implementada no acredita por sí sola que todos sus criterios de aceptación hayan sido ejecutados satisfactoriamente.
 
 | Vista / ruta | Historias relacionadas | Recorrido a documentar |
 | --- | --- | --- |
