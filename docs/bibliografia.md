@@ -36,8 +36,6 @@ Gothelf, J., & Seiden, J. (2024). *Lean UX* (3.ª ed.). O’Reilly Media. https:
 
 inDrive. (2025, 1 de julio). *inDrive lanza su nuevo servicio de entregas para negocios y revela los principales hábitos logísticos en Perú*. https://blog.indrive.com/es-mx/article/indrive-lanza-su-nuevo-servicio-de-entregas-para-negocios-y-revela-los-principales-habitos-logisticos-en-peru
 
-Lalamove. (s. f.). *Soluciones logísticas para e-commerce y negocios*. https://www.lalamove.com/es-mx/empresa
-
 Mapbox. (s. f.). *Directions API*. Mapbox Documentation. https://docs.mapbox.com/api/navigation/directions/
 
 Mattos Lucero, J. K., Sotelo Alzamora, J. G., Lopez Hidalgo, M. A., & Bejar Malpartida, Y. (2024). *Plataforma digital de intermediación para la consolidación de carga* [Tesis de maestría, Universidad ESAN]. Repositorio Institucional ESAN. https://hdl.handle.net/20.500.12640/4245
