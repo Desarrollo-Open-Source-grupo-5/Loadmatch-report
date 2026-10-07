@@ -161,14 +161,20 @@ https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310342_upc_edu_pe/IQDWUFuR
 | Entorno de producción del frontend | https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/blob/main/src/environments/environment.ts |
 | Integraciones del frontend | https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/pulls?q=is%3Apr+is%3Aclosed |
 
-La API de Render es JSON Server y no se presenta como el backend definitivo. Los pasos, commits y evidencia pendiente están detallados en 5.2.2.6–5.2.2.8.
+La API de Render es JSON Server y no se presenta como el backend definitivo. Los pasos, commits y evidencias correspondientes están detallados en 5.2.2.6–5.2.2.8.
 
 ## Anexo I. Videos de Exposiciones
 
 **Exposición TB1**  
-**Link:** pendiente de incorporar el enlace de Microsoft Stream/Clipchamp.  
-**Duración:** pendiente de registrar; máximo 30 minutos según el enunciado.  
-**Captura:** pendiente de incorporar.
+**Link:** https://youtu.be/VTUocRSprT4  
+**Duración:** 17 minutos y 4 segundos.  
+**Captura:** se presenta a continuación.
+
+![Video de exposición TB1](../assets/images/sprint2/TB1Presentation.png)
+
+*Figura. Video de exposición correspondiente a la entrega TB1 de LoadMatch.*
+
+El video de exposición del hito y el recorrido de navegación del Sprint 2 corresponden a evidencias distintas.
 
 El video de exposición del hito y el recorrido de navegación de Sprint 2 son evidencias distintas.
 
