@@ -102,7 +102,7 @@ Incorporación de evidencias de colaboración y Student Outcome de AV1.
 </tr>
   <tr>
 <td align="center">2.0<br>(TB1)</td>
-<td align="center">05/10/2026</td>
+<td align="center">06/10/2026</td>
 <td>
 Noriega Collado, Jean Fabio<br>
 Rivas Castillo, Christoper Steven<br>
@@ -205,14 +205,14 @@ El siguiente conteo considera los **commits individuales registrados en `develop
 
 | **Integrante** | **Usuario GitHub** | **Commits individuales TB1** | **Principales aportes documentados** |
 | --- | --- | ---: | --- |
-| Benigno Montero, Harold Fauskorp | Harold-11 | 10 | Actualización de Requirements Specification, Product Backlog, diagramas C4, diagramas de clases, diseño de base de datos y artefactos de arquitectura. |
+| Benigno Montero, Harold Fauskorp | Harold-11 | 12 | Actualización de Requirements Specification, Product Backlog, diagramas C4, diagramas de clases, diseño de base de datos y artefactos de arquitectura. |
 | Rivas Castillo, Christoper Steven | CODERT0PH | 8 | Actualización de entrevistas, registros, evidencias y contenido relacionado con Requirements Elicitation & Analysis. |
 | Noriega Collado, Jean Fabio | dumbaskidd | 7 | Actualización de User Stories, Impact Mapping, estructura del Capítulo III y correcciones generales de documentación. |
-| Simon Calderon, Ismael Sebastian | Mayel-dev | 6 | Actualización de entrevistas, análisis competitivo, incorporación de CargaYa y evidencias de competidores, además de ajustes de Requirements Specification. |
-| Collantes Artola, Marco Antonio | Markollantes2307 | 3 | Incorporación y actualización de la estructura y contenido correspondiente al Sprint 2 en el Capítulo V. |
+| Simon Calderon, Ismael Sebastian | Mayel-dev | 8 | Actualización de entrevistas, análisis competitivo, incorporación de CargaYa, evidencias de competidores y ajustes generales de documentación para TB1. |
+| Collantes Artola, Marco Antonio | Markollantes2307 | 6 | Incorporación y actualización de la estructura y contenido correspondiente al Sprint 2 en el Capítulo V. |
 
-**Commits individuales registrados para TB1:** 34.  
-**Commits del historial de TB1 incluyendo integraciones y merges:** 42.
+**Commits individuales registrados para TB1:** 41.  
+**Commits del historial de TB1 incluyendo integraciones y merges:** 53.
 
 La evidencia muestra participación de los cinco integrantes en la evolución del informe durante TB1. Los cambios realizados abarcan Requirements Elicitation & Analysis, Requirements Specification, Product Design y Product Implementation, permitiendo que la documentación evolucione junto con la implementación de la Web Application realizada durante el Sprint 2.
 
