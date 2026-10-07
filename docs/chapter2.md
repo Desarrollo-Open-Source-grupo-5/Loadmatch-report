@@ -354,7 +354,7 @@ En esta sección se presentan las fichas de User Persona, construidas a partir d
 </p>
 
 ***Nota.*** Ficha que representa el arquetipo del Segmento 2. Expone su necesidad de conseguir viajes seguros y confiables, y su frustración por la informalidad, la inseguridad y los bajos márgenes en aplicaciones que no lo valoran.
-*(Pendiente - Ficha UXPressia)*
+
 
 ### 2.3.2. User Task Matrix
 
