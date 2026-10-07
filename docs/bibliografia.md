@@ -1,5 +1,15 @@
 # Bibliografía
 
+Referencias de configuración utilizadas para documentar TB1 y Sprint 2:
+
+CargoLink Labs. (2026). *Sprint 2 - Web Application: historias, subtareas y cierre del sprint* [Tablero de Jira]. Atlassian. Consultado el 6 de octubre de 2026. https://upc-team-m57tll9j.atlassian.net/jira/software/projects/US/boards/2
+
+CargoLink Labs. (2026). *LoadMatch Frontend Application: configuración de Vercel y entorno de producción* [Código fuente]. GitHub. https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application
+
+CargoLink Labs. (2026). *LoadMatch Landing Page: enlaces de acceso a la Web Application* [Código fuente]. GitHub. https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page
+
+Universidad Peruana de Ciencias Aplicadas. (2026). *Desarrollo de Aplicaciones Open-Source (1ASI0729): Final project statement, versión 1.0* [Enunciado del proyecto].
+
 <hr>
 
 Angular. (s. f.). *Style guide*. https://angular.dev/style-guide
@@ -9,6 +19,8 @@ Atlassian. (s. f.). *Jira Software*. https://www.atlassian.com/es/software/jira
 Brandolini, A. (s. f.). *Introducing EventStorming: An act of deliberate collective learning*. Leanpub. https://www.eventstorming.com/book/
 
 Brown, S. (s. f.). *The C4 model for visualising software architecture*. https://c4model.com/
+
+CargaYa. (s. f.). *Plataforma de carga en Perú — Encuentra cargas disponibles y transportistas verificados*. https://www.cargaya.pe/
 
 Conventional Commits. (s. f.). *Conventional Commits 1.0.0*. https://www.conventionalcommits.org/en/v1.0.0/
 
@@ -25,8 +37,6 @@ Google. (s. f.). *Google HTML/CSS Style Guide*. https://google.github.io/stylegu
 Gothelf, J., & Seiden, J. (2024). *Lean UX* (3.ª ed.). O’Reilly Media. https://www.oreilly.com/library/view/lean-ux-3a/9781098198886/
 
 inDrive. (2025, 1 de julio). *inDrive lanza su nuevo servicio de entregas para negocios y revela los principales hábitos logísticos en Perú*. https://blog.indrive.com/es-mx/article/indrive-lanza-su-nuevo-servicio-de-entregas-para-negocios-y-revela-los-principales-habitos-logisticos-en-peru
-
-Lalamove. (s. f.). *Soluciones logísticas para e-commerce y negocios*. https://www.lalamove.com/es-mx/empresa
 
 Mapbox. (s. f.). *Directions API*. Mapbox Documentation. https://docs.mapbox.com/api/navigation/directions/
 
@@ -52,7 +62,9 @@ Preston-Werner, T. (s. f.). *Semantic Versioning 2.0.0*. https://semver.org/spec
 
 Schebrova, A. (2024, 20 de febrero). *How to build a customer empathy map: Example + template*. UXPressia. https://uxpressia.com/blog/empathy-map-free-template
 
-Sharf. (s. f.). *Servicios logísticos para empresas*. https://holasharf.com/servicios-logisticos-para-empresas/
+Sharf. (s. f.-a). *Scharff ahora es Sharf*. https://holasharf.com/scharff-ahora-es-sharf/
+
+Sharf. (s. f.-b). *Servicios logísticos para empresas*. https://holasharf.com/servicios-logisticos-para-empresas/
 
 Structurizr. (s. f.). *Structurizr documentation*. https://docs.structurizr.com/
 
