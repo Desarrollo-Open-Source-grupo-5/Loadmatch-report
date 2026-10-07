@@ -166,9 +166,13 @@ La API de Render es JSON Server y no se presenta como el backend definitivo. Los
 ## Anexo I. Videos de Exposiciones
 
 **Exposición TB1**  
-**Link:** pendiente de incorporar el enlace de Microsoft Stream/Clipchamp.  
-**Duración:** pendiente de registrar; máximo 30 minutos según el enunciado.  
-**Captura:** pendiente de incorporar.
+**Link:** https://youtu.be/VTUocRSprT4  
+**Duración:**  17 minutos y 4 segundos, según la captura suministrada.  
+**Captura:** se presenta a continuación.
+
+![Video de exposición TB1](../assets/images/sprint2/TB1Presentation.png)
+
+*Figura. Video de exposición correspondiente a la entrega TB1 de LoadMatch.*
 
 El video de exposición del hito y el recorrido de navegación de Sprint 2 son evidencias distintas.
 
