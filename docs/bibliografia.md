@@ -20,6 +20,8 @@ Brandolini, A. (s. f.). *Introducing EventStorming: An act of deliberate collect
 
 Brown, S. (s. f.). *The C4 model for visualising software architecture*. https://c4model.com/
 
+CargaYa. (s. f.). *Plataforma de carga en Perú — Encuentra cargas disponibles y transportistas verificados*. https://www.cargaya.pe/
+
 Conventional Commits. (s. f.). *Conventional Commits 1.0.0*. https://www.conventionalcommits.org/en/v1.0.0/
 
 EditorConfig. (s. f.). *EditorConfig*. https://editorconfig.org/
@@ -35,8 +37,6 @@ Google. (s. f.). *Google HTML/CSS Style Guide*. https://google.github.io/stylegu
 Gothelf, J., & Seiden, J. (2024). *Lean UX* (3.ª ed.). O’Reilly Media. https://www.oreilly.com/library/view/lean-ux-3a/9781098198886/
 
 inDrive. (2025, 1 de julio). *inDrive lanza su nuevo servicio de entregas para negocios y revela los principales hábitos logísticos en Perú*. https://blog.indrive.com/es-mx/article/indrive-lanza-su-nuevo-servicio-de-entregas-para-negocios-y-revela-los-principales-habitos-logisticos-en-peru
-
-Lalamove. (s. f.). *Soluciones logísticas para e-commerce y negocios*. https://www.lalamove.com/es-mx/empresa
 
 Mapbox. (s. f.). *Directions API*. Mapbox Documentation. https://docs.mapbox.com/api/navigation/directions/
 
@@ -62,7 +62,9 @@ Preston-Werner, T. (s. f.). *Semantic Versioning 2.0.0*. https://semver.org/spec
 
 Schebrova, A. (2024, 20 de febrero). *How to build a customer empathy map: Example + template*. UXPressia. https://uxpressia.com/blog/empathy-map-free-template
 
-Sharf. (s. f.). *Servicios logísticos para empresas*. https://holasharf.com/servicios-logisticos-para-empresas/
+Sharf. (s. f.-a). *Scharff ahora es Sharf*. https://holasharf.com/scharff-ahora-es-sharf/
+
+Sharf. (s. f.-b). *Servicios logísticos para empresas*. https://holasharf.com/servicios-logisticos-para-empresas/
 
 Structurizr. (s. f.). *Structurizr documentation*. https://docs.structurizr.com/
 
