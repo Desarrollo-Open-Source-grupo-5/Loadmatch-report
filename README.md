@@ -142,7 +142,7 @@ Video de demostración del Sprint 2 incorporado (4:38); video de exposición TB1
 
 Para el desarrollo del **Project Report de LoadMatch**, el equipo utiliza el repositorio de documentación dentro de la organización del proyecto en GitHub. Esta sección presenta la evidencia acumulativa de colaboración correspondiente a **AV1 y TB1**, en coherencia con el Registro de Versiones del Informe.
 
-**Repositorio del informe del proyecto:** [Loadmatch-report](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report)
+**Repositorio del informe del proyecto:** Loadmatch-report: https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report
 
 **Commits visibles en Contributors del informe:** 290, suma de las tarjetas de los cinco integrantes en la captura aportada. Es un conteo acumulado del intervalo mostrado, no exclusivo de TB1 ni equivalente al total del historial Git con merges.
 <br>
@@ -242,7 +242,7 @@ La colaboración documental se acredita con el registro de aportes por integrant
 | Markollantes2307 | 27 |
 | **Suma de las tarjetas** | **290** |
 
-**Trazabilidad:** [Contributors del informe](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report/graphs/contributors), [historial de commits](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report/commits/main/) y [Pull Requests de documentación](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report/pulls?q=is%3Apr+is%3Aclosed). La captura también se incorpora en el Anexo L.3.
+**Trazabilidad:** Contributors del informe: https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report/graphs/contributors, historial de commits: https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report/commits/main/ y Pull Requests de documentación: https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report/pulls?q=is%3Apr+is%3Aclosed. La captura también se incorpora en el Anexo L.3.
 
 Las evidencias de implementación de los cinco integrantes están en 5.2.2.8. Los conteos históricos de AV1 se conservan como antecedentes de esa entrega y deben contrastarse con sus capturas originales.
 
@@ -355,6 +355,15 @@ Las evidencias de implementación de los cinco integrantes están en 5.2.2.8. Lo
       - [5.2.2.6. Services Documentation Evidence for Sprint Review](docs/chapter5.md#5226-services-documentation-evidence-for-sprint-review)
       - [5.2.2.7. Software Deployment Evidence for Sprint Review](docs/chapter5.md#5227-software-deployment-evidence-for-sprint-review)
       - [5.2.2.8. Team Collaboration Insights during Sprint](docs/chapter5.md#5228-team-collaboration-insights-during-sprint)
+    - [5.2.3. Sprint 3](docs/chapter5.md#523-sprint-3)
+      - [5.2.3.1. Sprint Planning 3](docs/chapter5.md#5231-sprint-planning-3)
+      - [5.2.3.2. Aspect Leaders and Collaborators](docs/chapter5.md#5232-aspect-leaders-and-collaborators)
+      - [5.2.3.3. Sprint Backlog 3](docs/chapter5.md#5233-sprint-backlog-3)
+      - [5.2.3.4. Development Evidence for Sprint Review](docs/chapter5.md#5234-development-evidence-for-sprint-review)
+      - [5.2.3.5. Execution Evidence for Sprint Review](docs/chapter5.md#5235-execution-evidence-for-sprint-review)
+      - [5.2.3.6. Services Documentation Evidence for Sprint Review](docs/chapter5.md#5236-services-documentation-evidence-for-sprint-review)
+      - [5.2.3.7. Software Deployment Evidence for Sprint Review](docs/chapter5.md#5237-software-deployment-evidence-for-sprint-review)
+      - [5.2.3.8. Team Collaboration Insights during Sprint](docs/chapter5.md#5238-team-collaboration-insights-during-sprint)
 
 - [Conclusiones](conclusiones.md#conclusiones)
 - [Bibliografía](docs/bibliografia.md#bibliografía)
