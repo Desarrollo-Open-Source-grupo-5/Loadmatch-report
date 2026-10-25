@@ -570,24 +570,24 @@ El backlog prioriza publicar y gestionar solicitudes para empresas y consultar o
 
 | User Story Id | Jira key | Story Title | Story Points | Assigned To (historia) | Status |
 | --- | --- | --- | ---: | --- | --- |
-| US28 | [US-32](https://upc-team-m57tll9j.atlassian.net/browse/US-32) | Visualización de videos del producto y del equipo | 2 | Ismael Simon (IS) | Finalizada |
-| US49 | [US-69](https://upc-team-m57tll9j.atlassian.net/browse/US-69) | Tema visual con los tokens del Design System | 2 | Jean Noriega (JC) | Finalizada |
-| US44 | [US-64](https://upc-team-m57tll9j.atlassian.net/browse/US-64) | Estructura del proyecto Angular por bounded context | 3 | Harold Benigno (HM) | Finalizada |
-| US45 | [US-65](https://upc-team-m57tll9j.atlassian.net/browse/US-65) | API simulada para el desarrollo del frontend | 3 | Harold Benigno (HM) | Finalizada |
-| US04 | [US-7](https://upc-team-m57tll9j.atlassian.net/browse/US-7) | Creación de solicitud de carga | 5 | Jean Noriega (JC) | Finalizada |
-| US37 | [US-57](https://upc-team-m57tll9j.atlassian.net/browse/US-57) | Listado de mis cargas | 2 | Jean Noriega (JC) | Finalizada |
-| US06 | [US-10](https://upc-team-m57tll9j.atlassian.net/browse/US-10) | Búsqueda de fletes disponibles | 5 | Harold Benigno (HM) | Finalizada |
-| US05 | [US-8](https://upc-team-m57tll9j.atlassian.net/browse/US-8) | Cancelación de solicitud | 2 | Christoper Rivas (CC) | Finalizada |
-| US38 | [US-58](https://upc-team-m57tll9j.atlassian.net/browse/US-58) | Edición de solicitud de carga | 2 | Christoper Rivas (CC) | Finalizada |
-| US42 | [US-62](https://upc-team-m57tll9j.atlassian.net/browse/US-62) | Datos del transportista asignado | 2 | Ismael Simon (IS) | Finalizada |
-| US40 | [US-60](https://upc-team-m57tll9j.atlassian.net/browse/US-60) | Detalle de un flete | 2 | Ismael Simon (IS) | Finalizada |
-| US48 | [US-68](https://upc-team-m57tll9j.atlassian.net/browse/US-68) | Internacionalización de la Web Application | 3 | Harold Benigno (HM) | Finalizada |
-| US36 | [US-56](https://upc-team-m57tll9j.atlassian.net/browse/US-56) | Dashboard de la empresa | 3 | Marco Collantes (MA) | Finalizada |
-| US39 | [US-59](https://upc-team-m57tll9j.atlassian.net/browse/US-59) | Filtros avanzados de búsqueda de fletes | 3 | Marco Collantes (MA) | Finalizada |
-| US11 | [US-16](https://upc-team-m57tll9j.atlassian.net/browse/US-16) | Historial de servicios | 2 | Marco Collantes (MA) | Finalizada |
-| US09 | [US-14](https://upc-team-m57tll9j.atlassian.net/browse/US-14) | Seguimiento de carga | 3 | Ismael Simon (IS) | Finalizada |
-| US35 | [US-55](https://upc-team-m57tll9j.atlassian.net/browse/US-55) | Consulta del estado de validación | 2 | Jean Noriega (JC) | Finalizada |
-| US41 | [US-61](https://upc-team-m57tll9j.atlassian.net/browse/US-61) | Mis viajes del transportista | 3 | Christoper Rivas (CC) | Finalizada |
+| US28 | US-32 | Visualización de videos del producto y del equipo | 2 | Ismael Simon (IS) | Finalizada |
+| US49 | US-69 | Tema visual con los tokens del Design System | 2 | Jean Noriega (JC) | Finalizada |
+| US44 | US-64 | Estructura del proyecto Angular por bounded context | 3 | Harold Benigno (HM) | Finalizada |
+| US45 | US-65 | API simulada para el desarrollo del frontend | 3 | Harold Benigno (HM) | Finalizada |
+| US04 | US-7 | Creación de solicitud de carga | 5 | Jean Noriega (JC) | Finalizada |
+| US37 | US-57 | Listado de mis cargas | 2 | Jean Noriega (JC) | Finalizada |
+| US06 | US-10 | Búsqueda de fletes disponibles | 5 | Harold Benigno (HM) | Finalizada |
+| US05 | US-8 | Cancelación de solicitud | 2 | Christoper Rivas (CC) | Finalizada |
+| US38 | US-58 | Edición de solicitud de carga | 2 | Christoper Rivas (CC) | Finalizada |
+| US42 | US-62 | Datos del transportista asignado | 2 | Ismael Simon (IS) | Finalizada |
+| US40 | US-60 | Detalle de un flete | 2 | Ismael Simon (IS) | Finalizada |
+| US48 | US-68 | Internacionalización de la Web Application | 3 | Harold Benigno (HM) | Finalizada |
+| US36 | US-56 | Dashboard de la empresa | 3 | Marco Collantes (MA) | Finalizada |
+| US39 | US-59 | Filtros avanzados de búsqueda de fletes | 3 | Marco Collantes (MA) | Finalizada |
+| US11 | US-16 | Historial de servicios | 2 | Marco Collantes (MA) | Finalizada |
+| US09 | US-14 | Seguimiento de carga | 3 | Ismael Simon (IS) | Finalizada |
+| US35 | US-55 | Consulta del estado de validación | 2 | Jean Noriega (JC) | Finalizada |
+| US41 | US-61 | Mis viajes del transportista | 3 | Christoper Rivas (CC) | Finalizada |
 
 **Subtareas del Sprint Backlog**
 
@@ -595,24 +595,24 @@ El backlog prioriza publicar y gestionar solicitudes para empresas y consultar o
 
 | User Story Id | Work Item/Task Id | Work Item/Task Title | Assigned To (subtarea) | Status |
 | --- | --- | --- | --- | --- |
-| US28 | T11 / [US-40](https://upc-team-m57tll9j.atlassian.net/browse/US-40) | Implementación de la sección de videos | Ismael Simon (IS) | Finalizada |
-| US49 | T14 / [US-79](https://upc-team-m57tll9j.atlassian.net/browse/US-79) | Configuración del tema de Angular Material con los tokens del Design System | Jean Noriega (JC) | Finalizada |
-| US44 | T12 / [US-77](https://upc-team-m57tll9j.atlassian.net/browse/US-77) | Inicialización del proyecto Angular con estructura por bounded context | Harold Benigno (HM) | Finalizada |
-| US45 | T13 / [US-78](https://upc-team-m57tll9j.atlassian.net/browse/US-78) | Configuración de json-server con los recursos del dominio | Harold Benigno (HM) | Finalizada |
-| US04 | T20 / [US-85](https://upc-team-m57tll9j.atlassian.net/browse/US-85) | Implementación del formulario de publicación de solicitud de carga | Christoper Rivas (CC) | Finalizada |
-| US37 | T21 / [US-86](https://upc-team-m57tll9j.atlassian.net/browse/US-86) | Implementación del listado de cargas de la empresa con filtro por estado | Ismael Simon (IS) | Finalizada |
-| US06 | T22 / [US-87](https://upc-team-m57tll9j.atlassian.net/browse/US-87) | Implementación de la búsqueda de fletes disponibles con filtros | Harold Benigno (HM) | Finalizada |
-| US05 | T23 / [US-88](https://upc-team-m57tll9j.atlassian.net/browse/US-88) | Implementación de la cancelación de solicitud con motivo | Harold Benigno (HM) | Finalizada |
-| US38 | T24 / [US-89](https://upc-team-m57tll9j.atlassian.net/browse/US-89) | Implementación de la edición de solicitud publicada | Ismael Simon (IS) | Finalizada |
-| US42 | T26 / [US-91](https://upc-team-m57tll9j.atlassian.net/browse/US-91) | Implementación del detalle de la solicitud con los datos del transportista asignado | Ismael Simon (IS) | Finalizada |
-| US40 | T27 / [US-92](https://upc-team-m57tll9j.atlassian.net/browse/US-92) | Implementación del detalle de flete para el transportista | Marco Collantes (MA) | Finalizada |
-| US48 | T25 / [US-90](https://upc-team-m57tll9j.atlassian.net/browse/US-90) | Configuración de ngx-translate con en.json y es.json y selector de idioma | Jean Noriega (JC) | Finalizada |
-| US36 | T28 / [US-93](https://upc-team-m57tll9j.atlassian.net/browse/US-93) | Implementación del dashboard de la empresa | Marco Collantes (MA) | Finalizada |
-| US39 | T29 / [US-94](https://upc-team-m57tll9j.atlassian.net/browse/US-94) | Implementación de los filtros avanzados de búsqueda de fletes | Marco Collantes (MA) | Finalizada |
-| US11 | T31 / [US-96](https://upc-team-m57tll9j.atlassian.net/browse/US-96) | Implementación del historial de servicios del transportista | Harold Benigno (HM) | Finalizada |
-| US09 | T32 / [US-97](https://upc-team-m57tll9j.atlassian.net/browse/US-97) | Implementación del seguimiento de carga para la empresa | Marco Collantes (MA) | Finalizada |
-| US35 | T33 / [US-98](https://upc-team-m57tll9j.atlassian.net/browse/US-98) | Implementación de la consulta del estado de validación de documentos | Harold Benigno (HM) | Finalizada |
-| US41 | T30 / [US-95](https://upc-team-m57tll9j.atlassian.net/browse/US-95) | Implementación de la vista Mis viajes del transportista | Ismael Simon (IS) | Finalizada |
+| US28 | T11 / US-40 | Implementación de la sección de videos | Ismael Simon (IS) | Finalizada |
+| US49 | T14 / US-79 | Configuración del tema de Angular Material con los tokens del Design System | Jean Noriega (JC) | Finalizada |
+| US44 | T12 / US-77 | Inicialización del proyecto Angular con estructura por bounded context | Harold Benigno (HM) | Finalizada |
+| US45 | T13 / US-78 | Configuración de json-server con los recursos del dominio | Harold Benigno (HM) | Finalizada |
+| US04 | T20 / US-85 | Implementación del formulario de publicación de solicitud de carga | Christoper Rivas (CC) | Finalizada |
+| US37 | T21 / US-86 | Implementación del listado de cargas de la empresa con filtro por estado | Ismael Simon (IS) | Finalizada |
+| US06 | T22 / US-87 | Implementación de la búsqueda de fletes disponibles con filtros | Harold Benigno (HM) | Finalizada |
+| US05 | T23 / US-88 | Implementación de la cancelación de solicitud con motivo | Harold Benigno (HM) | Finalizada |
+| US38 | T24 / US-89 | Implementación de la edición de solicitud publicada | Ismael Simon (IS) | Finalizada |
+| US42 | T26 / US-91 | Implementación del detalle de la solicitud con los datos del transportista asignado | Ismael Simon (IS) | Finalizada |
+| US40 | T27 / US-92 | Implementación del detalle de flete para el transportista | Marco Collantes (MA) | Finalizada |
+| US48 | T25 / US-90 | Configuración de ngx-translate con en.json y es.json y selector de idioma | Jean Noriega (JC) | Finalizada |
+| US36 | T28 / US-93 | Implementación del dashboard de la empresa | Marco Collantes (MA) | Finalizada |
+| US39 | T29 / US-94 | Implementación de los filtros avanzados de búsqueda de fletes | Marco Collantes (MA) | Finalizada |
+| US11 | T31 / US-96 | Implementación del historial de servicios del transportista | Harold Benigno (HM) | Finalizada |
+| US09 | T32 / US-97 | Implementación del seguimiento de carga para la empresa | Marco Collantes (MA) | Finalizada |
+| US35 | T33 / US-98 | Implementación de la consulta del estado de validación de documentos | Harold Benigno (HM) | Finalizada |
+| US41 | T30 / US-95 | Implementación de la vista Mis viajes del transportista | Ismael Simon (IS) | Finalizada |
 
 Las 18 historias y sus 18 subtareas figuran Finalizadas. T11 / US-40 fue trasladada desde Sprint 1 y conserva en su descripción una mención a IDs de YouTube pendientes; su estado cerrado no acredita por sí solo que los videos estén publicados. El equipo proporcionó el enlace y la captura del video de navegación del Sprint 2, incorporados en 5.2.2.5; esa evidencia es distinta de confirmar los videos About-the-Product y About-the-Team incrustados en la landing.
 
@@ -654,28 +654,28 @@ Las evidencias siguientes corresponden a commits públicos del frontend y la lan
 
 | Repository | Branch / evidencia de integración | Commit Id | Commit Message | Commit Message Body / descripción | Committed on (Lima) |
 | --- | --- | --- | --- | --- | --- |
-| Frontend | feature/project-setup-and-shared, PR #1 | [a742387](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/commit/a742387) | chore(setup): configure Angular 22 workspace with Material, ngx-translate, Karma and json-server | Configuración del workspace y dependencias. | 03/10/2026 |
-| Frontend | feature/project-setup-and-shared, PR #1 | [a3d17b7](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/commit/a3d17b7) | chore(api): add environments and json-server mock API with seed data | Entornos, API simulada y datos de prueba. | 03/10/2026 |
-| Frontend | feature/design-system-theme, integración registrada | [7b15d2d](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/commit/7b15d2d) | feat(shared): add design tokens with WCAG contrast helper | Tokens visuales y apoyo al contraste. | 03/10/2026 |
-| Frontend | feature/publish-load-request, integración registrada | [5b5078a](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/commit/5b5078a) | feat(freight-publishing): implement publish load request form with validation | Formulario de solicitud y validación. | 03/10/2026 |
-| Frontend | feature/my-load-requests, integración registrada | [7319010](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/commit/7319010) | feat(freight-publishing): implement my load requests list with status filter and actions | Listado y filtros de cargas. | 03/10/2026 |
-| Frontend | feature/cancel-and-edit-load-request, PR #2 | [230e6a1](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/commit/230e6a1) | feat(freight-publishing): add cancel load request dialog with reason | Cancelación con motivo. | 04/10/2026 |
-| Frontend | feature/cancel-and-edit-load-request, PR #2 | [cb95d33](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/commit/cb95d33) | feat(freight-publishing): add edit mode to the load request form for published requests | Edición de solicitudes publicadas. | 04/10/2026 |
-| Frontend | feature/search-available-loads, PR #3 | [7fd8b57](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/commit/7fd8b57) | feat(matching): implement available loads search view and load card | Vista de búsqueda y tarjetas. | 04/10/2026 |
-| Frontend | feature/available-load-detail, PR #4 | [c0d2fb7](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/commit/c0d2fb7) | feat(matching): add available load detail view and link it from the load card | Detalle de flete. | 04/10/2026 |
-| Frontend | feature/load-request-detail, PR #5 | [ae2aee1](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/commit/ae2aee1) | feat(freight-publishing): add load request detail view with the assigned carrier | Detalle y transportista asignado. | 04/10/2026 |
-| Frontend | feature/shipper-dashboard, PR #7 | [57021dd](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/commit/57021dd) | feat(shipper-dashboard): shipper-dashboard component implemented | Dashboard de empresa. | 04/10/2026 |
-| Frontend | feature/advanced-load-filters, PR #8 | [0902bc0](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/commit/0902bc0) | feat(advanced-load-filters): updated load search component | Filtros avanzados. | 04/10/2026 |
-| Frontend | feature/carrier-trips, PR #12 | [3598ccb](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/commit/3598ccb) | feat(trip-execution): implement my trips grouped as upcoming, in progress and completed | Viajes agrupados por estado. | 04/10/2026 |
-| Frontend | feature/load-tracking, PR #13 | [d366330](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/commit/d366330) | feat(trip-execution): implement load tracking with status timeline for shippers | Seguimiento e historial de estados. | 04/10/2026 |
-| Frontend | feature/service-history, PR #14 | [ab366db](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/commit/ab366db) | feat(trip-execution): implement service history of completed trips with totals | Historial y totales. | 04/10/2026 |
-| Frontend | feature/document-validation-status, PR #15 | [2c77a56](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/commit/2c77a56) | feat(documents): implement document validation status with rejection reasons and expiry warning | Estados de documentos. | 04/10/2026 |
-| Frontend | develop → main, PR #16 | [e9a5352](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/commit/e9a5352) | chore(deploy): configure Vercel hosting and SPA routing | Hosting y rutas del cliente. | 05/10/2026 |
-| Frontend | main, PR #17 | [9756bac](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/commit/9756bac) | fix(config): point production API to Render | URL HTTPS del mock de producción. | 05/10/2026 |
-| Landing Page | main | [a7479af](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page/commit/a7479af) | feat(cta): redirect landing buttons to web app | Configuración del destino de la Web Application. | 05/10/2026 |
-| Landing Page | main | [245b3b9](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page/commit/245b3b9) | fix(cta): use direct web application links | URL absoluta en los ocho href de los CTA. | 05/10/2026 |
+| Frontend | feature/project-setup-and-shared, PR #1 | a742387 | chore(setup): configure Angular 22 workspace with Material, ngx-translate, Karma and json-server | Configuración del workspace y dependencias. | 03/10/2026 |
+| Frontend | feature/project-setup-and-shared, PR #1 | a3d17b7 | chore(api): add environments and json-server mock API with seed data | Entornos, API simulada y datos de prueba. | 03/10/2026 |
+| Frontend | feature/design-system-theme, integración registrada | 7b15d2d | feat(shared): add design tokens with WCAG contrast helper | Tokens visuales y apoyo al contraste. | 03/10/2026 |
+| Frontend | feature/publish-load-request, integración registrada | 5b5078a | feat(freight-publishing): implement publish load request form with validation | Formulario de solicitud y validación. | 03/10/2026 |
+| Frontend | feature/my-load-requests, integración registrada | 7319010 | feat(freight-publishing): implement my load requests list with status filter and actions | Listado y filtros de cargas. | 03/10/2026 |
+| Frontend | feature/cancel-and-edit-load-request, PR #2 | 230e6a1 | feat(freight-publishing): add cancel load request dialog with reason | Cancelación con motivo. | 04/10/2026 |
+| Frontend | feature/cancel-and-edit-load-request, PR #2 | cb95d33 | feat(freight-publishing): add edit mode to the load request form for published requests | Edición de solicitudes publicadas. | 04/10/2026 |
+| Frontend | feature/search-available-loads, PR #3 | 7fd8b57 | feat(matching): implement available loads search view and load card | Vista de búsqueda y tarjetas. | 04/10/2026 |
+| Frontend | feature/available-load-detail, PR #4 | c0d2fb7 | feat(matching): add available load detail view and link it from the load card | Detalle de flete. | 04/10/2026 |
+| Frontend | feature/load-request-detail, PR #5 | ae2aee1 | feat(freight-publishing): add load request detail view with the assigned carrier | Detalle y transportista asignado. | 04/10/2026 |
+| Frontend | feature/shipper-dashboard, PR #7 | 57021dd | feat(shipper-dashboard): shipper-dashboard component implemented | Dashboard de empresa. | 04/10/2026 |
+| Frontend | feature/advanced-load-filters, PR #8 | 0902bc0 | feat(advanced-load-filters): updated load search component | Filtros avanzados. | 04/10/2026 |
+| Frontend | feature/carrier-trips, PR #12 | 3598ccb | feat(trip-execution): implement my trips grouped as upcoming, in progress and completed | Viajes agrupados por estado. | 04/10/2026 |
+| Frontend | feature/load-tracking, PR #13 | d366330 | feat(trip-execution): implement load tracking with status timeline for shippers | Seguimiento e historial de estados. | 04/10/2026 |
+| Frontend | feature/service-history, PR #14 | ab366db | feat(trip-execution): implement service history of completed trips with totals | Historial y totales. | 04/10/2026 |
+| Frontend | feature/document-validation-status, PR #15 | 2c77a56 | feat(documents): implement document validation status with rejection reasons and expiry warning | Estados de documentos. | 04/10/2026 |
+| Frontend | develop → main, PR #16 | e9a5352 | chore(deploy): configure Vercel hosting and SPA routing | Hosting y rutas del cliente. | 05/10/2026 |
+| Frontend | main, PR #17 | 9756bac | fix(config): point production API to Render | URL HTTPS del mock de producción. | 05/10/2026 |
+| Landing Page | main | a7479af | feat(cta): redirect landing buttons to web app | Configuración del destino de la Web Application. | 05/10/2026 |
+| Landing Page | main | 245b3b9 | fix(cta): use direct web application links | URL absoluta en los ocho href de los CTA. | 05/10/2026 |
 
-**Repositorios:** [Frontend](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application) y [Landing Page](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page). Los PR #1–#15 evidencian integración de funcionalidades a `develop`; #16 y #17 documentan ajustes de despliegue hacia `main`. Los cambios de CTA están registrados directamente en `main`; no se les atribuye una rama feature o un Pull Request inexistente.
+**Repositorios:** Frontend: https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application y Landing Page: https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page. Los PR #1–#15 evidencian integración de funcionalidades a `develop`; #16 y #17 documentan ajustes de despliegue hacia `main`. Los cambios de CTA están registrados directamente en `main`; no se les atribuye una rama feature o un Pull Request inexistente.
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
 
@@ -698,7 +698,7 @@ El incremento incorpora las vistas de empresa y transportista que se describen a
 | Landing Page → `/home` | US25, acceso actualizado | Pulsar CTA de empresa, transportista e inicio de sesión y mostrar llegada a la aplicación. Los tres tipos de botón comparten actualmente `/home`; no existen destinos diferenciados de registro/login. |
 
 **Video de navegación del Sprint 2**  
-**Link:** [LoadMatch — Sprint 2 Execution Demo | Web Application](https://youtu.be/eCoQdmCrUJg).  
+**Link:** LoadMatch — Sprint 2 Execution Demo | Web Application: https://youtu.be/eCoQdmCrUJg.  
 **Duración:** 4 minutos y 38 segundos, según el contador visible en la captura proporcionada por el equipo; está dentro del intervalo orientativo de 3–5 minutos por aplicación.  
 **Disponibilidad:** la captura muestra el video como No listado. El acceso mediante enlace debe comprobarse antes de entregar.
 
@@ -732,7 +732,7 @@ No se traslada a esta entrega el resultado histórico de pruebas de otro checkou
 
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
-Durante Sprint 2 se utilizó JSON Server para desarrollar el frontend con datos de muestra. El repositorio de Web Services definitivos es [Loadmatch-backend-application](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-backend-application). Esta entrega no aporta documentación OpenAPI/Swagger del backend Spring Boot ni commits que acrediten su elaboración; el mock no se presenta como documentación de servicios definitiva.
+Durante Sprint 2 se utilizó JSON Server para desarrollar el frontend con datos de muestra. El repositorio de Web Services definitivos es Loadmatch-backend-application: https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-backend-application. Esta entrega no aporta documentación OpenAPI/Swagger del backend Spring Boot ni commits que acrediten su elaboración; el mock no se presenta como documentación de servicios definitiva.
 
 **Base local:** `http://localhost:3000/api/v1`. **Base configurada en producción:** `https://loadmatch-api.onrender.com/api/v1`.
 
@@ -822,7 +822,7 @@ El historial público del frontend registra aportes de los cinco integrantes. La
 | Christoper Steven Rivas Castillo | CODERT0PH | Edición, cancelación de cargas y viajes del transportista. | `230e6a1`, `cb95d33`, `3598ccb` |
 | Marco Antonio Collantes Artola | Markollantes2307 | Dashboard, filtros avanzados, historial e integraciones de ramas. | `57021dd`, `0902bc0`, `ab366db` |
 
-**Historial:** [commits del frontend](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/commits/main/) y [commits de la landing](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page/commits/main/). **Integraciones:** [Pull Requests del frontend](https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/pulls?q=is%3Apr+is%3Aclosed).
+**Historial:** commits del frontend: https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/commits/main/ y commits de la landing: https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page/commits/main/. **Integraciones:** Pull Requests del frontend: https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/pulls?q=is%3Apr+is%3Aclosed.
 
 **GitHub Insights: Contributors de los productos**
 
@@ -876,3 +876,127 @@ Como oportunidad de mejora, el burndown y el registro de alcance muestran incorp
 <p align="center">
   <img src="../assets/images/Insights/Commits10.png" alt="Commits Marco" width="500">
 </p>
+
+### 5.2.3. Sprint 3
+
+El Sprint 3, denominado **Web Services**, comprende del 25 de octubre al 8 de noviembre de 2026 según Jira. Su propósito es publicar la primera versión de los RESTful Web Services de LoadMatch, desarrollados con Spring Boot, Spring Data JPA y PostgreSQL y documentados con OpenAPI, e integrarlos con la Web Application para reemplazar la API simulada utilizada en el Sprint 2. El alcance prioriza la gestión de identidad (registro, inicio y cierre de sesión con JWT y rutas protegidas por rol) y el flujo principal de intermediación: publicar una solicitud, encontrar y aceptar un flete, actualizar el estado del viaje y confirmar la entrega.
+
+El sprint incorpora 16 historias por 49 Story Points, equivalentes al 52 % de los 95 puntos que quedaban en el Product Backlog al cierre del Sprint 2. No se crearon historias nuevas: las actividades técnicas transversales (proyecto base, configuración de OpenAPI, pruebas y despliegue de los servicios) se registran como subtareas de las historias existentes.
+
+#### 5.2.3.1. Sprint Planning 3
+
+<!-- PENDIENTE: completar Time y Attendees con los datos reales de la reunión de planificación del 26/10/2026 (prevista a las 10:30 p. m. en Microsoft Teams). Si la fecha o la plataforma cambian, actualizar Date y Location. -->
+
+| Sprint # | Sprint 3 — Web Services |
+| --- | --- |
+| **Sprint Planning Background** | |
+| Periodo del sprint | 2026-10-25 a 2026-11-08 |
+| Inicio registrado en Jira | 25/10/2026, 01:23 a. m. (America/Lima). |
+| Fin previsto registrado en Jira | 08/11/2026, 11:59 p. m. (America/Lima). |
+| Date (planning meeting) | 2026-10-26 |
+| Time | _Por completar tras la reunión._ |
+| Location | Virtual (Microsoft Teams). |
+| Prepared By | Harold Fauskorp Benigno Montero. |
+| Attendees (to planning meeting) | _Por completar tras la reunión._ |
+| Sprint 2 Review Summary | El Sprint 2 publicó la primera versión de la Web Application en Vercel, organizada por bounded contexts y conectada a una API simulada con JSON Server desplegada en Render. Jira registra 18 historias finalizadas por 49 Story Points. Quedaron pendientes el backend real, la autenticación y la persistencia de los datos. |
+| Sprint 2 Retrospective Summary | El alcance aumentó de 22 a 49 puntos después de iniciar el sprint y los cierres se concentraron al final. Para el Sprint 3 se acuerda comprometer el alcance completo desde el inicio, mantener actualizado el estado de las subtareas y reunir las evidencias de ejecución y despliegue junto con la implementación. |
+| **Sprint Goal & User Stories** | |
+| Sprint 3 Goal (registrado en Jira) | Nuestro foco está en habilitar el acceso seguro y el flujo principal de intermediación de LoadMatch sobre una API real. Creemos que permite que empresas y transportistas creen su cuenta, inicien sesión y completen el ciclo publicar, aceptar y entregar con datos persistentes. Se confirma cuando un usuario de cada segmento se registra, inicia sesión y completa ese ciclo en la Web Application desplegada consumiendo los Web Services documentados en Swagger. |
+| Sprint 3 Velocity | 49 Story Points, tomando como referencia los 49 puntos completados en el Sprint 2. |
+| Sum of Story Points | 49 Story Points, comprometidos en su totalidad al inicio del sprint. |
+
+#### 5.2.3.2. Aspect Leaders and Collaborators
+
+La matriz LACX organiza los aspectos del Sprint 3 según las historias asignadas en Jira. Cada integrante lidera el aspecto que corresponde a sus historias; los colaboradores se vinculan con las dependencias entre aspectos: el proyecto base y la seguridad sostienen a todos los módulos, el registro de usuarios alimenta el inicio de sesión y el flujo de viajes depende de las solicitudes de carga.
+
+| Team Member | GitHub Username | Proyecto base, seguridad y sesión | Registro y perfiles | Solicitudes, estado de viaje y despliegue | Aceptación y confirmación de entrega | Matching y vehículos |
+| --- | --- | --- | --- | --- | --- | --- |
+| Benigno Montero, Harold Fauskorp | Harold-11 | L | C | C | C | C |
+| Noriega Collado, Jean Fabio | dumbaskidd | C | L | — | — | — |
+| Simon Calderon, Ismael Sebastian | Mayel-dev | C | — | L | C | — |
+| Rivas Castillo, Christoper Steven | CODERT0PH | — | — | C | L | — |
+| Collantes Artola, Marco Antonio | Markollantes2307 | — | C | — | — | L |
+
+**L (líder del aspecto):** integrante responsable de ese bloque funcional del sprint; coordina su desarrollo y responde por su avance. No corresponde al liderazgo general del equipo. **C (colaborador):** integrante que apoya el aspecto porque su trabajo depende de él o lo complementa. **—:** sin participación prevista en ese aspecto. Las colaboraciones se contrastarán al cierre del sprint con los commits y Pull Requests registrados en 5.2.3.4 y 5.2.3.8.
+
+#### 5.2.3.3. Sprint Backlog 3
+
+El Sprint Backlog 3 se centra en reemplazar la API simulada por los Web Services y en habilitar la autenticación real. La tabla conserva los IDs funcionales del Capítulo III y añade las claves de Jira: por ejemplo, **US15** es la historia funcional y **US-3** su clave en Jira.
+
+**Tablero:** https://upc-team-m57tll9j.atlassian.net/jira/software/projects/US/boards/2. El acceso debe comprobarse con la cuenta del docente; el enlace no garantiza acceso público.
+
+<!-- PENDIENTE: insertar captura del tablero del Sprint 3 en Jira (assets/images/sprint3/SprintBoard.png). -->
+
+**Verificación directa de Jira:** 25/10/2026, zona America/Lima. Se consultaron el sprint "Sprint 3 - Web Services" del tablero CL (2), sus 16 historias y sus 19 subtareas.
+
+| User Story Id | Jira key | Story Title | Story Points | Assigned To | Status |
+| --- | --- | --- | ---: | --- | --- |
+| US15 | US-3 | Autenticación basada en JWT | 3 | Harold Benigno (HM) | Tareas por hacer |
+| US03 | US-17 | Inicio de sesión | 2 | Harold Benigno (HM) | Tareas por hacer |
+| US29 | US-49 | Cierre de sesión | 1 | Harold Benigno (HM) | Tareas por hacer |
+| US46 | US-66 | Rutas protegidas por rol | 3 | Harold Benigno (HM) | Tareas por hacer |
+| US47 | US-67 | Interceptor HTTP de autenticación y errores | 3 | Harold Benigno (HM) | Tareas por hacer |
+| US01 | US-2 | Registro de Empresa | 3 | Jean Noriega (JC) | Tareas por hacer |
+| US02 | US-4 | Registro de Transportista | 3 | Jean Noriega (JC) | Tareas por hacer |
+| US31 | US-51 | Gestión del perfil de empresa | 2 | Jean Noriega (JC) | Tareas por hacer |
+| US32 | US-52 | Gestión del perfil de transportista | 2 | Jean Noriega (JC) | Tareas por hacer |
+| US16 | US-12 | Endpoint de creación de solicitud de carga | 3 | Ismael Simon (IS) | Tareas por hacer |
+| US08 | US-13 | Actualización de estado del viaje | 3 | Ismael Simon (IS) | Tareas por hacer |
+| US50 | US-70 | Pruebas unitarias y despliegue de la Web Application | 5 | Ismael Simon (IS) | Tareas por hacer |
+| US07 | US-11 | Aceptación de viaje | 5 | Christoper Rivas (CC) | Tareas por hacer |
+| US56 | US-76 | Confirmación de entrega por la empresa | 3 | Christoper Rivas (CC) | Tareas por hacer |
+| US17 | US-9 | Endpoint de matching geoespacial | 5 | Marco Collantes (MA) | Tareas por hacer |
+| US33 | US-53 | Gestión de vehículos del transportista | 3 | Marco Collantes (MA) | Tareas por hacer |
+| | | **Total** | **49** | | |
+
+**Subtareas del Sprint Backlog**
+
+<!-- PENDIENTE: completar la estimación en horas de cada subtarea acordada en el Sprint Planning (registrarla también en Jira) y actualizar los estados al cierre del sprint. -->
+
+| User Story Id | Work Item/Task Id | Work Item/Task Title | Estimation (Hours) | Assigned To | Status |
+| --- | --- | --- | ---: | --- | --- |
+| US15 | T34 / US-99 | Inicialización del proyecto Spring Boot con PostgreSQL y estructura por bounded context | _Por estimar_ | Harold Benigno (HM) | Tareas por hacer |
+| US15 | T35 / US-100 | Configuración de springdoc-openapi (Swagger UI) para la documentación de la API | _Por estimar_ | Harold Benigno (HM) | Tareas por hacer |
+| US15 | T36 / US-101 | Implementación de la autenticación JWT con Spring Security | _Por estimar_ | Harold Benigno (HM) | Tareas por hacer |
+| US03 | T37 / US-102 | Implementación del endpoint de inicio de sesión y la vista de login | _Por estimar_ | Harold Benigno (HM) | Tareas por hacer |
+| US29 | T38 / US-103 | Implementación del cierre de sesión en la Web Application | _Por estimar_ | Harold Benigno (HM) | Tareas por hacer |
+| US46 | T39 / US-104 | Implementación de guards de rutas por rol | _Por estimar_ | Harold Benigno (HM) | Tareas por hacer |
+| US47 | T40 / US-105 | Implementación del interceptor HTTP de token y manejo de errores | _Por estimar_ | Harold Benigno (HM) | Tareas por hacer |
+| US01 | T41 / US-106 | Implementación del registro de empresa (endpoint y formulario) | _Por estimar_ | Jean Noriega (JC) | Tareas por hacer |
+| US02 | T42 / US-107 | Implementación del registro de transportista (endpoint y formulario) | _Por estimar_ | Jean Noriega (JC) | Tareas por hacer |
+| US31 | T43 / US-108 | Implementación de la gestión del perfil de empresa | _Por estimar_ | Jean Noriega (JC) | Tareas por hacer |
+| US32 | T44 / US-109 | Implementación de la gestión del perfil de transportista | _Por estimar_ | Jean Noriega (JC) | Tareas por hacer |
+| US16 | T45 / US-110 | Implementación del endpoint POST de solicitudes de carga e integración con el formulario | _Por estimar_ | Ismael Simon (IS) | Tareas por hacer |
+| US08 | T46 / US-111 | Implementación de la actualización de estado del viaje | _Por estimar_ | Ismael Simon (IS) | Tareas por hacer |
+| US50 | T47 / US-112 | Configuración de pruebas unitarias y flujo de GitHub Actions | _Por estimar_ | Ismael Simon (IS) | Tareas por hacer |
+| US50 | T48 / US-113 | Despliegue de los Web Services y la base de datos PostgreSQL | _Por estimar_ | Ismael Simon (IS) | Tareas por hacer |
+| US07 | T49 / US-114 | Implementación de la aceptación de viaje por el transportista | _Por estimar_ | Christoper Rivas (CC) | Tareas por hacer |
+| US56 | T50 / US-115 | Implementación de la confirmación de entrega por la empresa | _Por estimar_ | Christoper Rivas (CC) | Tareas por hacer |
+| US17 | T51 / US-116 | Implementación del endpoint de matching geoespacial con la fórmula de Haversine | _Por estimar_ | Marco Collantes (MA) | Tareas por hacer |
+| US33 | T52 / US-117 | Implementación de la gestión de vehículos del transportista | _Por estimar_ | Marco Collantes (MA) | Tareas por hacer |
+
+Cada subtarea está asignada al mismo integrante que su historia, a diferencia del Sprint 2, donde 10 pares presentaban responsables distintos. La documentación OpenAPI de cada endpoint forma parte de la subtarea que lo implementa; T35 solo configura la herramienta.
+
+**Orden de ejecución:** la secuencia de las subtareas sigue el avance de la unidad Web Services del sílabo del curso (semanas 9 a 12). En la semana 10 se priorizan T34 y T35, ya que el resto de historias depende del proyecto base. T34 incluye la configuración de internacionalización de la API (mensajes de validación y error en inglés, como idioma por defecto, y en español), el manejo global de errores y una configuración de seguridad temporalmente abierta, para que los endpoints puedan desarrollarse sin esperar la autenticación. T36 (autenticación JWT) se ubica al final del sprint, en la semana 11, de acuerdo con el tema *Web Services Security – Part 1*; si no llega a completarse dentro del sprint, US15 se trasladará al Sprint 4 y se registrará en el Sprint Review. La internacionalización de la Web Application ya fue implementada en el Sprint 2 (US48); la de la API es un trabajo distinto, requerido por el enunciado para los Web Services.
+
+**Product Backlog restante:** tras incorporar estas historias al sprint, el backlog conserva 12 historias por 46 Story Points, previstas para el Sprint 4: documentos y validación MTC (US18, US19, US34), cancelación de viaje (US55), incidentes (US52), notificaciones (US43), calificaciones (US10, US51), pagos y liquidaciones (US20, US53, US54) y recuperación de contraseña (US30).
+
+#### 5.2.3.4. Development Evidence for Sprint Review
+
+<!-- PENDIENTE: tabla de commits por repositorio (Landing Page, Web Application, Web Services) del periodo del sprint, al cierre. -->
+
+#### 5.2.3.5. Execution Evidence for Sprint Review
+
+<!-- PENDIENTE: capturas de las vistas implementadas y enlace al video de navegación del Sprint 3. -->
+
+#### 5.2.3.6. Services Documentation Evidence for Sprint Review
+
+<!-- PENDIENTE: tabla de endpoints documentados con OpenAPI (verbo, ruta, parámetros, ejemplo de response), capturas de Swagger con datos de muestra, URL del repositorio de Web Services y commits de documentación. -->
+
+#### 5.2.3.7. Software Deployment Evidence for Sprint Review
+
+<!-- PENDIENTE: configuración y capturas del despliegue de Web Services y base de datos, y de las nuevas versiones de Web Application y Landing Page. -->
+
+#### 5.2.3.8. Team Collaboration Insights during Sprint
+
+<!-- PENDIENTE: capturas de Contributors de los tres repositorios y commits representativos por integrante, al cierre del sprint. -->
