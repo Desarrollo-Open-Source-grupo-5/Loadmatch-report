@@ -983,7 +983,17 @@ Cada subtarea está asignada al mismo integrante que su historia, a diferencia d
 
 #### 5.2.3.4. Development Evidence for Sprint Review
 
-<!-- PENDIENTE: tabla de commits por repositorio (Landing Page, Web Application, Web Services) del periodo del sprint, al cierre. -->
+Durante el Sprint 3, el equipo centró el desarrollo en la construcción de los Web Services del backend con Spring Boot y PostgreSQL, aplicando Domain-Driven Design (DDD) y Command Query Responsibility Segregation (CQRS), así como en la integración del flujo de inicio de sesión y consumo del backend real desde la Web Application. Las evidencias siguientes corresponden a las confirmaciones más representativas de ambos repositorios registradas en la rama develop durante el periodo del sprint. Las fechas se presentan en America/Lima (UTC−05:00).
+
+| Repositorio | Rama / Evidencia de integración | ID de confirmación | Mensaje de confirmación | Descripción del cambio | Confirmado en (Lima UTC−05:00) |
+| --- | --- | --- | --- | --- | --- |
+| Backend | feature/project-setup, PR #1 | 32d69d2 | build: initialize spring boot project with maven | Inicialización del proyecto Spring Boot en Java 27 con dependencias Maven. | 03/11/2026 12:18 |
+| Backend | feature/project-setup, PR #1 | 623bf9c | chore(config): add postgresql datasource with dev and prod profiles | Configuración de la fuente de datos PostgreSQL para perfiles dev y prod. | 03/11/2026 12:18 |
+| Backend | feature/project-setup, PR #1 | 1531189 | feat(shared): add virtual threads configuration | Habilitación de Virtual Threads de Project Loom para el servidor embebido. | 03/11/2026 12:18 |
+| Backend | feature/openapi-configuration, PR #2 | 0e9661a | feat(shared): openapi configuration with bearer authentication | Configuración de SpringDoc OpenAPI con esquema Bearer. | 03/11/2026 12:19 |
+| Backend | feature/iam-sign-in, PR #4 | e054a63 | feat(iam): add sign-in and user endpoints | Implementación de TokensController (/api/v1/tokens) y UsersController en IAM. | 03/11/2026 22:58 |
+
+<!-- PENDIENTE: registrar commits de bounded contexts de negocio al cierre de sus integraciones. -->
 
 #### 5.2.3.5. Execution Evidence for Sprint Review
 
