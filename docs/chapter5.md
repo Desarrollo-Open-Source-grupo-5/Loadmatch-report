@@ -992,8 +992,14 @@ Durante el Sprint 3, el equipo centró el desarrollo en la construcción de los 
 | Backend | feature/project-setup, PR #1 | 1531189 | feat(shared): add virtual threads configuration | Habilitación de Virtual Threads de Project Loom para el servidor embebido. | 03/11/2026 12:18 |
 | Backend | feature/openapi-configuration, PR #2 | 0e9661a | feat(shared): openapi configuration with bearer authentication | Configuración de SpringDoc OpenAPI con esquema Bearer. | 03/11/2026 12:19 |
 | Backend | feature/iam-sign-in, PR #4 | e054a63 | feat(iam): add sign-in and user endpoints | Implementación de TokensController (/api/v1/tokens) y UsersController en IAM. | 03/11/2026 22:58 |
+| Backend | feature/load-request-management, PR #5 | f9e6aa0 | feat(freight): add load request aggregate with route, dimensions and money value objects | Implementación del agregado LoadRequest con objetos de valor. | 06/11/2026 10:23 |
+| Backend | feature/load-request-management, PR #5 | 762ce21 | feat(freight): add load request endpoints | Implementación de LoadRequestsController para creación y consulta de cargas. | 06/11/2026 10:23 |
+| Backend | feature/shipper-registration, PR #6 | 880bf32 | feat(profiles): add shipper registration endpoint | Implementación de ShippersController (/api/v1/shippers) para registro de empresas. | 06/11/2026 10:26 |
+| Backend | feature/carrier-registration-enablement, PR #8 | 59716e5 | feat(profiles): add carrier registration and enablement endpoints | Endpoints para registro y habilitación de transportistas con licencia MTC. | 06/11/2026 10:32 |
+| Backend | feature/shipper-profile-update, PR #9 | d5fd9b7 | feat(profiles): handle shipper profile updates in command service | Manejador de comando para actualización de perfil de empresa. | 06/11/2026 16:12 |
+| Backend | feature/fleet-management, PR #10 | 107edf7 | feat(fleet): add vehicle and vehicle type endpoints | Implementación de VehiclesController y VehicleTypesController para flota. | 06/11/2026 20:01 |
 
-<!-- PENDIENTE: registrar commits de bounded contexts de negocio al cierre de sus integraciones. -->
+<!-- PENDIENTE: registrar commits de matching, trips y frontend al cierre del sprint. -->
 
 #### 5.2.3.5. Execution Evidence for Sprint Review
 
