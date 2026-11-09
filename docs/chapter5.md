@@ -1080,7 +1080,52 @@ La empresa valida la llegada de la carga en destino mediante el endpoint de conf
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
-<!-- PENDIENTE: tabla de endpoints documentados con OpenAPI (verbo, ruta, parámetros, ejemplo de response), capturas de Swagger con datos de muestra, URL del repositorio de Web Services y commits de documentación. -->
+A diferencia del Sprint 2, donde se utilizó un mock con JSON Server, en el Sprint 3 los Servicios Web se implementaron con Java 27 y Spring Boot 4.1.2, documentados íntegramente mediante SpringDoc OpenAPI 3.0 (Swagger UI). La interfaz interactiva permite consultar los esquemas de petición, las estructuras de respuesta, los códigos de estado HTTP y ejecutar pruebas directas sobre la base de datos PostgreSQL.
+
+**Acceso a la documentación interactiva:**
+- Swagger UI (Local): http://localhost:8080/swagger-ui/index.html
+- OpenAPI JSON (Local): http://localhost:8080/v3/api-docs
+- Swagger UI (Producción): https://loadmatch-backend-application.onrender.com/swagger-ui/index.html
+- Repositorio de Web Services: https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-backend-application
+
+![Documentación OpenAPI en Swagger UI de los Bounded Contexts de Trips y Vehicles](../assets/images/sprint3/SwaggerTripsVehicles.png)
+
+*Figura. Endpoints interactivos documentados con Swagger UI para la ejecución de viajes y gestión de vehículos.*
+
+![Documentación OpenAPI en Swagger UI de Shippers, Carriers y Freight](../assets/images/sprint3/SwaggerShippersFreight.png)
+
+*Figura. Endpoints interactivos para registro de empresas, transportistas y publicación de cargas.*
+
+A continuación se detallan los endpoints desarrollados y documentados para el Sprint 3:
+
+| Contexto delimitado | Verbo | Ruta del endpoint | Parámetros / Cuerpo de petición | Descripción funcional | Códigos de respuesta |
+| --- | --- | --- | --- | --- | --- |
+| IAM | POST | /api/v1/tokens | SignInResource (email, password) | Autentica a un usuario y genera la información de sesión. | 200, 400 |
+| IAM | GET | /api/v1/users/{userId} | Path: userId (UUID) | Obtiene los datos de cuenta y rol de un usuario registrado. | 200, 404 |
+| Profiles | POST | /api/v1/shippers | RegisterShipperResource (companyName, ruc, email, phone, address) | Registra una nueva empresa generadora de carga. | 201, 400 |
+| Profiles | GET | /api/v1/shippers/{shipperId} | Path: shipperId (UUID) | Consulta la información del perfil de una empresa por su identificador. | 200, 404 |
+| Profiles | PUT | /api/v1/shippers/{shipperId} | Path: shipperId, Body: UpdateShipperProfileResource | Actualiza datos de contacto y dirección fiscal de la empresa. | 200, 400, 404 |
+| Profiles | GET | /api/v1/shippers | Query: userId (UUID) | Obtiene el perfil de empresa asociado al usuario autenticado. | 200, 404 |
+| Profiles | POST | /api/v1/carriers | RegisterCarrierResource (firstName, lastName, dni, licenseNumber, email, phone) | Registra un nuevo transportista independiente. | 201, 400 |
+| Profiles | GET | /api/v1/carriers/{carrierId} | Path: carrierId (UUID) | Consulta el perfil del transportista y su calificación promedio. | 200, 404 |
+| Profiles | PUT | /api/v1/carriers/{carrierId} | Path: carrierId, Body: UpdateCarrierProfileResource | Actualiza el teléfono y la información operativa del transportista. | 200, 400, 404 |
+| Profiles | GET | /api/v1/carriers | Query: userId (UUID) | Obtiene el perfil de transportista asociado al usuario autenticado. | 200, 404 |
+| Profiles | POST | /api/v1/carriers/{carrierId}/enablement | Path: carrierId (UUID) | Habilita operativamente a un transportista para tomar fletes. | 200, 404 |
+| Freight | POST | /api/v1/load-requests | CreateLoadRequestResource (shipperId, origin, destination, dimensions, weight, price) | Publica una nueva solicitud de carga con objetos de valor. | 201, 400 |
+| Freight | GET | /api/v1/load-requests | Query: shipperId (UUID) | Lista las solicitudes de carga publicadas por una empresa. | 200 |
+| Freight | GET | /api/v1/load-requests/{loadRequestId} | Path: loadRequestId (UUID) | Obtiene el detalle completo y especificaciones técnicas de un flete. | 200, 404 |
+| Matching | GET | /api/v1/available-loads | Query: latitude, longitude, radiusKm, vehicleTypeId | Retorna fletes disponibles aplicando filtrado geoespacial por Haversine. | 200, 400 |
+| Trips | POST | /api/v1/trips | AcceptLoadRequestResource (loadRequestId, carrierId, vehicleId) | Acepta una carga e inicializa la máquina de estados del viaje. | 201, 400 |
+| Trips | GET | /api/v1/trips | Query: carrierId o shipperId (UUID) | Consulta los viajes asignados a un transportista o empresa. | 200 |
+| Trips | GET | /api/v1/trips/{tripId} | Path: tripId (UUID) | Obtiene el detalle operativo, estado actual e historial del viaje. | 200, 404 |
+| Trips | POST | /api/v1/trips/{tripId}/status-updates | Path: tripId, Body: UpdateTripStatusResource | Transiciona el estado del viaje (En ruta, En origen, En tránsito, Entregado). | 200, 400, 404 |
+| Trips | POST | /api/v1/trips/{tripId}/delivery-confirmation | Path: tripId, Body: ConfirmDeliveryResource | Registra la conformidad de entrega por parte de la empresa. | 200, 400, 404 |
+| Fleet | GET | /api/v1/vehicles | Query: carrierId (UUID) | Lista los vehículos registrados por un transportista. | 200 |
+| Fleet | POST | /api/v1/vehicles | RegisterVehicleResource (carrierId, plate, vehicleTypeId, capacityKg) | Registra una nueva unidad vehicular en la flota del transportista. | 201, 400 |
+| Fleet | GET | /api/v1/vehicles/{vehicleId} | Path: vehicleId (UUID) | Consulta los datos técnicos y capacidad de una unidad vehicular. | 200, 404 |
+| Fleet | PUT | /api/v1/vehicles/{vehicleId} | Path: vehicleId, Body: UpdateVehicleResource | Modifica la capacidad de carga o características del vehículo. | 200, 400, 404 |
+| Fleet | POST | /api/v1/vehicles/{vehicleId}/deactivation | Path: vehicleId (UUID) | Da de baja una unidad de la flota activa del transportista. | 200, 404 |
+| Fleet | GET | /api/v1/vehicle-types | Sin parámetros | Retorna el catálogo oficial de tipos de vehículo admitidos. | 200 |
 
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
