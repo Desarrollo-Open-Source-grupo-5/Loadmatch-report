@@ -998,8 +998,21 @@ Durante el Sprint 3, el equipo centró el desarrollo en la construcción de los 
 | Backend | feature/carrier-registration-enablement, PR #8 | 59716e5 | feat(profiles): add carrier registration and enablement endpoints | Endpoints para registro y habilitación de transportistas con licencia MTC. | 06/11/2026 10:32 |
 | Backend | feature/shipper-profile-update, PR #9 | d5fd9b7 | feat(profiles): handle shipper profile updates in command service | Manejador de comando para actualización de perfil de empresa. | 06/11/2026 16:12 |
 | Backend | feature/fleet-management, PR #10 | 107edf7 | feat(fleet): add vehicle and vehicle type endpoints | Implementación de VehiclesController y VehicleTypesController para flota. | 06/11/2026 20:01 |
+| Backend | feature/trip-acceptance, PR #12 | ecf0fa1 | feat(trip): add trip acceptance and query endpoints | Implementación de TripsController (/api/v1/trips) para aceptación de fletes. | 08/11/2026 10:57 |
+| Backend | feature/carrier-profile-update, PR #13 | a957c2a | feat(profiles): add update carrier profile endpoint | Endpoint PUT /api/v1/carriers/{id} para actualización de transportista. | 08/11/2026 10:58 |
+| Backend | feature/spatial-matching, PR #14 | ed4a7de | feat(matching): add nearby available loads query endpoint | Endpoint de matching geoespacial con filtro de radio en kilómetros. | 08/11/2026 10:59 |
+| Backend | feature/trip-status-updates, PR #16 | 93420f9 | feat(trip): add trip status update endpoint | Endpoint PUT /api/v1/trips/{tripId}/status para avance del estado del viaje. | 08/11/2026 17:32 |
+| Backend | feature/profiles-user-id-queries, PR #17 | d20a8a5 | feat(profiles): add get carrier and shipper by user id query methods to services | Métodos de consulta de empresa y transportista a partir del User ID. | 08/11/2026 21:53 |
+| Backend | feature/iam-demo-users-seed, PR #18 | 05c920b | feat(iam): add demo users seeder for shippers and carriers | Seeder inicial de cuentas demo gestionado por variables de entorno. | 08/11/2026 22:39 |
+| Backend | feature/matching-available-loads-query, PR #19 | 5706a89 | feat(matching): add available loads query, read models and assembler | Ensamblador de fletes disponibles y modelos de lectura para transportistas. | 08/11/2026 23:14 |
+| Backend | feature/trip-delivery-confirmation, PR #20 | ab1f389 | feat(trip): add delivery confirmation commands, resource, and unconfirmed deliveries job | Endpoints de observaciones y confirmación de entrega por la empresa. | 08/11/2026 23:22 |
+| Frontend | feature/sign-in, PR #18 | df37d43 | feat(iam): add sign-in view with role-based redirect | Implementación de la vista de login con consumo de tokens y redirección. | 08/11/2026 11:06 |
+| Frontend | feature/sign-in, PR #19 | c766534 | feat(iam): open the sign-in view as the entry point of the web application | Configuración de la vista de login como ruta de acceso inicial de la Web App. | 08/11/2026 22:29 |
+| Frontend | develop, commit directo | 47b3316 | fix(config): connect production frontend to Render backend | Conexión del frontend en producción con el backend Spring Boot en Render. | 10/11/2026 03:15 |
 
-<!-- PENDIENTE: registrar commits de matching, trips y frontend al cierre del sprint. -->
+Repositorios:
+- Web Services (Backend): https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-backend-application
+- Web Application (Frontend): https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application
 
 #### 5.2.3.5. Execution Evidence for Sprint Review
 
