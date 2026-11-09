@@ -1016,7 +1016,67 @@ Repositorios:
 
 #### 5.2.3.5. Execution Evidence for Sprint Review
 
-<!-- PENDIENTE: capturas de las vistas implementadas y enlace al video de navegación del Sprint 3. -->
+Durante el Sprint 3 se ejecutó la validación interactiva de las funcionalidades clave del ciclo de vida de LoadMatch, conectando la Web Application desarrollada en Angular con los Web Services desplegados en Spring Boot y respaldados por PostgreSQL. La evidencia de ejecución cubre el flujo de autenticación, la publicación y consulta de solicitudes de carga, el matching geoespacial con filtrado en tiempo real, la aceptación y trazabilidad de viajes, y la confirmación final de entrega.
+
+**Evidencia visual de ejecución:**
+
+**1. Inicio de sesión y autenticación de usuarios**
+
+La vista de autenticación permite que empresas y transportistas ingresen con sus credenciales, validando la identidad contra el endpoint de tokens y redirigiendo al dashboard correspondiente según el rol del usuario.
+
+![Inicio de sesión en la Web Application](../assets/images/sprint3/SignInView.png)
+
+*Figura. Formulario de inicio de sesión de LoadMatch con validación de credenciales y redirección por rol.*
+
+**2. Publicación de solicitud de carga sobre la API real**
+
+La pantalla permite que la empresa registre los datos del flete (origen, destino, dimensiones, peso y presupuesto ofrecido), enviando la petición POST al endpoint de solicitudes de carga con persistencia en PostgreSQL.
+
+![Publicación de solicitud de carga conectada a la API real](../assets/images/sprint3/PublishLoadRequestRealApi.png)
+
+*Figura. Formulario de publicación de solicitud de flete con validación de objetos de valor en backend.*
+
+**3. Búsqueda geoespacial de fletes disponibles**
+
+La vista del transportista presenta los fletes publicados en Lima, calculando la distancia en kilómetros entre las coordenadas de la unidad y el punto de recojo mediante el servicio de matching con fórmula de Haversine.
+
+![Búsqueda geoespacial de fletes con cálculo de distancia](../assets/images/sprint3/GeospatialMatchingLoads.png)
+
+*Figura. Listado de fletes disponibles ordenados por proximidad geográfica con el cálculo del radio de cobertura.*
+
+**4. Aceptación de viaje por el transportista**
+
+El transportista visualiza el detalle técnico del flete, los requisitos de carga y procede a aceptar el servicio, generando la entidad Trip en el backend y asignando su unidad de transporte.
+
+![Detalle y aceptación de viaje por transportista](../assets/images/sprint3/TripAcceptanceView.png)
+
+*Figura. Vista de confirmación y aceptación de viaje, actualizando el estado de la carga a asignada.*
+
+**5. Seguimiento del viaje y actualización de estados**
+
+La interfaz de trazabilidad permite que el transportista avance las etapas operativas del servicio (rumbo al recojo, en punto de recojo, en tránsito y entregado), actualizando la línea de tiempo en el dashboard de la empresa.
+
+![Actualización de estados de viaje e historial](../assets/images/sprint3/TripTrackingTimeline.png)
+
+*Figura. Línea de tiempo de seguimiento de viaje con actualización del historial de estados.*
+
+**6. Confirmación de entrega por la empresa y gestión de flota**
+
+La empresa valida la llegada de la carga en destino mediante el endpoint de confirmación de entrega. Asimismo, se verifica la gestión del catálogo de unidades vehiculares del transportista.
+
+![Confirmación de entrega y gestión de vehículos](../assets/images/sprint3/DeliveryConfirmationAndFleet.png)
+
+*Figura. Pantalla de confirmación de entrega exitosa y resumen de unidades de transporte habilitadas.*
+
+**Video de navegación del Sprint 3:**
+- Título: LoadMatch — Sprint 3 Execution Demo | Web Services & Integration
+- Enlace: https://youtu.be/kLmN98xOpQ2
+- Duración: 4 minutos y 45 segundos, cumpliendo con el intervalo recomendado de 3 a 5 minutos para la sustentación del sprint review.
+- Disponibilidad: Video configurado como No listado en YouTube para acceso directo del docente y evaluadores.
+
+![Captura del video de navegación del Sprint 3 con duración visible](../assets/images/sprint3/Sprint3Video.png)
+
+*Figura. Reproductor del video de demostración del Sprint 3 con la ejecución del flujo integrado de servicios web.*
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
