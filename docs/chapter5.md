@@ -1196,4 +1196,29 @@ La Landing Page continúa publicada en GitHub Pages sobre la rama main, permitie
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
 
-<!-- PENDIENTE: capturas de Contributors de los tres repositorios y commits representativos por integrante, al cierre del sprint. -->
+Durante el Sprint 3, los cinco integrantes del equipo colaboraron activamente en el diseño y codificación de los bounded contexts del backend y en su integración con el frontend. La distribución de responsabilidades se organizó conforme a la arquitectura DDD/CQRS, asegurando que cada integrante lidere agregados, entidades, comandos, consultas y controladores específicos.
+
+| Integrante | Usuario GitHub | Rol y bounded contexts liderados | Confirmaciones representativas |
+| --- | --- | --- | --- |
+| Harold Fauskorp Benigno Montero | Harold-11 | Arquitectura base Spring Boot, configuración OpenAPI/Swagger, Project Loom Virtual Threads, Bounded Context de IAM (Tokens, Users, Seeder) y vistas de inicio de sesión en frontend. | 32d69d2, 0e9661a, e054a63, 05c920b, df37d43 |
+| Jean Fabio Noriega Collado | dumbaskidd | Bounded Context de Profiles (registro y gestión de empresas y transportistas, agregados Shipper y Carrier, Value Objects de RUC, dirección y teléfono) y consultas por User ID. | 880bf32, f43ef79, 59716e5, d20a8a5, 5706a89 |
+| Ismael Sebastian Simon Calderon | Mayel-dev | Bounded Context de Freight (agregado LoadRequest, objetos de valor de ruta y dimensiones, endpoints de cargas), actualización de estados de viaje y conexión de producción a Render. | f9e6aa0, 762ce21, 93420f9, c9a129c, 47b3316 |
+| Christoper Steven Rivas Castillo | CODERT0PH | Bounded Context de Trips (agregado Trip, máquina de estados, aceptación de fletes, confirmación de entregas, job de confirmaciones desatendidas y repositorios JPA). | 379ce8c, 3c5d182, ecf0fa1, ab1f389, 9b23627 |
+| Marco Antonio Collantes Artola | Markollantes2307 | Bounded Context de Fleet (Vehicles y VehicleTypes, gestión de flota), Bounded Context de Matching (fórmula de Haversine y AvailableLoadsController) y fusiones de Pull Requests. | 5a4bda1, 107edf7, 8283b8c, c4dd0e8, ed4a7de |
+
+Historial de confirmaciones de los repositorios:
+- Repositorio de Web Services: https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-backend-application/commits/develop/
+- Repositorio de Web Application: https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/commits/develop/
+- Repositorio de Landing Page: https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page/commits/main/
+
+**Analíticas de colaboración del repositorio Web Services:**
+
+Las siguientes capturas registran las métricas de participación de los cinco integrantes en el repositorio del backend a lo largo del Sprint 3, acreditando la actividad técnica y la integración de ramas feature a través de Pull Requests.
+
+![Gráfico de contribuidores del repositorio de Web Services](../assets/images/sprint3/BackendContributors.png)
+
+*Figura. Registro de contribuidores de GitHub en el repositorio Loadmatch-backend-application evidenciando la actividad de los integrantes.*
+
+![Red de integración de ramas en el repositorio de Web Services](../assets/images/sprint3/BackendNetworkGraph.png)
+
+*Figura. Gráfico de red de Git en GitHub mostrando el flujo de trabajo GitFlow con las ramas feature integradas en develop.*
