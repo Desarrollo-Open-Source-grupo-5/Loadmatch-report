@@ -1129,7 +1129,70 @@ A continuación se detallan los endpoints desarrollados y documentados para el S
 
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
-<!-- PENDIENTE: configuración y capturas del despliegue de Web Services y base de datos, y de las nuevas versiones de Web Application y Landing Page. -->
+Para el cierre del Sprint 3 se consolidó una arquitectura de despliegue compuesta por tres productos en la nube, sustituyendo el mock de desarrollo por los servicios web reales en un entorno de ejecución continuo:
+
+| Producto | Entorno de despliegue | URL de acceso público | Estado de publicación |
+| --- | --- | --- | --- |
+| Landing Page | GitHub Pages | https://desarrollo-open-source-grupo-5.github.io/Loadmatch-landing-page/ | Activo (Live) |
+| Web Application | Vercel | https://loadmatch-frontend-application.vercel.app/ | Activo (Live) |
+| Web Services (API) | Render | https://loadmatch-backend-application.onrender.com/ | Activo (Live) |
+| Base de Datos Relacional | Render PostgreSQL | Host interno gestionado / Puerto 5432 / DB: loadmatch | Activo (Live) |
+
+**1. Despliegue de los Web Services y PostgreSQL en Render**
+
+El backend se encuentra empaquetado en una imagen de contenedor Docker utilizando una compilación multi-etapa basada en Eclipse Temurin con Java 27. El servicio web se despliega en Render conectado a una instancia administrada de PostgreSQL 16.
+
+Configuración técnica de producción:
+```text
+Runtime: Docker
+Build Strategy: Multi-stage Dockerfile (Maven 3.9 + OpenJDK 27)
+Port: 8080
+Database Engine: PostgreSQL 16
+Active Profile: prod
+Virtual Threads: spring.threads.virtual.enabled=true
+```
+
+Variables de entorno configuradas en Render:
+- DATABASE_URL: Host privado del servidor PostgreSQL provisto por Render.
+- DATABASE_PORT: 5432
+- DATABASE_NAME: loadmatch
+- DATABASE_USER: loadmatch_user
+- DATABASE_PASSWORD: [Almacenado de forma segura en las variables de entorno del servicio]
+- SPRING_PROFILES_ACTIVE: prod
+- LOADMATCH_SEED_ENABLED: true (habilita usuarios de prueba iniciales para la corrección y sustentación)
+
+![Servicio de Web Services de LoadMatch activo en Render](../assets/images/sprint3/RenderBackendLive.png)
+
+*Figura. Panel de control de Render mostrando el servicio backend loadmatch-backend-application en estado Live con despliegue automático activo.*
+
+![Instancia de base de datos PostgreSQL activa en Render](../assets/images/sprint3/RenderPostgresLive.png)
+
+*Figura. Panel de la base de datos PostgreSQL en Render con conexiones y almacenamiento operativo.*
+
+**2. Despliegue de la Web Application en Vercel**
+
+La Web Application se mantiene desplegada en Vercel sobre la rama develop y main, actualizada mediante el commit 47b3316 para redirigir todas las peticiones HTTP desde el mock hacia la URL pública del backend en Render.
+
+Configuración reproducible del frontend:
+```text
+Framework Preset: Angular
+Build Command: npm run build
+Output Directory: dist/loadmatch-frontend-application/browser
+Environment Variables: API_BASE_URL=https://loadmatch-backend-application.onrender.com/api/v1
+SPA Rewrite: /(.*) -> /index.html
+```
+
+![Despliegue del Frontend en Vercel conectado a la API de Render](../assets/images/sprint3/VercelFrontendLive.png)
+
+*Figura. Panel de producción de Vercel confirmando el despliegue exitoso y enlace con la API real.*
+
+**3. Despliegue de la Landing Page en GitHub Pages**
+
+La Landing Page continúa publicada en GitHub Pages sobre la rama main, permitiendo a los visitantes conocer la propuesta de valor y acceder a la Web Application a través de los llamados a la acción (CTA) configurados con la dirección productiva de Vercel.
+
+![Landing Page publicada en GitHub Pages con flujo de GitHub Actions](../assets/images/sprint3/LandingGitHubPagesDeployment.png)
+
+*Figura. Configuración y ejecución exitosa del flujo de despliegue de GitHub Pages para la Landing Page.*
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
 
