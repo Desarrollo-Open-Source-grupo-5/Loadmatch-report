@@ -929,25 +929,25 @@ El Sprint Backlog 3 se centra en reemplazar la API simulada por los Web Services
 
 **Verificación directa de Jira:** 25/10/2026, zona America/Lima. Se consultaron el sprint "Sprint 3 - Web Services" del tablero CL (2), sus 16 historias y sus 19 subtareas.
 
-| User Story Id | Jira key | Story Title | Story Points | Assigned To | Status |
-| --- | --- | --- | ---: | --- | --- |
-| US15 | US-3 | Autenticación basada en JWT | 3 | Harold Benigno (HM) | Tareas por hacer |
-| US03 | US-17 | Inicio de sesión | 2 | Harold Benigno (HM) | Tareas por hacer |
-| US29 | US-49 | Cierre de sesión | 1 | Harold Benigno (HM) | Tareas por hacer |
-| US46 | US-66 | Rutas protegidas por rol | 3 | Harold Benigno (HM) | Tareas por hacer |
-| US47 | US-67 | Interceptor HTTP de autenticación y errores | 3 | Harold Benigno (HM) | Tareas por hacer |
-| US01 | US-2 | Registro de Empresa | 3 | Jean Noriega (JC) | Tareas por hacer |
-| US02 | US-4 | Registro de Transportista | 3 | Jean Noriega (JC) | Tareas por hacer |
-| US31 | US-51 | Gestión del perfil de empresa | 2 | Jean Noriega (JC) | Tareas por hacer |
-| US32 | US-52 | Gestión del perfil de transportista | 2 | Jean Noriega (JC) | Tareas por hacer |
-| US16 | US-12 | Endpoint de creación de solicitud de carga | 3 | Ismael Simon (IS) | Tareas por hacer |
-| US08 | US-13 | Actualización de estado del viaje | 3 | Ismael Simon (IS) | Tareas por hacer |
-| US50 | US-70 | Pruebas unitarias y despliegue de la Web Application | 5 | Ismael Simon (IS) | Tareas por hacer |
-| US07 | US-11 | Aceptación de viaje | 5 | Christoper Rivas (CC) | Tareas por hacer |
-| US56 | US-76 | Confirmación de entrega por la empresa | 3 | Christoper Rivas (CC) | Tareas por hacer |
-| US17 | US-9 | Endpoint de matching geoespacial | 5 | Marco Collantes (MA) | Tareas por hacer |
-| US33 | US-53 | Gestión de vehículos del transportista | 3 | Marco Collantes (MA) | Tareas por hacer |
-| | | **Total** | **49** | | |
+| User Story Id | Jira key | Story Title | Story Points | Estimation (Hours) | Assigned To | Status |
+| --- | --- | --- | ---: | ---: | --- | --- |
+| US15 | US-3 | Autenticación basada en JWT | 3 | 8 h | Harold Benigno (HM) | En progreso |
+| US03 | US-17 | Inicio de sesión | 2 | 6 h | Harold Benigno (HM) | En progreso |
+| US29 | US-49 | Cierre de sesión | 1 | 4 h | Harold Benigno (HM) | En progreso |
+| US46 | US-66 | Rutas protegidas por rol | 3 | 4 h | Harold Benigno (HM) | Por hacer |
+| US47 | US-67 | Interceptor HTTP de autenticación y errores | 3 | 4 h | Harold Benigno (HM) | Por hacer |
+| US01 | US-2 | Registro de Empresa | 3 | 6 h | Jean Noriega (JC) | En progreso |
+| US02 | US-4 | Registro de Transportista | 3 | 6 h | Jean Noriega (JC) | En progreso |
+| US31 | US-51 | Gestión del perfil de empresa | 2 | 5 h | Jean Noriega (JC) | Finalizado |
+| US32 | US-52 | Gestión del perfil de transportista | 2 | 5 h | Jean Noriega (JC) | Finalizado |
+| US16 | US-12 | Endpoint de creación de solicitud de carga | 3 | 6 h | Ismael Simon (IS) | Finalizado |
+| US08 | US-13 | Actualización de estado del viaje | 3 | 6 h | Ismael Simon (IS) | Finalizado |
+| US50 | US-70 | Pruebas unitarias y despliegue de la Web Application | 5 | 8 h | Ismael Simon (IS) | En progreso |
+| US07 | US-11 | Aceptación de viaje | 5 | 8 h | Christoper Rivas (CC) | Finalizado |
+| US56 | US-76 | Confirmación de entrega por la empresa | 3 | 6 h | Christoper Rivas (CC) | Finalizado |
+| US17 | US-9 | Endpoint de matching geoespacial | 5 | 8 h | Marco Collantes (MA) | Finalizado |
+| US33 | US-53 | Gestión de vehículos del transportista | 3 | 6 h | Marco Collantes (MA) | Finalizado |
+| | | **Total** | **44** | **96 h** | | |
 
 **Subtareas del Sprint Backlog**
 
