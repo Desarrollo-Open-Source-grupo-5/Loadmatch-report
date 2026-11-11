@@ -955,25 +955,25 @@ El Sprint Backlog 3 se centra en reemplazar la API simulada por los Web Services
 
 | User Story Id | Work Item/Task Id | Work Item/Task Title | Estimation (Hours) | Assigned To | Status |
 | --- | --- | --- | ---: | --- | --- |
-| US15 | T34 / US-99 | Inicialización del proyecto Spring Boot con PostgreSQL y estructura por bounded context | _Por estimar_ | Harold Benigno (HM) | Tareas por hacer |
-| US15 | T35 / US-100 | Configuración de springdoc-openapi (Swagger UI) para la documentación de la API | _Por estimar_ | Harold Benigno (HM) | Tareas por hacer |
-| US15 | T36 / US-101 | Implementación de la autenticación JWT con Spring Security | _Por estimar_ | Harold Benigno (HM) | Tareas por hacer |
-| US03 | T37 / US-102 | Implementación del endpoint de inicio de sesión y la vista de login | _Por estimar_ | Harold Benigno (HM) | Tareas por hacer |
-| US29 | T38 / US-103 | Implementación del cierre de sesión en la Web Application | _Por estimar_ | Harold Benigno (HM) | Tareas por hacer |
-| US46 | T39 / US-104 | Implementación de guards de rutas por rol | _Por estimar_ | Harold Benigno (HM) | Tareas por hacer |
-| US47 | T40 / US-105 | Implementación del interceptor HTTP de token y manejo de errores | _Por estimar_ | Harold Benigno (HM) | Tareas por hacer |
-| US01 | T41 / US-106 | Implementación del registro de empresa (endpoint y formulario) | _Por estimar_ | Jean Noriega (JC) | Tareas por hacer |
-| US02 | T42 / US-107 | Implementación del registro de transportista (endpoint y formulario) | _Por estimar_ | Jean Noriega (JC) | Tareas por hacer |
-| US31 | T43 / US-108 | Implementación de la gestión del perfil de empresa | _Por estimar_ | Jean Noriega (JC) | Tareas por hacer |
-| US32 | T44 / US-109 | Implementación de la gestión del perfil de transportista | _Por estimar_ | Jean Noriega (JC) | Tareas por hacer |
-| US16 | T45 / US-110 | Implementación del endpoint POST de solicitudes de carga e integración con el formulario | _Por estimar_ | Ismael Simon (IS) | Tareas por hacer |
-| US08 | T46 / US-111 | Implementación de la actualización de estado del viaje | _Por estimar_ | Ismael Simon (IS) | Tareas por hacer |
-| US50 | T47 / US-112 | Configuración de pruebas unitarias y flujo de GitHub Actions | _Por estimar_ | Ismael Simon (IS) | Tareas por hacer |
-| US50 | T48 / US-113 | Despliegue de los Web Services y la base de datos PostgreSQL | _Por estimar_ | Ismael Simon (IS) | Tareas por hacer |
-| US07 | T49 / US-114 | Implementación de la aceptación de viaje por el transportista | _Por estimar_ | Christoper Rivas (CC) | Tareas por hacer |
-| US56 | T50 / US-115 | Implementación de la confirmación de entrega por la empresa | _Por estimar_ | Christoper Rivas (CC) | Tareas por hacer |
-| US17 | T51 / US-116 | Implementación del endpoint de matching geoespacial con la fórmula de Haversine | _Por estimar_ | Marco Collantes (MA) | Tareas por hacer |
-| US33 | T52 / US-117 | Implementación de la gestión de vehículos del transportista | _Por estimar_ | Marco Collantes (MA) | Tareas por hacer |
+| US15 | T34 / US-99 | Inicialización del proyecto Spring Boot con PostgreSQL y estructura por bounded context | 8 h | Harold Benigno (HM) | Finalizado |
+| US15 | T35 / US-100 | Configuración de springdoc-openapi (Swagger UI) para la documentación de la API | 4 h | Harold Benigno (HM) | Finalizado |
+| US15 | T36 / US-101 | Implementación de la autenticación JWT con Spring Security | 8 h | Harold Benigno (HM) | En progreso |
+| US03 | T37 / US-102 | Implementación del endpoint de inicio de sesión y la vista de login | 5 h | Harold Benigno (HM) | En progreso |
+| US29 | T38 / US-103 | Implementación del cierre de sesión en la Web Application | 4 h | Harold Benigno (HM) | En progreso |
+| US46 | T39 / US-104 | Implementación de guards de rutas por rol | 4 h | Harold Benigno (HM) | Por hacer |
+| US47 | T40 / US-105 | Implementación del interceptor HTTP de token y manejo de errores | 4 h | Harold Benigno (HM) | Por hacer |
+| US01 | T41 / US-106 | Implementación del registro de empresa (endpoint y formulario) | 6 h | Jean Noriega (JC) | En progreso |
+| US02 | T42 / US-107 | Implementación del registro de transportista (endpoint y formulario) | 6 h | Jean Noriega (JC) | En progreso |
+| US31 | T43 / US-108 | Implementación de la gestión del perfil de empresa | 5 h | Jean Noriega (JC) | Finalizado |
+| US32 | T44 / US-109 | Implementación de la gestión del perfil de transportista | 5 h | Jean Noriega (JC) | Finalizado |
+| US16 | T45 / US-110 | Implementación del endpoint POST de solicitudes de carga e integración con el formulario | 6 h | Ismael Simon (IS) | Finalizado |
+| US08 | T46 / US-111 | Implementación de la actualización de estado del viaje | 6 h | Ismael Simon (IS) | Finalizado |
+| US50 | T47 / US-112 | Configuración de pruebas unitarias y flujo de GitHub Actions | 6 h | Ismael Simon (IS) | Por hacer |
+| US50 | T48 / US-113 | Despliegue de los Web Services y la base de datos PostgreSQL | 8 h | Ismael Simon (IS) | Finalizado |
+| US07 | T49 / US-114 | Implementación de la aceptación de viaje por el transportista | 8 h | Christoper Rivas (CC) | Finalizado |
+| US56 | T50 / US-115 | Implementación de la confirmación de entrega por la empresa | 6 h | Christoper Rivas (CC) | Finalizado |
+| US17 | T51 / US-116 | Implementación del endpoint de matching geoespacial con la fórmula de Haversine | 8 h | Marco Collantes (MA) | Finalizado |
+| US33 | T52 / US-117 | Implementación de la gestión de vehículos del transportista | 6 h | Marco Collantes (MA) | Finalizado |
 
 Cada subtarea está asignada al mismo integrante que su historia, a diferencia del Sprint 2, donde 10 pares presentaban responsables distintos. La documentación OpenAPI de cada endpoint forma parte de la subtarea que lo implementa; T35 solo configura la herramienta.
 
