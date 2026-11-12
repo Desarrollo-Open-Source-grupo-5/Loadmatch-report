@@ -1024,9 +1024,14 @@ Durante el Sprint 3 se ejecutó la validación interactiva de las funcionalidade
 
 La vista de autenticación permite que empresas y transportistas ingresen con sus credenciales, validando la identidad contra el endpoint de tokens y redirigiendo al dashboard correspondiente según el rol del usuario.
 
-![Inicio de sesión en la Web Application](../assets/images/sprint3/SignInView.png)
 
-*Figura. Formulario de inicio de sesión de LoadMatch con validación de credenciales y redirección por rol.*
+<p align="center">
+  <img src="../assets/images/sprint-review/Inicio de sesión en la Web Application.png"
+       alt="Inicio sesion"
+       width="800">
+  <br>
+  <em>Figura. Formulario de inicio de sesión de LoadMatch con validación de credenciales y redirección por rol.</em>
+</p>
 
 **2. Publicación de solicitud de carga sobre la API real**
 
