@@ -1035,9 +1035,16 @@ La vista de autenticación permite que empresas y transportistas ingresen con su
 
 **2. Publicación de solicitud de carga sobre la API real**
 
-La pantalla permite que la empresa registre los datos del flete (origen, destino, dimensiones, peso y presupuesto ofrecido), enviando la petición POST al endpoint de solicitudes de carga con persistencia en PostgreSQL.
+La pantalla permite que la empresa registre los datos del flete (origen, destino, dimensiones, peso y presupuesto ofrecido), enviando la petición POST al endpoint de solicitudes de carga con persistencia en PostgreSQL.g
 
-![Publicación de solicitud de carga conectada a la API real](../assets/images/sprint3/PublishLoadRequestRealApi.png)
+<p align="center">
+  <img src="../assets/images/sprint-review/Publicacion solicitud de carga conectada a la API.png"
+       alt="Fotmpubli"
+       width="800">
+  <br>
+  <em>Figura. Formulario de publicación de solicitud de flete con validación de objetos de valor en backend.</em>
+</p>
+
 
 *Figura. Formulario de publicación de solicitud de flete con validación de objetos de valor en backend.*
 
