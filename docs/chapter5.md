@@ -1052,9 +1052,14 @@ La pantalla permite que la empresa registre los datos del flete (origen, destino
 
 La vista del transportista presenta los fletes publicados en Lima, calculando la distancia en kilómetros entre las coordenadas de la unidad y el punto de recojo mediante el servicio de matching con fórmula de Haversine.
 
-![Búsqueda geoespacial de fletes con cálculo de distancia](../assets/images/sprint3/GeospatialMatchingLoads.png)
 
-*Figura. Listado de fletes disponibles ordenados por proximidad geográfica con el cálculo del radio de cobertura.*
+<p align="center">
+  <img src="../assets/images/sprint-review/Listado de fletes.png"
+       alt="Fleteslista"
+       width="800">
+  <br>
+  <em>Figura. Listado de fletes disponibles ordenados por proximidad geográfica con el cálculo del radio de cobertura.</em>
+</p>
 
 **4. Aceptación de viaje por el transportista**
 
