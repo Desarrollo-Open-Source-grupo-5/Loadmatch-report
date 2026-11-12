@@ -1077,9 +1077,18 @@ El transportista visualiza el detalle técnico del flete, los requisitos de carg
 
 La interfaz de trazabilidad permite que el transportista avance las etapas operativas del servicio (rumbo al recojo, en punto de recojo, en tránsito y entregado), actualizando la línea de tiempo en el dashboard de la empresa.
 
-![Actualización de estados de viaje e historial](../assets/images/sprint3/TripTrackingTimeline.png)
 
-*Figura. Línea de tiempo de seguimiento de viaje con actualización del historial de estados.*
+<p align="center">
+  <img src="../assets/images/sprint-review/Actualizacion pedido recojo2.png"
+       alt="Actualización del pedido de recojo - Vista 2"
+       width="800">
+  <br>
+  <img src="../assets/images/sprint-review/Actualizacion pedido recojo1.png"
+       alt="Actualización del pedido de recojo - Vista 1"
+       width="800">
+  <br>
+  <em>Figura. Línea de tiempo de seguimiento de viaje con actualización del historial de estados.</em>
+</p>
 
 **6. Confirmación de entrega por la empresa y gestión de flota**
 
