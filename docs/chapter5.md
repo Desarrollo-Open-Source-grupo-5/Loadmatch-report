@@ -1046,8 +1046,6 @@ La pantalla permite que la empresa registre los datos del flete (origen, destino
 </p>
 
 
-*Figura. Formulario de publicación de solicitud de flete con validación de objetos de valor en backend.*
-
 **3. Búsqueda geoespacial de fletes disponibles**
 
 La vista del transportista presenta los fletes publicados en Lima, calculando la distancia en kilómetros entre las coordenadas de la unidad y el punto de recojo mediante el servicio de matching con fórmula de Haversine.
@@ -1065,9 +1063,15 @@ La vista del transportista presenta los fletes publicados en Lima, calculando la
 
 El transportista visualiza el detalle técnico del flete, los requisitos de carga y procede a aceptar el servicio, generando la entidad Trip en el backend y asignando su unidad de transporte.
 
-![Detalle y aceptación de viaje por transportista](../assets/images/sprint3/TripAcceptanceView.png)
 
-*Figura. Vista de confirmación y aceptación de viaje, actualizando el estado de la carga a asignada.*
+<p align="center">
+  <img src="../assets/images/sprint-review/Aceptacion viaje tranportista.png"
+       alt="Aceptacioncarga"
+       width="800">
+  <br>
+  <em>Figura. Vista de confirmación y aceptación de viaje, actualizando el estado de la carga a asignada.</em>
+</p>
+
 
 **5. Seguimiento del viaje y actualización de estados**
 
