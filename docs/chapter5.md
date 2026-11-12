@@ -1094,9 +1094,14 @@ La interfaz de trazabilidad permite que el transportista avance las etapas opera
 
 La empresa valida la llegada de la carga en destino mediante el endpoint de confirmación de entrega. Asimismo, se verifica la gestión del catálogo de unidades vehiculares del transportista.
 
-![Confirmación de entrega y gestión de vehículos](../assets/images/sprint3/DeliveryConfirmationAndFleet.png)
+<p align="center">
+  <img src="../assets/images/sprint-review/Confirmación de entrega y gestión de vehículos.png"
+       alt="Aceptacioncarga"
+       width="800">
+  <br>
+  <em>Figura. Pantalla de confirmación de entrega exitosa y resumen de unidades de transporte habilitadas.</em>
+</p>
 
-*Figura. Pantalla de confirmación de entrega exitosa y resumen de unidades de transporte habilitadas.*
 
 **Video de navegación del Sprint 3:**
 - Título: LoadMatch — Sprint 3 Execution Demo | Web Services & Integration
