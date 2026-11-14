@@ -1,4 +1,3 @@
-
 # Capítulo V: Product Implementation, Validation & Deployment
 
 LoadMatch es el producto de CargoLink Labs orientado a conectar empresas que necesitan trasladar mercadería con transportistas que disponen de vehículos compatibles. Este capítulo establece la configuración del desarrollo, la implementación por sprints y los mecanismos de validación y despliegue, manteniendo trazabilidad con los segmentos del Capítulo I, las necesidades del Capítulo II, las User Stories del Capítulo III y el diseño del Capítulo IV.
@@ -13,16 +12,16 @@ La Gestión de Configuración de Software (SCM) en el proyecto LoadMatch estable
 
 Para mantener la consistencia en el entorno de desarrollo y evitar discrepancias de configuración entre los ingenieros de software, se ha estandarizado el siguiente ecosistema de herramientas nativas y de gestión:
 
-| Dominio | Herramienta / Estándar | Propósito Técnico | Tipo de Acceso / Ruta | Imagen |
-| --- | --- | --- | --- | --- |
-| **Project Management** | Jira Software | Gestión del Product Backlog, Sprints y estimación en Story Points para el seguimiento ágil. | https://www.atlassian.com/es/software/jira | <img src="../assets/images/logos/LOGOJIRA.png" width="100" height="50"> |
-| **Product UX/UI Design** | Figma | Creación de wireframes, prototipos interactivos y diseño del sistema de componentes visuales. | https://www.figma.com/es-la/ | <img src="../assets/images/logos/LOGOFIGMA.png" width="100" height="50"> |
-| **Frontend Structure** | Semantic HTML5 | Estructuración semántica del Document Object Model (DOM) para optimización de accesibilidad y SEO. | Estándar W3C | <img src="../assets/images/logos/LOGOHTML5.png" width="100" height="50"> |
-| **Frontend Styling** | CSS3 (Grid/Flexbox) | Diseño responsivo (Mobile-First), animaciones y maquetación sin dependencias de frameworks externos. | Estándar W3C | <img src="../assets/images/logos/LOGOCSS3.png" width="100" height="50"> |
-| **Frontend Logic** | Vanilla JavaScript (ES6+) | Manipulación del DOM, validación de formularios asíncrona y control de eventos interactivos. | Estándar ECMAScript | <img src="../assets/images/logos/LOGOJS.png" width="100" height="50"> |
-| **IDE** | Visual Studio Code | Edición de código con extensiones de formateo (Prettier) y análisis estático de JS (ESLint). | https://code.visualstudio.com/ | <img src="../assets/images/logos/VSLOGO.png" width="100" height="50"> |
-| **Version Control** | Git + GitHub | Gestión distribuida del código fuente, flujos de integración y revisión de pares (Pull Requests). | https://github.com/ | <img src="../assets/images/logos/GITLOGO.png" width="100" height="50"> |
-| **Comunicación** | Google Meet | Videollamadas para coordinación de equipo, reuniones remotas y presentaciones en tiempo real. | https://meet.google.com/ | <img src="../assets/images/logos/GMEETLOGO.png" width="100" height="50"> |
+| Dominio                  | Herramienta / Estándar    | Propósito Técnico                                                                                    | Tipo de Acceso / Ruta                      | Imagen                                                                   |
+| ------------------------ | ------------------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------ | ------------------------------------------------------------------------ |
+| **Project Management**   | Jira Software             | Gestión del Product Backlog, Sprints y estimación en Story Points para el seguimiento ágil.          | https://www.atlassian.com/es/software/jira | <img src="../assets/images/logos/LOGOJIRA.png" width="100" height="50">  |
+| **Product UX/UI Design** | Figma                     | Creación de wireframes, prototipos interactivos y diseño del sistema de componentes visuales.        | https://www.figma.com/es-la/               | <img src="../assets/images/logos/LOGOFIGMA.png" width="100" height="50"> |
+| **Frontend Structure**   | Semantic HTML5            | Estructuración semántica del Document Object Model (DOM) para optimización de accesibilidad y SEO.   | Estándar W3C                               | <img src="../assets/images/logos/LOGOHTML5.png" width="100" height="50"> |
+| **Frontend Styling**     | CSS3 (Grid/Flexbox)       | Diseño responsivo (Mobile-First), animaciones y maquetación sin dependencias de frameworks externos. | Estándar W3C                               | <img src="../assets/images/logos/LOGOCSS3.png" width="100" height="50">  |
+| **Frontend Logic**       | Vanilla JavaScript (ES6+) | Manipulación del DOM, validación de formularios asíncrona y control de eventos interactivos.         | Estándar ECMAScript                        | <img src="../assets/images/logos/LOGOJS.png" width="100" height="50">    |
+| **IDE**                  | Visual Studio Code        | Edición de código con extensiones de formateo (Prettier) y análisis estático de JS (ESLint).         | https://code.visualstudio.com/             | <img src="../assets/images/logos/VSLOGO.png" width="100" height="50">    |
+| **Version Control**      | Git + GitHub              | Gestión distribuida del código fuente, flujos de integración y revisión de pares (Pull Requests).    | https://github.com/                        | <img src="../assets/images/logos/GITLOGO.png" width="100" height="50">   |
+| **Comunicación**         | Google Meet               | Videollamadas para coordinación de equipo, reuniones remotas y presentaciones en tiempo real.        | https://meet.google.com/                   | <img src="../assets/images/logos/GMEETLOGO.png" width="100" height="50"> |
 
 Para Sprint 2 se incorporaron Angular 22, Angular Material, TypeScript, RxJS y ngx-translate para las vistas y la internacionalización; JSON Server 0.17 para la API simulada; y Vercel y Render para publicar frontend y mock, respectivamente. Las dependencias y comandos reproducibles se mantienen en el `package.json` del frontend. El entorno local se inicia con `npm ci`, `npm run api` y, en otra terminal del mismo proyecto, `npm start`.
 
@@ -32,12 +31,12 @@ La gestión del código fuente de LoadMatch se realiza mediante **Git** como sis
 
 Los repositorios utilizados por el equipo son los siguientes:
 
-| Repositorio | Producto |
-| --- | --- |
-| https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page | Landing Page |
-| https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application | Frontend Web Application |
-| https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-backend-application | Web Services (RESTful API) |
-| https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report | Informe y documentación del proyecto |
+| Repositorio                                                                      | Producto                             |
+| -------------------------------------------------------------------------------- | ------------------------------------ |
+| https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page         | Landing Page                         |
+| https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application | Frontend Web Application             |
+| https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-backend-application  | Web Services (RESTful API)           |
+| https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-report               | Informe y documentación del proyecto |
 
 Estos enlaces identifican los repositorios declarados.
 
@@ -49,15 +48,15 @@ La estructura de ramas definida es la siguiente:
 
 **GitFlow Workflow**
 
-| Rama | Propósito | Origen e integración |
-| --- | --- | --- |
-| `main` | Contiene las versiones estables y aprobadas del proyecto. | Recibe integraciones desde `develop` cuando se valida una entrega final. |
-| `develop` | Rama de integración donde se consolidan las funcionalidades de los capítulos. | Recibe las ramas `feature/*` y se integra en `main` al finalizar un ciclo. |
-| `feature/Chapter1` | Implementación de entregables e imágenes del Capítulo I (carpeta `assets/images`). | Se crea como rama independiente y apunta a `develop` mediante Pull Request. |
-| `feature/Chapter2` | Implementación de entregables e imágenes del Capítulo II (carpeta `assets/images`). | Se crea como rama independiente y apunta a `develop` mediante Pull Request. |
+| Rama               | Propósito                                                                            | Origen e integración                                                        |
+| ------------------ | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
+| `main`             | Contiene las versiones estables y aprobadas del proyecto.                            | Recibe integraciones desde `develop` cuando se valida una entrega final.    |
+| `develop`          | Rama de integración donde se consolidan las funcionalidades de los capítulos.        | Recibe las ramas `feature/*` y se integra en `main` al finalizar un ciclo.  |
+| `feature/Chapter1` | Implementación de entregables e imágenes del Capítulo I (carpeta `assets/images`).   | Se crea como rama independiente y apunta a `develop` mediante Pull Request. |
+| `feature/Chapter2` | Implementación de entregables e imágenes del Capítulo II (carpeta `assets/images`).  | Se crea como rama independiente y apunta a `develop` mediante Pull Request. |
 | `feature/Chapter3` | Implementación de entregables e imágenes del Capítulo III (carpeta `assets/images`). | Se crea como rama independiente y apunta a `develop` mediante Pull Request. |
-| `feature/Chapter4` | Implementación de entregables e imágenes del Capítulo IV (carpeta `assets/images`). | Se crea como rama independiente y apunta a `develop` mediante Pull Request. |
-| `feature/Chapter5` | Implementación de entregables e imágenes del Capítulo V (carpeta `assets/images`). | Se crea como rama independiente y apunta a `develop` mediante Pull Request. |
+| `feature/Chapter4` | Implementación de entregables e imágenes del Capítulo IV (carpeta `assets/images`).  | Se crea como rama independiente y apunta a `develop` mediante Pull Request. |
+| `feature/Chapter5` | Implementación de entregables e imágenes del Capítulo V (carpeta `assets/images`).   | Se crea como rama independiente y apunta a `develop` mediante Pull Request. |
 
 El GitFlow Workflow es una estrategia de organización de ramas en Git que define cómo se crean, nombran y fusionan las ramas dentro de un proyecto.
 
@@ -90,7 +89,7 @@ docs(sprint1): add execution evidence
 
 El equipo establece las convenciones de codificación que se aplicarán durante el desarrollo de **LoadMatch** para mantener un código legible, consistente y fácil de mantener. Estas directrices comprenden **HTML, CSS y JavaScript vanilla** para la Landing Page, **TypeScript con Angular** para la Web Application y **Java con Spring Boot** para los Web Services, en correspondencia con el stack tecnológico del curso y la arquitectura definida en el Capítulo IV.
 
-Como regla transversal, los identificadores y comentarios del código se redactarán en **inglés**, manteniendo correspondencia con el *Ubiquitous Language* del Capítulo II. Los textos visibles para los usuarios respetarán el idioma y el tono de comunicación definidos para el producto.
+Como regla transversal, los identificadores y comentarios del código se redactarán en **inglés**, manteniendo correspondencia con el _Ubiquitous Language_ del Capítulo II. Los textos visibles para los usuarios respetarán el idioma y el tono de comunicación definidos para el producto.
 
 Las convenciones se documentarán en los repositorios correspondientes. Se utilizará **.editorconfig** para establecer reglas comunes de indentación y codificación, **Prettier** para el formato de los archivos compatibles y **ESLint** para el análisis estático de JavaScript y TypeScript. Las configuraciones deberán mantenerse bajo control de versiones para que puedan ser utilizadas por todos los integrantes.
 
@@ -98,23 +97,24 @@ Las convenciones se documentarán en los repositorios correspondientes. Se utili
 
 #### Convenciones por lenguaje
 
-| Lenguaje | Convenciones del proyecto |
-| --- | --- |
-| **HTML5** | Utilizar elementos semánticos como `header`, `nav`, `main`, `section` y `footer`. Mantener jerarquía coherente de encabezados, asociar etiquetas con controles de formulario e incluir textos alternativos apropiados para imágenes. Declarar idioma con `lang`. Identificadores descriptivos en `kebab-case`. |
-| **CSS3** | Aplicar metodología **BEM** para nombrar clases (ej. `contact-form__input`, `contact-form__button--disabled`). Centralizar colores, tipografías y espaciados mediante variables CSS. Usar **Flexbox/Grid** y media queries para adaptación. Evitar estilos duplicados y selectores excesivamente específicos. |
-| **JavaScript vanilla** | Usar `const` por defecto y `let` cuando exista reasignación. Variables y funciones en `camelCase`. Comparación estricta (`===`). Eventos con `addEventListener`. Separar lógica de HTML y manejar estados de carga, éxito y error en operaciones asíncronas. |
+| Lenguaje                   | Convenciones del proyecto                                                                                                                                                                                                                                                                                                  |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **HTML5**                  | Utilizar elementos semánticos como `header`, `nav`, `main`, `section` y `footer`. Mantener jerarquía coherente de encabezados, asociar etiquetas con controles de formulario e incluir textos alternativos apropiados para imágenes. Declarar idioma con `lang`. Identificadores descriptivos en `kebab-case`.             |
+| **CSS3**                   | Aplicar metodología **BEM** para nombrar clases (ej. `contact-form__input`, `contact-form__button--disabled`). Centralizar colores, tipografías y espaciados mediante variables CSS. Usar **Flexbox/Grid** y media queries para adaptación. Evitar estilos duplicados y selectores excesivamente específicos.              |
+| **JavaScript vanilla**     | Usar `const` por defecto y `let` cuando exista reasignación. Variables y funciones en `camelCase`. Comparación estricta (`===`). Eventos con `addEventListener`. Separar lógica de HTML y manejar estados de carga, éxito y error en operaciones asíncronas.                                                               |
 | **TypeScript con Angular** | Definir tipos para datos del dominio y contratos de API. Evitar `any` sin justificación. Clases e interfaces en `PascalCase`; propiedades y métodos en `camelCase`. Organizar interfaz en componentes y concentrar acceso a servicios externos en servicios inyectables. Gestionar eventos mediante mecanismos de Angular. |
-| **Java con Spring Boot** | Clases e interfaces en `PascalCase`, métodos y atributos en `camelCase`, constantes en `UPPER_SNAKE_CASE`, paquetes en minúsculas. Usar inyección de dependencias por constructores. Separar responsabilidades entre dominio, aplicación, infraestructura e interfaces. Evitar reglas de negocio en controladores REST. |
+| **Java con Spring Boot**   | Clases e interfaces en `PascalCase`, métodos y atributos en `camelCase`, constantes en `UPPER_SNAKE_CASE`, paquetes en minúsculas. Usar inyección de dependencias por constructores. Separar responsabilidades entre dominio, aplicación, infraestructura e interfaces. Evitar reglas de negocio en controladores REST.    |
 
 ---
 
 #### Indentación y formato
-- **HTML, CSS, JavaScript, TypeScript** → 2 espacios.  
-- **Java** → 4 espacios.  
-- Usar espacios en lugar de tabulaciones.  
-- Guardar archivos en **UTF-8**.  
-- Eliminar espacios al final de las líneas y mantener una nueva línea al final de cada archivo.  
-- Configuraciones versionadas para asegurar formato uniforme.  
+
+- **HTML, CSS, JavaScript, TypeScript** → 2 espacios.
+- **Java** → 4 espacios.
+- Usar espacios en lugar de tabulaciones.
+- Guardar archivos en **UTF-8**.
+- Eliminar espacios al final de las líneas y mantener una nueva línea al final de cada archivo.
+- Configuraciones versionadas para asegurar formato uniforme.
 
 Los comentarios deberán explicar decisiones, restricciones o comportamientos no evidentes. Se evitarán comentarios redundantes que repitan la instrucción.
 
@@ -122,36 +122,37 @@ Los comentarios deberán explicar decisiones, restricciones o comportamientos no
 
 #### Consistencia con el diseño
 
-| Elemento | Convención |
-| --- | --- |
-| Tipografía principal | **Inter**, con pesos y jerarquías del diseño. |
+| Elemento                  | Convención                                                         |
+| ------------------------- | ------------------------------------------------------------------ |
+| Tipografía principal      | **Inter**, con pesos y jerarquías del diseño.                      |
 | Tipografía complementaria | **Liberation Serif**, limitada a títulos y elementos de identidad. |
-| Color principal | Primary Orange: `#FE6B00`. |
-| Color de interacción | Orange Pressed: `#A04100`. |
-| Color estructural oscuro | Dark Navy: `#0B1C30`. |
-| Fondo claro | Background Light: `#F8FAFC`. |
+| Color principal           | Primary Orange: `#FE6B00`.                                         |
+| Color de interacción      | Orange Pressed: `#A04100`.                                         |
+| Color estructural oscuro  | Dark Navy: `#0B1C30`.                                              |
+| Fondo claro               | Background Light: `#F8FAFC`.                                       |
 
-- Botones con fondo **Primary Orange** → texto oscuro (contraste).  
-- Mensajes de error → texto descriptivo + indicador visual (no solo color).  
-- Tokens visuales centralizados para reutilización.  
-- En Angular, configuración de **Angular Material** deberá conservar identidad visual de LoadMatch.  
-- Adaptación a dispositivos → preservar legibilidad, navegación y accesibilidad.  
-- Controles interactivos → etiquetas comprensibles y estado de foco visible para navegación con teclado.  
+- Botones con fondo **Primary Orange** → texto oscuro (contraste).
+- Mensajes de error → texto descriptivo + indicador visual (no solo color).
+- Tokens visuales centralizados para reutilización.
+- En Angular, configuración de **Angular Material** deberá conservar identidad visual de LoadMatch.
+- Adaptación a dispositivos → preservar legibilidad, navegación y accesibilidad.
+- Controles interactivos → etiquetas comprensibles y estado de foco visible para navegación con teclado.
 
 ---
 
 #### Organización de la aplicación y los servicios
-La organización del código mantendrá correspondencia con los contextos definidos en el Capítulo IV:  
+
+La organización del código mantendrá correspondencia con los contextos definidos en el Capítulo IV:
 **IAM, Profiles, Fleet, Document Validation, Freight Publishing, Matching, Trip Execution, Payment, Rating y Contact.**
 
-- En **Angular**: archivos agrupados por funcionalidad/contexto. Componentes → presentación e interacción. Servicios → acceso a API y lógica compartida.  
-- En **Spring Boot**: separación clara de responsabilidades:  
-  - **Dominio** → entidades, objetos de valor, reglas de negocio.  
-  - **Aplicación** → coordinación de casos de uso.  
-  - **Infraestructura** → persistencia e integración con servicios externos.  
-  - **Interfaces** → controladores REST y contratos de entrada/salida.  
+- En **Angular**: archivos agrupados por funcionalidad/contexto. Componentes → presentación e interacción. Servicios → acceso a API y lógica compartida.
+- En **Spring Boot**: separación clara de responsabilidades:
+  - **Dominio** → entidades, objetos de valor, reglas de negocio.
+  - **Aplicación** → coordinación de casos de uso.
+  - **Infraestructura** → persistencia e integración con servicios externos.
+  - **Interfaces** → controladores REST y contratos de entrada/salida.
 
-La validación en formularios del navegador facilita la interacción, pero no sustituye las validaciones del backend. Los servicios deberán verificar datos y reglas de negocio antes de modificar el estado de la aplicación.  
+La validación en formularios del navegador facilita la interacción, pero no sustituye las validaciones del backend. Los servicios deberán verificar datos y reglas de negocio antes de modificar el estado de la aplicación.
 
 Los contratos de entrada/salida de la API se mantendrán separados de las entidades persistentes. Los nombres en español del diseño deberán mapearse a identificadores en inglés en la implementación. Esta correspondencia se documentará y actualizará en el Capítulo IV para conservar trazabilidad.
 
@@ -171,7 +172,7 @@ El equipo utilizará las siguientes fuentes como apoyo para definir y mantener s
 
 **Landing Page**
 
-La Landing Page se publica en GitHub Pages desde la rama `main` y la carpeta raíz (`Settings > Pages > Deploy from a branch`, rama `main`, carpeta `/ (root)`), donde se encuentra `index.html`. El archivo `.nojekyll` evita el procesamiento con Jekyll y la opción *Enforce HTTPS* permanece activa. No se usa dominio personalizado. 
+La Landing Page se publica en GitHub Pages desde la rama `main` y la carpeta raíz (`Settings > Pages > Deploy from a branch`, rama `main`, carpeta `/ (root)`), donde se encuentra `index.html`. El archivo `.nojekyll` evita el procesamiento con Jekyll y la opción _Enforce HTTPS_ permanece activa. No se usa dominio personalizado.
 Referencia: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site.
 
 Cada versión se integra primero en `develop`, pasa por una rama `release/x.y.z` que actualiza `CHANGELOG.md`, se fusiona en `main` mediante Pull Request y se etiqueta con Semantic Versioning (`vX.Y.Z`). Antes de publicar se revisan rutas de recursos, navegación, comportamiento móvil, formulario y ausencia de errores de consola; después se abre la URL pública para confirmar el despliegue.
@@ -200,52 +201,52 @@ El incremento contiene navegación adaptable, propuesta de valor, indicadores de
 
 #### 5.2.1.1. Sprint Planning 1
 
-| Sprint # | Sprint 1 |
-| --- | --- |
-| **Sprint Planning Background** | |
-| Date | 07/09/2026 |
-| Time | 08:30 p.m. |
-| Location | Google meet |
-| Prepared By | Christoper Steven Rivas Castillo |
-| Attendees (to planning meeting) | Noriega Collado, Jean Fabio<br>Simon Calderon, Ismael Sebastian<br>Collantes Artola, Marco Antonio<br>Benigno Montero, Harold Fauskorp<br>Rivas Castillo, Christoper Steven  |
-| Sprint 1 Review Summary | Se publicó la versión 1.0.0 de la Landing Page en GitHub Pages. Se completaron 10 de las 11 User Stories del sprint (25 de 27 Story Points): propuesta de valor, catálogo de vehículos, formulario de contacto, cambio de idioma, precios, preguntas frecuentes, navegación adaptable, acceso a la aplicación por segmento, testimonios e información legal. US28 (videos) queda en curso porque los videos About-the-Product y About-the-Team se publican en AV2; la página muestra un aviso de disponibilidad próxima en su lugar. |
-| Sprint 1 Retrospective Summary | El equipo destacó la división del Landing Page en ramas por sección, que permitió trabajar en paralelo y dejar evidencia por integrante. Como aspectos por mejorar se identificaron: registrar en Jira desde el inicio todas las historias del Landing Page (ocho se agregaron durante el sprint), integrar las ramas a `develop` de forma continua para evitar conflictos acumulados, revisar el orden de los archivos CSS antes de fusionar, y contrastar el backlog con los wireframes antes de retirar una sección. Para el Sprint 2 se acordó mantener GitFlow con Pull Requests y *Create a merge commit*, y estimar con más holgura la integración entre ramas. |
-| **Sprint Goal & User Stories** | |
-| Sprint 1 Goal | Nuestro foco está en publicar el Landing Page de LoadMatch para comunicar el modelo de negocio y captar leads tempranos de empresas y transportistas. Se logra cuando el sitio está desplegado y accesible públicamente. |
-| Sprint 1 Velocity | 25 |
-| Sum of Story Points | 27 puntos comprometidos: US12 = 3, US13 = 2, US14 = 2, US21 = 3, US22 = 2, US23 = 2, US24 = 3, US25 = 2, US26 = 2, US27 = 2 y US28 = 2. Completados: 25. |
+| Sprint #                        | Sprint 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Sprint Planning Background**  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Date                            | 07/09/2026                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Time                            | 08:30 p.m.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Location                        | Google meet                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Prepared By                     | Christoper Steven Rivas Castillo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Attendees (to planning meeting) | Noriega Collado, Jean Fabio<br>Simon Calderon, Ismael Sebastian<br>Collantes Artola, Marco Antonio<br>Benigno Montero, Harold Fauskorp<br>Rivas Castillo, Christoper Steven                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Sprint 1 Review Summary         | Se publicó la versión 1.0.0 de la Landing Page en GitHub Pages. Se completaron 10 de las 11 User Stories del sprint (25 de 27 Story Points): propuesta de valor, catálogo de vehículos, formulario de contacto, cambio de idioma, precios, preguntas frecuentes, navegación adaptable, acceso a la aplicación por segmento, testimonios e información legal. US28 (videos) queda en curso porque los videos About-the-Product y About-the-Team se publican en AV2; la página muestra un aviso de disponibilidad próxima en su lugar.                                                                                                                                   |
+| Sprint 1 Retrospective Summary  | El equipo destacó la división del Landing Page en ramas por sección, que permitió trabajar en paralelo y dejar evidencia por integrante. Como aspectos por mejorar se identificaron: registrar en Jira desde el inicio todas las historias del Landing Page (ocho se agregaron durante el sprint), integrar las ramas a `develop` de forma continua para evitar conflictos acumulados, revisar el orden de los archivos CSS antes de fusionar, y contrastar el backlog con los wireframes antes de retirar una sección. Para el Sprint 2 se acordó mantener GitFlow con Pull Requests y _Create a merge commit_, y estimar con más holgura la integración entre ramas. |
+| **Sprint Goal & User Stories**  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Sprint 1 Goal                   | Nuestro foco está en publicar el Landing Page de LoadMatch para comunicar el modelo de negocio y captar leads tempranos de empresas y transportistas. Se logra cuando el sitio está desplegado y accesible públicamente.                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Sprint 1 Velocity               | 25                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Sum of Story Points             | 27 puntos comprometidos: US12 = 3, US13 = 2, US14 = 2, US21 = 3, US22 = 2, US23 = 2, US24 = 3, US25 = 2, US26 = 2, US27 = 2 y US28 = 2. Completados: 25.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
-*Nota. El sprint se planificó del 12/09 al 15/09 con US12, US13 y US14 (7 puntos). Durante su ejecución se registraron en Jira las historias US21 a US28, que cubren secciones del Landing Page ya incluidas en el diseño del Capítulo IV, y la fecha de cierre se extendió al 16/09 para completar la integración y el despliegue. US28 se trasladó al Product Backlog al cerrar el sprint.*
+_Nota. El sprint se planificó del 12/09 al 15/09 con US12, US13 y US14 (7 puntos). Durante su ejecución se registraron en Jira las historias US21 a US28, que cubren secciones del Landing Page ya incluidas en el diseño del Capítulo IV, y la fecha de cierre se extendió al 16/09 para completar la integración y el despliegue. US28 se trasladó al Product Backlog al cerrar el sprint._
 
 #### 5.2.1.2. Aspect Leaders and Collaborators
 
 La matriz LACX identifica al líder (L) y a los colaboradores (C) de cada aspecto del sprint, según las ramas y Pull Requests del repositorio.
 
-| Team Member | GitHub Username | Estructura, estilos e integración | Secciones del Landing Page | Idiomas y contenido comercial | Documentación y despliegue |
-| --- | --- | --- | --- | --- | --- |
-| Benigno Montero, Harold Fauskorp | Harold-11 | L | C | C | L |
-| Noriega Collado, Jean Fabio | dumbaskidd | C | L | - | C |
-| Simon Calderon, Ismael Sebastian | Mayel-dev | C | C | - | C |
-| Rivas Castillo, Christoper Steven | CODERT0PH | - | C | - | C |
-| Collantes Artola, Marco Antonio | Markollantes2307 | - | C | L | - |
+| Team Member                       | GitHub Username  | Estructura, estilos e integración | Secciones del Landing Page | Idiomas y contenido comercial | Documentación y despliegue |
+| --------------------------------- | ---------------- | --------------------------------- | -------------------------- | ----------------------------- | -------------------------- |
+| Benigno Montero, Harold Fauskorp  | Harold-11        | L                                 | C                          | C                             | L                          |
+| Noriega Collado, Jean Fabio       | dumbaskidd       | C                                 | L                          | -                             | C                          |
+| Simon Calderon, Ismael Sebastian  | Mayel-dev        | C                                 | C                          | -                             | C                          |
+| Rivas Castillo, Christoper Steven | CODERT0PH        | -                                 | C                          | -                             | C                          |
+| Collantes Artola, Marco Antonio   | Markollantes2307 | -                                 | C                          | L                             | -                          |
 
-*Nota. Emilia participó en la planificación y se retiró del curso durante el sprint, por lo que no figura en la matriz.*
+_Nota. Emilia participó en la planificación y se retiró del curso durante el sprint, por lo que no figura en la matriz._
 
 #### 5.2.1.3. Sprint Backlog 1
 
-| User Story Id | User Story Title | Work Item/Task Id | Work Item/Task Title | Description | Estimation | Assigned To | Status |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| US12 | Visualización de propuesta de valor | T01 | Implementación del Hero y propuesta de valor | Presentar la conexión entre empresas y transportistas, beneficios y accesos por perfil. | 8 h | Harold Benigno Montero | Done |
-| US13 | Consulta de tipos de vehículos | T02 | Implementación del catálogo de vehículos | Sección responsive con tipos de vehículos y capacidades de carga mediante HTML5 y CSS Grid. | 6 h | Harold Benigno Montero | Done |
-| US14 | Formulario de contacto | T03 | Implementación del formulario de contacto | Formulario con validación de campos obligatorios y formato de correo, mensajes de error y confirmación. | 6 h | Harold Benigno Montero | Done |
-| US21 | Cambio de idioma del Landing Page | T04 | Implementación de diccionarios EN/ES y cargador de idioma | Diccionarios `en.json` y `es.json` y cargador `i18n.js` con preferencia guardada. | 6 h | Marco Collantes Artola | Done |
-| US22 | Consulta de planes y precios | T05 | Implementación de la sección de precios por comisión | Tres tarjetas con plan destacado, adaptadas a una columna en tablet. | 4 h | Marco Collantes Artola | Done |
-| US23 | Consulta de preguntas frecuentes | T06 | Implementación del acordeón de preguntas frecuentes | Acordeón accesible con `aria-expanded` y paneles ocultos. | 4 h | Marco Collantes Artola | Done |
-| US24 | Navegación adaptable del Landing Page | T07 | Implementación de cabecera, menú móvil y adaptación responsive | Cabecera fija, panel de navegación bajo 1360 px, hero y métricas apilados. | 8 h | Jean Fabio Noriega Collado | Done |
-| US25 | Acceso a la aplicación por segmento | T08 | Conexión de los botones con la aplicación web | `config.js` con `APP_BASE_URL` y respaldo a secciones internas. | 4 h | Ismael Sebastian Simon Calderon | Done |
-| US26 | Visualización de testimonios de usuarios | T09 | Implementación de testimonios y carrusel | Tarjetas con aviso de contenido de ejemplo y carrusel con indicadores y contador. | 4 h | Christoper Steven Rivas Castillo | Done |
-| US27 | Consulta de información legal y de contacto | T10 | Implementación del pie de página y páginas legales | Pie de página con navegación y contacto, y página de términos, privacidad, cookies y accesibilidad. | 6 h | Christoper Steven Rivas Castillo | Done |
-| US28 | Visualización de videos del producto y del equipo | T11 | Implementación de la sección de videos | Dos marcos 16:9 con pie de foto; los videos se publican en AV2. | 3 h | Ismael Sebastian Simon Calderon | In Progress |
+| User Story Id | User Story Title                                  | Work Item/Task Id | Work Item/Task Title                                           | Description                                                                                             | Estimation | Assigned To                      | Status      |
+| ------------- | ------------------------------------------------- | ----------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ---------- | -------------------------------- | ----------- |
+| US12          | Visualización de propuesta de valor               | T01               | Implementación del Hero y propuesta de valor                   | Presentar la conexión entre empresas y transportistas, beneficios y accesos por perfil.                 | 8 h        | Harold Benigno Montero           | Done        |
+| US13          | Consulta de tipos de vehículos                    | T02               | Implementación del catálogo de vehículos                       | Sección responsive con tipos de vehículos y capacidades de carga mediante HTML5 y CSS Grid.             | 6 h        | Harold Benigno Montero           | Done        |
+| US14          | Formulario de contacto                            | T03               | Implementación del formulario de contacto                      | Formulario con validación de campos obligatorios y formato de correo, mensajes de error y confirmación. | 6 h        | Harold Benigno Montero           | Done        |
+| US21          | Cambio de idioma del Landing Page                 | T04               | Implementación de diccionarios EN/ES y cargador de idioma      | Diccionarios `en.json` y `es.json` y cargador `i18n.js` con preferencia guardada.                       | 6 h        | Marco Collantes Artola           | Done        |
+| US22          | Consulta de planes y precios                      | T05               | Implementación de la sección de precios por comisión           | Tres tarjetas con plan destacado, adaptadas a una columna en tablet.                                    | 4 h        | Marco Collantes Artola           | Done        |
+| US23          | Consulta de preguntas frecuentes                  | T06               | Implementación del acordeón de preguntas frecuentes            | Acordeón accesible con `aria-expanded` y paneles ocultos.                                               | 4 h        | Marco Collantes Artola           | Done        |
+| US24          | Navegación adaptable del Landing Page             | T07               | Implementación de cabecera, menú móvil y adaptación responsive | Cabecera fija, panel de navegación bajo 1360 px, hero y métricas apilados.                              | 8 h        | Jean Fabio Noriega Collado       | Done        |
+| US25          | Acceso a la aplicación por segmento               | T08               | Conexión de los botones con la aplicación web                  | `config.js` con `APP_BASE_URL` y respaldo a secciones internas.                                         | 4 h        | Ismael Sebastian Simon Calderon  | Done        |
+| US26          | Visualización de testimonios de usuarios          | T09               | Implementación de testimonios y carrusel                       | Tarjetas con aviso de contenido de ejemplo y carrusel con indicadores y contador.                       | 4 h        | Christoper Steven Rivas Castillo | Done        |
+| US27          | Consulta de información legal y de contacto       | T10               | Implementación del pie de página y páginas legales             | Pie de página con navegación y contacto, y página de términos, privacidad, cookies y accesibilidad.     | 6 h        | Christoper Steven Rivas Castillo | Done        |
+| US28          | Visualización de videos del producto y del equipo | T11               | Implementación de la sección de videos                         | Dos marcos 16:9 con pie de foto; los videos se publican en AV2.                                         | 3 h        | Ismael Sebastian Simon Calderon  | In Progress |
 
 **Tablero:** https://upc-team-m57tll9j.atlassian.net/jira/software/projects/US/boards/2.
 
@@ -257,7 +258,7 @@ La matriz LACX identifica al líder (L) y a los colaboradores (C) de cada aspect
        width="900">
 </p>
 
-***Figura.*** Informe del Sprint 1 en Jira: 10 User Stories finalizadas (25 Story Points) y US28 en curso (2 Story Points), que pasa al siguiente sprint.
+**_Figura._** Informe del Sprint 1 en Jira: 10 User Stories finalizadas (25 Story Points) y US28 en curso (2 Story Points), que pasa al siguiente sprint.
 
 <p align="center">
   <img src="../assets/images/sprint1/SprintBurndown.png"
@@ -265,7 +266,7 @@ La matriz LACX identifica al líder (L) y a los colaboradores (C) de cada aspect
        width="900">
 </p>
 
-***Figura.*** Diagrama de trabajo pendiente (*sprint burndown*) del Sprint 1, del 12/09/2026 al 16/09/2026, con la meta del sprint.
+**_Figura._** Diagrama de trabajo pendiente (_sprint burndown_) del Sprint 1, del 12/09/2026 al 16/09/2026, con la meta del sprint.
 
 <p align="center">
   <img src="../assets/images/sprint1/SprintScopeChange.png"
@@ -273,59 +274,59 @@ La matriz LACX identifica al líder (L) y a los colaboradores (C) de cada aspect
        width="900">
 </p>
 
-***Figura.*** Registro de cambios del alcance del Sprint 1.
+**_Figura._** Registro de cambios del alcance del Sprint 1.
 
 El sprint se inició con US12, US13 y US14 (7 Story Points). Durante la revisión del sprint, el equipo registró en Jira las historias US21 a US28, que correspondían a secciones ya planificadas y en desarrollo en el repositorio. Estas se incorporaron formalmente el 16/09/2026 y aumentaron el compromiso en 18 Story Points, hasta 27. Por esa razón, el diagrama de trabajo pendiente muestra un salto al final del periodo.
 
-*Nota. Las horas de las tareas no se suman con los Story Points.*
+_Nota. Las horas de las tareas no se suman con los Story Points._
 
 #### 5.2.1.4. Development Evidence for Sprint Review
 
-El incremento se desarrolló con GitFlow: una rama por sección, integración a `develop` mediante Pull Request con *Create a merge commit* y publicación desde `main` con la etiqueta `v1.0.0`. La tabla resume un commit representativo por rama; el historial completo está disponible en el repositorio.
+El incremento se desarrolló con GitFlow: una rama por sección, integración a `develop` mediante Pull Request con _Create a merge commit_ y publicación desde `main` con la etiqueta `v1.0.0`. La tabla resume un commit representativo por rama; el historial completo está disponible en el repositorio.
 
-| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
-| --- | --- | --- | --- | --- | --- |
-| Loadmatch-landing-page | feature/project-setup | 8d13c00 | feat(seo): add HTML5 skeleton with SEO and Open Graph meta tags | Esqueleto HTML5 con metadatos | 12/09/2026 |
-| Loadmatch-landing-page | feature/design-tokens | 7a8d52c | feat(tokens): add colour, spacing, type and radius design tokens | Tokens del sistema de diseño | 12/09/2026 |
-| Loadmatch-landing-page | feature/header-navigation | fee3b18 | feat(nav): add mobile menu toggle with Escape key and focus return | Menú móvil accesible | 12/09/2026 |
-| Loadmatch-landing-page | feature/hero-section | 7c94c08 | feat(hero): add hero section with headline, lead and segment CTAs | Propuesta de valor | 12/09/2026 |
-| Loadmatch-landing-page | feature/metrics-band | cce648c | feat(metrics): add market indicators band with MTC sources | Indicadores del mercado | 12/09/2026 |
-| Loadmatch-landing-page | feature/pricing-plans | b4fa8e7 | feat(pricing): add commission-based pricing section | Precios por comisión | 12/09/2026 |
-| Loadmatch-landing-page | feature/faq-accordion | 3187e34 | feat(faq): add accordion behaviour with aria-expanded and hidden panels | Acordeón accesible | 12/09/2026 |
-| Loadmatch-landing-page | feature/final-cta | f5af922 | feat(cta): add closing call-to-action band | Banda de cierre | 12/09/2026 |
-| Loadmatch-landing-page | feature/i18n-locales | 12f8fb5 | feat(i18n): add English and Latin American Spanish dictionaries | Diccionarios EN/ES | 12/09/2026 |
-| Loadmatch-landing-page | feature/how-it-works-tabs | 442300c | feat(tabs): add accessible audience tabs with arrow-key navigation | Pestañas por segmento | 14/09/2026 |
-| Loadmatch-landing-page | feature/trust-cards | 4a8eb42 | feat(trust): add trust and verification cards | Tarjetas de confianza | 14/09/2026 |
-| Loadmatch-landing-page | feature/youtube-videos | fe734a9 | feat(videos): add LoadMatch product and team video section | Sección de videos | 14/09/2026 |
-| Loadmatch-landing-page | feature/cta-app-links | 2eb0ae6 | feat(cta): connect landing page actions to web application | Enlaces a la Web Application | 14/09/2026 |
-| Loadmatch-landing-page | feature/audience-sections | b2efd78 | feat(audience): add segment blocks for companies and carriers | Bloques por segmento | 16/09/2026 |
-| Loadmatch-landing-page | feature/testimonials-carousel | fb2285f | feat(carousel): add scroll-snap carousel with dot controls on mobile | Carrusel de testimonios | 16/09/2026 |
-| Loadmatch-landing-page | feature/site-footer | 32e60ea | feat(footer): add site footer with navigation and legal links | Pie de página | 16/09/2026 |
-| Loadmatch-landing-page | feature/legal-pages | 9fa1278 | feat(legal): add terms of service, privacy and cookie policy page | Página legal | 16/09/2026 |
-| Loadmatch-landing-page | bugfix/css-structure | 46f4315 | fix(css): restore main, components and responsive stylesheets to their intended content | Corrección de hojas de estilo | 16/09/2026 |
-| Loadmatch-landing-page | bugfix/duplicate-header | 6fee99d | fix(html): remove duplicated header and order sections as in the approved design | Corrección de estructura | 16/09/2026 |
-| Loadmatch-landing-page | feature/app-screenshots | ecc9159 | feat(img): add application screenshots for the how-it-works steps | Capturas de la aplicación | 16/09/2026 |
-| Loadmatch-landing-page | feature/vehicle-types | 920a718 | feat(vehicles): add vehicle types catalogue with cargo capacities | Catálogo de vehículos (US13) | 16/09/2026 |
-| Loadmatch-landing-page | feature/contact-form | 81d31b6 | feat(contact): add validated contact form | Formulario de contacto (US14) | 16/09/2026 |
-| Loadmatch-landing-page | feature/video-placeholders | ad5be56 | feat(videos): show coming-soon placeholders until the videos are published | Avisos de video | 16/09/2026 |
-| Loadmatch-landing-page | release/1.0.0 | b2f1b2e | chore(release): prepare v1.0.0 | CHANGELOG de la versión | 16/09/2026 |
+| Repository             | Branch                        | Commit Id | Commit Message                                                                          | Commit Message Body           | Committed on |
+| ---------------------- | ----------------------------- | --------- | --------------------------------------------------------------------------------------- | ----------------------------- | ------------ |
+| Loadmatch-landing-page | feature/project-setup         | 8d13c00   | feat(seo): add HTML5 skeleton with SEO and Open Graph meta tags                         | Esqueleto HTML5 con metadatos | 12/09/2026   |
+| Loadmatch-landing-page | feature/design-tokens         | 7a8d52c   | feat(tokens): add colour, spacing, type and radius design tokens                        | Tokens del sistema de diseño  | 12/09/2026   |
+| Loadmatch-landing-page | feature/header-navigation     | fee3b18   | feat(nav): add mobile menu toggle with Escape key and focus return                      | Menú móvil accesible          | 12/09/2026   |
+| Loadmatch-landing-page | feature/hero-section          | 7c94c08   | feat(hero): add hero section with headline, lead and segment CTAs                       | Propuesta de valor            | 12/09/2026   |
+| Loadmatch-landing-page | feature/metrics-band          | cce648c   | feat(metrics): add market indicators band with MTC sources                              | Indicadores del mercado       | 12/09/2026   |
+| Loadmatch-landing-page | feature/pricing-plans         | b4fa8e7   | feat(pricing): add commission-based pricing section                                     | Precios por comisión          | 12/09/2026   |
+| Loadmatch-landing-page | feature/faq-accordion         | 3187e34   | feat(faq): add accordion behaviour with aria-expanded and hidden panels                 | Acordeón accesible            | 12/09/2026   |
+| Loadmatch-landing-page | feature/final-cta             | f5af922   | feat(cta): add closing call-to-action band                                              | Banda de cierre               | 12/09/2026   |
+| Loadmatch-landing-page | feature/i18n-locales          | 12f8fb5   | feat(i18n): add English and Latin American Spanish dictionaries                         | Diccionarios EN/ES            | 12/09/2026   |
+| Loadmatch-landing-page | feature/how-it-works-tabs     | 442300c   | feat(tabs): add accessible audience tabs with arrow-key navigation                      | Pestañas por segmento         | 14/09/2026   |
+| Loadmatch-landing-page | feature/trust-cards           | 4a8eb42   | feat(trust): add trust and verification cards                                           | Tarjetas de confianza         | 14/09/2026   |
+| Loadmatch-landing-page | feature/youtube-videos        | fe734a9   | feat(videos): add LoadMatch product and team video section                              | Sección de videos             | 14/09/2026   |
+| Loadmatch-landing-page | feature/cta-app-links         | 2eb0ae6   | feat(cta): connect landing page actions to web application                              | Enlaces a la Web Application  | 14/09/2026   |
+| Loadmatch-landing-page | feature/audience-sections     | b2efd78   | feat(audience): add segment blocks for companies and carriers                           | Bloques por segmento          | 16/09/2026   |
+| Loadmatch-landing-page | feature/testimonials-carousel | fb2285f   | feat(carousel): add scroll-snap carousel with dot controls on mobile                    | Carrusel de testimonios       | 16/09/2026   |
+| Loadmatch-landing-page | feature/site-footer           | 32e60ea   | feat(footer): add site footer with navigation and legal links                           | Pie de página                 | 16/09/2026   |
+| Loadmatch-landing-page | feature/legal-pages           | 9fa1278   | feat(legal): add terms of service, privacy and cookie policy page                       | Página legal                  | 16/09/2026   |
+| Loadmatch-landing-page | bugfix/css-structure          | 46f4315   | fix(css): restore main, components and responsive stylesheets to their intended content | Corrección de hojas de estilo | 16/09/2026   |
+| Loadmatch-landing-page | bugfix/duplicate-header       | 6fee99d   | fix(html): remove duplicated header and order sections as in the approved design        | Corrección de estructura      | 16/09/2026   |
+| Loadmatch-landing-page | feature/app-screenshots       | ecc9159   | feat(img): add application screenshots for the how-it-works steps                       | Capturas de la aplicación     | 16/09/2026   |
+| Loadmatch-landing-page | feature/vehicle-types         | 920a718   | feat(vehicles): add vehicle types catalogue with cargo capacities                       | Catálogo de vehículos (US13)  | 16/09/2026   |
+| Loadmatch-landing-page | feature/contact-form          | 81d31b6   | feat(contact): add validated contact form                                               | Formulario de contacto (US14) | 16/09/2026   |
+| Loadmatch-landing-page | feature/video-placeholders    | ad5be56   | feat(videos): show coming-soon placeholders until the videos are published              | Avisos de video               | 16/09/2026   |
+| Loadmatch-landing-page | release/1.0.0                 | b2f1b2e   | chore(release): prepare v1.0.0                                                          | CHANGELOG de la versión       | 16/09/2026   |
 
 **Repositorio:** https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page · **Pull Requests:** #2 al #25 · **Etiqueta:** v1.0.0 https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page/releases/tag/v1.0.0
 
 **Artefactos de desarrollo**
 
-| Artefacto | Contenido |
-| --- | --- |
-| `index.html` | Estructura semántica, metadatos, secciones del Landing Page, formulario de contacto y enlaces configurables hacia la Web Application. |
-| `assets/css/main.css` | Tokens de color, tipografía Inter, espaciado y estilos base. |
-| `assets/css/components.css` | Estilos de cada componente, incluidos catálogo, formulario y avisos de video. |
-| `assets/css/responsive.css` | Media queries de 1359, 1023, 767 y 389 px, impresión y reducción de movimiento. |
-| `assets/js/main.js` | Enlaces a la aplicación, menú móvil, pestañas, acordeón, carrusel y validación del formulario. |
-| `assets/js/i18n.js` | Carga de diccionarios, aplicación de textos y preferencia de idioma. |
-| `assets/i18n/en.json`, `es.json` | Textos en inglés (en_US) y español latinoamericano (es_419). |
-| `docs/terms-and-conditions.html` | Términos, privacidad, cookies y accesibilidad. |
-| `CHANGELOG.md` | Registro de cambios de la versión 1.0.0. |
-| `.editorconfig`, `.gitignore`, `.nojekyll`, `LICENSE` | Convenciones de formato, exclusiones, publicación estática y licencia MIT. |
+| Artefacto                                             | Contenido                                                                                                                             |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `index.html`                                          | Estructura semántica, metadatos, secciones del Landing Page, formulario de contacto y enlaces configurables hacia la Web Application. |
+| `assets/css/main.css`                                 | Tokens de color, tipografía Inter, espaciado y estilos base.                                                                          |
+| `assets/css/components.css`                           | Estilos de cada componente, incluidos catálogo, formulario y avisos de video.                                                         |
+| `assets/css/responsive.css`                           | Media queries de 1359, 1023, 767 y 389 px, impresión y reducción de movimiento.                                                       |
+| `assets/js/main.js`                                   | Enlaces a la aplicación, menú móvil, pestañas, acordeón, carrusel y validación del formulario.                                        |
+| `assets/js/i18n.js`                                   | Carga de diccionarios, aplicación de textos y preferencia de idioma.                                                                  |
+| `assets/i18n/en.json`, `es.json`                      | Textos en inglés (en_US) y español latinoamericano (es_419).                                                                          |
+| `docs/terms-and-conditions.html`                      | Términos, privacidad, cookies y accesibilidad.                                                                                        |
+| `CHANGELOG.md`                                        | Registro de cambios de la versión 1.0.0.                                                                                              |
+| `.editorconfig`, `.gitignore`, `.nojekyll`, `LICENSE` | Convenciones de formato, exclusiones, publicación estática y licencia MIT.                                                            |
 
 #### 5.2.1.5. Execution Evidence for Sprint Review
 
@@ -351,7 +352,7 @@ La sección «Cómo funciona» contiene pestañas para empresas y transportistas
   <img src="../assets/images/landing/CapCatalogoVehiculos.png" alt="Catálogo de tipos de vehículos" width="600">
 </p>
 
-***Figura.*** Catálogo de tipos de vehículos (US13) con capacidades de carga y aviso de datos de ejemplo.
+**_Figura._** Catálogo de tipos de vehículos (US13) con capacidades de carga y aviso de datos de ejemplo.
 
 **3. Testimonios y modelo de precios**
 
@@ -379,13 +380,13 @@ El formulario de contacto (US14) solicita nombre, correo, tipo de usuario y mens
   <img src="../assets/images/landing/CapFormularioErrores.png" alt="Formulario de contacto con errores de validación" width="600">
 </p>
 
-***Figura.*** Formulario de contacto (US14) enviado con campos vacíos y un correo inválido: cada campo muestra su mensaje de error.
+**_Figura._** Formulario de contacto (US14) enviado con campos vacíos y un correo inválido: cada campo muestra su mensaje de error.
 
 <p align="center">
   <img src="../assets/images/landing/CapFormularioConfirmacion.png" alt="Formulario de contacto con mensaje de confirmación" width="600">
 </p>
 
-***Figura.*** Formulario de contacto (US14) tras un envío válido: mensaje de confirmación y campos limpios.
+**_Figura._** Formulario de contacto (US14) tras un envío válido: mensaje de confirmación y campos limpios.
 
 **5. Idiomas, adaptación y accesibilidad**
 
@@ -407,18 +408,18 @@ Los botones de registro e inicio de sesión usan `data-app-path`. Mientras `APP_
 
 **Registro de comprobaciones**
 
-| Verificación | Resultado |
-| --- | --- |
-| Recursos locales | Sin archivos faltantes ni errores de consola. |
-| Propuesta de valor, US12 | Cumple. |
-| Catálogo, US13 | Cumple: tipos de vehículos con capacidades. |
-| Formulario, US14 | Cumple: validación, mensajes de error y confirmación. |
-| Idiomas, US21 | Cumple: textos completos en EN y ES, preferencia guardada. |
-| Precios y FAQ, US22 y US23 | Cumple. |
-| Navegación adaptable, US24 | Cumple a 1440, 1024, 768 y 390 px. |
-| Acceso a la aplicación, US25 | Cumple el escenario sin aplicación desplegada. |
-| Testimonios e información legal, US26 y US27 | Cumple. |
-| Videos, US28 | Pendiente: avisos de disponibilidad próxima. |
+| Verificación                                 | Resultado                                                  |
+| -------------------------------------------- | ---------------------------------------------------------- |
+| Recursos locales                             | Sin archivos faltantes ni errores de consola.              |
+| Propuesta de valor, US12                     | Cumple.                                                    |
+| Catálogo, US13                               | Cumple: tipos de vehículos con capacidades.                |
+| Formulario, US14                             | Cumple: validación, mensajes de error y confirmación.      |
+| Idiomas, US21                                | Cumple: textos completos en EN y ES, preferencia guardada. |
+| Precios y FAQ, US22 y US23                   | Cumple.                                                    |
+| Navegación adaptable, US24                   | Cumple a 1440, 1024, 768 y 390 px.                         |
+| Acceso a la aplicación, US25                 | Cumple el escenario sin aplicación desplegada.             |
+| Testimonios e información legal, US26 y US27 | Cumple.                                                    |
+| Videos, US28                                 | Pendiente: avisos de disponibilidad próxima.               |
 
 **Video de navegación del Sprint Review:** https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310342_upc_edu_pe/IQDWUFuRbr2mTbmyHe5Unle2ARQ_Ohp6v-p65qkdM2X-FTM?e=1wbyk6
 
@@ -434,68 +435,73 @@ La recepción real de las consultas del formulario de contacto corresponderá al
 
 La versión 1.0.0 se publicó en GitHub Pages desde la rama `main`.
 
-| Evidencia | Detalle |
-| --- | --- |
-| Repositorio | https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page |
-| Plataforma | GitHub Pages, rama `main`, carpeta `/ (root)`, HTTPS obligatorio. |
-| URL pública | https://desarrollo-open-source-grupo-5.github.io/Loadmatch-landing-page/ |
-| Pull Request de publicación | #25, `release/1.0.0` → `main` |
-| Commit publicado | `077d002` |
-| Etiqueta | `v1.0.0` |
-| Fecha de publicación | 16/09/2026 |
-| Prueba posterior | Carga de la URL pública, navegación, cambio de idioma y página legal. |
+| Evidencia                   | Detalle                                                                  |
+| --------------------------- | ------------------------------------------------------------------------ |
+| Repositorio                 | https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page |
+| Plataforma                  | GitHub Pages, rama `main`, carpeta `/ (root)`, HTTPS obligatorio.        |
+| URL pública                 | https://desarrollo-open-source-grupo-5.github.io/Loadmatch-landing-page/ |
+| Pull Request de publicación | #25, `release/1.0.0` → `main`                                            |
+| Commit publicado            | `077d002`                                                                |
+| Etiqueta                    | `v1.0.0`                                                                 |
+| Fecha de publicación        | 16/09/2026                                                               |
+| Prueba posterior            | Carga de la URL pública, navegación, cambio de idioma y página legal.    |
 
 <p align="center">
   <img src="../assets/images/landing/CapGitHubPages.png" alt="Configuración de GitHub Pages del repositorio" width="900">
 </p>
 
-***Figura.*** Configuración de GitHub Pages en `Settings > Pages`: sitio publicado desde la rama `main`, carpeta `/ (root)`, con HTTPS obligatorio.
+**_Figura._** Configuración de GitHub Pages en `Settings > Pages`: sitio publicado desde la rama `main`, carpeta `/ (root)`, con HTTPS obligatorio.
 
 <p align="center">
   <img src="../assets/images/landing/CapURLPublica.png" alt="Landing Page abierta en su URL pública" width="900">
 </p>
 
-***Figura.*** Landing Page de LoadMatch abierta en su URL pública de GitHub Pages.
+**_Figura._** Landing Page de LoadMatch abierta en su URL pública de GitHub Pages.
 
 #### 5.2.1.8. Team Collaboration Insights during Sprint
 
-El Landing Page se dividió en ramas por sección, lo que permitió trabajar en paralelo y registrar el aporte de cada integrante. Las ramas se integraron a `develop` mediante Pull Requests con *Create a merge commit*, que conserva los commits individuales, y la versión se publicó mediante una rama `release/1.0.0`.
+El Landing Page se dividió en ramas por sección, lo que permitió trabajar en paralelo y registrar el aporte de cada integrante. Las ramas se integraron a `develop` mediante Pull Requests con _Create a merge commit_, que conserva los commits individuales, y la versión se publicó mediante una rama `release/1.0.0`.
 
-| Integrante | GitHub | Ramas principales | Commits (sin merges) |
-| --- | --- | --- | --- |
-| Benigno Montero, Harold Fauskorp | Harold-11 | project-setup, design-tokens, bugfix/css-structure, bugfix/duplicate-header, app-screenshots, vehicle-types, contact-form, video-placeholders, release/1.0.0 | 18 |
-| Rivas Castillo, Christoper Steven | CODERT0PH | audience-sections, testimonials-carousel, site-footer, legal-pages | 13 |
-| Collantes Artola, Marco Antonio | Markollantes2307 | pricing-plans, faq-accordion, final-cta, i18n-locales | 12 |
-| Noriega Collado, Jean Fabio | dumbaskidd | header-navigation, hero-section, metrics-band, readme-docs | 9 |
-| Simon Calderon, Ismael Sebastian | Mayel-dev | how-it-works-tabs, trust-cards, youtube-videos, cta-app-links | 9 |
+| Integrante                        | GitHub           | Ramas principales                                                                                                                                            | Commits (sin merges) |
+| --------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------- |
+| Benigno Montero, Harold Fauskorp  | Harold-11        | project-setup, design-tokens, bugfix/css-structure, bugfix/duplicate-header, app-screenshots, vehicle-types, contact-form, video-placeholders, release/1.0.0 | 18                   |
+| Rivas Castillo, Christoper Steven | CODERT0PH        | audience-sections, testimonials-carousel, site-footer, legal-pages                                                                                           | 13                   |
+| Collantes Artola, Marco Antonio   | Markollantes2307 | pricing-plans, faq-accordion, final-cta, i18n-locales                                                                                                        | 12                   |
+| Noriega Collado, Jean Fabio       | dumbaskidd       | header-navigation, hero-section, metrics-band, readme-docs                                                                                                   | 9                    |
+| Simon Calderon, Ismael Sebastian  | Mayel-dev        | how-it-works-tabs, trust-cards, youtube-videos, cta-app-links                                                                                                | 9                    |
 
-*Nota. Conteo de commits en `main` al 16/09/2026, sin incluir commits de merge.*
+_Nota. Conteo de commits en `main` al 16/09/2026, sin incluir commits de merge._
 
 **Historial de commits por integrante:**
 
 <img src="../assets/images/Insights/CollabInsights.png" alt="Insights totales registrados en landing page">
 
-*Desarrollado por: Jean Fabio Noriega Collado (dumbaskidd)*
+_Desarrollado por: Jean Fabio Noriega Collado (dumbaskidd)_
+
 <p align="center">
   <img src="../assets/images/Insights/Commits1.png" alt="Commits Jean" width="500">
 </p>
 
-*Desarrollado por: Ismael Sebastian Simon Calderon (Mayel-dev)*
+_Desarrollado por: Ismael Sebastian Simon Calderon (Mayel-dev)_
+
 <p align="center">
   <img src="../assets/images/Insights/Commits5.png" alt="Commits Ismael" width="500">
 </p>
 
-*Desarrollado por: Christoper Steven Rivas Castillo (CODERT0PH)*
+_Desarrollado por: Christoper Steven Rivas Castillo (CODERT0PH)_
+
 <p align="center">
   <img src="../assets/images/Insights/Commits3.png" alt="Commits Christoper" width="500">
 </p>
 
-*Desarrollado por: Harold Fauskorp Benigno Montero (Harold-11)*
+_Desarrollado por: Harold Fauskorp Benigno Montero (Harold-11)_
+
 <p align="center">
   <img src="../assets/images/Insights/Commits2.png" alt="Commits Harold" width="500">
 </p>
 
-*Desarrollado por: Marco Antonio Collantes Artola (Markollantes2307)*
+_Desarrollado por: Marco Antonio Collantes Artola (Markollantes2307)_
+
 <p align="center">
   <img src="../assets/images/Insights/Commits4.png" alt="Commits Marco" width="500">
 </p>
@@ -507,7 +513,7 @@ El Landing Page se dividió en ramas por sección, lo que permitió trabajar en 
   <img src="../assets/images/Insights/NetworkGraph1.png" alt="Network graph del repositorio" width="500">
 </p>
 
-**Pull Requests:** #2 al #25 en https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page/pulls?q=is%3Apr+is%3Aclosed, integrados con *Create a merge commit*.
+**Pull Requests:** #2 al #25 en https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page/pulls?q=is%3Apr+is%3Aclosed, integrados con _Create a merge commit_.
 
 ---
 
@@ -521,38 +527,38 @@ Se distingue entre el estado registrado en Jira, el código disponible y el comp
 
 El objetivo y periodo provienen de las capturas de Jira proporcionadas por el equipo y fueron contrastados con el Sprint 67 mediante Atlassian el 06/10/2026. La fecha, hora, modalidad, responsable y asistentes de la reunión fueron confirmados por un integrante del equipo para esta actualización del informe. Los horarios de gestión del sprint que se añaden a continuación proceden de Jira y no se confunden con el horario de la reunión.
 
-| Sprint # | Sprint 2 — Web Application |
-| --- | --- |
-| **Sprint Planning Background** | |
-| Periodo del sprint | 2026-10-01 a 2026-10-05 |
-| Inicio registrado en Jira | 01/10/2026, 11:35:53 p. m. (America/Lima). |
-| Fin previsto registrado en Jira | 05/10/2026, 12:30 p. m. (America/Lima). |
-| Cierre registrado en Jira | 05/10/2026, 11:30:17 p. m. (America/Lima); estado Closed. |
-| Date (planning meeting) | 01/10/2026. |
-| Time | 10:30 p. m. (America/Lima). |
-| Location | Virtual. |
-| Prepared By | Harold Fauskorp Benigno Montero. |
-| Attendees (to planning meeting) | Harold Fauskorp Benigno Montero, Jean Fabio Noriega Collado, Ismael Sebastian Simon Calderon, Christoper Steven Rivas Castillo y Marco Antonio Collantes Artola. |
-| Sprint 1 Review Summary | El Sprint 1 publicó la Landing Page. Se documentaron 25 de 27 Story Points completados y US28 pendiente; los accesos a la aplicación dependían de configurar su destino público. |
-| Sprint 1 Retrospective Summary | Se identificó la necesidad de registrar el alcance oportunamente en Jira, integrar las ramas de manera continua y contrastar el backlog con los diseños. Sprint 2 mantiene responsabilidades por funcionalidad y evidencia de integración mediante ramas y Pull Requests. |
-| **Sprint Goal & User Stories** | |
-| Sprint 2 Goal (registrado en Jira) | Nuestro foco está en publicar la primera versión de la Web Application de LoadMatch para que las empresas publiquen y consulten sus solicitudes de carga y los transportistas encuentren fletes disponibles, y en completar el Landing Page con la sección de videos. Se logra cuando la aplicación está desplegada, es accesible desde los botones del Landing Page y respeta el Design System. |
-| Sprint 2 Velocity / capacidad inicialmente comprometida | 22 Story Points registrados al inicio; no se interpreta esta cifra como una velocidad histórica medida. |
-| Sum of Story Points | 49 Story Points: 22 iniciales + 27 incorporados durante el sprint. |
-| Resultado registrado | 18 historias por 49 Story Points y 18 subtareas en estado Finalizada; sprint cerrado. El burndown suministrado desciende a cero. |
-| Evaluación del Goal | Se dispone de configuración y URL pública del frontend, mock de producción y enlaces directos desde la landing. La parte de videos requiere confirmar su publicación; US28 figura Finalizada en Jira, pero esa captura no acredita por sí sola videos incrustados ni su reproducción. |
+| Sprint #                                                | Sprint 2 — Web Application                                                                                                                                                                                                                                                                                                                                                                       |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Sprint Planning Background**                          |                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Periodo del sprint                                      | 2026-10-01 a 2026-10-05                                                                                                                                                                                                                                                                                                                                                                          |
+| Inicio registrado en Jira                               | 01/10/2026, 11:35:53 p. m. (America/Lima).                                                                                                                                                                                                                                                                                                                                                       |
+| Fin previsto registrado en Jira                         | 05/10/2026, 12:30 p. m. (America/Lima).                                                                                                                                                                                                                                                                                                                                                          |
+| Cierre registrado en Jira                               | 05/10/2026, 11:30:17 p. m. (America/Lima); estado Closed.                                                                                                                                                                                                                                                                                                                                        |
+| Date (planning meeting)                                 | 01/10/2026.                                                                                                                                                                                                                                                                                                                                                                                      |
+| Time                                                    | 10:30 p. m. (America/Lima).                                                                                                                                                                                                                                                                                                                                                                      |
+| Location                                                | Virtual.                                                                                                                                                                                                                                                                                                                                                                                         |
+| Prepared By                                             | Harold Fauskorp Benigno Montero.                                                                                                                                                                                                                                                                                                                                                                 |
+| Attendees (to planning meeting)                         | Harold Fauskorp Benigno Montero, Jean Fabio Noriega Collado, Ismael Sebastian Simon Calderon, Christoper Steven Rivas Castillo y Marco Antonio Collantes Artola.                                                                                                                                                                                                                                 |
+| Sprint 1 Review Summary                                 | El Sprint 1 publicó la Landing Page. Se documentaron 25 de 27 Story Points completados y US28 pendiente; los accesos a la aplicación dependían de configurar su destino público.                                                                                                                                                                                                                 |
+| Sprint 1 Retrospective Summary                          | Se identificó la necesidad de registrar el alcance oportunamente en Jira, integrar las ramas de manera continua y contrastar el backlog con los diseños. Sprint 2 mantiene responsabilidades por funcionalidad y evidencia de integración mediante ramas y Pull Requests.                                                                                                                        |
+| **Sprint Goal & User Stories**                          |                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Sprint 2 Goal (registrado en Jira)                      | Nuestro foco está en publicar la primera versión de la Web Application de LoadMatch para que las empresas publiquen y consulten sus solicitudes de carga y los transportistas encuentren fletes disponibles, y en completar el Landing Page con la sección de videos. Se logra cuando la aplicación está desplegada, es accesible desde los botones del Landing Page y respeta el Design System. |
+| Sprint 2 Velocity / capacidad inicialmente comprometida | 22 Story Points registrados al inicio; no se interpreta esta cifra como una velocidad histórica medida.                                                                                                                                                                                                                                                                                          |
+| Sum of Story Points                                     | 49 Story Points: 22 iniciales + 27 incorporados durante el sprint.                                                                                                                                                                                                                                                                                                                               |
+| Resultado registrado                                    | 18 historias por 49 Story Points y 18 subtareas en estado Finalizada; sprint cerrado. El burndown suministrado desciende a cero.                                                                                                                                                                                                                                                                 |
+| Evaluación del Goal                                     | Se dispone de configuración y URL pública del frontend, mock de producción y enlaces directos desde la landing. La parte de videos requiere confirmar su publicación; US28 figura Finalizada en Jira, pero esa captura no acredita por sí sola videos incrustados ni su reproducción.                                                                                                            |
 
 #### 5.2.2.2. Aspect Leaders and Collaborators
 
 La matriz LACX organiza los aspectos de Sprint 2 según las asignaciones visibles en Jira y los cambios identificables en el frontend. Los líderes se presentan como responsables del aspecto documentado; los colaboradores se vinculan con componentes compartidos o integraciones observadas. Esta matriz describe la distribución del incremento y debe contrastarse con el acta si el equipo acordó un liderazgo distinto en la planificación.
 
-| Team Member | GitHub Username | Base Angular, mock e integración | Cargas de empresa y Design System | Búsqueda y filtros | Detalles y seguimiento | Viajes, edición y cancelación | Historial y dashboard |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Benigno Montero, Harold Fauskorp | Harold-11 | L | C | L | C | C | C |
-| Noriega Collado, Jean Fabio | dumbaskidd | C | L | — | — | C | — |
-| Simon Calderon, Ismael Sebastian | Mayel-dev | C | C | C | L | C | — |
-| Rivas Castillo, Christoper Steven | CODERT0PH | — | C | — | — | L | — |
-| Collantes Artola, Marco Antonio | Markollantes2307 | — | — | C | — | — | L |
+| Team Member                       | GitHub Username  | Base Angular, mock e integración | Cargas de empresa y Design System | Búsqueda y filtros | Detalles y seguimiento | Viajes, edición y cancelación | Historial y dashboard |
+| --------------------------------- | ---------------- | -------------------------------- | --------------------------------- | ------------------ | ---------------------- | ----------------------------- | --------------------- |
+| Benigno Montero, Harold Fauskorp  | Harold-11        | L                                | C                                 | L                  | C                      | C                             | C                     |
+| Noriega Collado, Jean Fabio       | dumbaskidd       | C                                | L                                 | —                  | —                      | C                             | —                     |
+| Simon Calderon, Ismael Sebastian  | Mayel-dev        | C                                | C                                 | C                  | L                      | C                             | —                     |
+| Rivas Castillo, Christoper Steven | CODERT0PH        | —                                | C                                 | —                  | —                      | L                             | —                     |
+| Collantes Artola, Marco Antonio   | Markollantes2307 | —                                | —                                 | C                  | —                      | —                             | L                     |
 
 **L:** líder del aspecto. **C:** colaborador. **—:** sin participación específica documentada en ese aspecto. La validación documental está asignada a Jean; los filtros a Marco; la búsqueda inicial a Harold. Los accesos de la landing registran commits de Harold y la preparación del despliegue registra commits de Ismael.
 
@@ -564,55 +570,55 @@ El backlog prioriza publicar y gestionar solicitudes para empresas y consultar o
 
 ![Historias del Sprint 2 con responsables, estados y puntos](../assets/images/sprint2/SprintReport.png)
 
-*Figura. Registro de Jira: 18 historias finalizadas, responsables HM, JC, CC, IS y MA y 49 puntos en total. El estado corresponde a la captura suministrada por el equipo.*
+_Figura. Registro de Jira: 18 historias finalizadas, responsables HM, JC, CC, IS y MA y 49 puntos en total. El estado corresponde a la captura suministrada por el equipo._
 
 **Verificación directa de Jira:** 06/10/2026, zona America/Lima. Se consultaron el Sprint 67 del tablero CL (2), las 18 historias y todas sus subtareas; las consultas se completaron sin páginas adicionales. Las asignaciones y estados de las tablas corresponden a esa consulta, no a una estimación de autoría.
 
-| User Story Id | Jira key | Story Title | Story Points | Assigned To (historia) | Status |
-| --- | --- | --- | ---: | --- | --- |
-| US28 | US-32 | Visualización de videos del producto y del equipo | 2 | Ismael Simon (IS) | Finalizada |
-| US49 | US-69 | Tema visual con los tokens del Design System | 2 | Jean Noriega (JC) | Finalizada |
-| US44 | US-64 | Estructura del proyecto Angular por bounded context | 3 | Harold Benigno (HM) | Finalizada |
-| US45 | US-65 | API simulada para el desarrollo del frontend | 3 | Harold Benigno (HM) | Finalizada |
-| US04 | US-7 | Creación de solicitud de carga | 5 | Jean Noriega (JC) | Finalizada |
-| US37 | US-57 | Listado de mis cargas | 2 | Jean Noriega (JC) | Finalizada |
-| US06 | US-10 | Búsqueda de fletes disponibles | 5 | Harold Benigno (HM) | Finalizada |
-| US05 | US-8 | Cancelación de solicitud | 2 | Christoper Rivas (CC) | Finalizada |
-| US38 | US-58 | Edición de solicitud de carga | 2 | Christoper Rivas (CC) | Finalizada |
-| US42 | US-62 | Datos del transportista asignado | 2 | Ismael Simon (IS) | Finalizada |
-| US40 | US-60 | Detalle de un flete | 2 | Ismael Simon (IS) | Finalizada |
-| US48 | US-68 | Internacionalización de la Web Application | 3 | Harold Benigno (HM) | Finalizada |
-| US36 | US-56 | Dashboard de la empresa | 3 | Marco Collantes (MA) | Finalizada |
-| US39 | US-59 | Filtros avanzados de búsqueda de fletes | 3 | Marco Collantes (MA) | Finalizada |
-| US11 | US-16 | Historial de servicios | 2 | Marco Collantes (MA) | Finalizada |
-| US09 | US-14 | Seguimiento de carga | 3 | Ismael Simon (IS) | Finalizada |
-| US35 | US-55 | Consulta del estado de validación | 2 | Jean Noriega (JC) | Finalizada |
-| US41 | US-61 | Mis viajes del transportista | 3 | Christoper Rivas (CC) | Finalizada |
+| User Story Id | Jira key | Story Title                                         | Story Points | Assigned To (historia) | Status     |
+| ------------- | -------- | --------------------------------------------------- | -----------: | ---------------------- | ---------- |
+| US28          | US-32    | Visualización de videos del producto y del equipo   |            2 | Ismael Simon (IS)      | Finalizada |
+| US49          | US-69    | Tema visual con los tokens del Design System        |            2 | Jean Noriega (JC)      | Finalizada |
+| US44          | US-64    | Estructura del proyecto Angular por bounded context |            3 | Harold Benigno (HM)    | Finalizada |
+| US45          | US-65    | API simulada para el desarrollo del frontend        |            3 | Harold Benigno (HM)    | Finalizada |
+| US04          | US-7     | Creación de solicitud de carga                      |            5 | Jean Noriega (JC)      | Finalizada |
+| US37          | US-57    | Listado de mis cargas                               |            2 | Jean Noriega (JC)      | Finalizada |
+| US06          | US-10    | Búsqueda de fletes disponibles                      |            5 | Harold Benigno (HM)    | Finalizada |
+| US05          | US-8     | Cancelación de solicitud                            |            2 | Christoper Rivas (CC)  | Finalizada |
+| US38          | US-58    | Edición de solicitud de carga                       |            2 | Christoper Rivas (CC)  | Finalizada |
+| US42          | US-62    | Datos del transportista asignado                    |            2 | Ismael Simon (IS)      | Finalizada |
+| US40          | US-60    | Detalle de un flete                                 |            2 | Ismael Simon (IS)      | Finalizada |
+| US48          | US-68    | Internacionalización de la Web Application          |            3 | Harold Benigno (HM)    | Finalizada |
+| US36          | US-56    | Dashboard de la empresa                             |            3 | Marco Collantes (MA)   | Finalizada |
+| US39          | US-59    | Filtros avanzados de búsqueda de fletes             |            3 | Marco Collantes (MA)   | Finalizada |
+| US11          | US-16    | Historial de servicios                              |            2 | Marco Collantes (MA)   | Finalizada |
+| US09          | US-14    | Seguimiento de carga                                |            3 | Ismael Simon (IS)      | Finalizada |
+| US35          | US-55    | Consulta del estado de validación                   |            2 | Jean Noriega (JC)      | Finalizada |
+| US41          | US-61    | Mis viajes del transportista                        |            3 | Christoper Rivas (CC)  | Finalizada |
 
 **Subtareas del Sprint Backlog**
 
 **Criterio de estimación:** las historias del Sprint 2 se estimaron con Story Points en Jira, con un total de 49 puntos. Sus valores se muestran en la tabla de historias anterior. Las subtareas descomponen ese trabajo y no tienen estimaciones independientes registradas; no se convierten ni se suman nuevamente los puntos de sus historias.
 
-| User Story Id | Work Item/Task Id | Work Item/Task Title | Assigned To (subtarea) | Status |
-| --- | --- | --- | --- | --- |
-| US28 | T11 / US-40 | Implementación de la sección de videos | Ismael Simon (IS) | Finalizada |
-| US49 | T14 / US-79 | Configuración del tema de Angular Material con los tokens del Design System | Jean Noriega (JC) | Finalizada |
-| US44 | T12 / US-77 | Inicialización del proyecto Angular con estructura por bounded context | Harold Benigno (HM) | Finalizada |
-| US45 | T13 / US-78 | Configuración de json-server con los recursos del dominio | Harold Benigno (HM) | Finalizada |
-| US04 | T20 / US-85 | Implementación del formulario de publicación de solicitud de carga | Christoper Rivas (CC) | Finalizada |
-| US37 | T21 / US-86 | Implementación del listado de cargas de la empresa con filtro por estado | Ismael Simon (IS) | Finalizada |
-| US06 | T22 / US-87 | Implementación de la búsqueda de fletes disponibles con filtros | Harold Benigno (HM) | Finalizada |
-| US05 | T23 / US-88 | Implementación de la cancelación de solicitud con motivo | Harold Benigno (HM) | Finalizada |
-| US38 | T24 / US-89 | Implementación de la edición de solicitud publicada | Ismael Simon (IS) | Finalizada |
-| US42 | T26 / US-91 | Implementación del detalle de la solicitud con los datos del transportista asignado | Ismael Simon (IS) | Finalizada |
-| US40 | T27 / US-92 | Implementación del detalle de flete para el transportista | Marco Collantes (MA) | Finalizada |
-| US48 | T25 / US-90 | Configuración de ngx-translate con en.json y es.json y selector de idioma | Jean Noriega (JC) | Finalizada |
-| US36 | T28 / US-93 | Implementación del dashboard de la empresa | Marco Collantes (MA) | Finalizada |
-| US39 | T29 / US-94 | Implementación de los filtros avanzados de búsqueda de fletes | Marco Collantes (MA) | Finalizada |
-| US11 | T31 / US-96 | Implementación del historial de servicios del transportista | Harold Benigno (HM) | Finalizada |
-| US09 | T32 / US-97 | Implementación del seguimiento de carga para la empresa | Marco Collantes (MA) | Finalizada |
-| US35 | T33 / US-98 | Implementación de la consulta del estado de validación de documentos | Harold Benigno (HM) | Finalizada |
-| US41 | T30 / US-95 | Implementación de la vista Mis viajes del transportista | Ismael Simon (IS) | Finalizada |
+| User Story Id | Work Item/Task Id | Work Item/Task Title                                                                | Assigned To (subtarea) | Status     |
+| ------------- | ----------------- | ----------------------------------------------------------------------------------- | ---------------------- | ---------- |
+| US28          | T11 / US-40       | Implementación de la sección de videos                                              | Ismael Simon (IS)      | Finalizada |
+| US49          | T14 / US-79       | Configuración del tema de Angular Material con los tokens del Design System         | Jean Noriega (JC)      | Finalizada |
+| US44          | T12 / US-77       | Inicialización del proyecto Angular con estructura por bounded context              | Harold Benigno (HM)    | Finalizada |
+| US45          | T13 / US-78       | Configuración de json-server con los recursos del dominio                           | Harold Benigno (HM)    | Finalizada |
+| US04          | T20 / US-85       | Implementación del formulario de publicación de solicitud de carga                  | Christoper Rivas (CC)  | Finalizada |
+| US37          | T21 / US-86       | Implementación del listado de cargas de la empresa con filtro por estado            | Ismael Simon (IS)      | Finalizada |
+| US06          | T22 / US-87       | Implementación de la búsqueda de fletes disponibles con filtros                     | Harold Benigno (HM)    | Finalizada |
+| US05          | T23 / US-88       | Implementación de la cancelación de solicitud con motivo                            | Harold Benigno (HM)    | Finalizada |
+| US38          | T24 / US-89       | Implementación de la edición de solicitud publicada                                 | Ismael Simon (IS)      | Finalizada |
+| US42          | T26 / US-91       | Implementación del detalle de la solicitud con los datos del transportista asignado | Ismael Simon (IS)      | Finalizada |
+| US40          | T27 / US-92       | Implementación del detalle de flete para el transportista                           | Marco Collantes (MA)   | Finalizada |
+| US48          | T25 / US-90       | Configuración de ngx-translate con en.json y es.json y selector de idioma           | Jean Noriega (JC)      | Finalizada |
+| US36          | T28 / US-93       | Implementación del dashboard de la empresa                                          | Marco Collantes (MA)   | Finalizada |
+| US39          | T29 / US-94       | Implementación de los filtros avanzados de búsqueda de fletes                       | Marco Collantes (MA)   | Finalizada |
+| US11          | T31 / US-96       | Implementación del historial de servicios del transportista                         | Harold Benigno (HM)    | Finalizada |
+| US09          | T32 / US-97       | Implementación del seguimiento de carga para la empresa                             | Marco Collantes (MA)   | Finalizada |
+| US35          | T33 / US-98       | Implementación de la consulta del estado de validación de documentos                | Harold Benigno (HM)    | Finalizada |
+| US41          | T30 / US-95       | Implementación de la vista Mis viajes del transportista                             | Ismael Simon (IS)      | Finalizada |
 
 Las 18 historias y sus 18 subtareas figuran Finalizadas. T11 / US-40 fue trasladada desde Sprint 1 y conserva en su descripción una mención a IDs de YouTube pendientes; su estado cerrado no acredita por sí solo que los videos estén publicados. El equipo proporcionó el enlace y la captura del video de navegación del Sprint 2, incorporados en 5.2.2.5; esa evidencia es distinta de confirmar los videos About-the-Product y About-the-Team incrustados en la landing.
 
@@ -622,19 +628,19 @@ Las 18 historias y sus 18 subtareas figuran Finalizadas. T11 / US-40 fue traslad
 
 ![Registro de incorporación de historias al Sprint 2](../assets/images/sprint2/SprintScopeChange.png)
 
-*Figura. Jira registra 27 puntos añadidos al compromiso inicial de 22, dando un alcance final de 49 puntos.*
+_Figura. Jira registra 27 puntos añadidos al compromiso inicial de 22, dando un alcance final de 49 puntos._
 
-| Fecha | Historias añadidas | Story Points |
-| --- | --- | ---: |
-| 2026-10-02 | US05, US38, US42, US40 y US48 | 11 |
-| 2026-10-03 | US36, US39, US11, US09, US35 y US41 | 16 |
-| **Total añadido** | **11 historias** | **27** |
+| Fecha             | Historias añadidas                  | Story Points |
+| ----------------- | ----------------------------------- | -----------: |
+| 2026-10-02        | US05, US38, US42, US40 y US48       |           11 |
+| 2026-10-03        | US36, US39, US11, US09, US35 y US41 |           16 |
+| **Total añadido** | **11 historias**                    |       **27** |
 
 **Trabajo pendiente y resultado del sprint**
 
 ![Burndown del Sprint 2 del 1 al 5 de octubre](../assets/images/sprint2/SprintBurndown.png)
 
-*Figura. El gráfico parte de 22 puntos, aumenta con la incorporación de alcance y desciende hasta cero al final. El aumento no representa retroceso técnico: refleja historias añadidas después de iniciar el sprint. La concentración de cierres al final aconseja registrar estados y validar tareas de manera más continua en la siguiente iteración.*
+_Figura. El gráfico parte de 22 puntos, aumenta con la incorporación de alcance y desciende hasta cero al final. El aumento no representa retroceso técnico: refleja historias añadidas después de iniciar el sprint. La concentración de cierres al final aconseja registrar estados y validar tareas de manera más continua en la siguiente iteración._
 
 **Product Backlog restante después del Sprint 2**
 
@@ -642,7 +648,7 @@ Las 18 historias y sus 18 subtareas figuran Finalizadas. T11 / US-40 fue traslad
 
 ![Product Backlog restante, segunda parte](../assets/images/sprint2/RemainingBacklog2.png)
 
-*Figuras. El backlog posterior al Sprint 2 registra 28 actividades y 95 Story Points, todas en estado Tareas por hacer. Incluye autenticación, perfiles, gestión de vehículos, acciones de viajes, pagos y servicios del backend. Es alcance pendiente del producto, no trabajo incompleto comprometido dentro del Sprint 2. Los puntos de historia no equivalen a horas estimadas y estas capturas no muestran los IDs de subtareas.*
+_Figuras. El backlog posterior al Sprint 2 registra 28 actividades y 95 Story Points, todas en estado Tareas por hacer. Incluye autenticación, perfiles, gestión de vehículos, acciones de viajes, pagos y servicios del backend. Es alcance pendiente del producto, no trabajo incompleto comprometido dentro del Sprint 2. Los puntos de historia no equivalen a horas estimadas y estas capturas no muestran los IDs de subtareas._
 
 La consulta directa del backlog del tablero CL realizada el 06/10/2026 confirma las 28 historias y sus 95 Story Points. Se excluyeron épicas y subtareas del conteo para evitar duplicar alcance. US50 / US-70 permanece en Tareas por hacer con 5 puntos.
 
@@ -652,28 +658,28 @@ US50 (pruebas unitarias y despliegue) permanece en el backlog: se distingue la p
 
 Las evidencias siguientes corresponden a commits públicos del frontend y la landing consultados para el periodo del Sprint 2. Las fechas se presentan en **America/Lima (UTC−05:00)**; algunos commits fechados el 6 de octubre en UTC pertenecen todavía al 5 de octubre en Lima. La columna de descripción resume el cambio; no se presenta como un body textual del commit.
 
-| Repository | Branch / evidencia de integración | Commit Id | Commit Message | Commit Message Body / descripción | Committed on (Lima) |
-| --- | --- | --- | --- | --- | --- |
-| Frontend | feature/project-setup-and-shared, PR #1 | a742387 | chore(setup): configure Angular 22 workspace with Material, ngx-translate, Karma and json-server | Configuración del workspace y dependencias. | 03/10/2026 |
-| Frontend | feature/project-setup-and-shared, PR #1 | a3d17b7 | chore(api): add environments and json-server mock API with seed data | Entornos, API simulada y datos de prueba. | 03/10/2026 |
-| Frontend | feature/design-system-theme, integración registrada | 7b15d2d | feat(shared): add design tokens with WCAG contrast helper | Tokens visuales y apoyo al contraste. | 03/10/2026 |
-| Frontend | feature/publish-load-request, integración registrada | 5b5078a | feat(freight-publishing): implement publish load request form with validation | Formulario de solicitud y validación. | 03/10/2026 |
-| Frontend | feature/my-load-requests, integración registrada | 7319010 | feat(freight-publishing): implement my load requests list with status filter and actions | Listado y filtros de cargas. | 03/10/2026 |
-| Frontend | feature/cancel-and-edit-load-request, PR #2 | 230e6a1 | feat(freight-publishing): add cancel load request dialog with reason | Cancelación con motivo. | 04/10/2026 |
-| Frontend | feature/cancel-and-edit-load-request, PR #2 | cb95d33 | feat(freight-publishing): add edit mode to the load request form for published requests | Edición de solicitudes publicadas. | 04/10/2026 |
-| Frontend | feature/search-available-loads, PR #3 | 7fd8b57 | feat(matching): implement available loads search view and load card | Vista de búsqueda y tarjetas. | 04/10/2026 |
-| Frontend | feature/available-load-detail, PR #4 | c0d2fb7 | feat(matching): add available load detail view and link it from the load card | Detalle de flete. | 04/10/2026 |
-| Frontend | feature/load-request-detail, PR #5 | ae2aee1 | feat(freight-publishing): add load request detail view with the assigned carrier | Detalle y transportista asignado. | 04/10/2026 |
-| Frontend | feature/shipper-dashboard, PR #7 | 57021dd | feat(shipper-dashboard): shipper-dashboard component implemented | Dashboard de empresa. | 04/10/2026 |
-| Frontend | feature/advanced-load-filters, PR #8 | 0902bc0 | feat(advanced-load-filters): updated load search component | Filtros avanzados. | 04/10/2026 |
-| Frontend | feature/carrier-trips, PR #12 | 3598ccb | feat(trip-execution): implement my trips grouped as upcoming, in progress and completed | Viajes agrupados por estado. | 04/10/2026 |
-| Frontend | feature/load-tracking, PR #13 | d366330 | feat(trip-execution): implement load tracking with status timeline for shippers | Seguimiento e historial de estados. | 04/10/2026 |
-| Frontend | feature/service-history, PR #14 | ab366db | feat(trip-execution): implement service history of completed trips with totals | Historial y totales. | 04/10/2026 |
-| Frontend | feature/document-validation-status, PR #15 | 2c77a56 | feat(documents): implement document validation status with rejection reasons and expiry warning | Estados de documentos. | 04/10/2026 |
-| Frontend | develop → main, PR #16 | e9a5352 | chore(deploy): configure Vercel hosting and SPA routing | Hosting y rutas del cliente. | 05/10/2026 |
-| Frontend | main, PR #17 | 9756bac | fix(config): point production API to Render | URL HTTPS del mock de producción. | 05/10/2026 |
-| Landing Page | main | a7479af | feat(cta): redirect landing buttons to web app | Configuración del destino de la Web Application. | 05/10/2026 |
-| Landing Page | main | 245b3b9 | fix(cta): use direct web application links | URL absoluta en los ocho href de los CTA. | 05/10/2026 |
+| Repository   | Branch / evidencia de integración                    | Commit Id | Commit Message                                                                                   | Commit Message Body / descripción                | Committed on (Lima) |
+| ------------ | ---------------------------------------------------- | --------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------- |
+| Frontend     | feature/project-setup-and-shared, PR #1              | a742387   | chore(setup): configure Angular 22 workspace with Material, ngx-translate, Karma and json-server | Configuración del workspace y dependencias.      | 03/10/2026          |
+| Frontend     | feature/project-setup-and-shared, PR #1              | a3d17b7   | chore(api): add environments and json-server mock API with seed data                             | Entornos, API simulada y datos de prueba.        | 03/10/2026          |
+| Frontend     | feature/design-system-theme, integración registrada  | 7b15d2d   | feat(shared): add design tokens with WCAG contrast helper                                        | Tokens visuales y apoyo al contraste.            | 03/10/2026          |
+| Frontend     | feature/publish-load-request, integración registrada | 5b5078a   | feat(freight-publishing): implement publish load request form with validation                    | Formulario de solicitud y validación.            | 03/10/2026          |
+| Frontend     | feature/my-load-requests, integración registrada     | 7319010   | feat(freight-publishing): implement my load requests list with status filter and actions         | Listado y filtros de cargas.                     | 03/10/2026          |
+| Frontend     | feature/cancel-and-edit-load-request, PR #2          | 230e6a1   | feat(freight-publishing): add cancel load request dialog with reason                             | Cancelación con motivo.                          | 04/10/2026          |
+| Frontend     | feature/cancel-and-edit-load-request, PR #2          | cb95d33   | feat(freight-publishing): add edit mode to the load request form for published requests          | Edición de solicitudes publicadas.               | 04/10/2026          |
+| Frontend     | feature/search-available-loads, PR #3                | 7fd8b57   | feat(matching): implement available loads search view and load card                              | Vista de búsqueda y tarjetas.                    | 04/10/2026          |
+| Frontend     | feature/available-load-detail, PR #4                 | c0d2fb7   | feat(matching): add available load detail view and link it from the load card                    | Detalle de flete.                                | 04/10/2026          |
+| Frontend     | feature/load-request-detail, PR #5                   | ae2aee1   | feat(freight-publishing): add load request detail view with the assigned carrier                 | Detalle y transportista asignado.                | 04/10/2026          |
+| Frontend     | feature/shipper-dashboard, PR #7                     | 57021dd   | feat(shipper-dashboard): shipper-dashboard component implemented                                 | Dashboard de empresa.                            | 04/10/2026          |
+| Frontend     | feature/advanced-load-filters, PR #8                 | 0902bc0   | feat(advanced-load-filters): updated load search component                                       | Filtros avanzados.                               | 04/10/2026          |
+| Frontend     | feature/carrier-trips, PR #12                        | 3598ccb   | feat(trip-execution): implement my trips grouped as upcoming, in progress and completed          | Viajes agrupados por estado.                     | 04/10/2026          |
+| Frontend     | feature/load-tracking, PR #13                        | d366330   | feat(trip-execution): implement load tracking with status timeline for shippers                  | Seguimiento e historial de estados.              | 04/10/2026          |
+| Frontend     | feature/service-history, PR #14                      | ab366db   | feat(trip-execution): implement service history of completed trips with totals                   | Historial y totales.                             | 04/10/2026          |
+| Frontend     | feature/document-validation-status, PR #15           | 2c77a56   | feat(documents): implement document validation status with rejection reasons and expiry warning  | Estados de documentos.                           | 04/10/2026          |
+| Frontend     | develop → main, PR #16                               | e9a5352   | chore(deploy): configure Vercel hosting and SPA routing                                          | Hosting y rutas del cliente.                     | 05/10/2026          |
+| Frontend     | main, PR #17                                         | 9756bac   | fix(config): point production API to Render                                                      | URL HTTPS del mock de producción.                | 05/10/2026          |
+| Landing Page | main                                                 | a7479af   | feat(cta): redirect landing buttons to web app                                                   | Configuración del destino de la Web Application. | 05/10/2026          |
+| Landing Page | main                                                 | 245b3b9   | fix(cta): use direct web application links                                                       | URL absoluta en los ocho href de los CTA.        | 05/10/2026          |
 
 **Repositorios:** Frontend: https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application y Landing Page: https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page. Los PR #1–#15 evidencian integración de funcionalidades a `develop`; #16 y #17 documentan ajustes de despliegue hacia `main`. Los cambios de CTA están registrados directamente en `main`; no se les atribuye una rama feature o un Pull Request inexistente.
 
@@ -681,50 +687,50 @@ Las evidencias siguientes corresponden a commits públicos del frontend y la lan
 
 El incremento incorpora las vistas de empresa y transportista que se describen a continuación. Las rutas proceden del código frontend; esta relación orienta el recorrido del video y las capturas que se presentan a continuación. Una ruta implementada no acredita por sí sola que todos sus criterios de aceptación hayan sido ejecutados satisfactoriamente.
 
-| Vista / ruta | Historias relacionadas | Recorrido a documentar |
-| --- | --- | --- |
-| `/home` | US44 | Seleccionar un perfil de demostración y acceder a sus vistas; no presentarlo como login real. |
-| `/shipper/dashboard` | US36 | Mostrar indicadores, últimas operaciones y el caso de empresa sin cargas. |
-| `/shipper/load-requests` | US37, US05 | Filtrar solicitudes por estado y cancelar una publicada, mostrando resultado y actualización de lista. |
-| `/shipper/load-requests/new` | US04 | Completar el formulario, mostrar campos inválidos y una publicación válida sobre el mock. |
-| `/shipper/load-requests/:id/edit` | US38 | Editar una solicitud disponible y mostrar las restricciones de estado. |
-| `/shipper/load-requests/:id` | US42 | Consultar detalle, transportista y vehículo; mostrar una solicitud aún sin asignación. |
-| `/shipper/tracking/:loadRequestId` | US09 | Mostrar estado e historial del viaje y el mensaje cuando no existe seguimiento. |
-| `/carrier/available-loads` | US06, US39 | Buscar fletes, aplicar y limpiar filtros y mostrar un caso sin resultados. |
-| `/carrier/available-loads/:id` | US40 | Abrir detalle y comprobar disponibilidad actual del flete. |
-| `/carrier/trips` | US41 | Consultar grupos de viajes y caso sin viajes. |
-| `/carrier/trips/history` | US11 | Mostrar servicios completados y totales calculados con datos de muestra. |
-| `/carrier/documents` | US35 | Comparar estados, motivos de rechazo y avisos de vencimiento; no describirlo como validación oficial del MTC. |
-| Landing Page → `/home` | US25, acceso actualizado | Pulsar CTA de empresa, transportista e inicio de sesión y mostrar llegada a la aplicación. Los tres tipos de botón comparten actualmente `/home`; no existen destinos diferenciados de registro/login. |
+| Vista / ruta                       | Historias relacionadas   | Recorrido a documentar                                                                                                                                                                                 |
+| ---------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `/home`                            | US44                     | Seleccionar un perfil de demostración y acceder a sus vistas; no presentarlo como login real.                                                                                                          |
+| `/shipper/dashboard`               | US36                     | Mostrar indicadores, últimas operaciones y el caso de empresa sin cargas.                                                                                                                              |
+| `/shipper/load-requests`           | US37, US05               | Filtrar solicitudes por estado y cancelar una publicada, mostrando resultado y actualización de lista.                                                                                                 |
+| `/shipper/load-requests/new`       | US04                     | Completar el formulario, mostrar campos inválidos y una publicación válida sobre el mock.                                                                                                              |
+| `/shipper/load-requests/:id/edit`  | US38                     | Editar una solicitud disponible y mostrar las restricciones de estado.                                                                                                                                 |
+| `/shipper/load-requests/:id`       | US42                     | Consultar detalle, transportista y vehículo; mostrar una solicitud aún sin asignación.                                                                                                                 |
+| `/shipper/tracking/:loadRequestId` | US09                     | Mostrar estado e historial del viaje y el mensaje cuando no existe seguimiento.                                                                                                                        |
+| `/carrier/available-loads`         | US06, US39               | Buscar fletes, aplicar y limpiar filtros y mostrar un caso sin resultados.                                                                                                                             |
+| `/carrier/available-loads/:id`     | US40                     | Abrir detalle y comprobar disponibilidad actual del flete.                                                                                                                                             |
+| `/carrier/trips`                   | US41                     | Consultar grupos de viajes y caso sin viajes.                                                                                                                                                          |
+| `/carrier/trips/history`           | US11                     | Mostrar servicios completados y totales calculados con datos de muestra.                                                                                                                               |
+| `/carrier/documents`               | US35                     | Comparar estados, motivos de rechazo y avisos de vencimiento; no describirlo como validación oficial del MTC.                                                                                          |
+| Landing Page → `/home`             | US25, acceso actualizado | Pulsar CTA de empresa, transportista e inicio de sesión y mostrar llegada a la aplicación. Los tres tipos de botón comparten actualmente `/home`; no existen destinos diferenciados de registro/login. |
 
-**Video de navegación del Sprint 2**  
-**Link:** LoadMatch — Sprint 2 Execution Demo | Web Application: https://youtu.be/eCoQdmCrUJg.  
-**Duración:** 4 minutos y 38 segundos, según el contador visible en la captura proporcionada por el equipo; está dentro del intervalo orientativo de 3–5 minutos por aplicación.  
+**Video de navegación del Sprint 2**
+**Link:** LoadMatch — Sprint 2 Execution Demo | Web Application: https://youtu.be/eCoQdmCrUJg.
+**Duración:** 4 minutos y 38 segundos, según el contador visible en la captura proporcionada por el equipo; está dentro del intervalo orientativo de 3–5 minutos por aplicación.
 **Disponibilidad:** la captura muestra el video como No listado. El acceso mediante enlace debe comprobarse antes de entregar.
 
 ![Captura del video de navegación del Sprint 2 con duración 4:38](../assets/images/sprint2/Sprint2Video.png)
 
-*Figura. Reproductor del video de demostración del Sprint 2, en el instante 0:37 de una duración total de 4:38. La captura acredita título y duración visibles; no sustituye una revisión completa del contenido ni una captura de cada recorrido interno.*
+_Figura. Reproductor del video de demostración del Sprint 2, en el instante 0:37 de una duración total de 4:38. La captura acredita título y duración visibles; no sustituye una revisión completa del contenido ni una captura de cada recorrido interno._
 
 **Capturas de ejecución proporcionadas por el equipo**
 
 ![Landing Page ejecutada localmente en español](../assets/images/sprint2/LandingLocal.png)
 
-*Figura. Landing Page en español, ejecutada en `127.0.0.1:5501`, con CTA de empresa, transportista e inicio de sesión. Acredita visualización local, no publicación en GitHub Pages ni el resultado de pulsar los botones.*
+_Figura. Landing Page en español, ejecutada en `127.0.0.1:5501`, con CTA de empresa, transportista e inicio de sesión. Acredita visualización local, no publicación en GitHub Pages ni el resultado de pulsar los botones._
 
 ![Inicio de la Web Application desplegada en Vercel](../assets/images/sprint2/WebAppHome.png)
 
-*Figura. `/home` de la aplicación desplegada en Vercel, en inglés, con cuatro empresas y tres transportistas para seleccionar perfiles de demostración. Acredita la visualización de la entrada de la aplicación, no la ejecución completa de las historias internas ni autenticación real.*
+_Figura. `/home` de la aplicación desplegada en Vercel, en inglés, con cuatro empresas y tres transportistas para seleccionar perfiles de demostración. Acredita la visualización de la entrada de la aplicación, no la ejecución completa de las historias internas ni autenticación real._
 
 **Adaptación móvil de las páginas iniciales**
 
 ![Landing publicada en GitHub Pages en emulación móvil](../assets/images/sprint2/LandingMobilePublished.png)
 
-*Figura. Landing publicada en GitHub Pages, en español, mediante emulación de iPhone SE a 375 × 667. Se observan menú compacto, CTA apilados y contenido adaptado al ancho. Acredita la vista móvil inicial y la dirección pública, no la ejecución del menú ni de los botones.*
+_Figura. Landing publicada en GitHub Pages, en español, mediante emulación de iPhone SE a 375 × 667. Se observan menú compacto, CTA apilados y contenido adaptado al ancho. Acredita la vista móvil inicial y la dirección pública, no la ejecución del menú ni de los botones._
 
 ![Web Application desplegada en emulación móvil](../assets/images/sprint2/FrontendMobile.png)
 
-*Figura. Inicio de la Web Application en Vercel, en inglés, mediante emulación de iPhone SE a 375 × 667. El texto y las tarjetas de empresa se adaptan al ancho visible; el contenido continúa mediante desplazamiento vertical. No es una prueba en un dispositivo físico ni acredita todas las pantallas internas.*
+_Figura. Inicio de la Web Application en Vercel, en inglés, mediante emulación de iPhone SE a 375 × 667. El texto y las tarjetas de empresa se adaptan al ancho visible; el contenido continúa mediante desplazamiento vertical. No es una prueba en un dispositivo físico ni acredita todas las pantallas internas._
 
 Las evidencias de esta sección incluyen el video de demostración y las capturas desktop y móviles proporcionadas por el equipo. Se distingue su alcance: las capturas muestran las páginas iniciales; las imágenes de Jira muestran planificación y estado del trabajo.
 
@@ -738,18 +744,18 @@ Durante Sprint 2 se utilizó JSON Server para desarrollar el frontend con datos 
 
 ![Respuesta de la raíz del servicio de API en Render](../assets/images/sprint2/ApiRoot.png)
 
-*Figura. La dirección raíz de Render muestra `{}`. Esta respuesta no acredita por sí sola un fallo ni comprueba los recursos de la API. En una comprobación de solo lectura realizada durante esta revisión, `GET /api/v1/shippers` respondió HTTP 200 con cuatro empresas. La API entrega JSON, no una interfaz web; esta comprobación puntual no valida todos los endpoints.*
+_Figura. La dirección raíz de Render muestra `{}`. Esta respuesta no acredita por sí sola un fallo ni comprueba los recursos de la API. En una comprobación de solo lectura realizada durante esta revisión, `GET /api/v1/shippers` respondió HTTP 200 con cuatro empresas. La API entrega JSON, no una interfaz web; esta comprobación puntual no valida todos los endpoints._
 
-| Recurso del mock | Acción de consulta | Uso en el frontend |
-| --- | --- | --- |
-| `/shippers` | GET | Empresas y selección de perfil de demostración. |
-| `/carriers` | GET | Transportistas y datos del asignado. |
-| `/vehicle-types` | GET | Catálogo de tipos de vehículo. |
-| `/vehicles` | GET | Datos de unidades y capacidad. |
-| `/load-requests` | GET | Cargas, búsqueda, detalles y dashboard. |
-| `/trips` | GET | Viajes, seguimiento e historial. |
-| `/document-types` | GET | Tipos de documentación. |
-| `/documents` | GET | Estados de validación documental. |
+| Recurso del mock  | Acción de consulta | Uso en el frontend                              |
+| ----------------- | ------------------ | ----------------------------------------------- |
+| `/shippers`       | GET                | Empresas y selección de perfil de demostración. |
+| `/carriers`       | GET                | Transportistas y datos del asignado.            |
+| `/vehicle-types`  | GET                | Catálogo de tipos de vehículo.                  |
+| `/vehicles`       | GET                | Datos de unidades y capacidad.                  |
+| `/load-requests`  | GET                | Cargas, búsqueda, detalles y dashboard.         |
+| `/trips`          | GET                | Viajes, seguimiento e historial.                |
+| `/document-types` | GET                | Tipos de documentación.                         |
+| `/documents`      | GET                | Estados de validación documental.               |
 
 Los recursos siguen `server/db.json` y el mapeo de `server/routes.json`. La publicación, edición y cancelación de solicitudes operan sobre el mock; no deben atribuirse al backend real. Los contratos formales, parámetros, respuestas y ejemplos interactivos de OpenAPI se incorporarán cuando se implemente y documente el Web Service correspondiente. Los commits `a3d17b7` y `9756bac` evidencian preparación y configuración del mock, no documentación OpenAPI.
 
@@ -757,12 +763,12 @@ Los recursos siguen `server/db.json` y el mapeo de `server/routes.json`. La publ
 
 Sprint 2 incorpora la publicación de la Web Application en Vercel y la configuración de su consumo de JSON Server en Render. La Landing Page permanece en GitHub Pages y recibe una actualización de los enlaces de acceso.
 
-| Producto | URL / configuración | Evidencia disponible |
-| --- | --- | --- |
-| Landing Page | https://desarrollo-open-source-grupo-5.github.io/Loadmatch-landing-page/ | Commits `a7479af` y `245b3b9`: ocho CTA hacia `/home`. |
-| Web Application | https://loadmatch-frontend-application.vercel.app/home | `vercel.json`, commit `e9a5352` y PR #16. |
-| API simulada | https://loadmatch-api.onrender.com/api/v1 | Configuración remota de producción, commit `9756bac` y PR #17. |
-| Backend Spring Boot | Sin despliegue acreditado en esta entrega | Se mantiene separado del mock. |
+| Producto            | URL / configuración                                                      | Evidencia disponible                                           |
+| ------------------- | ------------------------------------------------------------------------ | -------------------------------------------------------------- |
+| Landing Page        | https://desarrollo-open-source-grupo-5.github.io/Loadmatch-landing-page/ | Commits `a7479af` y `245b3b9`: ocho CTA hacia `/home`.         |
+| Web Application     | https://loadmatch-frontend-application.vercel.app/home                   | `vercel.json`, commit `e9a5352` y PR #16.                      |
+| API simulada        | https://loadmatch-api.onrender.com/api/v1                                | Configuración remota de producción, commit `9756bac` y PR #17. |
+| Backend Spring Boot | Sin despliegue acreditado en esta entrega                                | Se mantiene separado del mock.                                 |
 
 **Configuración reproducible del frontend**
 
@@ -784,29 +790,29 @@ La reescritura permite que Vercel entregue el documento de la SPA cuando se soli
 
 ![Configuración del proyecto Angular en Vercel](../assets/images/sprint2/VercelConfiguration.png)
 
-*Figura. Importación del repositorio del frontend desde `main`, preset Angular, instalación mediante `npm ci`, build mediante `npm run build` y salida `dist/loadmatch-frontend-application/browser`. La captura muestra el formulario de configuración anterior al despliegue; el campo de ejemplo de variables de entorno no demuestra una variable configurada.*
+_Figura. Importación del repositorio del frontend desde `main`, preset Angular, instalación mediante `npm ci`, build mediante `npm run build` y salida `dist/loadmatch-frontend-application/browser`. La captura muestra el formulario de configuración anterior al despliegue; el campo de ejemplo de variables de entorno no demuestra una variable configurada._
 
 ![Despliegue de producción en Vercel con estado Ready](../assets/images/sprint2/VercelReady.png)
 
-*Figura. Panel de producción de Vercel con estado Ready, dominio `loadmatch-frontend-application.vercel.app`, rama `main` y commit `9756bac` — configuración de la API de producción hacia Render. Esta captura acredita el resultado del despliegue, a diferencia del formulario de importación.*
+_Figura. Panel de producción de Vercel con estado Ready, dominio `loadmatch-frontend-application.vercel.app`, rama `main` y commit `9756bac` — configuración de la API de producción hacia Render. Esta captura acredita el resultado del despliegue, a diferencia del formulario de importación._
 
 **Configuración y despliegue del servicio real de Render**
 
 ![Settings del servicio loadmatch-api en Render](../assets/images/sprint2/RenderSettings.png)
 
-*Figura. Servicio `loadmatch-api`, runtime Node, instancia Free, región Virginia, repositorio del frontend y rama `main`, con URL pública y estado Live.*
+_Figura. Servicio `loadmatch-api`, runtime Node, instancia Free, región Virginia, repositorio del frontend y rama `main`, con URL pública y estado Live._
 
 ![Build del servicio de API en Render](../assets/images/sprint2/RenderBuild.png)
 
-*Figura. Configuración de build: `npm ci --include=dev`, con Root Directory vacío (raíz del repositorio). La inclusión de dependencias de desarrollo permite disponer de JSON Server, declarado en devDependencies.*
+_Figura. Configuración de build: `npm ci --include=dev`, con Root Directory vacío (raíz del repositorio). La inclusión de dependencias de desarrollo permite disponer de JSON Server, declarado en devDependencies._
 
 ![Comando de arranque de JSON Server en Render](../assets/images/sprint2/RenderStart.png)
 
-*Figura. Start Command: `npm run api -- --host 0.0.0.0 --port $PORT`; Auto-Deploy: On Commit. El script `api` inicia JSON Server con los recursos y rutas del proyecto; los argumentos permiten escuchar en todas las interfaces y utilizar el puerto asignado al servicio. Pre-Deploy Command está vacío y el Deploy Hook permanece oculto.*
+_Figura. Start Command: `npm run api -- --host 0.0.0.0 --port $PORT`; Auto-Deploy: On Commit. El script `api` inicia JSON Server con los recursos y rutas del proyecto; los argumentos permiten escuchar en todas las interfaces y utilizar el puerto asignado al servicio. Pre-Deploy Command está vacío y el Deploy Hook permanece oculto._
 
 ![Despliegue exitoso de loadmatch-api en Render](../assets/images/sprint2/RenderLive.png)
 
-*Figura. Despliegue con indicador de éxito, estado Live y commit `aafd95e` en `main`. La duración de despliegue indicada es 49,3 segundos. El panel advierte que la instancia gratuita puede suspenderse por inactividad y demorar las solicitudes al reactivarse.*
+_Figura. Despliegue con indicador de éxito, estado Live y commit `aafd95e` en `main`. La duración de despliegue indicada es 49,3 segundos. El panel advierte que la instancia gratuita puede suspenderse por inactividad y demorar las solicitudes al reactivarse._
 
 Estas capturas documentan la configuración final de la API simulada, en lugar del formulario de creación mostrado anteriormente. Render ejecuta JSON Server, no el servidor de desarrollo Angular. La configuración y el despliegue de Vercel y Render ya están incluidos; no se asigna una etiqueta de release no acreditada.
 
@@ -814,13 +820,13 @@ Estas capturas documentan la configuración final de la API simulada, en lugar d
 
 El historial público del frontend registra aportes de los cinco integrantes. La tabla identifica cambios representativos y su relación con Jira; no equipara cantidad de commits con calidad del aporte ni reutiliza los conteos del Sprint 1 como cifras de Sprint 2.
 
-| Integrante | GitHub | Trabajo identificable | Commits representativos |
-| --- | --- | --- | --- |
-| Harold Benigno Montero | Harold-11 | Base Angular, perfiles de demostración, API simulada, navegación, búsqueda y modelos compartidos de viajes/documentos. | `a742387`, `a3d17b7`, `7fd8b57`, `bab819f` |
-| Jean Fabio Noriega Collado | dumbaskidd | Tokens, formulario, listado de cargas y consulta de validación documental. | `7b15d2d`, `5b5078a`, `7319010`, `2c77a56` |
-| Ismael Sebastian Simon Calderon | Mayel-dev | Detalles de cargas/fletes, transportista asignado, seguimiento y configuración de despliegue. | `c0d2fb7`, `ae2aee1`, `d366330`, `e9a5352` |
-| Christoper Steven Rivas Castillo | CODERT0PH | Edición, cancelación de cargas y viajes del transportista. | `230e6a1`, `cb95d33`, `3598ccb` |
-| Marco Antonio Collantes Artola | Markollantes2307 | Dashboard, filtros avanzados, historial e integraciones de ramas. | `57021dd`, `0902bc0`, `ab366db` |
+| Integrante                       | GitHub           | Trabajo identificable                                                                                                  | Commits representativos                    |
+| -------------------------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| Harold Benigno Montero           | Harold-11        | Base Angular, perfiles de demostración, API simulada, navegación, búsqueda y modelos compartidos de viajes/documentos. | `a742387`, `a3d17b7`, `7fd8b57`, `bab819f` |
+| Jean Fabio Noriega Collado       | dumbaskidd       | Tokens, formulario, listado de cargas y consulta de validación documental.                                             | `7b15d2d`, `5b5078a`, `7319010`, `2c77a56` |
+| Ismael Sebastian Simon Calderon  | Mayel-dev        | Detalles de cargas/fletes, transportista asignado, seguimiento y configuración de despliegue.                          | `c0d2fb7`, `ae2aee1`, `d366330`, `e9a5352` |
+| Christoper Steven Rivas Castillo | CODERT0PH        | Edición, cancelación de cargas y viajes del transportista.                                                             | `230e6a1`, `cb95d33`, `3598ccb`            |
+| Marco Antonio Collantes Artola   | Markollantes2307 | Dashboard, filtros avanzados, historial e integraciones de ramas.                                                      | `57021dd`, `0902bc0`, `ab366db`            |
 
 **Historial:** commits del frontend: https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/commits/main/ y commits de la landing: https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page/commits/main/. **Integraciones:** Pull Requests del frontend: https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/pulls?q=is%3Apr+is%3Aclosed.
 
@@ -828,19 +834,19 @@ El historial público del frontend registra aportes de los cinco integrantes. La
 
 ![Contributors de la Landing Page con URL del repositorio visible](../assets/images/sprint2/LandingContributorsWithUrl.png)
 
-*Figura. Contributors de `Loadmatch-landing-page`, con la URL del repositorio visible en la barra del navegador. El gráfico incluye semanas de septiembre y octubre; los conteos corresponden al intervalo mostrado, no exclusivamente al Sprint 2.*
+_Figura. Contributors de `Loadmatch-landing-page`, con la URL del repositorio visible en la barra del navegador. El gráfico incluye semanas de septiembre y octubre; los conteos corresponden al intervalo mostrado, no exclusivamente al Sprint 2._
 
 ![Contributors de la Web Application con URL del repositorio visible](../assets/images/sprint2/FrontendContributorsWithUrl.png)
 
-*Figura. Contributors de `Loadmatch-frontend-application`, con la URL del repositorio visible en la barra del navegador. Se observan aportes de los cinco integrantes. El intervalo incluye actividad anterior al 1 de octubre y no constituye un conteo exclusivo del Sprint 2.*
+_Figura. Contributors de `Loadmatch-frontend-application`, con la URL del repositorio visible en la barra del navegador. Se observan aportes de los cinco integrantes. El intervalo incluye actividad anterior al 1 de octubre y no constituye un conteo exclusivo del Sprint 2._
 
-| GitHub Username | Commits visibles en landing | Commits visibles en frontend |
-| --- | ---: | ---: |
-| Harold-11 | 20 | 27 |
-| CODERT0PH | 13 | 9 |
-| Markollantes2307 | 12 | 13 |
-| Mayel-dev | 9 | 17 |
-| dumbaskidd | 8 | 16 |
+| GitHub Username  | Commits visibles en landing | Commits visibles en frontend |
+| ---------------- | --------------------------: | ---------------------------: |
+| Harold-11        |                          20 |                           27 |
+| CODERT0PH        |                          13 |                            9 |
+| Markollantes2307 |                          12 |                           13 |
+| Mayel-dev        |                           9 |                           17 |
+| dumbaskidd       |                           8 |                           16 |
 
 Los valores se transcriben de las tarjetas de Contributors aportadas por el equipo. No se utilizan como conteos de contribuciones al informe ni como medida de calidad o porcentaje de participación. La evidencia específica del Sprint 2 se vincula con los commits e integraciones documentados en 5.2.2.4.
 
@@ -852,27 +858,32 @@ Como oportunidad de mejora, el burndown y el registro de alcance muestran incorp
 
 **Historial de commits por integrante:**
 
-*Desarrollado por: Jean Fabio Noriega Collado (dumbaskidd)*
+_Desarrollado por: Jean Fabio Noriega Collado (dumbaskidd)_
+
 <p align="center">
   <img src="../assets/images/Insights/Commits7.png" alt="Commits Jean" width="500">
 </p>
 
-*Desarrollado por: Ismael Sebastian Simon Calderon (Mayel-dev)*
+_Desarrollado por: Ismael Sebastian Simon Calderon (Mayel-dev)_
+
 <p align="center">
   <img src="../assets/images/Insights/Commits8.png" alt="Commits Ismael" width="500">
 </p>
 
-*Desarrollado por: Christoper Steven Rivas Castillo (CODERT0PH)*
+_Desarrollado por: Christoper Steven Rivas Castillo (CODERT0PH)_
+
 <p align="center">
   <img src="../assets/images/Insights/Commits9.png" alt="Commits Christoper" width="500">
 </p>
 
-*Desarrollado por: Harold Fauskorp Benigno Montero (Harold-11)*
+_Desarrollado por: Harold Fauskorp Benigno Montero (Harold-11)_
+
 <p align="center">
   <img src="../assets/images/Insights/Commits6.png" alt="Commits Harold" width="500">
 </p>
 
-*Desarrollado por: Marco Antonio Collantes Artola (Markollantes2307)*
+_Desarrollado por: Marco Antonio Collantes Artola (Markollantes2307)_
+
 <p align="center">
   <img src="../assets/images/Insights/Commits10.png" alt="Commits Marco" width="500">
 </p>
@@ -887,35 +898,35 @@ El sprint incorpora 16 historias por 49 Story Points, equivalentes al 52 % de lo
 
 <!-- PENDIENTE: completar Time y Attendees con los datos reales de la reunión de planificación del 26/10/2026 (prevista a las 10:30 p. m. en Microsoft Teams). Si la fecha o la plataforma cambian, actualizar Date y Location. -->
 
-| Sprint # | Sprint 3 — Web Services |
-| --- | --- |
-| **Sprint Planning Background** | |
-| Periodo del sprint | 2026-10-25 a 2026-11-08 |
-| Inicio registrado en Jira | 25/10/2026, 01:23 a. m. (America/Lima). |
-| Fin previsto registrado en Jira | 08/11/2026, 11:59 p. m. (America/Lima). |
-| Date (planning meeting) | 2026-10-26 |
-| Time | _Por completar tras la reunión._ |
-| Location | Virtual (Microsoft Teams). |
-| Prepared By | Harold Fauskorp Benigno Montero. |
-| Attendees (to planning meeting) | _Por completar tras la reunión._ |
-| Sprint 2 Review Summary | El Sprint 2 publicó la primera versión de la Web Application en Vercel, organizada por bounded contexts y conectada a una API simulada con JSON Server desplegada en Render. Jira registra 18 historias finalizadas por 49 Story Points. Quedaron pendientes el backend real, la autenticación y la persistencia de los datos. |
-| Sprint 2 Retrospective Summary | El alcance aumentó de 22 a 49 puntos después de iniciar el sprint y los cierres se concentraron al final. Para el Sprint 3 se acuerda comprometer el alcance completo desde el inicio, mantener actualizado el estado de las subtareas y reunir las evidencias de ejecución y despliegue junto con la implementación. |
-| **Sprint Goal & User Stories** | |
+| Sprint #                           | Sprint 3 — Web Services                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Sprint Planning Background**     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Periodo del sprint                 | 2026-10-25 a 2026-11-08                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Inicio registrado en Jira          | 25/10/2026, 01:23 a. m. (America/Lima).                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Fin previsto registrado en Jira    | 08/11/2026, 11:59 p. m. (America/Lima).                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Date (planning meeting)            | 2026-10-26                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Time                               | _Por completar tras la reunión._                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Location                           | Virtual (Microsoft Teams).                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Prepared By                        | Harold Fauskorp Benigno Montero.                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Attendees (to planning meeting)    | _Por completar tras la reunión._                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Sprint 2 Review Summary            | El Sprint 2 publicó la primera versión de la Web Application en Vercel, organizada por bounded contexts y conectada a una API simulada con JSON Server desplegada en Render. Jira registra 18 historias finalizadas por 49 Story Points. Quedaron pendientes el backend real, la autenticación y la persistencia de los datos.                                                                                                                                            |
+| Sprint 2 Retrospective Summary     | El alcance aumentó de 22 a 49 puntos después de iniciar el sprint y los cierres se concentraron al final. Para el Sprint 3 se acuerda comprometer el alcance completo desde el inicio, mantener actualizado el estado de las subtareas y reunir las evidencias de ejecución y despliegue junto con la implementación.                                                                                                                                                     |
+| **Sprint Goal & User Stories**     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | Sprint 3 Goal (registrado en Jira) | Nuestro foco está en habilitar el acceso seguro y el flujo principal de intermediación de LoadMatch sobre una API real. Creemos que permite que empresas y transportistas creen su cuenta, inicien sesión y completen el ciclo publicar, aceptar y entregar con datos persistentes. Se confirma cuando un usuario de cada segmento se registra, inicia sesión y completa ese ciclo en la Web Application desplegada consumiendo los Web Services documentados en Swagger. |
-| Sprint 3 Velocity | 49 Story Points, tomando como referencia los 49 puntos completados en el Sprint 2. |
-| Sum of Story Points | 49 Story Points, comprometidos en su totalidad al inicio del sprint. |
+| Sprint 3 Velocity                  | 49 Story Points, tomando como referencia los 49 puntos completados en el Sprint 2.                                                                                                                                                                                                                                                                                                                                                                                        |
+| Sum of Story Points                | 49 Story Points, comprometidos en su totalidad al inicio del sprint.                                                                                                                                                                                                                                                                                                                                                                                                      |
 
 #### 5.2.3.2. Aspect Leaders and Collaborators
 
 La matriz LACX organiza los aspectos del Sprint 3 según las historias asignadas en Jira. Cada integrante lidera el aspecto que corresponde a sus historias; los colaboradores se vinculan con las dependencias entre aspectos: el proyecto base y la seguridad sostienen a todos los módulos, el registro de usuarios alimenta el inicio de sesión y el flujo de viajes depende de las solicitudes de carga.
 
-| Team Member | GitHub Username | Proyecto base, seguridad y sesión | Registro y perfiles | Solicitudes, estado de viaje y despliegue | Aceptación y confirmación de entrega | Matching y vehículos |
-| --- | --- | --- | --- | --- | --- | --- |
-| Benigno Montero, Harold Fauskorp | Harold-11 | L | C | C | C | C |
-| Noriega Collado, Jean Fabio | dumbaskidd | C | L | — | — | — |
-| Simon Calderon, Ismael Sebastian | Mayel-dev | C | — | L | C | — |
-| Rivas Castillo, Christoper Steven | CODERT0PH | — | — | C | L | — |
-| Collantes Artola, Marco Antonio | Markollantes2307 | — | C | — | — | L |
+| Team Member                       | GitHub Username  | Proyecto base, seguridad y sesión | Registro y perfiles | Solicitudes, estado de viaje y despliegue | Aceptación y confirmación de entrega | Matching y vehículos |
+| --------------------------------- | ---------------- | --------------------------------- | ------------------- | ----------------------------------------- | ------------------------------------ | -------------------- |
+| Benigno Montero, Harold Fauskorp  | Harold-11        | L                                 | C                   | C                                         | C                                    | C                    |
+| Noriega Collado, Jean Fabio       | dumbaskidd       | C                                 | L                   | —                                         | —                                    | —                    |
+| Simon Calderon, Ismael Sebastian  | Mayel-dev        | C                                 | —                   | L                                         | C                                    | —                    |
+| Rivas Castillo, Christoper Steven | CODERT0PH        | —                                 | —                   | C                                         | L                                    | —                    |
+| Collantes Artola, Marco Antonio   | Markollantes2307 | —                                 | C                   | —                                         | —                                    | L                    |
 
 **L (líder del aspecto):** integrante responsable de ese bloque funcional del sprint; coordina su desarrollo y responde por su avance. No corresponde al liderazgo general del equipo. **C (colaborador):** integrante que apoya el aspecto porque su trabajo depende de él o lo complementa. **—:** sin participación prevista en ese aspecto. Las colaboraciones se contrastarán al cierre del sprint con los commits y Pull Requests registrados en 5.2.3.4 y 5.2.3.8.
 
@@ -929,55 +940,55 @@ El Sprint Backlog 3 se centra en reemplazar la API simulada por los Web Services
 
 **Verificación directa de Jira:** 25/10/2026, zona America/Lima. Se consultaron el sprint "Sprint 3 - Web Services" del tablero CL (2), sus 16 historias y sus 19 subtareas.
 
-| User Story Id | Jira key | Story Title | Story Points | Estimation (Hours) | Assigned To | Status |
-| --- | --- | --- | ---: | ---: | --- | --- |
-| US15 | US-3 | Autenticación basada en JWT | 3 | 8 h | Harold Benigno (HM) | En progreso |
-| US03 | US-17 | Inicio de sesión | 2 | 6 h | Harold Benigno (HM) | En progreso |
-| US29 | US-49 | Cierre de sesión | 1 | 4 h | Harold Benigno (HM) | En progreso |
-| US46 | US-66 | Rutas protegidas por rol | 3 | 4 h | Harold Benigno (HM) | Por hacer |
-| US47 | US-67 | Interceptor HTTP de autenticación y errores | 3 | 4 h | Harold Benigno (HM) | Por hacer |
-| US01 | US-2 | Registro de Empresa | 3 | 6 h | Jean Noriega (JC) | En progreso |
-| US02 | US-4 | Registro de Transportista | 3 | 6 h | Jean Noriega (JC) | En progreso |
-| US31 | US-51 | Gestión del perfil de empresa | 2 | 5 h | Jean Noriega (JC) | Finalizado |
-| US32 | US-52 | Gestión del perfil de transportista | 2 | 5 h | Jean Noriega (JC) | Finalizado |
-| US16 | US-12 | Endpoint de creación de solicitud de carga | 3 | 6 h | Ismael Simon (IS) | Finalizado |
-| US08 | US-13 | Actualización de estado del viaje | 3 | 6 h | Ismael Simon (IS) | Finalizado |
-| US50 | US-70 | Pruebas unitarias y despliegue de la Web Application | 5 | 8 h | Ismael Simon (IS) | En progreso |
-| US07 | US-11 | Aceptación de viaje | 5 | 8 h | Christoper Rivas (CC) | Finalizado |
-| US56 | US-76 | Confirmación de entrega por la empresa | 3 | 6 h | Christoper Rivas (CC) | Finalizado |
-| US17 | US-9 | Endpoint de matching geoespacial | 5 | 8 h | Marco Collantes (MA) | Finalizado |
-| US33 | US-53 | Gestión de vehículos del transportista | 3 | 6 h | Marco Collantes (MA) | Finalizado |
-| | | **Total** | **44** | **96 h** | | |
+| User Story Id | Jira key | Story Title                                          | Story Points | Estimation (Hours) | Assigned To           | Status      |
+| ------------- | -------- | ---------------------------------------------------- | -----------: | -----------------: | --------------------- | ----------- |
+| US15          | US-3     | Autenticación basada en JWT                          |            3 |                8 h | Harold Benigno (HM)   | En progreso |
+| US03          | US-17    | Inicio de sesión                                     |            2 |                6 h | Harold Benigno (HM)   | En progreso |
+| US29          | US-49    | Cierre de sesión                                     |            1 |                4 h | Harold Benigno (HM)   | En progreso |
+| US46          | US-66    | Rutas protegidas por rol                             |            3 |                4 h | Harold Benigno (HM)   | Por hacer   |
+| US47          | US-67    | Interceptor HTTP de autenticación y errores          |            3 |                4 h | Harold Benigno (HM)   | Por hacer   |
+| US01          | US-2     | Registro de Empresa                                  |            3 |                6 h | Jean Noriega (JC)     | En progreso |
+| US02          | US-4     | Registro de Transportista                            |            3 |                6 h | Jean Noriega (JC)     | En progreso |
+| US31          | US-51    | Gestión del perfil de empresa                        |            2 |                5 h | Jean Noriega (JC)     | Finalizado  |
+| US32          | US-52    | Gestión del perfil de transportista                  |            2 |                5 h | Jean Noriega (JC)     | Finalizado  |
+| US16          | US-12    | Endpoint de creación de solicitud de carga           |            3 |                6 h | Ismael Simon (IS)     | Finalizado  |
+| US08          | US-13    | Actualización de estado del viaje                    |            3 |                6 h | Ismael Simon (IS)     | Finalizado  |
+| US50          | US-70    | Pruebas unitarias y despliegue de la Web Application |            5 |                8 h | Ismael Simon (IS)     | En progreso |
+| US07          | US-11    | Aceptación de viaje                                  |            5 |                8 h | Christoper Rivas (CC) | Finalizado  |
+| US56          | US-76    | Confirmación de entrega por la empresa               |            3 |                6 h | Christoper Rivas (CC) | Finalizado  |
+| US17          | US-9     | Endpoint de matching geoespacial                     |            5 |                8 h | Marco Collantes (MA)  | Finalizado  |
+| US33          | US-53    | Gestión de vehículos del transportista               |            3 |                6 h | Marco Collantes (MA)  | Finalizado  |
+|               |          | **Total**                                            |       **44** |           **96 h** |                       |             |
 
 **Subtareas del Sprint Backlog**
 
 <!-- PENDIENTE: completar la estimación en horas de cada subtarea acordada en el Sprint Planning (registrarla también en Jira) y actualizar los estados al cierre del sprint. -->
 
-| User Story Id | Work Item/Task Id | Work Item/Task Title | Estimation (Hours) | Assigned To | Status |
-| --- | --- | --- | ---: | --- | --- |
-| US15 | T34 / US-99 | Inicialización del proyecto Spring Boot con PostgreSQL y estructura por bounded context | 8 h | Harold Benigno (HM) | Finalizado |
-| US15 | T35 / US-100 | Configuración de springdoc-openapi (Swagger UI) para la documentación de la API | 4 h | Harold Benigno (HM) | Finalizado |
-| US15 | T36 / US-101 | Implementación de la autenticación JWT con Spring Security | 8 h | Harold Benigno (HM) | En progreso |
-| US03 | T37 / US-102 | Implementación del endpoint de inicio de sesión y la vista de login | 5 h | Harold Benigno (HM) | En progreso |
-| US29 | T38 / US-103 | Implementación del cierre de sesión en la Web Application | 4 h | Harold Benigno (HM) | En progreso |
-| US46 | T39 / US-104 | Implementación de guards de rutas por rol | 4 h | Harold Benigno (HM) | Por hacer |
-| US47 | T40 / US-105 | Implementación del interceptor HTTP de token y manejo de errores | 4 h | Harold Benigno (HM) | Por hacer |
-| US01 | T41 / US-106 | Implementación del registro de empresa (endpoint y formulario) | 6 h | Jean Noriega (JC) | En progreso |
-| US02 | T42 / US-107 | Implementación del registro de transportista (endpoint y formulario) | 6 h | Jean Noriega (JC) | En progreso |
-| US31 | T43 / US-108 | Implementación de la gestión del perfil de empresa | 5 h | Jean Noriega (JC) | Finalizado |
-| US32 | T44 / US-109 | Implementación de la gestión del perfil de transportista | 5 h | Jean Noriega (JC) | Finalizado |
-| US16 | T45 / US-110 | Implementación del endpoint POST de solicitudes de carga e integración con el formulario | 6 h | Ismael Simon (IS) | Finalizado |
-| US08 | T46 / US-111 | Implementación de la actualización de estado del viaje | 6 h | Ismael Simon (IS) | Finalizado |
-| US50 | T47 / US-112 | Configuración de pruebas unitarias y flujo de GitHub Actions | 6 h | Ismael Simon (IS) | Por hacer |
-| US50 | T48 / US-113 | Despliegue de los Web Services y la base de datos PostgreSQL | 8 h | Ismael Simon (IS) | Finalizado |
-| US07 | T49 / US-114 | Implementación de la aceptación de viaje por el transportista | 8 h | Christoper Rivas (CC) | Finalizado |
-| US56 | T50 / US-115 | Implementación de la confirmación de entrega por la empresa | 6 h | Christoper Rivas (CC) | Finalizado |
-| US17 | T51 / US-116 | Implementación del endpoint de matching geoespacial con la fórmula de Haversine | 8 h | Marco Collantes (MA) | Finalizado |
-| US33 | T52 / US-117 | Implementación de la gestión de vehículos del transportista | 6 h | Marco Collantes (MA) | Finalizado |
+| User Story Id | Work Item/Task Id | Work Item/Task Title                                                                     | Estimation (Hours) | Assigned To           | Status      |
+| ------------- | ----------------- | ---------------------------------------------------------------------------------------- | -----------------: | --------------------- | ----------- |
+| US15          | T34 / US-99       | Inicialización del proyecto Spring Boot con PostgreSQL y estructura por bounded context  |                8 h | Harold Benigno (HM)   | Finalizado  |
+| US15          | T35 / US-100      | Configuración de springdoc-openapi (Swagger UI) para la documentación de la API          |                4 h | Harold Benigno (HM)   | Finalizado  |
+| US15          | T36 / US-101      | Implementación de la autenticación JWT con Spring Security                               |                8 h | Harold Benigno (HM)   | En progreso |
+| US03          | T37 / US-102      | Implementación del endpoint de inicio de sesión y la vista de login                      |                5 h | Harold Benigno (HM)   | En progreso |
+| US29          | T38 / US-103      | Implementación del cierre de sesión en la Web Application                                |                4 h | Harold Benigno (HM)   | En progreso |
+| US46          | T39 / US-104      | Implementación de guards de rutas por rol                                                |                4 h | Harold Benigno (HM)   | Por hacer   |
+| US47          | T40 / US-105      | Implementación del interceptor HTTP de token y manejo de errores                         |                4 h | Harold Benigno (HM)   | Por hacer   |
+| US01          | T41 / US-106      | Implementación del registro de empresa (endpoint y formulario)                           |                6 h | Jean Noriega (JC)     | En progreso |
+| US02          | T42 / US-107      | Implementación del registro de transportista (endpoint y formulario)                     |                6 h | Jean Noriega (JC)     | En progreso |
+| US31          | T43 / US-108      | Implementación de la gestión del perfil de empresa                                       |                5 h | Jean Noriega (JC)     | Finalizado  |
+| US32          | T44 / US-109      | Implementación de la gestión del perfil de transportista                                 |                5 h | Jean Noriega (JC)     | Finalizado  |
+| US16          | T45 / US-110      | Implementación del endpoint POST de solicitudes de carga e integración con el formulario |                6 h | Ismael Simon (IS)     | Finalizado  |
+| US08          | T46 / US-111      | Implementación de la actualización de estado del viaje                                   |                6 h | Ismael Simon (IS)     | Finalizado  |
+| US50          | T47 / US-112      | Configuración de pruebas unitarias y flujo de GitHub Actions                             |                6 h | Ismael Simon (IS)     | Por hacer   |
+| US50          | T48 / US-113      | Despliegue de los Web Services y la base de datos PostgreSQL                             |                8 h | Ismael Simon (IS)     | Finalizado  |
+| US07          | T49 / US-114      | Implementación de la aceptación de viaje por el transportista                            |                8 h | Christoper Rivas (CC) | Finalizado  |
+| US56          | T50 / US-115      | Implementación de la confirmación de entrega por la empresa                              |                6 h | Christoper Rivas (CC) | Finalizado  |
+| US17          | T51 / US-116      | Implementación del endpoint de matching geoespacial con la fórmula de Haversine          |                8 h | Marco Collantes (MA)  | Finalizado  |
+| US33          | T52 / US-117      | Implementación de la gestión de vehículos del transportista                              |                6 h | Marco Collantes (MA)  | Finalizado  |
 
 Cada subtarea está asignada al mismo integrante que su historia, a diferencia del Sprint 2, donde 10 pares presentaban responsables distintos. La documentación OpenAPI de cada endpoint forma parte de la subtarea que lo implementa; T35 solo configura la herramienta.
 
-**Orden de ejecución:** la secuencia de las subtareas sigue el avance de la unidad Web Services del sílabo del curso (semanas 9 a 12). En la semana 10 se priorizan T34 y T35, ya que el resto de historias depende del proyecto base. T34 incluye la configuración de internacionalización de la API (mensajes de validación y error en inglés, como idioma por defecto, y en español), el manejo global de errores y una configuración de seguridad temporalmente abierta, para que los endpoints puedan desarrollarse sin esperar la autenticación. T36 (autenticación JWT) se ubica al final del sprint, en la semana 11, de acuerdo con el tema *Web Services Security – Part 1*; si no llega a completarse dentro del sprint, US15 se trasladará al Sprint 4 y se registrará en el Sprint Review. La internacionalización de la Web Application ya fue implementada en el Sprint 2 (US48); la de la API es un trabajo distinto, requerido por el enunciado para los Web Services.
+**Orden de ejecución:** la secuencia de las subtareas sigue el avance de la unidad Web Services del sílabo del curso (semanas 9 a 12). En la semana 10 se priorizan T34 y T35, ya que el resto de historias depende del proyecto base. T34 incluye la configuración de internacionalización de la API (mensajes de validación y error en inglés, como idioma por defecto, y en español), el manejo global de errores y una configuración de seguridad temporalmente abierta, para que los endpoints puedan desarrollarse sin esperar la autenticación. T36 (autenticación JWT) se ubica al final del sprint, en la semana 11, de acuerdo con el tema _Web Services Security – Part 1_; si no llega a completarse dentro del sprint, US15 se trasladará al Sprint 4 y se registrará en el Sprint Review. La internacionalización de la Web Application ya fue implementada en el Sprint 2 (US48); la de la API es un trabajo distinto, requerido por el enunciado para los Web Services.
 
 **Product Backlog restante:** tras incorporar estas historias al sprint, el backlog conserva 12 historias por 46 Story Points, previstas para el Sprint 4: documentos y validación MTC (US18, US19, US34), cancelación de viaje (US55), incidentes (US52), notificaciones (US43), calificaciones (US10, US51), pagos y liquidaciones (US20, US53, US54) y recuperación de contraseña (US30).
 
@@ -985,32 +996,33 @@ Cada subtarea está asignada al mismo integrante que su historia, a diferencia d
 
 Durante el Sprint 3, el equipo centró el desarrollo en la construcción de los Web Services del backend con Spring Boot y PostgreSQL, aplicando Domain-Driven Design (DDD) y Command Query Responsibility Segregation (CQRS), así como en la integración del flujo de inicio de sesión y consumo del backend real desde la Web Application. Las evidencias siguientes corresponden a las confirmaciones más representativas de ambos repositorios registradas en la rama develop durante el periodo del sprint. Las fechas se presentan en America/Lima (UTC−05:00).
 
-| Repositorio | Rama / Evidencia de integración | ID de confirmación | Mensaje de confirmación | Descripción del cambio | Confirmado en (Lima UTC−05:00) |
-| --- | --- | --- | --- | --- | --- |
-| Backend | feature/project-setup, PR #1 | 32d69d2 | build: initialize spring boot project with maven | Inicialización del proyecto Spring Boot en Java 27 con dependencias Maven. | 03/11/2026 12:18 |
-| Backend | feature/project-setup, PR #1 | 623bf9c | chore(config): add postgresql datasource with dev and prod profiles | Configuración de la fuente de datos PostgreSQL para perfiles dev y prod. | 03/11/2026 12:18 |
-| Backend | feature/project-setup, PR #1 | 1531189 | feat(shared): add virtual threads configuration | Habilitación de Virtual Threads de Project Loom para el servidor embebido. | 03/11/2026 12:18 |
-| Backend | feature/openapi-configuration, PR #2 | 0e9661a | feat(shared): openapi configuration with bearer authentication | Configuración de SpringDoc OpenAPI con esquema Bearer. | 03/11/2026 12:19 |
-| Backend | feature/iam-sign-in, PR #4 | e054a63 | feat(iam): add sign-in and user endpoints | Implementación de TokensController (/api/v1/tokens) y UsersController en IAM. | 03/11/2026 22:58 |
-| Backend | feature/load-request-management, PR #5 | f9e6aa0 | feat(freight): add load request aggregate with route, dimensions and money value objects | Implementación del agregado LoadRequest con objetos de valor. | 06/11/2026 10:23 |
-| Backend | feature/load-request-management, PR #5 | 762ce21 | feat(freight): add load request endpoints | Implementación de LoadRequestsController para creación y consulta de cargas. | 06/11/2026 10:23 |
-| Backend | feature/shipper-registration, PR #6 | 880bf32 | feat(profiles): add shipper registration endpoint | Implementación de ShippersController (/api/v1/shippers) para registro de empresas. | 06/11/2026 10:26 |
-| Backend | feature/carrier-registration-enablement, PR #8 | 59716e5 | feat(profiles): add carrier registration and enablement endpoints | Endpoints para registro y habilitación de transportistas con licencia MTC. | 06/11/2026 10:32 |
-| Backend | feature/shipper-profile-update, PR #9 | d5fd9b7 | feat(profiles): handle shipper profile updates in command service | Manejador de comando para actualización de perfil de empresa. | 06/11/2026 16:12 |
-| Backend | feature/fleet-management, PR #10 | 107edf7 | feat(fleet): add vehicle and vehicle type endpoints | Implementación de VehiclesController y VehicleTypesController para flota. | 06/11/2026 20:01 |
-| Backend | feature/trip-acceptance, PR #12 | ecf0fa1 | feat(trip): add trip acceptance and query endpoints | Implementación de TripsController (/api/v1/trips) para aceptación de fletes. | 08/11/2026 10:57 |
-| Backend | feature/carrier-profile-update, PR #13 | a957c2a | feat(profiles): add update carrier profile endpoint | Endpoint PUT /api/v1/carriers/{id} para actualización de transportista. | 08/11/2026 10:58 |
-| Backend | feature/spatial-matching, PR #14 | ed4a7de | feat(matching): add nearby available loads query endpoint | Endpoint de matching geoespacial con filtro de radio en kilómetros. | 08/11/2026 10:59 |
-| Backend | feature/trip-status-updates, PR #16 | 93420f9 | feat(trip): add trip status update endpoint | Endpoint PUT /api/v1/trips/{tripId}/status para avance del estado del viaje. | 08/11/2026 17:32 |
-| Backend | feature/profiles-user-id-queries, PR #17 | d20a8a5 | feat(profiles): add get carrier and shipper by user id query methods to services | Métodos de consulta de empresa y transportista a partir del User ID. | 08/11/2026 21:53 |
-| Backend | feature/iam-demo-users-seed, PR #18 | 05c920b | feat(iam): add demo users seeder for shippers and carriers | Seeder inicial de cuentas demo gestionado por variables de entorno. | 08/11/2026 22:39 |
-| Backend | feature/matching-available-loads-query, PR #19 | 5706a89 | feat(matching): add available loads query, read models and assembler | Ensamblador de fletes disponibles y modelos de lectura para transportistas. | 08/11/2026 23:14 |
-| Backend | feature/trip-delivery-confirmation, PR #20 | ab1f389 | feat(trip): add delivery confirmation commands, resource, and unconfirmed deliveries job | Endpoints de observaciones y confirmación de entrega por la empresa. | 08/11/2026 23:22 |
-| Frontend | feature/sign-in, PR #18 | df37d43 | feat(iam): add sign-in view with role-based redirect | Implementación de la vista de login con consumo de tokens y redirección. | 08/11/2026 11:06 |
-| Frontend | feature/sign-in, PR #19 | c766534 | feat(iam): open the sign-in view as the entry point of the web application | Configuración de la vista de login como ruta de acceso inicial de la Web App. | 08/11/2026 22:29 |
-| Frontend | develop, commit directo | 47b3316 | fix(config): connect production frontend to Render backend | Conexión del frontend en producción con el backend Spring Boot en Render. | 10/11/2026 03:15 |
+| Repositorio | Rama / Evidencia de integración                | ID de confirmación | Mensaje de confirmación                                                                  | Descripción del cambio                                                             | Confirmado en (Lima UTC−05:00) |
+| ----------- | ---------------------------------------------- | ------------------ | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------ |
+| Backend     | feature/project-setup, PR #1                   | 32d69d2            | build: initialize spring boot project with maven                                         | Inicialización del proyecto Spring Boot en Java 27 con dependencias Maven.         | 03/11/2026 12:18               |
+| Backend     | feature/project-setup, PR #1                   | 623bf9c            | chore(config): add postgresql datasource with dev and prod profiles                      | Configuración de la fuente de datos PostgreSQL para perfiles dev y prod.           | 03/11/2026 12:18               |
+| Backend     | feature/project-setup, PR #1                   | 1531189            | feat(shared): add virtual threads configuration                                          | Habilitación de Virtual Threads de Project Loom para el servidor embebido.         | 03/11/2026 12:18               |
+| Backend     | feature/openapi-configuration, PR #2           | 0e9661a            | feat(shared): openapi configuration with bearer authentication                           | Configuración de SpringDoc OpenAPI con esquema Bearer.                             | 03/11/2026 12:19               |
+| Backend     | feature/iam-sign-in, PR #4                     | e054a63            | feat(iam): add sign-in and user endpoints                                                | Implementación de TokensController (/api/v1/tokens) y UsersController en IAM.      | 03/11/2026 22:58               |
+| Backend     | feature/load-request-management, PR #5         | f9e6aa0            | feat(freight): add load request aggregate with route, dimensions and money value objects | Implementación del agregado LoadRequest con objetos de valor.                      | 06/11/2026 10:23               |
+| Backend     | feature/load-request-management, PR #5         | 762ce21            | feat(freight): add load request endpoints                                                | Implementación de LoadRequestsController para creación y consulta de cargas.       | 06/11/2026 10:23               |
+| Backend     | feature/shipper-registration, PR #6            | 880bf32            | feat(profiles): add shipper registration endpoint                                        | Implementación de ShippersController (/api/v1/shippers) para registro de empresas. | 06/11/2026 10:26               |
+| Backend     | feature/carrier-registration-enablement, PR #8 | 59716e5            | feat(profiles): add carrier registration and enablement endpoints                        | Endpoints para registro y habilitación de transportistas con licencia MTC.         | 06/11/2026 10:32               |
+| Backend     | feature/shipper-profile-update, PR #9          | d5fd9b7            | feat(profiles): handle shipper profile updates in command service                        | Manejador de comando para actualización de perfil de empresa.                      | 06/11/2026 16:12               |
+| Backend     | feature/fleet-management, PR #10               | 107edf7            | feat(fleet): add vehicle and vehicle type endpoints                                      | Implementación de VehiclesController y VehicleTypesController para flota.          | 06/11/2026 20:01               |
+| Backend     | feature/trip-acceptance, PR #12                | ecf0fa1            | feat(trip): add trip acceptance and query endpoints                                      | Implementación de TripsController (/api/v1/trips) para aceptación de fletes.       | 08/11/2026 10:57               |
+| Backend     | feature/carrier-profile-update, PR #13         | a957c2a            | feat(profiles): add update carrier profile endpoint                                      | Endpoint PUT /api/v1/carriers/{id} para actualización de transportista.            | 08/11/2026 10:58               |
+| Backend     | feature/spatial-matching, PR #14               | ed4a7de            | feat(matching): add nearby available loads query endpoint                                | Endpoint de matching geoespacial con filtro de radio en kilómetros.                | 08/11/2026 10:59               |
+| Backend     | feature/trip-status-updates, PR #16            | 93420f9            | feat(trip): add trip status update endpoint                                              | Endpoint PUT /api/v1/trips/{tripId}/status para avance del estado del viaje.       | 08/11/2026 17:32               |
+| Backend     | feature/profiles-user-id-queries, PR #17       | d20a8a5            | feat(profiles): add get carrier and shipper by user id query methods to services         | Métodos de consulta de empresa y transportista a partir del User ID.               | 08/11/2026 21:53               |
+| Backend     | feature/iam-demo-users-seed, PR #18            | 05c920b            | feat(iam): add demo users seeder for shippers and carriers                               | Seeder inicial de cuentas demo gestionado por variables de entorno.                | 08/11/2026 22:39               |
+| Backend     | feature/matching-available-loads-query, PR #19 | 5706a89            | feat(matching): add available loads query, read models and assembler                     | Ensamblador de fletes disponibles y modelos de lectura para transportistas.        | 08/11/2026 23:14               |
+| Backend     | feature/trip-delivery-confirmation, PR #20     | ab1f389            | feat(trip): add delivery confirmation commands, resource, and unconfirmed deliveries job | Endpoints de observaciones y confirmación de entrega por la empresa.               | 08/11/2026 23:22               |
+| Frontend    | feature/sign-in, PR #18                        | df37d43            | feat(iam): add sign-in view with role-based redirect                                     | Implementación de la vista de login con consumo de tokens y redirección.           | 08/11/2026 11:06               |
+| Frontend    | feature/sign-in, PR #19                        | c766534            | feat(iam): open the sign-in view as the entry point of the web application               | Configuración de la vista de login como ruta de acceso inicial de la Web App.      | 08/11/2026 22:29               |
+| Frontend    | develop, commit directo                        | 47b3316            | fix(config): connect production frontend to Render backend                               | Conexión del frontend en producción con el backend Spring Boot en Render.          | 10/11/2026 03:15               |
 
 Repositorios:
+
 - Web Services (Backend): https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-backend-application
 - Web Application (Frontend): https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application
 
@@ -1023,7 +1035,6 @@ Durante el Sprint 3 se ejecutó la validación interactiva de las funcionalidade
 **1. Inicio de sesión y autenticación de usuarios**
 
 La vista de autenticación permite que empresas y transportistas ingresen con sus credenciales, validando la identidad contra el endpoint de tokens y redirigiendo al dashboard correspondiente según el rol del usuario.
-
 
 <p align="center">
   <img src="../assets/images/sprint-review/Inicio de sesión en la Web Application.png"
@@ -1045,11 +1056,9 @@ La pantalla permite que la empresa registre los datos del flete (origen, destino
   <em>Figura. Formulario de publicación de solicitud de flete con validación de objetos de valor en backend.</em>
 </p>
 
-
 **3. Búsqueda geoespacial de fletes disponibles**
 
 La vista del transportista presenta los fletes publicados en Lima, calculando la distancia en kilómetros entre las coordenadas de la unidad y el punto de recojo mediante el servicio de matching con fórmula de Haversine.
-
 
 <p align="center">
   <img src="../assets/images/sprint-review/Listado de fletes.png"
@@ -1063,7 +1072,6 @@ La vista del transportista presenta los fletes publicados en Lima, calculando la
 
 El transportista visualiza el detalle técnico del flete, los requisitos de carga y procede a aceptar el servicio, generando la entidad Trip en el backend y asignando su unidad de transporte.
 
-
 <p align="center">
   <img src="../assets/images/sprint-review/Aceptacion viaje tranportista.png"
        alt="Aceptacioncarga"
@@ -1072,11 +1080,9 @@ El transportista visualiza el detalle técnico del flete, los requisitos de carg
   <em>Figura. Vista de confirmación y aceptación de viaje, actualizando el estado de la carga a asignada.</em>
 </p>
 
-
 **5. Seguimiento del viaje y actualización de estados**
 
 La interfaz de trazabilidad permite que el transportista avance las etapas operativas del servicio (rumbo al recojo, en punto de recojo, en tránsito y entregado), actualizando la línea de tiempo en el dashboard de la empresa.
-
 
 <p align="center">
   <img src="../assets/images/sprint-review/Actualizacion pedido recojo2.png"
@@ -1102,22 +1108,21 @@ La empresa valida la llegada de la carga en destino mediante el endpoint de conf
   <em>Figura. Pantalla de confirmación de entrega exitosa y resumen de unidades de transporte habilitadas.</em>
 </p>
 
-
 **Video de navegación del Sprint 3:**
+
 - Título: LoadMatch — Sprint 3 Execution Demo | Web Services & Integration
 - Enlace: https://youtu.be/kLmN98xOpQ2
 - Duración: 4 minutos y 45 segundos, cumpliendo con el intervalo recomendado de 3 a 5 minutos para la sustentación del sprint review.
 - Disponibilidad: Video configurado como No listado en YouTube para acceso directo del docente y evaluadores.
 
-![Captura del video de navegación del Sprint 3 con duración visible](../assets/images/sprint3/Sprint3Video.png)
-
-*Figura. Reproductor del video de demostración del Sprint 3 con la ejecución del flujo integrado de servicios web.*
+_Figura. Reproductor del video de demostración del Sprint 3 con la ejecución del flujo integrado de servicios web._
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
 A diferencia del Sprint 2, donde se utilizó un mock con JSON Server, en el Sprint 3 los Servicios Web se implementaron con Java 27 y Spring Boot 4.1.2, documentados íntegramente mediante SpringDoc OpenAPI 3.0 (Swagger UI). La interfaz interactiva permite consultar los esquemas de petición, las estructuras de respuesta, los códigos de estado HTTP y ejecutar pruebas directas sobre la base de datos PostgreSQL.
 
 **Acceso a la documentación interactiva:**
+
 - Swagger UI (Local): http://localhost:8080/swagger-ui/index.html
 - OpenAPI JSON (Local): http://localhost:8080/v3/api-docs
 - Swagger UI (Producción): https://loadmatch-backend-application.onrender.com/swagger-ui/index.html
@@ -1125,59 +1130,60 @@ A diferencia del Sprint 2, donde se utilizó un mock con JSON Server, en el Spri
 
 ![Documentación OpenAPI en Swagger UI de los Bounded Contexts de Trips y Vehicles](../assets/images/sprint3/SwaggerTripsVehicles.png)
 
-*Figura. Endpoints interactivos documentados con Swagger UI para la ejecución de viajes y gestión de vehículos.*
+_Figura. Endpoints interactivos documentados con Swagger UI para la ejecución de viajes y gestión de vehículos._
 
 ![Documentación OpenAPI en Swagger UI de Shippers, Carriers y Freight](../assets/images/sprint3/SwaggerShippersFreight.png)
 
-*Figura. Endpoints interactivos para registro de empresas, transportistas y publicación de cargas.*
+_Figura. Endpoints interactivos para registro de empresas, transportistas y publicación de cargas._
 
 A continuación se detallan los endpoints desarrollados y documentados para el Sprint 3:
 
-| Contexto delimitado | Verbo | Ruta del endpoint | Parámetros / Cuerpo de petición | Descripción funcional | Códigos de respuesta |
-| --- | --- | --- | --- | --- | --- |
-| IAM | POST | /api/v1/tokens | SignInResource (email, password) | Autentica a un usuario y genera la información de sesión. | 200, 400 |
-| IAM | GET | /api/v1/users/{userId} | Path: userId (UUID) | Obtiene los datos de cuenta y rol de un usuario registrado. | 200, 404 |
-| Profiles | POST | /api/v1/shippers | RegisterShipperResource (companyName, ruc, email, phone, address) | Registra una nueva empresa generadora de carga. | 201, 400 |
-| Profiles | GET | /api/v1/shippers/{shipperId} | Path: shipperId (UUID) | Consulta la información del perfil de una empresa por su identificador. | 200, 404 |
-| Profiles | PUT | /api/v1/shippers/{shipperId} | Path: shipperId, Body: UpdateShipperProfileResource | Actualiza datos de contacto y dirección fiscal de la empresa. | 200, 400, 404 |
-| Profiles | GET | /api/v1/shippers | Query: userId (UUID) | Obtiene el perfil de empresa asociado al usuario autenticado. | 200, 404 |
-| Profiles | POST | /api/v1/carriers | RegisterCarrierResource (firstName, lastName, dni, licenseNumber, email, phone) | Registra un nuevo transportista independiente. | 201, 400 |
-| Profiles | GET | /api/v1/carriers/{carrierId} | Path: carrierId (UUID) | Consulta el perfil del transportista y su calificación promedio. | 200, 404 |
-| Profiles | PUT | /api/v1/carriers/{carrierId} | Path: carrierId, Body: UpdateCarrierProfileResource | Actualiza el teléfono y la información operativa del transportista. | 200, 400, 404 |
-| Profiles | GET | /api/v1/carriers | Query: userId (UUID) | Obtiene el perfil de transportista asociado al usuario autenticado. | 200, 404 |
-| Profiles | POST | /api/v1/carriers/{carrierId}/enablement | Path: carrierId (UUID) | Habilita operativamente a un transportista para tomar fletes. | 200, 404 |
-| Freight | POST | /api/v1/load-requests | CreateLoadRequestResource (shipperId, origin, destination, dimensions, weight, price) | Publica una nueva solicitud de carga con objetos de valor. | 201, 400 |
-| Freight | GET | /api/v1/load-requests | Query: shipperId (UUID) | Lista las solicitudes de carga publicadas por una empresa. | 200 |
-| Freight | GET | /api/v1/load-requests/{loadRequestId} | Path: loadRequestId (UUID) | Obtiene el detalle completo y especificaciones técnicas de un flete. | 200, 404 |
-| Matching | GET | /api/v1/available-loads | Query: latitude, longitude, radiusKm, vehicleTypeId | Retorna fletes disponibles aplicando filtrado geoespacial por Haversine. | 200, 400 |
-| Trips | POST | /api/v1/trips | AcceptLoadRequestResource (loadRequestId, carrierId, vehicleId) | Acepta una carga e inicializa la máquina de estados del viaje. | 201, 400 |
-| Trips | GET | /api/v1/trips | Query: carrierId o shipperId (UUID) | Consulta los viajes asignados a un transportista o empresa. | 200 |
-| Trips | GET | /api/v1/trips/{tripId} | Path: tripId (UUID) | Obtiene el detalle operativo, estado actual e historial del viaje. | 200, 404 |
-| Trips | POST | /api/v1/trips/{tripId}/status-updates | Path: tripId, Body: UpdateTripStatusResource | Transiciona el estado del viaje (En ruta, En origen, En tránsito, Entregado). | 200, 400, 404 |
-| Trips | POST | /api/v1/trips/{tripId}/delivery-confirmation | Path: tripId, Body: ConfirmDeliveryResource | Registra la conformidad de entrega por parte de la empresa. | 200, 400, 404 |
-| Fleet | GET | /api/v1/vehicles | Query: carrierId (UUID) | Lista los vehículos registrados por un transportista. | 200 |
-| Fleet | POST | /api/v1/vehicles | RegisterVehicleResource (carrierId, plate, vehicleTypeId, capacityKg) | Registra una nueva unidad vehicular en la flota del transportista. | 201, 400 |
-| Fleet | GET | /api/v1/vehicles/{vehicleId} | Path: vehicleId (UUID) | Consulta los datos técnicos y capacidad de una unidad vehicular. | 200, 404 |
-| Fleet | PUT | /api/v1/vehicles/{vehicleId} | Path: vehicleId, Body: UpdateVehicleResource | Modifica la capacidad de carga o características del vehículo. | 200, 400, 404 |
-| Fleet | POST | /api/v1/vehicles/{vehicleId}/deactivation | Path: vehicleId (UUID) | Da de baja una unidad de la flota activa del transportista. | 200, 404 |
-| Fleet | GET | /api/v1/vehicle-types | Sin parámetros | Retorna el catálogo oficial de tipos de vehículo admitidos. | 200 |
+| Contexto delimitado | Verbo | Ruta del endpoint                            | Parámetros / Cuerpo de petición                                                       | Descripción funcional                                                         | Códigos de respuesta |
+| ------------------- | ----- | -------------------------------------------- | ------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | -------------------- |
+| IAM                 | POST  | /api/v1/tokens                               | SignInResource (email, password)                                                      | Autentica a un usuario y genera la información de sesión.                     | 200, 400             |
+| IAM                 | GET   | /api/v1/users/{userId}                       | Path: userId (UUID)                                                                   | Obtiene los datos de cuenta y rol de un usuario registrado.                   | 200, 404             |
+| Profiles            | POST  | /api/v1/shippers                             | RegisterShipperResource (companyName, ruc, email, phone, address)                     | Registra una nueva empresa generadora de carga.                               | 201, 400             |
+| Profiles            | GET   | /api/v1/shippers/{shipperId}                 | Path: shipperId (UUID)                                                                | Consulta la información del perfil de una empresa por su identificador.       | 200, 404             |
+| Profiles            | PUT   | /api/v1/shippers/{shipperId}                 | Path: shipperId, Body: UpdateShipperProfileResource                                   | Actualiza datos de contacto y dirección fiscal de la empresa.                 | 200, 400, 404        |
+| Profiles            | GET   | /api/v1/shippers                             | Query: userId (UUID)                                                                  | Obtiene el perfil de empresa asociado al usuario autenticado.                 | 200, 404             |
+| Profiles            | POST  | /api/v1/carriers                             | RegisterCarrierResource (firstName, lastName, dni, licenseNumber, email, phone)       | Registra un nuevo transportista independiente.                                | 201, 400             |
+| Profiles            | GET   | /api/v1/carriers/{carrierId}                 | Path: carrierId (UUID)                                                                | Consulta el perfil del transportista y su calificación promedio.              | 200, 404             |
+| Profiles            | PUT   | /api/v1/carriers/{carrierId}                 | Path: carrierId, Body: UpdateCarrierProfileResource                                   | Actualiza el teléfono y la información operativa del transportista.           | 200, 400, 404        |
+| Profiles            | GET   | /api/v1/carriers                             | Query: userId (UUID)                                                                  | Obtiene el perfil de transportista asociado al usuario autenticado.           | 200, 404             |
+| Profiles            | POST  | /api/v1/carriers/{carrierId}/enablement      | Path: carrierId (UUID)                                                                | Habilita operativamente a un transportista para tomar fletes.                 | 200, 404             |
+| Freight             | POST  | /api/v1/load-requests                        | CreateLoadRequestResource (shipperId, origin, destination, dimensions, weight, price) | Publica una nueva solicitud de carga con objetos de valor.                    | 201, 400             |
+| Freight             | GET   | /api/v1/load-requests                        | Query: shipperId (UUID)                                                               | Lista las solicitudes de carga publicadas por una empresa.                    | 200                  |
+| Freight             | GET   | /api/v1/load-requests/{loadRequestId}        | Path: loadRequestId (UUID)                                                            | Obtiene el detalle completo y especificaciones técnicas de un flete.          | 200, 404             |
+| Matching            | GET   | /api/v1/available-loads                      | Query: latitude, longitude, radiusKm, vehicleTypeId                                   | Retorna fletes disponibles aplicando filtrado geoespacial por Haversine.      | 200, 400             |
+| Trips               | POST  | /api/v1/trips                                | AcceptLoadRequestResource (loadRequestId, carrierId, vehicleId)                       | Acepta una carga e inicializa la máquina de estados del viaje.                | 201, 400             |
+| Trips               | GET   | /api/v1/trips                                | Query: carrierId o shipperId (UUID)                                                   | Consulta los viajes asignados a un transportista o empresa.                   | 200                  |
+| Trips               | GET   | /api/v1/trips/{tripId}                       | Path: tripId (UUID)                                                                   | Obtiene el detalle operativo, estado actual e historial del viaje.            | 200, 404             |
+| Trips               | POST  | /api/v1/trips/{tripId}/status-updates        | Path: tripId, Body: UpdateTripStatusResource                                          | Transiciona el estado del viaje (En ruta, En origen, En tránsito, Entregado). | 200, 400, 404        |
+| Trips               | POST  | /api/v1/trips/{tripId}/delivery-confirmation | Path: tripId, Body: ConfirmDeliveryResource                                           | Registra la conformidad de entrega por parte de la empresa.                   | 200, 400, 404        |
+| Fleet               | GET   | /api/v1/vehicles                             | Query: carrierId (UUID)                                                               | Lista los vehículos registrados por un transportista.                         | 200                  |
+| Fleet               | POST  | /api/v1/vehicles                             | RegisterVehicleResource (carrierId, plate, vehicleTypeId, capacityKg)                 | Registra una nueva unidad vehicular en la flota del transportista.            | 201, 400             |
+| Fleet               | GET   | /api/v1/vehicles/{vehicleId}                 | Path: vehicleId (UUID)                                                                | Consulta los datos técnicos y capacidad de una unidad vehicular.              | 200, 404             |
+| Fleet               | PUT   | /api/v1/vehicles/{vehicleId}                 | Path: vehicleId, Body: UpdateVehicleResource                                          | Modifica la capacidad de carga o características del vehículo.                | 200, 400, 404        |
+| Fleet               | POST  | /api/v1/vehicles/{vehicleId}/deactivation    | Path: vehicleId (UUID)                                                                | Da de baja una unidad de la flota activa del transportista.                   | 200, 404             |
+| Fleet               | GET   | /api/v1/vehicle-types                        | Sin parámetros                                                                        | Retorna el catálogo oficial de tipos de vehículo admitidos.                   | 200                  |
 
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
 Para el cierre del Sprint 3 se consolidó una arquitectura de despliegue compuesta por tres productos en la nube, sustituyendo el mock de desarrollo por los servicios web reales en un entorno de ejecución continuo:
 
-| Producto | Entorno de despliegue | URL de acceso público | Estado de publicación |
-| --- | --- | --- | --- |
-| Landing Page | GitHub Pages | https://desarrollo-open-source-grupo-5.github.io/Loadmatch-landing-page/ | Activo (Live) |
-| Web Application | Vercel | https://loadmatch-frontend-application.vercel.app/ | Activo (Live) |
-| Web Services (API) | Render | https://loadmatch-backend-application.onrender.com/ | Activo (Live) |
-| Base de Datos Relacional | Render PostgreSQL | Host interno gestionado / Puerto 5432 / DB: loadmatch | Activo (Live) |
+| Producto                 | Entorno de despliegue | URL de acceso público                                                    | Estado de publicación |
+| ------------------------ | --------------------- | ------------------------------------------------------------------------ | --------------------- |
+| Landing Page             | GitHub Pages          | https://desarrollo-open-source-grupo-5.github.io/Loadmatch-landing-page/ | Activo (Live)         |
+| Web Application          | Vercel                | https://loadmatch-frontend-application.vercel.app/                       | Activo (Live)         |
+| Web Services (API)       | Render                | https://loadmatch-backend-application.onrender.com/                      | Activo (Live)         |
+| Base de Datos Relacional | Render PostgreSQL     | Host interno gestionado / Puerto 5432 / DB: loadmatch                    | Activo (Live)         |
 
 **1. Despliegue de los Web Services y PostgreSQL en Render**
 
 El backend se encuentra empaquetado en una imagen de contenedor Docker utilizando una compilación multi-etapa basada en Eclipse Temurin con Java 27. El servicio web se despliega en Render conectado a una instancia administrada de PostgreSQL 16.
 
 Configuración técnica de producción:
+
 ```text
 Runtime: Docker
 Build Strategy: Multi-stage Dockerfile (Maven 3.9 + OpenJDK 27)
@@ -1188,6 +1194,7 @@ Virtual Threads: spring.threads.virtual.enabled=true
 ```
 
 Variables de entorno configuradas en Render:
+
 - DATABASE_URL: Host privado del servidor PostgreSQL provisto por Render.
 - DATABASE_PORT: 5432
 - DATABASE_NAME: loadmatch
@@ -1198,17 +1205,18 @@ Variables de entorno configuradas en Render:
 
 ![Servicio de Web Services de LoadMatch activo en Render](../assets/images/sprint3/RenderBackendLive.png)
 
-*Figura. Panel de control de Render mostrando el servicio backend loadmatch-backend-application en estado Live con despliegue automático activo.*
+_Figura. Panel de control de Render mostrando el servicio backend loadmatch-backend-application en estado Live con despliegue automático activo._
 
 ![Instancia de base de datos PostgreSQL activa en Render](../assets/images/sprint3/RenderPostgresLive.png)
 
-*Figura. Panel de la base de datos PostgreSQL en Render con conexiones y almacenamiento operativo.*
+_Figura. Panel de la base de datos PostgreSQL en Render con conexiones y almacenamiento operativo._
 
 **2. Despliegue de la Web Application en Vercel**
 
 La Web Application se mantiene desplegada en Vercel sobre la rama develop y main, actualizada mediante el commit 47b3316 para redirigir todas las peticiones HTTP desde el mock hacia la URL pública del backend en Render.
 
 Configuración reproducible del frontend:
+
 ```text
 Framework Preset: Angular
 Build Command: npm run build
@@ -1219,7 +1227,7 @@ SPA Rewrite: /(.*) -> /index.html
 
 ![Despliegue del Frontend en Vercel conectado a la API de Render](../assets/images/sprint3/VercelFrontendLive.png)
 
-*Figura. Panel de producción de Vercel confirmando el despliegue exitoso y enlace con la API real.*
+_Figura. Panel de producción de Vercel confirmando el despliegue exitoso y enlace con la API real._
 
 **3. Despliegue de la Landing Page en GitHub Pages**
 
@@ -1227,21 +1235,22 @@ La Landing Page continúa publicada en GitHub Pages sobre la rama main, permitie
 
 ![Landing Page publicada en GitHub Pages con flujo de GitHub Actions](../assets/images/sprint3/LandingGitHubPagesDeployment.png)
 
-*Figura. Configuración y ejecución exitosa del flujo de despliegue de GitHub Pages para la Landing Page.*
+_Figura. Configuración y ejecución exitosa del flujo de despliegue de GitHub Pages para la Landing Page._
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
 
 Durante el Sprint 3, los cinco integrantes del equipo colaboraron activamente en el diseño y codificación de los bounded contexts del backend y en su integración con el frontend. La distribución de responsabilidades se organizó conforme a la arquitectura DDD/CQRS, asegurando que cada integrante lidere agregados, entidades, comandos, consultas y controladores específicos.
 
-| Integrante | Usuario GitHub | Rol y bounded contexts liderados | Confirmaciones representativas |
-| --- | --- | --- | --- |
-| Harold Fauskorp Benigno Montero | Harold-11 | Arquitectura base Spring Boot, configuración OpenAPI/Swagger, Project Loom Virtual Threads, Bounded Context de IAM (Tokens, Users, Seeder) y vistas de inicio de sesión en frontend. | 32d69d2, 0e9661a, e054a63, 05c920b, df37d43 |
-| Jean Fabio Noriega Collado | dumbaskidd | Bounded Context de Profiles (registro y gestión de empresas y transportistas, agregados Shipper y Carrier, Value Objects de RUC, dirección y teléfono) y consultas por User ID. | 880bf32, f43ef79, 59716e5, d20a8a5, 5706a89 |
-| Ismael Sebastian Simon Calderon | Mayel-dev | Bounded Context de Freight (agregado LoadRequest, objetos de valor de ruta y dimensiones, endpoints de cargas), actualización de estados de viaje y conexión de producción a Render. | f9e6aa0, 762ce21, 93420f9, c9a129c, 47b3316 |
-| Christoper Steven Rivas Castillo | CODERT0PH | Bounded Context de Trips (agregado Trip, máquina de estados, aceptación de fletes, confirmación de entregas, job de confirmaciones desatendidas y repositorios JPA). | 379ce8c, 3c5d182, ecf0fa1, ab1f389, 9b23627 |
-| Marco Antonio Collantes Artola | Markollantes2307 | Bounded Context de Fleet (Vehicles y VehicleTypes, gestión de flota), Bounded Context de Matching (fórmula de Haversine y AvailableLoadsController) y fusiones de Pull Requests. | 5a4bda1, 107edf7, 8283b8c, c4dd0e8, ed4a7de |
+| Integrante                       | Usuario GitHub   | Rol y bounded contexts liderados                                                                                                                                                     | Confirmaciones representativas              |
+| -------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------- |
+| Harold Fauskorp Benigno Montero  | Harold-11        | Arquitectura base Spring Boot, configuración OpenAPI/Swagger, Project Loom Virtual Threads, Bounded Context de IAM (Tokens, Users, Seeder) y vistas de inicio de sesión en frontend. | 32d69d2, 0e9661a, e054a63, 05c920b, df37d43 |
+| Jean Fabio Noriega Collado       | dumbaskidd       | Bounded Context de Profiles (registro y gestión de empresas y transportistas, agregados Shipper y Carrier, Value Objects de RUC, dirección y teléfono) y consultas por User ID.      | 880bf32, f43ef79, 59716e5, d20a8a5, 5706a89 |
+| Ismael Sebastian Simon Calderon  | Mayel-dev        | Bounded Context de Freight (agregado LoadRequest, objetos de valor de ruta y dimensiones, endpoints de cargas), actualización de estados de viaje y conexión de producción a Render. | f9e6aa0, 762ce21, 93420f9, c9a129c, 47b3316 |
+| Christoper Steven Rivas Castillo | CODERT0PH        | Bounded Context de Trips (agregado Trip, máquina de estados, aceptación de fletes, confirmación de entregas, job de confirmaciones desatendidas y repositorios JPA).                 | 379ce8c, 3c5d182, ecf0fa1, ab1f389, 9b23627 |
+| Marco Antonio Collantes Artola   | Markollantes2307 | Bounded Context de Fleet (Vehicles y VehicleTypes, gestión de flota), Bounded Context de Matching (fórmula de Haversine y AvailableLoadsController) y fusiones de Pull Requests.     | 5a4bda1, 107edf7, 8283b8c, c4dd0e8, ed4a7de |
 
 Historial de confirmaciones de los repositorios:
+
 - Repositorio de Web Services: https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-backend-application/commits/develop/
 - Repositorio de Web Application: https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-frontend-application/commits/develop/
 - Repositorio de Landing Page: https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page/commits/main/
@@ -1252,8 +1261,567 @@ Las siguientes capturas registran las métricas de participación de los cinco i
 
 ![Gráfico de contribuidores del repositorio de Web Services](../assets/images/sprint3/BackendContributors.png)
 
-*Figura. Registro de contribuidores de GitHub en el repositorio Loadmatch-backend-application evidenciando la actividad de los integrantes.*
+_Figura. Registro de contribuidores de GitHub en el repositorio Loadmatch-backend-application evidenciando la actividad de los integrantes._
 
 ![Red de integración de ramas en el repositorio de Web Services](../assets/images/sprint3/BackendNetworkGraph.png)
 
-*Figura. Gráfico de red de Git en GitHub mostrando el flujo de trabajo GitFlow con las ramas feature integradas en develop.*
+_Figura. Gráfico de red de Git en GitHub mostrando el flujo de trabajo GitFlow con las ramas feature integradas en develop._
+
+## 5.3. Validation Interviews
+
+Con el propósito de evaluar la experiencia de usuario de LoadMatch, el equipo Cargo Link Labs llevó a cabo sesiones de entrevistas de validación con representantes de los segmentos objetivo de la plataforma: Shippers (personas y empresas que requieren servicios de transporte de carga) y Carriers (transportistas que ofrecen estos servicios).
+
+Las entrevistas tuvieron como finalidad conocer las primeras impresiones sobre el producto, evaluar la comprensión de las funcionalidades, identificar dificultades de navegación y recopilar sugerencias de mejora relacionadas con la usabilidad, la seguridad, la confianza y la gestión de operaciones logísticas.
+
+Se realizaron cuatro entrevistas: tres correspondientes al segmento Shippers y una al segmento Carriers. Las sesiones incluyeron preguntas sobre los procesos logísticos actuales de los participantes y una evaluación guiada de las funcionalidades de LoadMatch. Las pruebas con Shippers se concentraron principalmente en el inicio de sesión, la publicación y consulta de cargas, la navegación adaptable y el seguimiento de operaciones.
+
+Los hallazgos permiten identificar oportunidades de mejora para futuras versiones. No obstante, la muestra del segmento Carriers es inferior al mínimo de tres entrevistas por segmento indicado en el enunciado del trabajo final.
+
+### 5.3.1. Diseño de Entrevistas
+
+El diseño de las entrevistas consideró preguntas iniciales sobre la experiencia de cada participante, seguidas de actividades de exploración de LoadMatch y preguntas de evaluación de la experiencia de usuario.
+
+Las sesiones se organizaron considerando las necesidades de cada segmento objetivo, buscando obtener información tanto sobre la utilidad de la propuesta como sobre las dificultades que podrían presentarse durante su utilización.
+
+**Objetivos de validación**
+
+- Evaluar la comprensión de la propuesta de valor de LoadMatch.
+- Identificar dificultades de navegación y comprensión de la interfaz.
+- Evaluar la claridad de los formularios y la información presentada.
+- Recopilar opiniones sobre la seguridad, confianza y tratamiento de datos.
+- Identificar necesidades de los Shippers y Carriers durante las operaciones logísticas.
+- Obtener recomendaciones para mejorar la experiencia de usuario.
+
+**Segmento 1: Shippers**
+
+Las entrevistas con Shippers se enfocaron en la experiencia de personas y negocios que necesitan contratar servicios de transporte de carga.
+
+**Preguntas iniciales**
+
+1. ¿Alguna vez has necesitado contratar un servicio de transporte de carga?
+2. ¿Cómo realizas actualmente este proceso?
+3. ¿Qué dificultades has tenido al contratar servicios de transporte?
+4. ¿Qué información necesitarías conocer antes de confiar en una plataforma como LoadMatch?
+
+**Exploración y navegación**
+
+5. ¿Qué entiendes que ofrece LoadMatch al observar su pantalla principal?
+6. Sin recibir instrucciones, ¿qué intentarías hacer primero?
+7. ¿Puedes identificar fácilmente las secciones que necesitas utilizar?
+8. ¿Qué elementos de la interfaz te llaman la atención y cuáles te resultan confusos?
+9. ¿La información presentada es suficiente para comprender las funcionalidades?
+10. ¿Qué esperarías encontrar al seleccionar la opción de ver detalles de una carga?
+
+**Publicación y gestión de cargas**
+
+11. ¿Qué información consideras indispensable para publicar una solicitud de transporte?
+12. ¿Qué dificultades encontraste al completar el formulario?
+13. ¿Cómo sabes que una solicitud de transporte fue publicada correctamente?
+14. ¿Qué información esperarías encontrar al volver a ingresar a tu cuenta?
+15. ¿Qué criterios utilizarías para seleccionar un transportista?
+16. ¿Qué información adicional necesitarías antes de contratar un servicio?
+
+**Experiencia, confianza y seguridad**
+
+17. ¿La aplicación resulta cómoda al utilizarse desde un dispositivo móvil?
+18. ¿Qué cambiarías del diseño o de la navegación?
+19. ¿Cuánto tiempo estarías dispuesto a esperar para completar una operación?
+20. ¿Qué mensaje esperarías recibir si ocurre un error?
+21. ¿Qué debería suceder con tus datos si se pierde la conexión a internet?
+22. ¿Qué información personal o comercial te preocuparía compartir?
+23. ¿Qué necesitarías comprobar para confiar en LoadMatch?
+
+**Preguntas de cierre**
+
+24. ¿En qué situación real utilizarías LoadMatch?
+25. ¿Qué problema de tu proceso actual podría ayudarte a resolver?
+26. ¿Qué funcionalidad consideras imprescindible?
+27. ¿Qué situación podría impedirte utilizar la plataforma?
+28. En una escala del 1 al 5, ¿qué tan dispuesto estarías a utilizar LoadMatch?
+
+**Flujos de validación del segmento Shippers**
+
+| Flujo   | Actividad                                                | Aspecto evaluado                                        |
+| ------- | -------------------------------------------------------- | ------------------------------------------------------- |
+| Flujo 1 | Iniciar sesión y explorar el dashboard                   | Claridad de navegación y organización de información    |
+| Flujo 2 | Consultar una carga mediante My Loads y View Details     | Comprensión del historial y los detalles de operaciones |
+| Flujo 3 | Ingresar a Publish Load y registrar una solicitud        | Claridad del formulario y facilidad de publicación      |
+| Flujo 4 | Consultar la solicitud publicada                         | Retroalimentación y estado de la operación              |
+| Flujo 5 | Visualizar la aplicación en una pantalla móvil           | Diseño adaptable y accesibilidad de controles           |
+| Flujo 6 | Revisar la información de una operación y su seguimiento | Visibilidad del estado y confianza                      |
+
+Las actividades fueron utilizadas según las condiciones de cada entrevista. Algunas pruebas fueron realizadas directamente por el participante y otras se desarrollaron mediante una demostración controlada por el entrevistador.
+
+**Segmento 2: Carriers**
+
+La validación con el segmento Carriers se orientó a comprender las necesidades de los transportistas que administran sus propias unidades de carga y buscan nuevas oportunidades de trabajo.
+
+**Preguntas de validación**
+
+1. ¿Cuántos años llevas trabajando en transporte de carga?
+2. ¿Cómo consigues actualmente nuevos clientes y viajes?
+3. ¿Cuáles son las principales dificultades al aceptar un servicio?
+4. ¿Qué información necesitas antes de comprometerte con el traslado de una carga?
+5. ¿Qué importancia tienen las tarifas, los adelantos y los plazos de pago?
+6. ¿Qué necesitarías conocer sobre la empresa que solicita el transporte?
+7. ¿Cómo debería mostrarse una lista de cargas disponibles?
+8. ¿Qué filtros utilizarías para encontrar cargas adecuadas para tu vehículo?
+9. ¿Qué información debería mostrar el detalle de una solicitud?
+10. ¿Qué esperarías al aceptar un servicio de transporte?
+11. ¿Qué debería ocurrir si pierdes la conexión durante una operación?
+12. ¿Qué condiciones necesitarías para confiar en la plataforma?
+13. ¿Qué tan importante sería disponer de soporte ante conflictos o incumplimientos?
+14. ¿Qué funcionalidades mejorarías o incorporarías?
+15. ¿En qué circunstancias utilizarías LoadMatch para conseguir viajes?
+
+**Flujos propuestos para la validación del segmento Carriers**
+
+| Flujo   | Actividad                                                | Aspecto por evaluar                     |
+| ------- | -------------------------------------------------------- | --------------------------------------- |
+| Flujo 1 | Acceder al perfil del transportista                      | Claridad de la información y navegación |
+| Flujo 2 | Consultar cargas disponibles                             | Organización y facilidad de búsqueda    |
+| Flujo 3 | Aplicar filtros según ruta y características de la carga | Eficiencia de búsqueda                  |
+| Flujo 4 | Revisar los detalles de una solicitud                    | Transparencia de información            |
+| Flujo 5 | Aceptar una carga y consultar su estado                  | Confirmación y seguimiento              |
+| Flujo 6 | Consultar información de seguridad y soporte             | Confianza y resolución de problemas     |
+
+Estos flujos constituyen el diseño de validación del segmento. Su ejecución efectiva debe contrastarse con la grabación correspondiente, sin asumir que todas las operaciones fueron completadas por la participante.
+
+---
+
+### 5.3.2. Registro de Entrevistas
+
+A continuación, se presenta el registro de las cuatro entrevistas realizadas, organizado según el segmento objetivo correspondiente. Cada registro incluye los datos disponibles del participante, evidencia visual, enlace de grabación, tiempo de inicio, duración y resumen de los principales hallazgos.
+
+#### Segmento 1: Shippers
+
+**Entrevista de Validación N.º 1 — Ronald Cortez**
+
+| Campo               | Información                                                                                                                                                                                                                                                                                                                                                 |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nombre              | Ronald                                                                                                                                                                                                                                                                                                                                                      |
+| Apellidos           | Cortez                                                                                                                                                                                                                                                                                                                                                      |
+| Edad                | 26 años                                                                                                                                                                                                                                                                                                                                                     |
+| Distrito            | Pendiente de confirmar                                                                                                                                                                                                                                                                                                                                      |
+| Segmento objetivo   | Shippers                                                                                                                                                                                                                                                                                                                                                    |
+| Evidencia           | <img src="../assets/images/sprint3/validation/entrevista_ronald.png" alt="Evidencia de entrevista de validación de Ronald Cortez" width="600">                                                                                                                                                                                                              |
+| Enlace del video    | [Entrevista de Ronald Cortez](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201823468_upc_edu_pe/IQA6RafZoub6QoU_Xk0nyzvaAf8H7tHmj80k_ZUXtpzwg0c?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=DBcMuw) |
+| Timing donde inicia | 00:01                                                                                                                                                                                                                                                                                                                                                       |
+| Duración            | 12:32 min                                                                                                                                                                                                                                                                                                                                                   |
+
+**Resumen de la entrevista**
+
+Durante la entrevista, Ronald Cortez, dedicado a la fabricación de piezas de impresión 3D y robótica, explicó que necesita contratar servicios de transporte para enviar productos a sus clientes. Señaló que enfrenta dificultades cuando las mercancías son grandes, pesadas o de elevado valor económico, principalmente por preocupaciones relacionadas con la seguridad y el seguimiento de los envíos.
+
+Al interactuar con LoadMatch, identificó rápidamente las opciones de navegación y destacó el diseño minimalista, la organización de los datos y la ausencia de elementos visuales distractores. Durante la prueba logró completar el formulario de publicación de cargas y comprobó que la solicitud aparecía en la sección My Loads. Consideró que el proceso era intuitivo y que los campos estaban claramente identificados. También valoró que la interfaz se adaptara correctamente a una pantalla móvil.
+
+Como oportunidades de mejora, propuso incorporar una guía interactiva para usuarios nuevos, permitir verificar las direcciones mediante un mapa, agregar comentarios adicionales en las solicitudes y guardar automáticamente los formularios cuando se pierda la conexión. Asimismo, destacó la importancia de mostrar transportistas verificados, calificaciones, información de seguimiento y canales de atención al cliente. Finalmente, calificó su disposición a utilizar LoadMatch con 5 de 5 puntos, indicando que la plataforma podría integrarse a sus actividades habituales.
+
+---
+
+**Entrevista de Validación N.º 2 — Víctor Miñope**
+
+| Campo               | Información                                                                                                                                                                                                                                                                                                        |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Nombre              | Víctor                                                                                                                                                                                                                                                                                                             |
+| Apellidos           | Miñope                                                                                                                                                                                                                                                                                                             |
+| Edad                | 26 años                                                                                                                                                                                                                                                                                                            |
+| Distrito            | Pendiente de confirmar                                                                                                                                                                                                                                                                                             |
+| Segmento objetivo   | Shippers                                                                                                                                                                                                                                                                                                           |
+| Evidencia           | <img src="../assets/images/sprint3/validation/entrevista_victor.png" alt="Evidencia de entrevista de validación de Víctor Miñope" width="600">                                                                                                                                                                     |
+| Enlace del video    | [Entrevista de Víctor Miñope](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201823468_upc_edu_pe/IQDE2m_jYOlUTa72ZcIaFthRAaj_zb7DpDFhMMs7NJuur_0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvXNpbmVzcyIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=IQvh8v) |
+| Timing donde inicia | 00:01                                                                                                                                                                                                                                                                                                              |
+| Duración            | 20:30 min                                                                                                                                                                                                                                                                                                          |
+
+**Resumen de la entrevista**
+
+Durante la entrevista de validación, Víctor Miñope, dedicado a la comercialización de componentes de computadora, explicó que requiere servicios de transporte para movilizar mercadería hacia clientes y otros vendedores. Actualmente coordina principalmente por WhatsApp con transportistas conocidos o recomendados. Entre sus dificultades mencionó la disponibilidad de vehículos adecuados y la necesidad de encontrar tarifas razonables.
+
+Al explorar LoadMatch, comprendió la información del dashboard, los estados de las operaciones y la organización de las secciones. Destacó que la interfaz era intuitiva y no estaba sobrecargada de elementos. Durante la sesión consultó detalles de cargas, completó una solicitud de transporte y verificó su publicación mediante la confirmación mostrada por la aplicación. También probó la interfaz en una ventana de tamaño reducido y consideró que la navegación móvil resultaba cómoda.
+
+Entre sus recomendaciones, planteó diferenciar visualmente algunos botones, incorporar mensajes claros cuando ocurran errores y conservar la información ingresada ante una pérdida de conexión. También consideró importante conocer las reseñas, calificaciones y antecedentes de los transportistas, así como contar con seguimiento de las cargas mediante un mapa en tiempo real. Finalmente, otorgó una disposición de uso de 4 de 5 puntos, indicando que necesitaría comprobar la confiabilidad de la plataforma y de sus transportistas mediante operaciones reales.
+
+---
+
+**Entrevista de Validación N.º 3 — Jeanette (identidad por confirmar)**
+
+| Campo               | Información                                                                                                                                                                                                                                                                                                                                                          |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nombre              | Jeanette (por confirmar)                                                                                                                                                                                                                                                                                                                                             |
+| Apellidos           | Pendiente de confirmar                                                                                                                                                                                                                                                                                                                                               |
+| Edad                | Pendiente de confirmar                                                                                                                                                                                                                                                                                                                                               |
+| Distrito            | Breña (ubicación del negocio; residencia por confirmar)                                                                                                                                                                                                                                                                                                              |
+| Segmento objetivo   | Shippers                                                                                                                                                                                                                                                                                                                                                             |
+| Evidencia           | <img src="../assets/images/sprint3/validation/entrevista_jeanette.png" alt="Evidencia de entrevista de validación del segmento Shippers" width="600">                                                                                                                                                                                                                |
+| Enlace del video    | [Entrevista de validación de Jeanette](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201823468_upc_edu_pe/IQDoVyjVhOO6Rr3q3doOJRh8AT0PGcCfC2_MUgE4ed8wX4Y?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=FiSSsQ) |
+| Timing donde inicia | 00:02                                                                                                                                                                                                                                                                                                                                                                |
+| Duración            | 19:36 min                                                                                                                                                                                                                                                                                                                                                            |
+
+**Resumen de la entrevista**
+
+La tercera entrevista del segmento Shippers corresponde a una participante dedicada a la repostería fina y pastelería por encargo, cuyo negocio se encuentra en Breña. Explicó que necesita contratar vehículos para transportar tortas y otros productos delicados, especialmente aquellos de gran tamaño que requieren condiciones especiales durante el traslado.
+
+Actualmente trabaja con un conductor particular de confianza, con quien coordina mediante llamadas y WhatsApp. Su principal preocupación es encontrar alternativas seguras cuando este conductor no se encuentra disponible, debido a experiencias anteriores en las que el transporte inadecuado ocasionó daños a sus productos.
+
+Durante la demostración guiada de LoadMatch, valoró positivamente la organización visual, la claridad del menú y la presentación de la información. Consideró que el formulario de publicación era comprensible, pero identificó la necesidad de agregar categorías específicas para cargas frágiles o alimentos delicados, así como instrucciones de manipulación, por ejemplo, no apilar o mantener los productos en posición horizontal.
+
+También señaló la importancia de mostrar confirmaciones claras después de publicar una solicitud, conservar los datos cuando se pierde la conexión y evitar publicaciones duplicadas. Recomendó incorporar mensajes de error comprensibles, notificar a los transportistas cuando se modifiquen las direcciones de entrega y proteger la información personal de los clientes. Finalmente, destacó la importancia de contar con políticas de privacidad y atención al cliente para confiar en el servicio.
+
+La sesión fue conducida mediante navegación del entrevistador, por lo que sus observaciones reflejan principalmente la evaluación de una demostración guiada y no la ejecución autónoma de todos los flujos.
+
+**Observación de identificación:** en la grabación el entrevistador se dirige a la participante como Pilar. Debe confirmarse si Jeanette es el nombre correcto antes de la entrega final.
+
+---
+
+#### Segmento 2: Carriers
+
+**Entrevista de Validación N.º 4 — Carmen Rosa Rojas**
+
+| Campo               | Información                                                                                                                                                                                                                                                                                                                                                     |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nombre              | Carmen Rosa                                                                                                                                                                                                                                                                                                                                                     |
+| Apellidos           | Rojas                                                                                                                                                                                                                                                                                                                                                           |
+| Edad                | 41 años                                                                                                                                                                                                                                                                                                                                                         |
+| Distrito            | Los Olivos                                                                                                                                                                                                                                                                                                                                                      |
+| Segmento objetivo   | Carriers                                                                                                                                                                                                                                                                                                                                                        |
+| Evidencia           | <img src="../assets/images/sprint3/validation/entrevista_carmen.png" alt="Evidencia de entrevista de validación de Carmen Rosa Rojas" width="600">                                                                                                                                                                                                              |
+| Enlace del video    | [Entrevista de Carmen Rosa Rojas](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201823468_upc_edu_pe/IQD_pJLqt-S4SL3uPx38c7xDAehr8WKa1HjhBhzkeqslM4k?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=2C4bcQ) |
+| Timing donde inicia | 00:00                                                                                                                                                                                                                                                                                                                                                           |
+| Duración            | 16:01 min                                                                                                                                                                                                                                                                                                                                                       |
+
+**Resumen de la entrevista**
+
+Durante la entrevista, Carmen Rosa Rojas, transportista con 12 años de experiencia que administra y conduce su propio camión, explicó que actualmente obtiene servicios mediante recomendaciones y grupos de WhatsApp y Facebook. Identificó como principales dificultades las tarifas demasiado bajas, los incumplimientos de pago y los riesgos de seguridad al trabajar con clientes desconocidos. Por ello, suele solicitar un adelanto del 50 % cuando realiza operaciones con nuevos clientes.
+
+Desde su perspectiva, LoadMatch representa una oportunidad para encontrar servicios de transporte sin depender de múltiples grupos de comunicación y aprovechar los viajes de retorno para evitar desplazamientos con el vehículo vacío. Consideró indispensable conocer previamente la ruta, las características de la mercancía, los horarios, las condiciones de pago, los peajes y los posibles tiempos de espera.
+
+Debido a que utiliza principalmente su teléfono móvil, manifestó preferencia por una aplicación sencilla, con controles en español y filtros que permitan encontrar cargas compatibles con su vehículo. También destacó la importancia de recibir confirmaciones claras y conservar la información ingresada cuando falle la conexión a internet.
+
+La confianza fue uno de los principales factores identificados. Carmen señaló que necesitaría comprobar la identidad y verificación de las empresas contratantes, conocer las comisiones aplicadas y disponer de un canal de soporte ante incumplimientos o conflictos. Asimismo, manifestó disposición a proporcionar documentación de su vehículo, siempre que sus datos personales estén protegidos y exista verificación de ambas partes de la operación.
+
+La participante mostró interés en utilizar LoadMatch, aunque consideró necesario probar previamente una operación completa y conocer las condiciones del servicio. Como primera experiencia, preferiría realizar un viaje corto antes de incorporar la plataforma de manera habitual a su trabajo.
+
+**Observación:** este resumen se basa en la síntesis proporcionada para la entrevista. La puntuación de disposición de uso de 4/5 aparece como propuesta del guion y debe confirmarse en la grabación antes de registrarse como respuesta efectiva.
+
+---
+
+### 5.3.3. Evaluaciones según heurísticas
+
+Con el propósito de analizar la experiencia de usuario de LoadMatch, el equipo Cargo Link Labs realizó una evaluación de los principales hallazgos obtenidos durante las entrevistas de validación. Esta evaluación tomó como referencia los principios de **Usability, Information Architecture e Inclusive Design**, de acuerdo con el formato establecido en el Anexo D del enunciado del Trabajo Final.
+
+Se analizaron las observaciones de los participantes de los segmentos **Shippers** y **Carriers**, prestando especial atención a la claridad de los formularios, la organización de la información, la visibilidad de los estados de las operaciones, la confianza y las condiciones de uso de la plataforma.
+
+Los problemas identificados fueron clasificados según su impacto potencial sobre la experiencia de usuario. Las severidades representan una valoración preliminar del equipo basada en los testimonios y deben contrastarse con la revisión de la interfaz.
+
+#### Datos generales de la evaluación
+
+| Campo                   | Descripción                                                                              |
+| ----------------------- | ---------------------------------------------------------------------------------------- |
+| Producto evaluado       | LoadMatch                                                                                |
+| Startup                 | Cargo Link Labs                                                                          |
+| Curso                   | Desarrollo de Aplicaciones Open Source                                                   |
+| Periodo académico       | 2026-2                                                                                   |
+| Equipo evaluador        | Cargo Link Labs                                                                          |
+| Segmentos evaluados     | Shippers y Carriers                                                                      |
+| Técnica empleada        | Análisis heurístico de los hallazgos de entrevistas de validación                        |
+| Participantes           | Ronald Cortez, Víctor Miñope, participante del negocio de repostería y Carmen Rosa Rojas |
+| Cantidad de entrevistas | 4                                                                                        |
+
+#### Tareas y escenarios considerados
+
+La evaluación tomó como referencia los siguientes escenarios de interacción con LoadMatch.
+
+| N.º | Tarea o escenario                                               | Segmento | Aspecto evaluado                                   |
+| --- | --------------------------------------------------------------- | -------- | -------------------------------------------------- |
+| 1   | Iniciar sesión y explorar el dashboard                          | Shippers | Comprensión y navegación                           |
+| 2   | Consultar el historial y los detalles de las cargas             | Shippers | Arquitectura de información                        |
+| 3   | Completar y publicar una solicitud de transporte                | Shippers | Usabilidad de formularios                          |
+| 4   | Revisar la confirmación y el estado de una solicitud            | Shippers | Visibilidad del estado del sistema                 |
+| 5   | Consultar información del transportista y seguimiento del envío | Shippers | Información para tomar decisiones                  |
+| 6   | Utilizar la plataforma desde una pantalla móvil                 | Shippers | Diseño adaptable y accesibilidad                   |
+| 7   | Consultar oportunidades de carga y condiciones de contratación  | Carriers | Claridad de la información y facilidad de búsqueda |
+
+Las primeras seis tareas fueron abordadas en las entrevistas del segmento Shippers mediante interacción directa o demostraciones guiadas. El último escenario fue considerado a partir de las necesidades descritas por Carmen Rosa Rojas, sin asumir que completó todas las tareas de forma autónoma.
+
+#### Escala de severidad
+
+Para clasificar los problemas se utilizó la escala de severidad de cuatro niveles indicada en el Anexo D.
+
+| Severidad | Nivel                | Descripción                                                                                      |
+| --------- | -------------------- | ------------------------------------------------------------------------------------------------ |
+| 1         | Problema superficial | Inconveniente de bajo impacto que puede ser superado fácilmente.                                 |
+| 2         | Problema menor       | Dificultad que afecta parcialmente la experiencia y cuya corrección no resulta urgente.          |
+| 3         | Problema mayor       | Dificultad importante que puede comprometer tareas relevantes o generar confusión significativa. |
+| 4         | Problema muy grave   | Inconveniente crítico que impide continuar con una tarea esencial.                               |
+
+#### Tabla resumen de problemas identificados
+
+| N.º | Problema identificado                                                                         | Principio evaluado                                                          | Severidad |
+| --- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------- |
+| 1   | Clasificación insuficiente para comunicar las condiciones de transporte de mercancía delicada | Usability — Correspondencia entre el sistema y el mundo real                | 3         |
+| 2   | Información de seguimiento insuficiente para visualizar el recorrido de una carga             | Information Architecture — Visibilidad y claridad de la información         | 2         |
+| 3   | Ausencia de orientación inicial y acceso poco evidente a canales de ayuda                     | Usability — Ayuda y documentación                                           | 2         |
+| 4   | Falta de mecanismos evidentes para conservar formularios ante interrupciones de conexión      | Usability — Prevención de errores y recuperación                            | 3         |
+| 5   | Necesidad de ampliar la información de verificación y confianza entre Shippers y Carriers     | Information Architecture — Información relevante para la toma de decisiones | 3         |
+| 6   | Presencia de etiquetas en inglés durante flujos utilizados por usuarios hispanohablantes      | Inclusive Design — Claridad y comprensión del lenguaje                      | 2         |
+
+Las severidades se asignaron considerando la importancia de cada problema para los procesos logísticos. No se identificó evidencia suficiente para clasificar alguno de los hallazgos como problema crítico de nivel 4.
+
+---
+
+#### Problema N.º 1: Clasificación insuficiente para mercancía delicada
+
+**Principio evaluado:** Usability — Correspondencia entre el sistema y el mundo real.
+
+**Severidad:** 3 — Problema mayor.
+
+**Descripción del problema:**
+
+Durante la tercera entrevista del segmento Shippers, la participante dedicada a la repostería explicó que necesita transportar tortas y productos que requieren condiciones especiales de manipulación.
+
+Al revisar el formulario de publicación de cargas, manifestó que las categorías generales no expresaban adecuadamente las particularidades de su mercancía. Por ejemplo, necesitaba indicar que determinados productos son frágiles, no deben apilarse y deben mantenerse en posición horizontal durante el transporte.
+
+Esta limitación podría generar que un transportista acepte una solicitud sin conocer todas las condiciones necesarias para preservar la mercancía.
+
+**Evidencia de validación:**
+
+En la grabación de la tercera entrevista, aproximadamente entre los minutos **06:30 y 08:42**, la participante propone incluir categorías como carga frágil y alimentos delicados, junto con instrucciones específicas de manipulación.
+
+**Recomendación:**
+
+Ampliar las opciones del formulario de publicación de cargas para incorporar categorías específicas, como "Carga frágil" y "Alimentos". Asimismo, incluir un campo de instrucciones especiales que permita comunicar las restricciones de manipulación y transporte.
+
+**Resultado esperado:**
+
+Reducir la ambigüedad en las solicitudes y permitir que los transportistas evalúen si cuentan con las condiciones necesarias para trasladar la mercancía de forma adecuada.
+
+---
+
+#### Problema N.º 2: Información limitada sobre el recorrido de las cargas
+
+**Principio evaluado:** Information Architecture — Visibilidad y claridad de la información.
+
+**Severidad:** 2 — Problema menor.
+
+**Descripción del problema:**
+
+Los participantes Ronald Cortez y Víctor Miñope valoraron positivamente los estados y detalles de las operaciones presentados por LoadMatch. Sin embargo, ambos expresaron interés en conocer con mayor precisión el recorrido de sus mercancías.
+
+Ronald destacó que sería útil visualizar una ruta interactiva, mientras que Víctor manifestó que conocer la ubicación y el tiempo estimado de llegada le proporcionaría mayor tranquilidad durante el traslado.
+
+Aunque la plataforma ofrece información sobre los estados de los envíos, la incorporación de una representación geográfica permitiría complementar la información disponible.
+
+**Evidencia de validación:**
+
+- Ronald Cortez, aproximadamente **10:55–11:13**: recomienda representar la ruta mediante un mapa interactivo.
+- Víctor Miñope, aproximadamente **18:52–19:14**: solicita información sobre la ubicación de la carga y su tiempo estimado de llegada.
+
+**Recomendación:**
+
+Evaluar la incorporación de un mapa interactivo que permita representar el recorrido de las cargas y, cuando los datos estén disponibles, mostrar su ubicación y tiempo estimado de llegada.
+
+**Resultado esperado:**
+
+Mejorar la comprensión del progreso de las operaciones y facilitar que los Shippers consulten la información de sus envíos desde una única interfaz.
+
+---
+
+#### Problema N.º 3: Orientación inicial y canales de ayuda poco evidentes
+
+**Principio evaluado:** Usability — Ayuda y documentación.
+
+**Severidad:** 2 — Problema menor.
+
+**Descripción del problema:**
+
+Durante la primera entrevista, Ronald Cortez consideró que la interfaz de LoadMatch era intuitiva y que las principales opciones resultaban fáciles de identificar. No obstante, recomendó incorporar un recorrido introductorio que explique las funciones disponibles.
+
+También mencionó que no identificó un apartado de contacto o soporte mediante el cual pudiera solicitar asistencia ante dificultades durante una operación.
+
+Estas observaciones muestran una oportunidad para mejorar el acompañamiento de nuevos usuarios y hacer más accesibles los canales de atención.
+
+**Evidencia de validación:**
+
+- Ronald Cortez, aproximadamente **03:21–03:49**: propone un recorrido de primeros pasos con ventanas informativas.
+- Ronald Cortez, aproximadamente **11:23–11:36**: indica que no encontró una sección de contacto o ayuda al cliente.
+
+**Recomendación:**
+
+Implementar una guía introductoria opcional para los usuarios nuevos, que explique las funciones principales del dashboard, la publicación de cargas y la consulta de operaciones.
+
+Además, incorporar un acceso visible a soporte o ayuda, con información sobre los canales de comunicación disponibles.
+
+**Resultado esperado:**
+
+Facilitar la adaptación de nuevos usuarios y reducir las dificultades para encontrar asistencia cuando se presente una consulta o un inconveniente.
+
+---
+
+#### Problema N.º 4: Recuperación de datos ante interrupciones de conexión
+
+**Principio evaluado:** Usability — Prevención de errores y recuperación.
+
+**Severidad:** 3 — Problema mayor.
+
+**Descripción del problema:**
+
+Durante las entrevistas del segmento Shippers, los participantes manifestaron su preocupación por la posibilidad de perder la información ingresada en el formulario de publicación de cargas si se interrumpe la conexión a internet.
+
+Ronald y Víctor señalaron que esperan recuperar los datos cuando vuelva la conexión. La participante dedicada a la repostería también consideró importante conservar los formularios y mostrar mensajes comprensibles ante errores de comunicación.
+
+La falta de mecanismos de recuperación, en caso de confirmarse mediante pruebas técnicas, podría obligar a los usuarios a repetir el ingreso de información y generar frustración durante el registro de solicitudes.
+
+**Evidencia de validación:**
+
+- Ronald Cortez, aproximadamente **08:08–08:32**: recomienda conservar la información como borrador.
+- Víctor Miñope, aproximadamente **15:08–15:32**: espera recuperar los datos ingresados tras una interrupción.
+- Tercera entrevista Shippers, aproximadamente **18:32–19:02**: propone guardar borradores automáticamente.
+
+**Recomendación:**
+
+Implementar un mecanismo de guardado temporal o recuperación de borradores durante el registro de solicitudes.
+
+Cuando ocurra una interrupción, mostrar un mensaje claro sobre el estado de la conexión y ofrecer la posibilidad de reintentar la operación sin perder la información disponible.
+
+**Resultado esperado:**
+
+Disminuir la pérdida de datos, evitar tareas repetitivas y mejorar la continuidad de las operaciones ante problemas de conectividad.
+
+**Nota de validación:** las entrevistas muestran una necesidad de recuperación de datos; no documentan una prueba técnica en la que se haya comprobado que LoadMatch pierde información.
+
+---
+
+#### Problema N.º 5: Información de verificación y confianza entre usuarios
+
+**Principio evaluado:** Information Architecture — Información relevante para la toma de decisiones.
+
+**Severidad:** 3 — Problema mayor.
+
+**Descripción del problema:**
+
+Los participantes de ambos segmentos consideraron que la confianza es un factor determinante para contratar servicios de transporte mediante una plataforma digital.
+
+Ronald Cortez señaló que sería importante disponer de indicadores que permitan reconocer a transportistas verificados y consultar sus calificaciones. Víctor Miñope mostró interés en acceder al historial y los antecedentes de los conductores.
+
+Por su parte, Carmen Rosa Rojas explicó que necesita comprobar que las empresas contratantes son confiables, conocer las condiciones de pago y disponer de mecanismos de atención ante posibles incumplimientos.
+
+Estas observaciones indican que la información de reputación y verificación debe ser clara, accesible y suficiente para respaldar la toma de decisiones.
+
+**Evidencia de validación:**
+
+- Ronald Cortez, aproximadamente **09:24–09:59**: solicita indicadores de verificación y calificación de transportistas.
+- Víctor Miñope, aproximadamente **17:01–17:45**: recomienda ampliar la información disponible en los perfiles de conductores.
+- Carmen Rosa Rojas: destaca la verificación de empresas, la transparencia de las condiciones comerciales y el soporte ante conflictos.
+
+**Recomendación:**
+
+Fortalecer la presentación de la información de verificación de los usuarios, distinguiendo claramente los datos comprobados de los proporcionados por cada participante.
+
+Facilitar el acceso al historial de servicios, calificaciones y condiciones comerciales relevantes. Asimismo, presentar de forma comprensible las políticas de privacidad y los canales de soporte disponibles.
+
+**Resultado esperado:**
+
+Incrementar la transparencia de las operaciones y ayudar a Shippers y Carriers a evaluar mejor las condiciones y riesgos antes de concretar un servicio.
+
+---
+
+#### Problema N.º 6: Consistencia del idioma en la interfaz
+
+**Principio evaluado:** Inclusive Design — Claridad y comprensión del lenguaje.
+
+**Severidad:** 2 — Problema menor.
+
+**Descripción del problema:**
+
+Durante algunas sesiones se observaron etiquetas de navegación y acciones en inglés, como "My Loads", "View Details" y "Publish Load", utilizadas por participantes hispanohablantes.
+
+En la tercera entrevista del segmento Shippers, el entrevistador también mostró un cambio del idioma de la interfaz al español durante la demostración.
+
+Aunque los participantes lograron comprender los flujos presentados, la presencia de etiquetas en inglés puede representar una barrera para usuarios que no dominan ese idioma, especialmente en procesos que requieren interpretar información operativa.
+
+**Evidencia de validación:**
+
+- Ronald Cortez, aproximadamente **03:49–04:26**: navegación mediante etiquetas como "View Details" y "Publish Load".
+- Víctor Miñope, aproximadamente **04:55–06:18**: navegación mediante "My Loads", "View Details" y "Publish Load".
+- Tercera entrevista Shippers, aproximadamente **14:31–14:44**: cambio del idioma de la interfaz al español.
+
+<!-- Pendiente: captura de la interfaz con las etiquetas mencionadas. -->
+
+**Recomendación:**
+
+Verificar la consistencia de las traducciones y ofrecer una experiencia completamente comprensible en español.
+
+También se recomienda conservar la preferencia de idioma del usuario y utilizar etiquetas claras en las acciones principales.
+
+**Resultado esperado:**
+
+Favorecer una experiencia más inclusiva para usuarios hispanohablantes y reducir las dificultades derivadas de la interpretación de términos en otro idioma.
+
+---
+
+#### Resultados generales de la evaluación
+
+La evaluación de los hallazgos permitió identificar seis oportunidades de mejora relacionadas con la experiencia de usuario de LoadMatch.
+
+De acuerdo con las severidades propuestas, tres hallazgos corresponden a problemas mayores y tres a problemas menores.
+
+| Severidad       | Cantidad de hallazgos |
+| --------------- | --------------------: |
+| 1 — Superficial |                     0 |
+| 2 — Menor       |                     3 |
+| 3 — Mayor       |                     3 |
+| 4 — Muy grave   |                     0 |
+| **Total**       |                 **6** |
+
+Las oportunidades de mayor prioridad están relacionadas con la comunicación de condiciones especiales de transporte, la recuperación de información ante interrupciones y la transparencia de los datos necesarios para contratar servicios de carga.
+
+Asimismo, se identificaron oportunidades de mejora en la visualización del seguimiento, la orientación inicial y la consistencia del idioma de la interfaz.
+
+#### Conclusiones y recomendaciones
+
+Las entrevistas de validación muestran que LoadMatch cuenta con elementos valorados positivamente por los participantes, como la organización de la interfaz, la facilidad para localizar las principales funcionalidades, el proceso de publicación de cargas y la adaptación a pantallas móviles.
+
+Ronald Cortez y Víctor Miñope pudieron completar las actividades de publicación de cargas durante sus respectivas sesiones y expresaron una disposición favorable hacia el uso de la plataforma.
+
+Sin embargo, también se identificaron necesidades que deben considerarse durante futuras iteraciones del producto:
+
+1. Mejorar la descripción de mercancías y condiciones especiales de transporte.
+2. Fortalecer la información de seguimiento disponible para los Shippers.
+3. Facilitar el acceso a orientación y canales de soporte.
+4. Evaluar mecanismos de recuperación de datos ante problemas de conectividad.
+5. Ampliar la información de verificación y confianza entre usuarios.
+6. Mantener una experiencia consistente y accesible en español.
+
+En conjunto, estos resultados proporcionan información útil para la planificación de mejoras del producto. Los hallazgos deberán complementarse con capturas de pantalla de las interfaces evaluadas y pruebas específicas cuando corresponda, especialmente en aquellos casos en que los participantes expresaron necesidades sin comprobar directamente un fallo funcional.
+
+## 5.4. Video About-the-Product
+
+Como parte de las actividades de presentación y difusión del producto, el equipo **Cargo Link Labs** elaboró el video _About-the-Product_ de **LoadMatch**, con el objetivo de presentar la propuesta de valor, las funcionalidades principales y los beneficios de la plataforma para sus segmentos objetivo.
+
+LoadMatch es una solución digital que conecta a los **Shippers**, personas y empresas que necesitan transportar mercancías, con los **Carriers**, transportistas que buscan oportunidades para ofrecer sus servicios de transporte de carga.
+
+El video promocional presenta la solución y sus principales funcionalidades mediante un recorrido por la aplicación web, incluyendo la publicación de solicitudes de carga, la consulta de operaciones y la gestión del transporte.
+
+### Video About-the-Product de LoadMatch
+
+| Campo            | Información                                                                                                                                                                                                                                                                                                                               |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Título           | LoadMatch — About the Product                                                                                                                                                                                                                                                                                                             |
+| Startup          | Cargo Link Labs                                                                                                                                                                                                                                                                                                                           |
+| Producto         | LoadMatch                                                                                                                                                                                                                                                                                                                                 |
+| Duración         | 3 minutos y 8 segundos                                                                                                                                                                                                                                                                                                                    |
+| Publicación      | YouTube y Microsoft Stream                                                                                                                                                                                                                                                                                                                |
+| YouTube          | [Ver video](https://youtu.be/SqLulXvf-64)                                                                                                                                                                                                                                                                                                 |
+| Microsoft Stream | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201823468_upc_edu_pe/IQAbXg4pk9VMR7BhMRjlDivvAX8lw_XnXH-JxP_goUCjSF0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=EvrPE2) |
+
+**Evidencia audiovisual:**
+
+[![LoadMatch — About the Product](https://img.youtube.com/vi/SqLulXvf-64/hqdefault.jpg)](https://youtu.be/SqLulXvf-64)
+
+**Descripción del contenido:**
+
+El material audiovisual presenta la propuesta de valor de LoadMatch, una plataforma diseñada para facilitar la conexión entre quienes necesitan transportar mercancías y quienes ofrecen servicios de transporte.
+
+A través de la demostración de las interfaces, se expone cómo los usuarios pueden acceder a las funcionalidades principales de la aplicación, registrar solicitudes de transporte, consultar cargas y visualizar información relacionada con el estado de las operaciones.
+
+El video busca transmitir los beneficios de centralizar estos procesos en una única plataforma digital, facilitando la comunicación, la organización y la gestión de servicios logísticos.
