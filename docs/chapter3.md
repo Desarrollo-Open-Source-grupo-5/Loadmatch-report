@@ -115,6 +115,8 @@ A continuación se presenta el Product Backlog del proyecto LoadMatch, conformad
 
 Para la estimación del esfuerzo se ha utilizado la secuencia de Fibonacci (1, 2, 3, 5, 8). La gestión del Product Backlog se lleva a cabo mediante la herramienta **Jira Software**.
 
+**Enlace público del Product Backlog:** https://upc-team-m57tll9j.atlassian.net/jira/software/projects/US/boards/2/backlog
+
 Las siguientes capturas muestran el Product Backlog registrado en Jira Software con el mismo orden de la tabla. Se presentan en tres partes para que cada User Story, su épica y sus story points sean legibles.
 
 <p align="center">

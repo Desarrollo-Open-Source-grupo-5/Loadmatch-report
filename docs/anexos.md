@@ -133,7 +133,7 @@ https://github.com/Desarrollo-Open-Source-grupo-5/Loadmatch-landing-page/pulls?q
 
 El equipo proporcionó el video de demostración de la Web Application correspondiente al Sprint 2. Su recorrido debe cubrir las vistas de empresa y transportista, la navegación desde la landing y los límites del uso de datos de prueba; el contenido completo debe revisarse antes de entregar.
 
-**Link:** [LoadMatch — Sprint 2 Execution Demo | Web Application](https://youtu.be/eCoQdmCrUJg).  
+**Link:** LoadMatch — Sprint 2 Execution Demo | Web Application: https://youtu.be/eCoQdmCrUJg.  
 **Duración:** 4 minutos y 38 segundos, según la captura suministrada.  
 **Disponibilidad:** No listado, según el reproductor mostrado.
 
@@ -212,7 +212,7 @@ Las capturas `RemainingBacklog1.png` y `RemainingBacklog2.png`, también integra
 
 **Contraste directo con Atlassian, 06/10/2026:** tablero CL (ID 2), Sprint 2 (ID 67), estado cerrado; 18 historias finalizadas por 49 Story Points y 18 subtareas finalizadas. El cierre registrado corresponde al 05/10/2026 a las 11:30:17 p. m. en America/Lima. Los IDs, títulos y responsables de subtareas se detallan en 5.2.2.3; las horas no están registradas y no se convierten desde puntos. Se conservan las 10 diferencias de asignación entre historia y subtarea para revisión del equipo.
 
-**Consulta de historias y subtareas:** [Jira: Sprint 2](https://upc-team-m57tll9j.atlassian.net/issues/?jql=project%20%3D%20US%20AND%20sprint%20%3D%2067), [Jira: ejemplo de subtarea T32 / US-97](https://upc-team-m57tll9j.atlassian.net/browse/US-97). Los enlaces requieren permisos del sitio. El backlog restante se contrastó mediante la consulta del tablero y confirma 28 historias por 95 puntos, excluyendo épicas y subtareas.
+**Consulta de historias y subtareas:** Jira: Sprint 2: https://upc-team-m57tll9j.atlassian.net/issues/?jql=project%20%3D%20US%20AND%20sprint%20%3D%2067, Jira: ejemplo de subtarea T32 / US-97. Los enlaces requieren permisos del sitio. El backlog restante se contrastó mediante la consulta del tablero y confirma 28 historias por 95 puntos, excluyendo épicas y subtareas.
 
 ## Anexo K. Capturas de ejecución y respuesta de API
 
